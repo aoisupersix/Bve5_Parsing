@@ -1,0 +1,12 @@
+F:\Library\Documents\Visual Studio 2017\Projects\IronyTest\IronyTest\bin\Release\IronyTest.exe.config
+F:\Library\Documents\Visual Studio 2017\Projects\IronyTest\IronyTest\bin\Release\IronyTest.exe
+F:\Library\Documents\Visual Studio 2017\Projects\IronyTest\IronyTest\bin\Release\IronyTest.pdb
+F:\Library\Documents\Visual Studio 2017\Projects\IronyTest\IronyTest\bin\Release\Irony.dll
+F:\Library\Documents\Visual Studio 2017\Projects\IronyTest\IronyTest\bin\Release\Irony.Interpreter.dll
+F:\Library\Documents\Visual Studio 2017\Projects\IronyTest\IronyTest\bin\Release\Irony.pdb
+F:\Library\Documents\Visual Studio 2017\Projects\IronyTest\IronyTest\bin\Release\Irony.xml
+F:\Library\Documents\Visual Studio 2017\Projects\IronyTest\IronyTest\bin\Release\Irony.Interpreter.pdb
+F:\Library\Documents\Visual Studio 2017\Projects\IronyTest\IronyTest\bin\Release\Irony.Interpreter.xml
+F:\Library\Documents\Visual Studio 2017\Projects\IronyTest\IronyTest\obj\Release\IronyTest.csproj.CoreCompileInputs.cache
+F:\Library\Documents\Visual Studio 2017\Projects\IronyTest\IronyTest\obj\Release\IronyTest.exe
+F:\Library\Documents\Visual Studio 2017\Projects\IronyTest\IronyTest\obj\Release\IronyTest.pdb

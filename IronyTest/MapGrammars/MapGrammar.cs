@@ -1,0 +1,119 @@
+﻿using Irony.Parsing;
+using Irony.Ast;
+using Irony.Interpreter;
+using Irony.Interpreter.Ast;
+
+namespace IronyTest.MapGrammars
+{
+    [Language("MapGrammar")]
+    class MapGrammar : InterpretedLanguageGrammar
+    {
+        public MapGrammar() : base(false)
+        {
+            /*
+             * 終端記号の定義
+             */
+            var key = new StringLiteral("Key", "'");
+            var varName = new IdentifierTerminal("VarName");
+            var num = new NumberLiteral("Num", NumberOptions.AllowSign);
+            var doll = ToTerm("$");
+            var plus = ToTerm("+");
+            var minus = ToTerm("-");
+            var mul = ToTerm("*");
+            var div = ToTerm("/");
+            var mod = ToTerm("%");
+            var dot = ToTerm(".");
+            var comma = ToTerm(",");
+            var end = ToTerm(";");
+            var equal = ToTerm("=");
+
+            /*
+             * 非終端記号の定義
+             */
+            var statement = new NonTerminal("Statement", typeof(StatementNode));
+            var statements = new NonTerminal("Statements", typeof(StatementsNode));
+            var basicState = new NonTerminal("BasicStatement", typeof(BasicStateNode));
+            var basicStates = new NonTerminal("BasicStatements", typeof(BasicStatesNode));
+            var mapElement = new NonTerminal("Element", typeof(MapElementNode)); //マップ要素ごとの構文
+
+            //距離程
+            var dist = new NonTerminal("Distance", typeof(DistNode));
+
+            //変数・数式
+            var expr = new NonTerminal("Expr", typeof(ExprNode));
+            var term = new NonTerminal("Term", typeof(TermNode));
+            var var = new NonTerminal("Var", typeof(VarNode));
+            var varAssign = new NonTerminal("VarAssign", typeof(VarAssignNode));
+            var op = new NonTerminal("Op");
+
+            //曲線とカント
+            var curve = new NonTerminal("Curve", typeof(CurveNode));
+            var curve_setGauge = new NonTerminal("Curve.SetGauge", typeof(Curve_SetGaugeNode));
+            var curve_setCenter = new NonTerminal("Curve.SetCenter");
+            var curve_setFunction = new NonTerminal("Curve.SetFunction");
+            var curve_beginTransition = new NonTerminal("Curve.BeginTransition");
+            var curve_begin = new NonTerminal("Curve.Begin");
+            var curve_end = new NonTerminal("Curve.End");
+            var curve_interpolate = new NonTerminal("Curve.Interpolate");
+            var curve_change = new NonTerminal("Curve.Change");
+
+            /*
+             * 文法の定義
+             */
+            Root = statements;
+            statements.Rule = MakeStarRule(statements, statement);
+            statement.Rule = dist | varAssign;
+
+            //距離程+基本ステートメント
+            dist.Rule = expr + end + basicStates;
+            basicStates.Rule = MakeStarRule(basicStates, basicState);
+            basicState.Rule = mapElement + end;
+            mapElement.Rule = curve;
+
+            //変数・数式
+            op.Rule = plus | minus | mul | div | mod;
+            term.Rule = num | var;
+            expr.Rule = term | term + op + expr | "(" + expr + ")";
+            var.Rule = doll + varName;
+            varAssign.Rule = var + equal + expr + end;
+
+            //曲線とカント
+            curve.Rule =
+                  curve_setGauge;
+                //| curve_setCenter 
+                //| curve_setFunction 
+                //| curve_beginTransition 
+                //| curve_begin
+                //| curve_end
+                //| curve_interpolate
+                //| curve_change;
+            curve_setGauge.Rule = "Curve" + dot + "SetGauge" + "(" + expr + ")";
+            curve_setCenter.Rule = "Curve" + dot + "SetCenter" + "(" + expr + ")";
+            curve_setFunction.Rule = "Curve" + dot + "SetFunction" + "(" + expr + ")";
+            curve_beginTransition.Rule = "Curve" + dot + "BeginTransition" + "(" + ")";
+            curve_begin.Rule = "Curve" + dot + "Begin" + "(" + (expr + comma + expr | expr) + ")";
+            curve_end.Rule = "Curve" + dot + "End" + "(" + ")";
+            curve_interpolate.Rule = "Curve" + dot + "Interpolate" + "(" + (expr + comma + expr | expr  | ReduceHere()) + ")";
+            curve_change.Rule = "Curve" + dot + "Change" + "(" + expr + ")";
+
+            //その他設定
+            RegisterOperators(0, plus, minus);
+            RegisterOperators(1, mul, div, mod);
+            RegisterOperators(2, equal);
+
+            RegisterBracePair("(", ")");
+
+            //非表示にする
+            MarkTransient(statement, basicState, mapElement, op, curve);
+            MarkPunctuation(doll, dot, comma, end, ToTerm("("), ToTerm(")"));
+
+            //コメント
+            var comment1 = new CommentTerminal("Comment#", "#", "\n", "\r");
+            var comment2 = new CommentTerminal("Comment//", "//", "\n", "\r");
+            this.NonGrammarTerminals.Add(comment1);
+            this.NonGrammarTerminals.Add(comment2);
+
+            this.LanguageFlags = LanguageFlags.NewLineBeforeEOF | LanguageFlags.CreateAst;
+        }
+    }
+}
