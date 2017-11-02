@@ -60,8 +60,7 @@ namespace IronyTest.MapGrammars
 
         public override void Init(AstContext context, ParseTreeNode treeNode)
         {
-            if(Statements == null)
-                Statements = new List<AstNode>();
+            Statements = new List<AstNode>();
 
             base.Init(context, treeNode);
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
@@ -88,8 +87,7 @@ namespace IronyTest.MapGrammars
 
         public override void Init(AstContext context, ParseTreeNode treeNode)
         {
-            if (BasicStates == null)
-                BasicStates = new List<AstNode>();
+            BasicStates = new List<AstNode>();
 
             base.Init(context, treeNode);
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
@@ -107,8 +105,7 @@ namespace IronyTest.MapGrammars
         public List<AstNode> BasicState { get; private set; }
         public override void Init(AstContext context, ParseTreeNode treeNode)
         {
-            if (BasicState == null)
-                BasicState = new List<AstNode>();
+            BasicState = new List<AstNode>();
 
             base.Init(context, treeNode);
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
@@ -139,14 +136,37 @@ namespace IronyTest.MapGrammars
         }
     }
 
-    public class CurveNode : AstNode
+    /// <summary>
+    /// マップ要素.関数(引数,引数,...);
+    /// </summary>
+    public class Syntax_1 : AstNode
     {
-        public AstNode CurveElement { get; private set; }
+        public string MapElement { get; private set; }
+        public string Function { get; private set; }
+        public object[] Args { get; private set; }
+
         public override void Init(AstContext context, ParseTreeNode treeNode)
         {
             base.Init(context, treeNode);
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
-            CurveElement = AddChild("CurveElement", nodes[0]);
+
+            MapElement = nodes[0].Term.ToString();
+            Function = nodes[1].Term.ToString();
+
+            AddChild("name-" + MapElement + "." + Function, nodes[0]);
+
+            //引数の登録
+            Args = new object[nodes.Count - 2];
+            for (int i = 2; i < nodes.Count; i++)
+            {
+                //引数が数式なら追加
+                if (nodes[i].Term.ToString().Equals("Expr"))
+                {
+                    ExprNode exprNode = (ExprNode)nodes[i].AstNode;
+                    Args[i-2] = exprNode.Value;
+                    AddChild("Args[" + (i-2) + "]-" + exprNode.Value, nodes[i]);
+                }
+            }
         }
     }
 

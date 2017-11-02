@@ -34,7 +34,7 @@ namespace IronyTest.MapGrammars
             var statements = new NonTerminal("Statements", typeof(StatementsNode));
             var basicState = new NonTerminal("BasicStatement", typeof(BasicStateNode));
             var basicStates = new NonTerminal("BasicStatements", typeof(BasicStatesNode));
-            var mapElement = new NonTerminal("Element", typeof(MapElementNode)); //マップ要素ごとの構文
+            var mapElement = new NonTerminal("Element"); //マップ要素ごとの構文
 
             //距離程
             var dist = new NonTerminal("Distance", typeof(DistNode));
@@ -47,15 +47,22 @@ namespace IronyTest.MapGrammars
             var op = new NonTerminal("Op");
 
             //曲線とカント
-            var curve = new NonTerminal("Curve", typeof(CurveNode));
-            var curve_setGauge = new NonTerminal("Curve.SetGauge", typeof(Curve_SetGaugeNode));
-            var curve_setCenter = new NonTerminal("Curve.SetCenter");
-            var curve_setFunction = new NonTerminal("Curve.SetFunction");
-            var curve_beginTransition = new NonTerminal("Curve.BeginTransition");
-            var curve_begin = new NonTerminal("Curve.Begin");
-            var curve_end = new NonTerminal("Curve.End");
-            var curve_interpolate = new NonTerminal("Curve.Interpolate");
-            var curve_change = new NonTerminal("Curve.Change");
+            var curve = new NonTerminal("Curve");
+            var curve_setGauge = new NonTerminal("Curve.SetGauge", typeof(Syntax_1));
+            var curve_setCenter = new NonTerminal("Curve.SetCenter", typeof(Syntax_1));
+            var curve_setFunction = new NonTerminal("Curve.SetFunction", typeof(Syntax_1));
+            var curve_beginTransition = new NonTerminal("Curve.BeginTransition", typeof(Syntax_1));
+            var curve_begin = new NonTerminal("Curve.Begin", typeof(Syntax_1));
+            var curve_end = new NonTerminal("Curve.End", typeof(Syntax_1));
+            var curve_interpolate = new NonTerminal("Curve.Interpolate", typeof(Syntax_1));
+            var curve_change = new NonTerminal("Curve.Change", typeof(Syntax_1));
+
+            //勾配
+            var gradient = new NonTerminal("Gradient");
+            var gradient_beginTransition = new NonTerminal("Gradient.BeginTransition");
+            var gradient_begin = new NonTerminal("Gradient.Begin");
+            var gradient_end = new NonTerminal("Gradient.End");
+            var gradient_interpolate = new NonTerminal("Gradient.Interpolate");
 
             /*
              * 文法の定義
@@ -78,15 +85,16 @@ namespace IronyTest.MapGrammars
             varAssign.Rule = var + equal + expr + end;
 
             //曲線とカント
+            #region Curve
             curve.Rule =
-                  curve_setGauge;
-                //| curve_setCenter 
-                //| curve_setFunction 
-                //| curve_beginTransition 
-                //| curve_begin
-                //| curve_end
-                //| curve_interpolate
-                //| curve_change;
+                  curve_setGauge
+                | curve_setCenter
+                | curve_setFunction
+                | curve_beginTransition
+                | curve_begin
+                | curve_end
+                | curve_interpolate
+                | curve_change;
             curve_setGauge.Rule = "Curve" + dot + "SetGauge" + "(" + expr + ")";
             curve_setCenter.Rule = "Curve" + dot + "SetCenter" + "(" + expr + ")";
             curve_setFunction.Rule = "Curve" + dot + "SetFunction" + "(" + expr + ")";
@@ -95,6 +103,17 @@ namespace IronyTest.MapGrammars
             curve_end.Rule = "Curve" + dot + "End" + "(" + ")";
             curve_interpolate.Rule = "Curve" + dot + "Interpolate" + "(" + (expr + comma + expr | expr  | ReduceHere()) + ")";
             curve_change.Rule = "Curve" + dot + "Change" + "(" + expr + ")";
+            #endregion Curve
+
+            //勾配
+            #region Gradient
+            gradient.Rule =
+                  gradient_beginTransition
+                | gradient_begin
+                | gradient_end
+                | gradient_interpolate;
+            gradient_beginTransition.Rule = "Gradient" + dot + "BeginTransition" + "(" + ")";
+            #endregion Gradient
 
             //その他設定
             RegisterOperators(0, plus, minus);
