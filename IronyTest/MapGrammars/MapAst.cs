@@ -8,6 +8,9 @@ using Irony.Parsing;
 namespace IronyTest.MapGrammars
 {
 
+    /// <summary>
+    /// 変数を管理するクラス
+    /// </summary>
     public sealed class Vars
     {
         private static Vars _varsInstance = new Vars();
@@ -53,7 +56,7 @@ namespace IronyTest.MapGrammars
     /*
      * 以下AstNodeの定義達
      */
-
+    #region 基本ステートメント
     public class StatementsNode : AstNode
     {
         public List<AstNode> Statements { get; private set; }
@@ -135,6 +138,7 @@ namespace IronyTest.MapGrammars
             MapElement = AddChild("MapElement", nodes[0]);
         }
     }
+    #endregion 基本ステートメント
 
     /// <summary>
     /// マップ要素.関数(引数,引数,...);
@@ -170,17 +174,9 @@ namespace IronyTest.MapGrammars
         }
     }
 
-    public class Curve_SetGaugeNode : AstNode
-    {
-        public AstNode Gauge { get; private set; }
-        public override void Init(AstContext context, ParseTreeNode treeNode)
-        {
-            base.Init(context, treeNode);
-            ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
-            Gauge = AddChild("Gauge", nodes[2]);
-        }
-    }
-
+    /// <summary>
+    /// 変数宣言 $varName = Expr;
+    /// </summary>
     public class VarAssignNode : AstNode
     {
         public AstNode VarName { get; private set; }
@@ -202,6 +198,9 @@ namespace IronyTest.MapGrammars
         }
     }
 
+    /// <summary>
+    /// 数式
+    /// </summary>
     public class ExprNode : AstNode
     {
         public double Value { get; private set; }
@@ -265,6 +264,9 @@ namespace IronyTest.MapGrammars
         }
     }
 
+    /// <summary>
+    /// 数式の項(数値/変数)
+    /// </summary>
     public class TermNode : AstNode
     {
         public double Value { get; private set; }
@@ -291,6 +293,9 @@ namespace IronyTest.MapGrammars
         }
     }
 
+    /// <summary>
+    /// 変数 $varName
+    /// </summary>
     public class VarNode : AstNode
     {
         public string Name { get; private set; }

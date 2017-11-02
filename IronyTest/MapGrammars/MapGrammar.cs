@@ -11,8 +11,9 @@ namespace IronyTest.MapGrammars
         public MapGrammar() : base(false)
         {
             /*
-             * 終端記号の定義
+             * 構文定義ここから
              */
+            #region 終端記号の定義
             var key = new StringLiteral("Key", "'");
             var varName = new IdentifierTerminal("VarName");
             var num = new NumberLiteral("Num", NumberOptions.AllowSign);
@@ -26,27 +27,26 @@ namespace IronyTest.MapGrammars
             var comma = ToTerm(",");
             var end = ToTerm(";");
             var equal = ToTerm("=");
+            #endregion 終端記号の定義
 
-            /*
-             * 非終端記号の定義
-             */
+            #region 基本ステートメントと距離程の定義
             var statement = new NonTerminal("Statement", typeof(StatementNode));
             var statements = new NonTerminal("Statements", typeof(StatementsNode));
             var basicState = new NonTerminal("BasicStatement", typeof(BasicStateNode));
             var basicStates = new NonTerminal("BasicStatements", typeof(BasicStatesNode));
             var mapElement = new NonTerminal("Element"); //マップ要素ごとの構文
+            var dist = new NonTerminal("Distance", typeof(DistNode)); //距離程
+            #endregion 基本ステートメントと距離程の定義
 
-            //距離程
-            var dist = new NonTerminal("Distance", typeof(DistNode));
-
-            //変数・数式
+            #region 変数・数式の定義
             var expr = new NonTerminal("Expr", typeof(ExprNode));
             var term = new NonTerminal("Term", typeof(TermNode));
             var var = new NonTerminal("Var", typeof(VarNode));
             var varAssign = new NonTerminal("VarAssign", typeof(VarAssignNode));
             var op = new NonTerminal("Op");
+            #endregion 変数・数式の定義
 
-            //曲線とカント
+            #region 曲線とカントの定義
             var curve = new NonTerminal("Curve");
             var curve_setGauge = new NonTerminal("Curve.SetGauge", typeof(Syntax_1));
             var curve_setCenter = new NonTerminal("Curve.SetCenter", typeof(Syntax_1));
@@ -56,36 +56,39 @@ namespace IronyTest.MapGrammars
             var curve_end = new NonTerminal("Curve.End", typeof(Syntax_1));
             var curve_interpolate = new NonTerminal("Curve.Interpolate", typeof(Syntax_1));
             var curve_change = new NonTerminal("Curve.Change", typeof(Syntax_1));
+            #endregion 曲線とカントの定義
 
-            //勾配
+            #region 自軌道の勾配の定義
             var gradient = new NonTerminal("Gradient");
             var gradient_beginTransition = new NonTerminal("Gradient.BeginTransition");
             var gradient_begin = new NonTerminal("Gradient.Begin");
             var gradient_end = new NonTerminal("Gradient.End");
             var gradient_interpolate = new NonTerminal("Gradient.Interpolate");
+            #endregion 自軌道の勾配の定義
 
             /*
-             * 文法の定義
+             * 文法の定義ここから
              */
-            Root = statements;
+            Root = statements; //ルート
+
+            #region 基本ステートメントと距離程の文法
             statements.Rule = MakeStarRule(statements, statement);
             statement.Rule = dist | varAssign;
-
-            //距離程+基本ステートメント
             dist.Rule = expr + end + basicStates;
             basicStates.Rule = MakeStarRule(basicStates, basicState);
             basicState.Rule = mapElement + end;
             mapElement.Rule = curve;
+            #endregion 基本ステートメントと距離程の文法
 
-            //変数・数式
+            #region 変数・数式の定義
             op.Rule = plus | minus | mul | div | mod;
             term.Rule = num | var;
             expr.Rule = term | term + op + expr | "(" + expr + ")";
             var.Rule = doll + varName;
             varAssign.Rule = var + equal + expr + end;
+            #endregion 変数・数式の定義
 
-            //曲線とカント
-            #region Curve
+            #region 曲線とカントの文法
             curve.Rule =
                   curve_setGauge
                 | curve_setCenter
@@ -103,26 +106,25 @@ namespace IronyTest.MapGrammars
             curve_end.Rule = "Curve" + dot + "End" + "(" + ")";
             curve_interpolate.Rule = "Curve" + dot + "Interpolate" + "(" + (expr + comma + expr | expr  | ReduceHere()) + ")";
             curve_change.Rule = "Curve" + dot + "Change" + "(" + expr + ")";
-            #endregion Curve
+            #endregion 曲線とカントの文法
 
-            //勾配
-            #region Gradient
+            #region 自軌道の勾配の文法
             gradient.Rule =
                   gradient_beginTransition
                 | gradient_begin
                 | gradient_end
                 | gradient_interpolate;
             gradient_beginTransition.Rule = "Gradient" + dot + "BeginTransition" + "(" + ")";
-            #endregion Gradient
+            #endregion 自軌道の勾配の文法
 
-            //その他設定
+            //演算子の優先順位設定
             RegisterOperators(0, plus, minus);
             RegisterOperators(1, mul, div, mod);
             RegisterOperators(2, equal);
 
             RegisterBracePair("(", ")");
 
-            //非表示にする
+            //非表示にする構文
             MarkTransient(statement, basicState, mapElement, op, curve);
             MarkPunctuation(doll, dot, comma, end, ToTerm("("), ToTerm(")"));
 
