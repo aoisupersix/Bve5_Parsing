@@ -198,6 +198,26 @@ namespace IronyTest.MapGrammars
         }
     }
 
+    public class LoadListFileNode : AstNode
+    {
+        public string ElementName { get; private set; }
+        public string FilePath { get; private set; }
+
+        public override void Init(AstContext context, ParseTreeNode treeNode)
+        {
+            base.Init(context, treeNode);
+            ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
+
+            ElementName = nodes[0].Term.ToString();
+            FilePath = (string)nodes[2].Token.Value;
+            //括弧を削除
+            FilePath = FilePath.Substring(0, FilePath.Length - 1);
+
+            AddChild("Element-" + ElementName, nodes[0]);
+            AddChild("FilePath-" + FilePath, nodes[2]);
+        }
+    }
+
     /// <summary>
     /// 数式
     /// </summary>

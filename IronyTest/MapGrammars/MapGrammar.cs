@@ -16,6 +16,8 @@ namespace IronyTest.MapGrammars
             #region 終端記号の定義
             var key = new StringLiteral("Key", "'");
             var varName = new IdentifierTerminal("VarName");
+            var filePath = new IdentifierTerminal("filePath", ExtraChars.TOKEN + ExtraChars.MULTIBYTES + @"\", ExtraChars.TOKEN);
+            filePath.AddSuffix(")");
             var num = new NumberLiteral("Num", NumberOptions.AllowSign);
             var doll = ToTerm("$");
             var plus = ToTerm("+");
@@ -46,6 +48,15 @@ namespace IronyTest.MapGrammars
             var op = new NonTerminal("Op");
             #endregion 変数・数式の定義
 
+            #region リストファイル読み込みの定義
+            var loadListFile = new NonTerminal("LoadListFile", typeof(LoadListFileNode));
+            var loadStrList = new NonTerminal("LoadStructList", typeof(LoadListFileNode));
+            var loadStaList = new NonTerminal("LoadStationList", typeof(LoadListFileNode));
+            var loadSigList = new NonTerminal("LoadSignalList", typeof(LoadListFileNode));
+            var loadSoundList = new NonTerminal("LoadSoundList", typeof(LoadListFileNode));
+            var loadSound3DList = new NonTerminal("LoadSound3DList", typeof(LoadListFileNode));
+            #endregion リストファイル読み込みの定義
+
             #region 曲線とカントの定義
             var curve = new NonTerminal("Curve");
             var curve_setGauge = new NonTerminal("Curve.SetGauge", typeof(Syntax_1));
@@ -73,7 +84,7 @@ namespace IronyTest.MapGrammars
 
             #region 基本ステートメントと距離程の文法
             statements.Rule = MakeStarRule(statements, statement);
-            statement.Rule = dist | varAssign;
+            statement.Rule = dist | varAssign | loadListFile;
             dist.Rule = expr + end + basicStates;
             basicStates.Rule = MakeStarRule(basicStates, basicState);
             basicState.Rule = mapElement + end;
@@ -87,6 +98,15 @@ namespace IronyTest.MapGrammars
             var.Rule = doll + varName;
             varAssign.Rule = var + equal + expr + end;
             #endregion 変数・数式の定義
+
+            #region リストファイル読み込みの文法
+            loadListFile.Rule = loadStrList | loadStaList | loadSigList | loadSoundList | loadSound3DList;
+            loadStrList.Rule = "Structure" + dot + "Load" + "(" + filePath + end;
+            loadStaList.Rule = "Station" + dot + "Load" + "(" + filePath + end;
+            loadSigList.Rule = "Signal" + dot + "Load" + "(" + filePath + end;
+            loadSoundList.Rule = "Sound" + dot + "Load" + "(" + filePath + end;
+            loadSound3DList.Rule = "Sound3D" + dot + "Load" + "(" + filePath + end;
+            #endregion リストファイル読み込みの文法
 
             #region 曲線とカントの文法
             curve.Rule =
@@ -120,12 +140,12 @@ namespace IronyTest.MapGrammars
             //演算子の優先順位設定
             RegisterOperators(0, plus, minus);
             RegisterOperators(1, mul, div, mod);
-            RegisterOperators(2, equal);
+            RegisterOperators(3, equal);
 
             RegisterBracePair("(", ")");
 
             //非表示にする構文
-            MarkTransient(statement, basicState, mapElement, op, curve);
+            MarkTransient(statement, basicState, loadListFile, mapElement, op, curve);
             MarkPunctuation(doll, dot, comma, end, ToTerm("("), ToTerm(")"));
 
             //コメント
