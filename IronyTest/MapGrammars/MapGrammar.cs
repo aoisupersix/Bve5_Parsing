@@ -77,6 +77,9 @@ namespace IronyTest.MapGrammars
             var gradient_interpolate = new NonTerminal("Gradient.Interpolate");
             #endregion 自軌道の勾配の定義
 
+            var track = new NonTerminal("Track");
+            var track_x_interpolate = new NonTerminal("Track.X.Interpolate", typeof(Syntax_3));
+
             /*
              * 文法の定義ここから
              */
@@ -88,7 +91,7 @@ namespace IronyTest.MapGrammars
             dist.Rule = expr + end + basicStates;
             basicStates.Rule = MakeStarRule(basicStates, basicState);
             basicState.Rule = mapElement + end;
-            mapElement.Rule = curve;
+            mapElement.Rule = curve | track;
             #endregion 基本ステートメントと距離程の文法
 
             #region 変数・数式の定義
@@ -124,7 +127,7 @@ namespace IronyTest.MapGrammars
             curve_beginTransition.Rule = "Curve" + dot + "BeginTransition" + "(" + ")";
             curve_begin.Rule = "Curve" + dot + "Begin" + "(" + (expr + comma + expr | expr) + ")";
             curve_end.Rule = "Curve" + dot + "End" + "(" + ")";
-            curve_interpolate.Rule = "Curve" + dot + "Interpolate" + "(" + (expr + comma + expr | expr  | ReduceHere()) + ")";
+            curve_interpolate.Rule = "Curve" + dot + "Interpolate" + "(" + (expr + comma + expr | expr | ReduceHere()) + ")";
             curve_change.Rule = "Curve" + dot + "Change" + "(" + expr + ")";
             #endregion 曲線とカントの文法
 
@@ -137,6 +140,9 @@ namespace IronyTest.MapGrammars
             gradient_beginTransition.Rule = "Gradient" + dot + "BeginTransition" + "(" + ")";
             #endregion 自軌道の勾配の文法
 
+            track.Rule = track_x_interpolate;
+            track_x_interpolate.Rule = "Track" + ToTerm("[") + key + ToTerm("]") + dot + "X" + dot + "Interpolate" + "(" + (expr + comma + expr | expr | ReduceHere()) + ")";
+
             //演算子の優先順位設定
             RegisterOperators(0, plus, minus);
             RegisterOperators(1, mul, div, mod);
@@ -145,8 +151,8 @@ namespace IronyTest.MapGrammars
             RegisterBracePair("(", ")");
 
             //非表示にする構文
-            MarkTransient(statement, basicState, loadListFile, mapElement, op, curve);
-            MarkPunctuation(doll, dot, comma, end, ToTerm("("), ToTerm(")"));
+            MarkTransient(statement, basicState, loadListFile, mapElement, op, curve, track);
+            MarkPunctuation(doll, dot, comma, end, ToTerm("("), ToTerm(")"), ToTerm("["), ToTerm("]"));
 
             //コメント
             var comment1 = new CommentTerminal("Comment#", "#", "\n", "\r");

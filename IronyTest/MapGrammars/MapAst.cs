@@ -175,6 +175,45 @@ namespace IronyTest.MapGrammars
     }
 
     /// <summary>
+    /// マップ要素.マップ要素.関数(引数,引数,...);
+    /// </summary>
+    public class Syntax_3 : AstNode
+    {
+        public string[] MapElement { get; private set; }
+        public string Function { get; private set; }
+
+        public string Key { get; private set; }
+        public object[] Args { get; private set; }
+
+        public override void Init(AstContext context, ParseTreeNode treeNode)
+        {
+            base.Init(context, treeNode);
+            ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
+
+            MapElement = new string[2];
+            MapElement[0] = nodes[0].Term.ToString();
+            MapElement[1] = nodes[2].Term.ToString();
+            Key = (string)nodes[1].Token.Value;
+            Function = nodes[3].Term.ToString();
+
+            AddChild("nodes.Count" + nodes.Count, nodes[0]);
+
+            //引数の登録
+            Args = new object[10];
+            for (int i = 2; i < nodes.Count; i++)
+            {
+                //引数が数式なら追加
+                if (nodes[i].Term.ToString().Equals("Expr"))
+                {
+                    ExprNode exprNode = (ExprNode)nodes[i].AstNode;
+                    Args[0] = exprNode.Value;
+                    AddChild("Args[" + (i - 2) + "]-" + exprNode.Value, nodes[i]);
+                }
+            }
+        }
+    }
+
+    /// <summary>
     /// 変数宣言 $varName = Expr;
     /// </summary>
     public class VarAssignNode : AstNode
