@@ -79,10 +79,10 @@ namespace IronyTest.MapGrammars
 
             #region 自軌道の勾配の定義
             var gradient = new NonTerminal("Gradient");
-            var gradient_beginTransition = new NonTerminal("Gradient.BeginTransition");
-            var gradient_begin = new NonTerminal("Gradient.Begin");
-            var gradient_end = new NonTerminal("Gradient.End");
-            var gradient_interpolate = new NonTerminal("Gradient.Interpolate");
+            var gradient_beginTransition = new NonTerminal("Gradient.BeginTransition", typeof(Syntax_1));
+            var gradient_begin = new NonTerminal("Gradient.Begin", typeof(Syntax_1));
+            var gradient_end = new NonTerminal("Gradient.End", typeof(Syntax_1));
+            var gradient_interpolate = new NonTerminal("Gradient.Interpolate", typeof(Syntax_1));
             #endregion 自軌道の勾配の定義
 
             var track = new NonTerminal("Track");
@@ -99,7 +99,7 @@ namespace IronyTest.MapGrammars
             dist.Rule = expr + end + basicStates;
             basicStates.Rule = MakeStarRule(basicStates, basicState);
             basicState.Rule = mapElement + end;
-            mapElement.Rule = curve | track;
+            mapElement.Rule = curve | gradient | track;
             #endregion 基本ステートメントと距離程の文法
 
             #region 変数・数式の定義
@@ -155,6 +155,9 @@ namespace IronyTest.MapGrammars
                 | gradient_end
                 | gradient_interpolate;
             gradient_beginTransition.Rule = "Gradient" + dot + "BeginTransition" + "(" + ")";
+            gradient_begin.Rule = "Gradient" + dot + "Begin" + "(" + args + ")";
+            gradient_end.Rule = "Gradient" + dot + "End" + "(" + ")";
+            gradient_interpolate.Rule = "Gradient" + dot + "Interpolate" + "(" + args + ")";
             #endregion 自軌道の勾配の文法
 
             track.Rule = track_x_interpolate;
@@ -168,7 +171,7 @@ namespace IronyTest.MapGrammars
             RegisterBracePair("(", ")");
 
             //非表示にする構文
-            MarkTransient(statement, basicState, loadListFile, mapElement, op, curve, track, argTerm, nextArg);
+            MarkTransient(statement, basicState, loadListFile, mapElement, op, curve, gradient, track, argTerm, nextArg);
             MarkPunctuation(doll, dot, comma, end, ToTerm("("), ToTerm(")"), ToTerm("["), ToTerm("]"));
 
             //コメント
