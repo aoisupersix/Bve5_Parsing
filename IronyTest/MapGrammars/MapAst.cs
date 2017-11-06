@@ -84,10 +84,13 @@ namespace IronyTest.MapGrammars
         }
     }
 
+    /// <summary>
+    /// 距離程
+    /// </summary>
     public class DistNode : AstNode
     {
         public List<AstNode> BasicStates { get; private set; }
-        public AstNode Distance { get; private set; }
+        public double Distance { get; private set; }
 
         public override void Init(AstContext context, ParseTreeNode treeNode)
         {
@@ -95,7 +98,13 @@ namespace IronyTest.MapGrammars
 
             base.Init(context, treeNode);
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
-            Distance = AddChild("Distance", nodes[0]);
+
+            //距離の取得
+            ExprNode expr = (ExprNode)nodes[0].AstNode;
+            Distance = expr.Value;
+            AddChild("Dist=" + expr.Value, nodes[0]);
+
+            //現在の距離程の構文を取得
             if(nodes.Count > 1)
             {
                 foreach (var node in nodes[1].ChildNodes)
