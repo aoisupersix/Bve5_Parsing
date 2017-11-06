@@ -85,8 +85,19 @@ namespace IronyTest.MapGrammars
             var gradient_interpolate = new NonTerminal("Gradient.Interpolate", typeof(Syntax_1));
             #endregion 自軌道の勾配の定義
 
+            #region 他軌道
             var track = new NonTerminal("Track");
             var track_x_interpolate = new NonTerminal("Track.X.Interpolate", typeof(Syntax_3));
+            var track_y_interpolate = new NonTerminal("Track.Y.Interpolate", typeof(Syntax_3));
+            var track_position = new NonTerminal("Track.Position");
+            var track_cant_setGauge = new NonTerminal("Track.Cant.SetGauge", typeof(Syntax_3));
+            var track_cant_setCenter = new NonTerminal("Track.Cant.SetCenter", typeof(Syntax_3));
+            var track_cant_setFunction = new NonTerminal("Track.Cant.SetFunction", typeof(Syntax_3));
+            var track_cant_beginTransition = new NonTerminal("Track.Cant.BeginTransition", typeof(Syntax_3));
+            var track_cant_begin = new NonTerminal("Track.Cant.Begin", typeof(Syntax_3));
+            var track_cant_end = new NonTerminal("Track.Cant.End", typeof(Syntax_3));
+            var track_cant_interpolate = new NonTerminal("Track.Cant.Interpolate", typeof(Syntax_3));
+            #endregion 他軌道
 
             /*
              * 文法の定義ここから
