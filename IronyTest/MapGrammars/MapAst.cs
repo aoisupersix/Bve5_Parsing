@@ -166,6 +166,34 @@ namespace IronyTest.MapGrammars
     }
 
     /// <summary>
+    /// マップ要素[キー].関数(引数,引数,...);
+    /// </summary>
+    public class Syntax_2 : AstNode
+    {
+        public string MapElement { get; private set; }
+        public string Function { get; private set; }
+
+        public string Key { get; private set; }
+        public AstNode ArgsNode { get; private set; }
+
+        public override void Init(AstContext context, ParseTreeNode treeNode)
+        {
+            base.Init(context, treeNode);
+            ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
+
+            MapElement = nodes[0].Term.ToString();
+            Key = (string)nodes[1].Token.Value;
+            Function = nodes[2].Term.ToString();
+
+            AddChild(MapElement + "[" + Key + "]." + Function, nodes[0]);
+
+            //引数の登録
+            if (nodes.Count > 3)
+                ArgsNode = AddChild("Args", nodes[3]);
+        }
+    }
+
+    /// <summary>
     /// マップ要素[キー].マップ要素.関数(引数,引数,...);
     /// </summary>
     public class Syntax_3 : AstNode

@@ -89,7 +89,7 @@ namespace IronyTest.MapGrammars
             var track = new NonTerminal("Track");
             var track_x_interpolate = new NonTerminal("Track.X.Interpolate", typeof(Syntax_3));
             var track_y_interpolate = new NonTerminal("Track.Y.Interpolate", typeof(Syntax_3));
-            var track_position = new NonTerminal("Track.Position");
+            var track_position = new NonTerminal("Track.Position", typeof(Syntax_2));
             var track_cant_setGauge = new NonTerminal("Track.Cant.SetGauge", typeof(Syntax_3));
             var track_cant_setCenter = new NonTerminal("Track.Cant.SetCenter", typeof(Syntax_3));
             var track_cant_setFunction = new NonTerminal("Track.Cant.SetFunction", typeof(Syntax_3));
