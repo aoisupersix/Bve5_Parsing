@@ -161,7 +161,7 @@ namespace IronyTest.MapGrammars
             #endregion 自軌道の勾配の文法
 
             track.Rule = track_x_interpolate;
-            track_x_interpolate.Rule = "Track" + ToTerm("[") + key + ToTerm("]") + dot + "X" + dot + "Interpolate" + "(" + (expr + comma + expr | expr | ReduceHere()) + ")";
+            track_x_interpolate.Rule = "Track" + ToTerm("[") + key + ToTerm("]") + dot + "X" + dot + "Interpolate" + "(" + args + ")";
 
             //演算子の優先順位設定
             RegisterOperators(0, plus, minus);

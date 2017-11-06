@@ -186,11 +186,11 @@ namespace IronyTest.MapGrammars
             Key = (string)nodes[1].Token.Value;
             Function = nodes[3].Term.ToString();
 
-            AddChild("nodes.Count" + nodes.Count, nodes[0]);
+            AddChild(MapElement[0] + "[" + Key + "]." + MapElement[1] + "." + Function, nodes[0]);
 
             //引数の登録
-            if (nodes.Count > 2)
-                ArgsNode = AddChild("Args", nodes[2]);
+            if (nodes.Count > 4)
+                ArgsNode = AddChild("Args", nodes[4]);
         }
     }
 
