@@ -158,13 +158,14 @@ namespace IronyTest.MapGrammars
             MapElement = nodes[0].Term.ToString();
             Function = nodes[1].Term.ToString();
 
+            //引数の登録
             if(nodes.Count > 2)
                 ArgsNode = AddChild("Args", nodes[2]);
         }
     }
 
     /// <summary>
-    /// マップ要素.マップ要素.関数(引数,引数,...);
+    /// マップ要素[キー].マップ要素.関数(引数,引数,...);
     /// </summary>
     public class Syntax_3 : AstNode
     {
@@ -172,7 +173,7 @@ namespace IronyTest.MapGrammars
         public string Function { get; private set; }
 
         public string Key { get; private set; }
-        public object[] Args { get; private set; }
+        public AstNode ArgsNode { get; private set; }
 
         public override void Init(AstContext context, ParseTreeNode treeNode)
         {
@@ -188,17 +189,8 @@ namespace IronyTest.MapGrammars
             AddChild("nodes.Count" + nodes.Count, nodes[0]);
 
             //引数の登録
-            Args = new object[10];
-            for (int i = 2; i < nodes.Count; i++)
-            {
-                //引数が数式なら追加
-                if (nodes[i].Term.ToString().Equals("Expr"))
-                {
-                    ExprNode exprNode = (ExprNode)nodes[i].AstNode;
-                    Args[0] = exprNode.Value;
-                    AddChild("Args[" + (i - 2) + "]-" + exprNode.Value, nodes[i]);
-                }
-            }
+            if (nodes.Count > 2)
+                ArgsNode = AddChild("Args", nodes[2]);
         }
     }
 
