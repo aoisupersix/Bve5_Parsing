@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using Irony.Ast;
 using Irony.Interpreter;
 using Irony.Interpreter.Ast;
@@ -213,6 +214,76 @@ namespace IronyTest.MapGrammars
                     Args[0] = exprNode.Value;
                     AddChild("Args[" + (i - 2) + "]-" + exprNode.Value, nodes[i]);
                 }
+            }
+        }
+    }
+
+    /// <summary>
+    /// 引数？
+    /// </summary>
+    public class ArgsNode : AstNode
+    {
+        public AstNode Arg { get; private set; }
+
+        public override void Init(AstContext context, ParseTreeNode treeNode)
+        {
+            base.Init(context, treeNode);
+            ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
+            if (nodes.Count > 0)
+                Arg = AddChild("Arg", nodes[0]);
+        }
+    }
+
+    public class ArgNode : AstNode
+    {
+        public object[] Arg { get; private set; }
+
+        public override void Init(AstContext context, ParseTreeNode treeNode)
+        {
+            base.Init(context, treeNode);
+            ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
+            Arg = new object[nodes.Count+ nodes[1].ChildNodes.Count];
+            Arg[0] = GetArgument(nodes[0]);
+            AddChild("Arg[0]=" + Arg[0], nodes[0]);
+            for (int i = 0; i < nodes[1].ChildNodes.Count; i++)
+            {
+                Arg[i+1] = GetArgument(nodes[1].ChildNodes[i]);
+                AddChild("nodes[" + (i+1) + "]=" + Arg[i+1], nodes[1].ChildNodes[i]);
+            }
+        }
+
+        private object GetArgument(ParseTreeNode node)
+        {
+            string term = node.ToString();
+            if (Regex.IsMatch(term, "Expr"))
+            {
+                //引数が数式
+                ExprNode expr = (ExprNode)node.AstNode;
+                return expr.Value;
+            }
+            else
+            {
+                //引数がキー
+                return node.Token.Value;
+            }
+        }
+    }
+
+    /// <summary>
+    /// 2つめ以降の引数
+    /// </summary>
+    public class NextArgsNode : AstNode
+    {
+        public AstNode[] NextArg { get; private set; }
+
+        public override void Init(AstContext context, ParseTreeNode treeNode)
+        {
+            base.Init(context, treeNode);
+            ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
+            NextArg = new AstNode[nodes.Count];
+            for(int i=0; i < NextArg.Length; i++)
+            {
+                NextArg[i] = AddChild("NextArg[" + i + "]", nodes[i]);
             }
         }
     }

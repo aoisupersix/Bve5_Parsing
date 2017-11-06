@@ -60,9 +60,9 @@ namespace IronyTest.MapGrammars
             #region 引数の定義
             var argTerm = new NonTerminal("ArgTerm");
             var nextArg = new NonTerminal("NextArg");
-            var nextArgs = new NonTerminal("NextArgs");
-            var arg = new NonTerminal("Arg");
-            var args = new NonTerminal("Args");
+            var nextArgs = new NonTerminal("NextArgs", typeof(NextArgsNode));
+            var arg = new NonTerminal("Arg", typeof(ArgNode));
+            var args = new NonTerminal("Args", typeof(ArgsNode));
             #endregion 引数の定義
 
             #region 曲線とカントの定義
@@ -124,7 +124,7 @@ namespace IronyTest.MapGrammars
             nextArg.Rule = comma + argTerm;
             nextArgs.Rule = MakeStarRule(nextArgs, nextArg);
             arg.Rule = argTerm + nextArgs;
-            args.Rule = arg.Q();
+            args.Rule = arg | Empty;
             #endregion 引数の文法
 
             #region 曲線とカントの文法
@@ -163,7 +163,7 @@ namespace IronyTest.MapGrammars
             RegisterBracePair("(", ")");
 
             //非表示にする構文
-            MarkTransient(statement, basicState, loadListFile, mapElement, op, curve, track, argTerm, nextArg, nextArgs, args);
+            MarkTransient(statement, basicState, loadListFile, mapElement, op, curve, track, argTerm, nextArg);
             MarkPunctuation(doll, dot, comma, end, ToTerm("("), ToTerm(")"), ToTerm("["), ToTerm("]"));
 
             //コメント
