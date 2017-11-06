@@ -171,8 +171,30 @@ namespace IronyTest.MapGrammars
             gradient_interpolate.Rule = "Gradient" + dot + "Interpolate" + "(" + args + ")";
             #endregion 自軌道の勾配の文法
 
-            track.Rule = track_x_interpolate;
+            #region 他軌道
+            track.Rule = 
+                  track_x_interpolate
+                | track_y_interpolate
+                | track_position
+                | track_cant_setGauge
+                | track_cant_setCenter
+                | track_cant_setFunction
+                | track_cant_beginTransition
+                | track_cant_begin
+                | track_cant_end
+                | track_cant_interpolate;
+
             track_x_interpolate.Rule = "Track" + ToTerm("[") + key + ToTerm("]") + dot + "X" + dot + "Interpolate" + "(" + args + ")";
+            track_y_interpolate.Rule = "Track" + ToTerm("[") + key + ToTerm("]") + dot + "Y" + dot + "Interpolate" + "(" + args + ")";
+            track_position.Rule = "Track" + ToTerm("[") + key + ToTerm("]") + dot + "Position" + "(" + args + ")";
+            track_cant_setGauge.Rule = "Track" + ToTerm("[") + key + ToTerm("]") + dot + "Cant" + dot + "SetGauge" + "(" + args + ")";
+            track_cant_setCenter.Rule = "Track" + ToTerm("[") + key + ToTerm("]") + dot + "Cant" + dot + "SetCenter" + "(" + args + ")";
+            track_cant_setFunction.Rule = "Track" + ToTerm("[") + key + ToTerm("]") + dot + "Cant" + dot + "SetFunction" + "(" + args + ")";
+            track_cant_beginTransition.Rule = "Track" + ToTerm("[") + key + ToTerm("]") + dot + "Cant" + dot + "BeginTransition" + "(" + ")";
+            track_cant_begin.Rule = "Track" + ToTerm("[") + key + ToTerm("]") + dot + "Cant" + dot + "Begin" + "(" + args + ")";
+            track_cant_end.Rule = "Track" + ToTerm("[") + key + ToTerm("]") + dot + "Cant" + dot + "End" + "(" + ")";
+            track_cant_interpolate.Rule = "Track" + ToTerm("[") + key + ToTerm("]") + dot + "Cant" + dot + "Interpolate" + "(" + args + ")";
+            #endregion 他軌道
 
             //演算子の優先順位設定
             RegisterOperators(0, plus, minus);
