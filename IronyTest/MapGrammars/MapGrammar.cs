@@ -129,18 +129,23 @@ namespace IronyTest.MapGrammars
 
             #region 曲線とカントの文法
             curve.Rule =
-                curve_begin;
+                  curve_setGauge
+                | curve_setCenter
+                | curve_setFunction
+                | curve_beginTransition
+                | curve_begin
+                | curve_end
+                | curve_interpolate
+                | curve_change;
 
-            curve_setGauge.Rule = "Curve" + dot + "SetGauge" + "(" + (expr) + ")";
-            curve_setCenter.Rule = "Curve" + dot + "SetCenter" + "(" + (expr) + ")";
-            curve_setFunction.Rule = "Curve" + dot + "SetFunction" + "(" + (expr) + ")";
+            curve_setGauge.Rule = "Curve" + dot + "SetGauge" + "(" + args + ")";
+            curve_setCenter.Rule = "Curve" + dot + "SetCenter" + "(" + args + ")";
+            curve_setFunction.Rule = "Curve" + dot + "SetFunction" + "(" + args + ")";
             curve_beginTransition.Rule = "Curve" + dot + "BeginTransition" + "(" + ")";
-            var argment = new NonTerminal("Argment");
-            argment.Rule = expr | key;
             curve_begin.Rule = "Curve" + dot + "Begin" + "(" + args + ")";
             curve_end.Rule = "Curve" + dot + "End" + "(" + ")";
-            curve_interpolate.Rule = "Curve" + dot + "Interpolate" + "(" + (expr + comma + expr | expr | ReduceHere()) + ")";
-            curve_change.Rule = "Curve" + dot + "Change" + "(" + (expr) + ")";
+            curve_interpolate.Rule = "Curve" + dot + "Interpolate" + "(" + args + ")";
+            curve_change.Rule = "Curve" + dot + "Change" + "(" + args + ")";
             #endregion 曲線とカントの文法
 
             #region 自軌道の勾配の文法

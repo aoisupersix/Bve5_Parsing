@@ -148,7 +148,7 @@ namespace IronyTest.MapGrammars
     {
         public string MapElement { get; private set; }
         public string Function { get; private set; }
-        public object[] Args { get; private set; }
+        public AstNode ArgsNode { get; private set; }
 
         public override void Init(AstContext context, ParseTreeNode treeNode)
         {
@@ -158,24 +158,8 @@ namespace IronyTest.MapGrammars
             MapElement = nodes[0].Term.ToString();
             Function = nodes[1].Term.ToString();
 
-            AddChild("name-" + MapElement + "." + Function, nodes[0]);
-            AddChild("nodes[2]-" + nodes[2].ToString(), nodes[2]);
-
-            //引数が入っているノードの取得
-            //nodes = nodes[2].ChildNodes;
-
-            ////引数の登録
-            //Args = new object[nodes.Count];
-            //for (int i = 0; i < nodes.Count; i++)
-            //{
-            //    //引数が数式なら追加
-            //    if (nodes[i].Term.ToString().Equals("Expr"))
-            //    {
-            //        ExprNode exprNode = (ExprNode)nodes[i].AstNode;
-            //        Args[i] = exprNode.Value;
-            //        AddChild("Args[" + i + "]-" + exprNode.Value, nodes[i]);
-            //    }
-            //}
+            if(nodes.Count > 2)
+                ArgsNode = AddChild("Args", nodes[2]);
         }
     }
 
