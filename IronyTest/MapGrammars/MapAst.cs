@@ -141,6 +141,7 @@ namespace IronyTest.MapGrammars
     }
     #endregion 基本ステートメント
 
+    #region 構文形式ごとのAstNode
     /// <summary>
     /// マップ要素.関数(引数,引数,...);
     /// </summary>
@@ -193,8 +194,9 @@ namespace IronyTest.MapGrammars
                 ArgsNode = AddChild("Args", nodes[4]);
         }
     }
+    #endregion 構文形式ごとのAstNode
 
-    #region 引数
+    #region 引数のAstNode
     /// <summary>
     /// 引数？
     /// 引数があるかないか
@@ -279,8 +281,9 @@ namespace IronyTest.MapGrammars
             }
         }
     }
-    #endregion 引数
+    #endregion 引数のAstNode
 
+    #region 変数・数式のAstNode
     /// <summary>
     /// 変数宣言 $varName = Expr;
     /// </summary>
@@ -433,4 +436,5 @@ namespace IronyTest.MapGrammars
             Name = nodes[0].Token.Value.ToString();
         }
     }
+    #endregion 変数・数式のAstNode
 }
