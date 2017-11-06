@@ -57,6 +57,14 @@ namespace IronyTest.MapGrammars
             var loadSound3DList = new NonTerminal("LoadSound3DList", typeof(LoadListFileNode));
             #endregion リストファイル読み込みの定義
 
+            #region 引数の定義
+            var argTerm = new NonTerminal("ArgTerm");
+            var nextArg = new NonTerminal("NextArg");
+            var nextArgs = new NonTerminal("NextArgs", typeof(NextArgsNode));
+            var arg = new NonTerminal("Arg", typeof(ArgNode));
+            var args = new NonTerminal("Args", typeof(ArgsNode));
+            #endregion 引数の定義
+
             #region 曲線とカントの定義
             var curve = new NonTerminal("Curve");
             var curve_setGauge = new NonTerminal("Curve.SetGauge", typeof(Syntax_1));
@@ -111,6 +119,14 @@ namespace IronyTest.MapGrammars
             loadSound3DList.Rule = "Sound3D" + dot + "Load" + "(" + filePath + end;
             #endregion リストファイル読み込みの文法
 
+            #region 引数の文法
+            argTerm.Rule = expr | key;
+            nextArg.Rule = comma + argTerm;
+            nextArgs.Rule = MakeStarRule(nextArgs, nextArg);
+            arg.Rule = argTerm + nextArgs;
+            args.Rule = arg | Empty;
+            #endregion 引数の文法
+
             #region 曲線とカントの文法
             curve.Rule =
                   curve_setGauge
@@ -121,14 +137,15 @@ namespace IronyTest.MapGrammars
                 | curve_end
                 | curve_interpolate
                 | curve_change;
-            curve_setGauge.Rule = "Curve" + dot + "SetGauge" + "(" + expr + ")";
-            curve_setCenter.Rule = "Curve" + dot + "SetCenter" + "(" + expr + ")";
-            curve_setFunction.Rule = "Curve" + dot + "SetFunction" + "(" + expr + ")";
+
+            curve_setGauge.Rule = "Curve" + dot + "SetGauge" + "(" + args + ")";
+            curve_setCenter.Rule = "Curve" + dot + "SetCenter" + "(" + args + ")";
+            curve_setFunction.Rule = "Curve" + dot + "SetFunction" + "(" + args + ")";
             curve_beginTransition.Rule = "Curve" + dot + "BeginTransition" + "(" + ")";
-            curve_begin.Rule = "Curve" + dot + "Begin" + "(" + (expr + comma + expr | expr) + ")";
+            curve_begin.Rule = "Curve" + dot + "Begin" + "(" + args + ")";
             curve_end.Rule = "Curve" + dot + "End" + "(" + ")";
-            curve_interpolate.Rule = "Curve" + dot + "Interpolate" + "(" + (expr + comma + expr | expr | ReduceHere()) + ")";
-            curve_change.Rule = "Curve" + dot + "Change" + "(" + expr + ")";
+            curve_interpolate.Rule = "Curve" + dot + "Interpolate" + "(" + args + ")";
+            curve_change.Rule = "Curve" + dot + "Change" + "(" + args + ")";
             #endregion 曲線とカントの文法
 
             #region 自軌道の勾配の文法
@@ -151,7 +168,7 @@ namespace IronyTest.MapGrammars
             RegisterBracePair("(", ")");
 
             //非表示にする構文
-            MarkTransient(statement, basicState, loadListFile, mapElement, op, curve, track);
+            MarkTransient(statement, basicState, loadListFile, mapElement, op, curve, track, argTerm, nextArg);
             MarkPunctuation(doll, dot, comma, end, ToTerm("("), ToTerm(")"), ToTerm("["), ToTerm("]"));
 
             //コメント
