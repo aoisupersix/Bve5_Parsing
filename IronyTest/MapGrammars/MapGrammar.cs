@@ -170,10 +170,12 @@ namespace IronyTest.MapGrammars
             //    | curve_end
             //    | curve_interpolate
             //    | curve_change;
-            curve.Rule = curve_setGauge;
+            curve.Rule = curve_begin;
 
             curve_setGauge.Rule = "Curve" + dot + "SetGauge" + "(" + expr + ")";
-            curve_setCenter.Rule = "Curve" + dot + "SetCenter" + "(" + args + ")";
+            curve_setCenter.Rule = 
+                  "Curve" + dot + "SetCenter" + "(" + expr + comma + expr + ")"
+                | "Curve" + dot + "SetCenter" + "(" + expr + ")";
             curve_setFunction.Rule = "Curve" + dot + "SetFunction" + "(" + args + ")";
             curve_beginTransition.Rule = "Curve" + dot + "BeginTransition" + "(" + ")";
             curve_begin.Rule = "Curve" + dot + "Begin" + "(" + args + ")";
