@@ -99,6 +99,13 @@ namespace IronyTest.MapGrammars
             var track_cant_interpolate = new NonTerminal("Track.Cant.Interpolate", typeof(Syntax_3));
             #endregion 他軌道
 
+            #region ストラクチャ
+            var structure = new NonTerminal("Structure");
+            var structure_put = new NonTerminal("Structure.Put", typeof(Syntax_2));
+            var structure_put0 = new NonTerminal("Structure.Put0", typeof(Syntax_2));
+            var structure_putBetween = new NonTerminal("Structure.PutBetween", typeof(Syntax_2));
+            #endregion ストラクチャ
+
             /*
              * 文法の定義ここから
              */
@@ -110,7 +117,7 @@ namespace IronyTest.MapGrammars
             dist.Rule = expr + end + basicStates;
             basicStates.Rule = MakeStarRule(basicStates, basicState);
             basicState.Rule = mapElement + end;
-            mapElement.Rule = curve | gradient | track;
+            mapElement.Rule = curve | gradient | track | structure;
             #endregion 基本ステートメントと距離程の文法
 
             #region 変数・数式の定義
@@ -196,6 +203,17 @@ namespace IronyTest.MapGrammars
             track_cant_interpolate.Rule = "Track" + ToTerm("[") + key + ToTerm("]") + dot + "Cant" + dot + "Interpolate" + "(" + args + ")";
             #endregion 他軌道
 
+            #region ストラクチャ
+            structure.Rule =
+                  structure_put
+                | structure_put0
+                | structure_putBetween;
+
+            structure_put.Rule = PreferShiftHere() + "Structure" + ToTerm("[") + key + ToTerm("]") + dot + "Put" + "(" + args + ")";
+            structure_put0.Rule = PreferShiftHere() + "Structure" + ToTerm("[") + key + ToTerm("]") + dot + "Put0" + "(" + args + ")";
+            structure_putBetween.Rule = PreferShiftHere() + "Structure" + ToTerm("[") + key + ToTerm("]") + dot + "PutBetween" + "(" + args + ")";
+            #endregion ストラクチャ
+
             //演算子の優先順位設定
             RegisterOperators(0, plus, minus);
             RegisterOperators(1, mul, div, mod);
@@ -204,7 +222,7 @@ namespace IronyTest.MapGrammars
             RegisterBracePair("(", ")");
 
             //非表示にする構文
-            MarkTransient(statement, basicState, loadListFile, mapElement, op, curve, gradient, track, argTerm, nextArg);
+            MarkTransient(statement, basicState, loadListFile, mapElement, op, curve, gradient, track, structure, argTerm, nextArg);
             MarkPunctuation(doll, dot, comma, end, ToTerm("("), ToTerm(")"), ToTerm("["), ToTerm("]"));
 
             //コメント
