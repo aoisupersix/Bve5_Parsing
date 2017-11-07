@@ -67,56 +67,56 @@ namespace IronyTest.MapGrammars
 
             #region 曲線とカントの定義
             var curve = new NonTerminal("Curve");
-            var curve_setGauge = new NonTerminal("Curve.SetGauge", typeof(Syntax_1));
-            var curve_setCenter = new NonTerminal("Curve.SetCenter", typeof(Syntax_1));
-            var curve_setFunction = new NonTerminal("Curve.SetFunction", typeof(Syntax_1));
-            var curve_beginTransition = new NonTerminal("Curve.BeginTransition", typeof(Syntax_1));
-            var curve_begin = new NonTerminal("Curve.Begin", typeof(Syntax_1));
-            var curve_end = new NonTerminal("Curve.End", typeof(Syntax_1));
-            var curve_interpolate = new NonTerminal("Curve.Interpolate", typeof(Syntax_1));
-            var curve_change = new NonTerminal("Curve.Change", typeof(Syntax_1));
+            var curve_setGauge = new NonTerminal("Curve.SetGauge");
+            var curve_setCenter = new NonTerminal("Curve.SetCenter");
+            var curve_setFunction = new NonTerminal("Curve.SetFunction");
+            var curve_beginTransition = new NonTerminal("Curve.BeginTransition");
+            var curve_begin = new NonTerminal("Curve.Begin");
+            var curve_end = new NonTerminal("Curve.End");
+            var curve_interpolate = new NonTerminal("Curve.Interpolate");
+            var curve_change = new NonTerminal("Curve.Change");
             #endregion 曲線とカントの定義
 
             #region 自軌道の勾配の定義
             var gradient = new NonTerminal("Gradient");
-            var gradient_beginTransition = new NonTerminal("Gradient.BeginTransition", typeof(Syntax_1));
-            var gradient_begin = new NonTerminal("Gradient.Begin", typeof(Syntax_1));
-            var gradient_end = new NonTerminal("Gradient.End", typeof(Syntax_1));
-            var gradient_interpolate = new NonTerminal("Gradient.Interpolate", typeof(Syntax_1));
+            var gradient_beginTransition = new NonTerminal("Gradient.BeginTransition");
+            var gradient_begin = new NonTerminal("Gradient.Begin");
+            var gradient_end = new NonTerminal("Gradient.End");
+            var gradient_interpolate = new NonTerminal("Gradient.Interpolate");
             #endregion 自軌道の勾配の定義
 
             #region 他軌道
             var track = new NonTerminal("Track");
-            var track_x_interpolate = new NonTerminal("Track.X.Interpolate", typeof(Syntax_3));
-            var track_y_interpolate = new NonTerminal("Track.Y.Interpolate", typeof(Syntax_3));
-            var track_position = new NonTerminal("Track.Position", typeof(Syntax_2));
-            var track_cant_setGauge = new NonTerminal("Track.Cant.SetGauge", typeof(Syntax_3));
-            var track_cant_setCenter = new NonTerminal("Track.Cant.SetCenter", typeof(Syntax_3));
-            var track_cant_setFunction = new NonTerminal("Track.Cant.SetFunction", typeof(Syntax_3));
-            var track_cant_beginTransition = new NonTerminal("Track.Cant.BeginTransition", typeof(Syntax_3));
-            var track_cant_begin = new NonTerminal("Track.Cant.Begin", typeof(Syntax_3));
-            var track_cant_end = new NonTerminal("Track.Cant.End", typeof(Syntax_3));
-            var track_cant_interpolate = new NonTerminal("Track.Cant.Interpolate", typeof(Syntax_3));
+            var track_x_interpolate = new NonTerminal("Track.X.Interpolate");
+            var track_y_interpolate = new NonTerminal("Track.Y.Interpolate");
+            var track_position = new NonTerminal("Track.Position");
+            var track_cant_setGauge = new NonTerminal("Track.Cant.SetGauge");
+            var track_cant_setCenter = new NonTerminal("Track.Cant.SetCenter");
+            var track_cant_setFunction = new NonTerminal("Track.Cant.SetFunction");
+            var track_cant_beginTransition = new NonTerminal("Track.Cant.BeginTransition");
+            var track_cant_begin = new NonTerminal("Track.Cant.Begin");
+            var track_cant_end = new NonTerminal("Track.Cant.End");
+            var track_cant_interpolate = new NonTerminal("Track.Cant.Interpolate");
             #endregion 他軌道
 
             #region ストラクチャ
             var structure = new NonTerminal("Structure");
-            var structure_put = new NonTerminal("Structure.Put", typeof(Syntax_2));
-            var structure_put0 = new NonTerminal("Structure.Put0", typeof(Syntax_2));
-            var structure_putBetween = new NonTerminal("Structure.PutBetween", typeof(Syntax_2));
+            var structure_put = new NonTerminal("Structure.Put");
+            var structure_put0 = new NonTerminal("Structure.Put0");
+            var structure_putBetween = new NonTerminal("Structure.PutBetween");
             #endregion ストラクチャ
 
             #region 連続ストラクチャ
             var repeater = new NonTerminal("Repeater");
-            var repeater_begin = new NonTerminal("Repeater.Begin", typeof(Syntax_2));
-            var repeater_begin0 = new NonTerminal("Repeater.Begin0", typeof(Syntax_2));
-            var repeater_end = new NonTerminal("Repeater.End", typeof(Syntax_2));
-            var background_change = new NonTerminal("Background.Change", typeof(Syntax_1));
+            var repeater_begin = new NonTerminal("Repeater.Begin");
+            var repeater_begin0 = new NonTerminal("Repeater.Begin0");
+            var repeater_end = new NonTerminal("Repeater.End");
+            var background_change = new NonTerminal("Background.Change");
             #endregion 連続ストラクチャ
 
             #region 停車場
             var station = new NonTerminal("Station");
-            var station_put = new NonTerminal("Station.Put", typeof(Syntax_2));
+            var station_put = new NonTerminal("Station.Put");
             #endregion 停車場
 
             /*
@@ -130,7 +130,8 @@ namespace IronyTest.MapGrammars
             dist.Rule = expr + end + basicStates;
             basicStates.Rule = MakeStarRule(basicStates, basicState);
             basicState.Rule = mapElement + end;
-            mapElement.Rule = curve | gradient | track | structure | repeater | station;
+            //mapElement.Rule = curve | gradient | track | structure | repeater | station;
+            mapElement.Rule = curve;
             #endregion 基本ステートメントと距離程の文法
 
             #region 変数・数式の定義
@@ -159,17 +160,18 @@ namespace IronyTest.MapGrammars
             #endregion 引数の文法
 
             #region 曲線とカントの文法
-            curve.Rule =
-                  curve_setGauge
-                | curve_setCenter
-                | curve_setFunction
-                | curve_beginTransition
-                | curve_begin
-                | curve_end
-                | curve_interpolate
-                | curve_change;
+            //curve.Rule =
+            //      curve_setGauge
+            //    | curve_setCenter
+            //    | curve_setFunction
+            //    | curve_beginTransition
+            //    | curve_begin
+            //    | curve_end
+            //    | curve_interpolate
+            //    | curve_change;
+            curve.Rule = curve_setGauge;
 
-            curve_setGauge.Rule = "Curve" + dot + "SetGauge" + "(" + args + ")";
+            curve_setGauge.Rule = "Curve" + dot + "SetGauge" + "(" + Expr + ")";
             curve_setCenter.Rule = "Curve" + dot + "SetCenter" + "(" + args + ")";
             curve_setFunction.Rule = "Curve" + dot + "SetFunction" + "(" + args + ")";
             curve_beginTransition.Rule = "Curve" + dot + "BeginTransition" + "(" + ")";
