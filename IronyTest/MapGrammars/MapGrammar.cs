@@ -2,6 +2,7 @@
 using Irony.Ast;
 using Irony.Interpreter;
 using IronyTest.MapGrammars.AstNodes;
+using Curve = IronyTest.MapGrammars.AstNodes.CurveNodes;
 
 namespace IronyTest.MapGrammars
 {
@@ -67,7 +68,7 @@ namespace IronyTest.MapGrammars
 
             #region 曲線とカントの定義
             var curve = new NonTerminal("Curve");
-            var curve_setGauge = new NonTerminal("Curve.SetGauge");
+            var curve_setGauge = new NonTerminal("Curve.SetGauge", typeof(Curve.SetGaugeNode));
             var curve_setCenter = new NonTerminal("Curve.SetCenter");
             var curve_setFunction = new NonTerminal("Curve.SetFunction");
             var curve_beginTransition = new NonTerminal("Curve.BeginTransition");
@@ -171,7 +172,7 @@ namespace IronyTest.MapGrammars
             //    | curve_change;
             curve.Rule = curve_setGauge;
 
-            curve_setGauge.Rule = "Curve" + dot + "SetGauge" + "(" + Expr + ")";
+            curve_setGauge.Rule = "Curve" + dot + "SetGauge" + "(" + expr + ")";
             curve_setCenter.Rule = "Curve" + dot + "SetCenter" + "(" + args + ")";
             curve_setFunction.Rule = "Curve" + dot + "SetFunction" + "(" + args + ")";
             curve_beginTransition.Rule = "Curve" + dot + "BeginTransition" + "(" + ")";

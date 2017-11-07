@@ -7,19 +7,18 @@ using Irony.Parsing;
 
 namespace IronyTest.MapGrammars.AstNodes.CurveNodes
 {
-    public class SetGaugeNode : AstNode
+    public class SetGaugeNode : Syntax_1
     {
-        public SyntaxData Data { get; private set; }
 
         public override void Init(AstContext context, ParseTreeNode treeNode)
         {
             base.Init(context, treeNode);
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
 
-            //Dataに構文情報を格納していく
-            Data = new SyntaxData();
-            Data.MapElement = new string[1];
-            Data.MapElement[0] = nodes[0].Term.ToString();
+            //引数の登録
+            ExprNode expr = (ExprNode)nodes[2].AstNode;
+            Data.Arguments.Add("value", expr.Value);
+            AddChild("Value", nodes[2]);
         }
     }
 }

@@ -17,6 +17,12 @@ namespace IronyTest.MapGrammars.AstNodes
         public string Key { get; set; }
         public string Function { get; set; }
         public Dictionary<string, object> Arguments { get; set; }
+
+        public SyntaxData()
+        {
+            Arguments = new Dictionary<string, object>();
+        }
+
     }
 
     /// <summary>
