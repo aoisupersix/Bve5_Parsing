@@ -106,6 +106,14 @@ namespace IronyTest.MapGrammars
             var structure_putBetween = new NonTerminal("Structure.PutBetween", typeof(Syntax_2));
             #endregion ストラクチャ
 
+            #region 連続ストラクチャ
+            var repeater = new NonTerminal("Repeater");
+            var repeater_begin = new NonTerminal("Repeater.Begin", typeof(Syntax_2));
+            var repeater_begin0 = new NonTerminal("Repeater.Begin0", typeof(Syntax_2));
+            var repeater_end = new NonTerminal("Repeater.End", typeof(Syntax_2));
+            var background_change = new NonTerminal("Background.Change", typeof(Syntax_1));
+            #endregion 連続ストラクチャ
+
             /*
              * 文法の定義ここから
              */
@@ -117,7 +125,7 @@ namespace IronyTest.MapGrammars
             dist.Rule = expr + end + basicStates;
             basicStates.Rule = MakeStarRule(basicStates, basicState);
             basicState.Rule = mapElement + end;
-            mapElement.Rule = curve | gradient | track | structure;
+            mapElement.Rule = curve | gradient | track | structure | repeater;
             #endregion 基本ステートメントと距離程の文法
 
             #region 変数・数式の定義
@@ -214,6 +222,19 @@ namespace IronyTest.MapGrammars
             structure_putBetween.Rule = PreferShiftHere() + "Structure" + ToTerm("[") + key + ToTerm("]") + dot + "PutBetween" + "(" + args + ")";
             #endregion ストラクチャ
 
+            #region 連続ストラクチャ
+            repeater.Rule =
+                  repeater_begin
+                | repeater_begin0
+                | repeater_end
+                | background_change;
+
+            repeater_begin.Rule = "Repeater" + ToTerm("[") + key + ToTerm("]") + dot + "Begin" + "(" + args + ")";
+            repeater_begin0.Rule = "Repeater" + ToTerm("[") + key + ToTerm("]") + dot + "Begin0" + "(" + args + ")";
+            repeater_end.Rule = "Repeater" + ToTerm("[") + key + ToTerm("]") + dot + "End" + "(" + args + ")";
+            background_change.Rule = "BackGround" + dot + "Change" + "(" + args + ")";
+            #endregion 連続ストラクチャ
+
             //演算子の優先順位設定
             RegisterOperators(0, plus, minus);
             RegisterOperators(1, mul, div, mod);
@@ -222,7 +243,7 @@ namespace IronyTest.MapGrammars
             RegisterBracePair("(", ")");
 
             //非表示にする構文
-            MarkTransient(statement, basicState, loadListFile, mapElement, op, curve, gradient, track, structure, argTerm, nextArg);
+            MarkTransient(statement, basicState, loadListFile, mapElement, op, curve, gradient, track, structure, repeater, argTerm, nextArg);
             MarkPunctuation(doll, dot, comma, end, ToTerm("("), ToTerm(")"), ToTerm("["), ToTerm("]"));
 
             //コメント
