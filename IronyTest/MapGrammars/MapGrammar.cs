@@ -114,6 +114,11 @@ namespace IronyTest.MapGrammars
             var background_change = new NonTerminal("Background.Change", typeof(Syntax_1));
             #endregion 連続ストラクチャ
 
+            #region 停車場
+            var station = new NonTerminal("Station");
+            var station_put = new NonTerminal("Station.Put", typeof(Syntax_2));
+            #endregion 停車場
+
             /*
              * 文法の定義ここから
              */
@@ -125,7 +130,7 @@ namespace IronyTest.MapGrammars
             dist.Rule = expr + end + basicStates;
             basicStates.Rule = MakeStarRule(basicStates, basicState);
             basicState.Rule = mapElement + end;
-            mapElement.Rule = curve | gradient | track | structure | repeater;
+            mapElement.Rule = curve | gradient | track | structure | repeater | station;
             #endregion 基本ステートメントと距離程の文法
 
             #region 変数・数式の定義
@@ -235,6 +240,11 @@ namespace IronyTest.MapGrammars
             background_change.Rule = "BackGround" + dot + "Change" + "(" + args + ")";
             #endregion 連続ストラクチャ
 
+            #region 停車場
+            station.Rule = station_put;
+            station_put.Rule = PreferShiftHere() + "Station" + ToTerm("[") + key + ToTerm("]") + dot + "Put" + "(" + args + ")";
+            #endregion 停車場
+
             //演算子の優先順位設定
             RegisterOperators(0, plus, minus);
             RegisterOperators(1, mul, div, mod);
@@ -243,7 +253,7 @@ namespace IronyTest.MapGrammars
             RegisterBracePair("(", ")");
 
             //非表示にする構文
-            MarkTransient(statement, basicState, loadListFile, mapElement, op, curve, gradient, track, structure, repeater, argTerm, nextArg);
+            MarkTransient(statement, basicState, loadListFile, mapElement, op, curve, gradient, track, structure, repeater, station, argTerm, nextArg);
             MarkPunctuation(doll, dot, comma, end, ToTerm("("), ToTerm(")"), ToTerm("["), ToTerm("]"));
 
             //コメント
