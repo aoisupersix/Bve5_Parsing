@@ -1,7 +1,7 @@
 ﻿using Irony.Parsing;
 using Irony.Ast;
 using Irony.Interpreter;
-using Irony.Interpreter.Ast;
+using IronyTest.MapGrammars.AstNodes;
 
 namespace IronyTest.MapGrammars
 {

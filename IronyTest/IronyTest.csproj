@@ -52,9 +52,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GrammarTest.cs" />
-    <Compile Include="MapGrammars\MapAst.cs" />
+    <Compile Include="MapGrammars\AstNodes\ArgumentsNodes.cs" />
+    <Compile Include="MapGrammars\AstNodes\ExprNodes.cs" />
+    <Compile Include="MapGrammars\AstNodes\MapElementNodes.cs" />
+    <Compile Include="MapGrammars\AstNodes\RootAstNodes.cs" />
+    <Compile Include="MapGrammars\AstNodes\VarNodes.cs" />
     <Compile Include="MapGrammars\MapGrammar.cs" />
     <Compile Include="ExtraChars.cs" />
+    <Compile Include="MapGrammars\Vars.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ScenariosGrammar.cs" />
     <Compile Include="SimpleGrammar.cs" />
@@ -63,5 +68,6 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
