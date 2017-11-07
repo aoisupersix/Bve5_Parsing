@@ -286,7 +286,7 @@ namespace IronyTest.MapGrammars
             for (int i = 0; i < nodes[1].ChildNodes.Count; i++)
             {
                 Arg[i+1] = GetArgument(nodes[1].ChildNodes[i]);
-                AddChild("nodes[" + (i+1) + "]=" + Arg[i+1], nodes[1].ChildNodes[i]);
+                AddChild("Arg[" + (i+1) + "]=" + Arg[i+1], nodes[1].ChildNodes[i]);
             }
         }
 
