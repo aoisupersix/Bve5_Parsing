@@ -2,7 +2,9 @@
 using Irony.Ast;
 using Irony.Interpreter;
 using IronyTest.MapGrammars.AstNodes;
+
 using Curve = IronyTest.MapGrammars.AstNodes.CurveNodes;
+using Gradient = IronyTest.MapGrammars.AstNodes.GradientNodes;
 
 namespace IronyTest.MapGrammars
 {
@@ -80,10 +82,10 @@ namespace IronyTest.MapGrammars
 
             #region 自軌道の勾配の定義
             var gradient = new NonTerminal("Gradient");
-            var gradient_beginTransition = new NonTerminal("Gradient.BeginTransition");
-            var gradient_begin = new NonTerminal("Gradient.Begin");
-            var gradient_end = new NonTerminal("Gradient.End");
-            var gradient_interpolate = new NonTerminal("Gradient.Interpolate");
+            var gradient_beginTransition = new NonTerminal("Gradient.BeginTransition", typeof(Gradient.BeginTransition));
+            var gradient_begin = new NonTerminal("Gradient.Begin", typeof(Gradient.BeginNode));
+            var gradient_end = new NonTerminal("Gradient.End", typeof(Gradient.EndNode));
+            var gradient_interpolate = new NonTerminal("Gradient.Interpolate", typeof(Gradient.InterpolateNode));
             #endregion 自軌道の勾配の定義
 
             #region 他軌道
@@ -132,7 +134,7 @@ namespace IronyTest.MapGrammars
             basicStates.Rule = MakeStarRule(basicStates, basicState);
             basicState.Rule = mapElement + end;
             //mapElement.Rule = curve | gradient | track | structure | repeater | station;
-            mapElement.Rule = curve;
+            mapElement.Rule = curve | gradient;
             #endregion 基本ステートメントと距離程の文法
 
             #region 変数・数式の定義
@@ -192,10 +194,13 @@ namespace IronyTest.MapGrammars
                 | gradient_begin
                 | gradient_end
                 | gradient_interpolate;
+
             gradient_beginTransition.Rule = "Gradient" + dot + "BeginTransition" + "(" + ")";
-            gradient_begin.Rule = "Gradient" + dot + "Begin" + "(" + args + ")";
+            gradient_begin.Rule = "Gradient" + dot + "Begin" + "(" + expr + ")";
             gradient_end.Rule = "Gradient" + dot + "End" + "(" + ")";
-            gradient_interpolate.Rule = "Gradient" + dot + "Interpolate" + "(" + args + ")";
+            gradient_interpolate.Rule =
+                  "Gradient" + dot + "Interpolate" + "(" + expr + ")"
+                | "Gradient" + dot + "Interpolate" + "(" + ")";
             #endregion 自軌道の勾配の文法
 
             #region 他軌道

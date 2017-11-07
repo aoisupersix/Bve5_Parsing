@@ -1,8 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Text.RegularExpressions;
-using Irony.Ast;
-using Irony.Interpreter;
-using Irony.Interpreter.Ast;
+﻿using Irony.Ast;
 using Irony.Parsing;
 
 namespace IronyTest.MapGrammars.AstNodes.CurveNodes
