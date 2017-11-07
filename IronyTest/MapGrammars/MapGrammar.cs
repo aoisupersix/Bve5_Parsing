@@ -5,6 +5,7 @@ using IronyTest.MapGrammars.AstNodes;
 
 using Curve = IronyTest.MapGrammars.AstNodes.CurveNodes;
 using Gradient = IronyTest.MapGrammars.AstNodes.GradientNodes;
+using Track = IronyTest.MapGrammars.AstNodes.TrackNodes;
 
 namespace IronyTest.MapGrammars
 {
@@ -90,16 +91,16 @@ namespace IronyTest.MapGrammars
 
             #region 他軌道
             var track = new NonTerminal("Track");
-            var track_x_interpolate = new NonTerminal("Track.X.Interpolate");
-            var track_y_interpolate = new NonTerminal("Track.Y.Interpolate");
-            var track_position = new NonTerminal("Track.Position");
-            var track_cant_setGauge = new NonTerminal("Track.Cant.SetGauge");
-            var track_cant_setCenter = new NonTerminal("Track.Cant.SetCenter");
-            var track_cant_setFunction = new NonTerminal("Track.Cant.SetFunction");
-            var track_cant_beginTransition = new NonTerminal("Track.Cant.BeginTransition");
-            var track_cant_begin = new NonTerminal("Track.Cant.Begin");
-            var track_cant_end = new NonTerminal("Track.Cant.End");
-            var track_cant_interpolate = new NonTerminal("Track.Cant.Interpolate");
+            var track_x_interpolate = new NonTerminal("Track.X.Interpolate", typeof(Track.XInterpolateNode));
+            var track_y_interpolate = new NonTerminal("Track.Y.Interpolate", typeof(Track.YInterpolateNode));
+            var track_position = new NonTerminal("Track.Position", typeof(Track.Position));
+            var track_cant_setGauge = new NonTerminal("Track.Cant.SetGauge", typeof(Track.CantSetGaugeNode));
+            var track_cant_setCenter = new NonTerminal("Track.Cant.SetCenter", typeof(Track.CantSetCenterNode));
+            var track_cant_setFunction = new NonTerminal("Track.Cant.SetFunction", typeof(Track.CantSetFunctionNode));
+            var track_cant_beginTransition = new NonTerminal("Track.Cant.BeginTransition", typeof(Track.CantBeginTransitionNode));
+            var track_cant_begin = new NonTerminal("Track.Cant.Begin", typeof(Track.CantBeginNode));
+            var track_cant_end = new NonTerminal("Track.Cant.End", typeof(Track.CantEndNode));
+            var track_cant_interpolate = new NonTerminal("Track.Cant.Interpolate", typeof(Track.CantInterpolateNode));
             #endregion 他軌道
 
             #region ストラクチャ
@@ -134,7 +135,7 @@ namespace IronyTest.MapGrammars
             basicStates.Rule = MakeStarRule(basicStates, basicState);
             basicState.Rule = mapElement + end;
             //mapElement.Rule = curve | gradient | track | structure | repeater | station;
-            mapElement.Rule = curve | gradient;
+            mapElement.Rule = curve | gradient | track;
             #endregion 基本ステートメントと距離程の文法
 
             #region 変数・数式の定義
@@ -216,16 +217,27 @@ namespace IronyTest.MapGrammars
                 | track_cant_end
                 | track_cant_interpolate;
 
-            track_x_interpolate.Rule = "Track" + ToTerm("[") + key + ToTerm("]") + dot + "X" + dot + "Interpolate" + "(" + args + ")";
-            track_y_interpolate.Rule = "Track" + ToTerm("[") + key + ToTerm("]") + dot + "Y" + dot + "Interpolate" + "(" + args + ")";
-            track_position.Rule = "Track" + ToTerm("[") + key + ToTerm("]") + dot + "Position" + "(" + args + ")";
-            track_cant_setGauge.Rule = "Track" + ToTerm("[") + key + ToTerm("]") + dot + "Cant" + dot + "SetGauge" + "(" + args + ")";
-            track_cant_setCenter.Rule = "Track" + ToTerm("[") + key + ToTerm("]") + dot + "Cant" + dot + "SetCenter" + "(" + args + ")";
-            track_cant_setFunction.Rule = "Track" + ToTerm("[") + key + ToTerm("]") + dot + "Cant" + dot + "SetFunction" + "(" + args + ")";
+            track_x_interpolate.Rule =
+                  "Track" + ToTerm("[") + key + ToTerm("]") + dot + "X" + dot + "Interpolate" + "(" + expr + comma + expr + ")"
+                | "Track" + ToTerm("[") + key + ToTerm("]") + dot + "X" + dot + "Interpolate" + "(" + expr + ")"
+                | "Track" + ToTerm("[") + key + ToTerm("]") + dot + "X" + dot + "Interpolate" + "(" + ")";
+            track_y_interpolate.Rule =
+                  "Track" + ToTerm("[") + key + ToTerm("]") + dot + "Y" + dot + "Interpolate" + "(" + expr + comma + expr + ")"
+                | "Track" + ToTerm("[") + key + ToTerm("]") + dot + "Y" + dot + "Interpolate" + "(" + expr + ")"
+                | "Track" + ToTerm("[") + key + ToTerm("]") + dot + "Y" + dot + "Interpolate" + "(" + ")";
+            track_position.Rule =
+                  "Track" + ToTerm("[") + key + ToTerm("]") + dot + "Position" + "(" + expr + comma + expr + comma + expr + comma + expr + ")"
+                | "Track" + ToTerm("[") + key + ToTerm("]") + dot + "Position" + "(" + expr + comma + expr + comma + expr + ")"
+                | "Track" + ToTerm("[") + key + ToTerm("]") + dot + "Position" + "(" + expr + comma + expr + ")";
+            track_cant_setGauge.Rule = "Track" + ToTerm("[") + key + ToTerm("]") + dot + "Cant" + dot + "SetGauge" + "(" + expr + ")";
+            track_cant_setCenter.Rule = "Track" + ToTerm("[") + key + ToTerm("]") + dot + "Cant" + dot + "SetCenter" + "(" + expr + ")";
+            track_cant_setFunction.Rule = "Track" + ToTerm("[") + key + ToTerm("]") + dot + "Cant" + dot + "SetFunction" + "(" + expr + ")";
             track_cant_beginTransition.Rule = "Track" + ToTerm("[") + key + ToTerm("]") + dot + "Cant" + dot + "BeginTransition" + "(" + ")";
-            track_cant_begin.Rule = "Track" + ToTerm("[") + key + ToTerm("]") + dot + "Cant" + dot + "Begin" + "(" + args + ")";
+            track_cant_begin.Rule = "Track" + ToTerm("[") + key + ToTerm("]") + dot + "Cant" + dot + "Begin" + "(" + expr + ")";
             track_cant_end.Rule = "Track" + ToTerm("[") + key + ToTerm("]") + dot + "Cant" + dot + "End" + "(" + ")";
-            track_cant_interpolate.Rule = "Track" + ToTerm("[") + key + ToTerm("]") + dot + "Cant" + dot + "Interpolate" + "(" + args + ")";
+            track_cant_interpolate.Rule =
+                  "Track" + ToTerm("[") + key + ToTerm("]") + dot + "Cant" + dot + "Interpolate" + "(" + expr + ")"
+                | "Track" + ToTerm("[") + key + ToTerm("]") + dot + "Cant" + dot + "Interpolate" + "(" + ")";
             #endregion 他軌道
 
             #region ストラクチャ
