@@ -231,6 +231,18 @@ namespace IronyTest.MapGrammars
                 ArgsNode = AddChild("Args", nodes[4]);
         }
     }
+
+    /// <summary>
+    /// 構文情報を管理する構造体
+    /// </summary>
+    public struct SyntaxData
+    {
+        public string[] mapElement;
+        public string key;
+        public string function;
+        public object[] arguments;
+    }
+
     #endregion 構文形式ごとのAstNode
 
     #region 引数のAstNode
