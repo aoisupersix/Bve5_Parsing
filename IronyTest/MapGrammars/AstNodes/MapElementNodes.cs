@@ -49,25 +49,16 @@ namespace IronyTest.MapGrammars.AstNodes
     }
 
     /// <summary>
-    /// 構文の親クラス
-    /// マップ要素.関数(引数,引数,...);
+    /// Syntax_1~3の親クラス
     /// </summary>
-    public class Syntax_1 : AstNode
+    public class Syntax : AstNode
     {
-        public SyntaxData Data { get; private set; }
+        public SyntaxData Data { get; protected set; }
 
         public override void Init(AstContext context, ParseTreeNode treeNode)
         {
             base.Init(context, treeNode);
-            ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
-
-            //マップ要素と関数の登録
             Data = new SyntaxData();
-            Data.MapElement = new string[1];
-            Data.MapElement[0] = nodes[0].Term.ToString();
-            Data.Function = nodes[1].Term.ToString();
-
-            //引数は子クラスで登録する
         }
 
         /// <summary>
@@ -90,6 +81,26 @@ namespace IronyTest.MapGrammars.AstNodes
                 Data.Arguments.Add(argName, node.Token.Value);
                 AddChild(argName + "=" + node.Token.Value, node);
             }
+        }
+    }
+
+    /// <summary>
+    /// 構文の親クラス
+    /// マップ要素.関数(引数,引数,...);
+    /// </summary>
+    public class Syntax_1 : Syntax
+    {
+        public override void Init(AstContext context, ParseTreeNode treeNode)
+        {
+            base.Init(context, treeNode);
+            ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
+
+            //マップ要素と関数の登録
+            Data.MapElement = new string[1];
+            Data.MapElement[0] = nodes[0].Term.ToString();
+            Data.Function = nodes[1].Term.ToString();
+
+            //引数は子クラスで登録する
         }
     }
 
@@ -97,17 +108,14 @@ namespace IronyTest.MapGrammars.AstNodes
     /// 構文の親クラス
     /// マップ要素[キー].関数(引数,引数,...);
     /// </summary>
-    public class Syntax_2 : AstNode
+    public class Syntax_2 : Syntax
     {
-        public SyntaxData Data { get; private set; }
-
         public override void Init(AstContext context, ParseTreeNode treeNode)
         {
             base.Init(context, treeNode);
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
 
             //マップ要素、キー、関数の登録
-            Data = new SyntaxData();
             Data.MapElement = new string[1];
             Data.MapElement[0] = nodes[0].Term.ToString();
             Data.Key = (string)nodes[1].Token.Value;
@@ -115,45 +123,20 @@ namespace IronyTest.MapGrammars.AstNodes
 
             //引数は子クラスで登録する
         }
-
-        /// <summary>
-        /// 引数を登録する
-        /// </summary>
-        /// <param name="argName">引数名</param>
-        /// <param name="node">引数のnode</param>
-        protected void AddArguments(string argName, ParseTreeNode node)
-        {
-            if (node.ToString().Equals("Expr"))
-            {
-                //引数が数式
-                ExprNode expr = (ExprNode)node.AstNode;
-                Data.Arguments.Add(argName, expr.Value);
-                AddChild(argName + "=" + expr.Value, node);
-            }
-            else
-            {
-                //引数がキー
-                Data.Arguments.Add(argName, node.Token.Value);
-                AddChild(argName + "=" + node.Token.Value, node);
-            }
-        }
     }
 
     /// <summary>
     /// 構文の親クラス
     /// マップ要素[キー].マップ要素.関数(引数,引数,...);
     /// </summary>
-    public class Syntax_3 : AstNode
+    public class Syntax_3 : Syntax
     {
-        public SyntaxData Data { get; private set; }
-
         public override void Init(AstContext context, ParseTreeNode treeNode)
         {
             base.Init(context, treeNode);
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
 
             //マップ要素、キー、関数の登録
-            Data = new SyntaxData();
             Data.MapElement = new string[2];
             Data.MapElement[0] = nodes[0].Term.ToString();
             Data.Key = (string)nodes[1].Token.Value;
@@ -161,28 +144,6 @@ namespace IronyTest.MapGrammars.AstNodes
             Data.Function = nodes[3].Term.ToString();
 
             //引数は子クラスで登録する
-        }
-
-        /// <summary>
-        /// 引数を登録する
-        /// </summary>
-        /// <param name="argName">引数名</param>
-        /// <param name="node">引数のnode</param>
-        protected void AddArguments(string argName, ParseTreeNode node)
-        {
-            if (node.ToString().Equals("Expr"))
-            {
-                //引数が数式
-                ExprNode expr = (ExprNode)node.AstNode;
-                Data.Arguments.Add(argName, expr.Value);
-                AddChild(argName + "=" + expr.Value, node);
-            }
-            else
-            {
-                //引数がキー
-                Data.Arguments.Add(argName, node.Token.Value);
-                AddChild(argName + "=" + node.Token.Value, node);
-            }
         }
     }
 
