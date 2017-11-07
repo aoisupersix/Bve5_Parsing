@@ -69,13 +69,13 @@ namespace IronyTest.MapGrammars
             #region 曲線とカントの定義
             var curve = new NonTerminal("Curve");
             var curve_setGauge = new NonTerminal("Curve.SetGauge", typeof(Curve.SetGaugeNode));
-            var curve_setCenter = new NonTerminal("Curve.SetCenter");
-            var curve_setFunction = new NonTerminal("Curve.SetFunction");
-            var curve_beginTransition = new NonTerminal("Curve.BeginTransition");
+            var curve_setCenter = new NonTerminal("Curve.SetCenter", typeof(Curve.SetCenterNode));
+            var curve_setFunction = new NonTerminal("Curve.SetFunction", typeof(Curve.SetFunctionNode));
+            var curve_beginTransition = new NonTerminal("Curve.BeginTransition", typeof(Curve.BeginTransitionNode));
             var curve_begin = new NonTerminal("Curve.Begin", typeof(Curve.BeginNode));
-            var curve_end = new NonTerminal("Curve.End");
-            var curve_interpolate = new NonTerminal("Curve.Interpolate");
-            var curve_change = new NonTerminal("Curve.Change");
+            var curve_end = new NonTerminal("Curve.End", typeof(Curve.EndNode));
+            var curve_interpolate = new NonTerminal("Curve.Interpolate", typeof(Curve.InterpolateNode));
+            var curve_change = new NonTerminal("Curve.Change", typeof(Curve.ChangeNode));
             #endregion 曲線とカントの定義
 
             #region 自軌道の勾配の定義
@@ -161,27 +161,29 @@ namespace IronyTest.MapGrammars
             #endregion 引数の文法
 
             #region 曲線とカントの文法
-            //curve.Rule =
-            //      curve_setGauge
-            //    | curve_setCenter
-            //    | curve_setFunction
-            //    | curve_beginTransition
-            //    | curve_begin
-            //    | curve_end
-            //    | curve_interpolate
-            //    | curve_change;
-            curve.Rule = curve_begin;
+            curve.Rule =
+                  curve_setGauge
+                | curve_setCenter
+                | curve_setFunction
+                | curve_beginTransition
+                | curve_begin
+                | curve_end
+                | curve_interpolate
+                | curve_change;
 
             curve_setGauge.Rule = "Curve" + dot + "SetGauge" + "(" + expr + ")";
             curve_setCenter.Rule = "Curve" + dot + "SetCenter" + "(" + expr + ")";
-            curve_setFunction.Rule = "Curve" + dot + "SetFunction" + "(" + args + ")";
+            curve_setFunction.Rule = "Curve" + dot + "SetFunction" + "(" + expr + ")";
             curve_beginTransition.Rule = "Curve" + dot + "BeginTransition" + "(" + ")";
             curve_begin.Rule = 
                   "Curve" + dot + "Begin" + "(" + expr + comma + expr + ")"
                 | "Curve" + dot + "Begin" + "(" + expr + ")";
             curve_end.Rule = "Curve" + dot + "End" + "(" + ")";
-            curve_interpolate.Rule = "Curve" + dot + "Interpolate" + "(" + args + ")";
-            curve_change.Rule = "Curve" + dot + "Change" + "(" + args + ")";
+            curve_interpolate.Rule =
+                "Curve" + dot + "Interpolate" + "(" + expr + comma + expr + ")"
+                | "Curve" + dot + "Interpolate" + "(" + expr + ")"
+                | "Curve" + dot + "Interpolate" + "(" + ")";
+            curve_change.Rule = "Curve" + dot + "Change" + "(" + expr + ")";
             #endregion 曲線とカントの文法
 
             #region 自軌道の勾配の文法
