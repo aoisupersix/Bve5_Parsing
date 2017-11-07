@@ -156,21 +156,25 @@ namespace IronyTest.MapGrammars
     /// </summary>
     public class Syntax_1 : AstNode
     {
-        public string MapElement { get; private set; }
-        public string Function { get; private set; }
-        public AstNode ArgsNode { get; private set; }
+        public SyntaxData Data;
 
         public override void Init(AstContext context, ParseTreeNode treeNode)
         {
             base.Init(context, treeNode);
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
 
-            MapElement = nodes[0].Term.ToString();
-            Function = nodes[1].Term.ToString();
+            //マップ要素、キー、関数の登録
+            Data.mapElement = new string[1];
+            Data.mapElement[0] = nodes[0].Term.ToString();
+            Data.function = nodes[1].Term.ToString();
 
             //引数の登録
             if(nodes.Count > 2)
-                ArgsNode = AddChild("Args", nodes[2]);
+            {
+                ArgNode arg = (ArgNode)nodes[2].ChildNodes[0].AstNode;
+                Data.arguments = arg.Arg;
+                AddChild("Args", nodes[2]);
+            }
         }
     }
 
@@ -179,26 +183,28 @@ namespace IronyTest.MapGrammars
     /// </summary>
     public class Syntax_2 : AstNode
     {
-        public string MapElement { get; private set; }
-        public string Function { get; private set; }
-
-        public string Key { get; private set; }
-        public AstNode ArgsNode { get; private set; }
+        public SyntaxData Data;
 
         public override void Init(AstContext context, ParseTreeNode treeNode)
         {
             base.Init(context, treeNode);
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
 
-            MapElement = nodes[0].Term.ToString();
-            Key = (string)nodes[1].Token.Value;
-            Function = nodes[2].Term.ToString();
+            //マップ要素、キー、関数の登録
+            Data.mapElement = new string[1];
+            Data.mapElement[0] = nodes[0].Term.ToString();
+            Data.key = (string)nodes[1].Token.Value;
+            Data.function = nodes[2].Term.ToString();
 
-            AddChild(MapElement + "[" + Key + "]." + Function, nodes[0]);
+            AddChild(Data.mapElement[0] + "[" + Data.key + "]." + Data.function, nodes[0]);
 
             //引数の登録
             if (nodes.Count > 3)
-                ArgsNode = AddChild("Args", nodes[3]);
+            {
+                ArgNode arg = (ArgNode)nodes[3].ChildNodes[0].AstNode;
+                Data.arguments = arg.Arg;
+                AddChild("Args", nodes[3]);
+            }
         }
     }
 
@@ -207,28 +213,29 @@ namespace IronyTest.MapGrammars
     /// </summary>
     public class Syntax_3 : AstNode
     {
-        public string[] MapElement { get; private set; }
-        public string Function { get; private set; }
-
-        public string Key { get; private set; }
-        public AstNode ArgsNode { get; private set; }
+        public SyntaxData Data;
 
         public override void Init(AstContext context, ParseTreeNode treeNode)
         {
             base.Init(context, treeNode);
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
 
-            MapElement = new string[2];
-            MapElement[0] = nodes[0].Term.ToString();
-            MapElement[1] = nodes[2].Term.ToString();
-            Key = (string)nodes[1].Token.Value;
-            Function = nodes[3].Term.ToString();
+            //マップ要素、キー、関数の登録
+            Data.mapElement = new string[2];
+            Data.mapElement[0] = nodes[0].Term.ToString();
+            Data.mapElement[1] = nodes[2].Term.ToString();
+            Data.key = (string)nodes[1].Token.Value;
+            Data.function = nodes[3].Term.ToString();
 
-            AddChild(MapElement[0] + "[" + Key + "]." + MapElement[1] + "." + Function, nodes[0]);
+            AddChild(Data.mapElement[0] + "[" + Data.key + "]." + Data.mapElement[1] + "." + Data.function, nodes[0]);
 
             //引数の登録
             if (nodes.Count > 4)
-                ArgsNode = AddChild("Args", nodes[4]);
+            {
+                ArgNode arg = (ArgNode)nodes[4].ChildNodes[0].AstNode;
+                Data.arguments = arg.Arg;
+                AddChild("Args", nodes[4]);
+            }
         }
     }
 
