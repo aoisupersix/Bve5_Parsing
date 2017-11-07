@@ -69,6 +69,28 @@ namespace IronyTest.MapGrammars.AstNodes
 
             //引数は子クラスで登録する
         }
+
+        /// <summary>
+        /// 引数を登録する
+        /// </summary>
+        /// <param name="argName">引数名</param>
+        /// <param name="node">引数のnode</param>
+        protected void AddArguments(string argName, ParseTreeNode node)
+        {
+            if (node.ToString().Equals("Expr"))
+            {
+                //引数が数式
+                ExprNode expr = (ExprNode)node.AstNode;
+                Data.Arguments.Add(argName, expr.Value);
+                AddChild(argName + "=" + expr.Value, node);
+            }
+            else
+            {
+                //引数がキー
+                Data.Arguments.Add(argName, node.Token.Value);
+                AddChild(argName + "=" + node.Token.Value, node);
+            }
+        }
     }
 
     /// <summary>
@@ -92,6 +114,28 @@ namespace IronyTest.MapGrammars.AstNodes
             Data.Function = nodes[2].Term.ToString();
 
             //引数は子クラスで登録する
+        }
+
+        /// <summary>
+        /// 引数を登録する
+        /// </summary>
+        /// <param name="argName">引数名</param>
+        /// <param name="node">引数のnode</param>
+        protected void AddArguments(string argName, ParseTreeNode node)
+        {
+            if (node.ToString().Equals("Expr"))
+            {
+                //引数が数式
+                ExprNode expr = (ExprNode)node.AstNode;
+                Data.Arguments.Add(argName, expr.Value);
+                AddChild(argName + "=" + expr.Value, node);
+            }
+            else
+            {
+                //引数がキー
+                Data.Arguments.Add(argName, node.Token.Value);
+                AddChild(argName + "=" + node.Token.Value, node);
+            }
         }
     }
 
@@ -117,6 +161,28 @@ namespace IronyTest.MapGrammars.AstNodes
             Data.Function = nodes[3].Term.ToString();
 
             //引数は子クラスで登録する
+        }
+
+        /// <summary>
+        /// 引数を登録する
+        /// </summary>
+        /// <param name="argName">引数名</param>
+        /// <param name="node">引数のnode</param>
+        protected void AddArguments(string argName, ParseTreeNode node)
+        {
+            if (node.ToString().Equals("Expr"))
+            {
+                //引数が数式
+                ExprNode expr = (ExprNode)node.AstNode;
+                Data.Arguments.Add(argName, expr.Value);
+                AddChild(argName + "=" + expr.Value, node);
+            }
+            else
+            {
+                //引数がキー
+                Data.Arguments.Add(argName, node.Token.Value);
+                AddChild(argName + "=" + node.Token.Value, node);
+            }
         }
     }
 

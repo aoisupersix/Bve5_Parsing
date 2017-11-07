@@ -22,9 +22,7 @@ namespace IronyTest.MapGrammars.AstNodes.CurveNodes
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
 
             //引数の登録
-            ExprNode expr = (ExprNode)nodes[2].AstNode;
-            Data.Arguments.Add("value", expr.Value);
-            AddChild("Value", nodes[2]);
+            AddArguments("value", nodes[2]);
         }
     }
 
@@ -39,9 +37,7 @@ namespace IronyTest.MapGrammars.AstNodes.CurveNodes
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
 
             //引数の登録
-            ExprNode expr = (ExprNode)nodes[2].AstNode;
-            Data.Arguments.Add("radius", expr.Value);
-            AddChild("Radius", nodes[2]);
+            //TODO
         }
     }
 }
