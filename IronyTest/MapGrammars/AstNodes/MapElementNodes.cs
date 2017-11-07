@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text.RegularExpressions;
+﻿using System.Collections.Generic;
 using Irony.Ast;
-using Irony.Interpreter;
 using Irony.Interpreter.Ast;
 using Irony.Parsing;
 

@@ -6,6 +6,7 @@ using IronyTest.MapGrammars.AstNodes;
 using Curve = IronyTest.MapGrammars.AstNodes.CurveNodes;
 using Gradient = IronyTest.MapGrammars.AstNodes.GradientNodes;
 using Track = IronyTest.MapGrammars.AstNodes.TrackNodes;
+using Structure = IronyTest.MapGrammars.AstNodes.StructureNodes;
 
 namespace IronyTest.MapGrammars
 {
@@ -105,9 +106,9 @@ namespace IronyTest.MapGrammars
 
             #region ストラクチャ
             var structure = new NonTerminal("Structure");
-            var structure_put = new NonTerminal("Structure.Put");
-            var structure_put0 = new NonTerminal("Structure.Put0");
-            var structure_putBetween = new NonTerminal("Structure.PutBetween");
+            var structure_put = new NonTerminal("Structure.Put", typeof(Structure.Put));
+            var structure_put0 = new NonTerminal("Structure.Put0", typeof(Structure.Put0));
+            var structure_putBetween = new NonTerminal("Structure.PutBetween", typeof(Structure.PutBetween));
             #endregion ストラクチャ
 
             #region 連続ストラクチャ
@@ -135,7 +136,7 @@ namespace IronyTest.MapGrammars
             basicStates.Rule = MakeStarRule(basicStates, basicState);
             basicState.Rule = mapElement + end;
             //mapElement.Rule = curve | gradient | track | structure | repeater | station;
-            mapElement.Rule = curve | gradient | track;
+            mapElement.Rule = curve | gradient | track | structure;
             #endregion 基本ステートメントと距離程の文法
 
             #region 変数・数式の定義
@@ -246,9 +247,11 @@ namespace IronyTest.MapGrammars
                 | structure_put0
                 | structure_putBetween;
 
-            structure_put.Rule = PreferShiftHere() + "Structure" + ToTerm("[") + key + ToTerm("]") + dot + "Put" + "(" + args + ")";
-            structure_put0.Rule = PreferShiftHere() + "Structure" + ToTerm("[") + key + ToTerm("]") + dot + "Put0" + "(" + args + ")";
-            structure_putBetween.Rule = PreferShiftHere() + "Structure" + ToTerm("[") + key + ToTerm("]") + dot + "PutBetween" + "(" + args + ")";
+            structure_put.Rule = PreferShiftHere() + "Structure" + ToTerm("[") + key + ToTerm("]") + dot + "Put" + "(" + key + comma + expr + comma + expr + comma + expr + comma + expr + comma + expr + comma + expr + comma + expr + comma + expr + ")";
+            structure_put0.Rule = PreferShiftHere() + "Structure" + ToTerm("[") + key + ToTerm("]") + dot + "Put0" + "(" + key + comma + expr + comma + expr + ")";
+            structure_putBetween.Rule =
+                  PreferShiftHere() + "Structure" + ToTerm("[") + key + ToTerm("]") + dot + "PutBetween" + "(" + key + comma + key + comma + expr + ")"
+                | PreferShiftHere() + "Structure" + ToTerm("[") + key + ToTerm("]") + dot + "PutBetween" + "(" + key + comma + key + ")";
             #endregion ストラクチャ
 
             #region 連続ストラクチャ
