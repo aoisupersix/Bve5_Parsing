@@ -37,7 +37,9 @@ namespace IronyTest.MapGrammars.AstNodes.CurveNodes
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
 
             //引数の登録
-            //TODO
+            AddArguments("radius", nodes[2]);
+            if (nodes.Count > 3)
+                AddArguments("cant", nodes[3]);
         }
     }
 }

@@ -72,7 +72,7 @@ namespace IronyTest.MapGrammars
             var curve_setCenter = new NonTerminal("Curve.SetCenter");
             var curve_setFunction = new NonTerminal("Curve.SetFunction");
             var curve_beginTransition = new NonTerminal("Curve.BeginTransition");
-            var curve_begin = new NonTerminal("Curve.Begin");
+            var curve_begin = new NonTerminal("Curve.Begin", typeof(Curve.BeginNode));
             var curve_end = new NonTerminal("Curve.End");
             var curve_interpolate = new NonTerminal("Curve.Interpolate");
             var curve_change = new NonTerminal("Curve.Change");
@@ -170,15 +170,15 @@ namespace IronyTest.MapGrammars
             //    | curve_end
             //    | curve_interpolate
             //    | curve_change;
-            curve.Rule = curve_setGauge;
+            curve.Rule = curve_begin;
 
             curve_setGauge.Rule = "Curve" + dot + "SetGauge" + "(" + expr + ")";
-            curve_setCenter.Rule = 
-                  "Curve" + dot + "SetCenter" + "(" + expr + comma + expr + ")"
-                | "Curve" + dot + "SetCenter" + "(" + expr + ")";
+            curve_setCenter.Rule = "Curve" + dot + "SetCenter" + "(" + expr + ")";
             curve_setFunction.Rule = "Curve" + dot + "SetFunction" + "(" + args + ")";
             curve_beginTransition.Rule = "Curve" + dot + "BeginTransition" + "(" + ")";
-            curve_begin.Rule = "Curve" + dot + "Begin" + "(" + args + ")";
+            curve_begin.Rule = 
+                  "Curve" + dot + "Begin" + "(" + expr + comma + expr + ")"
+                | "Curve" + dot + "Begin" + "(" + expr + ")";
             curve_end.Rule = "Curve" + dot + "End" + "(" + ")";
             curve_interpolate.Rule = "Curve" + dot + "Interpolate" + "(" + args + ")";
             curve_change.Rule = "Curve" + dot + "Change" + "(" + args + ")";
