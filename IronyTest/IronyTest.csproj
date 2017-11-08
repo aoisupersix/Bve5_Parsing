@@ -61,6 +61,7 @@
     <Compile Include="MapGrammars\AstNodes\RootAstNodes.cs" />
     <Compile Include="MapGrammars\AstNodes\SectionNodes\SectionNodes.cs" />
     <Compile Include="MapGrammars\AstNodes\SignalNodes\SignalNodes.cs" />
+    <Compile Include="MapGrammars\AstNodes\SpeedLimit\SpeedLimitNodes.cs" />
     <Compile Include="MapGrammars\AstNodes\StationNodes\StationNodes.cs" />
     <Compile Include="MapGrammars\AstNodes\StructureNodes\StructureNodes.cs" />
     <Compile Include="MapGrammars\AstNodes\TrackNodes\TrackNodes.cs" />
