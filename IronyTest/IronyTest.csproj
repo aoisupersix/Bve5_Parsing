@@ -55,6 +55,7 @@
     <Compile Include="MapGrammars\AstNodes\BeaconNodes\BeaconNodes.cs" />
     <Compile Include="MapGrammars\AstNodes\CurveNodes\CurveNodes.cs" />
     <Compile Include="MapGrammars\AstNodes\ExprNodes.cs" />
+    <Compile Include="MapGrammars\AstNodes\FogNodes\FogNodes.cs" />
     <Compile Include="MapGrammars\AstNodes\GradientNodes\GradientNodes.cs" />
     <Compile Include="MapGrammars\AstNodes\LightNodes\LightNodes.cs" />
     <Compile Include="MapGrammars\AstNodes\MapElementNodes.cs" />
