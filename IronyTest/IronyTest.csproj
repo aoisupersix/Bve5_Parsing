@@ -59,6 +59,7 @@
     <Compile Include="MapGrammars\AstNodes\MapElementNodes.cs" />
     <Compile Include="MapGrammars\AstNodes\RepeaterNodes\RepeaterNodes.cs" />
     <Compile Include="MapGrammars\AstNodes\RootAstNodes.cs" />
+    <Compile Include="MapGrammars\AstNodes\StationNodes\StationNodes.cs" />
     <Compile Include="MapGrammars\AstNodes\StructureNodes\StructureNodes.cs" />
     <Compile Include="MapGrammars\AstNodes\TrackNodes\TrackNodes.cs" />
     <Compile Include="MapGrammars\AstNodes\VarNodes.cs" />

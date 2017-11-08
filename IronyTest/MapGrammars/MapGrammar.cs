@@ -8,7 +8,7 @@ using Gradient = IronyTest.MapGrammars.AstNodes.GradientNodes;
 using Track = IronyTest.MapGrammars.AstNodes.TrackNodes;
 using Structure = IronyTest.MapGrammars.AstNodes.StructureNodes;
 using Repeater = IronyTest.MapGrammars.AstNodes.RepeaterNodes;
-
+using Station = IronyTest.MapGrammars.AstNodes.StationNodes;
 
 namespace IronyTest.MapGrammars
 {
@@ -126,7 +126,7 @@ namespace IronyTest.MapGrammars
 
             #region 停車場
             var station = new NonTerminal("Station");
-            var station_put = new NonTerminal("Station.Put");
+            var station_put = new NonTerminal("Station.Put", typeof(Station.PutNode));
             #endregion 停車場
 
             /*
@@ -140,8 +140,7 @@ namespace IronyTest.MapGrammars
             dist.Rule = expr + end + basicStates;
             basicStates.Rule = MakeStarRule(basicStates, basicState);
             basicState.Rule = mapElement + end;
-            //mapElement.Rule = curve | gradient | track | structure | repeater | station;
-            mapElement.Rule = curve | gradient | track | structure | repeater;
+            mapElement.Rule = curve | gradient | track | structure | repeater | station;
             #endregion 基本ステートメントと距離程の文法
 
             #region 変数・数式の定義
@@ -277,7 +276,7 @@ namespace IronyTest.MapGrammars
 
             #region 停車場
             station.Rule = station_put;
-            station_put.Rule = PreferShiftHere() + "Station" + ToTerm("[") + key + ToTerm("]") + dot + "Put" + "(" + args + ")";
+            station_put.Rule = PreferShiftHere() + "Station" + ToTerm("[") + key + ToTerm("]") + dot + "Put" + "(" + expr + comma + expr + comma + expr + ")";
             #endregion 停車場
 
             //演算子の優先順位設定
