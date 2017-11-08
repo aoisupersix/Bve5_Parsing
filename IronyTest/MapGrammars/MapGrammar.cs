@@ -59,6 +59,8 @@ namespace IronyTest.MapGrammars
             #region 引数の定義
             var strKey = new NonTerminal("StrKey");
             var strKeys = new NonTerminal("StrKeys");
+            var exprArg = new NonTerminal("exprArg");
+            var exprArgs = new NonTerminal("exprArgs");
             #endregion 引数の定義
 
             #region 曲線とカントの定義
@@ -115,6 +117,85 @@ namespace IronyTest.MapGrammars
             var station_put = new NonTerminal("Station.Put", typeof(AstNodes.Station.PutNode));
             #endregion 停車場
 
+            #region 閉塞
+            var section = new NonTerminal("Section");
+            var section_begin = new NonTerminal("Section.Begin", typeof(AstNodes.Section.BeginNode));
+            var section_setSpeedLimit = new NonTerminal("Section.SetSpeedLimit", typeof(AstNodes.Section.SetSpeedLimitNode));
+            #endregion 閉塞
+
+            #region 地上信号機
+            var signal = new NonTerminal("Signal");
+            var signal_put = new NonTerminal("Signal.Put", typeof(AstNodes.Signal.PutNode));
+            #endregion 地上信号機
+
+            #region 地上子
+            var beacon = new NonTerminal("Beacon");
+            var beacon_put = new NonTerminal("Beacon.Put", typeof(AstNodes.Beacon.PutNode));
+            #endregion 地上子
+
+            #region 速度制限
+            var speedLimit = new NonTerminal("SpeedLimit");
+            var speedLimit_begin = new NonTerminal("SpeedLimit.Begin", typeof(AstNodes.SpeedLimit.BeginNode));
+            var speedLimit_end = new NonTerminal("SpeedLimit.End", typeof(AstNodes.SpeedLimit.EndNode));
+            #endregion 速度制限
+
+            #region 先行列車
+            var preTrain = new NonTerminal("PreTrain");
+            var preTrain_pass = new NonTerminal("PreTrain.Pass", typeof(AstNodes.PreTrain.PassNode));
+            #endregion 先行列車
+
+            #region 光源
+            var light = new NonTerminal("Light");
+            var light_ambient = new NonTerminal("Light.Ambient", typeof(AstNodes.Light.AmbientNode));
+            var light_diffuce = new NonTerminal("Light.Diffuse", typeof(AstNodes.Light.DiffuseNode));
+            var light_direction = new NonTerminal("Light.Direction", typeof(AstNodes.Light.DirectionNode));
+            #endregion 光源
+
+            #region 霧効果
+            var fog = new NonTerminal("Fog");
+            var fog_interpolate = new NonTerminal("Fog.Interpolate", typeof(AstNodes.Fog.InterpolateNode));
+            #endregion 霧効果
+
+            #region 風景描画距離
+            var drawDistance = new NonTerminal("DrawDistance");
+            var drawDistance_change = new NonTerminal("DrawDistance.Change", typeof(AstNodes.DrawDistance.ChangeNode));
+            #endregion 風景描画距離
+
+            #region 運転台の明るさ
+            var cabIlluminance = new NonTerminal("CabIlluminance");
+            var cabIlluminance_interpolate = new NonTerminal("CabIlluminance.Interpolate", typeof(AstNodes.CabIlluminance.ChangeNode));
+            #endregion 運転台の明るさ
+
+            #region 軌道変位
+            var irregularity = new NonTerminal("Irregularity");
+            var irregularity_change = new NonTerminal("Irregularity.Change", typeof(AstNodes.Irregularity.ChangeNode));
+            #region 軌道変位
+
+            #region 粘着特性
+            var adhesion = new NonTerminal("Adhesion");
+            var adhesion_change = new NonTerminal("Adhesion.Change", typeof(AstNodes.Adhesion.ChangeNode));
+            #endregion 粘着特性
+
+            #region 音
+            var sound = new NonTerminal("Sound");
+            var sound_play = new NonTerminal("Sound.Play", typeof(AstNodes.Sound.PlayNode));
+            #endregion 音
+
+            #region 固定音源
+            var sound3D = new NonTerminal("Sound3D");
+            var sound3D_put = new NonTerminal("Sound3D.Put", typeof(AstNodes.Sound3D.PutNode));
+            #endregion 固定音源
+
+            #region 走行音
+            var rollingNoise = new NonTerminal("RollingNoise");
+            var rollingNoise_change = new NonTerminal("RollingNoise.Change", typeof(AstNodes.RollingNoise.ChangeNode));
+            #endregion 走行音
+
+            #region フランジきしり音
+            var flangeNoise = new NonTerminal("FlangeNoise");
+            var flangeNoise_change = new NonTerminal("FlangeNoise.Change", typeof(AstNodes.FlangeNoise.ChangeNode));
+            #endregion フランジきしり音
+
             /*
              * 文法の定義ここから
              */
@@ -149,6 +230,8 @@ namespace IronyTest.MapGrammars
             #region 引数の文法
             strKey.Rule = comma + key;
             strKeys.Rule = MakeStarRule(strKeys, strKey);
+            exprArg.Rule = comma + expr;
+            exprArgs.Rule = MakeStarRule(exprArgs, exprArg);
             #endregion 引数の文法
 
             #region 曲線とカントの文法
@@ -267,7 +350,7 @@ namespace IronyTest.MapGrammars
             RegisterBracePair("(", ")");
 
             //非表示にする構文
-            MarkTransient(statement, basicState, loadListFile, mapElement, op, curve, gradient, track, structure, repeater, station, strKey, strKeys);
+            MarkTransient(statement, basicState, loadListFile, mapElement, op, curve, gradient, track, structure, repeater, station, strKey, strKeys, exprArg, exprArgs);
             MarkPunctuation(doll, dot, comma, end, ToTerm("("), ToTerm(")"), ToTerm("["), ToTerm("]"));
 
             //コメント
