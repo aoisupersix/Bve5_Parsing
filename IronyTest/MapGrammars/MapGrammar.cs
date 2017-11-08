@@ -2,13 +2,6 @@
 using Irony.Interpreter;
 using IronyTest.MapGrammars.AstNodes;
 
-using Curve = IronyTest.MapGrammars.AstNodes.Curve;
-using Gradient = IronyTest.MapGrammars.AstNodes.Gradient;
-using Track = IronyTest.MapGrammars.AstNodes.Track;
-using Structure = IronyTest.MapGrammars.AstNodes.Structure;
-using Repeater = IronyTest.MapGrammars.AstNodes.Repeater;
-using Station = IronyTest.MapGrammars.AstNodes.Station;
-
 namespace IronyTest.MapGrammars
 {
     [Language("MapGrammar")]
@@ -70,56 +63,56 @@ namespace IronyTest.MapGrammars
 
             #region 曲線とカントの定義
             var curve = new NonTerminal("Curve");
-            var curve_setGauge = new NonTerminal("Curve.SetGauge", typeof(Curve.SetGaugeNode));
-            var curve_setCenter = new NonTerminal("Curve.SetCenter", typeof(Curve.SetCenterNode));
-            var curve_setFunction = new NonTerminal("Curve.SetFunction", typeof(Curve.SetFunctionNode));
-            var curve_beginTransition = new NonTerminal("Curve.BeginTransition", typeof(Curve.BeginTransitionNode));
-            var curve_begin = new NonTerminal("Curve.Begin", typeof(Curve.BeginNode));
-            var curve_end = new NonTerminal("Curve.End", typeof(Curve.EndNode));
-            var curve_interpolate = new NonTerminal("Curve.Interpolate", typeof(Curve.InterpolateNode));
-            var curve_change = new NonTerminal("Curve.Change", typeof(Curve.ChangeNode));
+            var curve_setGauge = new NonTerminal("Curve.SetGauge", typeof(AstNodes.Curve.SetGaugeNode));
+            var curve_setCenter = new NonTerminal("Curve.SetCenter", typeof(AstNodes.Curve.SetCenterNode));
+            var curve_setFunction = new NonTerminal("Curve.SetFunction", typeof(AstNodes.Curve.SetFunctionNode));
+            var curve_beginTransition = new NonTerminal("Curve.BeginTransition", typeof(AstNodes.Curve.BeginTransitionNode));
+            var curve_begin = new NonTerminal("Curve.Begin", typeof(AstNodes.Curve.BeginNode));
+            var curve_end = new NonTerminal("Curve.End", typeof(AstNodes.Curve.EndNode));
+            var curve_interpolate = new NonTerminal("Curve.Interpolate", typeof(AstNodes.Curve.InterpolateNode));
+            var curve_change = new NonTerminal("Curve.Change", typeof(AstNodes.Curve.ChangeNode));
             #endregion 曲線とカントの定義
 
             #region 自軌道の勾配の定義
             var gradient = new NonTerminal("Gradient");
-            var gradient_beginTransition = new NonTerminal("Gradient.BeginTransition", typeof(Gradient.BeginTransition));
-            var gradient_begin = new NonTerminal("Gradient.Begin", typeof(Gradient.BeginNode));
-            var gradient_end = new NonTerminal("Gradient.End", typeof(Gradient.EndNode));
-            var gradient_interpolate = new NonTerminal("Gradient.Interpolate", typeof(Gradient.InterpolateNode));
+            var gradient_beginTransition = new NonTerminal("Gradient.BeginTransition", typeof(AstNodes.Gradient.BeginTransition));
+            var gradient_begin = new NonTerminal("Gradient.Begin", typeof(AstNodes.Gradient.BeginNode));
+            var gradient_end = new NonTerminal("Gradient.End", typeof(AstNodes.Gradient.EndNode));
+            var gradient_interpolate = new NonTerminal("Gradient.Interpolate", typeof(AstNodes.Gradient.InterpolateNode));
             #endregion 自軌道の勾配の定義
 
             #region 他軌道
             var track = new NonTerminal("Track");
-            var track_x_interpolate = new NonTerminal("Track.X.Interpolate", typeof(Track.XInterpolateNode));
-            var track_y_interpolate = new NonTerminal("Track.Y.Interpolate", typeof(Track.YInterpolateNode));
-            var track_position = new NonTerminal("Track.Position", typeof(Track.Position));
-            var track_cant_setGauge = new NonTerminal("Track.Cant.SetGauge", typeof(Track.CantSetGaugeNode));
-            var track_cant_setCenter = new NonTerminal("Track.Cant.SetCenter", typeof(Track.CantSetCenterNode));
-            var track_cant_setFunction = new NonTerminal("Track.Cant.SetFunction", typeof(Track.CantSetFunctionNode));
-            var track_cant_beginTransition = new NonTerminal("Track.Cant.BeginTransition", typeof(Track.CantBeginTransitionNode));
-            var track_cant_begin = new NonTerminal("Track.Cant.Begin", typeof(Track.CantBeginNode));
-            var track_cant_end = new NonTerminal("Track.Cant.End", typeof(Track.CantEndNode));
-            var track_cant_interpolate = new NonTerminal("Track.Cant.Interpolate", typeof(Track.CantInterpolateNode));
+            var track_x_interpolate = new NonTerminal("Track.X.Interpolate", typeof(AstNodes.Track.XInterpolateNode));
+            var track_y_interpolate = new NonTerminal("Track.Y.Interpolate", typeof(AstNodes.Track.YInterpolateNode));
+            var track_position = new NonTerminal("Track.Position", typeof(AstNodes.Track.Position));
+            var track_cant_setGauge = new NonTerminal("Track.Cant.SetGauge", typeof(AstNodes.Track.CantSetGaugeNode));
+            var track_cant_setCenter = new NonTerminal("Track.Cant.SetCenter", typeof(AstNodes.Track.CantSetCenterNode));
+            var track_cant_setFunction = new NonTerminal("Track.Cant.SetFunction", typeof(AstNodes.Track.CantSetFunctionNode));
+            var track_cant_beginTransition = new NonTerminal("Track.Cant.BeginTransition", typeof(AstNodes.Track.CantBeginTransitionNode));
+            var track_cant_begin = new NonTerminal("Track.Cant.Begin", typeof(AstNodes.Track.CantBeginNode));
+            var track_cant_end = new NonTerminal("Track.Cant.End", typeof(AstNodes.Track.CantEndNode));
+            var track_cant_interpolate = new NonTerminal("Track.Cant.Interpolate", typeof(AstNodes.Track.CantInterpolateNode));
             #endregion 他軌道
 
             #region ストラクチャ
             var structure = new NonTerminal("Structure");
-            var structure_put = new NonTerminal("Structure.Put", typeof(Structure.PutNode));
-            var structure_put0 = new NonTerminal("Structure.Put0", typeof(Structure.Put0Node));
-            var structure_putBetween = new NonTerminal("Structure.PutBetween", typeof(Structure.PutBetweenNode));
+            var structure_put = new NonTerminal("Structure.Put", typeof(AstNodes.Structure.PutNode));
+            var structure_put0 = new NonTerminal("Structure.Put0", typeof(AstNodes.Structure.Put0Node));
+            var structure_putBetween = new NonTerminal("Structure.PutBetween", typeof(AstNodes.Structure.PutBetweenNode));
             #endregion ストラクチャ
 
             #region 連続ストラクチャ
             var repeater = new NonTerminal("Repeater");
-            var repeater_begin = new NonTerminal("Repeater.Begin", typeof(Repeater.BeginNode));
-            var repeater_begin0 = new NonTerminal("Repeater.Begin0", typeof(Repeater.Begin0Node));
-            var repeater_end = new NonTerminal("Repeater.End", typeof(Repeater.EndNode));
-            var background_change = new NonTerminal("Background.Change", typeof(Repeater.BackGroundChangeNode));
+            var repeater_begin = new NonTerminal("Repeater.Begin", typeof(AstNodes.Repeater.BeginNode));
+            var repeater_begin0 = new NonTerminal("Repeater.Begin0", typeof(AstNodes.Repeater.Begin0Node));
+            var repeater_end = new NonTerminal("Repeater.End", typeof(AstNodes.Repeater.EndNode));
+            var background_change = new NonTerminal("Background.Change", typeof(AstNodes.Repeater.BackGroundChangeNode));
             #endregion 連続ストラクチャ
 
             #region 停車場
             var station = new NonTerminal("Station");
-            var station_put = new NonTerminal("Station.Put", typeof(Station.PutNode));
+            var station_put = new NonTerminal("Station.Put", typeof(AstNodes.Station.PutNode));
             #endregion 停車場
 
             /*
