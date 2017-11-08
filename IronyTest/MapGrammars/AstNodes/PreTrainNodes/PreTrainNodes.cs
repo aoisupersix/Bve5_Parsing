@@ -10,7 +10,7 @@ namespace IronyTest.MapGrammars.AstNodes.PreTrainNodes
     /// <summary>
     /// PreTrain.Pass(hh:mm:ss) | PreTrain.Pass(second)
     /// </summary>
-    public class BeginNode : Syntax_1
+    public class PassNode : Syntax_1
     {
         public override void Init(AstContext context, ParseTreeNode treeNode)
         {
