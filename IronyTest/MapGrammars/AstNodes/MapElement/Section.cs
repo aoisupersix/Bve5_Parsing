@@ -1,7 +1,7 @@
 ﻿using Irony.Ast;
 using Irony.Parsing;
 
-namespace IronyTest.MapGrammars.AstNodes.SectionNodes
+namespace IronyTest.MapGrammars.AstNodes.Section
 {
     /*
      * SectionのAST木定義

@@ -1,7 +1,7 @@
 ﻿using Irony.Ast;
 using Irony.Parsing;
 
-namespace IronyTest.MapGrammars.AstNodes.CurveNodes
+namespace IronyTest.MapGrammars.AstNodes.Curve
 {
     /*
      * CurveのAST木定義

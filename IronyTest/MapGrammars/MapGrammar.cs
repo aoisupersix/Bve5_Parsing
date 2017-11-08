@@ -1,14 +1,13 @@
 ﻿using Irony.Parsing;
-using Irony.Ast;
 using Irony.Interpreter;
 using IronyTest.MapGrammars.AstNodes;
 
-using Curve = IronyTest.MapGrammars.AstNodes.CurveNodes;
-using Gradient = IronyTest.MapGrammars.AstNodes.GradientNodes;
-using Track = IronyTest.MapGrammars.AstNodes.TrackNodes;
-using Structure = IronyTest.MapGrammars.AstNodes.StructureNodes;
-using Repeater = IronyTest.MapGrammars.AstNodes.RepeaterNodes;
-using Station = IronyTest.MapGrammars.AstNodes.StationNodes;
+using Curve = IronyTest.MapGrammars.AstNodes.Curve;
+using Gradient = IronyTest.MapGrammars.AstNodes.Gradient;
+using Track = IronyTest.MapGrammars.AstNodes.Track;
+using Structure = IronyTest.MapGrammars.AstNodes.Structure;
+using Repeater = IronyTest.MapGrammars.AstNodes.Repeater;
+using Station = IronyTest.MapGrammars.AstNodes.Station;
 
 namespace IronyTest.MapGrammars
 {

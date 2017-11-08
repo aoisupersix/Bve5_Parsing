@@ -1,7 +1,7 @@
 ﻿using Irony.Ast;
 using Irony.Parsing;
 
-namespace IronyTest.MapGrammars.AstNodes.FogNodes
+namespace IronyTest.MapGrammars.AstNodes.Fog
 {
     /*
      * FogのAST木定義

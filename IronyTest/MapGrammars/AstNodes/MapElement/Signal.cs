@@ -1,7 +1,7 @@
 ﻿using Irony.Ast;
 using Irony.Parsing;
 
-namespace IronyTest.MapGrammars.AstNodes.SignalNodes
+namespace IronyTest.MapGrammars.AstNodes.Signal
 {
     /*
      * SignalのAST木定義

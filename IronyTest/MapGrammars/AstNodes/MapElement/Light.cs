@@ -1,7 +1,7 @@
 ﻿using Irony.Ast;
 using Irony.Parsing;
 
-namespace IronyTest.MapGrammars.AstNodes.LightNodes
+namespace IronyTest.MapGrammars.AstNodes.Light
 {
     /*
      * LightのAST木定義

@@ -1,7 +1,7 @@
 ﻿using Irony.Ast;
 using Irony.Parsing;
 
-namespace IronyTest.MapGrammars.AstNodes.BeaconNodes
+namespace IronyTest.MapGrammars.AstNodes.Beacon
 {
     /*
      * BeaconのAST木定義

@@ -1,14 +1,14 @@
 ﻿using Irony.Ast;
 using Irony.Parsing;
 
-namespace IronyTest.MapGrammars.AstNodes.CabilluminanceNodes
+namespace IronyTest.MapGrammars.AstNodes.CabIlluminance
 {
     /*
      * CabilluminanceのAST木定義
      */
 
     /// <summary>
-    /// Cabilluminance.Interpolate(value) | Cabilluminance.Interpolate()
+    /// CabIlluminance.Interpolate(value) | CabIlluminance.Interpolate()
     /// </summary>
     public class ChangeNode : Syntax_1
     {
