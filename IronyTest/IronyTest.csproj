@@ -52,7 +52,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GrammarTest.cs" />
-    <Compile Include="MapGrammars\AstNodes\ArgumentsNodes.cs" />
     <Compile Include="MapGrammars\AstNodes\CurveNodes\CurveNodes.cs" />
     <Compile Include="MapGrammars\AstNodes\ExprNodes.cs" />
     <Compile Include="MapGrammars\AstNodes\GradientNodes\GradientNodes.cs" />

@@ -65,12 +65,6 @@ namespace IronyTest.MapGrammars
             #endregion リストファイル読み込みの定義
 
             #region 引数の定義
-            var argTerm = new NonTerminal("ArgTerm");
-            var nextArg = new NonTerminal("NextArg");
-            var nextArgs = new NonTerminal("NextArgs", typeof(NextArgsNode));
-            var arg = new NonTerminal("Arg", typeof(ArgNode));
-            var args = new NonTerminal("Args", typeof(ArgsNode));
-
             var strKey = new NonTerminal("StrKey");
             var strKeys = new NonTerminal("StrKeys");
             #endregion 引数の定義
@@ -161,12 +155,6 @@ namespace IronyTest.MapGrammars
             #endregion リストファイル読み込みの文法
 
             #region 引数の文法
-            argTerm.Rule = expr | key;
-            nextArg.Rule = comma + argTerm;
-            nextArgs.Rule = MakeStarRule(nextArgs, nextArg);
-            arg.Rule = argTerm + nextArgs;
-            args.Rule = arg | Empty;
-
             strKey.Rule = comma + key;
             strKeys.Rule = MakeStarRule(strKeys, strKey);
             #endregion 引数の文法
@@ -287,7 +275,7 @@ namespace IronyTest.MapGrammars
             RegisterBracePair("(", ")");
 
             //非表示にする構文
-            MarkTransient(statement, basicState, loadListFile, mapElement, op, curve, gradient, track, structure, repeater, station, argTerm, nextArg, strKey, strKeys);
+            MarkTransient(statement, basicState, loadListFile, mapElement, op, curve, gradient, track, structure, repeater, station, strKey, strKeys);
             MarkPunctuation(doll, dot, comma, end, ToTerm("("), ToTerm(")"), ToTerm("["), ToTerm("]"));
 
             //コメント
