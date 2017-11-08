@@ -7,6 +7,8 @@ using Curve = IronyTest.MapGrammars.AstNodes.CurveNodes;
 using Gradient = IronyTest.MapGrammars.AstNodes.GradientNodes;
 using Track = IronyTest.MapGrammars.AstNodes.TrackNodes;
 using Structure = IronyTest.MapGrammars.AstNodes.StructureNodes;
+using Repeater = IronyTest.MapGrammars.AstNodes.RepeaterNodes;
+
 
 namespace IronyTest.MapGrammars
 {
@@ -68,6 +70,9 @@ namespace IronyTest.MapGrammars
             var nextArgs = new NonTerminal("NextArgs", typeof(NextArgsNode));
             var arg = new NonTerminal("Arg", typeof(ArgNode));
             var args = new NonTerminal("Args", typeof(ArgsNode));
+
+            var strKey = new NonTerminal("StrKey");
+            var strKeys = new NonTerminal("StrKeys");
             #endregion 引数の定義
 
             #region 曲線とカントの定義
@@ -106,17 +111,17 @@ namespace IronyTest.MapGrammars
 
             #region ストラクチャ
             var structure = new NonTerminal("Structure");
-            var structure_put = new NonTerminal("Structure.Put", typeof(Structure.Put));
-            var structure_put0 = new NonTerminal("Structure.Put0", typeof(Structure.Put0));
-            var structure_putBetween = new NonTerminal("Structure.PutBetween", typeof(Structure.PutBetween));
+            var structure_put = new NonTerminal("Structure.Put", typeof(Structure.PutNode));
+            var structure_put0 = new NonTerminal("Structure.Put0", typeof(Structure.Put0Node));
+            var structure_putBetween = new NonTerminal("Structure.PutBetween", typeof(Structure.PutBetweenNode));
             #endregion ストラクチャ
 
             #region 連続ストラクチャ
             var repeater = new NonTerminal("Repeater");
-            var repeater_begin = new NonTerminal("Repeater.Begin");
-            var repeater_begin0 = new NonTerminal("Repeater.Begin0");
-            var repeater_end = new NonTerminal("Repeater.End");
-            var background_change = new NonTerminal("Background.Change");
+            var repeater_begin = new NonTerminal("Repeater.Begin", typeof(Repeater.BeginNode));
+            var repeater_begin0 = new NonTerminal("Repeater.Begin0", typeof(Repeater.Begin0Node));
+            var repeater_end = new NonTerminal("Repeater.End", typeof(Repeater.EndNode));
+            var background_change = new NonTerminal("Background.Change", typeof(Repeater.BackGroundChangeNode));
             #endregion 連続ストラクチャ
 
             #region 停車場
@@ -136,7 +141,7 @@ namespace IronyTest.MapGrammars
             basicStates.Rule = MakeStarRule(basicStates, basicState);
             basicState.Rule = mapElement + end;
             //mapElement.Rule = curve | gradient | track | structure | repeater | station;
-            mapElement.Rule = curve | gradient | track | structure;
+            mapElement.Rule = curve | gradient | track | structure | repeater;
             #endregion 基本ステートメントと距離程の文法
 
             #region 変数・数式の定義
@@ -162,6 +167,9 @@ namespace IronyTest.MapGrammars
             nextArgs.Rule = MakeStarRule(nextArgs, nextArg);
             arg.Rule = argTerm + nextArgs;
             args.Rule = arg | Empty;
+
+            strKey.Rule = comma + key;
+            strKeys.Rule = MakeStarRule(strKeys, strKey);
             #endregion 引数の文法
 
             #region 曲線とカントの文法
@@ -261,10 +269,10 @@ namespace IronyTest.MapGrammars
                 | repeater_end
                 | background_change;
 
-            repeater_begin.Rule = "Repeater" + ToTerm("[") + key + ToTerm("]") + dot + "Begin" + "(" + args + ")";
-            repeater_begin0.Rule = "Repeater" + ToTerm("[") + key + ToTerm("]") + dot + "Begin0" + "(" + args + ")";
-            repeater_end.Rule = "Repeater" + ToTerm("[") + key + ToTerm("]") + dot + "End" + "(" + args + ")";
-            background_change.Rule = "BackGround" + dot + "Change" + "(" + args + ")";
+            repeater_begin.Rule = "Repeater" + ToTerm("[") + key + ToTerm("]") + dot + "Begin" + "(" + key + comma + expr + comma + expr + comma + expr + comma + expr + comma + expr + comma + expr + comma + expr + comma + expr + comma + expr + comma + key + strKeys + ")";
+            repeater_begin0.Rule = "Repeater" + ToTerm("[") + key + ToTerm("]") + dot + "Begin0" + "(" + key + comma + expr + comma + expr + comma + expr + comma + key + strKeys + ")";
+            repeater_end.Rule = "Repeater" + ToTerm("[") + key + ToTerm("]") + dot + "End" + "(" + ")";
+            background_change.Rule = "BackGround" + dot + "Change" + "(" + key + ")";
             #endregion 連続ストラクチャ
 
             #region 停車場
@@ -280,7 +288,7 @@ namespace IronyTest.MapGrammars
             RegisterBracePair("(", ")");
 
             //非表示にする構文
-            MarkTransient(statement, basicState, loadListFile, mapElement, op, curve, gradient, track, structure, repeater, station, argTerm, nextArg);
+            MarkTransient(statement, basicState, loadListFile, mapElement, op, curve, gradient, track, structure, repeater, station, argTerm, nextArg, strKey, strKeys);
             MarkPunctuation(doll, dot, comma, end, ToTerm("("), ToTerm(")"), ToTerm("["), ToTerm("]"));
 
             //コメント

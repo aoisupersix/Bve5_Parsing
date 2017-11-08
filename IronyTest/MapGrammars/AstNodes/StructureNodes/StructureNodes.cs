@@ -10,7 +10,7 @@ namespace IronyTest.MapGrammars.AstNodes.StructureNodes
     /// <summary>
     /// Structure[key].Put(trackkey, x, y, z, rx, ry, rz, tilt, span)
     /// </summary>
-    public class Put : Syntax_2
+    public class PutNode : Syntax_2
     {
         public override void Init(AstContext context, ParseTreeNode treeNode)
         {
@@ -33,7 +33,7 @@ namespace IronyTest.MapGrammars.AstNodes.StructureNodes
     /// <summary>
     /// Structure[key].Put0(trackkey, tilt, span)
     /// </summary>
-    public class Put0 : Syntax_2
+    public class Put0Node : Syntax_2
     {
         public override void Init(AstContext context, ParseTreeNode treeNode)
         {
@@ -50,7 +50,7 @@ namespace IronyTest.MapGrammars.AstNodes.StructureNodes
     /// <summary>
     /// Structure[key].PutBetween(trackkey1, trackkey2, flag) | Structure[key].PutBetween(trackkey1, trackkey2)
     /// </summary>
-    public class PutBetween : Syntax_2
+    public class PutBetweenNode : Syntax_2
     {
         public override void Init(AstContext context, ParseTreeNode treeNode)
         {
