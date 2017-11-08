@@ -13,6 +13,21 @@ namespace IronyTest.MapGrammars.AstNodes
      */
 
     /// <summary>
+    /// 数式の引数
+    /// </summary>
+    public class ExprArgsNode : AstNode
+    {
+        public AstNode ExprNode { get; private set; }
+        public override void Init(AstContext context, ParseTreeNode treeNode)
+        {
+            base.Init(context, treeNode);
+            ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
+
+            AddChild("Expr", nodes[0]);
+        }
+    }
+
+    /// <summary>
     /// 数式
     /// </summary>
     public class ExprNode : AstNode

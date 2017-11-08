@@ -60,7 +60,7 @@ namespace IronyTest.MapGrammars
             var strKey = new NonTerminal("StrKey");
             var strKeys = new NonTerminal("StrKeys");
             var exprArg = new NonTerminal("exprArg");
-            var exprArgs = new NonTerminal("exprArgs");
+            var exprArgs = new NonTerminal("exprArgs", typeof(ExprArgsNode));
             #endregion 引数の定義
 
             #region 曲線とカントの定義
@@ -169,7 +169,7 @@ namespace IronyTest.MapGrammars
             #region 軌道変位
             var irregularity = new NonTerminal("Irregularity");
             var irregularity_change = new NonTerminal("Irregularity.Change", typeof(AstNodes.Irregularity.ChangeNode));
-            #region 軌道変位
+            #endregion 軌道変位
 
             #region 粘着特性
             var adhesion = new NonTerminal("Adhesion");
@@ -207,7 +207,7 @@ namespace IronyTest.MapGrammars
             dist.Rule = expr + end + basicStates;
             basicStates.Rule = MakeStarRule(basicStates, basicState);
             basicState.Rule = mapElement + end;
-            mapElement.Rule = curve | gradient | track | structure | repeater | station;
+            mapElement.Rule = curve | gradient | track | structure | repeater | station | section;
             #endregion 基本ステートメントと距離程の文法
 
             #region 変数・数式の定義
@@ -342,6 +342,15 @@ namespace IronyTest.MapGrammars
             station_put.Rule = PreferShiftHere() + "Station" + ToTerm("[") + key + ToTerm("]") + dot + "Put" + "(" + expr + comma + expr + comma + expr + ")";
             #endregion 停車場
 
+            #region 閉塞
+            section.Rule =
+                  section_begin
+                | section_setSpeedLimit;
+
+            section_begin.Rule = "Section" + dot + "Begin" + "(" + expr + exprArgs + ")";
+            section_setSpeedLimit.Rule = "Section" + dot + "SetSpeedLimit" + "(" + expr + exprArgs + ")";
+            #endregion 閉塞
+
             //演算子の優先順位設定
             RegisterOperators(0, plus, minus);
             RegisterOperators(1, mul, div, mod);
@@ -350,7 +359,7 @@ namespace IronyTest.MapGrammars
             RegisterBracePair("(", ")");
 
             //非表示にする構文
-            MarkTransient(statement, basicState, loadListFile, mapElement, op, curve, gradient, track, structure, repeater, station, strKey, strKeys, exprArg, exprArgs);
+            MarkTransient(statement, basicState, loadListFile, mapElement, op, curve, gradient, track, structure, repeater, station, section, signal, beacon, speedLimit, preTrain, light, fog, drawDistance, irregularity, adhesion, sound, sound3D, rollingNoise, flangeNoise, strKey, strKeys, exprArg);
             MarkPunctuation(doll, dot, comma, end, ToTerm("("), ToTerm(")"), ToTerm("["), ToTerm("]"));
 
             //コメント
