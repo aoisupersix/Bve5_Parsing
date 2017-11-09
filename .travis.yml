@@ -1,0 +1,10 @@
+language: csharp
+script:
+  - xbuild /p:Configuration=Debug IronyTest.sln
+before_install:
+  - sudo apt-get install nunit-console
+before_script:
+  - nuget restore IronyTest.sln
+after_script:
+  - nunit-console IronyTest/bin/Debug/Irony.dll
+  - nunit-console IronyTest/bin/Debug/Irony.Interpreter.dll
