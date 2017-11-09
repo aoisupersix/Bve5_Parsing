@@ -4,7 +4,7 @@ using Irony.Parsing;
 namespace IronyTest.MapGrammars.AstNodes.CabIlluminance
 {
     /*
-     * CabilluminanceのAST木定義
+     * CabilluminanceのAST木定義a
      */
 
     /// <summary>
