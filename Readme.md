@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/aoisupersix/IronyTest.svg?branch=master)](https://travis-ci.org/aoisupersix/IronyTest)  
 IronyTest
 ===
 Bve5の構文解析を行うテスト。
