@@ -207,7 +207,7 @@ namespace IronyTest.MapGrammars
             dist.Rule = expr + end + basicStates;
             basicStates.Rule = MakeStarRule(basicStates, basicState);
             basicState.Rule = mapElement + end;
-            mapElement.Rule = curve | gradient | track | structure | repeater | station | section;
+            mapElement.Rule = curve | gradient | track | structure | repeater | station | section | signal;
             #endregion 基本ステートメントと距離程の文法
 
             #region 変数・数式の定義
@@ -350,6 +350,13 @@ namespace IronyTest.MapGrammars
             section_begin.Rule = "Section" + dot + "Begin" + "(" + expr + exprArgs + ")";
             section_setSpeedLimit.Rule = "Section" + dot + "SetSpeedLimit" + "(" + expr + exprArgs + ")";
             #endregion 閉塞
+
+            #region 地上信号機
+            signal.Rule = signal_put;
+            signal_put.Rule =
+                  PreferShiftHere() + "Signal" + ToTerm("[") + key + ToTerm("]") + dot + "Put" + "(" + expr + comma + key + comma + expr + comma + expr + ")"
+                | PreferShiftHere() + "Signal" + ToTerm("[") + key + ToTerm("]") + dot + "Put" + "(" + expr + comma + key + comma + expr + comma + expr + comma + expr + comma + expr + comma + expr + comma + expr + comma + expr + comma + expr + ")";
+            #endregion 地上信号機
 
             //演算子の優先順位設定
             RegisterOperators(0, plus, minus);
