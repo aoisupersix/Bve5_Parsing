@@ -207,7 +207,7 @@ namespace IronyTest.MapGrammars
             dist.Rule = expr + end + basicStates;
             basicStates.Rule = MakeStarRule(basicStates, basicState);
             basicState.Rule = mapElement + end;
-            mapElement.Rule = curve | gradient | track | structure | repeater | station | section | signal | beacon | speedLimit;
+            mapElement.Rule = curve | gradient | track | structure | repeater | station | section | signal | beacon | speedLimit | preTrain;
             #endregion 基本ステートメントと距離程の文法
 
             #region 変数・数式の定義
@@ -368,6 +368,13 @@ namespace IronyTest.MapGrammars
             speedLimit_begin.Rule = "SpeedLimit" + dot + "Begin" + "(" + expr + ")";
             speedLimit_end.Rule = "SpeedLimit" + dot + "End" + "(" + ")";
             #endregion 速度制限
+
+            #region 先行列車
+            preTrain.Rule = preTrain_pass;
+            preTrain_pass.Rule = 
+                  "PreTrain" + dot + "Pass" + "(" + "'" + expr + ":" + expr + ":" + expr + "'" + ")"
+                | "PreTrain" + dot + "Pass" + "(" + expr + ")";
+            #endregion 先行列車
 
             //演算子の優先順位設定
             RegisterOperators(0, plus, minus);
