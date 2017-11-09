@@ -147,7 +147,7 @@ namespace IronyTest.MapGrammars
             #region 光源
             var light = new NonTerminal("Light");
             var light_ambient = new NonTerminal("Light.Ambient", typeof(AstNodes.Light.AmbientNode));
-            var light_diffuce = new NonTerminal("Light.Diffuse", typeof(AstNodes.Light.DiffuseNode));
+            var light_diffuse = new NonTerminal("Light.Diffuse", typeof(AstNodes.Light.DiffuseNode));
             var light_direction = new NonTerminal("Light.Direction", typeof(AstNodes.Light.DirectionNode));
             #endregion 光源
 
@@ -377,9 +377,9 @@ namespace IronyTest.MapGrammars
             #endregion 先行列車
 
             #region 光源
-            light.Rule = light_ambient | light_diffuce | light_direction;
+            light.Rule = light_ambient | light_diffuse | light_direction;
             light_ambient.Rule = "Light" + dot + "Ambient" + "(" + expr + comma + expr + comma + expr + ")";
-            light_diffuce.Rule = "Light" + dot + "Diffuse" + "(" + expr + comma + expr + comma + expr + ")";
+            light_diffuse.Rule = "Light" + dot + "Diffuse" + "(" + expr + comma + expr + comma + expr + ")";
             light_direction.Rule = "Light" + dot + "Direction" + "(" + expr + comma + expr + ")";
             #endregion 光源
 
