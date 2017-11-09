@@ -385,7 +385,7 @@ namespace IronyTest.MapGrammars
 
             //非表示にする構文
             MarkTransient(statement, basicState, loadListFile, mapElement, op, curve, gradient, track, structure, repeater, station, section, signal, beacon, speedLimit, preTrain, light, fog, drawDistance, irregularity, adhesion, sound, sound3D, rollingNoise, flangeNoise, strKey, strKeys, exprArg);
-            MarkPunctuation(doll, dot, comma, end, ToTerm("("), ToTerm(")"), ToTerm("["), ToTerm("]"));
+            MarkPunctuation(doll, dot, comma, end, ToTerm("("), ToTerm(")"), ToTerm("["), ToTerm("]"), ToTerm("'"), ToTerm(":"));
 
             //コメント
             var comment1 = new CommentTerminal("Comment#", "#", "\n", "\r");

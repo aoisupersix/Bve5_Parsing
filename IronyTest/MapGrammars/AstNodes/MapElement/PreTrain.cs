@@ -8,7 +8,7 @@ namespace IronyTest.MapGrammars.AstNodes.PreTrain
      */
 
     /// <summary>
-    /// PreTrain.Pass(hh:mm:ss) | PreTrain.Pass(second)
+    /// PreTrain.Pass('hh:mm:ss') | PreTrain.Pass(second)
     /// </summary>
     public class PassNode : Syntax_1
     {
@@ -22,8 +22,8 @@ namespace IronyTest.MapGrammars.AstNodes.PreTrain
             {
                 //hh:mm:ss TODO
                 AddArguments("hh", nodes[2]);
-                AddArguments("mm", nodes[2]);
-                AddArguments("ss", nodes[2]);
+                AddArguments("mm", nodes[3]);
+                AddArguments("ss", nodes[4]);
             }
             else
             {
