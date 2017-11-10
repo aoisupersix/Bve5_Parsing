@@ -207,7 +207,7 @@ namespace IronyTest.MapGrammars
             dist.Rule = expr + end + basicStates;
             basicStates.Rule = MakeStarRule(basicStates, basicState);
             basicState.Rule = mapElement + end;
-            mapElement.Rule = curve | gradient | track | structure | repeater | station | section | signal | beacon | speedLimit | preTrain | light | fog | drawDistance;
+            mapElement.Rule = curve | gradient | track | structure | repeater | station | section | signal | beacon | speedLimit | preTrain | light | fog | drawDistance | cabIlluminance;
             #endregion 基本ステートメントと距離程の文法
 
             #region 変数・数式の定義
@@ -396,6 +396,11 @@ namespace IronyTest.MapGrammars
             drawDistance_change.Rule = "DrawDistance" + dot + "Change" + "(" + expr + ")";
             #endregion 風景描画距離
 
+            #region 運転台の明るさ
+            cabIlluminance.Rule = cabIlluminance_interpolate;
+            cabIlluminance_interpolate.Rule = "CabIlluminance" + dot + "Interpolate" + "(" + expr + ")";
+            #endregion 運転台の明るさ
+
             //演算子の優先順位設定
             RegisterOperators(0, plus, minus);
             RegisterOperators(1, mul, div, mod);
@@ -404,7 +409,7 @@ namespace IronyTest.MapGrammars
             RegisterBracePair("(", ")");
 
             //非表示にする構文
-            MarkTransient(statement, basicState, loadListFile, mapElement, op, curve, gradient, track, structure, repeater, station, section, signal, beacon, speedLimit, preTrain, light, fog, drawDistance, irregularity, adhesion, sound, sound3D, rollingNoise, flangeNoise, strKey, strKeys, exprArg);
+            MarkTransient(statement, basicState, loadListFile, mapElement, op, curve, gradient, track, structure, repeater, station, section, signal, beacon, speedLimit, preTrain, light, fog, drawDistance, cabIlluminance, irregularity, adhesion, sound, sound3D, rollingNoise, flangeNoise, strKey, strKeys, exprArg);
             MarkPunctuation(doll, dot, comma, end, ToTerm("("), ToTerm(")"), ToTerm("["), ToTerm("]"), ToTerm("'"), ToTerm(":"));
 
             //コメント
