@@ -209,7 +209,7 @@ namespace IronyTest.MapGrammars
             basicState.Rule = mapElement + end;
             mapElement.Rule = curve | gradient | track | structure | repeater | station | section | signal | beacon
                 | speedLimit | preTrain | light | fog | drawDistance | cabIlluminance | irregularity | adhesion | sound
-                | sound3D;
+                | sound3D | rollingNoise;
             #endregion 基本ステートメントと距離程の文法
 
             #region 変数・数式の定義
@@ -424,6 +424,11 @@ namespace IronyTest.MapGrammars
             sound3D.Rule = sound3D_put;
             sound3D_put.Rule = PreferShiftHere() + "Sound3D" + ToTerm("[") + key + ToTerm("]") + dot + "Put" + "(" + expr + comma + expr + ")";
             #endregion 固定音源
+
+            #region 走行音
+            rollingNoise.Rule = rollingNoise_change;
+            rollingNoise_change.Rule = "RollingNoise" + dot + "Change" + "(" + expr + ")";
+            #endregion 走行音
 
             //演算子の優先順位設定
             RegisterOperators(0, plus, minus);
