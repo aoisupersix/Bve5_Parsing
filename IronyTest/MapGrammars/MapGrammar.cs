@@ -208,7 +208,7 @@ namespace IronyTest.MapGrammars
             basicStates.Rule = MakeStarRule(basicStates, basicState);
             basicState.Rule = mapElement + end;
             mapElement.Rule = curve | gradient | track | structure | repeater | station | section | signal | beacon
-                | speedLimit | preTrain | light | fog | drawDistance | cabIlluminance | irregularity;
+                | speedLimit | preTrain | light | fog | drawDistance | cabIlluminance | irregularity | adhesion;
             #endregion 基本ステートメントと距離程の文法
 
             #region 変数・数式の定義
@@ -406,6 +406,13 @@ namespace IronyTest.MapGrammars
             irregularity.Rule = irregularity_change;
             irregularity_change.Rule = "Irregularity" + dot + "Change" + "(" + expr + comma + expr + comma + expr + comma + expr + comma + expr + comma + expr + ")";
             #endregion 軌道変位
+
+            #region 粘着特性
+            adhesion.Rule = adhesion_change;
+            adhesion_change.Rule =
+                  "Adhesion" + dot + "Change" + "(" + expr + ")"
+                | "Adhesion" + dot + "Change" + "(" + expr + comma + expr + comma + expr + ")";
+            #endregion 粘着特性
 
             //演算子の優先順位設定
             RegisterOperators(0, plus, minus);
