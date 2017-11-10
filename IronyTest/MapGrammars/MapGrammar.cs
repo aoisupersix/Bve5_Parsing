@@ -163,7 +163,7 @@ namespace IronyTest.MapGrammars
 
             #region 運転台の明るさ
             var cabIlluminance = new NonTerminal("CabIlluminance");
-            var cabIlluminance_interpolate = new NonTerminal("CabIlluminance.Interpolate", typeof(AstNodes.CabIlluminance.ChangeNode));
+            var cabIlluminance_interpolate = new NonTerminal("CabIlluminance.Interpolate", typeof(AstNodes.CabIlluminance.InterpolateNode));
             #endregion 運転台の明るさ
 
             #region 軌道変位

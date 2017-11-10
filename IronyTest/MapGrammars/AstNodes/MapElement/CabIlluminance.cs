@@ -10,7 +10,7 @@ namespace IronyTest.MapGrammars.AstNodes.CabIlluminance
     /// <summary>
     /// CabIlluminance.Interpolate(value) | CabIlluminance.Interpolate()
     /// </summary>
-    public class ChangeNode : Syntax_1
+    public class InterpolateNode : Syntax_1
     {
         public override void Init(AstContext context, ParseTreeNode treeNode)
         {
