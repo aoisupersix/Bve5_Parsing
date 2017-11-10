@@ -207,7 +207,7 @@ namespace IronyTest.MapGrammars
             dist.Rule = expr + end + basicStates;
             basicStates.Rule = MakeStarRule(basicStates, basicState);
             basicState.Rule = mapElement + end;
-            mapElement.Rule = curve | gradient | track | structure | repeater | station | section | signal | beacon | speedLimit | preTrain | light;
+            mapElement.Rule = curve | gradient | track | structure | repeater | station | section | signal | beacon | speedLimit | preTrain | light | fog;
             #endregion 基本ステートメントと距離程の文法
 
             #region 変数・数式の定義
@@ -382,6 +382,14 @@ namespace IronyTest.MapGrammars
             light_diffuse.Rule = "Light" + dot + "Diffuse" + "(" + expr + comma + expr + comma + expr + ")";
             light_direction.Rule = "Light" + dot + "Direction" + "(" + expr + comma + expr + ")";
             #endregion 光源
+
+            #region 霧効果
+            fog.Rule = fog_interpolate;
+            fog_interpolate.Rule =
+                "Fog" + dot + "Interpolate" + "(" + expr + comma + expr + comma + expr + comma + expr + ")"
+                | "Fog" + dot + "Interpolate" + "(" + expr + ")"
+                | "Fog" + dot + "Interpolate" + "(" + ")";
+            #endregion 霧効果
 
             //演算子の優先順位設定
             RegisterOperators(0, plus, minus);
