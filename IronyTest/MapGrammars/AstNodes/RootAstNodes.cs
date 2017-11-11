@@ -9,6 +9,17 @@ namespace IronyTest.MapGrammars.AstNodes
      * 基本ステートメント(Rootなど)のAST木定義
      */
 
+
+    public class MapFileNode : AstNode
+    {
+        public override void Init(AstContext context, ParseTreeNode treeNode)
+        {
+            base.Init(context, treeNode);
+            ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
+
+            AddChild("version=" + nodes[2].Token.Value, nodes[3]);
+        }
+    }
     public class StatementsNode : AstNode
     {
         public List<AstNode> Statements { get; private set; }

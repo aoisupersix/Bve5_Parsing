@@ -8,9 +8,9 @@ namespace IronyTest.MapGrammars.AstNodes.JointNoise
      */
 
     /// <summary>
-    /// FlangeNoise.Change(index)
+    /// FlangeNoise.Play(index)
     /// </summary>
-    public class ChangeNode : Syntax_1
+    public class PlayNode : Syntax_1
     {
         public override void Init(AstContext context, ParseTreeNode treeNode)
         {

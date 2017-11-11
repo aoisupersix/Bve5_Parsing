@@ -30,14 +30,13 @@ namespace IronyTest.MapGrammars
             #endregion 終端記号の定義
 
             #region 基本ステートメントと距離程の定義
+            var mapFile = new NonTerminal("MapFile", typeof(MapFileNode));
             var statement = new NonTerminal("Statement", typeof(StatementNode));
             var statements = new NonTerminal("Statements", typeof(StatementsNode));
             var basicState = new NonTerminal("BasicStatement", typeof(BasicStateNode));
             var basicStates = new NonTerminal("BasicStatements", typeof(BasicStatesNode));
             var mapElement = new NonTerminal("Element"); //マップ要素ごとの構文
             var dist = new NonTerminal("Distance", typeof(DistNode)); //距離程
-            var nonDistElements = new NonTerminal("NonDistanceElements"); //距離程に関係ない構文
-            var nonDistElement = new NonTerminal("NonDistanceElement"); //距離程に関係ない構文
             #endregion 基本ステートメントと距離程の定義
 
             #region 変数・数式の定義
@@ -197,6 +196,11 @@ namespace IronyTest.MapGrammars
             var flangeNoise_change = new NonTerminal("FlangeNoise.Change", typeof(AstNodes.FlangeNoise.ChangeNode));
             #endregion フランジきしり音
 
+            #region 分岐器通過音
+            var jointNoise = new NonTerminal("JointNoise");
+            var jointNoise_play = new NonTerminal("JointNoise.Play", typeof(AstNodes.JointNoise.PlayNode));
+            #endregion 分岐器通過音
+
             #region 他列車
             var train = new NonTerminal("Train");
             var train_add = new NonTerminal("Train.Add", typeof(AstNodes.Train.AddNode));
@@ -208,19 +212,18 @@ namespace IronyTest.MapGrammars
             /*
              * 文法の定義ここから
              */
-            Root = statements; //ルート
+            Root = mapFile; //ルート
 
             #region 基本ステートメントと距離程の文法
+            mapFile.Rule = ToTerm("BveTs") + "Map" + num + statements;
             statements.Rule = MakeStarRule(statements, statement);
             statement.Rule = dist;
-            nonDistElements.Rule = mapElement + end;
-            nonDistElement.Rule = varAssign | loadListFile | train | light;
             dist.Rule = expr + end + basicStates | basicStates + end;
             basicStates.Rule = MakeStarRule(basicStates, basicState);
             basicState.Rule = mapElement + end;
             mapElement.Rule = curve | gradient | track | structure | repeater | station | section | signal | beacon
                 | speedLimit | preTrain | light | fog | drawDistance | cabIlluminance | irregularity | adhesion | sound
-                | sound3D | rollingNoise | flangeNoise | train;
+                | sound3D | rollingNoise | flangeNoise | jointNoise | train;
             #endregion 基本ステートメントと距離程の文法
 
             #region 変数・数式の定義
@@ -446,6 +449,11 @@ namespace IronyTest.MapGrammars
             flangeNoise_change.Rule = PreferShiftHere() + "FlangeNoise" + dot + "Change" + "(" + expr + ")";
             #endregion フランジきしり音
 
+            #region 分岐器通過音
+            jointNoise.Rule = jointNoise_play;
+            jointNoise_play.Rule = PreferShiftHere() + "JointNoise" + dot + "Play" + "(" + expr + ")";
+            #endregion 分岐器通過音
+
             #region 他列車
             train.Rule = train_add | train_load | train_enable | train_stop;
             train_add.Rule = PreferShiftHere() + "Train" + dot + "Add" + "(" + key + comma + key + comma + key + comma + expr + ")";
@@ -464,7 +472,7 @@ namespace IronyTest.MapGrammars
             RegisterBracePair("(", ")");
 
             //非表示にする構文
-            MarkTransient(statement, basicState, loadListFile, mapElement, nonDistElements, nonDistElement, op, curve, gradient, track, structure, repeater, station, section, signal, beacon, speedLimit, preTrain, light, fog, drawDistance, cabIlluminance, irregularity, adhesion, sound, sound3D, rollingNoise, flangeNoise, train, strKey, strKeys, exprArg);
+            MarkTransient(statement, basicState, loadListFile, mapElement, op, curve, gradient, track, structure, repeater, station, section, signal, beacon, speedLimit, preTrain, light, fog, drawDistance, cabIlluminance, irregularity, adhesion, sound, sound3D, rollingNoise, flangeNoise, jointNoise, train, strKey, strKeys, exprArg);
             MarkPunctuation(doll, dot, comma, end, ToTerm("("), ToTerm(")"), ToTerm("["), ToTerm("]"), ToTerm("'"), ToTerm(":"));
 
             //コメント
