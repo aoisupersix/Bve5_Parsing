@@ -196,6 +196,13 @@ namespace IronyTest.MapGrammars
             var flangeNoise_change = new NonTerminal("FlangeNoise.Change", typeof(AstNodes.FlangeNoise.ChangeNode));
             #endregion フランジきしり音
 
+            #region 他列車
+            var train = new NonTerminal("Train");
+            var train_add = new NonTerminal("Train.Add", typeof(AstNodes.Train.AddNode));
+            var train_enable = new NonTerminal("Train.Enable", typeof(AstNodes.Train.EnableNode));
+            var train_stop = new NonTerminal("Train.Stop", typeof(AstNodes.Train.StopNode));
+            #endregion 他列車
+
             /*
              * 文法の定義ここから
              */
