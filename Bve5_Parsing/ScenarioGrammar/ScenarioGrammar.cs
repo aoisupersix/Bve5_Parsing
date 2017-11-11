@@ -12,6 +12,7 @@ namespace IronyTest
             #region 終端記号の定義
             var filePath = new IdentifierTerminal("filePath", ExtraChars.MULTIBYTES + ExtraChars.TOKEN + @"\", ExtraChars.MULTIBYTES + ExtraChars.TOKEN);
             var text = new IdentifierTerminal("text", ExtraChars.MULTIBYTES + ExtraChars.TOKEN + @"\s" + "\"", ExtraChars.MULTIBYTES + ExtraChars.TOKEN);
+            var num = new NumberLiteral("Num", NumberOptions.AllowSign);
             var equal = ToTerm("=");
             #endregion 非終端記号の定義
 
@@ -26,6 +27,7 @@ namespace IronyTest
             var author = new NonTerminal("Author", typeof(TextNode));
             var scenarioComment = new NonTerminal("ScenarioComment", typeof(TextNode));
             var statement = new NonTerminal("Statement", typeof(StatementNode));
+            var statements = new NonTerminal("Statements", typeof(StatementsNode));
             var program = new NonTerminal("Program", typeof(ProgramNode));
             #endregion 非終端記号の定義
 
@@ -40,7 +42,8 @@ namespace IronyTest
             author.Rule = "Author" + equal + text + end | "Author" + equal + end;
             scenarioComment.Rule = "Comment" + equal + text + end | "Comment" + equal + end;
             statement.Rule = route | vehicle | image | title | routeTitle | vehicleTitle | author | scenarioComment | NewLine;
-            program.Rule = MakeStarRule(program, statement);
+            statements.Rule = MakeStarRule(statements, statement);
+            program.Rule = ToTerm("BveTs") + ToTerm("Scenario") + num + statements;
             #endregion 非終端記号の文法
 
             Root = program;

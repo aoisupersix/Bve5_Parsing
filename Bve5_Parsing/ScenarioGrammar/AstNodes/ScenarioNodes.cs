@@ -6,6 +6,10 @@ using System.Collections.Generic;
 
 namespace Bve5_Parsing.ScenarioGrammar.AstNodes
 {
+    /**
+     * ScenarioGrammarのAST木定義
+     */
+
     public class EndNode : AstNode
     {
         public override void Init(AstContext context, ParseTreeNode treeNode)
@@ -57,7 +61,7 @@ namespace Bve5_Parsing.ScenarioGrammar.AstNodes
         }
     }
 
-    public class ProgramNode : AstNode
+    public class StatementsNode : AstNode
     {
         public List<AstNode> Statement { get; private set; }
 
@@ -75,6 +79,22 @@ namespace Bve5_Parsing.ScenarioGrammar.AstNodes
                     Statement.Add(AddChild("Statement", node.ChildNodes[0]));
             }
         }
+    }
+
+    public class ProgramNode : AstNode
+    {
+        public AstNode Statements { get; private set; }
+        private string version;
+
+        public override void Init(AstContext context, ParseTreeNode treeNode)
+        {
+            base.Init(context, treeNode);
+            ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
+
+            version = (string)nodes[2].Token.Text;
+            AddChild("Version=" + version, nodes[1]);
+            Statements = AddChild("Statements", nodes[3]);
+        }
 
         protected override object DoEvaluate(ScriptThread thread)
         {
@@ -82,12 +102,17 @@ namespace Bve5_Parsing.ScenarioGrammar.AstNodes
 
             //Key -> Statement名, Value -> Valueの辞書を返す
             Dictionary<string, string> dict = new Dictionary<string, string>();
-            foreach (AstNode statement in Statement)
+            if(Statements.ChildNodes.Count > 0)
             {
-                AstNode val = statement.ChildNodes[0];
-                if (!dict.ContainsKey(statement.AsString) && val != null)
-                    dict.Add(statement.AsString, val.AsString);
+                foreach(AstNode statement in Statements.ChildNodes)
+                {
+                    AstNode val = statement.ChildNodes[0];
+                    if (!dict.ContainsKey(statement.AsString) && val != null)
+                        dict.Add(statement.AsString, val.AsString);
+                }
             }
+            //バージョン情報の格納
+            dict.Add("version", version);
 
             thread.CurrentNode = Parent;
             return dict;
