@@ -70,6 +70,7 @@
     <Compile Include="MapGrammars\AstNodes\MapElement\RollingNoise.cs" />
     <Compile Include="MapGrammars\AstNodes\MapElement\Sound.cs" />
     <Compile Include="MapGrammars\AstNodes\MapElement\Sound3D.cs" />
+    <Compile Include="MapGrammars\AstNodes\MapElement\Train.cs" />
     <Compile Include="MapGrammars\AstNodes\RootAstNodes.cs" />
     <Compile Include="MapGrammars\AstNodes\MapElement\Section.cs" />
     <Compile Include="MapGrammars\AstNodes\MapElement\Signal.cs" />
