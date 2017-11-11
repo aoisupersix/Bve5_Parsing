@@ -51,9 +51,16 @@ namespace IronyTest.MapGrammars.AstNodes
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
 
             //距離の取得
-            ExprNode expr = (ExprNode)nodes[0].AstNode;
-            Distance = expr.Value;
-            AddChild("Dist=" + expr.Value, nodes[0]);
+            if (nodes[0].Term.ToString().Equals("Expr"))
+            {
+                ExprNode expr = (ExprNode)nodes[0].AstNode;
+                Distance = expr.Value;
+                AddChild("Dist=" + expr.Value, nodes[0]);
+            }
+            else
+            {
+                Distance = 0;
+            }
 
             //現在の距離程の構文を取得
             if (nodes.Count > 1)

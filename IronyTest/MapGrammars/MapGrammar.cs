@@ -36,6 +36,8 @@ namespace IronyTest.MapGrammars
             var basicStates = new NonTerminal("BasicStatements", typeof(BasicStatesNode));
             var mapElement = new NonTerminal("Element"); //マップ要素ごとの構文
             var dist = new NonTerminal("Distance", typeof(DistNode)); //距離程
+            var nonDistElements = new NonTerminal("NonDistanceElements"); //距離程に関係ない構文
+            var nonDistElement = new NonTerminal("NonDistanceElement"); //距離程に関係ない構文
             #endregion 基本ステートメントと距離程の定義
 
             #region 変数・数式の定義
@@ -210,8 +212,10 @@ namespace IronyTest.MapGrammars
 
             #region 基本ステートメントと距離程の文法
             statements.Rule = MakeStarRule(statements, statement);
-            statement.Rule = dist | varAssign | loadListFile;
-            dist.Rule = expr + end + basicStates;
+            statement.Rule = dist;
+            nonDistElements.Rule = mapElement + end;
+            nonDistElement.Rule = varAssign | loadListFile | train | light;
+            dist.Rule = expr + end + basicStates | basicStates + end;
             basicStates.Rule = MakeStarRule(basicStates, basicState);
             basicState.Rule = mapElement + end;
             mapElement.Rule = curve | gradient | track | structure | repeater | station | section | signal | beacon
@@ -224,16 +228,16 @@ namespace IronyTest.MapGrammars
             term.Rule = num | var;
             expr.Rule = term | term + op + expr | "(" + expr + ")";
             var.Rule = doll + varName;
-            varAssign.Rule = var + equal + expr + end;
+            varAssign.Rule = var + equal + expr;
             #endregion 変数・数式の定義
 
             #region リストファイル読み込みの文法
             loadListFile.Rule = loadStrList | loadStaList | loadSigList | loadSoundList | loadSound3DList;
-            loadStrList.Rule = "Structure" + dot + "Load" + "(" + key + ")" + end;
-            loadStaList.Rule = "Station" + dot + "Load" + "(" + key + ")" + end;
-            loadSigList.Rule = "Signal" + dot + "Load" + "(" + key + ")" + end;
-            loadSoundList.Rule = "Sound" + dot + "Load" + "(" + key + ")" + end;
-            loadSound3DList.Rule = "Sound3D" + dot + "Load" + "(" + key + ")" + end;
+            loadStrList.Rule = "Structure" + dot + "Load" + "(" + key + ")";
+            loadStaList.Rule = "Station" + dot + "Load" + "(" + key + ")";
+            loadSigList.Rule = "Signal" + dot + "Load" + "(" + key + ")";
+            loadSoundList.Rule = "Sound" + dot + "Load" + "(" + key + ")";
+            loadSound3DList.Rule = "Sound3D" + dot + "Load" + "(" + key + ")";
             #endregion リストファイル読み込みの文法
 
             #region 引数の文法
@@ -254,19 +258,19 @@ namespace IronyTest.MapGrammars
                 | curve_interpolate
                 | curve_change;
 
-            curve_setGauge.Rule = "Curve" + dot + "SetGauge" + "(" + expr + ")";
-            curve_setCenter.Rule = "Curve" + dot + "SetCenter" + "(" + expr + ")";
-            curve_setFunction.Rule = "Curve" + dot + "SetFunction" + "(" + expr + ")";
-            curve_beginTransition.Rule = "Curve" + dot + "BeginTransition" + "(" + ")";
-            curve_begin.Rule = 
-                  "Curve" + dot + "Begin" + "(" + expr + comma + expr + ")"
-                | "Curve" + dot + "Begin" + "(" + expr + ")";
+            curve_setGauge.Rule = PreferShiftHere() + "Curve" + dot + "SetGauge" + "(" + expr + ")";
+            curve_setCenter.Rule = PreferShiftHere() + "Curve" + dot + "SetCenter" + "(" + expr + ")";
+            curve_setFunction.Rule = PreferShiftHere() + "Curve" + dot + "SetFunction" + "(" + expr + ")";
+            curve_beginTransition.Rule = PreferShiftHere() + "Curve" + dot + "BeginTransition" + "(" + ")";
+            curve_begin.Rule =
+                  PreferShiftHere() + "Curve" + dot + "Begin" + "(" + expr + comma + expr + ")"
+                | PreferShiftHere() + "Curve" + dot + "Begin" + "(" + expr + ")";
             curve_end.Rule = "Curve" + dot + "End" + "(" + ")";
             curve_interpolate.Rule =
-                "Curve" + dot + "Interpolate" + "(" + expr + comma + expr + ")"
-                | "Curve" + dot + "Interpolate" + "(" + expr + ")"
-                | "Curve" + dot + "Interpolate" + "(" + ")";
-            curve_change.Rule = "Curve" + dot + "Change" + "(" + expr + ")";
+                  PreferShiftHere() + "Curve" + dot + "Interpolate" + "(" + expr + comma + expr + ")"
+                | PreferShiftHere() + "Curve" + dot + "Interpolate" + "(" + expr + ")"
+                | PreferShiftHere() + "Curve" + dot + "Interpolate" + "(" + ")";
+            curve_change.Rule = PreferShiftHere() + "Curve" + dot + "Change" + "(" + expr + ")";
             #endregion 曲線とカントの文法
 
             #region 自軌道の勾配の文法
@@ -276,12 +280,12 @@ namespace IronyTest.MapGrammars
                 | gradient_end
                 | gradient_interpolate;
 
-            gradient_beginTransition.Rule = "Gradient" + dot + "BeginTransition" + "(" + ")";
-            gradient_begin.Rule = "Gradient" + dot + "Begin" + "(" + expr + ")";
-            gradient_end.Rule = "Gradient" + dot + "End" + "(" + ")";
+            gradient_beginTransition.Rule = PreferShiftHere() + "Gradient" + dot + "BeginTransition" + "(" + ")";
+            gradient_begin.Rule = PreferShiftHere() + "Gradient" + dot + "Begin" + "(" + expr + ")";
+            gradient_end.Rule = PreferShiftHere() + "Gradient" + dot + "End" + "(" + ")";
             gradient_interpolate.Rule =
-                  "Gradient" + dot + "Interpolate" + "(" + expr + ")"
-                | "Gradient" + dot + "Interpolate" + "(" + ")";
+                  PreferShiftHere() + "Gradient" + dot + "Interpolate" + "(" + expr + ")"
+                | PreferShiftHere() + "Gradient" + dot + "Interpolate" + "(" + ")";
             #endregion 自軌道の勾配の文法
 
             #region 他軌道
@@ -298,26 +302,26 @@ namespace IronyTest.MapGrammars
                 | track_cant_interpolate;
 
             track_x_interpolate.Rule =
-                  "Track" + ToTerm("[") + key + ToTerm("]") + dot + "X" + dot + "Interpolate" + "(" + expr + comma + expr + ")"
-                | "Track" + ToTerm("[") + key + ToTerm("]") + dot + "X" + dot + "Interpolate" + "(" + expr + ")"
-                | "Track" + ToTerm("[") + key + ToTerm("]") + dot + "X" + dot + "Interpolate" + "(" + ")";
+                  PreferShiftHere() + "Track" + ToTerm("[") + key + ToTerm("]") + dot + "X" + dot + "Interpolate" + "(" + expr + comma + expr + ")"
+                | PreferShiftHere() + "Track" + ToTerm("[") + key + ToTerm("]") + dot + "X" + dot + "Interpolate" + "(" + expr + ")"
+                | PreferShiftHere() + "Track" + ToTerm("[") + key + ToTerm("]") + dot + "X" + dot + "Interpolate" + "(" + ")";
             track_y_interpolate.Rule =
-                  "Track" + ToTerm("[") + key + ToTerm("]") + dot + "Y" + dot + "Interpolate" + "(" + expr + comma + expr + ")"
-                | "Track" + ToTerm("[") + key + ToTerm("]") + dot + "Y" + dot + "Interpolate" + "(" + expr + ")"
-                | "Track" + ToTerm("[") + key + ToTerm("]") + dot + "Y" + dot + "Interpolate" + "(" + ")";
+                  PreferShiftHere() + "Track" + ToTerm("[") + key + ToTerm("]") + dot + "Y" + dot + "Interpolate" + "(" + expr + comma + expr + ")"
+                | PreferShiftHere() + "Track" + ToTerm("[") + key + ToTerm("]") + dot + "Y" + dot + "Interpolate" + "(" + expr + ")"
+                | PreferShiftHere() + "Track" + ToTerm("[") + key + ToTerm("]") + dot + "Y" + dot + "Interpolate" + "(" + ")";
             track_position.Rule =
-                  "Track" + ToTerm("[") + key + ToTerm("]") + dot + "Position" + "(" + expr + comma + expr + comma + expr + comma + expr + ")"
-                | "Track" + ToTerm("[") + key + ToTerm("]") + dot + "Position" + "(" + expr + comma + expr + comma + expr + ")"
-                | "Track" + ToTerm("[") + key + ToTerm("]") + dot + "Position" + "(" + expr + comma + expr + ")";
-            track_cant_setGauge.Rule = "Track" + ToTerm("[") + key + ToTerm("]") + dot + "Cant" + dot + "SetGauge" + "(" + expr + ")";
-            track_cant_setCenter.Rule = "Track" + ToTerm("[") + key + ToTerm("]") + dot + "Cant" + dot + "SetCenter" + "(" + expr + ")";
-            track_cant_setFunction.Rule = "Track" + ToTerm("[") + key + ToTerm("]") + dot + "Cant" + dot + "SetFunction" + "(" + expr + ")";
-            track_cant_beginTransition.Rule = "Track" + ToTerm("[") + key + ToTerm("]") + dot + "Cant" + dot + "BeginTransition" + "(" + ")";
-            track_cant_begin.Rule = "Track" + ToTerm("[") + key + ToTerm("]") + dot + "Cant" + dot + "Begin" + "(" + expr + ")";
-            track_cant_end.Rule = "Track" + ToTerm("[") + key + ToTerm("]") + dot + "Cant" + dot + "End" + "(" + ")";
+                  PreferShiftHere() + "Track" + ToTerm("[") + key + ToTerm("]") + dot + "Position" + "(" + expr + comma + expr + comma + expr + comma + expr + ")"
+                | PreferShiftHere() + "Track" + ToTerm("[") + key + ToTerm("]") + dot + "Position" + "(" + expr + comma + expr + comma + expr + ")"
+                | PreferShiftHere() + "Track" + ToTerm("[") + key + ToTerm("]") + dot + "Position" + "(" + expr + comma + expr + ")";
+            track_cant_setGauge.Rule = PreferShiftHere() + "Track" + ToTerm("[") + key + ToTerm("]") + dot + "Cant" + dot + "SetGauge" + "(" + expr + ")";
+            track_cant_setCenter.Rule = PreferShiftHere() + "Track" + ToTerm("[") + key + ToTerm("]") + dot + "Cant" + dot + "SetCenter" + "(" + expr + ")";
+            track_cant_setFunction.Rule = PreferShiftHere() + "Track" + ToTerm("[") + key + ToTerm("]") + dot + "Cant" + dot + "SetFunction" + "(" + expr + ")";
+            track_cant_beginTransition.Rule = PreferShiftHere() + "Track" + ToTerm("[") + key + ToTerm("]") + dot + "Cant" + dot + "BeginTransition" + "(" + ")";
+            track_cant_begin.Rule = PreferShiftHere() + "Track" + ToTerm("[") + key + ToTerm("]") + dot + "Cant" + dot + "Begin" + "(" + expr + ")";
+            track_cant_end.Rule = PreferShiftHere() + "Track" + ToTerm("[") + key + ToTerm("]") + dot + "Cant" + dot + "End" + "(" + ")";
             track_cant_interpolate.Rule =
-                  "Track" + ToTerm("[") + key + ToTerm("]") + dot + "Cant" + dot + "Interpolate" + "(" + expr + ")"
-                | "Track" + ToTerm("[") + key + ToTerm("]") + dot + "Cant" + dot + "Interpolate" + "(" + ")";
+                  PreferShiftHere() + "Track" + ToTerm("[") + key + ToTerm("]") + dot + "Cant" + dot + "Interpolate" + "(" + expr + ")"
+                | PreferShiftHere() + "Track" + ToTerm("[") + key + ToTerm("]") + dot + "Cant" + dot + "Interpolate" + "(" + ")";
             #endregion 他軌道
 
             #region ストラクチャ
@@ -340,10 +344,10 @@ namespace IronyTest.MapGrammars
                 | repeater_end
                 | background_change;
 
-            repeater_begin.Rule = "Repeater" + ToTerm("[") + key + ToTerm("]") + dot + "Begin" + "(" + key + comma + expr + comma + expr + comma + expr + comma + expr + comma + expr + comma + expr + comma + expr + comma + expr + comma + expr + comma + key + strKeys + ")";
-            repeater_begin0.Rule = "Repeater" + ToTerm("[") + key + ToTerm("]") + dot + "Begin0" + "(" + key + comma + expr + comma + expr + comma + expr + comma + key + strKeys + ")";
-            repeater_end.Rule = "Repeater" + ToTerm("[") + key + ToTerm("]") + dot + "End" + "(" + ")";
-            background_change.Rule = "BackGround" + dot + "Change" + "(" + key + ")";
+            repeater_begin.Rule = PreferShiftHere() + "Repeater" + ToTerm("[") + key + ToTerm("]") + dot + "Begin" + "(" + key + comma + expr + comma + expr + comma + expr + comma + expr + comma + expr + comma + expr + comma + expr + comma + expr + comma + expr + comma + key + strKeys + ")";
+            repeater_begin0.Rule = PreferShiftHere() + "Repeater" + ToTerm("[") + key + ToTerm("]") + dot + "Begin0" + "(" + key + comma + expr + comma + expr + comma + expr + comma + key + strKeys + ")";
+            repeater_end.Rule = PreferShiftHere() + "Repeater" + ToTerm("[") + key + ToTerm("]") + dot + "End" + "(" + ")";
+            background_change.Rule = PreferShiftHere() + "BackGround" + dot + "Change" + "(" + key + ")";
             #endregion 連続ストラクチャ
 
             #region 停車場
@@ -356,8 +360,8 @@ namespace IronyTest.MapGrammars
                   section_begin
                 | section_setSpeedLimit;
 
-            section_begin.Rule = "Section" + dot + "Begin" + "(" + expr + exprArgs + ")";
-            section_setSpeedLimit.Rule = "Section" + dot + "SetSpeedLimit" + "(" + expr + exprArgs + ")";
+            section_begin.Rule = PreferShiftHere() + "Section" + dot + "Begin" + "(" + expr + exprArgs + ")";
+            section_setSpeedLimit.Rule = PreferShiftHere() + "Section" + dot + "SetSpeedLimit" + "(" + expr + exprArgs + ")";
             #endregion 閉塞
 
             #region 地上信号機
@@ -369,57 +373,57 @@ namespace IronyTest.MapGrammars
 
             #region 地上子
             beacon.Rule = beacon_put;
-            beacon_put.Rule = "Beacon" + dot + "Put" + "(" + expr + comma + expr + comma + expr + ")";
+            beacon_put.Rule = PreferShiftHere() + "Beacon" + dot + "Put" + "(" + expr + comma + expr + comma + expr + ")";
             #endregion 地上子
 
             #region 速度制限
             speedLimit.Rule = speedLimit_begin | speedLimit_end;
-            speedLimit_begin.Rule = "SpeedLimit" + dot + "Begin" + "(" + expr + ")";
-            speedLimit_end.Rule = "SpeedLimit" + dot + "End" + "(" + ")";
+            speedLimit_begin.Rule = PreferShiftHere() + "SpeedLimit" + dot + "Begin" + "(" + expr + ")";
+            speedLimit_end.Rule = PreferShiftHere() + "SpeedLimit" + dot + "End" + "(" + ")";
             #endregion 速度制限
 
             #region 先行列車
             preTrain.Rule = preTrain_pass;
-            preTrain_pass.Rule = 
-                  "PreTrain" + dot + "Pass" + "(" + "'" + expr + ":" + expr + ":" + expr + "'" + ")"
-                | "PreTrain" + dot + "Pass" + "(" + expr + ")";
+            preTrain_pass.Rule =
+                  PreferShiftHere() + "PreTrain" + dot + "Pass" + "(" + "'" + expr + ":" + expr + ":" + expr + "'" + ")"
+                | PreferShiftHere() + "PreTrain" + dot + "Pass" + "(" + expr + ")";
             #endregion 先行列車
 
             #region 光源
             light.Rule = light_ambient | light_diffuse | light_direction;
-            light_ambient.Rule = "Light" + dot + "Ambient" + "(" + expr + comma + expr + comma + expr + ")";
-            light_diffuse.Rule = "Light" + dot + "Diffuse" + "(" + expr + comma + expr + comma + expr + ")";
-            light_direction.Rule = "Light" + dot + "Direction" + "(" + expr + comma + expr + ")";
+            light_ambient.Rule = PreferShiftHere() + "Light" + dot + "Ambient" + "(" + expr + comma + expr + comma + expr + ")";
+            light_diffuse.Rule = PreferShiftHere() + "Light" + dot + "Diffuse" + "(" + expr + comma + expr + comma + expr + ")";
+            light_direction.Rule = PreferShiftHere() + "Light" + dot + "Direction" + "(" + expr + comma + expr + ")";
             #endregion 光源
 
             #region 霧効果
             fog.Rule = fog_interpolate;
             fog_interpolate.Rule =
-                "Fog" + dot + "Interpolate" + "(" + expr + comma + expr + comma + expr + comma + expr + ")"
-                | "Fog" + dot + "Interpolate" + "(" + expr + ")"
-                | "Fog" + dot + "Interpolate" + "(" + ")";
+                  PreferShiftHere() + "Fog" + dot + "Interpolate" + "(" + expr + comma + expr + comma + expr + comma + expr + ")"
+                | PreferShiftHere() + "Fog" + dot + "Interpolate" + "(" + expr + ")"
+                | PreferShiftHere() + "Fog" + dot + "Interpolate" + "(" + ")";
             #endregion 霧効果
 
             #region 風景描画距離
             drawDistance.Rule = drawDistance_change;
-            drawDistance_change.Rule = "DrawDistance" + dot + "Change" + "(" + expr + ")";
+            drawDistance_change.Rule = PreferShiftHere() + "DrawDistance" + dot + "Change" + "(" + expr + ")";
             #endregion 風景描画距離
 
             #region 運転台の明るさ
             cabIlluminance.Rule = cabIlluminance_interpolate;
-            cabIlluminance_interpolate.Rule = "CabIlluminance" + dot + "Interpolate" + "(" + expr + ")";
+            cabIlluminance_interpolate.Rule = PreferShiftHere() + "CabIlluminance" + dot + "Interpolate" + "(" + expr + ")";
             #endregion 運転台の明るさ
 
             #region 軌道変位
             irregularity.Rule = irregularity_change;
-            irregularity_change.Rule = "Irregularity" + dot + "Change" + "(" + expr + comma + expr + comma + expr + comma + expr + comma + expr + comma + expr + ")";
+            irregularity_change.Rule = PreferShiftHere() + "Irregularity" + dot + "Change" + "(" + expr + comma + expr + comma + expr + comma + expr + comma + expr + comma + expr + ")";
             #endregion 軌道変位
 
             #region 粘着特性
             adhesion.Rule = adhesion_change;
             adhesion_change.Rule =
-                  "Adhesion" + dot + "Change" + "(" + expr + ")"
-                | "Adhesion" + dot + "Change" + "(" + expr + comma + expr + comma + expr + ")";
+                  PreferShiftHere() + "Adhesion" + dot + "Change" + "(" + expr + ")"
+                | PreferShiftHere() + "Adhesion" + dot + "Change" + "(" + expr + comma + expr + comma + expr + ")";
             #endregion 粘着特性
 
             #region 音
@@ -434,22 +438,22 @@ namespace IronyTest.MapGrammars
 
             #region 走行音
             rollingNoise.Rule = rollingNoise_change;
-            rollingNoise_change.Rule = "RollingNoise" + dot + "Change" + "(" + expr + ")";
+            rollingNoise_change.Rule = PreferShiftHere() + "RollingNoise" + dot + "Change" + "(" + expr + ")";
             #endregion 走行音
 
             #region フランジきしり音
             flangeNoise.Rule = flangeNoise_change;
-            flangeNoise_change.Rule = "FlangeNoise" + dot + "Change" + "(" + expr + ")";
+            flangeNoise_change.Rule = PreferShiftHere() + "FlangeNoise" + dot + "Change" + "(" + expr + ")";
             #endregion フランジきしり音
 
             #region 他列車
             train.Rule = train_add | train_load | train_enable | train_stop;
-            train_add.Rule = "Train" + dot + "Add" + "(" + key + comma + key + comma + key + comma + expr + ")";
-            train_load.Rule = "Train" + ToTerm("[") + key + ToTerm("]") + dot + "Load" + "(" + key + comma + key + comma + expr + ")";
+            train_add.Rule = PreferShiftHere() + "Train" + dot + "Add" + "(" + key + comma + key + comma + key + comma + expr + ")";
+            train_load.Rule = PreferShiftHere() + "Train" + ToTerm("[") + key + ToTerm("]") + dot + "Load" + "(" + key + comma + key + comma + expr + ")";
             train_enable.Rule =
-                  "Train" + ToTerm("[") + key + ToTerm("]") + dot + "Enable" + "(" + "'" + expr + ":" + expr + ":" + expr + "'" + ")"
-                | "Train" + ToTerm("[") + key + ToTerm("]") + dot + "Enable" + "(" + expr + ")";
-            train_stop.Rule = "Train" + ToTerm("[") + key + ToTerm("]") + dot + "Stop" + "(" + expr + comma + expr + comma + expr + comma + expr + ")";
+                  PreferShiftHere() + "Train" + ToTerm("[") + key + ToTerm("]") + dot + "Enable" + "(" + "'" + expr + ":" + expr + ":" + expr + "'" + ")"
+                | PreferShiftHere() + "Train" + ToTerm("[") + key + ToTerm("]") + dot + "Enable" + "(" + expr + ")";
+            train_stop.Rule = PreferShiftHere() + "Train" + ToTerm("[") + key + ToTerm("]") + dot + "Stop" + "(" + expr + comma + expr + comma + expr + comma + expr + ")";
             #endregion 他列車
 
             //演算子の優先順位設定
@@ -460,7 +464,7 @@ namespace IronyTest.MapGrammars
             RegisterBracePair("(", ")");
 
             //非表示にする構文
-            MarkTransient(statement, basicState, loadListFile, mapElement, op, curve, gradient, track, structure, repeater, station, section, signal, beacon, speedLimit, preTrain, light, fog, drawDistance, cabIlluminance, irregularity, adhesion, sound, sound3D, rollingNoise, flangeNoise, train, strKey, strKeys, exprArg);
+            MarkTransient(statement, basicState, loadListFile, mapElement, nonDistElements, nonDistElement, op, curve, gradient, track, structure, repeater, station, section, signal, beacon, speedLimit, preTrain, light, fog, drawDistance, cabIlluminance, irregularity, adhesion, sound, sound3D, rollingNoise, flangeNoise, train, strKey, strKeys, exprArg);
             MarkPunctuation(doll, dot, comma, end, ToTerm("("), ToTerm(")"), ToTerm("["), ToTerm("]"), ToTerm("'"), ToTerm(":"));
 
             //コメント
