@@ -10,13 +10,12 @@ namespace IronyTest.MapGrammars
         public MapGrammar() : base(false)
         {
             /*
-             * 構文定義ここから
+             * 構文定義
              */
+
             #region 終端記号の定義
             var key = new StringLiteral("Key", "'");
             var varName = new IdentifierTerminal("VarName");
-            var filePath = new IdentifierTerminal("filePath", ExtraChars.TOKEN + ExtraChars.MULTIBYTES + @"\", ExtraChars.TOKEN);
-            filePath.AddSuffix(")");
             var num = new NumberLiteral("Num", NumberOptions.AllowSign);
             var doll = ToTerm("$");
             var plus = ToTerm("+");
@@ -229,11 +228,11 @@ namespace IronyTest.MapGrammars
 
             #region リストファイル読み込みの文法
             loadListFile.Rule = loadStrList | loadStaList | loadSigList | loadSoundList | loadSound3DList;
-            loadStrList.Rule = "Structure" + dot + "Load" + "(" + filePath + end;
-            loadStaList.Rule = "Station" + dot + "Load" + "(" + filePath + end;
-            loadSigList.Rule = "Signal" + dot + "Load" + "(" + filePath + end;
-            loadSoundList.Rule = "Sound" + dot + "Load" + "(" + filePath + end;
-            loadSound3DList.Rule = "Sound3D" + dot + "Load" + "(" + filePath + end;
+            loadStrList.Rule = "Structure" + dot + "Load" + "(" + key + ")" + end;
+            loadStaList.Rule = "Station" + dot + "Load" + "(" + key + ")" + end;
+            loadSigList.Rule = "Signal" + dot + "Load" + "(" + key + ")" + end;
+            loadSoundList.Rule = "Sound" + dot + "Load" + "(" + key + ")" + end;
+            loadSound3DList.Rule = "Sound3D" + dot + "Load" + "(" + key + ")" + end;
             #endregion リストファイル読み込みの文法
 
             #region 引数の文法
