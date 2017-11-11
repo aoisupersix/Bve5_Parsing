@@ -1,10 +1,10 @@
 language: csharp
 script:
-  - xbuild /p:Configuration=Debug IronyTest.sln
+  - xbuild /p:Configuration=Debug Bve5_Parsing.sln
 before_install:
   - sudo apt-get install nunit-console
 before_script:
-  - nuget restore IronyTest.sln
+  - nuget restore Bve5_Parsing.sln
 after_script:
   - nunit-console IronyTest/bin/Debug/Irony.dll
   - nunit-console IronyTest/bin/Debug/Irony.Interpreter.dll
