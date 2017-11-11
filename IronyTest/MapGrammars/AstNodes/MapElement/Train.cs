@@ -8,9 +8,9 @@ namespace IronyTest.MapGrammars.AstNodes.Train
      */
 
     /// <summary>
-    /// Train[key].Add(trainkey, filePath, trackkey, direction)
+    /// Train.Add(trainkey, filePath, trackkey, direction)
     /// </summary>
-    public class AddNode : Syntax_2
+    public class AddNode : Syntax_1
     {
         public override void Init(AstContext context, ParseTreeNode treeNode)
         {
@@ -18,10 +18,27 @@ namespace IronyTest.MapGrammars.AstNodes.Train
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
 
             //引数の登録
-            AddArguments("trainkey", nodes[3]);
-            AddArguments("filePath", nodes[4]);
-            AddArguments("trackkey", nodes[5]);
-            AddArguments("direction", nodes[6]); //1 or -1
+            AddArguments("trainkey", nodes[2]);
+            AddArguments("filePath", nodes[3]);
+            AddArguments("trackkey", nodes[4]);
+            AddArguments("direction", nodes[5]); //1 or -1
+        }
+    }
+
+    /// <summary>
+    /// Train[key].Load(filePath, trackkey, direction)
+    /// </summary>
+    public class LoadNode : Syntax_2
+    {
+        public override void Init(AstContext context, ParseTreeNode treeNode)
+        {
+            base.Init(context, treeNode);
+            ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
+
+            //引数の登録
+            AddArguments("filePath", nodes[3]);
+            AddArguments("trackkey", nodes[4]);
+            AddArguments("direction", nodes[5]); //1 or -1
         }
     }
 

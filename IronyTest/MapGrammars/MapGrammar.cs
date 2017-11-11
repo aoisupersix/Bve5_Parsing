@@ -198,6 +198,7 @@ namespace IronyTest.MapGrammars
             #region 他列車
             var train = new NonTerminal("Train");
             var train_add = new NonTerminal("Train.Add", typeof(AstNodes.Train.AddNode));
+            var train_load = new NonTerminal("Train.Load", typeof(AstNodes.Train.LoadNode));
             var train_enable = new NonTerminal("Train.Enable", typeof(AstNodes.Train.EnableNode));
             var train_stop = new NonTerminal("Train.Stop", typeof(AstNodes.Train.StopNode));
             #endregion 他列車
@@ -215,7 +216,7 @@ namespace IronyTest.MapGrammars
             basicState.Rule = mapElement + end;
             mapElement.Rule = curve | gradient | track | structure | repeater | station | section | signal | beacon
                 | speedLimit | preTrain | light | fog | drawDistance | cabIlluminance | irregularity | adhesion | sound
-                | sound3D | rollingNoise | flangeNoise;
+                | sound3D | rollingNoise | flangeNoise | train;
             #endregion 基本ステートメントと距離程の文法
 
             #region 変数・数式の定義
@@ -441,6 +442,16 @@ namespace IronyTest.MapGrammars
             flangeNoise_change.Rule = "FlangeNoise" + dot + "Change" + "(" + expr + ")";
             #endregion フランジきしり音
 
+            #region 他列車
+            train.Rule = train_add | train_load | train_enable | train_stop;
+            train_add.Rule = "Train" + dot + "Add" + "(" + key + comma + key + comma + key + comma + expr + ")";
+            train_load.Rule = "Train" + ToTerm("[") + key + ToTerm("]") + dot + "Load" + "(" + key + comma + key + comma + expr + ")";
+            train_enable.Rule =
+                  "Train" + ToTerm("[") + key + ToTerm("]") + dot + "Enable" + "(" + "'" + expr + ":" + expr + ":" + expr + "'" + ")"
+                | "Train" + ToTerm("[") + key + ToTerm("]") + dot + "Enable" + "(" + expr + ")";
+            train_stop.Rule = "Train" + ToTerm("[") + key + ToTerm("]") + dot + "Stop" + "(" + expr + comma + expr + comma + expr + comma + expr + ")";
+            #endregion 他列車
+
             //演算子の優先順位設定
             RegisterOperators(0, plus, minus);
             RegisterOperators(1, mul, div, mod);
@@ -449,7 +460,7 @@ namespace IronyTest.MapGrammars
             RegisterBracePair("(", ")");
 
             //非表示にする構文
-            MarkTransient(statement, basicState, loadListFile, mapElement, op, curve, gradient, track, structure, repeater, station, section, signal, beacon, speedLimit, preTrain, light, fog, drawDistance, cabIlluminance, irregularity, adhesion, sound, sound3D, rollingNoise, flangeNoise, strKey, strKeys, exprArg);
+            MarkTransient(statement, basicState, loadListFile, mapElement, op, curve, gradient, track, structure, repeater, station, section, signal, beacon, speedLimit, preTrain, light, fog, drawDistance, cabIlluminance, irregularity, adhesion, sound, sound3D, rollingNoise, flangeNoise, train, strKey, strKeys, exprArg);
             MarkPunctuation(doll, dot, comma, end, ToTerm("("), ToTerm(")"), ToTerm("["), ToTerm("]"), ToTerm("'"), ToTerm(":"));
 
             //コメント
