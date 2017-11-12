@@ -1,7 +1,7 @@
 ﻿using Irony.Ast;
 using Irony.Parsing;
 
-namespace IronyTest.MapGrammars.AstNodes.CabIlluminance
+namespace Bve5_Parsing.MapGrammar.AstNodes.CabIlluminance
 {
     /*
      * CabIlluminanceのAST木定義

@@ -1,7 +1,7 @@
 ﻿using Irony.Ast;
 using Irony.Parsing;
 
-namespace IronyTest.MapGrammars.AstNodes.RollingNoise
+namespace Bve5_Parsing.MapGrammar.AstNodes.RollingNoise
 {
     /*
      * RollingNoiseのAST木定義

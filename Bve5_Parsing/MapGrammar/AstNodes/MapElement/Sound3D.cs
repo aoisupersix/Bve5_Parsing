@@ -1,7 +1,7 @@
 ﻿using Irony.Ast;
 using Irony.Parsing;
 
-namespace IronyTest.MapGrammars.AstNodes.Sound3D
+namespace Bve5_Parsing.MapGrammar.AstNodes.Sound3D
 {
     /*
      * Sound3DのAST木定義

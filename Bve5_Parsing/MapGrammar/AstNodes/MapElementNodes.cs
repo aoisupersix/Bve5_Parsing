@@ -3,7 +3,7 @@ using Irony.Ast;
 using Irony.Interpreter.Ast;
 using Irony.Parsing;
 
-namespace IronyTest.MapGrammars.AstNodes
+namespace Bve5_Parsing.MapGrammar.AstNodes
 {
     /// <summary>
     /// 構文情報を管理する構造体

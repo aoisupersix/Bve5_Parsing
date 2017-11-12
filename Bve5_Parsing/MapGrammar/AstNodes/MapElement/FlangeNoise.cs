@@ -1,7 +1,7 @@
 ﻿using Irony.Ast;
 using Irony.Parsing;
 
-namespace IronyTest.MapGrammars.AstNodes.FlangeNoise
+namespace Bve5_Parsing.MapGrammar.AstNodes.FlangeNoise
 {
     /*
      * FlangeNoiseのAST木定義

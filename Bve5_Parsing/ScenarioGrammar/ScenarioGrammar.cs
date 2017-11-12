@@ -2,7 +2,7 @@
 using Irony.Interpreter;
 using Bve5_Parsing.ScenarioGrammar.AstNodes;
 
-namespace IronyTest
+namespace Bve5_Parsing.ScenarioGrammar
 {
     [Language("ScenarioGrammar")]
     class ScenarioGrammar : InterpretedLanguageGrammar

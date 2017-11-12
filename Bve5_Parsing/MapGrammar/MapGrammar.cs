@@ -1,8 +1,8 @@
 ﻿using Irony.Parsing;
 using Irony.Interpreter;
-using IronyTest.MapGrammars.AstNodes;
+using Bve5_Parsing.MapGrammar.AstNodes;
 
-namespace IronyTest.MapGrammars
+namespace Bve5_Parsing.MapGrammar
 {
     [Language("MapGrammar")]
     class MapGrammar : InterpretedLanguageGrammar

@@ -2,7 +2,7 @@
 using Irony.Interpreter.Ast;
 using Irony.Parsing;
 
-namespace IronyTest.MapGrammars.AstNodes
+namespace Bve5_Parsing.MapGrammar.AstNodes
 {
     /*
      * 変数のAST木定義

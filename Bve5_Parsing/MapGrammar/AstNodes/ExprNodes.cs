@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text.RegularExpressions;
+﻿
 using Irony.Ast;
-using Irony.Interpreter;
 using Irony.Interpreter.Ast;
 using Irony.Parsing;
 
-namespace IronyTest.MapGrammars.AstNodes
+namespace Bve5_Parsing.MapGrammar.AstNodes
 {
     /*
      * 数式関係のAST木定義

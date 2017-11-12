@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace IronyTest.MapGrammars
+namespace Bve5_Parsing.MapGrammar
 {
     /// <summary>
     /// マップファイル内で使用する変数を管理するクラス

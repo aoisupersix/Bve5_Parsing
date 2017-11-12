@@ -1,7 +1,7 @@
 ﻿using Irony.Ast;
 using Irony.Parsing;
 
-namespace IronyTest.MapGrammars.AstNodes.Train
+namespace Bve5_Parsing.MapGrammar.AstNodes.Train
 {
     /*
      * TrainのAST木定義

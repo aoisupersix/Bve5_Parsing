@@ -1,7 +1,7 @@
 ﻿using Irony.Ast;
 using Irony.Parsing;
 
-namespace IronyTest.MapGrammars.AstNodes.Adhesion
+namespace Bve5_Parsing.MapGrammar.AstNodes.Adhesion
 {
     /*
      * AdhesionのAST木定義

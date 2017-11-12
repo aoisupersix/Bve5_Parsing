@@ -1,7 +1,7 @@
 ﻿using Irony.Ast;
 using Irony.Parsing;
 
-namespace IronyTest.MapGrammars.AstNodes.Gradient
+namespace Bve5_Parsing.MapGrammar.AstNodes.Gradient
 {
     /*
      * GradientのAST木定義

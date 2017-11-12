@@ -1,7 +1,7 @@
 ﻿using Irony.Ast;
 using Irony.Parsing;
 
-namespace IronyTest.MapGrammars.AstNodes.Irregularity
+namespace Bve5_Parsing.MapGrammar.AstNodes.Irregularity
 {
     /*
      * IrregularityのAST木定義

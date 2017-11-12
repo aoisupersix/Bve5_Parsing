@@ -1,7 +1,7 @@
 ﻿using Irony.Ast;
 using Irony.Parsing;
 
-namespace IronyTest.MapGrammars.AstNodes.Repeater
+namespace Bve5_Parsing.MapGrammar.AstNodes.Repeater
 {
     /*
      * RepeaterのAST木定義

@@ -1,7 +1,7 @@
 ﻿using Irony.Ast;
 using Irony.Parsing;
 
-namespace IronyTest.MapGrammars.AstNodes.DrawDistance
+namespace Bve5_Parsing.MapGrammar.AstNodes.DrawDistance
 {
     /*
      * DrawDistanceのAST木定義
