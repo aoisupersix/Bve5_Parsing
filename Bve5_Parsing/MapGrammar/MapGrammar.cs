@@ -35,6 +35,7 @@ namespace Bve5_Parsing.MapGrammar
             var statements = new NonTerminal("Statements", typeof(StatementsNode));
             var basicState = new NonTerminal("BasicStatement", typeof(BasicStateNode));
             var basicStates = new NonTerminal("BasicStatements", typeof(BasicStatesNode));
+
             var mapElement = new NonTerminal("Element"); //マップ要素ごとの構文
             var dist = new NonTerminal("Distance", typeof(DistNode)); //距離程
             #endregion 基本ステートメントと距離程の定義
@@ -221,7 +222,7 @@ namespace Bve5_Parsing.MapGrammar
             dist.Rule = expr + end + basicStates | basicStates + end;
             basicStates.Rule = MakeStarRule(basicStates, basicState);
             basicState.Rule = mapElement + end;
-            mapElement.Rule = curve | gradient | track | structure | repeater | station | section | signal | beacon
+            mapElement.Rule = varAssign | loadListFile | curve | gradient | track | structure | repeater | station | section | signal | beacon
                 | speedLimit | preTrain | light | fog | drawDistance | cabIlluminance | irregularity | adhesion | sound
                 | sound3D | rollingNoise | flangeNoise | jointNoise | train;
             #endregion 基本ステートメントと距離程の文法
@@ -230,7 +231,7 @@ namespace Bve5_Parsing.MapGrammar
             op.Rule = plus | minus | mul | div | mod;
             term.Rule = num | var;
             expr.Rule = term | term + op + expr | "(" + expr + ")";
-            var.Rule = doll + varName;
+            var.Rule = PreferShiftHere() + doll + varName;
             varAssign.Rule = var + equal + expr;
             #endregion 変数・数式の定義
 
