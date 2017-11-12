@@ -91,6 +91,22 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     }
 
     /// <summary>
+    /// null許容型数式
+    /// </summary>
+    public class NullableExprNode : AstNode
+    {
+        public double Value { get; private set; }
+
+        public override void Init(AstContext context, ParseTreeNode treeNode)
+        {
+            base.Init(context, treeNode);
+            ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
+
+            AddChild("Nullable=" + nodes[0].Term.ToString(), nodes[0]);
+        }
+    }
+
+    /// <summary>
     /// 数式の項(数値/変数)
     /// </summary>
     public class TermNode : AstNode

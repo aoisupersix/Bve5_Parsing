@@ -42,6 +42,7 @@ namespace Bve5_Parsing.MapGrammar
 
             #region 変数・数式の定義
             var expr = new NonTerminal("Expr", typeof(ExprNode));
+            var nullableExpr = new NonTerminal("NullableExpr", typeof(NullableExprNode));
             var term = new NonTerminal("Term", typeof(TermNode));
             var var = new NonTerminal("Var", typeof(VarNode));
             var varAssign = new NonTerminal("VarAssign", typeof(VarAssignNode));
@@ -218,8 +219,8 @@ namespace Bve5_Parsing.MapGrammar
             #region 基本ステートメントと距離程の文法
             mapFile.Rule = ToTerm("BveTs") + "Map" + num + statements;
             statements.Rule = MakeStarRule(statements, statement);
-            statement.Rule = dist;
-            dist.Rule = expr + end + basicStates | basicStates + end;
+            statement.Rule = dist | basicStates;
+            dist.Rule = expr + end + basicStates;
             basicStates.Rule = MakeStarRule(basicStates, basicState);
             basicState.Rule = mapElement + end;
             mapElement.Rule = varAssign | loadListFile | curve | gradient | track | structure | repeater | station | section | signal | beacon
@@ -231,6 +232,7 @@ namespace Bve5_Parsing.MapGrammar
             op.Rule = plus | minus | mul | div | mod;
             term.Rule = num | var;
             expr.Rule = term | term + op + expr | "(" + expr + ")";
+            nullableExpr.Rule = "null" | expr;
             var.Rule = PreferShiftHere() + doll + varName;
             varAssign.Rule = var + equal + expr;
             #endregion 変数・数式の定義
@@ -365,7 +367,7 @@ namespace Bve5_Parsing.MapGrammar
                 | section_setSpeedLimit;
 
             section_begin.Rule = PreferShiftHere() + "Section" + dot + "Begin" + "(" + expr + exprArgs + ")";
-            section_setSpeedLimit.Rule = PreferShiftHere() + "Section" + dot + "SetSpeedLimit" + "(" + expr + exprArgs + ")";
+            section_setSpeedLimit.Rule = PreferShiftHere() + "Section" + dot + "SetSpeedLimit" + "(" + nullableExpr + exprArgs + ")";
             #endregion 閉塞
 
             #region 地上信号機
