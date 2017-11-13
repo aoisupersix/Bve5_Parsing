@@ -52,6 +52,35 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GrammarTest.cs" />
+    <Compile Include="MapGrammar_Careless\AstNodes\ExprNodes.cs" />
+    <Compile Include="MapGrammar_Careless\AstNodes\MapElementNodes.cs" />
+    <Compile Include="MapGrammar_Careless\AstNodes\MapElement\Adhesion.cs" />
+    <Compile Include="MapGrammar_Careless\AstNodes\MapElement\Beacon.cs" />
+    <Compile Include="MapGrammar_Careless\AstNodes\MapElement\CabIlluminance.cs" />
+    <Compile Include="MapGrammar_Careless\AstNodes\MapElement\Curve.cs" />
+    <Compile Include="MapGrammar_Careless\AstNodes\MapElement\DrawDistance.cs" />
+    <Compile Include="MapGrammar_Careless\AstNodes\MapElement\FlangeNoise.cs" />
+    <Compile Include="MapGrammar_Careless\AstNodes\MapElement\Fog.cs" />
+    <Compile Include="MapGrammar_Careless\AstNodes\MapElement\Gradient.cs" />
+    <Compile Include="MapGrammar_Careless\AstNodes\MapElement\Irregularity.cs" />
+    <Compile Include="MapGrammar_Careless\AstNodes\MapElement\JointNoise.cs" />
+    <Compile Include="MapGrammar_Careless\AstNodes\MapElement\Light.cs" />
+    <Compile Include="MapGrammar_Careless\AstNodes\MapElement\PreTrain.cs" />
+    <Compile Include="MapGrammar_Careless\AstNodes\MapElement\Repeater.cs" />
+    <Compile Include="MapGrammar_Careless\AstNodes\MapElement\RollingNoise.cs" />
+    <Compile Include="MapGrammar_Careless\AstNodes\MapElement\Section.cs" />
+    <Compile Include="MapGrammar_Careless\AstNodes\MapElement\Signal.cs" />
+    <Compile Include="MapGrammar_Careless\AstNodes\MapElement\Sound.cs" />
+    <Compile Include="MapGrammar_Careless\AstNodes\MapElement\Sound3D.cs" />
+    <Compile Include="MapGrammar_Careless\AstNodes\MapElement\SpeedLimit.cs" />
+    <Compile Include="MapGrammar_Careless\AstNodes\MapElement\Station.cs" />
+    <Compile Include="MapGrammar_Careless\AstNodes\MapElement\Structure.cs" />
+    <Compile Include="MapGrammar_Careless\AstNodes\MapElement\Track.cs" />
+    <Compile Include="MapGrammar_Careless\AstNodes\MapElement\Train.cs" />
+    <Compile Include="MapGrammar_Careless\AstNodes\RootAstNodes.cs" />
+    <Compile Include="MapGrammar_Careless\AstNodes\VarNodes.cs" />
+    <Compile Include="MapGrammar_Careless\MapGrammar.cs" />
+    <Compile Include="MapGrammar_Careless\Vars.cs" />
     <Compile Include="MapGrammar_Strict\AstNodes\MapElement\Adhesion.cs" />
     <Compile Include="MapGrammar_Strict\AstNodes\MapElement\Beacon.cs" />
     <Compile Include="MapGrammar_Strict\AstNodes\MapElement\CabIlluminance.cs" />
