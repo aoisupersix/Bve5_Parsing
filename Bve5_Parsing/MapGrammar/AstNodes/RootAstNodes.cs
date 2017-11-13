@@ -30,8 +30,21 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
 
             base.Init(context, treeNode);
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
+
+            double nowDist = 0;
             foreach (var node in nodes)
-                Statements.Add(AddChild("Statements", node));
+            {
+                if (node.ToString().Equals("Distance"))
+                {
+                    //距離程
+                    DistNode distance = (DistNode)node.AstNode;
+                    nowDist = distance.Distance;
+                }
+                else
+                {
+                    Statements.Add(AddChild("Dist=" + nowDist, node));
+                }
+            }
         }
     }
 
