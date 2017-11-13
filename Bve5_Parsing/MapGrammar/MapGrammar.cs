@@ -254,6 +254,8 @@ namespace Bve5_Parsing.MapGrammar
             strKeys.Rule = MakeStarRule(strKeys, strKey);
             exprArg.Rule = comma + expr;
             exprArgs.Rule = MakeStarRule(exprArgs, exprArg);
+            nullableExprArg.Rule = comma + nullableExpr;
+            nullableExprArgs.Rule = MakeStarRule(nullableExprArgs, nullableExprArg);
             #endregion 引数の文法
 
             #region 曲線とカントの文法
@@ -370,7 +372,7 @@ namespace Bve5_Parsing.MapGrammar
                 | section_setSpeedLimit;
 
             section_begin.Rule = PreferShiftHere() + "Section" + dot + "Begin" + "(" + expr + exprArgs + ")";
-            section_setSpeedLimit.Rule = PreferShiftHere() + "Section" + dot + "SetSpeedLimit" + "(" + nullableExpr + exprArgs + ")";
+            section_setSpeedLimit.Rule = PreferShiftHere() + "Section" + dot + "SetSpeedLimit" + "(" + nullableExpr + nullableExprArgs + ")";
             #endregion 閉塞
 
             #region 地上信号機
@@ -478,7 +480,7 @@ namespace Bve5_Parsing.MapGrammar
             RegisterBracePair("(", ")");
 
             //非表示にする構文
-            MarkTransient(statement, basicState, loadListFile, mapElement, op, curve, gradient, track, structure, repeater, station, section, signal, beacon, speedLimit, preTrain, light, fog, drawDistance, cabIlluminance, irregularity, adhesion, sound, sound3D, rollingNoise, flangeNoise, jointNoise, train, strKey, strKeys, exprArg);
+            MarkTransient(statement, basicState, loadListFile, mapElement, op, curve, gradient, track, structure, repeater, station, section, signal, beacon, speedLimit, preTrain, light, fog, drawDistance, cabIlluminance, irregularity, adhesion, sound, sound3D, rollingNoise, flangeNoise, jointNoise, train, strKey, strKeys, exprArg, nullableExprArg);
             MarkPunctuation(doll, dot, comma, end, ToTerm("("), ToTerm(")"), ToTerm("["), ToTerm("]"), ToTerm("'"), ToTerm(":"));
 
             //コメント
