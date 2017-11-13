@@ -149,4 +149,25 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         }
     }
 
+    /// <summary>
+    /// Include構文(この構文だけ形式が違うので特別に扱う)
+    /// include 'key';
+    /// </summary>
+    public class IncludeNode : Syntax
+    {
+
+        public override void Init(AstContext context, ParseTreeNode treeNode)
+        {
+            base.Init(context, treeNode);
+            ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
+
+            //マップ要素の登録
+            Data.MapElement = new string[1];
+            Data.MapElement[0] = nodes[0].Term.ToString();
+
+            //引数の登録
+            AddArguments("mapPath", nodes[1]);
+        }
+    }
+
 }

@@ -215,6 +215,10 @@ namespace Bve5_Parsing.MapGrammar
             var train_stop = new NonTerminal("Train.Stop", typeof(AstNodes.Train.StopNode));
             #endregion 他列車
 
+            #region 他マップの挿入
+            var include = new NonTerminal("Include", typeof(IncludeNode));
+            #endregion 他マップの挿入
+
             /*
              * 文法の定義ここから
              */
@@ -229,7 +233,7 @@ namespace Bve5_Parsing.MapGrammar
             basicState.Rule = mapElement + end;
             mapElement.Rule = varAssign | loadListFile | curve | gradient | track | structure | repeater | station | section | signal | beacon
                 | speedLimit | preTrain | light | fog | drawDistance | cabIlluminance | irregularity | adhesion | sound
-                | sound3D | rollingNoise | flangeNoise | jointNoise | train;
+                | sound3D | rollingNoise | flangeNoise | jointNoise | train | include;
             #endregion 基本ステートメントと距離程の文法
 
             #region 変数・数式の定義
@@ -473,6 +477,10 @@ namespace Bve5_Parsing.MapGrammar
                 | PreferShiftHere() + "Train" + ToTerm("[") + rawKey + ToTerm("]") + dot + "Enable" + "(" + expr + ")";
             train_stop.Rule = PreferShiftHere() + "Train" + ToTerm("[") + rawKey + ToTerm("]") + dot + "Stop" + "(" + expr + comma + expr + comma + expr + comma + expr + ")";
             #endregion 他列車
+
+            #region 他マップの挿入
+            include.Rule = "Include" + key;
+            #endregion 他マップの挿入
 
             //演算子の優先順位設定
             RegisterOperators(0, plus, minus);
