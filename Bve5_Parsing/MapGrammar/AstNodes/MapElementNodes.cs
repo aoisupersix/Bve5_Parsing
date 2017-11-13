@@ -147,7 +147,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
             Data.MapElement = new string[2];
             Data.MapElement[0] = nodes[0].Term.ToString();
             Data.Key = nodes[1].Token.Value.ToString();
-            Data.MapElement[0] = nodes[2].Term.ToString();
+            Data.MapElement[1] = nodes[2].Term.ToString();
             Data.Function = nodes[3].Term.ToString();
 
             //引数は子クラスで登録する
