@@ -18,6 +18,10 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
 
             AddChild("version=" + nodes[2].Token.Value, nodes[3]);
+
+            //変数の初期化
+            Vars vars = Vars.GetInstance();
+            vars.Clear();
         }
     }
     public class StatementsNode : AstNode

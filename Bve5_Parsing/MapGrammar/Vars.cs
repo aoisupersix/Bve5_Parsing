@@ -49,5 +49,13 @@ namespace Bve5_Parsing.MapGrammar
             else
                 return 0;
         }
+
+        /// <summary>
+        /// 保持している変数の削除を行う
+        /// </summary>
+        public void Clear()
+        {
+            vars.Clear();
+        }
     }
 }
