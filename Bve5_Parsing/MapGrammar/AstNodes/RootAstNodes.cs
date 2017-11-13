@@ -42,6 +42,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
                 }
                 else
                 {
+                    //構文の距離程はnowDistに入っている　TODO 距離程処理
                     Statements.Add(AddChild("Dist=" + nowDist, node));
                 }
             }
