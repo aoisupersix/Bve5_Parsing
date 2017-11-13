@@ -18,7 +18,16 @@ namespace Bve5_Parsing.MapGrammar_Careless.AstNodes
             base.Init(context, treeNode);
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
 
-            AddChild("version=" + nodes[2].Token.Value, nodes[3]);
+            if(nodes.Count == 5)
+            {
+                //エンコーディング指定あり
+                AddChild("ver=" + nodes[2].Token.Value + ",enc=" + nodes[3].Token.Value, nodes[4]);
+            }
+            else
+            {
+                //エンコーディング指定なし
+                AddChild("ver=" + nodes[2].Token.Value + ",enc=utf-8", nodes[3]);
+            }
 
             //変数の初期化
             Vars vars = Vars.GetInstance();

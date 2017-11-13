@@ -15,6 +15,7 @@ namespace Bve5_Parsing.MapGrammar_Careless
 
             #region 終端記号の定義
             var key = new StringLiteral("Key", "'", StringOptions.AllowsAllEscapes);
+            var encode = new IdentifierTerminal("Encode");
             var varName = new IdentifierTerminal("VarName");
             var num = new NumberLiteral("Num", NumberOptions.AllowSign);
             var doll = ToTerm("$");
@@ -225,7 +226,7 @@ namespace Bve5_Parsing.MapGrammar_Careless
             Root = mapFile; //ルート
 
             #region 基本ステートメントと距離程の文法
-            mapFile.Rule = ToTerm("BveTs") + "Map" + num + statements;
+            mapFile.Rule = ToTerm("BveTs") + "Map" + num + ":" + encode + statements | ToTerm("BveTs") + "Map" + num + statements;
             statements.Rule = MakeStarRule(statements, statement);
             statement.Rule = dist | basicState;
             dist.Rule = expr + end;
