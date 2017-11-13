@@ -12,14 +12,12 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
 
     public class MapFileNode : AstNode
     {
-        public AstNode Statements { get; private set; }
-
         public override void Init(AstContext context, ParseTreeNode treeNode)
         {
             base.Init(context, treeNode);
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
 
-            Statements = AddChild("version=" + nodes[2].Token.Value, nodes[3]);
+            AddChild("version=" + nodes[2].Token.Value, nodes[3]);
         }
     }
     public class StatementsNode : AstNode
@@ -32,8 +30,22 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
 
             base.Init(context, treeNode);
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
-            foreach (var node in nodes[0].ChildNodes)
-                Statements.Add(AddChild(node.ToString(), node));
+
+            double nowDist = 0;
+            foreach (var node in nodes)
+            {
+                if (node.ToString().Equals("Distance"))
+                {
+                    //距離程
+                    DistNode distance = (DistNode)node.AstNode;
+                    nowDist = distance.Distance;
+                }
+                else
+                {
+                    //構文の距離程はnowDistに入っている　TODO 距離程処理
+                    Statements.Add(AddChild("Dist=" + nowDist, node));
+                }
+            }
         }
     }
 
@@ -44,7 +56,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         {
             base.Init(context, treeNode);
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
-            Statement = AddChild("Statement.Count=" + nodes.Count, nodes[0]);
+            Statement = AddChild("Statement", nodes[0]);
         }
     }
 
