@@ -102,7 +102,12 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
             base.Init(context, treeNode);
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
 
-            if (nodes[0].Term.ToString().Equals("Expr"))
+            if(nodes.Count == 0)
+            {
+                //何もないので0
+                Value = 0;
+            }
+            else if (nodes[0].Term.ToString().Equals("Expr"))
             {
                 //数式
                 ExprNode expr = (ExprNode)nodes[0].AstNode;
@@ -113,7 +118,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
             {
                 //null
                 Value = null;
-                AddChild("Expr=null", nodes[0]);
+                AddChild("Expr=" + nodes[0].ToString(), nodes[0]);
             }
         }
     }

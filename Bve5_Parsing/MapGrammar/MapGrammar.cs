@@ -14,7 +14,7 @@ namespace Bve5_Parsing.MapGrammar
              */
 
             #region 終端記号の定義
-            var key = new StringLiteral("Key", "'");
+            var key = new StringLiteral("Key", "'", StringOptions.AllowsAllEscapes);
             var varName = new IdentifierTerminal("VarName");
             var num = new NumberLiteral("Num", NumberOptions.AllowSign);
             var doll = ToTerm("$");
@@ -236,7 +236,7 @@ namespace Bve5_Parsing.MapGrammar
             op.Rule = plus | minus | mul | div | mod;
             term.Rule = num | var;
             expr.Rule = term | term + op + expr | "(" + expr + ")";
-            nullableExpr.Rule = expr | "null";
+            nullableExpr.Rule = expr | "null" | Empty;
             var.Rule = PreferShiftHere() + doll + varName;
             varAssign.Rule = var + equal + expr;
             #endregion 変数・数式の定義
@@ -451,17 +451,17 @@ namespace Bve5_Parsing.MapGrammar
 
             #region 走行音
             rollingNoise.Rule = rollingNoise_change;
-            rollingNoise_change.Rule = PreferShiftHere() + "RollingNoise" + dot + "Change" + "(" + expr + ")";
+            rollingNoise_change.Rule = PreferShiftHere() + "RollingNoise" + dot + "Change" + "(" + nullableExpr + ")";
             #endregion 走行音
 
             #region フランジきしり音
             flangeNoise.Rule = flangeNoise_change;
-            flangeNoise_change.Rule = PreferShiftHere() + "FlangeNoise" + dot + "Change" + "(" + expr + ")";
+            flangeNoise_change.Rule = PreferShiftHere() + "FlangeNoise" + dot + "Change" + "(" + nullableExpr + ")";
             #endregion フランジきしり音
 
             #region 分岐器通過音
             jointNoise.Rule = jointNoise_play;
-            jointNoise_play.Rule = PreferShiftHere() + "JointNoise" + dot + "Play" + "(" + expr + ")";
+            jointNoise_play.Rule = PreferShiftHere() + "JointNoise" + dot + "Play" + "(" + nullableExpr + ")";
             #endregion 分岐器通過音
 
             #region 他列車
