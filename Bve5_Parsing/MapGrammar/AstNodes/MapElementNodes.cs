@@ -122,10 +122,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
             base.Init(context, treeNode);
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
 
-            //キーの登録
-            AddChild("node[1]=" + nodes[1].Token.Value, nodes[1]);
-
-            //マップ要素、関数の登録
+            //マップ要素、キー、関数の登録
             Data.MapElement = new string[1];
             Data.MapElement[0] = nodes[0].Term.ToString();
             Data.Key = nodes[1].Token.Value.ToString();
