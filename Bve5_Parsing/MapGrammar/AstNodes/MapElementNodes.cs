@@ -77,6 +77,11 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
                 Data.Arguments.Add(argName, expr.Value);
                 AddChild(argName + "=" + expr.Value, node);
             }
+            else if(node.ToString().Equals("RawKey"))
+            {
+                //num | key
+                AddChild("Rawkey", node);
+            }
             else
             {
                 //引数がキー
@@ -117,10 +122,13 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
             base.Init(context, treeNode);
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
 
-            //マップ要素、キー、関数の登録
+            //キーの登録
+            AddChild("node[1]=" + nodes[1].Token.Value, nodes[1]);
+
+            //マップ要素、関数の登録
             Data.MapElement = new string[1];
             Data.MapElement[0] = nodes[0].Term.ToString();
-            Data.Key = (string)nodes[1].Token.Value;
+            Data.Key = nodes[1].Token.Value.ToString();
             Data.Function = nodes[2].Term.ToString();
 
             //引数は子クラスで登録する
@@ -141,7 +149,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
             //マップ要素、キー、関数の登録
             Data.MapElement = new string[2];
             Data.MapElement[0] = nodes[0].Term.ToString();
-            Data.Key = (string)nodes[1].Token.Value;
+            Data.Key = nodes[1].Token.Value.ToString();
             Data.MapElement[0] = nodes[2].Term.ToString();
             Data.Function = nodes[3].Term.ToString();
 
