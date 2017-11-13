@@ -13,20 +13,30 @@ namespace Bve5_Parsing.MapGrammar_Careless.AstNodes
 
     public class MapFileNode : AstNode
     {
+
+        private MapData mapData;
+        private AstNode statements;
+
         public override void Init(AstContext context, ParseTreeNode treeNode)
         {
             base.Init(context, treeNode);
+            mapData = new MapData();
+
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
 
             if(nodes.Count == 5)
             {
                 //エンコーディング指定あり
-                AddChild("ver=" + nodes[2].Token.Value + ",enc=" + nodes[3].Token.Value, nodes[4]);
+                statements = AddChild("ver=" + nodes[2].Token.Value + ",enc=" + nodes[3].Token.Value, nodes[4]);
+                mapData.Version = nodes[2].Token.Value.ToString();
+                mapData.Encoding = nodes[3].Token.Value.ToString();
             }
             else
             {
                 //エンコーディング指定なし
-                AddChild("ver=" + nodes[2].Token.Value + ",enc=utf-8", nodes[3]);
+                statements = AddChild("ver=" + nodes[2].Token.Value + ",enc=utf-8", nodes[3]);
+                mapData.Version = nodes[2].Token.Value.ToString();
+                mapData.Encoding = "utf-8";
             }
 
             //変数の初期化
