@@ -217,11 +217,11 @@ namespace Bve5_Parsing.MapGrammar
             #region 基本ステートメントと距離程の文法
             mapFile.Rule = ToTerm("BveTs") + "Map" + num + statements;
             statements.Rule = MakeStarRule(statements, statement);
-            statement.Rule = dist;
-            dist.Rule = expr + end + basicStates | basicStates + end;
+            statement.Rule = dist | basicState;
+            dist.Rule = expr + end;
             basicStates.Rule = MakeStarRule(basicStates, basicState);
             basicState.Rule = mapElement + end;
-            mapElement.Rule = curve | gradient | track | structure | repeater | station | section | signal | beacon
+            mapElement.Rule = varAssign | loadListFile | curve | gradient | track | structure | repeater | station | section | signal | beacon
                 | speedLimit | preTrain | light | fog | drawDistance | cabIlluminance | irregularity | adhesion | sound
                 | sound3D | rollingNoise | flangeNoise | jointNoise | train;
             #endregion 基本ステートメントと距離程の文法
@@ -230,7 +230,7 @@ namespace Bve5_Parsing.MapGrammar
             op.Rule = plus | minus | mul | div | mod;
             term.Rule = num | var;
             expr.Rule = term | term + op + expr | "(" + expr + ")";
-            var.Rule = doll + varName;
+            var.Rule = PreferShiftHere() + doll + varName;
             varAssign.Rule = var + equal + expr;
             #endregion 変数・数式の定義
 
