@@ -12,12 +12,14 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
 
     public class MapFileNode : AstNode
     {
+        public AstNode Statements { get; private set; }
+
         public override void Init(AstContext context, ParseTreeNode treeNode)
         {
             base.Init(context, treeNode);
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
 
-            AddChild("version=" + nodes[2].Token.Value, nodes[3]);
+            Statements = AddChild("version=" + nodes[2].Token.Value, nodes[3]);
         }
     }
     public class StatementsNode : AstNode
@@ -30,8 +32,8 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
 
             base.Init(context, treeNode);
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
-            foreach (var node in nodes)
-                Statements.Add(AddChild("Statements", node));
+            foreach (var node in nodes[0].ChildNodes)
+                Statements.Add(AddChild(node.ToString(), node));
         }
     }
 
@@ -42,7 +44,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         {
             base.Init(context, treeNode);
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
-            Statement = AddChild("Statement", nodes[0]);
+            Statement = AddChild("Statement.Count=" + nodes.Count, nodes[0]);
         }
     }
 

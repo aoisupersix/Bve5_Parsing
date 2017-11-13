@@ -35,6 +35,7 @@ namespace Bve5_Parsing.MapGrammar
             var statements = new NonTerminal("Statements", typeof(StatementsNode));
             var basicState = new NonTerminal("BasicStatement", typeof(BasicStateNode));
             var basicStates = new NonTerminal("BasicStatements", typeof(BasicStatesNode));
+            var basicStatesPlus = new NonTerminal("BasicStatementsPlus", typeof(BasicStatesNode));
 
             var mapElement = new NonTerminal("Element"); //マップ要素ごとの構文
             var dist = new NonTerminal("Distance", typeof(DistNode)); //距離程
@@ -217,10 +218,12 @@ namespace Bve5_Parsing.MapGrammar
             Root = mapFile; //ルート
 
             #region 基本ステートメントと距離程の文法
-            mapFile.Rule = ToTerm("BveTs") + ToTerm("Map") + num + NewLine + statements + PreferShiftHere() + Eof;
+            mapFile.Rule = ToTerm("BveTs") + ToTerm("Map") + num + NewLine + basicStates + statements;
             statements.Rule = MakeStarRule(statements, statement);
-            statement.Rule = dist | basicStates;
+            statement.Rule = dist;
+            //dist.Rule = expr + end + basicStates | basicStates;
             dist.Rule = expr + end + basicStates;
+            basicStatesPlus.Rule = MakePlusRule(basicStatesPlus, basicStates);
             basicStates.Rule = MakeStarRule(basicStates, basicState);
             basicState.Rule = mapElement + end | PreferShiftHere() + NewLine;
             mapElement.Rule = varAssign | loadListFile | curve | gradient | track | structure | repeater | station | section | signal | beacon
@@ -475,7 +478,7 @@ namespace Bve5_Parsing.MapGrammar
             RegisterBracePair("(", ")");
 
             //非表示にする構文
-            MarkTransient(statement, basicState, loadListFile, mapElement, op, curve, gradient, track, structure, repeater, station, section, signal, beacon, speedLimit, preTrain, light, fog, drawDistance, cabIlluminance, irregularity, adhesion, sound, sound3D, rollingNoise, flangeNoise, jointNoise, train, strKey, strKeys, exprArg);
+            MarkTransient(basicState, loadListFile, mapElement, op, curve, gradient, track, structure, repeater, station, section, signal, beacon, speedLimit, preTrain, light, fog, drawDistance, cabIlluminance, irregularity, adhesion, sound, sound3D, rollingNoise, flangeNoise, jointNoise, train, strKey, strKeys, exprArg);
             MarkPunctuation(doll, dot, comma, end, ToTerm("("), ToTerm(")"), ToTerm("["), ToTerm("]"), ToTerm("'"), ToTerm(":"));
 
             //コメント
