@@ -343,11 +343,11 @@ namespace Bve5_Parsing.MapGrammar
                 | structure_put0
                 | structure_putBetween;
 
-            structure_put.Rule = PreferShiftHere() + "Structure" + ToTerm("[") + rawKey + ToTerm("]") + dot + "Put" + "(" + key + comma + expr + comma + expr + comma + expr + comma + expr + comma + expr + comma + expr + comma + expr + comma + expr + ")";
-            structure_put0.Rule = PreferShiftHere() + "Structure" + ToTerm("[") + rawKey + ToTerm("]") + dot + "Put0" + "(" + key + comma + expr + comma + expr + ")";
+            structure_put.Rule = PreferShiftHere() + "Structure" + ToTerm("[") + rawKey + ToTerm("]") + dot + "Put" + "(" + rawKey + comma + expr + comma + expr + comma + expr + comma + expr + comma + expr + comma + expr + comma + expr + comma + expr + ")";
+            structure_put0.Rule = PreferShiftHere() + "Structure" + ToTerm("[") + rawKey + ToTerm("]") + dot + "Put0" + "(" + rawKey + comma + expr + comma + expr + ")";
             structure_putBetween.Rule =
-                  PreferShiftHere() + "Structure" + ToTerm("[") + rawKey + ToTerm("]") + dot + "PutBetween" + "(" + key + comma + key + comma + expr + ")"
-                | PreferShiftHere() + "Structure" + ToTerm("[") + rawKey + ToTerm("]") + dot + "PutBetween" + "(" + key + comma + key + ")";
+                  PreferShiftHere() + "Structure" + ToTerm("[") + rawKey + ToTerm("]") + dot + "PutBetween" + "(" + rawKey + comma + rawKey + comma + expr + ")"
+                | PreferShiftHere() + "Structure" + ToTerm("[") + rawKey + ToTerm("]") + dot + "PutBetween" + "(" + rawKey + comma + rawKey + ")";
             #endregion ストラクチャ
 
             #region 連続ストラクチャ
@@ -357,8 +357,8 @@ namespace Bve5_Parsing.MapGrammar
                 | repeater_end
                 | background_change;
 
-            repeater_begin.Rule = PreferShiftHere() + "Repeater" + ToTerm("[") + rawKey + ToTerm("]") + dot + "Begin" + "(" + key + comma + expr + comma + expr + comma + expr + comma + expr + comma + expr + comma + expr + comma + expr + comma + expr + comma + expr + comma + key + strKeys + ")";
-            repeater_begin0.Rule = PreferShiftHere() + "Repeater" + ToTerm("[") + rawKey + ToTerm("]") + dot + "Begin0" + "(" + key + comma + expr + comma + expr + comma + expr + comma + key + strKeys + ")";
+            repeater_begin.Rule = PreferShiftHere() + "Repeater" + ToTerm("[") + rawKey + ToTerm("]") + dot + "Begin" + "(" + rawKey + comma + expr + comma + expr + comma + expr + comma + expr + comma + expr + comma + expr + comma + expr + comma + expr + comma + expr + comma + key + strKeys + ")";
+            repeater_begin0.Rule = PreferShiftHere() + "Repeater" + ToTerm("[") + rawKey + ToTerm("]") + dot + "Begin0" + "(" + rawKey + comma + expr + comma + expr + comma + expr + comma + key + strKeys + ")";
             repeater_end.Rule = PreferShiftHere() + "Repeater" + ToTerm("[") + rawKey + ToTerm("]") + dot + "End" + "(" + ")";
             background_change.Rule = PreferShiftHere() + "BackGround" + dot + "Change" + "(" + key + ")";
             #endregion 連続ストラクチャ
@@ -380,8 +380,8 @@ namespace Bve5_Parsing.MapGrammar
             #region 地上信号機
             signal.Rule = signal_put;
             signal_put.Rule =
-                  PreferShiftHere() + "Signal" + ToTerm("[") + rawKey + ToTerm("]") + dot + "Put" + "(" + expr + comma + key + comma + expr + comma + expr + ")"
-                | PreferShiftHere() + "Signal" + ToTerm("[") + rawKey + ToTerm("]") + dot + "Put" + "(" + expr + comma + key + comma + expr + comma + expr + comma + expr + comma + expr + comma + expr + comma + expr + comma + expr + comma + expr + ")";
+                  PreferShiftHere() + "Signal" + ToTerm("[") + rawKey + ToTerm("]") + dot + "Put" + "(" + expr + comma + rawKey + comma + expr + comma + expr + ")"
+                | PreferShiftHere() + "Signal" + ToTerm("[") + rawKey + ToTerm("]") + dot + "Put" + "(" + expr + comma + rawKey + comma + expr + comma + expr + comma + expr + comma + expr + comma + expr + comma + expr + comma + expr + comma + expr + ")";
             #endregion 地上信号機
 
             #region 地上子
@@ -466,7 +466,7 @@ namespace Bve5_Parsing.MapGrammar
 
             #region 他列車
             train.Rule = train_add | train_load | train_enable | train_stop;
-            train_add.Rule = PreferShiftHere() + "Train" + dot + "Add" + "(" + key + comma + key + comma + key + comma + expr + ")";
+            train_add.Rule = PreferShiftHere() + "Train" + dot + "Add" + "(" + rawKey + comma + key + comma + key + comma + expr + ")";
             train_load.Rule = PreferShiftHere() + "Train" + ToTerm("[") + rawKey + ToTerm("]") + dot + "Load" + "(" + key + comma + key + comma + expr + ")";
             train_enable.Rule =
                   PreferShiftHere() + "Train" + ToTerm("[") + rawKey + ToTerm("]") + dot + "Enable" + "(" + "'" + expr + ":" + expr + ":" + expr + "'" + ")"
