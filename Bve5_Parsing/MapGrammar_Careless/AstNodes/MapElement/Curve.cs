@@ -18,7 +18,7 @@ namespace Bve5_Parsing.MapGrammar_Careless.AstNodes.Curve
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
 
             //引数の登録
-            AddArguments("value", nodes[2]);
+            AddArguments("value", nodes, 2);
         }
     }
 
@@ -33,7 +33,7 @@ namespace Bve5_Parsing.MapGrammar_Careless.AstNodes.Curve
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
 
             //引数の登録
-            AddArguments("x", nodes[2]);
+            AddArguments("x", nodes, 2);
         }
     }
 
@@ -49,7 +49,7 @@ namespace Bve5_Parsing.MapGrammar_Careless.AstNodes.Curve
 
             //引数の登録
             //idは0か1のみなのでその判定 TODO
-            AddArguments("id", nodes[2]);
+            AddArguments("id", nodes, 2);
         }
     }
 
@@ -78,9 +78,9 @@ namespace Bve5_Parsing.MapGrammar_Careless.AstNodes.Curve
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
 
             //引数の登録
-            AddArguments("radius", nodes[2]);
+            AddArguments("radius", nodes, 2);
             if (nodes.Count > 3)
-                AddArguments("cant", nodes[3]);
+                AddArguments("cant", nodes, 3);
         }
     }
 
@@ -112,11 +112,11 @@ namespace Bve5_Parsing.MapGrammar_Careless.AstNodes.Curve
             if(nodes.Count > 2)
             {
                 //引数:radius
-                AddArguments("radius", nodes[2]);
+                AddArguments("radius", nodes, 2);
 
                 if (nodes.Count > 3)
                     //引数:cant
-                    AddArguments("cant", nodes[3]);
+                    AddArguments("cant", nodes, 3);
             }
             //引数なし
         }
@@ -133,7 +133,7 @@ namespace Bve5_Parsing.MapGrammar_Careless.AstNodes.Curve
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
 
             //引数の登録
-            AddArguments("radius", nodes[2]);
+            AddArguments("radius", nodes, 2);
         }
     }
 }

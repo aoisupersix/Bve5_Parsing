@@ -104,7 +104,7 @@ namespace Bve5_Parsing.MapGrammar_Careless.AstNodes
 
             if(nodes.Count == 0)
             {
-                //何もないので0
+                //Empty
                 Value = 0;
             }
             else if (nodes[0].Term.ToString().Equals("Expr"))

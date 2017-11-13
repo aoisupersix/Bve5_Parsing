@@ -21,14 +21,14 @@ namespace Bve5_Parsing.MapGrammar_Careless.AstNodes.PreTrain
             if(nodes.Count > 3)
             {
                 //hh:mm:ss TODO
-                AddArguments("hh", nodes[2]);
-                AddArguments("mm", nodes[3]);
-                AddArguments("ss", nodes[4]);
+                AddArguments("hh", nodes, 2);
+                AddArguments("mm", nodes, 3);
+                AddArguments("ss", nodes, 4);
             }
             else
             {
                 //sec
-                AddArguments("second", nodes[2]);
+                AddArguments("second", nodes, 2);
             }
         }
     }

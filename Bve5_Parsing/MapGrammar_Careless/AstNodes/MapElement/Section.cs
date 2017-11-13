@@ -18,12 +18,12 @@ namespace Bve5_Parsing.MapGrammar_Careless.AstNodes.Section
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
 
             //引数の登録
-            AddArguments("signal0", nodes[2]);
+            AddArguments("signal0", nodes, 2);
             if (nodes.Count > 3)
             {
                 for (int i = 0; i < nodes[3].ChildNodes.Count; i++)
                 {
-                    AddArguments("signal" + (i + 1), nodes[3].ChildNodes[i]);
+                    AddArguments("signal" + (i + 1), nodes[3].ChildNodes, i);
                 }
             }
         }
@@ -40,12 +40,12 @@ namespace Bve5_Parsing.MapGrammar_Careless.AstNodes.Section
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
 
             //引数の登録
-            AddArguments("v0", nodes[2]);
+            AddArguments("v0", nodes, 2);
             if (nodes.Count > 3)
             {
                 for (int i = 0; i < nodes[3].ChildNodes.Count; i++)
                 {
-                    AddArguments("v" + (i + 1), nodes[3].ChildNodes[i]);
+                    AddArguments("v" + (i + 1), nodes[3].ChildNodes, i);
                 }
             }
         }

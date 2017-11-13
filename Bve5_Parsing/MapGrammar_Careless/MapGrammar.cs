@@ -258,7 +258,7 @@ namespace Bve5_Parsing.MapGrammar_Careless
             rawKey.Rule = num | key;
             strKey.Rule = comma + key;
             strKeys.Rule = MakeStarRule(strKeys, strKey);
-            exprArg.Rule = comma + expr;
+            exprArg.Rule = comma + nullableExpr;
             exprArgs.Rule = MakeStarRule(exprArgs, exprArg);
             nullableExprArg.Rule = comma + nullableExpr;
             nullableExprArgs.Rule = MakeStarRule(nullableExprArgs, nullableExprArg);
@@ -275,19 +275,19 @@ namespace Bve5_Parsing.MapGrammar_Careless
                 | curve_interpolate
                 | curve_change;
 
-            curve_setGauge.Rule = PreferShiftHere() + "Curve" + dot + "SetGauge" + "(" + expr + ")";
-            curve_setCenter.Rule = PreferShiftHere() + "Curve" + dot + "SetCenter" + "(" + expr + ")";
-            curve_setFunction.Rule = PreferShiftHere() + "Curve" + dot + "SetFunction" + "(" + expr + ")";
+            curve_setGauge.Rule = PreferShiftHere() + "Curve" + dot + "SetGauge" + "(" + nullableExpr + ")";
+            curve_setCenter.Rule = PreferShiftHere() + "Curve" + dot + "SetCenter" + "(" + nullableExpr + ")";
+            curve_setFunction.Rule = PreferShiftHere() + "Curve" + dot + "SetFunction" + "(" + nullableExpr + ")";
             curve_beginTransition.Rule = PreferShiftHere() + "Curve" + dot + "BeginTransition" + "(" + ")";
             curve_begin.Rule =
-                  PreferShiftHere() + "Curve" + dot + "Begin" + "(" + expr + comma + expr + ")"
-                | PreferShiftHere() + "Curve" + dot + "Begin" + "(" + expr + ")";
+                  PreferShiftHere() + "Curve" + dot + "Begin" + "(" + nullableExpr + comma + nullableExpr + ")"
+                | PreferShiftHere() + "Curve" + dot + "Begin" + "(" + nullableExpr + ")";
             curve_end.Rule = "Curve" + dot + "End" + "(" + ")";
             curve_interpolate.Rule =
-                  PreferShiftHere() + "Curve" + dot + "Interpolate" + "(" + expr + comma + expr + ")"
+                  PreferShiftHere() + "Curve" + dot + "Interpolate" + "(" + nullableExpr + comma + nullableExpr + ")"
                 | PreferShiftHere() + "Curve" + dot + "Interpolate" + "(" + expr + ")"
                 | PreferShiftHere() + "Curve" + dot + "Interpolate" + "(" + ")";
-            curve_change.Rule = PreferShiftHere() + "Curve" + dot + "Change" + "(" + expr + ")";
+            curve_change.Rule = PreferShiftHere() + "Curve" + dot + "Change" + "(" + nullableExpr + ")";
             #endregion 曲線とカントの文法
 
             #region 自軌道の勾配の文法
@@ -298,7 +298,7 @@ namespace Bve5_Parsing.MapGrammar_Careless
                 | gradient_interpolate;
 
             gradient_beginTransition.Rule = PreferShiftHere() + "Gradient" + dot + "BeginTransition" + "(" + ")";
-            gradient_begin.Rule = PreferShiftHere() + "Gradient" + dot + "Begin" + "(" + expr + ")";
+            gradient_begin.Rule = PreferShiftHere() + "Gradient" + dot + "Begin" + "(" + nullableExpr + ")";
             gradient_end.Rule = PreferShiftHere() + "Gradient" + dot + "End" + "(" + ")";
             gradient_interpolate.Rule =
                   PreferShiftHere() + "Gradient" + dot + "Interpolate" + "(" + expr + ")"
@@ -319,22 +319,22 @@ namespace Bve5_Parsing.MapGrammar_Careless
                 | track_cant_interpolate;
 
             track_x_interpolate.Rule =
-                  PreferShiftHere() + "Track" + ToTerm("[") + rawKey + ToTerm("]") + dot + "X" + dot + "Interpolate" + "(" + expr + comma + expr + ")"
+                  PreferShiftHere() + "Track" + ToTerm("[") + rawKey + ToTerm("]") + dot + "X" + dot + "Interpolate" + "(" + nullableExpr + comma + nullableExpr + ")"
                 | PreferShiftHere() + "Track" + ToTerm("[") + rawKey + ToTerm("]") + dot + "X" + dot + "Interpolate" + "(" + expr + ")"
                 | PreferShiftHere() + "Track" + ToTerm("[") + rawKey + ToTerm("]") + dot + "X" + dot + "Interpolate" + "(" + ")";
             track_y_interpolate.Rule =
-                  PreferShiftHere() + "Track" + ToTerm("[") + rawKey + ToTerm("]") + dot + "Y" + dot + "Interpolate" + "(" + expr + comma + expr + ")"
+                  PreferShiftHere() + "Track" + ToTerm("[") + rawKey + ToTerm("]") + dot + "Y" + dot + "Interpolate" + "(" + nullableExpr + comma + nullableExpr + ")"
                 | PreferShiftHere() + "Track" + ToTerm("[") + rawKey + ToTerm("]") + dot + "Y" + dot + "Interpolate" + "(" + expr + ")"
                 | PreferShiftHere() + "Track" + ToTerm("[") + rawKey + ToTerm("]") + dot + "Y" + dot + "Interpolate" + "(" + ")";
             track_position.Rule =
-                  PreferShiftHere() + "Track" + ToTerm("[") + rawKey + ToTerm("]") + dot + "Position" + "(" + expr + comma + expr + comma + expr + comma + expr + ")"
-                | PreferShiftHere() + "Track" + ToTerm("[") + rawKey + ToTerm("]") + dot + "Position" + "(" + expr + comma + expr + comma + expr + ")"
-                | PreferShiftHere() + "Track" + ToTerm("[") + rawKey + ToTerm("]") + dot + "Position" + "(" + expr + comma + expr + ")";
-            track_cant_setGauge.Rule = PreferShiftHere() + "Track" + ToTerm("[") + rawKey + ToTerm("]") + dot + "Cant" + dot + "SetGauge" + "(" + expr + ")";
-            track_cant_setCenter.Rule = PreferShiftHere() + "Track" + ToTerm("[") + rawKey + ToTerm("]") + dot + "Cant" + dot + "SetCenter" + "(" + expr + ")";
-            track_cant_setFunction.Rule = PreferShiftHere() + "Track" + ToTerm("[") + rawKey + ToTerm("]") + dot + "Cant" + dot + "SetFunction" + "(" + expr + ")";
+                  PreferShiftHere() + "Track" + ToTerm("[") + rawKey + ToTerm("]") + dot + "Position" + "(" + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + ")"
+                | PreferShiftHere() + "Track" + ToTerm("[") + rawKey + ToTerm("]") + dot + "Position" + "(" + nullableExpr + comma + nullableExpr + comma + nullableExpr + ")"
+                | PreferShiftHere() + "Track" + ToTerm("[") + rawKey + ToTerm("]") + dot + "Position" + "(" + nullableExpr + comma + nullableExpr + ")";
+            track_cant_setGauge.Rule = PreferShiftHere() + "Track" + ToTerm("[") + rawKey + ToTerm("]") + dot + "Cant" + dot + "SetGauge" + "(" + nullableExpr + ")";
+            track_cant_setCenter.Rule = PreferShiftHere() + "Track" + ToTerm("[") + rawKey + ToTerm("]") + dot + "Cant" + dot + "SetCenter" + "(" + nullableExpr + ")";
+            track_cant_setFunction.Rule = PreferShiftHere() + "Track" + ToTerm("[") + rawKey + ToTerm("]") + dot + "Cant" + dot + "SetFunction" + "(" + nullableExpr + ")";
             track_cant_beginTransition.Rule = PreferShiftHere() + "Track" + ToTerm("[") + rawKey + ToTerm("]") + dot + "Cant" + dot + "BeginTransition" + "(" + ")";
-            track_cant_begin.Rule = PreferShiftHere() + "Track" + ToTerm("[") + rawKey + ToTerm("]") + dot + "Cant" + dot + "Begin" + "(" + expr + ")";
+            track_cant_begin.Rule = PreferShiftHere() + "Track" + ToTerm("[") + rawKey + ToTerm("]") + dot + "Cant" + dot + "Begin" + "(" + nullableExpr + ")";
             track_cant_end.Rule = PreferShiftHere() + "Track" + ToTerm("[") + rawKey + ToTerm("]") + dot + "Cant" + dot + "End" + "(" + ")";
             track_cant_interpolate.Rule =
                   PreferShiftHere() + "Track" + ToTerm("[") + rawKey + ToTerm("]") + dot + "Cant" + dot + "Interpolate" + "(" + expr + ")"
@@ -347,10 +347,10 @@ namespace Bve5_Parsing.MapGrammar_Careless
                 | structure_put0
                 | structure_putBetween;
 
-            structure_put.Rule = PreferShiftHere() + "Structure" + ToTerm("[") + rawKey + ToTerm("]") + dot + "Put" + "(" + rawKey + comma + expr + comma + expr + comma + expr + comma + expr + comma + expr + comma + expr + comma + expr + comma + expr + ")";
-            structure_put0.Rule = PreferShiftHere() + "Structure" + ToTerm("[") + rawKey + ToTerm("]") + dot + "Put0" + "(" + rawKey + comma + expr + comma + expr + ")";
+            structure_put.Rule = PreferShiftHere() + "Structure" + ToTerm("[") + rawKey + ToTerm("]") + dot + "Put" + "(" + rawKey + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + ")";
+            structure_put0.Rule = PreferShiftHere() + "Structure" + ToTerm("[") + rawKey + ToTerm("]") + dot + "Put0" + "(" + rawKey + comma + nullableExpr + comma + nullableExpr + ")";
             structure_putBetween.Rule =
-                  PreferShiftHere() + "Structure" + ToTerm("[") + rawKey + ToTerm("]") + dot + "PutBetween" + "(" + rawKey + comma + rawKey + comma + expr + ")"
+                  PreferShiftHere() + "Structure" + ToTerm("[") + rawKey + ToTerm("]") + dot + "PutBetween" + "(" + rawKey + comma + rawKey + comma + nullableExpr + ")"
                 | PreferShiftHere() + "Structure" + ToTerm("[") + rawKey + ToTerm("]") + dot + "PutBetween" + "(" + rawKey + comma + rawKey + ")";
             #endregion ストラクチャ
 
@@ -361,15 +361,15 @@ namespace Bve5_Parsing.MapGrammar_Careless
                 | repeater_end
                 | background_change;
 
-            repeater_begin.Rule = PreferShiftHere() + "Repeater" + ToTerm("[") + rawKey + ToTerm("]") + dot + "Begin" + "(" + rawKey + comma + expr + comma + expr + comma + expr + comma + expr + comma + expr + comma + expr + comma + expr + comma + expr + comma + expr + comma + key + strKeys + ")";
-            repeater_begin0.Rule = PreferShiftHere() + "Repeater" + ToTerm("[") + rawKey + ToTerm("]") + dot + "Begin0" + "(" + rawKey + comma + expr + comma + expr + comma + expr + comma + key + strKeys + ")";
+            repeater_begin.Rule = PreferShiftHere() + "Repeater" + ToTerm("[") + rawKey + ToTerm("]") + dot + "Begin" + "(" + rawKey + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + key + strKeys + ")";
+            repeater_begin0.Rule = PreferShiftHere() + "Repeater" + ToTerm("[") + rawKey + ToTerm("]") + dot + "Begin0" + "(" + rawKey + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + key + strKeys + ")";
             repeater_end.Rule = PreferShiftHere() + "Repeater" + ToTerm("[") + rawKey + ToTerm("]") + dot + "End" + "(" + ")";
             background_change.Rule = PreferShiftHere() + "BackGround" + dot + "Change" + "(" + key + ")";
             #endregion 連続ストラクチャ
 
             #region 停車場
             station.Rule = station_put;
-            station_put.Rule = PreferShiftHere() + "Station" + ToTerm("[") + rawKey + ToTerm("]") + dot + "Put" + "(" + expr + comma + expr + comma + expr + ")";
+            station_put.Rule = PreferShiftHere() + "Station" + ToTerm("[") + rawKey + ToTerm("]") + dot + "Put" + "(" + nullableExpr + comma + nullableExpr + comma + nullableExpr + ")";
             #endregion 停車場
 
             #region 閉塞
@@ -377,25 +377,25 @@ namespace Bve5_Parsing.MapGrammar_Careless
                   section_begin
                 | section_setSpeedLimit;
 
-            section_begin.Rule = PreferShiftHere() + "Section" + dot + "Begin" + "(" + expr + exprArgs + ")";
+            section_begin.Rule = PreferShiftHere() + "Section" + dot + "Begin" + "(" + nullableExpr + nullableExprArgs + ")";
             section_setSpeedLimit.Rule = PreferShiftHere() + "Section" + dot + "SetSpeedLimit" + "(" + nullableExpr + nullableExprArgs + ")";
             #endregion 閉塞
 
             #region 地上信号機
             signal.Rule = signal_put;
             signal_put.Rule =
-                  PreferShiftHere() + "Signal" + ToTerm("[") + rawKey + ToTerm("]") + dot + "Put" + "(" + expr + comma + rawKey + comma + expr + comma + expr + ")"
-                | PreferShiftHere() + "Signal" + ToTerm("[") + rawKey + ToTerm("]") + dot + "Put" + "(" + expr + comma + rawKey + comma + expr + comma + expr + comma + expr + comma + expr + comma + expr + comma + expr + comma + expr + comma + expr + ")";
+                  PreferShiftHere() + "Signal" + ToTerm("[") + rawKey + ToTerm("]") + dot + "Put" + "(" + nullableExpr + comma + rawKey + comma + nullableExpr + comma + nullableExpr + ")"
+                | PreferShiftHere() + "Signal" + ToTerm("[") + rawKey + ToTerm("]") + dot + "Put" + "(" + nullableExpr + comma + rawKey + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + ")";
             #endregion 地上信号機
 
             #region 地上子
             beacon.Rule = beacon_put;
-            beacon_put.Rule = PreferShiftHere() + "Beacon" + dot + "Put" + "(" + expr + comma + expr + comma + expr + ")";
+            beacon_put.Rule = PreferShiftHere() + "Beacon" + dot + "Put" + "(" + nullableExpr + comma + nullableExpr + comma + nullableExpr + ")";
             #endregion 地上子
 
             #region 速度制限
             speedLimit.Rule = speedLimit_begin | speedLimit_end;
-            speedLimit_begin.Rule = PreferShiftHere() + "SpeedLimit" + dot + "Begin" + "(" + expr + ")";
+            speedLimit_begin.Rule = PreferShiftHere() + "SpeedLimit" + dot + "Begin" + "(" + nullableExpr + ")";
             speedLimit_end.Rule = PreferShiftHere() + "SpeedLimit" + dot + "End" + "(" + ")";
             #endregion 速度制限
 
@@ -403,44 +403,44 @@ namespace Bve5_Parsing.MapGrammar_Careless
             preTrain.Rule = preTrain_pass;
             preTrain_pass.Rule =
                   PreferShiftHere() + "PreTrain" + dot + "Pass" + "(" + "'" + expr + ":" + expr + ":" + expr + "'" + ")"
-                | PreferShiftHere() + "PreTrain" + dot + "Pass" + "(" + expr + ")";
+                | PreferShiftHere() + "PreTrain" + dot + "Pass" + "(" + nullableExpr + ")";
             #endregion 先行列車
 
             #region 光源
             light.Rule = light_ambient | light_diffuse | light_direction;
-            light_ambient.Rule = PreferShiftHere() + "Light" + dot + "Ambient" + "(" + expr + comma + expr + comma + expr + ")";
-            light_diffuse.Rule = PreferShiftHere() + "Light" + dot + "Diffuse" + "(" + expr + comma + expr + comma + expr + ")";
-            light_direction.Rule = PreferShiftHere() + "Light" + dot + "Direction" + "(" + expr + comma + expr + ")";
+            light_ambient.Rule = PreferShiftHere() + "Light" + dot + "Ambient" + "(" + nullableExpr + comma + nullableExpr + comma + nullableExpr + ")";
+            light_diffuse.Rule = PreferShiftHere() + "Light" + dot + "Diffuse" + "(" + nullableExpr + comma + nullableExpr + comma + nullableExpr + ")";
+            light_direction.Rule = PreferShiftHere() + "Light" + dot + "Direction" + "(" + nullableExpr + comma + nullableExpr + ")";
             #endregion 光源
 
             #region 霧効果
             fog.Rule = fog_interpolate;
             fog_interpolate.Rule =
-                  PreferShiftHere() + "Fog" + dot + "Interpolate" + "(" + expr + comma + expr + comma + expr + comma + expr + ")"
+                  PreferShiftHere() + "Fog" + dot + "Interpolate" + "(" + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + ")"
                 | PreferShiftHere() + "Fog" + dot + "Interpolate" + "(" + expr + ")"
                 | PreferShiftHere() + "Fog" + dot + "Interpolate" + "(" + ")";
             #endregion 霧効果
 
             #region 風景描画距離
             drawDistance.Rule = drawDistance_change;
-            drawDistance_change.Rule = PreferShiftHere() + "DrawDistance" + dot + "Change" + "(" + expr + ")";
+            drawDistance_change.Rule = PreferShiftHere() + "DrawDistance" + dot + "Change" + "(" + nullableExpr + ")";
             #endregion 風景描画距離
 
             #region 運転台の明るさ
             cabIlluminance.Rule = cabIlluminance_interpolate;
-            cabIlluminance_interpolate.Rule = PreferShiftHere() + "CabIlluminance" + dot + "Interpolate" + "(" + expr + ")";
+            cabIlluminance_interpolate.Rule = PreferShiftHere() + "CabIlluminance" + dot + "Interpolate" + "(" + nullableExpr + ")";
             #endregion 運転台の明るさ
 
             #region 軌道変位
             irregularity.Rule = irregularity_change;
-            irregularity_change.Rule = PreferShiftHere() + "Irregularity" + dot + "Change" + "(" + expr + comma + expr + comma + expr + comma + expr + comma + expr + comma + expr + ")";
+            irregularity_change.Rule = PreferShiftHere() + "Irregularity" + dot + "Change" + "(" + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + ")";
             #endregion 軌道変位
 
             #region 粘着特性
             adhesion.Rule = adhesion_change;
             adhesion_change.Rule =
-                  PreferShiftHere() + "Adhesion" + dot + "Change" + "(" + expr + ")"
-                | PreferShiftHere() + "Adhesion" + dot + "Change" + "(" + expr + comma + expr + comma + expr + ")";
+                  PreferShiftHere() + "Adhesion" + dot + "Change" + "(" + nullableExpr + ")"
+                | PreferShiftHere() + "Adhesion" + dot + "Change" + "(" + nullableExpr + comma + nullableExpr + comma + nullableExpr + ")";
             #endregion 粘着特性
 
             #region 音
@@ -450,7 +450,7 @@ namespace Bve5_Parsing.MapGrammar_Careless
 
             #region 固定音源
             sound3D.Rule = sound3D_put;
-            sound3D_put.Rule = PreferShiftHere() + "Sound3D" + ToTerm("[") + rawKey + ToTerm("]") + dot + "Put" + "(" + expr + comma + expr + ")";
+            sound3D_put.Rule = PreferShiftHere() + "Sound3D" + ToTerm("[") + rawKey + ToTerm("]") + dot + "Put" + "(" + nullableExpr + comma + nullableExpr + ")";
             #endregion 固定音源
 
             #region 走行音
@@ -470,12 +470,12 @@ namespace Bve5_Parsing.MapGrammar_Careless
 
             #region 他列車
             train.Rule = train_add | train_load | train_enable | train_stop;
-            train_add.Rule = PreferShiftHere() + "Train" + dot + "Add" + "(" + rawKey + comma + key + comma + key + comma + expr + ")";
-            train_load.Rule = PreferShiftHere() + "Train" + ToTerm("[") + rawKey + ToTerm("]") + dot + "Load" + "(" + key + comma + key + comma + expr + ")";
+            train_add.Rule = PreferShiftHere() + "Train" + dot + "Add" + "(" + rawKey + comma + key + comma + key + comma + nullableExpr + ")";
+            train_load.Rule = PreferShiftHere() + "Train" + ToTerm("[") + rawKey + ToTerm("]") + dot + "Load" + "(" + key + comma + key + comma + nullableExpr + ")";
             train_enable.Rule =
                   PreferShiftHere() + "Train" + ToTerm("[") + rawKey + ToTerm("]") + dot + "Enable" + "(" + "'" + expr + ":" + expr + ":" + expr + "'" + ")"
-                | PreferShiftHere() + "Train" + ToTerm("[") + rawKey + ToTerm("]") + dot + "Enable" + "(" + expr + ")";
-            train_stop.Rule = PreferShiftHere() + "Train" + ToTerm("[") + rawKey + ToTerm("]") + dot + "Stop" + "(" + expr + comma + expr + comma + expr + comma + expr + ")";
+                | PreferShiftHere() + "Train" + ToTerm("[") + rawKey + ToTerm("]") + dot + "Enable" + "(" + nullableExpr + ")";
+            train_stop.Rule = PreferShiftHere() + "Train" + ToTerm("[") + rawKey + ToTerm("]") + dot + "Stop" + "(" + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + ")";
             #endregion 他列車
 
             #region 他マップの挿入
@@ -498,6 +498,7 @@ namespace Bve5_Parsing.MapGrammar_Careless
             var comment2 = new CommentTerminal("Comment//", "//", "\n", "\r");
             this.NonGrammarTerminals.Add(comment1);
             this.NonGrammarTerminals.Add(comment2);
+
 
             this.LanguageFlags = LanguageFlags.NewLineBeforeEOF | LanguageFlags.CreateAst;
         }

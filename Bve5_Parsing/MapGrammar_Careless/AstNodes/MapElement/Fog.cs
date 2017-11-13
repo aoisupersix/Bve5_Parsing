@@ -20,12 +20,12 @@ namespace Bve5_Parsing.MapGrammar_Careless.AstNodes.Fog
             //引数の登録 0~1 TODO
             if(nodes.Count > 2)
             {
-                AddArguments("density", nodes[2]);
+                AddArguments("density", nodes, 2);
                 if(nodes.Count > 3)
                 {
-                    AddArguments("red", nodes[3]);
-                    AddArguments("green", nodes[4]);
-                    AddArguments("blue", nodes[5]);
+                    AddArguments("red", nodes, 3);
+                    AddArguments("green", nodes, 4);
+                    AddArguments("blue", nodes, 5);
                 }
             }
         }

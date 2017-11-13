@@ -18,8 +18,8 @@ namespace Bve5_Parsing.MapGrammar_Careless.AstNodes.Sound3D
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
 
             //引数の登録
-            AddArguments("x", nodes[3]);
-            AddArguments("y", nodes[4]);
+            AddArguments("x", nodes, 3);
+            AddArguments("y", nodes, 4);
         }
     }
 }

@@ -18,7 +18,7 @@ namespace Bve5_Parsing.MapGrammar_Careless.AstNodes.FlangeNoise
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
 
             //引数の登録
-            AddArguments("index", nodes[2]);
+            AddArguments("index", nodes, 2);
         }
     }
 }

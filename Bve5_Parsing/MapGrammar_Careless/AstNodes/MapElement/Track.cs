@@ -21,11 +21,11 @@ namespace Bve5_Parsing.MapGrammar_Careless.AstNodes.Track
             if (nodes.Count > 4)
             {
                 //引数:radius
-                AddArguments("x", nodes[4]);
+                AddArguments("x", nodes, 4);
 
                 if (nodes.Count > 5)
                     //引数:cant
-                    AddArguments("radius", nodes[5]);
+                    AddArguments("radius", nodes, 5);
             }
             //引数なし
         }
@@ -45,11 +45,11 @@ namespace Bve5_Parsing.MapGrammar_Careless.AstNodes.Track
             if (nodes.Count > 4)
             {
                 //引数:radius
-                AddArguments("y", nodes[4]);
+                AddArguments("y", nodes, 4);
 
                 if (nodes.Count > 5)
                     //引数:cant
-                    AddArguments("radius", nodes[5]);
+                    AddArguments("radius", nodes, 5);
             }
             //引数なし
         }
@@ -66,16 +66,16 @@ namespace Bve5_Parsing.MapGrammar_Careless.AstNodes.Track
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
 
             //引数の登録
-            AddArguments("x", nodes[3]);
-            AddArguments("y", nodes[4]);
+            AddArguments("x", nodes, 3);
+            AddArguments("y", nodes, 4);
             if (nodes.Count > 5)
             {
                 //引数:radius
-                AddArguments("radiusH", nodes[5]);
+                AddArguments("radiusH", nodes, 5);
 
                 if (nodes.Count > 6)
                     //引数:cant
-                    AddArguments("radiusV", nodes[6]);
+                    AddArguments("radiusV", nodes, 6);
             }
             //引数なし
         }
@@ -92,7 +92,7 @@ namespace Bve5_Parsing.MapGrammar_Careless.AstNodes.Track
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
 
             //引数の登録
-            AddArguments("value", nodes[4]);
+            AddArguments("value", nodes, 4);
         }
     }
 
@@ -107,7 +107,7 @@ namespace Bve5_Parsing.MapGrammar_Careless.AstNodes.Track
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
 
             //引数の登録
-            AddArguments("x", nodes[4]);
+            AddArguments("x", nodes, 4);
         }
     }
 
@@ -123,7 +123,7 @@ namespace Bve5_Parsing.MapGrammar_Careless.AstNodes.Track
 
             //引数の登録
             //idは0か1のみなのでその判定 TODO
-            AddArguments("id", nodes[4]);
+            AddArguments("id", nodes, 4);
         }
     }
 
@@ -151,7 +151,7 @@ namespace Bve5_Parsing.MapGrammar_Careless.AstNodes.Track
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
 
             //引数の登録
-            AddArguments("cant", nodes[4]);
+            AddArguments("cant", nodes, 4);
         }
     }
 
@@ -180,7 +180,7 @@ namespace Bve5_Parsing.MapGrammar_Careless.AstNodes.Track
 
             //引数の登録
             if(nodes.Count > 4)
-                AddArguments("cant", nodes[4]);
+                AddArguments("cant", nodes, 4);
         }
     }
 }

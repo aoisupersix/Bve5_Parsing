@@ -57,32 +57,42 @@ namespace Bve5_Parsing.MapGrammar_Careless.AstNodes
         }
 
         /// <summary>
-        /// 引数を登録する
+        /// 引数をDataに登録する
         /// </summary>
-        /// <param name="argName">引数名</param>
-        /// <param name="node">引数のnode</param>
-        protected void AddArguments(string argName, ParseTreeNode node)
+        /// <param name="argName">登録する引数名</param>
+        /// <param name="nodes">構文の子ノード</param>
+        /// <param name="idx">引数のインデックス</param>
+        protected void AddArguments(string argName, ParseTreeNodeList nodes, int idx)
         {
-            if (node.ToString().Equals("Expr"))
+            if(nodes.Count > idx)
             {
-                //引数が数式
-                ExprNode expr = (ExprNode)node.AstNode;
-                Data.Arguments.Add(argName, expr.Value);
-                AddChild(argName + "=" + expr.Value, node);
-            }
-            else if (node.ToString().Equals("NullableExpr"))
-            {
-                //null許容数式
-                NullableExprNode expr = (NullableExprNode)node.AstNode;
-                Data.Arguments.Add(argName, expr.Value);
-                AddChild(argName + "=" + expr.Value, node);
+                if (nodes[idx].ToString().Equals("Expr"))
+                {
+                    //引数が数式
+                    ExprNode expr = (ExprNode)nodes[idx].AstNode;
+                    Data.Arguments.Add(argName, expr.Value);
+                    AddChild(argName + "=" + expr.Value, nodes[idx]);
+                }
+                else if (nodes[idx].ToString().Equals("NullableExpr"))
+                {
+                    //null許容数式
+                    NullableExprNode expr = (NullableExprNode)nodes[idx].AstNode;
+                    Data.Arguments.Add(argName, expr.Value);
+                    AddChild(argName + "=" + expr.Value, nodes[idx]);
+                }
+                else
+                {
+                    //引数がキーもしくはRawKey
+                    Data.Arguments.Add(argName, nodes[idx].Token.Value.ToString());
+                    AddChild(argName + "=" + nodes[idx].Token.Value, nodes[idx]);
+                }
             }
             else
             {
-                //引数がキーもしくはRawKey
-                Data.Arguments.Add(argName, node.Token.Value.ToString());
-                AddChild(argName + "=" + node.Token.Value, node);
+                //Empty
+                Data.Arguments.Add(argName, 0);
             }
+
         }
     }
 
@@ -166,7 +176,7 @@ namespace Bve5_Parsing.MapGrammar_Careless.AstNodes
             Data.MapElement[0] = nodes[0].Term.ToString();
 
             //引数の登録
-            AddArguments("mapPath", nodes[1]);
+            AddArguments("mapPath", nodes, 1);
         }
     }
 

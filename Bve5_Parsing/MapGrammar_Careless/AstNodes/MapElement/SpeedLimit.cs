@@ -18,7 +18,7 @@ namespace Bve5_Parsing.MapGrammar_Careless.AstNodes.SpeedLimit
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
 
             //引数の登録
-            AddArguments("v", nodes[2]);
+            AddArguments("v", nodes, 2);
         }
     }
 

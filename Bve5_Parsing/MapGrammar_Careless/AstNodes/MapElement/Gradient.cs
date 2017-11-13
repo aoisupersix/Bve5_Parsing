@@ -31,7 +31,7 @@ namespace Bve5_Parsing.MapGrammar_Careless.AstNodes.Gradient
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
 
             //引数の登録
-            AddArguments("gradient", nodes[2]);
+            AddArguments("gradient", nodes, 2);
         }
     }
 
@@ -60,7 +60,7 @@ namespace Bve5_Parsing.MapGrammar_Careless.AstNodes.Gradient
 
             //引数の登録
             if(nodes.Count > 2)
-                AddArguments("gradient", nodes[2]);
+                AddArguments("gradient", nodes, 2);
         }
     }
 }

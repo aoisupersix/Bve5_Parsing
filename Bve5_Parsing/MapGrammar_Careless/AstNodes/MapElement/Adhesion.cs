@@ -18,11 +18,11 @@ namespace Bve5_Parsing.MapGrammar_Careless.AstNodes.Adhesion
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
 
             //引数の登録
-            AddArguments("a", nodes[2]);
+            AddArguments("a", nodes, 2);
             if(nodes.Count > 3)
             {
-                AddArguments("b", nodes[3]);
-                AddArguments("c", nodes[4]);
+                AddArguments("b", nodes, 3);
+                AddArguments("c", nodes, 4);
             }
         }
     }
