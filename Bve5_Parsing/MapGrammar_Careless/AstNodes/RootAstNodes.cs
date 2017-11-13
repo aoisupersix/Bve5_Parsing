@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Irony.Ast;
+using Irony.Interpreter;
 using Irony.Interpreter.Ast;
 using Irony.Parsing;
 
@@ -23,7 +24,16 @@ namespace Bve5_Parsing.MapGrammar_Careless.AstNodes
             Vars vars = Vars.GetInstance();
             vars.Clear();
         }
+
+        protected override object DoEvaluate(ScriptThread thread)
+        {
+            thread.CurrentNode = this;
+
+            thread.CurrentNode = Parent;
+            return base.DoEvaluate(thread);
+        }
     }
+
     public class StatementsNode : AstNode
     {
         public List<AstNode> Statements { get; private set; }
