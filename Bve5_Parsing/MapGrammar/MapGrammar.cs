@@ -220,14 +220,8 @@ namespace Bve5_Parsing.MapGrammar
             Root = mapFile; //ルート
 
             #region 基本ステートメントと距離程の文法
-            mapFile.Rule = ToTerm("BveTs") + ToTerm("Map") + num + NewLine + basicStates + statements;
+            mapFile.Rule = ToTerm("BveTs") + "Map" + num + statements;
             statements.Rule = MakeStarRule(statements, statement);
-
-            statement.Rule = dist;
-            dist.Rule = expr + end + basicStates;
-            basicStatesPlus.Rule = MakePlusRule(basicStatesPlus, basicStates);
-            basicStates.Rule = MakeStarRule(basicStates, basicState);
-            basicState.Rule = mapElement + end | PreferShiftHere() + NewLine;
             statement.Rule = dist | basicState;
             dist.Rule = expr + end;
             basicStates.Rule = MakeStarRule(basicStates, basicState);
@@ -239,9 +233,6 @@ namespace Bve5_Parsing.MapGrammar
 
             #region 変数・数式の定義
             op.Rule = plus | minus | mul | div | mod;
-            term.Rule = PreferShiftHere() + num | var;
-            expr.Rule = term | term + op + expr | PreferShiftHere() + "(" + expr + ")";
-            nullableExpr.Rule = "null" | expr;
             term.Rule = num | var;
             expr.Rule = term | term + op + expr | "(" + expr + ")";
             var.Rule = PreferShiftHere() + doll + varName;
@@ -486,7 +477,7 @@ namespace Bve5_Parsing.MapGrammar
             RegisterBracePair("(", ")");
 
             //非表示にする構文
-            MarkTransient(basicState, loadListFile, mapElement, op, curve, gradient, track, structure, repeater, station, section, signal, beacon, speedLimit, preTrain, light, fog, drawDistance, cabIlluminance, irregularity, adhesion, sound, sound3D, rollingNoise, flangeNoise, jointNoise, train, strKey, strKeys, exprArg);
+            MarkTransient(statement, basicState, loadListFile, mapElement, op, curve, gradient, track, structure, repeater, station, section, signal, beacon, speedLimit, preTrain, light, fog, drawDistance, cabIlluminance, irregularity, adhesion, sound, sound3D, rollingNoise, flangeNoise, jointNoise, train, strKey, strKeys, exprArg);
             MarkPunctuation(doll, dot, comma, end, ToTerm("("), ToTerm(")"), ToTerm("["), ToTerm("]"), ToTerm("'"), ToTerm(":"));
 
             //コメント
