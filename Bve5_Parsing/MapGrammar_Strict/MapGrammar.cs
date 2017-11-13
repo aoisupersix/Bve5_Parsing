@@ -455,17 +455,17 @@ namespace Bve5_Parsing.MapGrammar_Strict
 
             #region 走行音
             rollingNoise.Rule = rollingNoise_change;
-            rollingNoise_change.Rule = PreferShiftHere() + "RollingNoise" + dot + "Change" + "(" + nullableExpr + ")";
+            rollingNoise_change.Rule = PreferShiftHere() + "RollingNoise" + dot + "Change" + "(" + expr + ")";
             #endregion 走行音
 
             #region フランジきしり音
             flangeNoise.Rule = flangeNoise_change;
-            flangeNoise_change.Rule = PreferShiftHere() + "FlangeNoise" + dot + "Change" + "(" + nullableExpr + ")";
+            flangeNoise_change.Rule = PreferShiftHere() + "FlangeNoise" + dot + "Change" + "(" + expr + ")";
             #endregion フランジきしり音
 
             #region 分岐器通過音
             jointNoise.Rule = jointNoise_play;
-            jointNoise_play.Rule = PreferShiftHere() + "JointNoise" + dot + "Play" + "(" + nullableExpr + ")";
+            jointNoise_play.Rule = PreferShiftHere() + "JointNoise" + dot + "Play" + "(" + expr + ")";
             #endregion 分岐器通過音
 
             #region 他列車
