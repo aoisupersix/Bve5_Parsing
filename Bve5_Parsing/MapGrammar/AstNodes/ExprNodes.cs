@@ -95,14 +95,26 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     /// </summary>
     public class NullableExprNode : AstNode
     {
-        public double Value { get; private set; }
+        public double? Value { get; private set; }
 
         public override void Init(AstContext context, ParseTreeNode treeNode)
         {
             base.Init(context, treeNode);
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
 
-            AddChild("Nullable=" + nodes[0].Term.ToString(), nodes[0]);
+            if (nodes[0].Term.ToString().Equals("Expr"))
+            {
+                //数式
+                ExprNode expr = (ExprNode)nodes[0].AstNode;
+                Value = expr.Value;
+                AddChild("Expr=" + expr.Value, nodes[0]);
+            }
+            else
+            {
+                //null
+                Value = null;
+                AddChild("Expr=null", nodes[0]);
+            }
         }
     }
 

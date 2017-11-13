@@ -70,6 +70,13 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
                 Data.Arguments.Add(argName, expr.Value);
                 AddChild(argName + "=" + expr.Value, node);
             }
+            else if (node.ToString().Equals("NullableExpr"))
+            {
+                //null許容数式
+                NullableExprNode expr = (NullableExprNode)node.AstNode;
+                Data.Arguments.Add(argName, expr.Value);
+                AddChild(argName + "=" + expr.Value, node);
+            }
             else
             {
                 //引数がキー

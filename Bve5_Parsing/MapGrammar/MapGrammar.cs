@@ -235,6 +235,7 @@ namespace Bve5_Parsing.MapGrammar
             op.Rule = plus | minus | mul | div | mod;
             term.Rule = num | var;
             expr.Rule = term | term + op + expr | "(" + expr + ")";
+            nullableExpr.Rule = expr | "null";
             var.Rule = PreferShiftHere() + doll + varName;
             varAssign.Rule = var + equal + expr;
             #endregion 変数・数式の定義
@@ -369,7 +370,7 @@ namespace Bve5_Parsing.MapGrammar
                 | section_setSpeedLimit;
 
             section_begin.Rule = PreferShiftHere() + "Section" + dot + "Begin" + "(" + expr + exprArgs + ")";
-            section_setSpeedLimit.Rule = PreferShiftHere() + "Section" + dot + "SetSpeedLimit" + "(" + expr + exprArgs + ")";
+            section_setSpeedLimit.Rule = PreferShiftHere() + "Section" + dot + "SetSpeedLimit" + "(" + nullableExpr + exprArgs + ")";
             #endregion 閉塞
 
             #region 地上信号機
