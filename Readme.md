@@ -1,10 +1,11 @@
-[![Build Status](https://travis-ci.org/aoisupersix/Bve5_Parsing.svg?branch=master)](https://travis-ci.org/aoisupersix/Bve5_Parsing) 
-**Bve5_Parsing**
+[![Build Status](https://travis-ci.org/aoisupersix/Bve5_Parsing.svg?branch=master)](https://travis-ci.org/aoisupersix/Bve5_Parsing)
+
+Bve5_Parsing
 ===
 
 ![bve5PasingImage](images/bve5Parsing.png)
 
-Bve5.7構文の構文解析を行うテスト。
+Bve5.7構文の構文解析を行うテスト。 :simple_smile:
 
 ## UsedLibrarys
 #### [Irony - .NET Language Implementation Kit.](https://irony.codeplex.com/)
