@@ -5,7 +5,7 @@ Bve5_Parsing
 
 ![bve5PasingImage](images/bve5Parsing.png)
 
-Bve5.7構文の構文解析を行うテスト。 :simple_smile:
+Bve5.7構文の構文解析を行うテスト。 ☺
 
 ## UsedLibrarys
 #### [Irony - .NET Language Implementation Kit.](https://irony.codeplex.com/)
