@@ -2,6 +2,8 @@
 using Irony.Ast;
 using Irony.Interpreter.Ast;
 using Irony.Parsing;
+using Irony.Interpreter;
+using System.IO;
 
 namespace Bve5_Parsing.MapGrammar.AstNodes
 {
@@ -179,6 +181,30 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
 
             //引数の登録
             AddArguments("mapPath", nodes, 1);
+
+            string filePath = nodes[1].Token.Value.ToString();
+            if (System.IO.File.Exists(filePath))
+            {
+                //ファイル読み込み
+                StreamReader sr = new StreamReader(filePath);
+                string input = sr.ReadToEnd();
+
+                //構文解析
+                ScriptApp app = new ScriptApp(new LanguageData(new MapGrammar()));
+                try
+                {
+                    MapData result = (MapData)app.Evaluate(input);
+                }
+                catch (ScriptException e)
+                {
+                    throw new ScriptException(e.Message, e.InnerException, e.Location, e.ScriptStackTrace);
+                }
+            }
+            else
+            {
+                //ファイルが存在しない
+                throw new ScriptException(filePath + "が見つかりません", new System.IO.FileNotFoundException(), this.Location, new ScriptStackTrace());
+            }
         }
     }
 

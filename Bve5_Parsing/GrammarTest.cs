@@ -62,13 +62,23 @@ namespace Bve5_Parsing
                     }
 
                 }
-                catch (ScriptException)
+                catch (ScriptException e)
                 {
                     Console.WriteLine("Error.");
-                    LogMessageList parseTree = app.GetParserMessages();
-                    foreach(var err in parseTree)
+                    
+                    if(e.InnerException == null)
                     {
-                        Console.Error.WriteLine("{0}: {1} {2}", err.Location, err, err.ParserState);
+                        //Parser error
+                        LogMessageList parseTree = app.GetParserMessages();
+                        foreach (var err in parseTree)
+                        {
+                            Console.Error.WriteLine("{0}: {1} {2}", err.Location, err, err.ParserState);
+                        }
+                    }
+                    else
+                    {
+                        //Other error
+                        Console.Error.WriteLine("{0}: {1}", e.Location, e.Message);
                     }
                 }
 
