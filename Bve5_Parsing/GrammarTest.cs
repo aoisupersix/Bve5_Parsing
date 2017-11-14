@@ -37,7 +37,7 @@ namespace Bve5_Parsing
                     //結果表示
                     Console.WriteLine("Version:{0}", result.Version);
                     Console.WriteLine("Encoding:{0}", result.Encoding);
-                    Console.WriteLine("StructureListPath:{0}", result.StructureListPath);
+                    Console.WriteLine("StructureListPath:{0}", @result.StructureListPath);
                     Console.WriteLine("StationListPath:{0}", result.StationListPath);
                     Console.WriteLine("SignalListPath:{0}", result.SignalListPath);
                     Console.WriteLine("SoundListPath:{0}", result.SoundListPath);
@@ -61,7 +61,7 @@ namespace Bve5_Parsing
                     }
 
                 }
-                catch (ScriptException e)
+                catch (ScriptException)
                 {
                     Console.WriteLine("Error.");
                     LogMessageList parseTree = app.GetParserMessages();

@@ -14,7 +14,7 @@ namespace Bve5_Parsing.MapGrammar_Careless
              */
 
             #region 終端記号の定義
-            var key = new StringLiteral("Key", "'", StringOptions.AllowsAllEscapes);
+            var key = new StringLiteral("Key", "'", StringOptions.NoEscapes);
             var encode = new IdentifierTerminal("Encode");
             var varName = new IdentifierTerminal("VarName");
             var num = new NumberLiteral("Num", NumberOptions.AllowSign);
