@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Irony.Interpreter;
 using Irony.Parsing;
+using Irony;
 
 namespace Bve5_Parsing
 {
@@ -27,9 +28,10 @@ namespace Bve5_Parsing
                 Console.WriteLine("====================================");
                 Console.WriteLine("Parser Output:");
 
+                ScriptApp app = new ScriptApp(new LanguageData(new MapGrammar_Careless.MapGrammar_Careless()));
+
                 try
                 {
-                    ScriptApp app = new ScriptApp(new LanguageData(new MapGrammar_Careless.MapGrammar_Careless()));
                     MapGrammar_Careless.MapData result = (MapGrammar_Careless.MapData)app.Evaluate(input);
 
                     //結果表示
@@ -61,8 +63,12 @@ namespace Bve5_Parsing
                 }
                 catch (ScriptException e)
                 {
-
-                    Console.Error.WriteLine("{0}: {1}", e.Location, e.Message);
+                    Console.WriteLine("Error.");
+                    LogMessageList parseTree = app.GetParserMessages();
+                    foreach(var err in parseTree)
+                    {
+                        Console.Error.WriteLine("{0}: {1} {2}", err.Location, err, err.ParserState);
+                    }
                 }
 
                 Console.WriteLine("End it? Y/N");
