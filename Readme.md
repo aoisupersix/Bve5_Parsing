@@ -67,11 +67,11 @@ Bve5_Parsing is using the following library.
 >
 > Copyright (c) 2011 Roman Ivantsov
 
-* **ライセンス全文 :** [licenses\Irony.txt](https://github.com/aoisupersix/Bve5_Parsing/blob/master/Bve5_Parsing/licenses/Irony.txt)
+* **ライセンス全文 :** [licenses\Irony.txt](https://github.com/aoisupersix/Bve5_Parsing/blob/master/licenses/Irony.txt)
 
 ## License
 The MIT License (MIT)
 
 Copyright(c) 2017 aoisupersix
 
-**[License.md](https://github.com/aoisupersix/Bve5_Parsing/blob/master/Bve5_Parsing/MapGrammar/License.md)**
+**[License.md](https://github.com/aoisupersix/Bve5_Parsing/blob/master/License.md)**
