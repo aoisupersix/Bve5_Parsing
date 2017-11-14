@@ -41,6 +41,7 @@ namespace Bve5_Parsing.MapGrammar_Careless.AstNodes
 
             AddChild("Element-" + ElementName, nodes[0]);
             AddChild("FilePath-" + FilePath, nodes[2]);
+
         }
     }
 

@@ -42,6 +42,14 @@ namespace Bve5_Parsing.MapGrammar_Careless.AstNodes
             //変数の初期化
             Vars vars = Vars.GetInstance();
             vars.Clear();
+
+            //リストファイルの登録
+            StatementsNode stateNode = (StatementsNode)statements;
+            foreach(AstNode node in stateNode.ListFiles)
+            {
+                LoadListFileNode loadNode = (LoadListFileNode)node;
+                MapData.SetListPathToString(loadNode.ElementName, loadNode.FilePath);
+            }
         }
 
         protected override object DoEvaluate(ScriptThread thread)
@@ -56,10 +64,12 @@ namespace Bve5_Parsing.MapGrammar_Careless.AstNodes
     public class StatementsNode : AstNode
     {
         public List<AstNode> Statements { get; private set; }
+        public List<AstNode> ListFiles { get; private set; }
 
         public override void Init(AstContext context, ParseTreeNode treeNode)
         {
             Statements = new List<AstNode>();
+            ListFiles = new List<AstNode>();
 
             base.Init(context, treeNode);
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
@@ -75,12 +85,11 @@ namespace Bve5_Parsing.MapGrammar_Careless.AstNodes
                 }
                 else
                 {
-                    MapFileNode mapFileNode = (MapFileNode)Parent;
                     //構文
                     string syntaxName = node.Term.ToString();
                     if(node.AstNode.GetType() == typeof(LoadListFileNode))
                     {
-                        //TODO
+                        ListFiles.Add(AddChild("LoadListFile", node));
                     }
                     else if (!syntaxName.Equals("VarAssign"))
                     {

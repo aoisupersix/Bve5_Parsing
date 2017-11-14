@@ -41,5 +41,32 @@ namespace Bve5_Parsing.MapGrammar_Careless
         /// 固定音源リストのファイルパス
         /// </summary>
         public string Sound3DListPath { get; set; }
+
+        /// <summary>
+        /// 文字列から対応するリストファイルのパスを設定する
+        /// </summary>
+        /// <param name="elementName">LoadListFileNodeのelementName</param>
+        /// <param name="path">設定するファイルパス</param>
+        public void SetListPathToString(string elementName, string path)
+        {
+            switch (elementName)
+            {
+                case "Structure":
+                    StructureListPath = path;
+                    break;
+                case "Station":
+                    StationListPath = path;
+                    break;
+                case "Signal":
+                    SignalListPath = path;
+                    break;
+                case "Sound":
+                    SoundListPath = path;
+                    break;
+                case "Sound3D":
+                    Sound3DListPath = path;
+                    break;
+            }
+        }
     }
 }
