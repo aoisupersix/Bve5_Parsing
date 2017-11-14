@@ -53,7 +53,7 @@ namespace Bve5_Parsing.MapGrammar_Careless
 
             #region リストファイル読み込みの定義
             var loadListFile = new NonTerminal("LoadListFile", typeof(LoadListFileNode));
-            var loadStrList = new NonTerminal("LoadStructList", typeof(LoadListFileNode));
+            var loadStrList = new NonTerminal("LoadStructureList", typeof(LoadListFileNode));
             var loadStaList = new NonTerminal("LoadStationList", typeof(LoadListFileNode));
             var loadSigList = new NonTerminal("LoadSignalList", typeof(LoadListFileNode));
             var loadSoundList = new NonTerminal("LoadSoundList", typeof(LoadListFileNode));

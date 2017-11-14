@@ -75,8 +75,35 @@ namespace Bve5_Parsing.MapGrammar_Careless.AstNodes
                 }
                 else
                 {
-                    //構文の距離程はnowDistに入っている　TODO 距離程処理
-                    Statements.Add(AddChild("Dist=" + nowDist, node));
+                    //構文
+                    string syntaxName = node.Term.ToString();
+                    if (syntaxName.Equals("LoadStructureList"))
+                    {
+                        //TODO
+                    }
+                    else if (syntaxName.Equals("LoadStationList"))
+                    {
+                        //TODO
+                    }
+                    else if (syntaxName.Equals("LoadSignalList"))
+                    {
+                        //TODO
+                    }
+                    else if (syntaxName.Equals("LoadSoundList"))
+                    {
+                        //TODO
+                    }
+                    else if (syntaxName.Equals("LoadSound3DList"))
+                    {
+                        //TODO
+                    }
+                    else if (!syntaxName.Equals("VarAssign"))
+                    {
+                        //mapElementに距離程の登録
+                        Syntax syntax = (Syntax)node.AstNode;
+                        syntax.Data.Distance = nowDist;
+                        Statements.Add(AddChild("Dist=" + nowDist, node));
+                    }
                 }
             }
         }

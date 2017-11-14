@@ -10,6 +10,7 @@ namespace Bve5_Parsing.MapGrammar_Careless.AstNodes
     /// </summary>
     public class SyntaxData
     {
+        public double Distance { get; set; }
         public string[] MapElement { get; set; }
         public string Key { get; set; }
         public string Function { get; set; }
