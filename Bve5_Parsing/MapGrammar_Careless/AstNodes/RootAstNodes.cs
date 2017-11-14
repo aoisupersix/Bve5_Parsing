@@ -78,23 +78,7 @@ namespace Bve5_Parsing.MapGrammar_Careless.AstNodes
                     MapFileNode mapFileNode = (MapFileNode)Parent;
                     //構文
                     string syntaxName = node.Term.ToString();
-                    if (syntaxName.Equals("LoadStructureList"))
-                    {
-                        //TODO
-                    }
-                    else if (syntaxName.Equals("LoadStationList"))
-                    {
-                        //TODO
-                    }
-                    else if (syntaxName.Equals("LoadSignalList"))
-                    {
-                        //TODO
-                    }
-                    else if (syntaxName.Equals("LoadSoundList"))
-                    {
-                        //TODO
-                    }
-                    else if (syntaxName.Equals("LoadSound3DList"))
+                    if(node.AstNode.GetType() == typeof(LoadListFileNode))
                     {
                         //TODO
                     }
