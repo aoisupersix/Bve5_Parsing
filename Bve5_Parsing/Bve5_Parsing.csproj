@@ -11,6 +11,21 @@
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -52,66 +67,37 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GrammarTest.cs" />
-    <Compile Include="MapGrammar_Careless\AstNodes\ExprNodes.cs" />
-    <Compile Include="MapGrammar_Careless\AstNodes\MapElementNodes.cs" />
-    <Compile Include="MapGrammar_Careless\AstNodes\MapElement\Adhesion.cs" />
-    <Compile Include="MapGrammar_Careless\AstNodes\MapElement\Beacon.cs" />
-    <Compile Include="MapGrammar_Careless\AstNodes\MapElement\CabIlluminance.cs" />
-    <Compile Include="MapGrammar_Careless\AstNodes\MapElement\Curve.cs" />
-    <Compile Include="MapGrammar_Careless\AstNodes\MapElement\DrawDistance.cs" />
-    <Compile Include="MapGrammar_Careless\AstNodes\MapElement\FlangeNoise.cs" />
-    <Compile Include="MapGrammar_Careless\AstNodes\MapElement\Fog.cs" />
-    <Compile Include="MapGrammar_Careless\AstNodes\MapElement\Gradient.cs" />
-    <Compile Include="MapGrammar_Careless\AstNodes\MapElement\Irregularity.cs" />
-    <Compile Include="MapGrammar_Careless\AstNodes\MapElement\JointNoise.cs" />
-    <Compile Include="MapGrammar_Careless\AstNodes\MapElement\Light.cs" />
-    <Compile Include="MapGrammar_Careless\AstNodes\MapElement\PreTrain.cs" />
-    <Compile Include="MapGrammar_Careless\AstNodes\MapElement\Repeater.cs" />
-    <Compile Include="MapGrammar_Careless\AstNodes\MapElement\RollingNoise.cs" />
-    <Compile Include="MapGrammar_Careless\AstNodes\MapElement\Section.cs" />
-    <Compile Include="MapGrammar_Careless\AstNodes\MapElement\Signal.cs" />
-    <Compile Include="MapGrammar_Careless\AstNodes\MapElement\Sound.cs" />
-    <Compile Include="MapGrammar_Careless\AstNodes\MapElement\Sound3D.cs" />
-    <Compile Include="MapGrammar_Careless\AstNodes\MapElement\SpeedLimit.cs" />
-    <Compile Include="MapGrammar_Careless\AstNodes\MapElement\Station.cs" />
-    <Compile Include="MapGrammar_Careless\AstNodes\MapElement\Structure.cs" />
-    <Compile Include="MapGrammar_Careless\AstNodes\MapElement\Track.cs" />
-    <Compile Include="MapGrammar_Careless\AstNodes\MapElement\Train.cs" />
-    <Compile Include="MapGrammar_Careless\AstNodes\RootAstNodes.cs" />
-    <Compile Include="MapGrammar_Careless\AstNodes\VarNodes.cs" />
-    <Compile Include="MapGrammar_Careless\MapData.cs" />
-    <Compile Include="MapGrammar_Careless\MapGrammar.cs" />
-    <Compile Include="MapGrammar_Careless\Vars.cs" />
-    <Compile Include="MapGrammar_Strict\AstNodes\MapElement\Adhesion.cs" />
-    <Compile Include="MapGrammar_Strict\AstNodes\MapElement\Beacon.cs" />
-    <Compile Include="MapGrammar_Strict\AstNodes\MapElement\CabIlluminance.cs" />
-    <Compile Include="MapGrammar_Strict\AstNodes\MapElement\Curve.cs" />
-    <Compile Include="MapGrammar_Strict\AstNodes\ExprNodes.cs" />
-    <Compile Include="MapGrammar_Strict\AstNodes\MapElement\DrawDistance.cs" />
-    <Compile Include="MapGrammar_Strict\AstNodes\MapElement\FlangeNoise.cs" />
-    <Compile Include="MapGrammar_Strict\AstNodes\MapElement\Fog.cs" />
-    <Compile Include="MapGrammar_Strict\AstNodes\MapElement\Gradient.cs" />
-    <Compile Include="MapGrammar_Strict\AstNodes\MapElement\Irregularity.cs" />
-    <Compile Include="MapGrammar_Strict\AstNodes\MapElement\JointNoise.cs" />
-    <Compile Include="MapGrammar_Strict\AstNodes\MapElement\Light.cs" />
-    <Compile Include="MapGrammar_Strict\AstNodes\MapElementNodes.cs" />
-    <Compile Include="MapGrammar_Strict\AstNodes\MapElement\PreTrain.cs" />
-    <Compile Include="MapGrammar_Strict\AstNodes\MapElement\Repeater.cs" />
-    <Compile Include="MapGrammar_Strict\AstNodes\MapElement\RollingNoise.cs" />
-    <Compile Include="MapGrammar_Strict\AstNodes\MapElement\Sound.cs" />
-    <Compile Include="MapGrammar_Strict\AstNodes\MapElement\Sound3D.cs" />
-    <Compile Include="MapGrammar_Strict\AstNodes\MapElement\Train.cs" />
-    <Compile Include="MapGrammar_Strict\AstNodes\RootAstNodes.cs" />
-    <Compile Include="MapGrammar_Strict\AstNodes\MapElement\Section.cs" />
-    <Compile Include="MapGrammar_Strict\AstNodes\MapElement\Signal.cs" />
-    <Compile Include="MapGrammar_Strict\AstNodes\MapElement\SpeedLimit.cs" />
-    <Compile Include="MapGrammar_Strict\AstNodes\MapElement\Station.cs" />
-    <Compile Include="MapGrammar_Strict\AstNodes\MapElement\Structure.cs" />
-    <Compile Include="MapGrammar_Strict\AstNodes\MapElement\Track.cs" />
-    <Compile Include="MapGrammar_Strict\AstNodes\VarNodes.cs" />
-    <Compile Include="MapGrammar_Strict\MapGrammar.cs" />
+    <Compile Include="MapGrammar\AstNodes\ExprNodes.cs" />
+    <Compile Include="MapGrammar\AstNodes\MapElementNodes.cs" />
+    <Compile Include="MapGrammar\AstNodes\MapElement\Adhesion.cs" />
+    <Compile Include="MapGrammar\AstNodes\MapElement\Beacon.cs" />
+    <Compile Include="MapGrammar\AstNodes\MapElement\CabIlluminance.cs" />
+    <Compile Include="MapGrammar\AstNodes\MapElement\Curve.cs" />
+    <Compile Include="MapGrammar\AstNodes\MapElement\DrawDistance.cs" />
+    <Compile Include="MapGrammar\AstNodes\MapElement\FlangeNoise.cs" />
+    <Compile Include="MapGrammar\AstNodes\MapElement\Fog.cs" />
+    <Compile Include="MapGrammar\AstNodes\MapElement\Gradient.cs" />
+    <Compile Include="MapGrammar\AstNodes\MapElement\Irregularity.cs" />
+    <Compile Include="MapGrammar\AstNodes\MapElement\JointNoise.cs" />
+    <Compile Include="MapGrammar\AstNodes\MapElement\Light.cs" />
+    <Compile Include="MapGrammar\AstNodes\MapElement\PreTrain.cs" />
+    <Compile Include="MapGrammar\AstNodes\MapElement\Repeater.cs" />
+    <Compile Include="MapGrammar\AstNodes\MapElement\RollingNoise.cs" />
+    <Compile Include="MapGrammar\AstNodes\MapElement\Section.cs" />
+    <Compile Include="MapGrammar\AstNodes\MapElement\Signal.cs" />
+    <Compile Include="MapGrammar\AstNodes\MapElement\Sound.cs" />
+    <Compile Include="MapGrammar\AstNodes\MapElement\Sound3D.cs" />
+    <Compile Include="MapGrammar\AstNodes\MapElement\SpeedLimit.cs" />
+    <Compile Include="MapGrammar\AstNodes\MapElement\Station.cs" />
+    <Compile Include="MapGrammar\AstNodes\MapElement\Structure.cs" />
+    <Compile Include="MapGrammar\AstNodes\MapElement\Track.cs" />
+    <Compile Include="MapGrammar\AstNodes\MapElement\Train.cs" />
+    <Compile Include="MapGrammar\AstNodes\RootAstNodes.cs" />
+    <Compile Include="MapGrammar\AstNodes\VarNodes.cs" />
+    <Compile Include="MapGrammar\MapData.cs" />
+    <Compile Include="MapGrammar\MapGrammar.cs" />
+    <Compile Include="MapGrammar\Vars.cs" />
     <Compile Include="ExtraChars.cs" />
-    <Compile Include="MapGrammar_Strict\Vars.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ScenarioGrammar\AstNodes\ScenarioNodes.cs" />
     <Compile Include="ScenarioGrammar\ScenarioGrammar.cs" />
@@ -120,6 +106,17 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 および x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

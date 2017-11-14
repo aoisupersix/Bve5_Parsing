@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Irony.Interpreter;
 using Irony.Parsing;
+using Bve5_Parsing.MapGrammar;
 using Irony;
 
 namespace Bve5_Parsing
@@ -28,11 +29,11 @@ namespace Bve5_Parsing
                 Console.WriteLine("====================================");
                 Console.WriteLine("Parser Output:");
 
-                ScriptApp app = new ScriptApp(new LanguageData(new MapGrammar_Careless.MapGrammar_Careless()));
+                ScriptApp app = new ScriptApp(new LanguageData(new MapGrammar.MapGrammar()));
 
                 try
                 {
-                    MapGrammar_Careless.MapData result = (MapGrammar_Careless.MapData)app.Evaluate(input);
+                    MapData result = (MapData)app.Evaluate(input);
 
                     //結果表示
                     Console.WriteLine("Version:{0}", result.Version);
@@ -44,7 +45,7 @@ namespace Bve5_Parsing
                     Console.WriteLine("Sound3DListPath:{0}", result.Sound3DListPath);
 
                     Console.WriteLine("----------------------------");
-                    foreach(MapGrammar_Careless.AstNodes.SyntaxData syntaxData in result.Statements)
+                    foreach(MapGrammar.AstNodes.SyntaxData syntaxData in result.Statements)
                     {
                         Console.WriteLine("Distance:{0}", syntaxData.Distance);
                         for(int i = 0; i < syntaxData.MapElement.Length; i++)
