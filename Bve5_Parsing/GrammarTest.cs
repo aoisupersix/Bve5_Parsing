@@ -41,6 +41,23 @@ namespace Bve5_Parsing
                     Console.WriteLine("SoundListPath:{0}", result.SoundListPath);
                     Console.WriteLine("Sound3DListPath:{0}", result.Sound3DListPath);
 
+                    Console.WriteLine("----------------------------");
+                    foreach(MapGrammar_Careless.AstNodes.SyntaxData syntaxData in result.Statements)
+                    {
+                        Console.WriteLine("Distance:{0}", syntaxData.Distance);
+                        for(int i = 0; i < syntaxData.MapElement.Length; i++)
+                        {
+                            Console.WriteLine("MapElement[{0}]:{1}", i, syntaxData.MapElement[i]);
+                        }
+                        Console.WriteLine("Key:{0}", syntaxData.Key);
+                        Console.WriteLine("Function:{0}", syntaxData.Function);
+                        foreach (KeyValuePair<string, object> kvp in syntaxData.Arguments)
+                        {
+                            Console.WriteLine("{0}:{1}", kvp.Key, kvp.Value);
+                        }
+                        Console.WriteLine("----------------------------");
+                    }
+
                 }
                 catch (ScriptException e)
                 {
@@ -55,7 +72,6 @@ namespace Bve5_Parsing
                     end = true;
                 }
             }
-            Console.ReadLine();
         }
     }
 }
