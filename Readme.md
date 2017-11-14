@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/aoisupersix/Bve5_Parsing.svg?branch=master)](https://travis-ci.org/aoisupersix/Bve5_Parsing)
+[![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://github.com/aoisupersix/Bve5_Parsing/blob/master/Bve5_Parsing/MapGrammar/License.md)
 
 Bve5_Parsing
 ===
@@ -25,7 +26,9 @@ Bve5の構文はどのように処理されているのか？という疑問を�
 ## Requirement
 Importing your projects, **Irony 0.9.1** & **Irony.Interpreter 0.9.1** from  
 + [nuget Irony](https://www.nuget.org/packages/Irony/) & [nuget Irony.Interpreter](https://www.nuget.org/packages/Irony.Interpreter/)
-+ [Irony - .NET Language Implementation Kit.](https://irony.codeplex.com/)
++ [Irony - .NET Language Implementation Kit.](https://irony.codeplex.com/)  
+
+and this library from ![Bve5_Parsing](https://github.com/aoisupersix/Bve5_Parsing/releases/download/v0.1.6527.27089/Bve5_Parsing.dll).
 
 ## Usage for C\# ##
 
@@ -64,4 +67,11 @@ Bve5_Parsing is using the following library.
 >
 > Copyright (c) 2011 Roman Ivantsov
 
-* **ライセンス全文 :** https://irony.codeplex.com/license
+* **ライセンス全文 :** [licenses\Irony.txt](https://github.com/aoisupersix/Bve5_Parsing/blob/master/Bve5_Parsing/licenses/Irony.txt)
+
+## License
+The MIT License (MIT)
+
+Copyright(c) 2017 aoisupersix
+
+**[License.md](https://github.com/aoisupersix/Bve5_Parsing/blob/master/Bve5_Parsing/MapGrammar/License.md)**
