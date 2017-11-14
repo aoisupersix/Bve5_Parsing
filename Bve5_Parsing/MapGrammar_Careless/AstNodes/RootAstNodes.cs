@@ -56,8 +56,16 @@ namespace Bve5_Parsing.MapGrammar_Careless.AstNodes
         {
             thread.CurrentNode = this;
 
+            //構文の取得
+            StatementsNode stateNode = (StatementsNode)statements;
+            foreach (AstNode node in stateNode.Statements)
+            {
+                Syntax syntax = (Syntax)node;
+                MapData.Statements.Add(syntax.Data);
+            }
+
             thread.CurrentNode = Parent;
-            return base.DoEvaluate(thread);
+            return MapData;
         }
     }
 

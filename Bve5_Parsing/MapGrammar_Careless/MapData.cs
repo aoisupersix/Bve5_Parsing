@@ -1,10 +1,11 @@
 ﻿using System.Collections.Generic;
-using Irony.Ast;
-using Irony.Interpreter.Ast;
-using Irony.Parsing;
+using Bve5_Parsing.MapGrammar_Careless.AstNodes;
 
 namespace Bve5_Parsing.MapGrammar_Careless
 {
+    /// <summary>
+    /// 構文解析の結果を格納するクラス
+    /// </summary>
     public class MapData
     {
         /// <summary>
@@ -41,6 +42,16 @@ namespace Bve5_Parsing.MapGrammar_Careless
         /// 固定音源リストのファイルパス
         /// </summary>
         public string Sound3DListPath { get; set; }
+
+        /// <summary>
+        /// 構文
+        /// </summary>
+        public List<SyntaxData> Statements { get; set; }
+
+        public MapData()
+        {
+            Statements = new List<SyntaxData>();
+        }
 
         /// <summary>
         /// 文字列から対応するリストファイルのパスを設定する
