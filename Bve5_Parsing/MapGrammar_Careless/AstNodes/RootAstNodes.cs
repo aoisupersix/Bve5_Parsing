@@ -14,13 +14,13 @@ namespace Bve5_Parsing.MapGrammar_Careless.AstNodes
     public class MapFileNode : AstNode
     {
 
-        private MapData mapData;
+        public MapData MapData { get; set; }
         private AstNode statements;
 
         public override void Init(AstContext context, ParseTreeNode treeNode)
         {
             base.Init(context, treeNode);
-            mapData = new MapData();
+            MapData = new MapData();
 
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
 
@@ -28,15 +28,15 @@ namespace Bve5_Parsing.MapGrammar_Careless.AstNodes
             {
                 //エンコーディング指定あり
                 statements = AddChild("ver=" + nodes[2].Token.Value + ",enc=" + nodes[3].Token.Value, nodes[4]);
-                mapData.Version = nodes[2].Token.Value.ToString();
-                mapData.Encoding = nodes[3].Token.Value.ToString();
+                MapData.Version = nodes[2].Token.Value.ToString();
+                MapData.Encoding = nodes[3].Token.Value.ToString();
             }
             else
             {
                 //エンコーディング指定なし
                 statements = AddChild("ver=" + nodes[2].Token.Value + ",enc=utf-8", nodes[3]);
-                mapData.Version = nodes[2].Token.Value.ToString();
-                mapData.Encoding = "utf-8";
+                MapData.Version = nodes[2].Token.Value.ToString();
+                MapData.Encoding = "utf-8";
             }
 
             //変数の初期化
@@ -75,6 +75,7 @@ namespace Bve5_Parsing.MapGrammar_Careless.AstNodes
                 }
                 else
                 {
+                    MapFileNode mapFileNode = (MapFileNode)Parent;
                     //構文
                     string syntaxName = node.Term.ToString();
                     if (syntaxName.Equals("LoadStructureList"))
