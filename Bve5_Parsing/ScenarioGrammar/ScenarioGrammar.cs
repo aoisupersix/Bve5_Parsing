@@ -54,7 +54,7 @@ namespace Bve5_Parsing.ScenarioGrammar
             this.NonGrammarTerminals.Add(comment1);
             this.NonGrammarTerminals.Add(comment2);
 
-            LanguageFlags = LanguageFlags.CreateAst;
+            LanguageFlags = LanguageFlags.CreateAst | LanguageFlags.TailRecursive;
         }
     }
 }

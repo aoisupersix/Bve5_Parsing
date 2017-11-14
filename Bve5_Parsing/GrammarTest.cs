@@ -84,7 +84,7 @@ namespace Bve5_Parsing
 
                 Console.WriteLine("End it? Y/N");
                 string endInput = Console.ReadLine();
-                if (endInput.Equals("Y"))
+                if (endInput.Equals("Y") || endInput.Equals("y"))
                 {
                     end = true;
                 }

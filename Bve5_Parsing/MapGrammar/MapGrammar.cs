@@ -483,6 +483,8 @@ namespace Bve5_Parsing.MapGrammar
             include.Rule = "Include" + key;
             #endregion 他マップの挿入
 
+            basicState.ErrorRule = SyntaxError + end;
+
             //演算子の優先順位設定
             RegisterOperators(0, plus, minus);
             RegisterOperators(1, mul, div, mod);
@@ -501,7 +503,7 @@ namespace Bve5_Parsing.MapGrammar
             this.NonGrammarTerminals.Add(comment2);
 
 
-            this.LanguageFlags = LanguageFlags.NewLineBeforeEOF | LanguageFlags.CreateAst;
+            this.LanguageFlags = LanguageFlags.NewLineBeforeEOF | LanguageFlags.CreateAst | LanguageFlags.TailRecursive;
         }
     }
 }
