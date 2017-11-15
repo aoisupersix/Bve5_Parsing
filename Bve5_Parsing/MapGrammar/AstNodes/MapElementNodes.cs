@@ -67,29 +67,37 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// <param name="argName">登録する引数名</param>
         /// <param name="nodes">構文の子ノード</param>
         /// <param name="idx">引数のインデックス</param>
-        protected void AddArguments(string argName, ParseTreeNodeList nodes, int idx)
+        protected void AddArguments(string argName, ParseTreeNodeList nodes, int idx, System.Type type = null)
         {
             if(nodes.Count > idx)
             {
-                if (nodes[idx].ToString().Equals("Expr"))
+                if(type != null && nodes[idx].AstNode.GetType() != type)
                 {
-                    //引数が数式
-                    ExprNode expr = (ExprNode)nodes[idx].AstNode;
-                    Data.Arguments.Add(argName, expr.Value);
-                    AddChild(argName + "=" + expr.Value, nodes[idx]);
-                }
-                else if (nodes[idx].ToString().Equals("NullableExpr"))
-                {
-                    //null許容数式
-                    NullableExprNode expr = (NullableExprNode)nodes[idx].AstNode;
-                    Data.Arguments.Add(argName, expr.Value);
-                    AddChild(argName + "=" + expr.Value, nodes[idx]);
+                    //Empty
+                    Data.Arguments.Add(argName, 0);
                 }
                 else
                 {
-                    //引数がキーもしくはRawKey
-                    Data.Arguments.Add(argName, nodes[idx].Token.Value.ToString());
-                    AddChild(argName + "=" + nodes[idx].Token.Value, nodes[idx]);
+                    if (nodes[idx].ToString().Equals("Expr"))
+                    {
+                        //引数が数式
+                        ExprNode expr = (ExprNode)nodes[idx].AstNode;
+                        Data.Arguments.Add(argName, expr.Value);
+                        AddChild(argName + "=" + expr.Value, nodes[idx]);
+                    }
+                    else if (nodes[idx].ToString().Equals("NullableExpr"))
+                    {
+                        //null許容数式
+                        NullableExprNode expr = (NullableExprNode)nodes[idx].AstNode;
+                        Data.Arguments.Add(argName, expr.Value);
+                        AddChild(argName + "=" + expr.Value, nodes[idx]);
+                    }
+                    else
+                    {
+                        //引数がキーもしくはRawKey
+                        Data.Arguments.Add(argName, nodes[idx].Token.Value.ToString());
+                        AddChild(argName + "=" + nodes[idx].Token.Value, nodes[idx]);
+                    }
                 }
             }
             else

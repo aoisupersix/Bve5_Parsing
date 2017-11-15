@@ -256,7 +256,7 @@ namespace Bve5_Parsing.MapGrammar
             #endregion リストファイル読み込みの文法
 
             #region 引数の文法
-            rawKey.Rule = num | key;
+            rawKey.Rule = num | key | Empty;
             strKey.Rule = comma + key;
             strKeys.Rule = MakeStarRule(strKeys, strKey);
             exprArg.Rule = comma + nullableExpr;
