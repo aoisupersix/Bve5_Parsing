@@ -65,11 +65,11 @@ namespace Bve5_Parsing
                 catch (ScriptException e)
                 {
                     Console.WriteLine("Error.");
-                    
-                    if(e.InnerException == null)
+
+                    LogMessageList parseTree = app.GetParserMessages();
+
+                    if(parseTree.Count > 0)
                     {
-                        //Parser error
-                        LogMessageList parseTree = app.GetParserMessages();
                         foreach (var err in parseTree)
                         {
                             Console.Error.WriteLine("{0}: {1} {2}", err.Location, err, err.ParserState);

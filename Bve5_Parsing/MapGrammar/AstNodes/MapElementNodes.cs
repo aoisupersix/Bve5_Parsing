@@ -4,6 +4,7 @@ using Irony.Interpreter.Ast;
 using Irony.Parsing;
 using Irony.Interpreter;
 using System.IO;
+using Irony;
 
 namespace Bve5_Parsing.MapGrammar.AstNodes
 {
@@ -197,7 +198,20 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
                 }
                 catch (ScriptException e)
                 {
-                    throw new ScriptException(e.Message, e.InnerException, e.Location, e.ScriptStackTrace);
+                    LogMessageList parseTree = app.GetParserMessages();
+
+                    if (parseTree.Count > 0)
+                    {
+                        foreach (var err in parseTree)
+                        {
+                            throw new ScriptException(err.Message, null, err.Location, null);
+                        }
+                    }
+                    else
+                    {
+                        //Other error
+                        throw e;
+                    }
                 }
             }
             else
