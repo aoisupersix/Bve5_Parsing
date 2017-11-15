@@ -204,7 +204,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
                     {
                         foreach (var err in parseTree)
                         {
-                            throw new ScriptException(err.Message, null, err.Location, null);
+                            throw new ScriptException(filePath + ": " + err.Message, null, err.Location, null);
                         }
                     }
                     else
