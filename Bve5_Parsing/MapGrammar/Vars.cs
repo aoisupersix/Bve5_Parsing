@@ -12,7 +12,7 @@ namespace Bve5_Parsing.MapGrammar
     public sealed class Vars
     {
         private static Vars _varsInstance = new Vars();
-        private Dictionary<string, double> vars;
+        private Dictionary<string, object> vars;
 
         public static Vars GetInstance()
         {
@@ -21,7 +21,7 @@ namespace Bve5_Parsing.MapGrammar
 
         private Vars()
         {
-            vars = new Dictionary<string, double>();
+            vars = new Dictionary<string, object>();
         }
 
         /// <summary>
@@ -29,7 +29,7 @@ namespace Bve5_Parsing.MapGrammar
         /// </summary>
         /// <param name="name">変数名</param>
         /// <param name="val">変数の値</param>
-        public void SetVar(string name, double val)
+        public void SetVar(string name, object val)
         {
             if (vars.ContainsKey(name))
                 vars[name] = val;
@@ -42,7 +42,7 @@ namespace Bve5_Parsing.MapGrammar
         /// </summary>
         /// <param name="name">変数名</param>
         /// <returns>変数の値</returns>
-        public double GetVar(string name)
+        public object GetVar(string name)
         {
             if (vars.ContainsKey(name))
                 return vars[name];
