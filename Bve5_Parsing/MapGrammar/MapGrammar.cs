@@ -239,7 +239,7 @@ namespace Bve5_Parsing.MapGrammar
 
             #region 変数・数式の定義
             op.Rule = plus | minus | mul | div | mod;
-            term.Rule = num | var;
+            term.Rule = num | key | var;
             expr.Rule = term | term + op + expr | "(" + expr + ")";
             nullableExpr.Rule = expr | "null" | Empty;
             var.Rule = PreferShiftHere() + doll + varName;
