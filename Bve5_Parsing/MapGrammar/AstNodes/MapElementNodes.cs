@@ -85,9 +85,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
                     Data.Arguments.Add(argName, expr.Value);
                     AddChild(argName + "=" + expr.Value, nodes[idx]);
                 }
+                else if (nodes[idx].ToString().Equals("RawKey"))
+                {
+                    //RawKey
+                    RawKeyNode rawKey = (RawKeyNode)nodes[idx].AstNode;
+                    Data.Arguments.Add(argName, rawKey.Value);
+                    AddChild(argName + "=" + rawKey.Value, nodes[idx]);
+                }
                 else
                 {
-                    //引数がキーもしくはRawKey
+                    //引数がキー
                     Data.Arguments.Add(argName, nodes[idx].Token.Value.ToString());
                     AddChild(argName + "=" + nodes[idx].Token.Value, nodes[idx]);
                 }

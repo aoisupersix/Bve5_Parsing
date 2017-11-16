@@ -61,7 +61,7 @@ namespace Bve5_Parsing.MapGrammar
             #endregion リストファイル読み込みの定義
 
             #region 引数の定義
-            var rawKey = new NonTerminal("RawKey");
+            var rawKey = new NonTerminal("RawKey", typeof(RawKeyNode));
             var strKey = new NonTerminal("StrKey");
             var strKeys = new NonTerminal("StrKeys");
             var exprArg = new NonTerminal("exprArg");
@@ -493,7 +493,7 @@ namespace Bve5_Parsing.MapGrammar
             RegisterBracePair("(", ")");
 
             //非表示にする構文
-            MarkTransient(statement, basicState, loadListFile, mapElement, op, rawKey, curve, gradient, track, structure, repeater, station, section, signal, beacon, speedLimit, preTrain, light, fog, drawDistance, cabIlluminance, irregularity, adhesion, sound, sound3D, rollingNoise, flangeNoise, jointNoise, train, strKey, strKeys, exprArg, nullableExprArg);
+            MarkTransient(statement, basicState, loadListFile, mapElement, op, curve, gradient, track, structure, repeater, station, section, signal, beacon, speedLimit, preTrain, light, fog, drawDistance, cabIlluminance, irregularity, adhesion, sound, sound3D, rollingNoise, flangeNoise, jointNoise, train, strKey, strKeys, exprArg, nullableExprArg);
             MarkPunctuation(doll, dot, comma, end, ToTerm("("), ToTerm(")"), ToTerm("["), ToTerm("]"), ToTerm("'"), ToTerm(":"));
 
             //コメント
