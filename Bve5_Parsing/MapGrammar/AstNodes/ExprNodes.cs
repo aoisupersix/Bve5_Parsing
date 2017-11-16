@@ -40,7 +40,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
             {
                 //演算(term + op + expr)
                 TermNode term = (TermNode)nodes[0].AstNode;
-                double val1 = term.Value;
+                double val1 = (double)term.Value;
                 string op = nodes[1].Term.ToString();
                 ExprNode exprNode = (ExprNode)nodes[2].AstNode;
                 double var2 = exprNode.Value;
@@ -58,7 +58,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
             {
                 //Term単体
                 TermNode term = (TermNode)nodes[0].AstNode;
-                Value = term.Value;
+                Value = (double)term.Value;
                 AddChild("Term:" + Value, nodes[0]);
             }
         }
@@ -124,11 +124,11 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     }
 
     /// <summary>
-    /// 数式の項(数値/変数)
+    /// 数式の項(数値/文字列/変数)
     /// </summary>
     public class TermNode : AstNode
     {
-        public double Value { get; private set; }
+        public object Value { get; private set; }
 
         public override void Init(AstContext context, ParseTreeNode treeNode)
         {
@@ -147,7 +147,17 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
             else
             {
                 //定数
-                Value = double.Parse(nodes[0].Token.Value.ToString());
+                object val = nodes[0].Token.Value;
+                if (val.GetType() == typeof(StringLiteral))
+                {
+                    //文字列
+                    Value = val.ToString();
+                }
+                else
+                {
+                    //数字列
+                    Value = double.Parse(val.ToString());
+                }
             }
         }
     }
