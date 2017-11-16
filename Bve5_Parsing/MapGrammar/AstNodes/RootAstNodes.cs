@@ -141,7 +141,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
             if (nodes[0].Term.ToString().Equals("Expr"))
             {
                 ExprNode expr = (ExprNode)nodes[0].AstNode;
-                Distance = expr.Value;
+                //Distance = expr.Value;
                 AddChild("Dist=" + expr.Value, nodes[0]);
             }
             else
