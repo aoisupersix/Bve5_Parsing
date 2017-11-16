@@ -58,8 +58,8 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
             {
                 //Term単体
                 TermNode term = (TermNode)nodes[0].AstNode;
-                Value = (double)term.Value;
-                AddChild("Term:" + Value, nodes[0]);
+                //Value = (double)term.Value;
+                AddChild("Term:" + term.Value, nodes[0]);
             }
         }
 
@@ -148,7 +148,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
             {
                 //定数
                 object val = nodes[0].Token.Value;
-                if (val.GetType() == typeof(StringLiteral))
+                if (nodes[0].Term.GetType() == typeof(StringLiteral))
                 {
                     //文字列
                     Value = val.ToString();
