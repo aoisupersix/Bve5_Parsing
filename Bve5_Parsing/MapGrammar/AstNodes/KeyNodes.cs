@@ -8,6 +8,20 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
      * 文字列のAST木
      */
 
+    public class StrKeysNode : AstNode
+    {
+        public override void Init(AstContext context, ParseTreeNode treeNode)
+        {
+            base.Init(context, treeNode);
+            ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
+
+            foreach(var node in nodes)
+            {
+                AddChild("StrKeys", node);
+            }
+        }
+    }
+    
     /// <summary>
     /// 文字列 / 変数識別子
     /// </summary>
@@ -51,8 +65,17 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
 
             if (nodes.Count > 0)
             {
-                //値あり
-                Value = nodes[0].Token.Value.ToString();
+                if(nodes[0].AstNode.GetType() == typeof(IdentifierKeyNode))
+                {
+                    //IdenKey
+                    IdentifierKeyNode idenKey = (IdentifierKeyNode)nodes[0].AstNode;
+                    Value = idenKey.Value;
+                }
+                else
+                {
+                    //num
+                    Value = nodes[0].Token.Value.ToString();
+                }
             }
             else
             {

@@ -64,7 +64,7 @@ namespace Bve5_Parsing.MapGrammar
             #region 引数の定義
             var rawKey = new NonTerminal("RawKey", typeof(RawKeyNode));
             var strKey = new NonTerminal("StrKey");
-            var strKeys = new NonTerminal("StrKeys");
+            var strKeys = new NonTerminal("StrKeys", typeof(StrKeysNode));
             var exprArg = new NonTerminal("exprArg");
             var exprArgs = new NonTerminal("exprArgs", typeof(ExprArgsNode));
             var nullableExprArg = new NonTerminal("nullableExprArg");
@@ -258,8 +258,8 @@ namespace Bve5_Parsing.MapGrammar
             #endregion リストファイル読み込みの文法
 
             #region 引数の文法
-            rawKey.Rule = num | key | Empty;
-            strKey.Rule = comma + key;
+            rawKey.Rule = num | identifierKey | Empty;
+            strKey.Rule = comma + identifierKey;
             strKeys.Rule = MakeStarRule(strKeys, strKey);
             exprArg.Rule = comma + nullableExpr;
             exprArgs.Rule = MakeStarRule(exprArgs, exprArg);
@@ -364,10 +364,10 @@ namespace Bve5_Parsing.MapGrammar
                 | repeater_end
                 | background_change;
 
-            repeater_begin.Rule = PreferShiftHere() + "Repeater" + ToTerm("[") + identifierKey + ToTerm("]") + dot + "Begin" + "(" + rawKey + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + key + strKeys + ")";
-            repeater_begin0.Rule = PreferShiftHere() + "Repeater" + ToTerm("[") + identifierKey + ToTerm("]") + dot + "Begin0" + "(" + rawKey + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + key + strKeys + ")";
+            repeater_begin.Rule = PreferShiftHere() + "Repeater" + ToTerm("[") + identifierKey + ToTerm("]") + dot + "Begin" + "(" + rawKey + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + identifierKey + strKeys + ")";
+            repeater_begin0.Rule = PreferShiftHere() + "Repeater" + ToTerm("[") + identifierKey + ToTerm("]") + dot + "Begin0" + "(" + rawKey + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + identifierKey + strKeys + ")";
             repeater_end.Rule = PreferShiftHere() + "Repeater" + ToTerm("[") + identifierKey + ToTerm("]") + dot + "End" + "(" + ")";
-            background_change.Rule = PreferShiftHere() + "BackGround" + dot + "Change" + "(" + key + ")";
+            background_change.Rule = PreferShiftHere() + "BackGround" + dot + "Change" + "(" + identifierKey + ")";
             #endregion 連続ストラクチャ
 
             #region 停車場
@@ -473,8 +473,8 @@ namespace Bve5_Parsing.MapGrammar
 
             #region 他列車
             train.Rule = train_add | train_load | train_enable | train_stop;
-            train_add.Rule = PreferShiftHere() + "Train" + dot + "Add" + "(" + rawKey + comma + key + comma + key + comma + nullableExpr + ")";
-            train_load.Rule = PreferShiftHere() + "Train" + ToTerm("[") + identifierKey + ToTerm("]") + dot + "Load" + "(" + key + comma + key + comma + nullableExpr + ")";
+            train_add.Rule = PreferShiftHere() + "Train" + dot + "Add" + "(" + rawKey + comma + identifierKey + comma + identifierKey + comma + nullableExpr + ")";
+            train_load.Rule = PreferShiftHere() + "Train" + ToTerm("[") + identifierKey + ToTerm("]") + dot + "Load" + "(" + identifierKey + comma + identifierKey + comma + nullableExpr + ")";
             train_enable.Rule =
                   PreferShiftHere() + "Train" + ToTerm("[") + identifierKey + ToTerm("]") + dot + "Enable" + "(" + "'" + expr + ":" + expr + ":" + expr + "'" + ")"
                 | PreferShiftHere() + "Train" + ToTerm("[") + identifierKey + ToTerm("]") + dot + "Enable" + "(" + nullableExpr + ")";
@@ -482,7 +482,7 @@ namespace Bve5_Parsing.MapGrammar
             #endregion 他列車
 
             #region 他マップの挿入
-            include.Rule = "Include" + key;
+            include.Rule = "Include" + identifierKey;
             #endregion 他マップの挿入
 
             basicState.ErrorRule = SyntaxError + end;
@@ -495,7 +495,7 @@ namespace Bve5_Parsing.MapGrammar
             RegisterBracePair("(", ")");
 
             //非表示にする構文
-            MarkTransient(statement, basicState, loadListFile, mapElement, op, curve, gradient, track, structure, repeater, station, section, signal, beacon, speedLimit, preTrain, light, fog, drawDistance, cabIlluminance, irregularity, adhesion, sound, sound3D, rollingNoise, flangeNoise, jointNoise, train, strKey, strKeys, exprArg, nullableExprArg);
+            MarkTransient(statement, basicState, loadListFile, mapElement, op, curve, gradient, track, structure, repeater, station, section, signal, beacon, speedLimit, preTrain, light, fog, drawDistance, cabIlluminance, irregularity, adhesion, sound, sound3D, rollingNoise, flangeNoise, jointNoise, train, strKey, exprArg, nullableExprArg);
             MarkPunctuation(doll, dot, comma, end, ToTerm("("), ToTerm(")"), ToTerm("["), ToTerm("]"), ToTerm("'"), ToTerm(":"));
 
             //コメント

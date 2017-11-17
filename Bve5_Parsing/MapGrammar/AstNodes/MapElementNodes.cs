@@ -71,6 +71,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// <param name="argName">登録する引数名</param>
         /// <param name="nodes">構文の子ノード</param>
         /// <param name="idx">引数のインデックス</param>
+        /// <param name="type">引数に指定する型(Optional)</param>
         protected void AddArguments(string argName, ParseTreeNodeList nodes, int idx, System.Type type = null)
         {
             if (nodes.Count > idx)
@@ -89,6 +90,13 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
                     NullableExprNode expr = (NullableExprNode)nodes[idx].AstNode;
                     val = expr.Value;
                     AddChild(argName + "=" + expr.Value, nodes[idx]);
+                }
+                else if (nodes[idx].AstNode.GetType() == typeof(IdentifierKeyNode))
+                {
+                    //IdenKey
+                    IdentifierKeyNode idenKey = (IdentifierKeyNode)nodes[idx].AstNode;
+                    val = idenKey.Value;
+                    AddChild(argName + "=" + idenKey.Value, nodes[idx]);
                 }
                 else if (nodes[idx].ToString().Equals("RawKey"))
                 {
