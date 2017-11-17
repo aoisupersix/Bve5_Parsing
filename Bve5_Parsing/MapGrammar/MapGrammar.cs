@@ -4,7 +4,7 @@ using Bve5_Parsing.MapGrammar.AstNodes;
 
 namespace Bve5_Parsing.MapGrammar
 {
-    [Language("MapGrammar", "0.1", "Bve5.7 Map file grammar.")]
+    [Language("MapGrammar", "0.2", "Bve5.7 Map file grammar.")]
     class MapGrammar : InterpretedLanguageGrammar
     {
         public MapGrammar() : base(false)
