@@ -25,7 +25,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
                 //変数
                 VarNode varNode = (VarNode)nodes[0].AstNode;
                 Vars vars = Vars.GetInstance();
-                Value = (string)vars.GetVar(varNode.Name);
+                Value = vars.GetVar(varNode.Name).ToString();
                 AddChild(varNode.Name + ":" + Value, nodes[0]);
             }
             else

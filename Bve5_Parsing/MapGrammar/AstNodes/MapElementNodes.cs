@@ -40,10 +40,11 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
 
             ElementName = nodes[0].Term.ToString();
-            FilePath = (string)nodes[2].Token.Value;
+            IdentifierKeyNode idenKey = (IdentifierKeyNode)nodes[2].AstNode;
+            FilePath = idenKey.Value;
 
-            AddChild("Element-" + ElementName, nodes[0]);
-            AddChild("FilePath-" + FilePath, nodes[2]);
+            AddChild("Element=" + ElementName, nodes[0]);
+            AddChild("FilePath=" + FilePath, nodes[2]);
 
         }
     }

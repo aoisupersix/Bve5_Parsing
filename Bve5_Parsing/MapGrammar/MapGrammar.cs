@@ -250,11 +250,11 @@ namespace Bve5_Parsing.MapGrammar
 
             #region リストファイル読み込みの文法
             loadListFile.Rule = loadStrList | loadStaList | loadSigList | loadSoundList | loadSound3DList;
-            loadStrList.Rule = "Structure" + dot + "Load" + "(" + key + ")";
-            loadStaList.Rule = "Station" + dot + "Load" + "(" + key + ")";
-            loadSigList.Rule = "Signal" + dot + "Load" + "(" + key + ")";
-            loadSoundList.Rule = "Sound" + dot + "Load" + "(" + key + ")";
-            loadSound3DList.Rule = "Sound3D" + dot + "Load" + "(" + key + ")";
+            loadStrList.Rule = "Structure" + dot + "Load" + "(" + identifierKey + ")";
+            loadStaList.Rule = "Station" + dot + "Load" + "(" + identifierKey + ")";
+            loadSigList.Rule = "Signal" + dot + "Load" + "(" + identifierKey + ")";
+            loadSoundList.Rule = "Sound" + dot + "Load" + "(" + identifierKey + ")";
+            loadSound3DList.Rule = "Sound3D" + dot + "Load" + "(" + identifierKey + ")";
             #endregion リストファイル読み込みの文法
 
             #region 引数の文法
