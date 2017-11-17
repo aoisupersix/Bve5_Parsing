@@ -161,7 +161,8 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
             //マップ要素、キー、関数の登録
             Data.MapElement = new string[1];
             Data.MapElement[0] = nodes[0].Term.ToString();
-            Data.Key = nodes[1].Token.Value.ToString();
+            RawKeyNode rawKey = (RawKeyNode)nodes[1].AstNode;
+            Data.Key = rawKey.Value;
             Data.Function = nodes[2].Term.ToString();
 
             //引数は子クラスで登録する
@@ -182,7 +183,8 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
             //マップ要素、キー、関数の登録
             Data.MapElement = new string[2];
             Data.MapElement[0] = nodes[0].Term.ToString();
-            Data.Key = nodes[1].Token.Value.ToString();
+            RawKeyNode rawKey = (RawKeyNode)nodes[1].AstNode;
+            Data.Key = rawKey.Value;
             Data.MapElement[1] = nodes[2].Term.ToString();
             Data.Function = nodes[3].Term.ToString();
 

@@ -45,6 +45,7 @@ namespace Bve5_Parsing.MapGrammar
             #region 変数・数式の定義
             var expr = new NonTerminal("Expr", typeof(ExprNode));
             var nullableExpr = new NonTerminal("NullableExpr", typeof(NullableExprNode));
+            var identifierKey = new NonTerminal("IdentifierKey", typeof(IdentifierKeyNode));
             var term = new NonTerminal("Term", typeof(TermNode));
             var var = new NonTerminal("Var", typeof(VarNode));
             var varAssign = new NonTerminal("VarAssign", typeof(VarAssignNode));
@@ -238,6 +239,7 @@ namespace Bve5_Parsing.MapGrammar
             #endregion 基本ステートメントと距離程の文法
 
             #region 変数・数式の定義
+            identifierKey.Rule = key | var;
             op.Rule = plus | minus | mul | div | mod;
             term.Rule = num | key | var;
             expr.Rule = term | term + op + expr | "(" + expr + ")";
