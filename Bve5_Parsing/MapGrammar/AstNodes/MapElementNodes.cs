@@ -54,11 +54,14 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     public class Syntax : AstNode
     {
         public SyntaxData Data { get; protected set; }
+        public AstContext astContext;
 
         public override void Init(AstContext context, ParseTreeNode treeNode)
         {
             base.Init(context, treeNode);
             Data = new SyntaxData();
+
+            astContext = context;
         }
 
         /// <summary>
@@ -112,10 +115,12 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
                     {
                         var v = System.Convert.ChangeType(val, type);
                         Data.Arguments.Add(argName, v);
+                        
                     }
                     catch(System.FormatException e)
                     {
-                        throw new ScriptException(e.Message, e, this.Location, null);
+                        LogMessage logMessage = new LogMessage(ErrorLevel.Error, this.Location, e.Message, astContext.Language.ParserData.States[astContext.Language.ParserData.States.Count - 1]);
+                        astContext.Messages.Add(logMessage);
                     }
                 }
             }
