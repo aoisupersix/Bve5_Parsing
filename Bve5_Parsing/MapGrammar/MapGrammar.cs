@@ -405,8 +405,7 @@ namespace Bve5_Parsing.MapGrammar
             #region 先行列車
             preTrain.Rule = preTrain_pass;
             preTrain_pass.Rule =
-                  PreferShiftHere() + "PreTrain" + dot + "Pass" + "(" + "'" + expr + ":" + expr + ":" + expr + "'" + ")"
-                | PreferShiftHere() + "PreTrain" + dot + "Pass" + "(" + nullableExpr + ")";
+                  PreferShiftHere() + "PreTrain" + dot + "Pass" + "(" + expr + ")";
             #endregion 先行列車
 
             #region 光源
