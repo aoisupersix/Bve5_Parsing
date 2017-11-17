@@ -6,19 +6,30 @@ Bve5_Parsing
 
 ![bve5PasingImage](images/bve5Parsing.png)
 
+Bve5構文のパーサライブラリです。
 Bve5の構文はどのように処理されているのか？という疑問を解消すべく、構文解析用ライブラリIronyを利用し、Bve5.7構文の構文解析器を実装してみました。現在、Bve5.7.6224.40815の一部構文に対応していますが、動作はかなり不安定です。
+
+成果物であるクラスライブラリはGithubのリリースからダウンロードするか、ソースをコンパイルして入手してください。
+
+
 
 ## Supported Syntaxes
 - **Scenario File**
     - Bve5.7全構文に対応
-    - namespace: ScenarioGrammar
-    - 解析結果の型: Dictionary\<string, string\>  
-    Keyにステートメント名(一つ目の文字のみ大文字)、Valueにステートメントの値が格納されてます。
+    - namespace: **ScenarioGrammar**
+    - 出力: **Dictionary\<string, string\>**
+    Keyにステートメント名(Route,Vehicleなど)、Valueにステートメントの値が格納された辞書型で出力されます。
 
 - **Map File**
-    - include構文や古い構文(ex.Legacyなど)を除くBve5.7全構文に対応
-    - namespace: MapGrammar
-    - 解析結果の型: MapDataクラス  
+    - 古い構文(ex.Legacyなど)や数学関数を除くBve5.7全構文に対応
+    - namespace: **MapGrammar**
+    - 出力: **MapDataクラス**
+    MapDataクラスは以下のフィールドで構成されています。
+      - **Version**: バージョン情報
+      - **Encoding**: ファイルエンコーディング
+      - **StructureListPath**, **StationListPath**, **SignalListPath**, **SoundListPath**, **Sound3DListPath**: 各リストファイルのファイルパス
+      - **Statements**: 各構文情報をまとめたSyntaxDataクラスのリスト
+
     詳しくは、![MapData.cs](https://github.com/aoisupersix/Bve5_Parsing/blob/master/Bve5_Parsing/MapGrammar/MapData.cs)を参照してください
 
 その他は今後作っていきます👍
@@ -40,7 +51,7 @@ using Irony.Parsing;
 using Bve5_Parsing.MapGrammar;
 
 ...
-
+    string input;
     ScriptApp app = new ScriptApp(new LanguageData(new MapGrammar.MapGrammar()));
     try
     {
