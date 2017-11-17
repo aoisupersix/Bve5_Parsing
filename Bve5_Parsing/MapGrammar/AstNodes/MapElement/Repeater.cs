@@ -33,7 +33,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes.Repeater
             {
                 for (int i = 0; i < nodes[14].ChildNodes.Count; i++)
                 {
-                    AddArguments("structurkey" + (i + 2), nodes[14].ChildNodes, i, typeof(string));
+                    AddArguments("structurekey" + (i + 2), nodes[14].ChildNodes, i, typeof(string));
                 }
             }
         }
@@ -59,7 +59,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes.Repeater
             {
                 for (int i = 0; i < nodes[8].ChildNodes.Count; i++)
                 {
-                    AddArguments("structurkey" + (i + 2), nodes[8].ChildNodes, i, typeof(string));
+                    AddArguments("structurekey" + (i + 2), nodes[8].ChildNodes, i, typeof(string));
                 }
             }
         }
