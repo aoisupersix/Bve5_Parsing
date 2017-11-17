@@ -220,7 +220,8 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
             //引数の登録
             AddArguments("mapPath", nodes, 1, typeof(string));
 
-            string filePath = nodes[1].Token.Value.ToString();
+            IdentifierKeyNode idenKey = (IdentifierKeyNode)nodes[1].AstNode;
+            string filePath = idenKey.Value;
             if (System.IO.File.Exists(filePath))
             {
                 //ファイル読み込み

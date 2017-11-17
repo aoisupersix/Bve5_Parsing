@@ -1,5 +1,7 @@
-﻿using Irony.Ast;
+﻿using Irony;
+using Irony.Ast;
 using Irony.Parsing;
+using System.Text.RegularExpressions;
 
 namespace Bve5_Parsing.MapGrammar.AstNodes.Train
 {
@@ -53,12 +55,31 @@ namespace Bve5_Parsing.MapGrammar.AstNodes.Train
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
 
             //引数の登録
-            if (nodes.Count > 4)
+            //形式が特殊なため、正規表現を利用して登録する
+            ExprNode expr = (ExprNode)nodes[3].AstNode;
+
+            Regex r = new Regex(@"(\d{1,2}):(\d{1,2}):(\d{1,2})");
+            Match m = r.Match(expr.Value.ToString());
+            if (m.Success)
             {
-                //hh:mm:ss TODO
-                AddArguments("hh", nodes, 3, typeof(double));
-                AddArguments("mm", nodes, 4, typeof(double));
-                AddArguments("ss", nodes, 5, typeof(double));
+                //hh:mm:ss
+                int hh = int.Parse(m.Groups[1].Value);
+                int mm = int.Parse(m.Groups[2].Value);
+                int ss = int.Parse(m.Groups[3].Value);
+                AddChild("hh:" + hh + "mm:" + mm + "ss:" + ss, nodes[0]);
+
+                //フォーマットの確認
+                if (hh >= 0 && hh < 25 && mm >= 0 && mm < 60 && ss >= 0 && ss < 60)
+                {
+                    Data.Arguments.Add("hh", hh);
+                    Data.Arguments.Add("mm", mm);
+                    Data.Arguments.Add("ss", ss);
+                }
+                else
+                {
+                    LogMessage logMessage = new LogMessage(ErrorLevel.Error, this.Location, "引数に与えられたフォーマットが不正です。:" + hh + ":" + mm + ":" + ss, Context.Language.ParserData.States[Context.Language.ParserData.States.Count - 1]);
+                    Context.Messages.Add(logMessage);
+                }
             }
             else
             {

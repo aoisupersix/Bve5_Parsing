@@ -4,7 +4,7 @@ using Bve5_Parsing.MapGrammar.AstNodes;
 
 namespace Bve5_Parsing.MapGrammar
 {
-    [Language("MapGrammar", "0.1", "Bve5.7 Map file grammar.")]
+    [Language("MapGrammar", "0.2", "Bve5.7 Map file grammar.")]
     class MapGrammar : InterpretedLanguageGrammar
     {
         public MapGrammar() : base(false)
@@ -405,8 +405,7 @@ namespace Bve5_Parsing.MapGrammar
             #region 先行列車
             preTrain.Rule = preTrain_pass;
             preTrain_pass.Rule =
-                  PreferShiftHere() + "PreTrain" + dot + "Pass" + "(" + "'" + expr + ":" + expr + ":" + expr + "'" + ")"
-                | PreferShiftHere() + "PreTrain" + dot + "Pass" + "(" + nullableExpr + ")";
+                  PreferShiftHere() + "PreTrain" + dot + "Pass" + "(" + expr + ")";
             #endregion 先行列車
 
             #region 光源
@@ -475,9 +474,7 @@ namespace Bve5_Parsing.MapGrammar
             train.Rule = train_add | train_load | train_enable | train_stop;
             train_add.Rule = PreferShiftHere() + "Train" + dot + "Add" + "(" + rawKey + comma + identifierKey + comma + identifierKey + comma + nullableExpr + ")";
             train_load.Rule = PreferShiftHere() + "Train" + ToTerm("[") + identifierKey + ToTerm("]") + dot + "Load" + "(" + identifierKey + comma + identifierKey + comma + nullableExpr + ")";
-            train_enable.Rule =
-                  PreferShiftHere() + "Train" + ToTerm("[") + identifierKey + ToTerm("]") + dot + "Enable" + "(" + "'" + expr + ":" + expr + ":" + expr + "'" + ")"
-                | PreferShiftHere() + "Train" + ToTerm("[") + identifierKey + ToTerm("]") + dot + "Enable" + "(" + nullableExpr + ")";
+            train_enable.Rule = PreferShiftHere() + "Train" + ToTerm("[") + identifierKey + ToTerm("]") + dot + "Enable" + "(" + expr + ")";
             train_stop.Rule = PreferShiftHere() + "Train" + ToTerm("[") + identifierKey + ToTerm("]") + dot + "Stop" + "(" + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + ")";
             #endregion 他列車
 
