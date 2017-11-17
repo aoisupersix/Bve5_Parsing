@@ -474,9 +474,7 @@ namespace Bve5_Parsing.MapGrammar
             train.Rule = train_add | train_load | train_enable | train_stop;
             train_add.Rule = PreferShiftHere() + "Train" + dot + "Add" + "(" + rawKey + comma + identifierKey + comma + identifierKey + comma + nullableExpr + ")";
             train_load.Rule = PreferShiftHere() + "Train" + ToTerm("[") + identifierKey + ToTerm("]") + dot + "Load" + "(" + identifierKey + comma + identifierKey + comma + nullableExpr + ")";
-            train_enable.Rule =
-                  PreferShiftHere() + "Train" + ToTerm("[") + identifierKey + ToTerm("]") + dot + "Enable" + "(" + "'" + expr + ":" + expr + ":" + expr + "'" + ")"
-                | PreferShiftHere() + "Train" + ToTerm("[") + identifierKey + ToTerm("]") + dot + "Enable" + "(" + nullableExpr + ")";
+            train_enable.Rule = PreferShiftHere() + "Train" + ToTerm("[") + identifierKey + ToTerm("]") + dot + "Enable" + "(" + expr + ")";
             train_stop.Rule = PreferShiftHere() + "Train" + ToTerm("[") + identifierKey + ToTerm("]") + dot + "Stop" + "(" + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + ")";
             #endregion 他列車
 
