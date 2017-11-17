@@ -18,7 +18,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes.Curve
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
 
             //引数の登録
-            AddArguments("value", nodes, 2);
+            AddArguments("value", nodes, 2, typeof(double));
         }
     }
 

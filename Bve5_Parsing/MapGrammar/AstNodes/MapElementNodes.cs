@@ -100,19 +100,23 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
                     AddChild(argName + "=" + nodes[idx].Token.Value, nodes[idx]);
                 }
 
+                //Dataに引数を登録する
                 if(type == null)
                 {
                     //引数の型を無視して登録
                     Data.Arguments.Add(argName, val);
                 }
-                else if(type == val.GetType())
-                {
-                    //型が一致するので引数に登録
-                    Data.Arguments.Add(argName, val);
-                }
                 else
                 {
-                    //引数が指定された型と異なる
+                    try
+                    {
+                        var v = System.Convert.ChangeType(val, type);
+                        Data.Arguments.Add(argName, v);
+                    }
+                    catch(System.FormatException e)
+                    {
+                        throw new ScriptException(e.Message, e, this.Location, null);
+                    }
                 }
             }
         }
