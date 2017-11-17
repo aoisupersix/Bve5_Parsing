@@ -18,12 +18,12 @@ namespace Bve5_Parsing.MapGrammar.AstNodes.Irregularity
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
 
             //引数の登録
-            AddArguments("x", nodes, 2);
-            AddArguments("y", nodes, 3);
-            AddArguments("r", nodes, 4);
-            AddArguments("lx", nodes, 5);
-            AddArguments("ly", nodes, 6);
-            AddArguments("lr", nodes, 7);
+            AddArguments("x", nodes, 2, typeof(double));
+            AddArguments("y", nodes, 3, typeof(double));
+            AddArguments("r", nodes, 4, typeof(double));
+            AddArguments("lx", nodes, 5, typeof(double));
+            AddArguments("ly", nodes, 6, typeof(double));
+            AddArguments("lr", nodes, 7, typeof(double));
         }
     }
 }

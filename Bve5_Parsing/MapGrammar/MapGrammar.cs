@@ -45,6 +45,7 @@ namespace Bve5_Parsing.MapGrammar
             #region 変数・数式の定義
             var expr = new NonTerminal("Expr", typeof(ExprNode));
             var nullableExpr = new NonTerminal("NullableExpr", typeof(NullableExprNode));
+            var identifierKey = new NonTerminal("IdentifierKey", typeof(IdentifierKeyNode));
             var term = new NonTerminal("Term", typeof(TermNode));
             var var = new NonTerminal("Var", typeof(VarNode));
             var varAssign = new NonTerminal("VarAssign", typeof(VarAssignNode));
@@ -63,7 +64,7 @@ namespace Bve5_Parsing.MapGrammar
             #region 引数の定義
             var rawKey = new NonTerminal("RawKey", typeof(RawKeyNode));
             var strKey = new NonTerminal("StrKey");
-            var strKeys = new NonTerminal("StrKeys");
+            var strKeys = new NonTerminal("StrKeys", typeof(StrKeysNode));
             var exprArg = new NonTerminal("exprArg");
             var exprArgs = new NonTerminal("exprArgs", typeof(ExprArgsNode));
             var nullableExprArg = new NonTerminal("nullableExprArg");
@@ -238,8 +239,9 @@ namespace Bve5_Parsing.MapGrammar
             #endregion 基本ステートメントと距離程の文法
 
             #region 変数・数式の定義
+            identifierKey.Rule = key | var;
             op.Rule = plus | minus | mul | div | mod;
-            term.Rule = num | var;
+            term.Rule = num | key | var;
             expr.Rule = term | term + op + expr | "(" + expr + ")";
             nullableExpr.Rule = expr | "null" | Empty;
             var.Rule = PreferShiftHere() + doll + varName;
@@ -248,16 +250,16 @@ namespace Bve5_Parsing.MapGrammar
 
             #region リストファイル読み込みの文法
             loadListFile.Rule = loadStrList | loadStaList | loadSigList | loadSoundList | loadSound3DList;
-            loadStrList.Rule = "Structure" + dot + "Load" + "(" + key + ")";
-            loadStaList.Rule = "Station" + dot + "Load" + "(" + key + ")";
-            loadSigList.Rule = "Signal" + dot + "Load" + "(" + key + ")";
-            loadSoundList.Rule = "Sound" + dot + "Load" + "(" + key + ")";
-            loadSound3DList.Rule = "Sound3D" + dot + "Load" + "(" + key + ")";
+            loadStrList.Rule = "Structure" + dot + "Load" + "(" + identifierKey + ")";
+            loadStaList.Rule = "Station" + dot + "Load" + "(" + identifierKey + ")";
+            loadSigList.Rule = "Signal" + dot + "Load" + "(" + identifierKey + ")";
+            loadSoundList.Rule = "Sound" + dot + "Load" + "(" + identifierKey + ")";
+            loadSound3DList.Rule = "Sound3D" + dot + "Load" + "(" + identifierKey + ")";
             #endregion リストファイル読み込みの文法
 
             #region 引数の文法
-            rawKey.Rule = num | key | Empty;
-            strKey.Rule = comma + key;
+            rawKey.Rule = num | identifierKey | Empty;
+            strKey.Rule = comma + identifierKey;
             strKeys.Rule = MakeStarRule(strKeys, strKey);
             exprArg.Rule = comma + nullableExpr;
             exprArgs.Rule = MakeStarRule(exprArgs, exprArg);
@@ -320,26 +322,26 @@ namespace Bve5_Parsing.MapGrammar
                 | track_cant_interpolate;
 
             track_x_interpolate.Rule =
-                  PreferShiftHere() + "Track" + ToTerm("[") + key + ToTerm("]") + dot + "X" + dot + "Interpolate" + "(" + nullableExpr + comma + nullableExpr + ")"
-                | PreferShiftHere() + "Track" + ToTerm("[") + key + ToTerm("]") + dot + "X" + dot + "Interpolate" + "(" + expr + ")"
-                | PreferShiftHere() + "Track" + ToTerm("[") + key + ToTerm("]") + dot + "X" + dot + "Interpolate" + "(" + ")";
+                  PreferShiftHere() + "Track" + ToTerm("[") + identifierKey + ToTerm("]") + dot + "X" + dot + "Interpolate" + "(" + nullableExpr + comma + nullableExpr + ")"
+                | PreferShiftHere() + "Track" + ToTerm("[") + identifierKey + ToTerm("]") + dot + "X" + dot + "Interpolate" + "(" + expr + ")"
+                | PreferShiftHere() + "Track" + ToTerm("[") + identifierKey + ToTerm("]") + dot + "X" + dot + "Interpolate" + "(" + ")";
             track_y_interpolate.Rule =
-                  PreferShiftHere() + "Track" + ToTerm("[") + key + ToTerm("]") + dot + "Y" + dot + "Interpolate" + "(" + nullableExpr + comma + nullableExpr + ")"
-                | PreferShiftHere() + "Track" + ToTerm("[") + key + ToTerm("]") + dot + "Y" + dot + "Interpolate" + "(" + expr + ")"
-                | PreferShiftHere() + "Track" + ToTerm("[") + key + ToTerm("]") + dot + "Y" + dot + "Interpolate" + "(" + ")";
+                  PreferShiftHere() + "Track" + ToTerm("[") + identifierKey + ToTerm("]") + dot + "Y" + dot + "Interpolate" + "(" + nullableExpr + comma + nullableExpr + ")"
+                | PreferShiftHere() + "Track" + ToTerm("[") + identifierKey + ToTerm("]") + dot + "Y" + dot + "Interpolate" + "(" + expr + ")"
+                | PreferShiftHere() + "Track" + ToTerm("[") + identifierKey + ToTerm("]") + dot + "Y" + dot + "Interpolate" + "(" + ")";
             track_position.Rule =
-                  PreferShiftHere() + "Track" + ToTerm("[") + key + ToTerm("]") + dot + "Position" + "(" + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + ")"
-                | PreferShiftHere() + "Track" + ToTerm("[") + key + ToTerm("]") + dot + "Position" + "(" + nullableExpr + comma + nullableExpr + comma + nullableExpr + ")"
-                | PreferShiftHere() + "Track" + ToTerm("[") + key + ToTerm("]") + dot + "Position" + "(" + nullableExpr + comma + nullableExpr + ")";
-            track_cant_setGauge.Rule = PreferShiftHere() + "Track" + ToTerm("[") + key + ToTerm("]") + dot + "Cant" + dot + "SetGauge" + "(" + nullableExpr + ")";
-            track_cant_setCenter.Rule = PreferShiftHere() + "Track" + ToTerm("[") + key + ToTerm("]") + dot + "Cant" + dot + "SetCenter" + "(" + nullableExpr + ")";
-            track_cant_setFunction.Rule = PreferShiftHere() + "Track" + ToTerm("[") + key + ToTerm("]") + dot + "Cant" + dot + "SetFunction" + "(" + nullableExpr + ")";
-            track_cant_beginTransition.Rule = PreferShiftHere() + "Track" + ToTerm("[") + key + ToTerm("]") + dot + "Cant" + dot + "BeginTransition" + "(" + ")";
-            track_cant_begin.Rule = PreferShiftHere() + "Track" + ToTerm("[") + key + ToTerm("]") + dot + "Cant" + dot + "Begin" + "(" + nullableExpr + ")";
-            track_cant_end.Rule = PreferShiftHere() + "Track" + ToTerm("[") + key + ToTerm("]") + dot + "Cant" + dot + "End" + "(" + ")";
+                  PreferShiftHere() + "Track" + ToTerm("[") + identifierKey + ToTerm("]") + dot + "Position" + "(" + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + ")"
+                | PreferShiftHere() + "Track" + ToTerm("[") + identifierKey + ToTerm("]") + dot + "Position" + "(" + nullableExpr + comma + nullableExpr + comma + nullableExpr + ")"
+                | PreferShiftHere() + "Track" + ToTerm("[") + identifierKey + ToTerm("]") + dot + "Position" + "(" + nullableExpr + comma + nullableExpr + ")";
+            track_cant_setGauge.Rule = PreferShiftHere() + "Track" + ToTerm("[") + identifierKey + ToTerm("]") + dot + "Cant" + dot + "SetGauge" + "(" + nullableExpr + ")";
+            track_cant_setCenter.Rule = PreferShiftHere() + "Track" + ToTerm("[") + identifierKey + ToTerm("]") + dot + "Cant" + dot + "SetCenter" + "(" + nullableExpr + ")";
+            track_cant_setFunction.Rule = PreferShiftHere() + "Track" + ToTerm("[") + identifierKey + ToTerm("]") + dot + "Cant" + dot + "SetFunction" + "(" + nullableExpr + ")";
+            track_cant_beginTransition.Rule = PreferShiftHere() + "Track" + ToTerm("[") + identifierKey + ToTerm("]") + dot + "Cant" + dot + "BeginTransition" + "(" + ")";
+            track_cant_begin.Rule = PreferShiftHere() + "Track" + ToTerm("[") + identifierKey + ToTerm("]") + dot + "Cant" + dot + "Begin" + "(" + nullableExpr + ")";
+            track_cant_end.Rule = PreferShiftHere() + "Track" + ToTerm("[") + identifierKey + ToTerm("]") + dot + "Cant" + dot + "End" + "(" + ")";
             track_cant_interpolate.Rule =
-                  PreferShiftHere() + "Track" + ToTerm("[") + key + ToTerm("]") + dot + "Cant" + dot + "Interpolate" + "(" + expr + ")"
-                | PreferShiftHere() + "Track" + ToTerm("[") + key + ToTerm("]") + dot + "Cant" + dot + "Interpolate" + "(" + ")";
+                  PreferShiftHere() + "Track" + ToTerm("[") + identifierKey + ToTerm("]") + dot + "Cant" + dot + "Interpolate" + "(" + expr + ")"
+                | PreferShiftHere() + "Track" + ToTerm("[") + identifierKey + ToTerm("]") + dot + "Cant" + dot + "Interpolate" + "(" + ")";
             #endregion 他軌道
 
             #region ストラクチャ
@@ -348,11 +350,11 @@ namespace Bve5_Parsing.MapGrammar
                 | structure_put0
                 | structure_putBetween;
 
-            structure_put.Rule = PreferShiftHere() + "Structure" + ToTerm("[") + key + ToTerm("]") + dot + "Put" + "(" + rawKey + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + ")";
-            structure_put0.Rule = PreferShiftHere() + "Structure" + ToTerm("[") + key + ToTerm("]") + dot + "Put0" + "(" + rawKey + comma + nullableExpr + comma + nullableExpr + ")";
+            structure_put.Rule = PreferShiftHere() + "Structure" + ToTerm("[") + identifierKey + ToTerm("]") + dot + "Put" + "(" + rawKey + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + ")";
+            structure_put0.Rule = PreferShiftHere() + "Structure" + ToTerm("[") + identifierKey + ToTerm("]") + dot + "Put0" + "(" + rawKey + comma + nullableExpr + comma + nullableExpr + ")";
             structure_putBetween.Rule =
-                  PreferShiftHere() + "Structure" + ToTerm("[") + key + ToTerm("]") + dot + "PutBetween" + "(" + rawKey + comma + rawKey + comma + nullableExpr + ")"
-                | PreferShiftHere() + "Structure" + ToTerm("[") + key + ToTerm("]") + dot + "PutBetween" + "(" + rawKey + comma + rawKey + ")";
+                  PreferShiftHere() + "Structure" + ToTerm("[") + identifierKey + ToTerm("]") + dot + "PutBetween" + "(" + rawKey + comma + rawKey + comma + nullableExpr + ")"
+                | PreferShiftHere() + "Structure" + ToTerm("[") + identifierKey + ToTerm("]") + dot + "PutBetween" + "(" + rawKey + comma + rawKey + ")";
             #endregion ストラクチャ
 
             #region 連続ストラクチャ
@@ -362,15 +364,15 @@ namespace Bve5_Parsing.MapGrammar
                 | repeater_end
                 | background_change;
 
-            repeater_begin.Rule = PreferShiftHere() + "Repeater" + ToTerm("[") + key + ToTerm("]") + dot + "Begin" + "(" + rawKey + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + key + strKeys + ")";
-            repeater_begin0.Rule = PreferShiftHere() + "Repeater" + ToTerm("[") + key + ToTerm("]") + dot + "Begin0" + "(" + rawKey + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + key + strKeys + ")";
-            repeater_end.Rule = PreferShiftHere() + "Repeater" + ToTerm("[") + key + ToTerm("]") + dot + "End" + "(" + ")";
-            background_change.Rule = PreferShiftHere() + "BackGround" + dot + "Change" + "(" + key + ")";
+            repeater_begin.Rule = PreferShiftHere() + "Repeater" + ToTerm("[") + identifierKey + ToTerm("]") + dot + "Begin" + "(" + rawKey + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + identifierKey + strKeys + ")";
+            repeater_begin0.Rule = PreferShiftHere() + "Repeater" + ToTerm("[") + identifierKey + ToTerm("]") + dot + "Begin0" + "(" + rawKey + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + identifierKey + strKeys + ")";
+            repeater_end.Rule = PreferShiftHere() + "Repeater" + ToTerm("[") + identifierKey + ToTerm("]") + dot + "End" + "(" + ")";
+            background_change.Rule = PreferShiftHere() + "BackGround" + dot + "Change" + "(" + identifierKey + ")";
             #endregion 連続ストラクチャ
 
             #region 停車場
             station.Rule = station_put;
-            station_put.Rule = PreferShiftHere() + "Station" + ToTerm("[") + key + ToTerm("]") + dot + "Put" + "(" + nullableExpr + comma + nullableExpr + comma + nullableExpr + ")";
+            station_put.Rule = PreferShiftHere() + "Station" + ToTerm("[") + identifierKey + ToTerm("]") + dot + "Put" + "(" + nullableExpr + comma + nullableExpr + comma + nullableExpr + ")";
             #endregion 停車場
 
             #region 閉塞
@@ -385,8 +387,8 @@ namespace Bve5_Parsing.MapGrammar
             #region 地上信号機
             signal.Rule = signal_put;
             signal_put.Rule =
-                  PreferShiftHere() + "Signal" + ToTerm("[") + key + ToTerm("]") + dot + "Put" + "(" + nullableExpr + comma + rawKey + comma + nullableExpr + comma + nullableExpr + ")"
-                | PreferShiftHere() + "Signal" + ToTerm("[") + key + ToTerm("]") + dot + "Put" + "(" + nullableExpr + comma + rawKey + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + ")";
+                  PreferShiftHere() + "Signal" + ToTerm("[") + identifierKey + ToTerm("]") + dot + "Put" + "(" + nullableExpr + comma + rawKey + comma + nullableExpr + comma + nullableExpr + ")"
+                | PreferShiftHere() + "Signal" + ToTerm("[") + identifierKey + ToTerm("]") + dot + "Put" + "(" + nullableExpr + comma + rawKey + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + ")";
             #endregion 地上信号機
 
             #region 地上子
@@ -446,12 +448,12 @@ namespace Bve5_Parsing.MapGrammar
 
             #region 音
             sound.Rule = sound_play;
-            sound_play.Rule = PreferShiftHere() + "Sound" + ToTerm("[") + key + ToTerm("]") + dot + "Play" + "(" + ")";
+            sound_play.Rule = PreferShiftHere() + "Sound" + ToTerm("[") + identifierKey + ToTerm("]") + dot + "Play" + "(" + ")";
             #endregion 音
 
             #region 固定音源
             sound3D.Rule = sound3D_put;
-            sound3D_put.Rule = PreferShiftHere() + "Sound3D" + ToTerm("[") + key + ToTerm("]") + dot + "Put" + "(" + nullableExpr + comma + nullableExpr + ")";
+            sound3D_put.Rule = PreferShiftHere() + "Sound3D" + ToTerm("[") + identifierKey + ToTerm("]") + dot + "Put" + "(" + nullableExpr + comma + nullableExpr + ")";
             #endregion 固定音源
 
             #region 走行音
@@ -471,16 +473,16 @@ namespace Bve5_Parsing.MapGrammar
 
             #region 他列車
             train.Rule = train_add | train_load | train_enable | train_stop;
-            train_add.Rule = PreferShiftHere() + "Train" + dot + "Add" + "(" + rawKey + comma + key + comma + key + comma + nullableExpr + ")";
-            train_load.Rule = PreferShiftHere() + "Train" + ToTerm("[") + key + ToTerm("]") + dot + "Load" + "(" + key + comma + key + comma + nullableExpr + ")";
+            train_add.Rule = PreferShiftHere() + "Train" + dot + "Add" + "(" + rawKey + comma + identifierKey + comma + identifierKey + comma + nullableExpr + ")";
+            train_load.Rule = PreferShiftHere() + "Train" + ToTerm("[") + identifierKey + ToTerm("]") + dot + "Load" + "(" + identifierKey + comma + identifierKey + comma + nullableExpr + ")";
             train_enable.Rule =
-                  PreferShiftHere() + "Train" + ToTerm("[") + key + ToTerm("]") + dot + "Enable" + "(" + "'" + expr + ":" + expr + ":" + expr + "'" + ")"
-                | PreferShiftHere() + "Train" + ToTerm("[") + key + ToTerm("]") + dot + "Enable" + "(" + nullableExpr + ")";
-            train_stop.Rule = PreferShiftHere() + "Train" + ToTerm("[") + key + ToTerm("]") + dot + "Stop" + "(" + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + ")";
+                  PreferShiftHere() + "Train" + ToTerm("[") + identifierKey + ToTerm("]") + dot + "Enable" + "(" + "'" + expr + ":" + expr + ":" + expr + "'" + ")"
+                | PreferShiftHere() + "Train" + ToTerm("[") + identifierKey + ToTerm("]") + dot + "Enable" + "(" + nullableExpr + ")";
+            train_stop.Rule = PreferShiftHere() + "Train" + ToTerm("[") + identifierKey + ToTerm("]") + dot + "Stop" + "(" + nullableExpr + comma + nullableExpr + comma + nullableExpr + comma + nullableExpr + ")";
             #endregion 他列車
 
             #region 他マップの挿入
-            include.Rule = "Include" + key;
+            include.Rule = "Include" + identifierKey;
             #endregion 他マップの挿入
 
             basicState.ErrorRule = SyntaxError + end;
@@ -493,7 +495,7 @@ namespace Bve5_Parsing.MapGrammar
             RegisterBracePair("(", ")");
 
             //非表示にする構文
-            MarkTransient(statement, basicState, loadListFile, mapElement, op, curve, gradient, track, structure, repeater, station, section, signal, beacon, speedLimit, preTrain, light, fog, drawDistance, cabIlluminance, irregularity, adhesion, sound, sound3D, rollingNoise, flangeNoise, jointNoise, train, strKey, strKeys, exprArg, nullableExprArg);
+            MarkTransient(statement, basicState, loadListFile, mapElement, op, curve, gradient, track, structure, repeater, station, section, signal, beacon, speedLimit, preTrain, light, fog, drawDistance, cabIlluminance, irregularity, adhesion, sound, sound3D, rollingNoise, flangeNoise, jointNoise, train, strKey, exprArg, nullableExprArg);
             MarkPunctuation(doll, dot, comma, end, ToTerm("("), ToTerm(")"), ToTerm("["), ToTerm("]"), ToTerm("'"), ToTerm(":"));
 
             //コメント

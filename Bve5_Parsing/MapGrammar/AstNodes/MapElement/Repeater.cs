@@ -18,22 +18,22 @@ namespace Bve5_Parsing.MapGrammar.AstNodes.Repeater
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
 
             //引数の登録
-            AddArguments("trackkey", nodes, 3);
-            AddArguments("x", nodes, 4);
-            AddArguments("y", nodes, 5);
-            AddArguments("z", nodes, 6);
-            AddArguments("rx", nodes, 7);
-            AddArguments("ry", nodes, 8);
-            AddArguments("rz", nodes, 9);
-            AddArguments("tilt", nodes, 10);
-            AddArguments("span", nodes, 11);
-            AddArguments("interval", nodes, 12);
-            AddArguments("structurekey1", nodes, 13);
+            AddArguments("trackkey", nodes, 3, typeof(string));
+            AddArguments("x", nodes, 4, typeof(double));
+            AddArguments("y", nodes, 5, typeof(double));
+            AddArguments("z", nodes, 6, typeof(double));
+            AddArguments("rx", nodes, 7, typeof(double));
+            AddArguments("ry", nodes, 8, typeof(double));
+            AddArguments("rz", nodes, 9, typeof(double));
+            AddArguments("tilt", nodes, 10, typeof(double));
+            AddArguments("span", nodes, 11, typeof(double));
+            AddArguments("interval", nodes, 12, typeof(double));
+            AddArguments("structurekey1", nodes, 13, typeof(string));
             if(nodes.Count > 14)
             {
                 for (int i = 0; i < nodes[14].ChildNodes.Count; i++)
                 {
-                    AddArguments("structurkey" + (i + 2), nodes[14].ChildNodes, i);
+                    AddArguments("structurekey" + (i + 2), nodes[14].ChildNodes, i, typeof(string));
                 }
             }
         }
@@ -50,16 +50,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes.Repeater
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
 
             //引数の登録
-            AddArguments("trackkey", nodes, 3);
-            AddArguments("tilt", nodes, 4);
-            AddArguments("span", nodes, 5);
-            AddArguments("interval", nodes, 6);
-            AddArguments("structurekey1", nodes, 7);
+            AddArguments("trackkey", nodes, 3, typeof(string));
+            AddArguments("tilt", nodes, 4, typeof(double));
+            AddArguments("span", nodes, 5, typeof(double));
+            AddArguments("interval", nodes, 6, typeof(double));
+            AddArguments("structurekey1", nodes, 7, typeof(string));
             if (nodes.Count > 8)
             {
                 for (int i = 0; i < nodes[8].ChildNodes.Count; i++)
                 {
-                    AddArguments("structurkey" + (i + 2), nodes[8].ChildNodes, i);
+                    AddArguments("structurekey" + (i + 2), nodes[8].ChildNodes, i, typeof(string));
                 }
             }
         }
@@ -90,7 +90,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes.Repeater
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
 
             //引数の登録
-            AddArguments("structurekey", nodes, 2);
+            AddArguments("structurekey", nodes, 2, typeof(string));
         }
     }
 }

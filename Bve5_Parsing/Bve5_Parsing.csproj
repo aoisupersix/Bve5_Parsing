@@ -67,7 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GrammarTest.cs" />
-    <Compile Include="MapGrammar\AstNodes\ArgNodes.cs" />
+    <Compile Include="MapGrammar\AstNodes\KeyNodes.cs" />
     <Compile Include="MapGrammar\AstNodes\ExprNodes.cs" />
     <Compile Include="MapGrammar\AstNodes\MapElementNodes.cs" />
     <Compile Include="MapGrammar\AstNodes\MapElement\Adhesion.cs" />

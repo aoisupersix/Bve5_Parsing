@@ -1,7 +1,9 @@
 ﻿
 using Irony.Ast;
+using Irony.Interpreter;
 using Irony.Interpreter.Ast;
 using Irony.Parsing;
+using System;
 
 namespace Bve5_Parsing.MapGrammar.AstNodes
 {
@@ -29,7 +31,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     /// </summary>
     public class ExprNode : AstNode
     {
-        public double Value { get; private set; }
+        public object Value { get; private set; }
         public override void Init(AstContext context, ParseTreeNode treeNode)
         {
             base.Init(context, treeNode);
@@ -40,12 +42,24 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
             {
                 //演算(term + op + expr)
                 TermNode term = (TermNode)nodes[0].AstNode;
-                double val1 = term.Value;
+                object val1 = term.Value;
                 string op = nodes[1].Term.ToString();
                 ExprNode exprNode = (ExprNode)nodes[2].AstNode;
-                double var2 = exprNode.Value;
-                Value = exprNode.Calc(val1, exprNode.Value, op);
-                AddChild("Expr:", nodes[2]);
+                object val2 = exprNode.Value;
+
+                if(val1.GetType() == typeof(string) || val2.GetType() == typeof(string))
+                {
+                    //文字列の結合
+                    if (op != "+")
+                        throw new ScriptException("数式が不正です。", new NotFiniteNumberException(), this.Location, null);
+                    Value = val1.ToString() + val2.ToString();
+                }
+                else
+                {
+                    //数式の演算
+                    Value = exprNode.Calc((double)val1, (double)exprNode.Value, op);
+                    AddChild("Expr:", nodes[2]);
+                }
             }
             else if (nodes[0].ToString().Equals("Expr"))
             {
@@ -59,7 +73,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
                 //Term単体
                 TermNode term = (TermNode)nodes[0].AstNode;
                 Value = term.Value;
-                AddChild("Term:" + Value, nodes[0]);
+                AddChild("Term:" + term.Value, nodes[0]);
             }
         }
 
@@ -95,7 +109,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     /// </summary>
     public class NullableExprNode : AstNode
     {
-        public double? Value { get; private set; }
+        public object Value { get; private set; }
 
         public override void Init(AstContext context, ParseTreeNode treeNode)
         {
@@ -124,11 +138,11 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     }
 
     /// <summary>
-    /// 数式の項(数値/変数)
+    /// 数式の項(数値/文字列/変数)
     /// </summary>
     public class TermNode : AstNode
     {
-        public double Value { get; private set; }
+        public object Value { get; private set; }
 
         public override void Init(AstContext context, ParseTreeNode treeNode)
         {
@@ -147,7 +161,17 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
             else
             {
                 //定数
-                Value = double.Parse(nodes[0].Token.Value.ToString());
+                object val = nodes[0].Token.Value;
+                if (nodes[0].Term.GetType() == typeof(StringLiteral))
+                {
+                    //文字列
+                    Value = val.ToString();
+                }
+                else
+                {
+                    //数字列
+                    Value = double.Parse(val.ToString());
+                }
             }
         }
     }

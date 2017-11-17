@@ -40,10 +40,11 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
 
             ElementName = nodes[0].Term.ToString();
-            FilePath = (string)nodes[2].Token.Value;
+            IdentifierKeyNode idenKey = (IdentifierKeyNode)nodes[2].AstNode;
+            FilePath = idenKey.Value;
 
-            AddChild("Element-" + ElementName, nodes[0]);
-            AddChild("FilePath-" + FilePath, nodes[2]);
+            AddChild("Element=" + ElementName, nodes[0]);
+            AddChild("FilePath=" + FilePath, nodes[2]);
 
         }
     }
@@ -54,11 +55,14 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     public class Syntax : AstNode
     {
         public SyntaxData Data { get; protected set; }
+        public AstContext Context { get; protected set; }
 
         public override void Init(AstContext context, ParseTreeNode treeNode)
         {
             base.Init(context, treeNode);
             Data = new SyntaxData();
+
+            Context = context;
         }
 
         /// <summary>
@@ -67,36 +71,66 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// <param name="argName">登録する引数名</param>
         /// <param name="nodes">構文の子ノード</param>
         /// <param name="idx">引数のインデックス</param>
-        protected void AddArguments(string argName, ParseTreeNodeList nodes, int idx)
+        /// <param name="type">引数に指定する型(Optional)</param>
+        protected void AddArguments(string argName, ParseTreeNodeList nodes, int idx, System.Type type = null)
         {
             if (nodes.Count > idx)
             {
+                object val;
                 if (nodes[idx].ToString().Equals("Expr"))
                 {
                     //引数が数式
                     ExprNode expr = (ExprNode)nodes[idx].AstNode;
-                    Data.Arguments.Add(argName, expr.Value);
+                    val = expr.Value;
                     AddChild(argName + "=" + expr.Value, nodes[idx]);
                 }
                 else if (nodes[idx].ToString().Equals("NullableExpr"))
                 {
                     //null許容数式
                     NullableExprNode expr = (NullableExprNode)nodes[idx].AstNode;
-                    Data.Arguments.Add(argName, expr.Value);
+                    val = expr.Value;
                     AddChild(argName + "=" + expr.Value, nodes[idx]);
+                }
+                else if (nodes[idx].AstNode.GetType() == typeof(IdentifierKeyNode))
+                {
+                    //IdenKey
+                    IdentifierKeyNode idenKey = (IdentifierKeyNode)nodes[idx].AstNode;
+                    val = idenKey.Value;
+                    AddChild(argName + "=" + idenKey.Value, nodes[idx]);
                 }
                 else if (nodes[idx].ToString().Equals("RawKey"))
                 {
                     //RawKey
                     RawKeyNode rawKey = (RawKeyNode)nodes[idx].AstNode;
-                    Data.Arguments.Add(argName, rawKey.Value);
+                    val = rawKey.Value;
                     AddChild(argName + "=" + rawKey.Value, nodes[idx]);
                 }
                 else
                 {
                     //引数がキー
-                    Data.Arguments.Add(argName, nodes[idx].Token.Value.ToString());
+                    val = nodes[idx].Token.Value.ToString();
                     AddChild(argName + "=" + nodes[idx].Token.Value, nodes[idx]);
+                }
+
+                //Dataに引数を登録する
+                if(type == null)
+                {
+                    //引数の型を無視して登録
+                    Data.Arguments.Add(argName, val);
+                }
+                else
+                {
+                    try
+                    {
+                        var v = System.Convert.ChangeType(val, type);
+                        Data.Arguments.Add(argName, v);
+                        
+                    }
+                    catch(System.FormatException e)
+                    {
+                        LogMessage logMessage = new LogMessage(ErrorLevel.Error, this.Location, e.Message, Context.Language.ParserData.States[Context.Language.ParserData.States.Count - 1]);
+                        Context.Messages.Add(logMessage);
+                    }
                 }
             }
         }
@@ -136,7 +170,8 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
             //マップ要素、キー、関数の登録
             Data.MapElement = new string[1];
             Data.MapElement[0] = nodes[0].Term.ToString();
-            Data.Key = nodes[1].Token.Value.ToString();
+            IdentifierKeyNode idenKey = (IdentifierKeyNode)nodes[1].AstNode;
+            Data.Key = idenKey.Value;
             Data.Function = nodes[2].Term.ToString();
 
             //引数は子クラスで登録する
@@ -157,7 +192,8 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
             //マップ要素、キー、関数の登録
             Data.MapElement = new string[2];
             Data.MapElement[0] = nodes[0].Term.ToString();
-            Data.Key = nodes[1].Token.Value.ToString();
+            IdentifierKeyNode idenKey = (IdentifierKeyNode)nodes[1].AstNode;
+            Data.Key = idenKey.Value;
             Data.MapElement[1] = nodes[2].Term.ToString();
             Data.Function = nodes[3].Term.ToString();
 
@@ -182,7 +218,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
             Data.MapElement[0] = nodes[0].Term.ToString();
 
             //引数の登録
-            AddArguments("mapPath", nodes, 1);
+            AddArguments("mapPath", nodes, 1, typeof(string));
 
             string filePath = nodes[1].Token.Value.ToString();
             if (System.IO.File.Exists(filePath))

@@ -1,0 +1,159 @@
+[33me1ab3a2[m[33m ([m[1;36mHEAD -> [m[1;32mAdd_StringVariable[m[33m, [m[1;31morigin/Add_StringVariable[m[33m)[m fix #8
+[33m6636273[m [change] 引数の型判定を型変換に変更
+[33m716c399[m [add] 距離程の処理に型判定を追加
+[33m5874d95[m [update] 引数の追加に型判定を追加
+[33mb9c974a[m [update] ExprNodeを文字列に対応
+[33ma79b7f8[m [update] Termの定義にkeyを追加
+[33mb51115f[m [fix] TermのTypeが正しく取得出来ていなかったバグを修正
+[33m4c55cc5[m [update] TermNodeを文字列に対応
+[33md6ce8f1[m [change] VarsクラスのValueをobject型に変更
+[33mbf3fd07[m[33m ([m[1;32mmaster[m[33m)[m Merge pull request #1 from aoisupersix/Improved_judgement_of_argument
+[33m492fda3[m [change] 構文のキーをkeyTermに変更
+[33mdce1cfe[m [update] 引数の判定にRawKeyを追加
+[33m95b8f45[m [add] RawKeyNodeを追加
+[33m24c7f68[m [update] AddArgumentsのEmpty判定を改良
+[33m2fd37c7[m [update] Readme.md & License.md
+[33mb8506f9[m [update] 例外メッセージにファイル名を追加
+[33m25fd05d[m [update] 例外の表示を改良
+[33me12291b[m Merge branch 'master' of https://github.com/aoisupersix/Bve5_Parsing
+[33m2a3a442[m [update] SyntaxErrorの後ParserをRecoveryするよう改良
+[33m61c3514[m [add] include構文の例外処理を追加
+[33m473d7ca[m Set theme jekyll-theme-cayman
+[33m21dcc34[m[33m ([m[1;33mtag: v0.1.6527.27089[m[33m)[m [fix] Readme.mdのUrlを修正👌
+[33m31148c8[m [fix] License.mdが抜けていたので追加💢
+[33m4e32a28[m [fix] fileName
+[33m77c7d20[m [add] License.md
+[33m533b801[m [update] Readme.md & 構文名
+[33m212d4c7[m[33m ([m[1;33mtag: v0.1.6527.23990[m[33m)[m [Release] Preα 0.1.6527.23990
+[33m8900a25[m [fix] filePathのバックスラッシュがエスケープされるバグを修正
+[33mdda67c1[m [update] 例外処理のメッセージを改良
+[33m2673c9f[m [update] MapDataの表示を追加
+[33m78a5415[m [update] アセンブリ情報を更新
+[33me4ad3ae[m [upate] GrammarTestの実装
+[33mbb6f8cf[m [add] MapFileNodeのDoEvaluateメソッドを実装
+[33m49dd309[m [update] ListFileのMapData登録を実装
+[33m87117a7[m [update] StatementsNodeの構文判定を改良
+[33m233d65d[m [add] MapDataのリストファイルパスを追加
+[33m918ca95[m [update] StatementsNodeの構文処理を追加
+[33md3555b6[m [update] MapFileNodeをバージョン情報とエンコーディングを保持するよう変更
+[33m12c77de[m [add] 文字エンコーディングの指定構文を追加
+[33m897dff0[m [update] Readme.md
+[33m9ae2913[m [update] Readme.md
+[33mddb1027[m [update] Readme.md
+[33m2a82f77[m [update] Readme.md
+[33mbd34e06[m [add] 戻り値用クラスMapDataを追加 :new:
+[33m12b4d9e[m [update] 引数の一部をnull許容に変更
+[33mb46fc7d[m [update] MapGrammar_Strictの一部構文の引数をnull非許容に変更
+[33m90ef792[m [add] MapGrammar_Carelessを追加
+[33m9dbd6b9[m [change] MapGrammar構文の名前をMapGrammar_Strictに変更
+[33m9314113[m [add] Include構文を追加
+[33mbd7319e[m [update] NullableExprをEmptyに対応/indexをnull許容に
+[33m85d99c4[m [update] 一部引数をrawKeyに改良
+[33m4dacb0f[m [update] ArrArgumentsメソッドをrawKeyに対応
+[33m58c50e2[m [fix] Syntax3のマップ要素登録のバグを修正
+[33ma1c31cc[m [add] Syntax2,Syntax3のキーにnumを追加
+[33mb49cc6e[m [add] rawKey構文の追加
+[33me4abfc7[m [add] 変数の初期化処理を追加
+[33m5ae3d3d[m [add] null許容引数の文法を定義
+[33m650abc5[m [add] null許容数式のAST木を追加
+[33m706888e[m [fix] 距離程の処理がおかしくなっていたので修正
+[33m017d0ec[m [add] null許容引数の定義を再追加
+[33m975d9d7[m Merge branch 'fileHeader'
+[33md8d679f[m [update] TODOの追加
+[33m8ee3e99[m [update] StatementsNodeの処理を変更
+[33mcba69ed[m [change] 構文処理方法を変更
+[33mc18ce5f[m [fix] ShiftReduceConflictを修正
+[33m9fa9ea0[m [change] statementの構文定義を修正
+[33mf5bc70f[m [add] null許容数式を追加
+[33m3fc45c5[m [fix] loadListFileとVarAssign構文の再追加
+[33meb7c561[m [change] 名前空間を変更
+[33m6a0c248[m [change] 文法のテストのためコンソールアプリに変更
+[33m0cd75bd[m [add] ScenarioGrammarのファイルヘッダ構文を追加
+[33m20086ce[m [update] ScenarioGrammarのリファクタリング
+[33m1826f9a[m [update] ScenarioGrammarの細かい修正
+[33mc6cc828[m [update] Readme.md
+[33meb3dbc9[m [update] プロジェクト名を変更
+[33md449ae7[m [add] Header構文を定義
+[33m7b4b1f5[m [update] mapElementを距離程なしでも判定するよう変更
+[33m8580e5c[m [add] Train構文の文法を追加
+[33mb80921b[m [update] filePathTermをKeyTermに変更
+[33m90681b8[m [add] 他列車の文法を定義
+[33ma2d50c8[m [add] Train構文のAST木を追加
+[33m85e08c2[m [add] FlangeNoise構文の文法を追加
+[33m597909c[m [add] RollingNoise構文の文法を追加
+[33m93bc3bc[m [add] Sound3D構文の文法を追加
+[33m68614c5[m [add] Sound構文の文法を追加
+[33m0de1b2f[m [add] Adhesion構文の文法を追加
+[33m9ded3e6[m [add] Irregularity構文の文法を追加
+[33m842eb8f[m [fix] CabIlluminanceのASTNode名を修正
+[33me9935fd[m [add] CabIlluminance構文の文法を追加
+[33m37edd73[m [add] DrawDistance構文の文法を追加
+[33mb9b58ad[m [add] Fog構文の文法を追加
+[33m1c7cd96[m [update] Readme.md
+[33mb38a41b[m [fix] CabIlluminanceのファイル名変更(2)
+[33m891cec1[m [fix] CabIlluminance.csのファイル名を修正
+[33m1645bad[m [add] travis.yml
+[33mdd31a16[m [fix] Light.Diffuse構文の変数名を修正
+[33m0cab90a[m [add] Light構文の文法を追加
+[33m2c6d000[m [fix] PreTrainのAST木を修正
+[33mab50086[m [add] PreTrain構文の文法を追加
+[33mfc25a98[m [add] SpeedLimit構文の文法を追加
+[33ma3aaa56[m [add] Beacon構文の文法を追加
+[33m717b23c[m [add] Signal構文の文法を追加
+[33m41e8d8b[m [add] Readme.md
+[33m8e9be54[m [add] Sectionの文法定義を追加
+[33m7537b49[m [add] 他列車以外の構文を定義
+[33ma5834c1[m [update] usingディレクティブを削減
+[33m03042c0[m [del] AST木のネームスペースからNodesを削除
+[33med19e5b[m [add] その他構文のAST木を追加
+[33mdb4a3bf[m [update] ファイル構成を変更
+[33m4399da5[m [add] Fog構文のAST木を追加
+[33m20ece16[m [add] Light構文のAST木を追加
+[33m209f815[m [fix] PreTrain.Passのクラス名を修正
+[33mbb2f474[m [add] PreTrain構文のAST木を追加
+[33m63257e0[m [add] SpeedLimit構文のAST木を追加
+[33mb66e46f[m [add] Beacon構文のAST木を追加
+[33md3f82c5[m [add] Section構文のAST木を追加
+[33m04aca9f[m [add] Signal構文のAST木を追加
+[33m1ea0f11[m [update] 余計なプログラムを削除
+[33mbecbdeb[m [update] Station構文の文法とAST木の改良
+[33m5144572[m [update] Repeater構文の文法とAST木を改良
+[33md56b164[m [update] Structure構文の文法とAST木を改良
+[33mf3a0d93[m [update] Track構文の文法とAST木を改良
+[33m53fc31d[m [update] Gradient構文の文法とAST木を改良
+[33m19e9a72[m [update] Curve構文の文法を改良
+[33m87cfd51[m [add] CurveNodesの各AST木を追加
+[33mf967f20[m [update] リファクタリング
+[33m3d26dfb[m [add] BeginNodeの引数処理を追加
+[33mdbc7d1b[m [add] 構文の親クラスに引数登録メソッドを追加
+[33m35a37e7[m [add] Curve.BeginのAST木を追加
+[33m8c9ebca[m [add] Curve.SetgaugeのAST木クラスを作成
+[33mee04d69[m [add] 構文の親クラスを追加
+[33m3e2dabb[m [fix] すべてのファイルを消してしまったので修正
+[33mfdb2263[m [fix] 余計なファイルを削除
+[33m11847d5[m [update] リファクタリング
+[33m5e91af5[m [add] 停車場の構文定義と文法を追加
+[33m4ba24f0[m [add] 連続ストラクチャの構文定義と文法を追加
+[33mf791bf6[m [add] ストラクチャの構文定義と文法を追加
+[33m132460e[m [update] 構文のデータ管理を変更
+[33m9cd1950[m [fix] 引数の子ノードを修正
+[33m7650172[m [add] 構文情報の管理構造体を追加
+[33m1a4b67a[m [update] DistNodeの処理を変更
+[33m093f16a[m [add] AstNode: Syntax_2を追加
+[33m93ee896[m [add] 他軌道の文法定義を追加
+[33mfd9c498[m [add] 他軌道の構文定義を追加
+[33mdac5c6a[m [update] リファクタリング
+[33m7c16d94[m [update] Syntax_3を修正
+[33m8aeea2c[m [add] 自軌道の勾配の構文定義を追加
+[33m898c62b[m [update] Syntax_3の引数を追加
+[33m23e02bc[m [merge] Argment
+[33mb79b30f[m [fix] sql情報
+[33m78e169f[m [add] Curveの構文を実装
+[33m82868e3[m [update] リファクタリング
+[33md2d3524[m [add]引数のAstNodeを追加
+[33m588b61f[m [add] 引数の定義
+[33mc2a8562[m [add] AstNode: Syntax_3を追加
+[33m7850ed9[m [add] リストファイルのロード構文を追加
+[33m3d1b5a5[m [update] リファクタリング
+[33ma5f02ab[m [add] ASTノードの追加
+[33m1d64986[m initial commit

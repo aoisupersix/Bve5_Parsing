@@ -141,7 +141,15 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
             if (nodes[0].Term.ToString().Equals("Expr"))
             {
                 ExprNode expr = (ExprNode)nodes[0].AstNode;
-                Distance = expr.Value;
+                if(expr.Value.GetType() == typeof(double))
+                {
+                    Distance = (double)expr.Value;
+                }
+                else
+                {
+                    //型が異なるので0とする
+                    Distance = 0.0;
+                }
                 AddChild("Dist=" + expr.Value, nodes[0]);
             }
             else

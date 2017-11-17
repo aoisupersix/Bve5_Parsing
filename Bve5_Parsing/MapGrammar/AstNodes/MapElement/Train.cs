@@ -18,10 +18,10 @@ namespace Bve5_Parsing.MapGrammar.AstNodes.Train
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
 
             //引数の登録
-            AddArguments("trainkey", nodes, 2);
-            AddArguments("filePath", nodes, 3);
-            AddArguments("trackkey", nodes, 4);
-            AddArguments("direction", nodes, 5); //1 or -1
+            AddArguments("trainkey", nodes, 2, typeof(string));
+            AddArguments("filePath", nodes, 3, typeof(string));
+            AddArguments("trackkey", nodes, 4, typeof(string));
+            AddArguments("direction", nodes, 5, typeof(double)); //1 or -1
         }
     }
 
@@ -36,9 +36,9 @@ namespace Bve5_Parsing.MapGrammar.AstNodes.Train
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
 
             //引数の登録
-            AddArguments("filePath", nodes, 3);
-            AddArguments("trackkey", nodes, 4);
-            AddArguments("direction", nodes, 5); //1 or -1
+            AddArguments("filePath", nodes, 3, typeof(string));
+            AddArguments("trackkey", nodes, 4, typeof(string));
+            AddArguments("direction", nodes, 5, typeof(double)); //1 or -1
         }
     }
 
@@ -56,14 +56,14 @@ namespace Bve5_Parsing.MapGrammar.AstNodes.Train
             if (nodes.Count > 4)
             {
                 //hh:mm:ss TODO
-                AddArguments("hh", nodes, 3);
-                AddArguments("mm", nodes, 4);
-                AddArguments("ss", nodes, 5);
+                AddArguments("hh", nodes, 3, typeof(double));
+                AddArguments("mm", nodes, 4, typeof(double));
+                AddArguments("ss", nodes, 5, typeof(double));
             }
             else
             {
                 //sec
-                AddArguments("second", nodes, 3);
+                AddArguments("second", nodes, 3, typeof(double));
             }
         }
     }
@@ -79,10 +79,10 @@ namespace Bve5_Parsing.MapGrammar.AstNodes.Train
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
 
             //引数の登録
-            AddArguments("decelerate", nodes, 3);
-            AddArguments("stopTime", nodes, 4);
-            AddArguments("accelerate", nodes, 5);
-            AddArguments("speed", nodes, 6);
+            AddArguments("decelerate", nodes, 3, typeof(double));
+            AddArguments("stopTime", nodes, 4, typeof(double));
+            AddArguments("accelerate", nodes, 5, typeof(double));
+            AddArguments("speed", nodes, 6, typeof(double));
         }
     }
 }

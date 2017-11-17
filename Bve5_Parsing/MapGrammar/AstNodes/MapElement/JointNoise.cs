@@ -18,7 +18,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes.JointNoise
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
 
             //引数の登録
-            AddArguments("index", nodes, 2);
+            AddArguments("index", nodes, 2, typeof(double));
         }
     }
 }

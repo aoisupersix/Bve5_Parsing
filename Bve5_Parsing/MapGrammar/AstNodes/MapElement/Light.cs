@@ -18,9 +18,9 @@ namespace Bve5_Parsing.MapGrammar.AstNodes.Light
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
 
             //引数の登録 0~1 TODO
-            AddArguments("red", nodes, 2);
-            AddArguments("green", nodes, 3);
-            AddArguments("blue", nodes, 4);
+            AddArguments("red", nodes, 2, typeof(double));
+            AddArguments("green", nodes, 3, typeof(double));
+            AddArguments("blue", nodes, 4, typeof(double));
         }
     }
 
@@ -35,9 +35,9 @@ namespace Bve5_Parsing.MapGrammar.AstNodes.Light
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
 
             //引数の登録 0~1 TODO
-            AddArguments("red", nodes, 2);
-            AddArguments("green", nodes, 3);
-            AddArguments("blue", nodes, 4);
+            AddArguments("red", nodes, 2, typeof(double));
+            AddArguments("green", nodes, 3, typeof(double));
+            AddArguments("blue", nodes, 4, typeof(double));
         }
     }
 
@@ -52,8 +52,8 @@ namespace Bve5_Parsing.MapGrammar.AstNodes.Light
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
 
             //引数の登録
-            AddArguments("pitch", nodes, 2);
-            AddArguments("yaw", nodes, 3);
+            AddArguments("pitch", nodes, 2, typeof(double));
+            AddArguments("yaw", nodes, 3, typeof(double));
         }
     }
 }
