@@ -19,7 +19,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes.CabIlluminance
 
             //引数の登録
             if(nodes.Count > 2)
-                AddArguments("value", nodes, 2);
+                AddArguments("value", nodes, 2, typeof(double));
         }
     }
 }

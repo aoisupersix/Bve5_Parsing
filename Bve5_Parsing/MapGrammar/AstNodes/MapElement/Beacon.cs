@@ -18,9 +18,9 @@ namespace Bve5_Parsing.MapGrammar.AstNodes.Beacon
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
 
             //引数の登録
-            AddArguments("type", nodes, 2); //整数 TODO
-            AddArguments("section", nodes, 3);
-            AddArguments("sendData", nodes, 4); //整数 TODO
+            AddArguments("type", nodes, 2, typeof(double)); //整数 TODO
+            AddArguments("section", nodes, 3, typeof(double));
+            AddArguments("sendData", nodes, 4, typeof(double)); //整数 TODO
         }
     }
 }

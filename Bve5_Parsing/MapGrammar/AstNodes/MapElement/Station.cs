@@ -18,9 +18,9 @@ namespace Bve5_Parsing.MapGrammar.AstNodes.Station
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
 
             //引数の登録
-            AddArguments("door", nodes, 3);
-            AddArguments("margin1", nodes, 4);
-            AddArguments("margin2", nodes, 5);
+            AddArguments("door", nodes, 3, typeof(double));
+            AddArguments("margin1", nodes, 4, typeof(double));
+            AddArguments("margin2", nodes, 5, typeof(double));
         }
     }
 }

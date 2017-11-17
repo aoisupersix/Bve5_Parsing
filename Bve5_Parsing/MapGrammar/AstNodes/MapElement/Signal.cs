@@ -18,18 +18,18 @@ namespace Bve5_Parsing.MapGrammar.AstNodes.Signal
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
 
             //引数の登録
-            AddArguments("section", nodes, 3);
-            AddArguments("trackkey", nodes, 4);
-            AddArguments("x", nodes, 5);
-            AddArguments("y", nodes, 6);
+            AddArguments("section", nodes, 3, typeof(double));
+            AddArguments("trackkey", nodes, 4, typeof(string));
+            AddArguments("x", nodes, 5, typeof(double));
+            AddArguments("y", nodes, 6, typeof(double));
             if(nodes.Count > 7)
             {
-                AddArguments("z", nodes, 7);
-                AddArguments("rx", nodes, 8);
-                AddArguments("ry", nodes, 9);
-                AddArguments("rz", nodes, 10);
-                AddArguments("tilt", nodes, 11);
-                AddArguments("span", nodes, 12);
+                AddArguments("z", nodes, 7, typeof(double));
+                AddArguments("rx", nodes, 8, typeof(double));
+                AddArguments("ry", nodes, 9, typeof(double));
+                AddArguments("rz", nodes, 10, typeof(double));
+                AddArguments("tilt", nodes, 11, typeof(double));
+                AddArguments("span", nodes, 12, typeof(double));
             }
         }
     }

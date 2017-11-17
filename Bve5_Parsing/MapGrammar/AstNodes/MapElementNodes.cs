@@ -207,7 +207,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
             Data.MapElement[0] = nodes[0].Term.ToString();
 
             //引数の登録
-            AddArguments("mapPath", nodes, 1);
+            AddArguments("mapPath", nodes, 1, typeof(string));
 
             string filePath = nodes[1].Token.Value.ToString();
             if (System.IO.File.Exists(filePath))
