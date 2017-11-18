@@ -14,7 +14,7 @@ namespace Bve5_Parsing
             bool end = false;
             while (!end)
             {
-                Console.WriteLine("MapGrammar_Careless Test");
+                Console.WriteLine("MapGrammar Test");
                 Console.WriteLine("====================================");
 
                 string input = "";
@@ -72,7 +72,7 @@ namespace Bve5_Parsing
                     {
                         foreach (var err in parseTree)
                         {
-                            Console.Error.WriteLine("{0}: {1} {2}", err.Location, err, err.ParserState);
+                            Console.Error.WriteLine("{0}: {1}", err.Location, err);
                         }
                     }
                     else
