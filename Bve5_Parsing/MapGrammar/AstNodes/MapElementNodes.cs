@@ -228,30 +228,6 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
 
             IdentifierKeyNode idenKey = (IdentifierKeyNode)nodes[1].AstNode;
             string filePath = idenKey.Value;
-            if (System.IO.File.Exists(filePath))
-            {
-                //ファイル読み込み
-                StreamReader sr = new StreamReader(filePath);
-                string input = sr.ReadToEnd();
-
-                //構文解析
-                ScriptApp app = new ScriptApp(new LanguageData(new MapGrammar()));
-                try
-                {
-                    IncludeData = (MapData)app.Evaluate(input);
-                }
-                catch (ScriptException)
-                {
-                    LogMessageList parseTree = app.GetParserMessages();
-                    context.Messages.AddRange(parseTree);
-                }
-            }
-            else
-            {
-                //ファイルが存在しない
-                LogMessage logMessage = new LogMessage(ErrorLevel.Error, this.Location, filePath + "が見つかりません", context.Language.ParserData.States[context.Language.ParserData.States.Count - 1]);
-                context.Messages.Add(logMessage);
-            }
         }
     }
 
