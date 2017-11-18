@@ -212,6 +212,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     /// </summary>
     public class IncludeNode : Syntax
     {
+        public MapData IncludeData { get; private set; }
 
         public override void Init(AstContext context, ParseTreeNode treeNode)
         {
@@ -220,7 +221,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
 
             //マップ要素の登録
             Data.MapElement = new string[1];
-            Data.MapElement[0] = nodes[0].Term.ToString();
+            Data.MapElement[0] = nodes[0].Term.ToString().ToLower();
 
             //引数の登録
             AddArguments("mapPath", nodes, 1, typeof(string));
@@ -237,7 +238,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
                 ScriptApp app = new ScriptApp(new LanguageData(new MapGrammar()));
                 try
                 {
-                    MapData result = (MapData)app.Evaluate(input);
+                    IncludeData = (MapData)app.Evaluate(input);
                 }
                 catch (ScriptException e)
                 {
