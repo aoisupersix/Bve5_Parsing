@@ -19,10 +19,10 @@ namespace Bve5_Parsing.ScenarioGrammar
             #endregion 非終端記号の定義
 
             #region 非終端記号の定義
-            var filePath = new NonTerminal("FilePath");
+            var filePath = new NonTerminal("FilePath", typeof(FilePathNode));
             var nextFilePath = new NonTerminal("NextFilePath");
             var nextFilePaths = new NonTerminal("NextFilePaths");
-            var end = new NonTerminal("End", typeof(EndNode));
+            var end = new NonTerminal("End");
             var route = new NonTerminal("Route", typeof(PathNode));
             var vehicle = new NonTerminal("Vehicle", typeof(PathNode));
             var image = new NonTerminal("Image", typeof(PathNode));
@@ -62,10 +62,7 @@ namespace Bve5_Parsing.ScenarioGrammar
             this.NonGrammarTerminals.Add(comment1);
             this.NonGrammarTerminals.Add(comment2);
 
-            RegisterOperators(1, pathIdentifier);
-            RegisterOperators(3, ToTerm("|"));
-
-            MarkPunctuation(or, mul);
+            MarkPunctuation(equal, or, mul, end, nextFilePath);
 
             LanguageFlags = LanguageFlags.TailRecursive;
         }

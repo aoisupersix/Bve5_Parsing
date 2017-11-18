@@ -10,14 +10,7 @@ namespace Bve5_Parsing.ScenarioGrammar.AstNodes
      * ScenarioGrammarのAST木定義
      */
 
-    public class EndNode : AstNode
-    {
-        public override void Init(AstContext context, ParseTreeNode treeNode)
-        {
-            base.Init(context, treeNode);
-        }
-    }
-
+    
     public class PathNode : AstNode
     {
         public AstNode Path { get; private set; }
@@ -102,9 +95,9 @@ namespace Bve5_Parsing.ScenarioGrammar.AstNodes
 
             //Key -> Statement名, Value -> Valueの辞書を返す
             Dictionary<string, string> dict = new Dictionary<string, string>();
-            if(Statements.ChildNodes.Count > 0)
+            if (Statements.ChildNodes.Count > 0)
             {
-                foreach(AstNode statement in Statements.ChildNodes)
+                foreach (AstNode statement in Statements.ChildNodes)
                 {
                     AstNode val = statement.ChildNodes[0];
                     if (!dict.ContainsKey(statement.AsString) && val != null)
