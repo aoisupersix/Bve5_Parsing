@@ -49,18 +49,19 @@ namespace Bve5_Parsing.ScenarioGrammar.AstNodes
     /// </summary>
     public class StatementsNode : AstNode
     {
-        public List<AstNode> Statements { get; private set; }
+        public List<Statement> Statements { get; private set; }
 
         public override void Init(AstContext context, ParseTreeNode treeNode)
         {
             base.Init(context, treeNode);
 
-            Statements = new List<AstNode>();
+            Statements = new List<Statement>();
 
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
             foreach (ParseTreeNode node in nodes)
             {
-                Statements.Add(AddChild("Statement", node));
+                AddChild("Statement", node);
+                Statements.Add((Statement)node.AstNode);
             }
         }
 
@@ -76,11 +77,37 @@ namespace Bve5_Parsing.ScenarioGrammar.AstNodes
             ScenarioData scenarioData = new ScenarioData();
             foreach(var statement in Statements)
             {
-                string name = statement.
+                switch (statement.Name)
+                {
+                    case "route":
+                        scenarioData.Route = (List<FilePath>)statement.Value;
+                        break;
+                    case "vehicle":
+                        scenarioData.Vehicle = (List<FilePath>)statement.Value;
+                        break;
+                    case "image":
+                        scenarioData.Image = (FilePath)statement.Value;
+                        break;
+                    case "title":
+                        scenarioData.Title = (string)statement.Value;
+                        break;
+                    case "routetitle":
+                        scenarioData.RouteTitle = (string)statement.Value;
+                        break;
+                    case "vehicletitle":
+                        scenarioData.VehicleTitle = (string)statement.Value;
+                        break;
+                    case "author":
+                        scenarioData.Author = (string)statement.Value;
+                        break;
+                    case "comment":
+                        scenarioData.Comment = (string)statement.Value;
+                        break;
+                }
             }
 
             thread.CurrentNode = Parent;
-            return base.DoEvaluate(thread);
+            return scenarioData;
         }
     }
 
@@ -89,43 +116,35 @@ namespace Bve5_Parsing.ScenarioGrammar.AstNodes
     /// </summary>
     public class ProgramNode : AstNode
     {
-        public List<AstNode> Statements { get; private set; }
+        public AstNode Statements { get; private set; }
         private string version;
 
         public override void Init(AstContext context, ParseTreeNode treeNode)
         {
             base.Init(context, treeNode);
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
-            Statements = new List<AstNode>();
 
             version = (string)nodes[2].Token.Text;
             AddChild("Version=" + version, nodes[1]);
-            foreach(var statement in nodes[3].ChildNodes)
-            {
-                Statements.Add(AddChild("Statements", statement));
-            }
+            Statements = AddChild("Statements", nodes[3]);
         }
 
-        //protected override object DoEvaluate(ScriptThread thread)
-        //{
-        //    thread.CurrentNode = this;
+        /// <summary>
+        /// RootAST木の評価
+        /// </summary>
+        /// <param name="thread">ScriptThread</param>
+        /// <returns>構文の値を代入したScenarioDataクラス</returns>
+        protected override object DoEvaluate(ScriptThread thread)
+        {
+            thread.CurrentNode = this;
 
-        //    //Key -> Statement名, Value -> Valueの辞書を返す
-        //    Dictionary<string, string> dict = new Dictionary<string, string>();
-        //    if (Statements.ChildNodes.Count > 0)
-        //    {
-        //        foreach (AstNode statement in Statements.ChildNodes)
-        //        {
-        //            AstNode val = statement.ChildNodes[0];
-        //            if (!dict.ContainsKey(statement.AsString) && val != null)
-        //                dict.Add(statement.AsString, val.AsString);
-        //        }
-        //    }
-        //    //バージョン情報の格納
-        //    dict.Add("version", version);
+            //ScenarioDataクラスを返す
+            ScenarioData scenarioData = (ScenarioData)Statements.Evaluate(thread);
+            //バージョン情報の格納
+            scenarioData.Version = version;
 
-        //    thread.CurrentNode = Parent;
-        //    return dict;
-        //}
+            thread.CurrentNode = Parent;
+            return scenarioData;
+        }
     }
 }
