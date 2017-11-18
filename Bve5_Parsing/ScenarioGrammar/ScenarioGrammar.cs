@@ -14,10 +14,14 @@ namespace Bve5_Parsing.ScenarioGrammar
             var text = new IdentifierTerminal("text", ExtraChars.MULTIBYTES + ExtraChars.TOKEN + @"\s" + "\"", ExtraChars.MULTIBYTES + ExtraChars.TOKEN);
             var num = new NumberLiteral("Num", NumberOptions.AllowSign);
             var equal = ToTerm("=");
+            var or = ToTerm("|");
+            var mul = ToTerm("*");
             #endregion 非終端記号の定義
 
             #region 非終端記号の定義
-            //var filePath = new NonTerminal("FilePath");
+            var filePath = new NonTerminal("FilePath");
+            var nextFilePath = new NonTerminal("NextFilePath");
+            var nextFilePaths = new NonTerminal("NextFilePaths");
             var end = new NonTerminal("End", typeof(EndNode));
             var route = new NonTerminal("Route", typeof(PathNode));
             var vehicle = new NonTerminal("Vehicle", typeof(PathNode));
@@ -33,9 +37,12 @@ namespace Bve5_Parsing.ScenarioGrammar
             #endregion 非終端記号の定義
 
             #region 非終端記号の文法
+            filePath.Rule = pathIdentifier + mul + num | pathIdentifier;
+            nextFilePath.Rule = or + filePath;
+            nextFilePaths.Rule = MakeStarRule(nextFilePaths, nextFilePath);
             end.Rule = NewLine | Eof;
-            route.Rule = "Route" + equal + pathIdentifier + ToTerm("|") + pathIdentifier + end | "Route" + equal + end;
-            vehicle.Rule = "Vehicle" + equal + pathIdentifier + end | "Vehicle" + equal + end;
+            route.Rule = "Route" + equal + filePath + nextFilePaths + end | "Route" + equal + end;
+            vehicle.Rule = "Vehicle" + equal + filePath + nextFilePaths + end | "Vehicle" + equal + end;
             image.Rule = "Image" + equal + pathIdentifier + end | "Image" + equal + end;
             title.Rule = "Title" + equal + text + end | "Title" + equal + end;
             routeTitle.Rule = "RouteTitle" + equal + text + end | "RouteTitle" + equal + end;
@@ -58,7 +65,9 @@ namespace Bve5_Parsing.ScenarioGrammar
             RegisterOperators(1, pathIdentifier);
             RegisterOperators(3, ToTerm("|"));
 
-            LanguageFlags = LanguageFlags.CreateAst | LanguageFlags.TailRecursive;
+            MarkPunctuation(or, mul);
+
+            LanguageFlags = LanguageFlags.TailRecursive;
         }
     }
 }
