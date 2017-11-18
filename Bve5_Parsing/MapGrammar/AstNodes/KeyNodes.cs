@@ -34,10 +34,11 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
             base.Init(context, treeNode);
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
 
-            if (nodes[0].ToString().Equals("Var"))
+            object node = nodes[0].AstNode;
+            if (node.GetType() == typeof(VarNode))
             {
                 //変数
-                VarNode varNode = (VarNode)nodes[0].AstNode;
+                VarNode varNode = (VarNode)node;
                 Vars vars = Vars.GetInstance();
                 Value = vars.GetVar(varNode.Name).ToString();
                 AddChild(varNode.Name + ":" + Value, nodes[0]);
