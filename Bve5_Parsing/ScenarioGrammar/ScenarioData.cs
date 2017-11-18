@@ -29,7 +29,7 @@ namespace Bve5_Parsing.ScenarioGrammar
         /// <summary>
         /// サムネイル画像の相対パス
         /// </summary>
-        public FilePath Image { get; set; }
+        public string Image { get; set; }
 
         /// <summary>
         /// シナリオタイトル

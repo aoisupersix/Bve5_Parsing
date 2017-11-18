@@ -86,7 +86,7 @@ namespace Bve5_Parsing.ScenarioGrammar.AstNodes
                         scenarioData.Vehicle = (List<FilePath>)statement.Value;
                         break;
                     case "image":
-                        scenarioData.Image = (FilePath)statement.Value;
+                        scenarioData.Image = (string)statement.Value;
                         break;
                     case "title":
                         scenarioData.Title = (string)statement.Value;
