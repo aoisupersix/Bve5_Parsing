@@ -240,28 +240,17 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
                 {
                     IncludeData = (MapData)app.Evaluate(input);
                 }
-                catch (ScriptException e)
+                catch (ScriptException)
                 {
                     LogMessageList parseTree = app.GetParserMessages();
-
-                    if (parseTree.Count > 0)
-                    {
-                        foreach (var err in parseTree)
-                        {
-                            throw new ScriptException(filePath + ": " + err.Message, null, err.Location, null);
-                        }
-                    }
-                    else
-                    {
-                        //Other error
-                        throw e;
-                    }
+                    context.Messages.AddRange(parseTree);
                 }
             }
             else
             {
                 //ファイルが存在しない
-                throw new ScriptException(filePath + "が見つかりません", new System.IO.FileNotFoundException(), this.Location, new ScriptStackTrace());
+                LogMessage logMessage = new LogMessage(ErrorLevel.Error, this.Location, filePath + "が見つかりません", context.Language.ParserData.States[context.Language.ParserData.States.Count - 1]);
+                context.Messages.Add(logMessage);
             }
         }
     }
