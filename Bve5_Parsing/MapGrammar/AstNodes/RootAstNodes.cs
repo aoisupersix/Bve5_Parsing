@@ -61,7 +61,15 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
             foreach (AstNode node in stateNode.Statements)
             {
                 Syntax syntax = (Syntax)node;
-                MapData.Statements.Add(syntax.Data);
+                SyntaxData data = syntax.Data;
+                if(data.MapElement.Length == 1 && data.MapElement[0].Equals("include"))
+                {
+                    //include構文で読み込んだSyntaxを追加
+                    IncludeNode include = (IncludeNode)syntax;
+                    if(include.IncludeData != null)
+                        MapData.Statements.AddRange(include.IncludeData.Statements);
+                }
+                MapData.Statements.Add(data);
             }
 
             thread.CurrentNode = Parent;
