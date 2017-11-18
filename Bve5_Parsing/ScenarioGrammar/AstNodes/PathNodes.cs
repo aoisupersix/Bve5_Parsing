@@ -11,15 +11,6 @@ namespace Bve5_Parsing.ScenarioGrammar.AstNodes
      */
 
     /// <summary>
-    /// ファイルパス構造体
-    /// </summary>
-    public struct FilePath
-    {
-        public string Value { get; set; }
-        public double Weight { get; set; }
-    }
-
-    /// <summary>
     /// Route, Vehicle構文
     /// </summary>
     public class PathStatementNode : AstNode
