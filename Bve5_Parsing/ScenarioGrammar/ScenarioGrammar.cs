@@ -10,13 +10,14 @@ namespace Bve5_Parsing.ScenarioGrammar
         public ScenarioGrammar() : base(false)
         {
             #region 終端記号の定義
-            var filePath = new IdentifierTerminal("filePath", ExtraChars.MULTIBYTES + ExtraChars.TOKEN + @"\", ExtraChars.MULTIBYTES + ExtraChars.TOKEN);
+            var pathIdentifier = new IdentifierTerminal("pathIdentifier", ExtraChars.MULTIBYTES + ExtraChars.TOKEN + @"\", ExtraChars.MULTIBYTES + ExtraChars.TOKEN);
             var text = new IdentifierTerminal("text", ExtraChars.MULTIBYTES + ExtraChars.TOKEN + @"\s" + "\"", ExtraChars.MULTIBYTES + ExtraChars.TOKEN);
             var num = new NumberLiteral("Num", NumberOptions.AllowSign);
             var equal = ToTerm("=");
             #endregion 非終端記号の定義
 
             #region 非終端記号の定義
+            //var filePath = new NonTerminal("FilePath");
             var end = new NonTerminal("End", typeof(EndNode));
             var route = new NonTerminal("Route", typeof(PathNode));
             var vehicle = new NonTerminal("Vehicle", typeof(PathNode));
@@ -33,9 +34,9 @@ namespace Bve5_Parsing.ScenarioGrammar
 
             #region 非終端記号の文法
             end.Rule = NewLine | Eof;
-            route.Rule = "Route" + equal + filePath + end | "Route" + equal + end;
-            vehicle.Rule = "Vehicle" + equal + filePath + end | "Vehicle" + equal + end;
-            image.Rule = "Image" + equal + filePath + end | "Image" + equal + end;
+            route.Rule = "Route" + equal + pathIdentifier + ToTerm("|") + pathIdentifier + end | "Route" + equal + end;
+            vehicle.Rule = "Vehicle" + equal + pathIdentifier + end | "Vehicle" + equal + end;
+            image.Rule = "Image" + equal + pathIdentifier + end | "Image" + equal + end;
             title.Rule = "Title" + equal + text + end | "Title" + equal + end;
             routeTitle.Rule = "RouteTitle" + equal + text + end | "RouteTitle" + equal + end;
             vehicleTitle.Rule = "VehicleTitle" + equal + text + end | "VehicleTitle" + equal + end;
@@ -53,6 +54,9 @@ namespace Bve5_Parsing.ScenarioGrammar
             var comment2 = new CommentTerminal("Comment;", ";", "\n", "\r");
             this.NonGrammarTerminals.Add(comment1);
             this.NonGrammarTerminals.Add(comment2);
+
+            RegisterOperators(1, pathIdentifier);
+            RegisterOperators(3, ToTerm("|"));
 
             LanguageFlags = LanguageFlags.CreateAst | LanguageFlags.TailRecursive;
         }
