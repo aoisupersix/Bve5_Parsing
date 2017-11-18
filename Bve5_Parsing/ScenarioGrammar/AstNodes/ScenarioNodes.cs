@@ -10,37 +10,28 @@ namespace Bve5_Parsing.ScenarioGrammar.AstNodes
      * ScenarioGrammarのAST木定義
      */
 
-
+    /// <summary>
+    /// Title, RouteTitle, VehicleTitle, Author, Comment構文
+    /// </summary>
     public class TextNode : AstNode
     {
-        public AstNode Value { get; private set; }
+        public string Value { get; private set; }
 
         public override void Init(AstContext context, ParseTreeNode treeNode)
         {
             base.Init(context, treeNode);
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
-            if (nodes.Count > 2 && !nodes[2].ToString().Equals("End"))
-                Value = AddChild("Value", nodes[2]);
+            if (nodes.Count > 1)
+            {
+                Value = nodes[1].Token.Value.ToString();
+                AddChild("Text", nodes[1]);
+            }
         }
     }
 
-    public class StatementNode : AstNode
-    {
-        public List<AstNode> Values { get; private set; }
-
-        public override void Init(AstContext context, ParseTreeNode treeNode)
-        {
-            base.Init(context, treeNode);
-
-            if (Values == null)
-                Values = new List<AstNode>();
-
-            ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
-            if (nodes.Count > 0)
-                Values.Add(AddChild("Type", nodes[0]));
-        }
-    }
-
+    /// <summary>
+    /// 構文ノード
+    /// </summary>
     public class StatementsNode : AstNode
     {
         public List<AstNode> Statement { get; private set; }
@@ -49,31 +40,36 @@ namespace Bve5_Parsing.ScenarioGrammar.AstNodes
         {
             base.Init(context, treeNode);
 
-            if (Statement == null)
-                Statement = new List<AstNode>();
+            Statement = new List<AstNode>();
 
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
             foreach (ParseTreeNode node in nodes)
             {
-                if (node.ChildNodes.Count >= 1)
-                    Statement.Add(AddChild("Statement", node.ChildNodes[0]));
+                Statement.Add(AddChild("Statement", node));
             }
         }
     }
 
+    /// <summary>
+    /// ルートノード
+    /// </summary>
     public class ProgramNode : AstNode
     {
-        public AstNode Statements { get; private set; }
+        public List<AstNode> Statements { get; private set; }
         private string version;
 
         public override void Init(AstContext context, ParseTreeNode treeNode)
         {
             base.Init(context, treeNode);
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
+            Statements = new List<AstNode>();
 
             version = (string)nodes[2].Token.Text;
             AddChild("Version=" + version, nodes[1]);
-            Statements = AddChild("Statements", nodes[3]);
+            foreach(var statement in nodes[3].ChildNodes)
+            {
+                Statements.Add(AddChild("Statements", statement));
+            }
         }
 
         //protected override object DoEvaluate(ScriptThread thread)

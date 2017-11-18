@@ -31,7 +31,7 @@ namespace Bve5_Parsing.ScenarioGrammar
             var vehicleTitle = new NonTerminal("VehicleTitle", typeof(TextNode));
             var author = new NonTerminal("Author", typeof(TextNode));
             var scenarioComment = new NonTerminal("ScenarioComment", typeof(TextNode));
-            var statement = new NonTerminal("Statement", typeof(StatementNode));
+            var statement = new NonTerminal("Statement");
             var statements = new NonTerminal("Statements", typeof(StatementsNode));
             var program = new NonTerminal("Program", typeof(ProgramNode));
             #endregion 非終端記号の定義
@@ -62,7 +62,7 @@ namespace Bve5_Parsing.ScenarioGrammar
             this.NonGrammarTerminals.Add(comment1);
             this.NonGrammarTerminals.Add(comment2);
 
-            MarkTransient(end, nextFilePath);
+            MarkTransient(statement, end, nextFilePath);
             MarkPunctuation(equal, or, mul);
 
             LanguageFlags = LanguageFlags.CreateAst;
