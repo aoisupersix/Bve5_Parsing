@@ -15,6 +15,7 @@ namespace Bve5_Parsing.ScenarioGrammar.AstNodes
     /// </summary>
     public class PathStatementNode : AstNode
     {
+        public string Name { get; private set; }
         public List<FilePath> Value { get; private set; }
 
         public override void Init(AstContext context, ParseTreeNode treeNode)
@@ -22,12 +23,15 @@ namespace Bve5_Parsing.ScenarioGrammar.AstNodes
             base.Init(context, treeNode);
             Value = new List<FilePath>();
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
+
+            Name = nodes[0].Term.Name.ToString().ToLower();
+
             if (nodes.Count > 1)
             {
                 //ファイルパスの取得
                 FilePathNode filePath = (FilePathNode)nodes[1].AstNode;
                 Value.Add(filePath.PathData);
-                AddChild("path1=" + Value[0].Value + ",weight=" + Value[0].Weight, nodes[1]);
+                AddChild(Name + ":path1=" + Value[0].Value + ",weight=" + Value[0].Weight, nodes[1]);
 
                 if (nodes.Count > 2)
                 {
@@ -35,7 +39,7 @@ namespace Bve5_Parsing.ScenarioGrammar.AstNodes
                     {
                         FilePathNode nextFilePath = (FilePathNode)nodes[2].ChildNodes[i].AstNode;
                         Value.Add(nextFilePath.PathData);
-                        AddChild("path" + (i+2) + "=" + Value[i+1].Value + ",weight=" + Value[i+1].Weight, nodes[2].ChildNodes[i]);
+                        AddChild(Name + ":path" + (i+2) + "=" + Value[i+1].Value + ",weight=" + Value[i+1].Weight, nodes[2].ChildNodes[i]);
                     }
                 }
             }

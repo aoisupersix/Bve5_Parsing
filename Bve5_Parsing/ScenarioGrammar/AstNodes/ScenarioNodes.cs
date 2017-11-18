@@ -15,16 +15,18 @@ namespace Bve5_Parsing.ScenarioGrammar.AstNodes
     /// </summary>
     public class TextNode : AstNode
     {
+        public string Name { get; private set; }
         public string Value { get; private set; }
 
         public override void Init(AstContext context, ParseTreeNode treeNode)
         {
             base.Init(context, treeNode);
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
+            Name = nodes[0].Term.Name.ToString().ToLower();
             if (nodes.Count > 1)
             {
                 Value = nodes[1].Token.Value.ToString();
-                AddChild("Text", nodes[1]);
+                AddChild(Name + ":Text", nodes[1]);
             }
         }
     }
