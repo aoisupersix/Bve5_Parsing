@@ -55,6 +55,13 @@ namespace Bve5_Parsing.ScenarioGrammar
         /// シナリオの説明
         /// </summary>
         public string Comment { get; set; }
+
+        public ScenarioData()
+        {
+            Route = new List<FilePath>();
+            Vehicle = new List<FilePath>();
+            Image = new FilePath();
+        }
     }
 
     /// <summary>
