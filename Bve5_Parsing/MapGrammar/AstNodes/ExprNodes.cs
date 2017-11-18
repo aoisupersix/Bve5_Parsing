@@ -1,4 +1,5 @@
 ﻿
+using Irony;
 using Irony.Ast;
 using Irony.Interpreter;
 using Irony.Interpreter.Ast;
@@ -51,7 +52,10 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
                 {
                     //文字列の結合
                     if (op != "+")
-                        throw new ScriptException("数式が不正です。", new NotFiniteNumberException(), this.Location, null);
+                    {
+                        LogMessage logMessage = new LogMessage(ErrorLevel.Error, this.Location, "演算子が不正です。文字列の演算は\'+\'演算子のみ利用できます。", context.Language.ParserData.States[context.Language.ParserData.States.Count - 1]);
+                        context.Messages.Add(logMessage);
+                    }
                     Value = val1.ToString() + val2.ToString();
                 }
                 else

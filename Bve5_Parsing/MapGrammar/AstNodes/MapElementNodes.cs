@@ -74,63 +74,68 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// <param name="type">引数に指定する型(Optional)</param>
         protected void AddArguments(string argName, ParseTreeNodeList nodes, int idx, System.Type type = null)
         {
-            if (nodes.Count > idx)
-            {
-                object val;
-                if (nodes[idx].ToString().Equals("Expr"))
-                {
-                    //引数が数式
-                    ExprNode expr = (ExprNode)nodes[idx].AstNode;
-                    val = expr.Value;
-                    AddChild(argName + "=" + expr.Value, nodes[idx]);
-                }
-                else if (nodes[idx].ToString().Equals("NullableExpr"))
-                {
-                    //null許容数式
-                    NullableExprNode expr = (NullableExprNode)nodes[idx].AstNode;
-                    val = expr.Value;
-                    AddChild(argName + "=" + expr.Value, nodes[idx]);
-                }
-                else if (nodes[idx].AstNode.GetType() == typeof(IdentifierKeyNode))
-                {
-                    //IdenKey
-                    IdentifierKeyNode idenKey = (IdentifierKeyNode)nodes[idx].AstNode;
-                    val = idenKey.Value;
-                    AddChild(argName + "=" + idenKey.Value, nodes[idx]);
-                }
-                else if (nodes[idx].ToString().Equals("RawKey"))
-                {
-                    //RawKey
-                    RawKeyNode rawKey = (RawKeyNode)nodes[idx].AstNode;
-                    val = rawKey.Value;
-                    AddChild(argName + "=" + rawKey.Value, nodes[idx]);
-                }
-                else
-                {
-                    //引数がキー
-                    val = nodes[idx].Token.Value.ToString();
-                    AddChild(argName + "=" + nodes[idx].Token.Value, nodes[idx]);
-                }
+            object node = nodes[idx].AstNode;
+            object val;
 
-                //Dataに引数を登録する
-                if(type == null)
+            /*
+             * 引数の値を取得
+             */
+            if (node.GetType() == typeof(ExprNode))
+            {
+                //引数が数式
+                ExprNode expr = (ExprNode)node;
+                val = expr.Value;
+                AddChild(argName + "=" + expr.Value, nodes[idx]);
+            }
+            else if (node.GetType() == typeof(NullableExprNode))
+            {
+                //null許容数式
+                NullableExprNode expr = (NullableExprNode)node;
+                val = expr.Value;
+                AddChild(argName + "=" + expr.Value, nodes[idx]);
+            }
+            else if (node.GetType() == typeof(IdentifierKeyNode))
+            {
+                //IdenKey
+                IdentifierKeyNode idenKey = (IdentifierKeyNode)node;
+                val = idenKey.Value;
+                AddChild(argName + "=" + idenKey.Value, nodes[idx]);
+            }
+            else if (node.GetType() == typeof(RawKeyNode))
+            {
+                //RawKey
+                RawKeyNode rawKey = (RawKeyNode)node;
+                val = rawKey.Value;
+                AddChild(argName + "=" + rawKey.Value, nodes[idx]);
+            }
+            else
+            {
+                //引数がキー
+                val = nodes[idx].Token.Value.ToString();
+                AddChild(argName + "=" + nodes[idx].Token.Value, nodes[idx]);
+            }
+
+            /*
+             * 取得した値の登録
+             */
+            if (type == null)
+            {
+                //引数の型を無視して登録
+                Data.Arguments.Add(argName, val);
+            }
+            else
+            {
+                //引数の型に変換して登録
+                try
                 {
-                    //引数の型を無視して登録
-                    Data.Arguments.Add(argName, val);
+                    var v = System.Convert.ChangeType(val, type);
+                    Data.Arguments.Add(argName, v);
+
                 }
-                else
+                catch (System.FormatException e)
                 {
-                    try
-                    {
-                        var v = System.Convert.ChangeType(val, type);
-                        Data.Arguments.Add(argName, v);
-                        
-                    }
-                    catch(System.FormatException e)
-                    {
-                        LogMessage logMessage = new LogMessage(ErrorLevel.Error, this.Location, e.Message, Context.Language.ParserData.States[Context.Language.ParserData.States.Count - 1]);
-                        Context.Messages.Add(logMessage);
-                    }
+                    LogMessage logMessage = new LogMessage(ErrorLevel.Error, this.Location, e.Message, Context.Language.ParserData.States[Context.Language.ParserData.States.Count - 1]);
+                    Context.Messages.Add(logMessage);
                 }
             }
         }
