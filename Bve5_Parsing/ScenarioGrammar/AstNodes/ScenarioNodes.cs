@@ -13,21 +13,34 @@ namespace Bve5_Parsing.ScenarioGrammar.AstNodes
     /// <summary>
     /// Title, RouteTitle, VehicleTitle, Author, Comment構文
     /// </summary>
-    public class TextNode : AstNode
+    public class TextNode : Statement
+    {
+        public override void Init(AstContext context, ParseTreeNode treeNode)
+        {
+            base.Init(context, treeNode);
+            ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
+
+            if (nodes.Count > 1)
+            {
+                Value = nodes[1].Token.Value.ToString();
+                AddChild(Name + ":Text", nodes[1]);
+            }
+        }
+    }
+    
+    /// <summary>
+    /// 各構文の親クラス
+    /// </summary>
+    public class Statement : AstNode
     {
         public string Name { get; private set; }
-        public string Value { get; private set; }
+        public object Value { get; protected set; }
 
         public override void Init(AstContext context, ParseTreeNode treeNode)
         {
             base.Init(context, treeNode);
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
             Name = nodes[0].Term.Name.ToString().ToLower();
-            if (nodes.Count > 1)
-            {
-                Value = nodes[1].Token.Value.ToString();
-                AddChild(Name + ":Text", nodes[1]);
-            }
         }
     }
 
@@ -36,19 +49,38 @@ namespace Bve5_Parsing.ScenarioGrammar.AstNodes
     /// </summary>
     public class StatementsNode : AstNode
     {
-        public List<AstNode> Statement { get; private set; }
+        public List<AstNode> Statements { get; private set; }
 
         public override void Init(AstContext context, ParseTreeNode treeNode)
         {
             base.Init(context, treeNode);
 
-            Statement = new List<AstNode>();
+            Statements = new List<AstNode>();
 
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
             foreach (ParseTreeNode node in nodes)
             {
-                Statement.Add(AddChild("Statement", node));
+                Statements.Add(AddChild("Statement", node));
             }
+        }
+
+        /// <summary>
+        /// 構文を代入したScenarioDataクラスを返す
+        /// </summary>
+        /// <param name="thread">ScriptThread</param>
+        /// <returns>ScenarioDataクラス</returns>
+        protected override object DoEvaluate(ScriptThread thread)
+        {
+            thread.CurrentNode = this;
+
+            ScenarioData scenarioData = new ScenarioData();
+            foreach(var statement in Statements)
+            {
+                string name = statement.
+            }
+
+            thread.CurrentNode = Parent;
+            return base.DoEvaluate(thread);
         }
     }
 

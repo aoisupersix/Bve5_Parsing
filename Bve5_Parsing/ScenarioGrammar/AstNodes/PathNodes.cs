@@ -13,55 +13,50 @@ namespace Bve5_Parsing.ScenarioGrammar.AstNodes
     /// <summary>
     /// Route, Vehicle構文
     /// </summary>
-    public class PathStatementNode : AstNode
+    public class PathStatementNode : Statement
     {
-        public string Name { get; private set; }
-        public List<FilePath> Value { get; private set; }
-
         public override void Init(AstContext context, ParseTreeNode treeNode)
         {
             base.Init(context, treeNode);
-            Value = new List<FilePath>();
+            List<FilePath> paths = new List<FilePath>();
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
-
-            Name = nodes[0].Term.Name.ToString().ToLower();
 
             if (nodes.Count > 1)
             {
                 //ファイルパスの取得
                 FilePathNode filePath = (FilePathNode)nodes[1].AstNode;
-                Value.Add(filePath.PathData);
-                AddChild(Name + ":path1=" + Value[0].Value + ",weight=" + Value[0].Weight, nodes[1]);
+                paths.Add(filePath.PathData);
+                AddChild(Name + ":path1=" + paths[0].Value + ",weight=" + paths[0].Weight, nodes[1]);
 
                 if (nodes.Count > 2)
                 {
                     for (int i = 0; i < nodes[2].ChildNodes.Count; i++)
                     {
                         FilePathNode nextFilePath = (FilePathNode)nodes[2].ChildNodes[i].AstNode;
-                        Value.Add(nextFilePath.PathData);
-                        AddChild(Name + ":path" + (i+2) + "=" + Value[i+1].Value + ",weight=" + Value[i+1].Weight, nodes[2].ChildNodes[i]);
+                        paths.Add(nextFilePath.PathData);
+                        AddChild(Name + ":path" + (i+2) + "=" + paths[i+1].Value + ",weight=" + paths[i+1].Weight, nodes[2].ChildNodes[i]);
                     }
                 }
             }
+            Value = paths;
         }
     }
 
     /// <summary>
     /// Image構文
     /// </summary>
-    public class ImageNode : AstNode
+    public class ImageNode : Statement
     {
-        public string Value { get; private set; }
-
         public override void Init(AstContext context, ParseTreeNode treeNode)
         {
             base.Init(context, treeNode);
             ParseTreeNodeList nodes = treeNode.GetMappedChildNodes();
+
             if (nodes.Count > 1)
             {
                 //ファイルパスの取得
                 Value = nodes[1].Token.Value.ToString();
-                AddChild("Path=" + Value, nodes[1]);
+                AddChild(Name + ":Path=" + Value, nodes[1]);
             }
         }
     }
