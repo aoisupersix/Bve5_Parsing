@@ -4,7 +4,7 @@ using Bve5_Parsing.ScenarioGrammar.AstNodes;
 
 namespace Bve5_Parsing.ScenarioGrammar
 {
-    [Language("ScenarioGrammar", "0.1", "Bve5.7 Scenario file grammar.")]
+    [Language("ScenarioGrammar", "0.2", "Bve5.7 Scenario file grammar.")]
     class ScenarioGrammar : InterpretedLanguageGrammar
     {
         public ScenarioGrammar() : base(false)

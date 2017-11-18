@@ -35,6 +35,8 @@ namespace Bve5_Parsing
                     line = Console.ReadLine();
                 }
 
+                Console.WriteLine(input);
+
                 switch (select)
                 {
                     case "0":

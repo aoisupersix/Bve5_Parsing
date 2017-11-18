@@ -60,7 +60,6 @@ namespace Bve5_Parsing.ScenarioGrammar
         {
             Route = new List<FilePath>();
             Vehicle = new List<FilePath>();
-            Image = new FilePath();
         }
     }
 
