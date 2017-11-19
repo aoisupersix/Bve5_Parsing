@@ -100,7 +100,9 @@
     <Compile Include="MapGrammar\Vars.cs" />
     <Compile Include="ExtraChars.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScenarioGrammar\AstNodes\PathNodes.cs" />
     <Compile Include="ScenarioGrammar\AstNodes\ScenarioNodes.cs" />
+    <Compile Include="ScenarioGrammar\ScenarioData.cs" />
     <Compile Include="ScenarioGrammar\ScenarioGrammar.cs" />
   </ItemGroup>
   <ItemGroup>
