@@ -38,6 +38,7 @@ Bve5の構文はどのように処理されているのか？という疑問を�
     - namespace: **MapGrammar**
     - 出力: **MapDataクラス**
     構文解析の結果は、MapDataクラスで返します。MapDataクラスは以下のフィールドで構成されています。
+
       - **string Version**: バージョン情報
       - **string Encoding**: ファイルエンコーディング
       - **string StructureListPath**: ストラクチャリストの相対パス
@@ -47,15 +48,15 @@ Bve5の構文はどのように処理されているのか？という疑問を�
       - **string Sound3DListPath**: 固定音源リストの相対パス
       - **List\<SyntaxData\> Statements**: 各構文情報をまとめたSyntaxDataクラスのリスト
 
-    Statementsは各構文情報をまとめたSyntaxDataクラスのリストを返します。
-    SyntaxDataクラスは以下のフィールドで構成されてます。
+    - そのうち、Statementsは各構文情報をまとめたSyntaxDataクラスのリストを返します。SyntaxDataクラスは以下のフィールドで構成されてます。
+
       - **double Distance**: 構文の距離程
       - **string[] MapElement**: 構文のマップ要素(ex.Structure,Repeaterなど)
       - **string Key**: 構文のキー(Track['この部分'])
       - **string Function**: 構文の関数名(ex.Interpolate)
       - **Dictionary\<string, object\> Arguments**: 構文の引数名。引数がキーであれば型はstring、引数が数値であれば型はdoubleで返します。
 
-    詳しくは、[MapData.cs](/Bve5_Parsing/MapGrammar/MapData.cs)や、[MapElementNode.cs](/Bve5_Parsing/MapGrammar/AstNodes/MapElementNode.cs)を参照してください
+    詳しくは、[MapData.cs](/Bve5_Parsing/MapGrammar/MapData.cs)や、[MapElementNodes.cs](/Bve5_Parsing/MapGrammar/AstNodes/MapElementNodes.cs)を参照してください
 
 その他は今後作っていきます👍
 
