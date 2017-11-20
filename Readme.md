@@ -56,7 +56,7 @@ Bve5の構文はどのように処理されているのか？という疑問を�
       - **string Function**: 構文の関数名(ex.Interpolate)
       - **Dictionary\<string, object\> Arguments**: 構文の引数名。引数がキーであれば型はstring、引数が数値であれば型はdoubleで返します。
 
-    詳しくは、[MapData.cs](/Bve5_Parsing/MapGrammar/MapData.cs)や、[MapElementNodes.cs](/Bve5_Parsing/MapGrammar/AstNodes/MapElementNodes.cs)を参照してください
+    詳しくは、[MapData.cs](/Bve5_Parsing/MapGrammar/MapData.cs)を参照してください
 
 その他は今後作っていきます👍
 
@@ -78,7 +78,7 @@ using Bve5_Parsing.MapGrammar;
 
 ...
     string input; //String to be analyzed
-    ScriptApp app = new ScriptApp(new LanguageData(new MapGrammar.MapGrammar()));
+    ScriptApp app = new ScriptApp(new LanguageData(new MapGrammar()));
     try
     {
         MapData result = (MapData)app.Evaluate(input); //result data
