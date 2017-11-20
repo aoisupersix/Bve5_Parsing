@@ -146,7 +146,7 @@ namespace Bve5_Parsing
                 Console.WriteLine("Sound3DListPath:{0}", result.Sound3DListPath);
 
                 Console.WriteLine("----------------------------");
-                foreach (MapGrammar.AstNodes.SyntaxData syntaxData in result.Statements)
+                foreach (SyntaxData syntaxData in result.Statements)
                 {
                     Console.WriteLine("Distance:{0}", syntaxData.Distance);
                     for (int i = 0; i < syntaxData.MapElement.Length; i++)
