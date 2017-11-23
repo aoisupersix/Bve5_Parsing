@@ -131,9 +131,10 @@ namespace Bve5_Parsing
             Console.WriteLine("MapGrammar Parser Output:");
 
             ScriptApp app = new ScriptApp(new LanguageData(new MapGrammar.MapGrammar()));
-
+            Parser parser = app.Parser;
             try
             {
+                parser.Parse(input);
                 MapData result = (MapData)app.Evaluate(input);
 
                 //結果表示
@@ -181,6 +182,11 @@ namespace Bve5_Parsing
                     //Other error
                     Console.Error.WriteLine("{0}: {1}", e.Location, e.Message);
                 }
+            }
+            finally
+            {
+                ParseTree tree = parser.Context.CurrentParseTree;
+                Evaluator evaluator = new Evaluator(tree);
             }
         }
     }
