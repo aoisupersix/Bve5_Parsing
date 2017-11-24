@@ -1,4 +1,0 @@
-language: csharp
-solution: Bve5_Parsing.sln
-install:
-    - nuget restore Bve5_Parsing.sln
