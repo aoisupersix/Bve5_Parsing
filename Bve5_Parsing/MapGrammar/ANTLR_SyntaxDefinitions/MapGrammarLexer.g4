@@ -1,10 +1,15 @@
 lexer grammar MapGrammarLexer;
 
-//各構文
+//マップ要素名
 CURVE : C U R V E;
+
+//関数名
+BEGIN : B E G I N;
 
 //ステートメント区切り
 END : ';';
+DOT : '.';
+COMMA : ',';
 
 //数字
 NUM : '0'..'9'+ ('.' ('0'..'9')+)?;
@@ -24,16 +29,6 @@ MOD : '%';
 //括弧
 OPN_PAR : '(';
 CLS_PAR : ')';
-
-//文字列
-QUOTE : '\'' -> pushMode(STRING_MODE) ;
-WS : [ \t\r\n]+ -> skip ;
-NEWLINE : ( '\r' '\n'? | '\n');
-OUTER_CHAR : . -> skip ;
-
-mode STRING_MODE;
-RQUOTE : '\'' -> popMode ;
-CHAR : . ;
 
 //ignore case
 fragment A:('a'|'A');
@@ -62,3 +57,14 @@ fragment W:('w'|'W');
 fragment X:('x'|'X');
 fragment Y:('y'|'Y');
 fragment Z:('z'|'Z');
+
+WHITESPACE : (' ' | '\t' | '\r' | '\n' )+ -> channel(HIDDEN);
+
+//文字列
+QUOTE : '\'' -> pushMode(STRING_MODE) ;
+//NEWLINE : ( '\r' '\n'? | '\n');
+OUTER_CHAR : . -> skip ;
+
+mode STRING_MODE;
+RQUOTE : '\'' -> popMode ;
+CHAR : . ;

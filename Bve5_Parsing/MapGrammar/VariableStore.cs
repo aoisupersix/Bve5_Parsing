@@ -5,9 +5,9 @@ namespace Bve5_Parsing.MapGrammar
     /// <summary>
     /// 変数の管理クラス
     /// </summary>
-    public static class Vars
+    public static class VariableStore
     {
-        public static Dictionary<string, object> VarDictionary { get; private set; }
+        public static Dictionary<string, object> Vars { get; private set; }
 
         /// <summary>
         /// 変数を追加、もしくは上書きします。
@@ -16,10 +16,10 @@ namespace Bve5_Parsing.MapGrammar
         /// <param name="val">変数の値</param>
         public static void SetVar(string key, object val)
         {
-            if (VarDictionary.ContainsKey(key))
-                VarDictionary[key] = val;
+            if (Vars.ContainsKey(key))
+                Vars[key] = val;
             else
-                VarDictionary.Add(key, val);
+                Vars.Add(key, val);
         }
 
         /// <summary>
@@ -29,15 +29,18 @@ namespace Bve5_Parsing.MapGrammar
         /// <returns>変数の値</returns>
         public static object GetVar(string key)
         {
-            if (VarDictionary.ContainsKey(key))     /*変数が登録されてる*/
-                return VarDictionary[key];
-            else                                    /*変数が登録されていない*/
+            if (Vars.ContainsKey(key))     /*変数が登録されてる*/
+                return Vars[key];
+            else                           /*変数が登録されていない*/
                 return 0;
         }
 
+        /// <summary>
+        /// 変数をすべてクリアします。
+        /// </summary>
         public static void ClearVar()
         {
-            VarDictionary = new Dictionary<string, object>();
+            Vars = new Dictionary<string, object>();
         }
     }
 }

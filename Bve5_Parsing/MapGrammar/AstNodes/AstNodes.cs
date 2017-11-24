@@ -15,17 +15,20 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     /// </summary>
 	internal abstract class MapGrammarAstNodes { }
 
-    #region VarAssign AST Nodes
-    //TODO あとで消す
-    internal class VarAssignsNode : MapGrammarAstNodes
+    /// <summary>
+    /// ルートノード
+    /// </summary>
+    internal class RootNode : MapGrammarAstNodes
     {
-        public List<MapGrammarAstNodes> VarAssigns { get; set; }
-
-        internal VarAssignsNode()
-        {
-            VarAssigns = new List<MapGrammarAstNodes>();
-        }
+        public List<MapGrammarAstNodes> StatementList { get; private set; }
     }
+
+    internal class CurveNode : MapGrammarAstNodes
+    {
+
+    }
+
+    #region VarAssign AST Nodes
 
     /// <summary>
     /// 変数宣言AstNode

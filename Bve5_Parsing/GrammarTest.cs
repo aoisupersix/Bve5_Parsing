@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Bve5_Parsing.MapGrammar;
+using System;
 using System.Collections.Generic;
 
 
@@ -73,6 +74,8 @@ namespace Bve5_Parsing
             Console.WriteLine("====================================");
             Console.WriteLine("MapGrammar Parser Output:");
 
+            MapGrammarParser parser = new MapGrammarParser();
+            parser.Parse(input);
         }
     }
 }

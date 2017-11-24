@@ -9,7 +9,6 @@ namespace Bve5_Parsing.MapGrammar
 
     internal abstract class AstVisitor<T>
     {
-        public abstract T Visit(VarAssignsNode node);
         public abstract T Visit(VarAssignNode node);
         public abstract T Visit(AdditionNode node);
         public abstract T Visit(SubtractionNode node);
@@ -29,20 +28,11 @@ namespace Bve5_Parsing.MapGrammar
 
     internal class EvaluateMapGrammarVisitor : AstVisitor<object>
     {
-        public override object Visit(VarAssignsNode node)
-        {
-            foreach (var varAssign in node.VarAssigns)
-            {
-                Visit(varAssign);
-            }
-
-            return true;
-        }
 
         public override object Visit(VarAssignNode node)
         {
             var val = Visit(node.Value);
-            Vars.SetVar(node.VarName, val);
+            VariableStore.SetVar(node.VarName, val);
             return val;
         }
 
@@ -102,7 +92,7 @@ namespace Bve5_Parsing.MapGrammar
 
         public override object Visit(VarNode node)
         {
-            return Vars.GetVar(node.Key);
+            return VariableStore.GetVar(node.Key);
         }
     }
 }

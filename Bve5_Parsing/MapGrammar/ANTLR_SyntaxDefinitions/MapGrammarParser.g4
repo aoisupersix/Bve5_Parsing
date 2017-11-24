@@ -3,16 +3,23 @@ options{
 	tokenVocab=MapGrammarLexer;
 }
 
-compileUnit :
-	varAssign+ EOF
+root :
+	statement+
 	;
 
 statement :
-	CURVE expr END
+	  CURVE curve END								#curveState
+	| varAssign END									#varAssignState
 	;
 
+//ã»ê¸
+curve :
+	DOT BEGIN OPN_PAR radius=expr (COMMA cant=expr)? CLS_PAR
+	;
+
+//ïœêî/êîéÆ
 varAssign :
-	v=var EQUAL expr END;
+	v=var EQUAL expr;
 
 expr :
 	  OPN_PAR expr CLS_PAR							#parensExpr

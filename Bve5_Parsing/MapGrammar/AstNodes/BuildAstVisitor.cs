@@ -7,20 +7,68 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
 {
 
     /// <summary>
-    /// CSTを辿ってASTを作成する
+    /// CSTを辿ってASTを作成するVisitorクラス
     /// </summary>
     internal class BuildAstVisitor : MapGrammarParserBaseVisitor<MapGrammarAstNodes>
     {
-        public override MapGrammarAstNodes VisitCompileUnit([NotNull] SyntaxDefinitions.MapGrammarParser.CompileUnitContext context)
+        /// <summary>
+        /// ルートノード
+        /// ステートメント+をノードに追加する
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
+        public override MapGrammarAstNodes VisitRoot([NotNull] SyntaxDefinitions.MapGrammarParser.RootContext context)
         {
-            var node = new VarAssignsNode();
-            foreach (var assign in context.varAssign())
+            var node = new RootNode();
+            foreach (var state in context.statement())
             {
-                node.VarAssigns.Add(Visit(assign));
+                node.StatementList.Add(Visit(state));
             }
             return node;
         }
 
+        #region Statement Visitors
+
+        /// <summary>
+        /// ステートメントノード(曲線)
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
+        public override MapGrammarAstNodes VisitCurveState([NotNull] SyntaxDefinitions.MapGrammarParser.CurveStateContext context)
+        {
+            return base.Visit(context.curve());
+        }
+
+        /// <summary>
+        /// ステートメントノード(変数宣言)
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
+        public override MapGrammarAstNodes VisitVarAssignState([NotNull] SyntaxDefinitions.MapGrammarParser.VarAssignStateContext context)
+        {
+            return base.Visit(context.varAssign());
+        }
+        #endregion Statement Visitors
+
+        #region Curve Visitors
+        /// <summary>
+        /// 自軌道の平面曲線ノード
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
+        public override MapGrammarAstNodes VisitCurve([NotNull] SyntaxDefinitions.MapGrammarParser.CurveContext context)
+        {
+            return base.VisitCurve(context);
+        }
+        #endregion Curve Visitors
+
+        #region Expression & Variable Visitors
+
+        /// <summary>
+        /// 変数宣言ノード
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
         public override MapGrammarAstNodes VisitVarAssign([NotNull] SyntaxDefinitions.MapGrammarParser.VarAssignContext context)
         {
 
@@ -31,11 +79,21 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
             };
         }
 
+        /// <summary>
+        /// 括弧数式ノード
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
         public override MapGrammarAstNodes VisitParensExpr([NotNull] SyntaxDefinitions.MapGrammarParser.ParensExprContext context)
         {
             return base.Visit(context.expr());
         }
 
+        /// <summary>
+        /// ユーナリ演算ノード
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
         public override MapGrammarAstNodes VisitUnaryExpr([NotNull] SyntaxDefinitions.MapGrammarParser.UnaryExprContext context)
         {
             switch (context.op.Type)
@@ -49,6 +107,11 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
             }
         }
 
+        /// <summary>
+        /// 演算ノード
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
         public override MapGrammarAstNodes VisitInfixExpr([NotNull] SyntaxDefinitions.MapGrammarParser.InfixExprContext context)
         {
             InfixExpressionNode node;
@@ -80,19 +143,36 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
             return node;
         }
 
+        /// <summary>
+        /// 項ノード
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
         public override MapGrammarAstNodes VisitNumberExpr([NotNull] SyntaxDefinitions.MapGrammarParser.NumberExprContext context)
         {
             return new NumberNode { Value = double.Parse(context.num.Text, System.Globalization.NumberStyles.AllowDecimalPoint) };
         }
 
+        /// <summary>
+        /// 文字列ノード
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
         public override MapGrammarAstNodes VisitStringExpr([NotNull] SyntaxDefinitions.MapGrammarParser.StringExprContext context)
         {
             return new StringNode { Value = context.str.text };
         }
 
+        /// <summary>
+        /// 変数ノード
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
         public override MapGrammarAstNodes VisitVarExpr([NotNull] SyntaxDefinitions.MapGrammarParser.VarExprContext context)
         {
             return new VarNode { Key = context.v.varName };
         }
+
+        #endregion Expression & Variable Visitors
     }
 }
