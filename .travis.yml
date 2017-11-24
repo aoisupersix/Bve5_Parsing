@@ -6,5 +6,4 @@ before_install:
 before_script:
   - nuget restore Bve5_Parsing.sln
 after_script:
-  - nunit-console IronyTest/bin/Debug/Irony.dll
-  - nunit-console IronyTest/bin/Debug/Irony.Interpreter.dll
+  - nunit-console Bve5_Parsing/bin/Debug/Antlr4.Runtime.dll
