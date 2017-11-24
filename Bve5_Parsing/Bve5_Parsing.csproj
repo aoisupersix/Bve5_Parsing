@@ -67,10 +67,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GrammarTest.cs" />
+    <Compile Include="MapGrammar\AstEvaluator.cs" />
+    <Compile Include="MapGrammar\AstNodes\AstNodes.cs" />
+    <Compile Include="MapGrammar\AstNodes\BuildAstVisitor.cs" />
+    <Compile Include="MapGrammar\ErrorListener.cs" />
+    <Compile Include="MapGrammar\MapGrammarParser.cs" />
+    <Compile Include="MapGrammar\VariableStore.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <Antlr4 Include="MapGrammar\ANTLR_SyntaxDefinitions\MapGrammarLexer.g4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace>Bve5_Parsing.MapGrammar.SyntaxDefinitions</CustomToolNamespace>
+    </Antlr4>
+    <Antlr4 Include="MapGrammar\ANTLR_SyntaxDefinitions\MapGrammarParser.g4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace>Bve5_Parsing.MapGrammar.SyntaxDefinitions</CustomToolNamespace>
+    </Antlr4>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -85,6 +99,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
