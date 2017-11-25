@@ -9,6 +9,8 @@ namespace Bve5_Parsing.MapGrammar
 
     internal abstract class AstVisitor<T>
     {
+        public abstract T Visit(RootNode node);
+        public abstract T Visit(CurveNode node);
         public abstract T Visit(VarAssignNode node);
         public abstract T Visit(AdditionNode node);
         public abstract T Visit(SubtractionNode node);
@@ -29,11 +31,48 @@ namespace Bve5_Parsing.MapGrammar
     internal class EvaluateMapGrammarVisitor : AstVisitor<object>
     {
 
+        /// <summary>
+        /// ルートノードの評価
+        /// </summary>
+        /// <param name="node">ルートノード</param>
+        /// <returns>解析結果のMapData</returns>
+        public override object Visit(RootNode node)
+        {
+            MapData evaluateData = new MapData();
+            foreach(var state in node.StatementList)
+            {
+                object childData = Visit(state);
+                if(childData != null)
+                    evaluateData.Statements.Add((SyntaxData)childData);
+            }
+
+            return evaluateData;
+        }
+
+        /// <summary>
+        /// カーブノードの評価
+        /// </summary>
+        /// <param name="node">カーブノード</param>
+        /// <returns>解析結果のSyntaxDataクラス</returns>
+        public override object Visit(CurveNode node)
+        {
+            SyntaxData returnData = new SyntaxData();
+            //構文情報を登録する
+            returnData.Distance = 0; //TODO
+            returnData.Function = node.Function;
+            foreach(string key in node.Arguments.Keys)
+            {
+                returnData.Arguments.Add(key, Visit(node.Arguments[key]));
+            }
+
+            return returnData;
+        }
+
         public override object Visit(VarAssignNode node)
         {
             var val = Visit(node.Value);
             VariableStore.SetVar(node.VarName, val);
-            return val;
+            return null;    //変数宣言ステートメントは不要なので捨てる
         }
 
         public override object Visit(AdditionNode node)

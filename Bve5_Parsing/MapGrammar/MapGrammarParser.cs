@@ -27,8 +27,8 @@ namespace Bve5_Parsing.MapGrammar
                 var cst = parser.root();
                 var ast = new BuildAstVisitor().VisitRoot(cst);
 
-                var value = new EvaluateMapGrammarVisitor().Visit(ast);
-
+                MapData value = (MapData)new EvaluateMapGrammarVisitor().Visit(ast);
+                
                 foreach (var key in VariableStore.Vars.Keys)
                 {
                     Console.WriteLine("{0} = {1}", key, VariableStore.GetVar(key));

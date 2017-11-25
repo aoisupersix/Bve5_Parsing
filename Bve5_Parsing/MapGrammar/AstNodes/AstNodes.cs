@@ -20,12 +20,25 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     /// </summary>
     internal class RootNode : MapGrammarAstNodes
     {
-        public List<MapGrammarAstNodes> StatementList { get; private set; }
+        public List<MapGrammarAstNodes> StatementList { get; set; }
+        public RootNode()
+        {
+            StatementList = new List<MapGrammarAstNodes>();
+        }
     }
 
+    /// <summary>
+    /// カーブノード
+    /// </summary>
     internal class CurveNode : MapGrammarAstNodes
     {
+        public string Function { get; set; }
+        public Dictionary<string, MapGrammarAstNodes> Arguments { get; set; }
 
+        public CurveNode()
+        {
+            Arguments = new Dictionary<string, MapGrammarAstNodes>();
+        }
     }
 
     #region VarAssign AST Nodes

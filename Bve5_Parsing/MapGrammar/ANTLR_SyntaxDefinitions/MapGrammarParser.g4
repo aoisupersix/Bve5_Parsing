@@ -14,7 +14,7 @@ statement :
 
 //‹Èü
 curve :
-	DOT BEGIN OPN_PAR radius=expr (COMMA cant=expr)? CLS_PAR
+	DOT func1=BEGIN OPN_PAR radius=expr (COMMA cant=expr)? CLS_PAR
 	;
 
 //•Ï”/”®

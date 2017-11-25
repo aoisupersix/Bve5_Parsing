@@ -30,13 +30,13 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         #region Statement Visitors
 
         /// <summary>
-        /// ステートメントノード(曲線)
+        /// ステートメントノード(自軌道の平面曲線)
         /// </summary>
         /// <param name="context"></param>
         /// <returns></returns>
         public override MapGrammarAstNodes VisitCurveState([NotNull] SyntaxDefinitions.MapGrammarParser.CurveStateContext context)
         {
-            return base.Visit(context.curve());
+            return Visit(context.curve());
         }
 
         /// <summary>
@@ -58,7 +58,20 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// <returns></returns>
         public override MapGrammarAstNodes VisitCurve([NotNull] SyntaxDefinitions.MapGrammarParser.CurveContext context)
         {
-            return base.VisitCurve(context);
+            CurveNode node = new CurveNode();
+
+            node.Function = context.func1.Text.ToLower();
+            //引数の登録
+            switch (node.Function)
+            {
+                case "begin":                                                       /* Begin(radius, cant?) */
+                    node.Arguments.Add("radius", Visit(context.radius));
+                    if (context.cant != null)
+                        node.Arguments.Add("cant", Visit(context.cant));
+                    break;
+            }
+
+            return node;
         }
         #endregion Curve Visitors
 
