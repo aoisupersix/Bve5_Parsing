@@ -30,6 +30,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         #region Statement Visitors
 
         /// <summary>
+        /// ステートメントVisitor(距離程)
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
+        public override MapGrammarAstNodes VisitDistState([NotNull] SyntaxDefinitions.MapGrammarParser.DistStateContext context)
+        {
+            return Visit(context.distance());
+        }
+
+        /// <summary>
         /// ステートメントVisitor(自軌道の平面曲線)
         /// </summary>
         /// <param name="context"></param>
@@ -49,6 +59,19 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
             return base.Visit(context.varAssign());
         }
         #endregion Statement Visitors
+
+        #region Distance Visitors
+
+        /// <summary>
+        /// 距離程Visitor
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
+        public override MapGrammarAstNodes VisitDistance([NotNull] SyntaxDefinitions.MapGrammarParser.DistanceContext context)
+        {
+            return new DistanceNode { Value = Visit(context.expr()) };
+        }
+        #endregion Distance Visitors
 
         #region Curve Visitors
         /// <summary>

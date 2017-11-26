@@ -8,8 +8,14 @@ root :
 	;
 
 statement :
-	  CURVE curve END							#curveState
-	| varAssign END									#varAssignState
+	  distance END								#distState
+	| CURVE curve END							#curveState
+	| varAssign END								#varAssignState
+	;
+
+//‹——£’ö
+distance :
+	expr
 	;
 
 //‹Èü

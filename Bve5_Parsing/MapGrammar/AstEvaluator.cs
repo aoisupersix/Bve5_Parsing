@@ -10,6 +10,7 @@ namespace Bve5_Parsing.MapGrammar
     internal abstract class AstVisitor<T>
     {
         public abstract T Visit(RootNode node);
+        public abstract T Visit(DistanceNode node);
         public abstract T Visit(CurveNode node);
         public abstract T Visit(VarAssignNode node);
         public abstract T Visit(AdditionNode node);
@@ -30,6 +31,10 @@ namespace Bve5_Parsing.MapGrammar
 
     internal class EvaluateMapGrammarVisitor : AstVisitor<object>
     {
+        /// <summary>
+        /// 現在評価中の距離程
+        /// </summary>
+        private double nowDistance = 0;
 
         /// <summary>
         /// ルートノードの評価
@@ -49,6 +54,13 @@ namespace Bve5_Parsing.MapGrammar
             return evaluateData;
         }
 
+        public override object Visit(DistanceNode node)
+        {
+            nowDistance = (double)Visit(node.Value);
+
+            return null;
+        }
+
         /// <summary>
         /// カーブノードの評価
         /// </summary>
@@ -58,7 +70,7 @@ namespace Bve5_Parsing.MapGrammar
         {
             SyntaxData returnData = new SyntaxData();
             //構文情報を登録する
-            returnData.Distance = 0; //TODO
+            returnData.Distance = nowDistance;
             returnData.Function = node.Function;
             foreach(string key in node.Arguments.Keys)
             {

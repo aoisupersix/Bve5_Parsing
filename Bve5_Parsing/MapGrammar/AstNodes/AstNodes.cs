@@ -28,6 +28,14 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     }
 
     /// <summary>
+    /// 距離程ノード
+    /// </summary>
+    internal class DistanceNode : MapGrammarAstNodes
+    {
+        public MapGrammarAstNodes Value { get; set; }
+    }
+
+    /// <summary>
     /// カーブノード
     /// </summary>
     internal class CurveNode : MapGrammarAstNodes
