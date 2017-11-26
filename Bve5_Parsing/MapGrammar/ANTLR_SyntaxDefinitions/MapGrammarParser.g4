@@ -4,22 +4,27 @@ options{
 }
 
 root :
-	statement+
+	statement+ EOF
 	;
 
 statement :
-	  CURVE curve END								#curveState
+	  CURVE curve END							#curveState
 	| varAssign END									#varAssignState
 	;
 
 //ã»ê¸
 curve :
-	DOT func1=BEGIN OPN_PAR radius=expr (COMMA cant=expr)? CLS_PAR
+	DOT func1=BEGIN OPN_PAR radius=nullableExpr (COMMA cant=nullableExpr)? CLS_PAR
 	;
 
 //ïœêî/êîéÆ
 varAssign :
 	v=var EQUAL expr;
+
+nullableExpr :
+	expr
+	| /* epsilon */
+	;
 
 expr :
 	  OPN_PAR expr CLS_PAR							#parensExpr

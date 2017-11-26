@@ -12,7 +12,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     internal class BuildAstVisitor : MapGrammarParserBaseVisitor<MapGrammarAstNodes>
     {
         /// <summary>
-        /// ルートノード
+        /// ルートVisitor
         /// ステートメント+をノードに追加する
         /// </summary>
         /// <param name="context"></param>
@@ -30,7 +30,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         #region Statement Visitors
 
         /// <summary>
-        /// ステートメントノード(自軌道の平面曲線)
+        /// ステートメントVisitor(自軌道の平面曲線)
         /// </summary>
         /// <param name="context"></param>
         /// <returns></returns>
@@ -40,7 +40,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         }
 
         /// <summary>
-        /// ステートメントノード(変数宣言)
+        /// ステートメントVisitor(変数宣言)
         /// </summary>
         /// <param name="context"></param>
         /// <returns></returns>
@@ -52,7 +52,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
 
         #region Curve Visitors
         /// <summary>
-        /// 自軌道の平面曲線ノード
+        /// 自軌道の平面曲線Visitor
         /// </summary>
         /// <param name="context"></param>
         /// <returns></returns>
@@ -78,7 +78,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         #region Expression & Variable Visitors
 
         /// <summary>
-        /// 変数宣言ノード
+        /// 変数宣言Visitor
         /// </summary>
         /// <param name="context"></param>
         /// <returns></returns>
@@ -93,7 +93,20 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         }
 
         /// <summary>
-        /// 括弧数式ノード
+        /// null許容数式Visitor
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
+        public override MapGrammarAstNodes VisitNullableExpr([NotNull] SyntaxDefinitions.MapGrammarParser.NullableExprContext context)
+        {
+            if (context.ChildCount == 0)                    /* null */
+                return new NumberNode { Value = 0 };
+
+            return Visit(context.expr());
+        }
+
+        /// <summary>
+        /// 括弧数式Visitor
         /// </summary>
         /// <param name="context"></param>
         /// <returns></returns>
@@ -103,7 +116,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         }
 
         /// <summary>
-        /// ユーナリ演算ノード
+        /// ユーナリ演算Visitor
         /// </summary>
         /// <param name="context"></param>
         /// <returns></returns>
@@ -121,7 +134,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         }
 
         /// <summary>
-        /// 演算ノード
+        /// 演算Visitor
         /// </summary>
         /// <param name="context"></param>
         /// <returns></returns>
@@ -157,7 +170,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         }
 
         /// <summary>
-        /// 項ノード
+        /// 項Visitor
         /// </summary>
         /// <param name="context"></param>
         /// <returns></returns>
@@ -167,7 +180,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         }
 
         /// <summary>
-        /// 文字列ノード
+        /// 文字列Visitor
         /// </summary>
         /// <param name="context"></param>
         /// <returns></returns>
@@ -177,7 +190,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         }
 
         /// <summary>
-        /// 変数ノード
+        /// 変数Visitor
         /// </summary>
         /// <param name="context"></param>
         /// <returns></returns>
