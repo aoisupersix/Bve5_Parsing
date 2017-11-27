@@ -71,6 +71,7 @@
     <Compile Include="MapGrammar\AstNodes\AstNodes.cs" />
     <Compile Include="MapGrammar\AstNodes\BuildAstVisitor.cs" />
     <Compile Include="MapGrammar\ErrorListener.cs" />
+    <Compile Include="MapGrammar\ErrorStrategy.cs" />
     <Compile Include="MapGrammar\MapData.cs" />
     <Compile Include="MapGrammar\MapGrammarParser.cs" />
     <Compile Include="MapGrammar\VariableStore.cs" />

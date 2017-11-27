@@ -22,9 +22,13 @@ namespace Bve5_Parsing.MapGrammar
             CommonTokenStream commonTokneStream = new CommonTokenStream(lexer);
             SyntaxDefinitions.MapGrammarParser parser = new SyntaxDefinitions.MapGrammarParser(commonTokneStream);
 
+            parser.AddErrorListener(new ErrorListener());
+            parser.ErrorHandler = new MapGrammarErrorStrategy();
+
             try
             {
                 var cst = parser.root();
+                
                 var ast = new BuildAstVisitor().VisitRoot(cst);
 
                 MapData value = (MapData)new EvaluateMapGrammarVisitor().Visit(ast);
