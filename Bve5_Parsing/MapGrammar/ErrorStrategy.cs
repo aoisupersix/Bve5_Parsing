@@ -14,11 +14,11 @@ namespace Bve5_Parsing.MapGrammar
 
             ITokenStream tokenStream = (ITokenStream)recognizer.InputStream;
 
-            // Verify we are where we expect to be
-            while (tokenStream.La(1) != MapGrammarLexer.END)
-            {
-                Console.WriteLine(tokenStream.La(1));
+            Console.WriteLine(tokenStream.La(1));
 
+            // Verify we are where we expect to be
+            while (tokenStream.La(1) != MapGrammarLexer.END && tokenStream.La(1) != MapGrammarLexer.Eof)
+            {
                 // Get the next possible tokens
                 IntervalSet intervalSet = GetErrorRecoverySet(recognizer);
 

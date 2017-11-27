@@ -4,7 +4,7 @@ options{
 }
 
 root :
-	statement* EOF
+	(statement END)* EOF
 	;
 
 statement :
@@ -15,17 +15,17 @@ statement :
 
 //‹——£’ö
 distance :
-	expr END
+	expr
 	;
 
 //‹Èü
 curve :
-	DOT func1=BEGIN OPN_PAR radius=nullableExpr (COMMA cant=nullableExpr)? CLS_PAR END
+	DOT func1=BEGIN OPN_PAR radius=nullableExpr (COMMA cant=nullableExpr)? CLS_PAR
 	;
 
 //•Ï”/”®
 varAssign :
-	v=var EQUAL expr END;
+	v=var EQUAL expr;
 
 nullableExpr :
 	expr

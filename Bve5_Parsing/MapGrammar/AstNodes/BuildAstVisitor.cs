@@ -11,10 +11,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     /// </summary>
     internal class BuildAstVisitor : MapGrammarParserBaseVisitor<MapGrammarAstNodes>
     {
-        public override MapGrammarAstNodes VisitErrorNode(IErrorNode node)
-        {
-            return null;
-        }
+
         /// <summary>
         /// ルートVisitor
         /// ステートメント+をノードに追加する
@@ -27,8 +24,9 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
 
             foreach (var state in context.statement())
             {
-                Console.WriteLine(state.GetType());
-                node.StatementList.Add(base.Visit(state));
+                MapGrammarAstNodes child = base.Visit(state);
+                if(child != null)
+                    node.StatementList.Add(child);
             }
             return node;
         }
