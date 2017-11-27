@@ -36,7 +36,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     }
 
     /// <summary>
-    /// ステートメントノード MapElement.Function(Args)
+    /// ステートメントノード1 MapElement.Function(Args)
     /// </summary>
     internal class Syntax1 : MapGrammarAstNodes
     {
@@ -47,6 +47,39 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         public Syntax1()
         {
             Arguments = new Dictionary<string, MapGrammarAstNodes>();
+        }
+    }
+
+    /// <summary>
+    /// ステートメントノード2 MapElement[key].Function(Args)
+    /// </summary>
+    internal class Syntax2 : MapGrammarAstNodes
+    {
+        public string MapElementName { get; set; }
+        public string KeyName { get; set; }
+        public string FunctionName { get; set; }
+        public Dictionary<string, MapGrammarAstNodes> Arguments { get; set; }
+
+        public Syntax2()
+        {
+            Arguments = new Dictionary<string, MapGrammarAstNodes>();
+        }
+    }
+
+    /// <summary>
+    /// ステートメントノード3 MapElement[key].MapElement.Function(Args)
+    /// </summary>
+    internal class Syntax3 : MapGrammarAstNodes
+    {
+        public string[] MapElementNames { get; set; }
+        public string KeyName { get; set; }
+        public string FunctionName { get; set; }
+        public Dictionary<string, MapGrammarAstNodes> Arguments { get; set; }
+
+        public Syntax3()
+        {
+            Arguments = new Dictionary<string, MapGrammarAstNodes>();
+            MapElementNames = new string[2];
         }
     }
 

@@ -12,6 +12,8 @@ namespace Bve5_Parsing.MapGrammar
         public abstract T Visit(RootNode node);
         public abstract T Visit(DistanceNode node);
         public abstract T Visit(Syntax1 node);
+        public abstract T Visit(Syntax2 node);
+        public abstract T Visit(Syntax3 node);
         public abstract T Visit(VarAssignNode node);
         public abstract T Visit(AdditionNode node);
         public abstract T Visit(SubtractionNode node);
@@ -75,6 +77,49 @@ namespace Bve5_Parsing.MapGrammar
             returnData.MapElement[0] = node.MapElementName;
             returnData.Function = node.FunctionName;
             foreach(string key in node.Arguments.Keys)
+            {
+                returnData.Arguments.Add(key, Visit(node.Arguments[key]));
+            }
+
+            return returnData;
+        }
+
+        /// <summary>
+        /// 構文タイプ2の評価
+        /// </summary>
+        /// <param name="node">Syntax1</param>
+        /// <returns>解析結果のSyntaxDataクラス</returns>
+        public override object Visit(Syntax2 node)
+        {
+            SyntaxData returnData = new SyntaxData();
+            //構文情報を登録する
+            returnData.Distance = nowDistance;
+            returnData.MapElement = new string[1];
+            returnData.MapElement[0] = node.MapElementName;
+            returnData.Key = node.KeyName;
+            returnData.Function = node.FunctionName;
+            foreach (string key in node.Arguments.Keys)
+            {
+                returnData.Arguments.Add(key, Visit(node.Arguments[key]));
+            }
+
+            return returnData;
+        }
+
+        /// <summary>
+        /// 構文タイプ3の評価
+        /// </summary>
+        /// <param name="node">Syntax1</param>
+        /// <returns>解析結果のSyntaxDataクラス</returns>
+        public override object Visit(Syntax3 node)
+        {
+            SyntaxData returnData = new SyntaxData();
+            //構文情報を登録する
+            returnData.Distance = nowDistance;
+            returnData.MapElement = node.MapElementNames;
+            returnData.Key = node.KeyName;
+            returnData.Function = node.FunctionName;
+            foreach (string key in node.Arguments.Keys)
             {
                 returnData.Arguments.Add(key, Visit(node.Arguments[key]));
             }
