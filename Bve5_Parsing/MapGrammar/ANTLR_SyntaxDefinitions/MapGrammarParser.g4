@@ -27,7 +27,8 @@ curve :
 	| DOT func=BEGIN_TRANSITION OPN_PAR CLS_PAR
 	| DOT func=BEGIN OPN_PAR radius=nullableExpr (COMMA cant=nullableExpr)? CLS_PAR
 	| DOT func=END OPN_PAR CLS_PAR
-	| DOT func=INTERPOLATE OPN_PAR radius=nullableExpr CLS_PAR
+	| DOT func=INTERPOLATE OPN_PAR CLS_PAR
+	| DOT func=INTERPOLATE OPN_PAR radiusE=expr CLS_PAR
 	| DOT func=INTERPOLATE OPN_PAR radius=nullableExpr COMMA cant=nullableExpr CLS_PAR
 	| DOT func=CHANGE OPN_PAR radius=nullableExpr CLS_PAR
 	;
@@ -37,7 +38,7 @@ gradient :
 	  DOT func=BEGIN_TRANSITION OPN_PAR CLS_PAR
 	| DOT func=BEGIN OPN_PAR gradientArgs=nullableExpr CLS_PAR	//à¯êîñºgradientÇ™îÌÇÈÇÃÇ≈gradientArgsÇ…ÇµÇƒÇ¢ÇÈ
 	| DOT func=END OPN_PAR CLS_PAR
-	| DOT func=INTERPOLATE OPN_PAR gradientArgs=nullableExpr CLS_PAR
+	| DOT func=INTERPOLATE OPN_PAR gradientArgsE=expr CLS_PAR
 	;
 
 //ïœêî/êîéÆ

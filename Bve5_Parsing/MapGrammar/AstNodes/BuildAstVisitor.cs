@@ -142,10 +142,20 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
                 case "end":                                                         /* End() */
                     break;
                 case "interpolate":                                                 /* Interpolate(radius?, cant?) */
-                    if (context.radius != null)
+                    if (context.radiusE != null)
+                        node.Arguments.Add("radius", Visit(context.radiusE));
+                    else if (context.radius != null)
+                    {
                         node.Arguments.Add("radius", Visit(context.radius));
-                    if (context.cant != null)
-                        node.Arguments.Add("cant", Visit(context.cant));
+
+                        if (context.cant != null)
+                            node.Arguments.Add("cant", Visit(context.cant));
+                    }
+                    else
+                    {
+                        //引数なし TODO
+                    }
+
                     break;
                 case "change":                                                      /* Change(radius) */
                     node.Arguments.Add("radius", Visit(context.radius));
@@ -180,8 +190,12 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
                 case "end":                                                         /* End() */
                     break;
                 case "interpolate":                                                 /* Interpolate(gradient?) */
-                    if (context.gradientArgs != null)
-                        node.Arguments.Add("gradient", Visit(context.gradientArgs));
+                    if (context.gradientArgsE != null)
+                        node.Arguments.Add("gradient", Visit(context.gradientArgsE));
+                    else
+                    {
+                        //引数なし TODO
+                    }
                     break;
             }
             return node;
