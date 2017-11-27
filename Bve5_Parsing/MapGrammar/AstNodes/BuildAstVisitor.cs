@@ -119,7 +119,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
             Syntax1 node = new Syntax1();   //Curve構文は全て構文タイプ1
 
             node.MapElementName = "curve";
-            node.FunctionName = context.func1.Text.ToLower();
+            node.FunctionName = context.func.Text.ToLower();
             //引数の登録
             switch (node.FunctionName)
             {
@@ -168,7 +168,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         {
             Syntax1 node = new Syntax1();   //Gradient構文は全て構文タイプ1
             node.MapElementName = "gradient";
-            node.FunctionName = context.func1.Text.ToLower();
+            node.FunctionName = context.func.Text.ToLower();
 
             switch (node.FunctionName)
             {

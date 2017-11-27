@@ -62,9 +62,9 @@ namespace Bve5_Parsing.MapGrammar
         }
 
         /// <summary>
-        /// カーブノードの評価
+        /// 構文タイプ1の評価
         /// </summary>
-        /// <param name="node">カーブノード</param>
+        /// <param name="node">Syntax1</param>
         /// <returns>解析結果のSyntaxDataクラス</returns>
         public override object Visit(Syntax1 node)
         {
@@ -82,12 +82,19 @@ namespace Bve5_Parsing.MapGrammar
             return returnData;
         }
 
+        /// <summary>
+        /// 変数宣言ノードの評価
+        /// </summary>
+        /// <param name="node"></param>
+        /// <returns></returns>
         public override object Visit(VarAssignNode node)
         {
             var val = Visit(node.Value);
             VariableStore.SetVar(node.VarName, val);
             return null;    //変数宣言ステートメントは不要なので捨てる
         }
+
+        #region Evaluate Expression Nodes
 
         public override object Visit(AdditionNode node)
         {
@@ -147,5 +154,7 @@ namespace Bve5_Parsing.MapGrammar
         {
             return VariableStore.GetVar(node.Key);
         }
+
+        #endregion Evaluate Expression Nodes
     }
 }
