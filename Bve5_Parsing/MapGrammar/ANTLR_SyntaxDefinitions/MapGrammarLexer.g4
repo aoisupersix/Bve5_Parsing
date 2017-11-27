@@ -7,6 +7,7 @@ TRACK : T R A C K;
 
 X_ELEMENT : X;
 Y_ELEMENT : Y;
+CANT_ELEMENT : C A N T;
 
 //関数名
 SET_GAUGE : S E T G A U G E;
@@ -17,6 +18,7 @@ BEGIN : B E G I N;
 END : E N D;
 INTERPOLATE : I N T E R P O L A T E;
 CHANGE : C H A N G E;
+POSITION : P O S I T I O N;
 
 //ステートメント区切り
 STATE_END : ';';
