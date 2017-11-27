@@ -27,16 +27,11 @@ namespace Bve5_Parsing.MapGrammar
 
             try
             {
-                var cst = parser.root();
-                
+                var cst = parser.root();       
                 var ast = new BuildAstVisitor().VisitRoot(cst);
 
                 MapData value = (MapData)new EvaluateMapGrammarVisitor().Visit(ast);
                 
-                foreach (var key in VariableStore.Vars.Keys)
-                {
-                    Console.WriteLine("{0} = {1}", key, VariableStore.GetVar(key));
-                }
             }
             catch (Exception e)
             {

@@ -4,7 +4,7 @@ options{
 }
 
 root :
-	(statement END)* EOF
+	(statement STATE_END)* EOF
 	;
 
 statement :
@@ -20,7 +20,15 @@ distance :
 
 //ã»ê¸
 curve :
-	DOT func1=BEGIN OPN_PAR radius=nullableExpr (COMMA cant=nullableExpr)? CLS_PAR
+	  DOT func1=SET_GAUGE OPN_PAR value=nullableExpr CLS_PAR
+	| DOT func1=SET_CENTER OPN_PAR x=nullableExpr CLS_PAR
+	| DOT func1=SET_FUNCTION OPN_PAR id=nullableExpr CLS_PAR
+	| DOT func1=BEGIN_TRANSITION OPN_PAR CLS_PAR
+	| DOT func1=BEGIN OPN_PAR radius=nullableExpr (COMMA cant=nullableExpr)? CLS_PAR
+	| DOT func1=END OPN_PAR CLS_PAR
+	| DOT func1=INTERPOLATE OPN_PAR radius=nullableExpr CLS_PAR
+	| DOT func1=INTERPOLATE OPN_PAR radius=nullableExpr COMMA cant=nullableExpr CLS_PAR
+	| DOT func1=CHANGE OPN_PAR radius=nullableExpr CLS_PAR
 	;
 
 //ïœêî/êîéÆ

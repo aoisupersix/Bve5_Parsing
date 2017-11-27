@@ -101,11 +101,34 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
             //引数の登録
             switch (node.Function)
             {
+                case "setgauge":                                                    /* SetGauge(value) */
+                    node.Arguments.Add("value", Visit(context.value));
+                    break;
+                case "setcenter":                                                   /* SetCenter(x) */
+                    node.Arguments.Add("x", Visit(context.x));
+                    break;
+                case "setfunction":                                                 /* SetFunction(id) */
+                    node.Arguments.Add("id", Visit(context.id));
+                    break;
+                case "begintransition":                                             /* BeginTransition() */
+                    break;
                 case "begin":                                                       /* Begin(radius, cant?) */
                     node.Arguments.Add("radius", Visit(context.radius));
                     if (context.cant != null)
                         node.Arguments.Add("cant", Visit(context.cant));
                     break;
+                case "end":                                                         /* End() */
+                    break;
+                case "interpolate":                                                 /* Interpolate(radius?, cant?) */
+                    if (context.radius != null)
+                        node.Arguments.Add("radius", Visit(context.radius));
+                    if (context.cant != null)
+                        node.Arguments.Add("cant", Visit(context.cant));
+                    break;
+                case "change":                                                      /* Change(radius) */
+                    node.Arguments.Add("radius", Visit(context.radius));
+                    break;
+                
             }
 
             return node;

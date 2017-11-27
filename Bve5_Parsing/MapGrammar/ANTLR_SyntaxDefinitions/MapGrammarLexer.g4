@@ -4,10 +4,17 @@ lexer grammar MapGrammarLexer;
 CURVE : C U R V E;
 
 //関数名
+SET_GAUGE : S E T G A U G E;
+SET_CENTER : S E T C E N T E R;
+SET_FUNCTION : S E T F U N C T I O N;
+BEGIN_TRANSITION : B E G I N T R A N S I T I O N;
 BEGIN : B E G I N;
+END : E N D;
+INTERPOLATE : I N T E R P O L A T E;
+CHANGE : C H A N G E;
 
 //ステートメント区切り
-END : ';';
+STATE_END : ';';
 DOT : '.';
 COMMA : ',';
 
