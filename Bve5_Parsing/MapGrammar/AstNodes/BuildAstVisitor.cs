@@ -64,6 +64,26 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         }
 
         /// <summary>
+        /// ステートメントVisitor(縦曲線)
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
+        public override MapGrammarAstNodes VisitGradientState([NotNull] SyntaxDefinitions.MapGrammarParser.GradientStateContext context)
+        {
+            MapGrammarAstNodes node;
+            try
+            {
+                node = Visit(context.gradient());
+            }
+            catch (NullReferenceException)
+            {
+                node = null;
+            }
+
+            return node;
+        }
+
+        /// <summary>
         /// ステートメントVisitor(変数宣言)
         /// </summary>
         /// <param name="context"></param>
@@ -88,6 +108,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         #endregion Distance Visitors
 
         #region Curve Visitors
+
         /// <summary>
         /// 自軌道の平面曲線Visitor
         /// </summary>
@@ -134,6 +155,19 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
             return node;
         }
         #endregion Curve Visitors
+
+        #region Gradient Visitors
+
+        /// <summary>
+        /// 縦曲線Visitor
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
+        public override MapGrammarAstNodes VisitGradient([NotNull] SyntaxDefinitions.MapGrammarParser.GradientContext context)
+        {
+            return base.VisitGradient(context);
+        }
+        #endregion Gradient Visitors
 
         #region Expression & Variable Visitors
 

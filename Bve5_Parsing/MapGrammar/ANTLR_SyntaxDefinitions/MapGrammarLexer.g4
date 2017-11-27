@@ -2,6 +2,10 @@ lexer grammar MapGrammarLexer;
 
 //マップ要素名
 CURVE : C U R V E;
+GRADIENT : G R A D I E N T;
+
+X_ELEMENT : X;
+Y_ELEMENT : Y;
 
 //関数名
 SET_GAUGE : S E T G A U G E;

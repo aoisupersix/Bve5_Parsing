@@ -36,7 +36,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     }
 
     /// <summary>
-    /// カーブノード
+    /// 平面曲線ノード
     /// </summary>
     internal class CurveNode : MapGrammarAstNodes
     {
@@ -44,6 +44,20 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         public Dictionary<string, MapGrammarAstNodes> Arguments { get; set; }
 
         public CurveNode()
+        {
+            Arguments = new Dictionary<string, MapGrammarAstNodes>();
+        }
+    }
+
+    /// <summary>
+    /// 縦曲線ノード
+    /// </summary>
+    internal class GradientNode : MapGrammarAstNodes
+    {
+        public string Function { get; set; }
+        public Dictionary<string, MapGrammarAstNodes> Arguments { get; set; }
+
+        public GradientNode()
         {
             Arguments = new Dictionary<string, MapGrammarAstNodes>();
         }
