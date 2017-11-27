@@ -166,7 +166,25 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// <returns></returns>
         public override MapGrammarAstNodes VisitGradient([NotNull] SyntaxDefinitions.MapGrammarParser.GradientContext context)
         {
-            return base.VisitGradient(context);
+            Syntax1 node = new Syntax1();   //Gradient構文は全て構文タイプ1
+            node.MapElementName = "gradient";
+            node.FunctionName = context.func1.Text.ToLower();
+
+            switch (node.FunctionName)
+            {
+                case "begintransition":                                             /* BeginTransition() */
+                    break;
+                case "begin":                                                       /* Begin(gradient) */
+                    node.Arguments.Add("gradient", Visit(context.gradientArgs));
+                    break;
+                case "end":                                                         /* End() */
+                    break;
+                case "interpolate":                                                 /* Interpolate(gradient?) */
+                    if (context.gradientArgs != null)
+                        node.Arguments.Add("gradient", Visit(context.gradientArgs));
+                    break;
+            }
+            return node;
         }
         #endregion Gradient Visitors
 
