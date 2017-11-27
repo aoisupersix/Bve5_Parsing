@@ -36,28 +36,15 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     }
 
     /// <summary>
-    /// 平面曲線ノード
+    /// ステートメントノード MapElement.Function(Args)
     /// </summary>
-    internal class CurveNode : MapGrammarAstNodes
+    internal class Syntax1 : MapGrammarAstNodes
     {
-        public string Function { get; set; }
+        public string MapElementName { get; set; }
+        public string FunctionName { get; set; }
         public Dictionary<string, MapGrammarAstNodes> Arguments { get; set; }
 
-        public CurveNode()
-        {
-            Arguments = new Dictionary<string, MapGrammarAstNodes>();
-        }
-    }
-
-    /// <summary>
-    /// 縦曲線ノード
-    /// </summary>
-    internal class GradientNode : MapGrammarAstNodes
-    {
-        public string Function { get; set; }
-        public Dictionary<string, MapGrammarAstNodes> Arguments { get; set; }
-
-        public GradientNode()
+        public Syntax1()
         {
             Arguments = new Dictionary<string, MapGrammarAstNodes>();
         }
