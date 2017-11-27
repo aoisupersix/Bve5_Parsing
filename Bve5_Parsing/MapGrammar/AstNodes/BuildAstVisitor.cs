@@ -116,11 +116,12 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// <returns></returns>
         public override MapGrammarAstNodes VisitCurve([NotNull] SyntaxDefinitions.MapGrammarParser.CurveContext context)
         {
-            CurveNode node = new CurveNode();
+            Syntax1 node = new Syntax1();   //Curve構文は全て構文タイプ1
 
-            node.Function = context.func1.Text.ToLower();
+            node.MapElementName = "curve";
+            node.FunctionName = context.func1.Text.ToLower();
             //引数の登録
-            switch (node.Function)
+            switch (node.FunctionName)
             {
                 case "setgauge":                                                    /* SetGauge(value) */
                     node.Arguments.Add("value", Visit(context.value));
