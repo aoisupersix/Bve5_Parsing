@@ -11,6 +11,7 @@ statement :
 	  distance								#distState
 	| CURVE curve							#curveState
 	| GRADIENT gradient						#gradientState
+	| TRACK track							#trackState
 	| varAssign								#varAssignState
 	;
 
@@ -39,6 +40,13 @@ gradient :
 	| DOT func=BEGIN OPN_PAR gradientArgs=nullableExpr CLS_PAR	//à¯êîñºgradientÇ™îÌÇÈÇÃÇ≈gradientArgsÇ…ÇµÇƒÇ¢ÇÈ
 	| DOT func=END OPN_PAR CLS_PAR
 	| DOT func=INTERPOLATE OPN_PAR gradientArgsE=expr CLS_PAR
+	;
+
+//ëºãOìπ
+track :
+	  OPN_BRA key=expr CLS_BRA DOT element=X_ELEMENT DOT func=INTERPOLATE OPN_PAR CLS_PAR
+	| OPN_BRA key=expr CLS_BRA DOT element=X_ELEMENT DOT func=INTERPOLATE OPN_PAR xE=expr CLS_PAR
+	| OPN_BRA key=expr CLS_BRA DOT element=X_ELEMENT DOT func=INTERPOLATE OPN_PAR x=nullableExpr COMMA radius=nullableExpr CLS_PAR
 	;
 
 //ïœêî/êîéÆ

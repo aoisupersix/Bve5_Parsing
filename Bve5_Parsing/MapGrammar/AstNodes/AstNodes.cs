@@ -56,7 +56,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     internal class Syntax2 : MapGrammarAstNodes
     {
         public string MapElementName { get; set; }
-        public string KeyName { get; set; }
+        public MapGrammarAstNodes Key { get; set; }
         public string FunctionName { get; set; }
         public Dictionary<string, MapGrammarAstNodes> Arguments { get; set; }
 
@@ -72,7 +72,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     internal class Syntax3 : MapGrammarAstNodes
     {
         public string[] MapElementNames { get; set; }
-        public string KeyName { get; set; }
+        public MapGrammarAstNodes Key { get; set; }
         public string FunctionName { get; set; }
         public Dictionary<string, MapGrammarAstNodes> Arguments { get; set; }
 

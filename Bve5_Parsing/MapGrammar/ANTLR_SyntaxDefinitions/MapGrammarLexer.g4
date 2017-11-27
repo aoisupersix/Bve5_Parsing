@@ -3,6 +3,7 @@ lexer grammar MapGrammarLexer;
 //マップ要素名
 CURVE : C U R V E;
 GRADIENT : G R A D I E N T;
+TRACK : T R A C K;
 
 X_ELEMENT : X;
 Y_ELEMENT : Y;
@@ -40,6 +41,8 @@ MOD : '%';
 //括弧
 OPN_PAR : '(';
 CLS_PAR : ')';
+OPN_BRA : '[';
+CLS_BRA : ']';
 
 //ignore case
 fragment A:('a'|'A');

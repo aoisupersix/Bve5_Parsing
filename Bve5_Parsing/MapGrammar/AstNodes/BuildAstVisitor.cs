@@ -84,6 +84,26 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         }
 
         /// <summary>
+        /// ステートメントVisitor(他軌道)
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
+        public override MapGrammarAstNodes VisitTrackState([NotNull] SyntaxDefinitions.MapGrammarParser.TrackStateContext context)
+        {
+            MapGrammarAstNodes node;
+            try
+            {
+                node = Visit(context.track());
+            }
+            catch (NullReferenceException)
+            {
+                node = null;
+            }
+
+            return node;
+        }
+
+        /// <summary>
         /// ステートメントVisitor(変数宣言)
         /// </summary>
         /// <param name="context"></param>
@@ -201,6 +221,58 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
             return node;
         }
         #endregion Gradient Visitors
+
+        #region Track Visitors
+
+        /// <summary>
+        /// 他軌道Visitor
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
+        public override MapGrammarAstNodes VisitTrack([NotNull] SyntaxDefinitions.MapGrammarParser.TrackContext context)
+        {
+            MapGrammarAstNodes key = Visit(context.key);
+            if(context.element != null)                                             /* Syntax3 */
+            {
+                Syntax3 node = new Syntax3();
+                node.MapElementNames[0] = "track";
+                node.MapElementNames[1] = context.element.Text.ToLower();
+                node.Key = key;
+                node.FunctionName = context.func.Text.ToLower();
+
+                switch (node.FunctionName)
+                {
+                    case "interpolate":                                             /* (X | Y).Interpolate(x?, radius?) */
+                        if (context.xE != null)
+                            node.Arguments.Add("x", Visit(context.xE));
+                        else if (context.x != null)
+                        {
+                            node.Arguments.Add("x", Visit(context.x));
+
+                            if (context.radius != null)
+                                node.Arguments.Add("radius", Visit(context.radius));
+                        }
+                        else
+                        {
+                            //引数なし TODO
+                        }
+
+                        break;
+                }
+
+                return node;
+            }
+            else                                                                    /* Syntax2 */
+            {
+                Syntax2 node = new Syntax2();
+                node.MapElementName = "track";
+                node.Key = key;
+                node.FunctionName = context.func.Text.ToLower();
+
+                return node;
+            }
+        }
+        #endregion Track Visitors
 
         #region Expression & Variable Visitors
 
