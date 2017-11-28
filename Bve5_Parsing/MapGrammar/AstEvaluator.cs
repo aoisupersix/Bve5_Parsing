@@ -11,9 +11,9 @@ namespace Bve5_Parsing.MapGrammar
     {
         public abstract T Visit(RootNode node);
         public abstract T Visit(DistanceNode node);
-        public abstract T Visit(Syntax1 node);
-        public abstract T Visit(Syntax2 node);
-        public abstract T Visit(Syntax3 node);
+        public abstract T Visit(Syntax1Node node);
+        public abstract T Visit(Syntax2Node node);
+        public abstract T Visit(Syntax3Node node);
         public abstract T Visit(VarAssignNode node);
         public abstract T Visit(AdditionNode node);
         public abstract T Visit(SubtractionNode node);
@@ -66,9 +66,9 @@ namespace Bve5_Parsing.MapGrammar
         /// <summary>
         /// 構文タイプ1の評価
         /// </summary>
-        /// <param name="node">Syntax1</param>
+        /// <param name="node">Syntax1Node</param>
         /// <returns>解析結果のSyntaxDataクラス</returns>
-        public override object Visit(Syntax1 node)
+        public override object Visit(Syntax1Node node)
         {
             SyntaxData returnData = new SyntaxData();
             //構文情報を登録する
@@ -87,9 +87,9 @@ namespace Bve5_Parsing.MapGrammar
         /// <summary>
         /// 構文タイプ2の評価
         /// </summary>
-        /// <param name="node">Syntax1</param>
+        /// <param name="node">Syntax2Node</param>
         /// <returns>解析結果のSyntaxDataクラス</returns>
-        public override object Visit(Syntax2 node)
+        public override object Visit(Syntax2Node node)
         {
             SyntaxData returnData = new SyntaxData();
             //構文情報を登録する
@@ -109,9 +109,9 @@ namespace Bve5_Parsing.MapGrammar
         /// <summary>
         /// 構文タイプ3の評価
         /// </summary>
-        /// <param name="node">Syntax1</param>
+        /// <param name="node">Syntax3Node</param>
         /// <returns>解析結果のSyntaxDataクラス</returns>
-        public override object Visit(Syntax3 node)
+        public override object Visit(Syntax3Node node)
         {
             SyntaxData returnData = new SyntaxData();
             //構文情報を登録する

@@ -156,7 +156,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// <returns></returns>
         public override MapGrammarAstNodes VisitCurve([NotNull] SyntaxDefinitions.MapGrammarParser.CurveContext context)
         {
-            Syntax1 node = new Syntax1();   //Curve構文は全て構文タイプ1
+            Syntax1Node node = new Syntax1Node();   //Curve構文は全て構文タイプ1
 
             node.MapElementName = "curve";
             node.FunctionName = context.func.Text.ToLower();
@@ -216,7 +216,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// <returns></returns>
         public override MapGrammarAstNodes VisitGradient([NotNull] SyntaxDefinitions.MapGrammarParser.GradientContext context)
         {
-            Syntax1 node = new Syntax1();   //Gradient構文は全て構文タイプ1
+            Syntax1Node node = new Syntax1Node();   //Gradient構文は全て構文タイプ1
             node.MapElementName = "gradient";
             node.FunctionName = context.func.Text.ToLower();
 
@@ -252,9 +252,9 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         public override MapGrammarAstNodes VisitTrack([NotNull] SyntaxDefinitions.MapGrammarParser.TrackContext context)
         {
             MapGrammarAstNodes key = Visit(context.key);
-            if(context.element != null)                                             /* Syntax3 */
+            if(context.element != null)                                             /* Syntax3Node */
             {
-                Syntax3 node = new Syntax3();
+                Syntax3Node node = new Syntax3Node();
                 node.MapElementNames[0] = "track";
                 node.MapElementNames[1] = context.element.Text.ToLower();
                 node.Key = key;
@@ -310,9 +310,9 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
 
                 return node;
             }
-            else                                                                    /* Syntax2 */
+            else                                                                    /* Syntax2Node */
             {
-                Syntax2 node = new Syntax2();
+                Syntax2Node node = new Syntax2Node();
                 node.MapElementName = "track";
                 node.Key = key;
                 node.FunctionName = context.func.Text.ToLower();
@@ -349,7 +349,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
                 return null;
             }
 
-            Syntax2 node = new Syntax2();    //ストラクチャ構文は全て構文タイプ2
+            Syntax2Node node = new Syntax2Node();    //ストラクチャ構文は全て構文タイプ2
             node.MapElementName = "structure";
             node.Key = Visit(context.key);
             node.FunctionName = context.func.Text.ToLower();
