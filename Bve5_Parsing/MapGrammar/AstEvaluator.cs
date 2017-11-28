@@ -96,7 +96,7 @@ namespace Bve5_Parsing.MapGrammar
             returnData.Distance = nowDistance;
             returnData.MapElement = new string[1];
             returnData.MapElement[0] = node.MapElementName;
-            returnData.Key = (string)Visit(node.Key);
+            returnData.Key = Visit(node.Key).ToString();
             returnData.Function = node.FunctionName;
             foreach (string key in node.Arguments.Keys)
             {
@@ -117,7 +117,7 @@ namespace Bve5_Parsing.MapGrammar
             //構文情報を登録する
             returnData.Distance = nowDistance;
             returnData.MapElement = node.MapElementNames;
-            returnData.Key = (string)Visit(node.Key);
+            returnData.Key = Visit(node.Key).ToString();
             returnData.Function = node.FunctionName;
             foreach (string key in node.Arguments.Keys)
             {
