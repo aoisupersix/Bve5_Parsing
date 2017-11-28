@@ -14,6 +14,7 @@ namespace Bve5_Parsing.MapGrammar
         public abstract T Visit(Syntax1Node node);
         public abstract T Visit(Syntax2Node node);
         public abstract T Visit(Syntax3Node node);
+        public abstract T Visit(LoadListNode node);
         public abstract T Visit(VarAssignNode node);
         public abstract T Visit(AdditionNode node);
         public abstract T Visit(SubtractionNode node);
@@ -34,6 +35,11 @@ namespace Bve5_Parsing.MapGrammar
     internal class EvaluateMapGrammarVisitor : AstVisitor<object>
     {
         /// <summary>
+        /// 評価結果
+        /// </summary>
+        private MapData evaluateData;
+
+        /// <summary>
         /// 現在評価中の距離程
         /// </summary>
         private double nowDistance = 0;
@@ -45,7 +51,7 @@ namespace Bve5_Parsing.MapGrammar
         /// <returns>解析結果のMapData</returns>
         public override object Visit(RootNode node)
         {
-            MapData evaluateData = new MapData();
+            evaluateData = new MapData();
             foreach(var state in node.StatementList)
             {
                 object childData = Visit(state);
@@ -125,6 +131,18 @@ namespace Bve5_Parsing.MapGrammar
             }
 
             return returnData;
+        }
+
+        /// <summary>
+        /// リストファイルノードの評価
+        /// リストファイルの参照パスを追加する
+        /// </summary>
+        /// <param name="node"></param>
+        /// <returns></returns>
+        public override object Visit(LoadListNode node)
+        {
+            evaluateData.SetListPathToString(node.MapElementName, node.Path);
+            return null;
         }
 
         /// <summary>

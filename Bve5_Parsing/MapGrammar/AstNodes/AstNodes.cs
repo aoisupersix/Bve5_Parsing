@@ -35,6 +35,8 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         public MapGrammarAstNodes Value { get; set; }
     }
 
+    #region Statement AST Nodes
+
     /// <summary>
     /// ステートメントノード1 MapElement.Function(Args)
     /// </summary>
@@ -82,6 +84,18 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
             MapElementNames = new string[2];
         }
     }
+
+    /// <summary>
+    /// リストファイルロードノード
+    /// </summary>
+    internal class LoadListNode : MapGrammarAstNodes
+    {
+        public string MapElementName { get; set; }
+        public string Path { get; set; }
+    }
+
+    #endregion Statement AST Nodes
+
 
     #region VarAssign AST Nodes
 

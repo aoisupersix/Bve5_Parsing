@@ -61,19 +61,19 @@ namespace Bve5_Parsing.MapGrammar
         {
             switch (elementName)
             {
-                case "Structure":
+                case "structure":
                     StructureListPath = path;
                     break;
-                case "Station":
+                case "station":
                     StationListPath = path;
                     break;
-                case "Signal":
+                case "signal":
                     SignalListPath = path;
                     break;
-                case "Sound":
+                case "sound":
                     SoundListPath = path;
                     break;
-                case "Sound3D":
+                case "sound3d":
                     Sound3DListPath = path;
                     break;
             }
