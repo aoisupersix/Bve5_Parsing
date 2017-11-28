@@ -244,10 +244,10 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
                 {
                     case "interpolate":                                             /* (X | Y).Interpolate(x?, radius?) */
                         if (context.xE != null)
-                            node.Arguments.Add("x", Visit(context.xE));
+                            node.Arguments.Add(node.MapElementNames[1], Visit(context.xE));
                         else if (context.x != null)
                         {
-                            node.Arguments.Add("x", Visit(context.x));
+                            node.Arguments.Add(node.MapElementNames[1], Visit(context.x));
 
                             if (context.radius != null)
                                 node.Arguments.Add("radius", Visit(context.radius));
