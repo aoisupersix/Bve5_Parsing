@@ -104,6 +104,26 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         }
 
         /// <summary>
+        /// ステートメントVisitor(ストラクチャ)
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
+        public override MapGrammarAstNodes VisitStructureState([NotNull] SyntaxDefinitions.MapGrammarParser.StructureStateContext context)
+        {
+            MapGrammarAstNodes node;
+            try
+            {
+                node = Visit(context.structure());
+            }
+            catch (NullReferenceException)
+            {
+                node = null;
+            }
+
+            return node;
+        }
+
+        /// <summary>
         /// ステートメントVisitor(変数宣言)
         /// </summary>
         /// <param name="context"></param>
@@ -315,6 +335,54 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
             }
         }
         #endregion Track Visitors
+
+        #region Structure Visitors
+
+        public override MapGrammarAstNodes VisitStructure([NotNull] SyntaxDefinitions.MapGrammarParser.StructureContext context)
+        {
+            string funcName = context.func.Text.ToLower();
+
+            if (funcName.Equals("load"))
+            {
+                //ロード構文
+                //TODO
+                return null;
+            }
+
+            Syntax2 node = new Syntax2();    //ストラクチャ構文は全て構文タイプ2
+            node.MapElementName = "structure";
+            node.Key = Visit(context.key);
+            node.FunctionName = context.func.Text.ToLower();
+
+            switch (node.FunctionName)
+            {
+                case "put":                                                                 /* Put(trackkey,x,y,z,rx,ry,rz,tilt,span) */
+                    node.Arguments.Add("trackkey", Visit(context.trackkey));
+                    node.Arguments.Add("x", Visit(context.x));
+                    node.Arguments.Add("y", Visit(context.y));
+                    node.Arguments.Add("z", Visit(context.z));
+                    node.Arguments.Add("rx", Visit(context.rx));
+                    node.Arguments.Add("ry", Visit(context.ry));
+                    node.Arguments.Add("rz", Visit(context.rz));
+                    node.Arguments.Add("tilt", Visit(context.tilt));
+                    node.Arguments.Add("span", Visit(context.span));
+                    break;
+                case "put0":                                                                /* Put0(trackkey, tilt, span) */
+                    node.Arguments.Add("trackkey", Visit(context.trackkey));
+                    node.Arguments.Add("tilt", Visit(context.tilt));
+                    node.Arguments.Add("span", Visit(context.span));
+                    break;
+                case "putbetween":                                                          /* PutBetween(trackkey1, trackkey2, flag?) */
+                    node.Arguments.Add("trackkey1", Visit(context.trackkey1));
+                    node.Arguments.Add("trackkey2", Visit(context.trackkey2));
+                    if(context.flag != null)
+                        node.Arguments.Add("flag", Visit(context.flag));
+                    break;
+            }
+
+            return node;
+        }
+        #endregion Structure Visitors
 
         #region Expression & Variable Visitors
 

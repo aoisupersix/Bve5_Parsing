@@ -4,6 +4,7 @@ lexer grammar MapGrammarLexer;
 CURVE : C U R V E;
 GRADIENT : G R A D I E N T;
 TRACK : T R A C K;
+STRUCTURE : S T R U C T U R E;
 
 X_ELEMENT : X;
 Y_ELEMENT : Y;
@@ -19,6 +20,10 @@ END : E N D;
 INTERPOLATE : I N T E R P O L A T E;
 CHANGE : C H A N G E;
 POSITION : P O S I T I O N;
+LOAD : L O A D;
+PUT : P U T;
+PUT0 : P U T '0';
+PUTBETWEEN : P U T B E T W E E N;
 
 //ステートメント区切り
 STATE_END : ';';
