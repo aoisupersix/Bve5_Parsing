@@ -242,21 +242,49 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
 
                 switch (node.FunctionName)
                 {
-                    case "interpolate":                                             /* (X | Y).Interpolate(x?, radius?) */
-                        if (context.xE != null)
-                            node.Arguments.Add(node.MapElementNames[1], Visit(context.xE));
-                        else if (context.x != null)
-                        {
-                            node.Arguments.Add(node.MapElementNames[1], Visit(context.x));
-
-                            if (context.radius != null)
-                                node.Arguments.Add("radius", Visit(context.radius));
+                    case "interpolate":
+                        if (node.MapElementNames[1].Equals("cant"))
+                        {                                                           /* Cant.Interpolate(cant?) */
+                            if(context.cant != null)
+                            {
+                                node.Arguments.Add("cant", Visit(context.cant));
+                            }
+                            else
+                            {
+                                //引数なし TODO
+                            }
                         }
                         else
-                        {
-                            //引数なし TODO
+                        {                                                           /* (X | Y).Interpolate(x?, radius?) */
+                            if (context.xE != null)
+                                node.Arguments.Add(node.MapElementNames[1], Visit(context.xE));
+                            else if (context.x != null)
+                            {
+                                node.Arguments.Add(node.MapElementNames[1], Visit(context.x));
+
+                                if (context.radius != null)
+                                    node.Arguments.Add("radius", Visit(context.radius));
+                            }
+                            else
+                            {
+                                //引数なし TODO
+                            }
                         }
 
+                        break;
+                    case "setcenter":                                               /* Cant.SetCenter(x) */
+                        node.Arguments.Add("x", Visit(context.x));
+                        break;
+                    case "setgauge":                                                /* Cant.SetGauge(gauge) */
+                        node.Arguments.Add("gauge", Visit(context.gauge));
+                        break;
+                    case "setfunction":                                             /* Cant.SetFunction(id) */
+                        node.Arguments.Add("id", Visit(context.id));
+                        break;
+                    case "begintransition":                                         /* Cant.BeginTransition() */
+                        break;
+                    case "begin":                                                   /* Cant.Begin(cant) */
+                        node.Arguments.Add("cant", Visit(context.cant));
                         break;
                 }
 
@@ -268,6 +296,20 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
                 node.MapElementName = "track";
                 node.Key = key;
                 node.FunctionName = context.func.Text.ToLower();
+
+                switch (node.FunctionName)
+                {
+                    case "position":                                                    /* Position(x, y, radiush?, radiusv?) */
+                        node.Arguments.Add("x", Visit(context.x));
+                        node.Arguments.Add("y", Visit(context.y));
+                        if (context.radiusH != null)
+                        {
+                            node.Arguments.Add("radiush", Visit(context.radiusH));
+                            if (context.radiusV != null)
+                                node.Arguments.Add("radiusv", Visit(context.radiusV));
+                        }
+                        break;
+                }
 
                 return node;
             }
