@@ -136,6 +136,8 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         public double Value { get; set; }
     }
 
+    internal class DistanceVariableNode : MapGrammarAstNodes{ }
+
     internal class StringNode : MapGrammarAstNodes
     {
         public string Value { get; set; }

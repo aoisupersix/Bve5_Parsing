@@ -479,13 +479,23 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         }
 
         /// <summary>
-        /// 項Visitor
+        /// 数字項Visitor
         /// </summary>
         /// <param name="context"></param>
         /// <returns></returns>
         public override MapGrammarAstNodes VisitNumberExpr([NotNull] SyntaxDefinitions.MapGrammarParser.NumberExprContext context)
         {
             return new NumberNode { Value = double.Parse(context.num.Text, System.Globalization.NumberStyles.AllowDecimalPoint) };
+        }
+
+        /// <summary>
+        /// 距離変数項Visitor
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
+        public override MapGrammarAstNodes VisitDistanceExpr([NotNull] SyntaxDefinitions.MapGrammarParser.DistanceExprContext context)
+        {
+            return new DistanceVariableNode();
         }
 
         /// <summary>

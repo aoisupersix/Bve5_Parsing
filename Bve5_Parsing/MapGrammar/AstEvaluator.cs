@@ -23,6 +23,7 @@ namespace Bve5_Parsing.MapGrammar
         public abstract T Visit(NegateNode node);
         public abstract T Visit(ModuloNode node);
         public abstract T Visit(NumberNode node);
+        public abstract T Visit(DistanceVariableNode node);
         public abstract T Visit(StringNode node);
         public abstract T Visit(VarNode node);
 
@@ -206,6 +207,11 @@ namespace Bve5_Parsing.MapGrammar
         public override object Visit(NumberNode node)
         {
             return node.Value;
+        }
+
+        public override object Visit(DistanceVariableNode node)
+        {
+            return nowDistance;
         }
 
         public override object Visit(StringNode node)

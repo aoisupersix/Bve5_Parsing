@@ -66,6 +66,9 @@ COMMA : ',';
 //数字
 NUM : '0'..'9'+ ('.' ('0'..'9')+)?;
 
+//距離変数
+DISTANCE : D I S T A N C E;
+
 //変数
 VAR_START : '$';
 VAR : [a-zA-Z0-9_]+;

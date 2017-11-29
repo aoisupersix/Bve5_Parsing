@@ -88,6 +88,7 @@ expr :
 	| v=var											#varExpr
 	| num=NUM										#numberExpr
 	| str=string									#stringExpr
+	| dist=DISTANCE									#distanceExpr
 	;
 
 var returns [string varName]:
