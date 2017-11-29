@@ -124,6 +124,26 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         }
 
         /// <summary>
+        /// ステートメントVisitor(連続ストラクチャ)
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
+        public override MapGrammarAstNodes VisitRepeaterState([NotNull] SyntaxDefinitions.MapGrammarParser.RepeaterStateContext context)
+        {
+            MapGrammarAstNodes node;
+            try
+            {
+                node = Visit(context.repeater());
+            }
+            catch (NullReferenceException)
+            {
+                node = null;
+            }
+
+            return node;
+        }
+
+        /// <summary>
         /// ステートメントVisitor(変数宣言)
         /// </summary>
         /// <param name="context"></param>
@@ -338,6 +358,11 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
 
         #region Structure Visitors
 
+        /// <summary>
+        /// ストラクチャVisitor
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
         public override MapGrammarAstNodes VisitStructure([NotNull] SyntaxDefinitions.MapGrammarParser.StructureContext context)
         {
             string funcName = context.func.Text.ToLower();
@@ -383,6 +408,59 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
             return node;
         }
         #endregion Structure Visitors
+
+        #region Repeater Visitors
+
+        /// <summary>
+        /// 連続ストラクチャVisitor
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
+        public override MapGrammarAstNodes VisitRepeater([NotNull] SyntaxDefinitions.MapGrammarParser.RepeaterContext context)
+        {
+            Syntax2Node node = new Syntax2Node();
+            node.MapElementName = "repeater";
+            node.Key = Visit(context.key);
+            node.FunctionName = context.func.Text.ToLower();
+
+            switch (node.FunctionName)
+            {
+                case "begin":                                                               /* Begin(trackkey,x,y,z,rx,ry,rz,tilt,span,interval, strkey+) */
+                    node.Arguments.Add("trackkey", Visit(context.trackkey));
+                    node.Arguments.Add("x", Visit(context.x));
+                    node.Arguments.Add("y", Visit(context.y));
+                    node.Arguments.Add("z", Visit(context.z));
+                    node.Arguments.Add("rx", Visit(context.rx));
+                    node.Arguments.Add("ry", Visit(context.ry));
+                    node.Arguments.Add("rz", Visit(context.rz));
+                    node.Arguments.Add("tilt", Visit(context.tilt));
+                    node.Arguments.Add("span", Visit(context.span));
+                    node.Arguments.Add("interval", Visit(context.interval));
+                    for(int i = 0; i < context.strkey().Length; i++)
+                    {
+                        node.Arguments.Add("key" + (i + 1), Visit(context.strkey()[i]));
+                    }
+                    break;
+                case "begin0":                                                              /* Begin0(trackkey,tilt,span,interval,strkey+) */
+                    break;
+                case "end":                                                                 /* End() */
+                    break;
+            }
+
+            return node;
+        }
+
+        /// <summary>
+        /// ストラクチャKeyListVisitor
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
+        public override MapGrammarAstNodes VisitStrkey([NotNull] SyntaxDefinitions.MapGrammarParser.StrkeyContext context)
+        {
+            return new StringNode { Value = context.key.text};
+        }
+
+        #endregion Repeater Visitors
 
         #region Expression & Variable Visitors
 
