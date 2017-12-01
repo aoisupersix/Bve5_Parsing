@@ -442,6 +442,14 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
                     }
                     break;
                 case "begin0":                                                              /* Begin0(trackkey,tilt,span,interval,strkey+) */
+                    node.Arguments.Add("trackkey", Visit(context.trackkey));
+                    node.Arguments.Add("tilt", Visit(context.tilt));
+                    node.Arguments.Add("span", Visit(context.span));
+                    node.Arguments.Add("interval", Visit(context.interval));
+                    for (int i = 0; i < context.strkey().Length; i++)
+                    {
+                        node.Arguments.Add("key" + (i + 1), Visit(context.strkey()[i]));
+                    }
                     break;
                 case "end":                                                                 /* End() */
                     break;

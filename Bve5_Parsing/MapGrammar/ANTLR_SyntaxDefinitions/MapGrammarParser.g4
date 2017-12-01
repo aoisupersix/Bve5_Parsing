@@ -74,7 +74,9 @@ structure :
 
 //連続ストラクチャ
 repeater :
-	OPN_BRA key=expr CLS_BRA DOT func=BEGIN OPN_PAR trackkey=nullableExpr COMMA x=nullableExpr COMMA y=nullableExpr COMMA z=nullableExpr COMMA rx=nullableExpr COMMA ry=nullableExpr COMMA rz=nullableExpr COMMA tilt=nullableExpr COMMA span=nullableExpr COMMA interval=nullableExpr strkey+ CLS_PAR
+	  OPN_BRA key=expr CLS_BRA DOT func=BEGIN OPN_PAR trackkey=nullableExpr COMMA x=nullableExpr COMMA y=nullableExpr COMMA z=nullableExpr COMMA rx=nullableExpr COMMA ry=nullableExpr COMMA rz=nullableExpr COMMA tilt=nullableExpr COMMA span=nullableExpr COMMA interval=nullableExpr strkey+ CLS_PAR
+	| OPN_BRA key=expr CLS_BRA DOT func=BEGIN0 OPN_PAR trackkey=nullableExpr COMMA tilt=nullableExpr COMMA span=nullableExpr COMMA interval=nullableExpr strkey+ CLS_PAR
+	| OPN_BRA key=expr CLS_BRA DOT func=END OPN_PAR CLS_PAR
 	;
 
 //連続ストラクチャのストラクチャリスト
