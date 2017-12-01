@@ -144,6 +144,26 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         }
 
         /// <summary>
+        /// ステートメントVisitor(背景)
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
+        public override MapGrammarAstNodes VisitBackgroundState([NotNull] SyntaxDefinitions.MapGrammarParser.BackgroundStateContext context)
+        {
+            MapGrammarAstNodes node;
+            try
+            {
+                node = Visit(context.background());
+            }
+            catch (NullReferenceException)
+            {
+                node = null;
+            }
+
+            return node;
+        }
+
+        /// <summary>
         /// ステートメントVisitor(変数宣言)
         /// </summary>
         /// <param name="context"></param>
@@ -469,6 +489,24 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         }
 
         #endregion Repeater Visitors
+
+        #region Background Visitors
+
+        /// <summary>
+        /// 背景Visitor
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
+        public override MapGrammarAstNodes VisitBackground([NotNull] SyntaxDefinitions.MapGrammarParser.BackgroundContext context)
+        {
+            Syntax1Node node = new Syntax1Node();
+            node.MapElementName = "background";
+            node.FunctionName = context.func.Text;
+            node.Arguments.Add("structurekey", Visit(context.structurekey));
+
+            return node;
+        }
+        #endregion Background Visitors
 
         #region Expression & Variable Visitors
 
