@@ -164,6 +164,26 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         }
 
         /// <summary>
+        /// ステートメントVisitor(停車場)
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
+        public override MapGrammarAstNodes VisitStationState([NotNull] SyntaxDefinitions.MapGrammarParser.StationStateContext context)
+        {
+            MapGrammarAstNodes node;
+            try
+            {
+                node = Visit(context.station());
+            }
+            catch (NullReferenceException)
+            {
+                node = null;
+            }
+
+            return node;
+        }
+
+        /// <summary>
         /// ステートメントVisitor(変数宣言)
         /// </summary>
         /// <param name="context"></param>
@@ -507,6 +527,32 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
             return node;
         }
         #endregion Background Visitors
+
+        #region Station Visitors
+        public override MapGrammarAstNodes VisitStation([NotNull] SyntaxDefinitions.MapGrammarParser.StationContext context)
+        {
+            string funcName = context.func.Text.ToLower();
+            if (funcName.Equals("load"))
+            {
+                //TODO
+                return null;
+            }
+            else if (funcName.Equals("put"))                                                /* Put(door, margin1, margin2) */
+            {
+                Syntax2Node node = new Syntax2Node();
+                node.MapElementName = "station";
+                node.Key = Visit(context.key);
+                node.FunctionName = funcName;
+                node.Arguments.Add("door", Visit(context.door));
+                node.Arguments.Add("margin1", Visit(context.margin1));
+                node.Arguments.Add("margin2", Visit(context.margin2));
+
+                return node;
+            }
+
+            return null;
+        }
+        #endregion Station Visitors
 
         #region Expression & Variable Visitors
 

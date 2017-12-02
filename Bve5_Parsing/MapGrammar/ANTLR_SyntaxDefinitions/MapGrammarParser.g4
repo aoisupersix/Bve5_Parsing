@@ -15,6 +15,7 @@ statement :
 	| STRUCTURE structure					#structureState
 	| REPEATER repeater						#repeaterState
 	| BACKGROUND background					#backgroundState
+	| STATION station 						#stationState
 	| varAssign								#varAssignState
 	;
 
@@ -83,6 +84,12 @@ repeater :
 //背景
 background :
 	DOT func=CHANGE OPN_PAR structurekey=nullableExpr CLS_PAR
+	;
+
+//停車場
+station :
+	  DOT func=LOAD OPN_PAR path=string CLS_PAR
+	| OPN_BRA key=expr CLS_BRA DOT func=PUT OPN_PAR door=nullableExpr COMMA margin1=nullableExpr COMMA margin2=nullableExpr CLS_PAR
 	;
 
 //連続ストラクチャのストラクチャリスト
