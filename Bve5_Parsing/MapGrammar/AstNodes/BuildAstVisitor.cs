@@ -407,11 +407,10 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         {
             string funcName = context.func.Text.ToLower();
 
-            if (funcName.Equals("load"))
+            if (funcName.Equals("load"))                                                    /* Load(filePath) */
             {
-                //ロード構文
-                //TODO
-                return null;
+                return new LoadListNode { MapElementName = "structure", Path = context.path.text };
+
             }
 
             Syntax2Node node = new Syntax2Node();    //ストラクチャ構文は全て構文タイプ2
@@ -532,10 +531,9 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         public override MapGrammarAstNodes VisitStation([NotNull] SyntaxDefinitions.MapGrammarParser.StationContext context)
         {
             string funcName = context.func.Text.ToLower();
-            if (funcName.Equals("load"))
+            if (funcName.Equals("load"))                                                    /* Load(filePath) */
             {
-                //TODO
-                return null;
+                return new LoadListNode { MapElementName = "station", Path = context.path.text };
             }
             else if (funcName.Equals("put"))                                                /* Put(door, margin1, margin2) */
             {
