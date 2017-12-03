@@ -204,6 +204,26 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         }
 
         /// <summary>
+        /// ステートメントVisitor(信号機)
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
+        public override MapGrammarAstNodes VisitSignalState([NotNull] SyntaxDefinitions.MapGrammarParser.SignalStateContext context)
+        {
+            MapGrammarAstNodes node;
+            try
+            {
+                node = Visit(context.signal());
+            }
+            catch (NullReferenceException)
+            {
+                node = null;
+            }
+
+            return node;
+        }
+
+        /// <summary>
         /// ステートメントVisitor(変数宣言)
         /// </summary>
         /// <param name="context"></param>
@@ -430,7 +450,6 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
             if (funcName.Equals("load"))                                                    /* Load(filePath) */
             {
                 return new LoadListNode { MapElementName = "structure", Path = context.path.text };
-
             }
 
             Syntax2Node node = new Syntax2Node();    //ストラクチャ構文は全て構文タイプ2
@@ -601,6 +620,45 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
 
         #endregion Section Visitors
 
+        #region Signal Visitors
+
+        /// <summary>
+        /// 信号機Visitor
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
+        public override MapGrammarAstNodes VisitSignal([NotNull] SyntaxDefinitions.MapGrammarParser.SignalContext context)
+        {
+            string funcName = context.func.Text.ToLower();
+
+            if (funcName.Equals("load"))                                                    /* Load(filePath) */
+            {
+                return new LoadListNode { MapElementName = "structure", Path = context.path.text };
+            }
+
+            Syntax2Node node = new Syntax2Node();                                           /* Put(section, trackkey, x, y, z?, rx?, ry?, rz?, tilt?, span?) */
+            node.MapElementName = "signal";
+            node.Key = Visit(context.key);
+            node.FunctionName = funcName;
+
+            node.Arguments.Add("section", Visit(context.sectionArgs));
+            node.Arguments.Add("trackkey", Visit(context.trackkey));
+            node.Arguments.Add("x", Visit(context.x));
+            node.Arguments.Add("y", Visit(context.y));
+            if(context.z != null)
+            {
+                node.Arguments.Add("z", Visit(context.z));
+                node.Arguments.Add("rx", Visit(context.rx));
+                node.Arguments.Add("ry", Visit(context.ry));
+                node.Arguments.Add("rz", Visit(context.rz));
+                node.Arguments.Add("tilt", Visit(context.tilt));
+                node.Arguments.Add("span", Visit(context.span));
+            }
+
+            return node;
+        }
+        #endregion Signal Visitors
+
         #region Expression & Variable Visitors
 
         /// <summary>
@@ -635,7 +693,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// <returns></returns>
         public override MapGrammarAstNodes VisitNullableExpr([NotNull] SyntaxDefinitions.MapGrammarParser.NullableExprContext context)
         {
-            if (context.ChildCount == 0 || context.@null != null)                       /* null */
+            if (context.ChildCount == 0 || context.nullSyntax != null)                       /* null */
                 //return new NumberNode { Value = 0 };
                 return null;
 
