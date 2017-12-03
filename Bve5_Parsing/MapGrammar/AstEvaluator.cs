@@ -83,9 +83,12 @@ namespace Bve5_Parsing.MapGrammar
             returnData.MapElement = new string[1];
             returnData.MapElement[0] = node.MapElementName;
             returnData.Function = node.FunctionName;
-            foreach(string key in node.Arguments.Keys)
+            foreach (string key in node.Arguments.Keys)
             {
-                returnData.Arguments.Add(key, Visit(node.Arguments[key]));
+                if (node.Arguments[key] != null)
+                    returnData.Arguments.Add(key, Visit(node.Arguments[key]));
+                else
+                    returnData.Arguments.Add(key, null);
             }
 
             return returnData;
@@ -107,7 +110,10 @@ namespace Bve5_Parsing.MapGrammar
             returnData.Function = node.FunctionName;
             foreach (string key in node.Arguments.Keys)
             {
-                returnData.Arguments.Add(key, Visit(node.Arguments[key]));
+                if (node.Arguments[key] != null)
+                    returnData.Arguments.Add(key, Visit(node.Arguments[key]));
+                else
+                    returnData.Arguments.Add(key, null);
             }
 
             return returnData;
@@ -128,7 +134,10 @@ namespace Bve5_Parsing.MapGrammar
             returnData.Function = node.FunctionName;
             foreach (string key in node.Arguments.Keys)
             {
-                returnData.Arguments.Add(key, Visit(node.Arguments[key]));
+                if (node.Arguments[key] != null)
+                    returnData.Arguments.Add(key, Visit(node.Arguments[key]));
+                else
+                    returnData.Arguments.Add(key, null);
             }
 
             return returnData;

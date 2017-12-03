@@ -65,6 +65,7 @@ COMMA : ',';
 
 //数字
 NUM : '0'..'9'+ ('.' ('0'..'9')+)?;
+NULL : N U L L;
 
 //距離変数
 DISTANCE : D I S T A N C E;

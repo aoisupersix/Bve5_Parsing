@@ -635,8 +635,9 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// <returns></returns>
         public override MapGrammarAstNodes VisitNullableExpr([NotNull] SyntaxDefinitions.MapGrammarParser.NullableExprContext context)
         {
-            if (context.ChildCount == 0)                    /* null */
-                return new NumberNode { Value = 0 };
+            if (context.ChildCount == 0 || context.@null != null)                       /* null */
+                //return new NumberNode { Value = 0 };
+                return null;
 
             return Visit(context.expr());
         }

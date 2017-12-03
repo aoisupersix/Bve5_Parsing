@@ -93,6 +93,7 @@ station :
 	| OPN_BRA key=expr CLS_BRA DOT func=PUT OPN_PAR door=nullableExpr COMMA margin1=nullableExpr COMMA margin2=nullableExpr CLS_PAR
 	;
 
+//ï¬ÇªÇ≠
 section :
 	  DOT func=BEGIN OPN_PAR nullableExpr exprArgs* CLS_PAR
 	| DOT func=SET_SPEEDLIMIT OPN_PAR nullableExpr exprArgs* CLS_PAR
@@ -102,6 +103,7 @@ section :
 strkey :
 	COMMA key=string;
 
+//òAë±êîéÆà¯êî
 exprArgs :
 	COMMA arg=nullableExpr;
 
@@ -110,7 +112,8 @@ varAssign :
 	v=var EQUAL expr;
 
 nullableExpr :
-	expr
+	  expr
+	| null=NULL
 	| /* epsilon */
 	;
 
