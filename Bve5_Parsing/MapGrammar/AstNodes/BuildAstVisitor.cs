@@ -182,6 +182,26 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
 
             return node;
         }
+        
+        /// <summary>
+        /// ステートメントVisitor(閉そく)
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
+        public override MapGrammarAstNodes VisitSectionState([NotNull] SyntaxDefinitions.MapGrammarParser.SectionStateContext context)
+        {
+            MapGrammarAstNodes node;
+            try
+            {
+                node = Visit(context.section());
+            }
+            catch (NullReferenceException)
+            {
+                node = null;
+            }
+
+            return node;
+        }
 
         /// <summary>
         /// ステートメントVisitor(変数宣言)
@@ -552,6 +572,35 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         }
         #endregion Station Visitors
 
+        #region Section Visitors
+
+        public override MapGrammarAstNodes VisitSection([NotNull] SyntaxDefinitions.MapGrammarParser.SectionContext context)
+        {
+            Syntax1Node node = new Syntax1Node();   //Section構文は全て構文タイプ1
+            node.MapElementName = "section";
+            node.FunctionName = context.func.Text.ToLower();
+            switch (node.FunctionName)
+            {
+                case "begin":                                                           /* Begin(signalN+) */
+                    node.Arguments.Add("signal0", Visit(context.nullableExpr()));
+                    for (int i = 0; i < context.exprArgs().Length; i++)
+                    {
+                        node.Arguments.Add("signal" + (i + 1), Visit(context.exprArgs()[i]));
+                    }
+                    break;
+                case "setspeedlimit":                                                   /* SetSpeedlimit(vN+) */
+                    node.Arguments.Add("v0", Visit(context.nullableExpr()));
+                    for (int i = 0; i < context.exprArgs().Length; i++)
+                    {
+                        node.Arguments.Add("v" + (i + 1), Visit(context.exprArgs()[i]));
+                    }
+                    break;
+            }
+            return node;
+        }
+
+        #endregion Section Visitors
+
         #region Expression & Variable Visitors
 
         /// <summary>
@@ -567,6 +616,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
                 VarName = context.v.varName,
                 Value = Visit(context.expr())
             };
+        }
+
+        /// <summary>
+        /// 数式の連続引数Visitor
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
+        public override MapGrammarAstNodes VisitExprArgs([NotNull] SyntaxDefinitions.MapGrammarParser.ExprArgsContext context)
+        {
+            return Visit(context.nullableExpr());
         }
 
         /// <summary>

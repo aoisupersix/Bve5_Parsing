@@ -16,6 +16,7 @@ statement :
 	| REPEATER repeater						#repeaterState
 	| BACKGROUND background					#backgroundState
 	| STATION station 						#stationState
+	| SECTION section						#sectionState
 	| varAssign								#varAssignState
 	;
 
@@ -92,9 +93,17 @@ station :
 	| OPN_BRA key=expr CLS_BRA DOT func=PUT OPN_PAR door=nullableExpr COMMA margin1=nullableExpr COMMA margin2=nullableExpr CLS_PAR
 	;
 
-//連続ストラクチャのストラクチャリスト
+section :
+	  DOT func=BEGIN OPN_PAR nullableExpr exprArgs* CLS_PAR
+	| DOT func=SET_SPEEDLIMIT OPN_PAR nullableExpr exprArgs* CLS_PAR
+	;
+
+//連続ストラクチャリスト引数
 strkey :
 	COMMA key=string;
+
+exprArgs :
+	COMMA arg=nullableExpr;
 
 //変数/数式
 varAssign :
