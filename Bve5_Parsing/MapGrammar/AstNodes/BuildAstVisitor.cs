@@ -1162,6 +1162,26 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         }
         #endregion Adhesion Visitors
 
+        #region Sound Visitors
+
+        public override MapGrammarAstNodes VisitSound([NotNull] SyntaxDefinitions.MapGrammarParser.SoundContext context)
+        {
+            if(context.path != null)                                /* Load(filePath) */
+            {
+                return new LoadListNode { MapElementName = "sound", Path = context.path.text };
+            }
+            else                                                    /* [soundkey].Play() */
+            {
+                Syntax2Node node = new Syntax2Node();
+                node.MapElementName = "sound";
+                node.Key = Visit(context.key);
+                node.FunctionName = context.func.Text.ToLower();
+
+                return node;
+            }
+        }
+        #endregion Sound Visitors
+
         #region Expression & Variable Visitors
 
         /// <summary>
