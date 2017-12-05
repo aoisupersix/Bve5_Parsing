@@ -316,7 +316,7 @@ namespace Bve5_Parsing.MapGrammar
                 return random.NextDouble();
 
 
-            return random.Next((int)Visit(node.Value));
+            return random.Next((int)((double)Visit(node.Value)));
         }
 
         /// <summary>
