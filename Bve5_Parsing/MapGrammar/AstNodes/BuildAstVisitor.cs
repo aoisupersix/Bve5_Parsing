@@ -980,6 +980,11 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
 
         #region SpeedLimit Visitors
 
+        /// <summary>
+        /// 速度制限Visitor
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
         public override MapGrammarAstNodes VisitSpeedlimit([NotNull] SyntaxDefinitions.MapGrammarParser.SpeedlimitContext context)
         {
             Syntax1Node node = new Syntax1Node();
@@ -993,6 +998,24 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
             return node;
         }
         #endregion SpeedLimit Visitors
+
+        #region PreTrain Visitors
+
+        /// <summary>
+        /// 先行列車Visitor
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
+        public override MapGrammarAstNodes VisitPretrain([NotNull] SyntaxDefinitions.MapGrammarParser.PretrainContext context)
+        {
+            Syntax1Node node = new Syntax1Node();
+            node.MapElementName = "pretrain";
+            node.FunctionName = context.func.Text.ToLower();
+            node.Arguments.Add("time", Visit(context.nullableExpr()));
+
+            return node;
+        }
+        #endregion PreTrain Visitors
 
         #region Expression & Variable Visitors
 
