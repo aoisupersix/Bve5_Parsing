@@ -1232,6 +1232,25 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         }
         #endregion RollingNoise Visitors
 
+        #region FlangeNoise Visitors
+
+        /// <summary>
+        /// フランジきしり音Visitor
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
+        public override MapGrammarAstNodes VisitFlangenoise([NotNull] SyntaxDefinitions.MapGrammarParser.FlangenoiseContext context)
+        {
+            Syntax1Node node = new Syntax1Node();
+            node.MapElementName = "flangenoise";
+            node.FunctionName = context.func.Text.ToLower();
+            node.Arguments.Add("index", Visit(context.index));
+
+            return node;
+        }
+        #endregion FlangeNoise Visitors
+
+
         #region Expression & Variable Visitors
 
         /// <summary>
