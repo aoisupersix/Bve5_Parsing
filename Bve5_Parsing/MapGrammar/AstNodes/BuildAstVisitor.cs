@@ -1214,6 +1214,24 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         }
         #endregion Sound3D Visitors
 
+        #region RollingNoise Visitors
+
+        /// <summary>
+        /// 走行音Visitor
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
+        public override MapGrammarAstNodes VisitRollingnoise([NotNull] SyntaxDefinitions.MapGrammarParser.RollingnoiseContext context)
+        {
+            Syntax1Node node = new Syntax1Node();
+            node.MapElementName = "rollingnoise";
+            node.FunctionName = context.func.Text.ToLower();
+            node.Arguments.Add("index", Visit(context.index));
+
+            return node;
+        }
+        #endregion RollingNoise Visitors
+
         #region Expression & Variable Visitors
 
         /// <summary>
