@@ -1250,6 +1250,23 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         }
         #endregion FlangeNoise Visitors
 
+        #region JointNoise Visitors
+
+        /// <summary>
+        /// 分岐器通過音Visitor
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
+        public override MapGrammarAstNodes VisitJointnoise([NotNull] SyntaxDefinitions.MapGrammarParser.JointnoiseContext context)
+        {
+            Syntax1Node node = new Syntax1Node();
+            node.MapElementName = "jointnoise";
+            node.FunctionName = context.func.Text.ToLower();
+            node.Arguments.Add("index", Visit(context.index));
+
+            return node;
+        }
+        #endregion JointNoise Visitors
 
         #region Expression & Variable Visitors
 
