@@ -1051,6 +1051,34 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         }
         #endregion Light Visitors
 
+        #region Fog Visitors
+
+        /// <summary>
+        /// 霧効果Visitor
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
+        public override MapGrammarAstNodes VisitFog([NotNull] SyntaxDefinitions.MapGrammarParser.FogContext context)
+        {
+            Syntax1Node node = new Syntax1Node();
+            node.MapElementName = "fog";
+            node.FunctionName = context.func.Text.ToLower();
+            if(context.red != null)                                         /* Interpolate(density, red, green, blue) */
+            {
+                node.Arguments.Add("density", Visit(context.density));
+                node.Arguments.Add("red", Visit(context.red));
+                node.Arguments.Add("green", Visit(context.green));
+                node.Arguments.Add("blue", Visit(context.blue));
+            }
+            else if(context.densityE != null)                               /* Interpolate(density) */
+            {
+                node.Arguments.Add("density", Visit(context.densityE));
+            }
+
+            return node;
+        }
+        #endregion Fog Visitors
+
         #region Expression & Variable Visitors
 
         /// <summary>
