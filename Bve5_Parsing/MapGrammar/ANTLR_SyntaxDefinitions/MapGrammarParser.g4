@@ -20,6 +20,19 @@ statement :
 	| SIGNAL signal							#signalState
 	| BEACON beacon							#beaconState
 	| SPEEDLIMIT speedlimit					#speedlimitState
+	| PRETRAIN pretrain						#pretrainState
+	| LIGHT light							#lightState
+	| FOG fog								#fogState
+	| DRAWDISTANCE drawdistance				#drawdistanceState
+	| CABILLUMINANCE cabilluminance			#cabilluminanceState
+	| IRREGULARITY irregularity				#irregularityState
+	| ADHESION adhesion						#adhesionState
+	| SOUND sound							#soundState
+	| SOUND3D sound3d						#sound3dState
+	| ROLLINGNOISE rollingnoise				#rollingnoiseState
+	| FLANGENOISE flangenoise				#flangenoiseState
+	| JOINTNOISE jointnoise					#jointnoiseState
+	| TRAIN train							#trainState
 	| varAssign								#varAssignState
 	;
 
@@ -118,6 +131,81 @@ beacon :
 speedlimit :
 	  DOT func=BEGIN OPN_PAR v=nullableExpr CLS_PAR
 	| DOT func=END OPN_PAR CLS_PAR
+	;
+
+//先行列車
+pretrain :
+	DOT func=PASS OPN_PAR nullableExpr CLS_PAR
+	;
+
+//光源
+light :
+	  DOT func=AMBIENT OPN_PAR red=nullableExpr COMMA green=nullableExpr COMMA blue=nullableExpr CLS_PAR
+	| DOT func=DIFFUSE OPN_PAR red=nullableExpr COMMA green=nullableExpr COMMA blue=nullableExpr CLS_PAR
+	| DOT func=DIRECTION OPN_PAR pitch=nullableExpr COMMA yaw=nullableExpr CLS_PAR
+	;
+
+//霧効果
+fog :
+	  DOT func=INTERPOLATE OPN_PAR CLS_PAR
+	| DOT func=INTERPOLATE OPN_PAR densityE=expr CLS_PAR
+	| DOT func=INTERPOLATE OPN_PAR density=nullableExpr COMMA red=nullableExpr COMMA green=nullableExpr COMMA blue=nullableExpr CLS_PAR
+	;
+
+//風景描画距離
+drawdistance :
+	DOT func=CHANGE OPN_PAR value=nullableExpr CLS_PAR
+	;
+
+//運転台の明るさ
+cabilluminance :
+	DOT func=INTERPOLATE OPN_PAR value=expr? CLS_PAR
+	;
+
+//軌道変位
+irregularity :
+	DOT func=CHANGE OPN_PAR x=nullableExpr COMMA y=nullableExpr COMMA r=nullableExpr COMMA lx=nullableExpr COMMA ly=nullableExpr COMMA lr=nullableExpr CLS_PAR
+	;
+
+//粘着特性
+adhesion :
+	  DOT func=CHANGE OPN_PAR a=nullableExpr CLS_PAR
+	| DOT func=CHANGE OPN_PAR a=nullableExpr COMMA b=nullableExpr COMMA c=nullableExpr CLS_PAR
+	;
+
+//音
+sound :
+	  DOT func=LOAD OPN_PAR path=string CLS_PAR
+	| OPN_BRA key=expr CLS_BRA DOT func=PLAY OPN_PAR CLS_PAR
+	;
+
+//固定音源
+sound3d :
+	  DOT func=LOAD OPN_PAR path=string CLS_PAR
+	| OPN_BRA key=expr CLS_BRA DOT func=PUT OPN_PAR x=nullableExpr COMMA y=nullableExpr CLS_PAR
+	;
+
+//走行音
+rollingnoise :
+	DOT func=CHANGE OPN_PAR index=nullableExpr CLS_PAR
+	;
+
+//フランジきしり音
+flangenoise :
+	DOT func=CHANGE OPN_PAR index=nullableExpr CLS_PAR
+	;
+
+//分岐器通過音
+jointnoise :
+	DOT func=PLAY OPN_PAR index=nullableExpr CLS_PAR
+	;
+
+//他列車
+train :
+	  DOT func=ADD OPN_PAR trainkey=nullableExpr COMMA path=expr COMMA trackkey=nullableExpr COMMA direction=nullableExpr CLS_PAR
+	| OPN_BRA key=expr CLS_BRA DOT func=LOAD OPN_PAR path=expr COMMA trackkey=nullableExpr COMMA direction=nullableExpr CLS_PAR
+	| OPN_BRA key=expr CLS_BRA DOT func=ENABLE OPN_PAR nullableExpr CLS_PAR
+	| OPN_BRA key=expr CLS_BRA DOT func=STOP OPN_PAR decelerate=nullableExpr COMMA stoptime=nullableExpr COMMA accelerate=nullableExpr COMMA speed=nullableExpr CLS_PAR
 	;
 
 //連続ストラクチャリスト引数
