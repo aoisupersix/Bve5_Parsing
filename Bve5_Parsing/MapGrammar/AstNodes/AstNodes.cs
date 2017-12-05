@@ -131,6 +131,81 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         public MapGrammarAstNodes InnerNode { get; set; }
     }
 
+    #region 数学関数ノード
+
+    /// <summary>
+    /// 数学関数親ノード
+    /// </summary>
+    internal abstract class SingleArgFunctionNode : MapGrammarAstNodes
+    {
+        public MapGrammarAstNodes Value { get; set; }
+    }
+
+    /// <summary>
+    /// ABSノード
+    /// </summary>
+    internal class AbsNode : SingleArgFunctionNode { }
+
+    /// <summary>
+    /// ATAN2ノード
+    /// </summary>
+    internal class Atan2Node : MapGrammarAstNodes
+    {
+        public MapGrammarAstNodes Y { get; set; }
+        public MapGrammarAstNodes X { get; set; }
+    }
+
+    /// <summary>
+    /// CEILノード
+    /// </summary>
+    internal class CeilNode : SingleArgFunctionNode { }
+
+    /// <summary>
+    /// COSノード
+    /// </summary>
+    internal class CosNode : SingleArgFunctionNode { }
+
+    /// <summary>
+    /// EXPノード
+    /// </summary>
+    internal class ExpNode : SingleArgFunctionNode { }
+
+    /// <summary>
+    /// FLOORノード
+    /// </summary>
+    internal class FloorNode : SingleArgFunctionNode { }
+
+    /// <summary>
+    /// LOGノード
+    /// </summary>
+    internal class LogNode : SingleArgFunctionNode { }
+
+    /// <summary>
+    /// POWノード
+    /// </summary>
+    internal class PowNode : MapGrammarAstNodes
+    {
+        public MapGrammarAstNodes X { get; set; }
+        public MapGrammarAstNodes Y { get; set; }
+    }
+
+    /// <summary>
+    /// RANDノード
+    /// </summary>
+    internal class RandNode : SingleArgFunctionNode { }
+
+    /// <summary>
+    /// SINノード
+    /// </summary>
+    internal class SinNode : SingleArgFunctionNode { }
+
+    /// <summary>
+    /// SQRTノード
+    /// </summary>
+    internal class SqrtNode : SingleArgFunctionNode { }
+
+    #endregion 数学関数ノード
+
     internal class NumberNode : MapGrammarAstNodes
     {
         public double Value { get; set; }

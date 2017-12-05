@@ -130,17 +130,17 @@ expr :
 	| op=(PLUS | MINUS) expr						#unaryExpr
 	| left=expr op=(MULT | DIV) right=expr			#infixExpr
 	| left=expr op=(PLUS | MINUS | MOD) right=expr	#infixExpr
-	| func=ABS OPN_PAR value=expr CLS_PAR			#functionExpr
-	| func=ATAN2 OPN_PAR y=expr x=expr CLS_PAR		#functionExpr
-	| func=CEIL OPN_PAR value=expr CLS_PAR			#functionExpr
-	| func=COS OPN_PAR value=expr CLS_PAR			#functionExpr
-	| func=EXP OPN_PAR value=expr CLS_PAR			#functionExpr
-	| func=FLOOR OPN_PAR value=expr CLS_PAR			#functionExpr
-	| func=LOG OPN_PAR value=expr CLS_PAR			#functionExpr
-	| func=POW OPN_PAR x=expr y=expr CLS_PAR		#functionExpr
-	| func=RAND OPN_PAR value=expr? CLS_PAR			#functionExpr
-	| func=SIN OPN_PAR value=expr CLS_PAR			#functionExpr
-	| func=SQRT OPN_PAR value=expr CLS_PAR			#functionExpr
+	| func=ABS OPN_PAR value=expr CLS_PAR			#absExpr
+	| func=ATAN2 OPN_PAR y=expr x=expr CLS_PAR		#atan2Expr
+	| func=CEIL OPN_PAR value=expr CLS_PAR			#ceilExpr
+	| func=COS OPN_PAR value=expr CLS_PAR			#cosExpr
+	| func=EXP OPN_PAR value=expr CLS_PAR			#expExpr
+	| func=FLOOR OPN_PAR value=expr CLS_PAR			#floorExpr
+	| func=LOG OPN_PAR value=expr CLS_PAR			#logExpr
+	| func=POW OPN_PAR x=expr y=expr CLS_PAR		#powExpr
+	| func=RAND OPN_PAR value=expr? CLS_PAR			#randExpr
+	| func=SIN OPN_PAR value=expr CLS_PAR			#sinExpr
+	| func=SQRT OPN_PAR value=expr CLS_PAR			#sqrtExpr
 	| v=var											#varExpr
 	| num=NUM										#numberExpr
 	| str=string									#stringExpr
