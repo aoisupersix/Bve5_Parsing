@@ -1017,6 +1017,40 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         }
         #endregion PreTrain Visitors
 
+        #region Light Visitors
+
+        /// <summary>
+        /// 光源Visitor
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
+        public override MapGrammarAstNodes VisitLight([NotNull] SyntaxDefinitions.MapGrammarParser.LightContext context)
+        {
+            Syntax1Node node = new Syntax1Node();
+            node.MapElementName = "light";
+            node.FunctionName = context.func.Text.ToLower();
+
+            switch (context.func.Type)
+            {
+                case MapGrammarLexer.AMBIENT:                           /* ambient(red, green, blue) */
+                    node.Arguments.Add("red", Visit(context.red));
+                    node.Arguments.Add("green", Visit(context.green));
+                    node.Arguments.Add("blue", Visit(context.blue));
+                    break;
+                case MapGrammarLexer.DIFFUSE:                           /* diffuse(red, green, blue) */
+                    node.Arguments.Add("red", Visit(context.red));
+                    node.Arguments.Add("green", Visit(context.green));
+                    node.Arguments.Add("blue", Visit(context.blue));
+                    break;
+                case MapGrammarLexer.DIRECTION:                         /* direction(pitch, yaw) */
+                    node.Arguments.Add("pitch", Visit(context.pitch));
+                    node.Arguments.Add("yaw", Visit(context.yaw));
+                    break;
+            }
+            return node;
+        }
+        #endregion Light Visitors
+
         #region Expression & Variable Visitors
 
         /// <summary>
