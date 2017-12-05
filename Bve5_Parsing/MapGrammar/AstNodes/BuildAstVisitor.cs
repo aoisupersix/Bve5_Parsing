@@ -1116,6 +1116,29 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         }
         #endregion CabIlluminance Visitors
 
+        #region Irregularity Visitors
+
+        /// <summary>
+        /// 軌道変位Visitor
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
+        public override MapGrammarAstNodes VisitIrregularity([NotNull] SyntaxDefinitions.MapGrammarParser.IrregularityContext context)
+        {
+            Syntax1Node node = new Syntax1Node();
+            node.MapElementName = "irregularity";
+            node.FunctionName = context.func.Text.ToLower();
+            node.Arguments.Add("x", Visit(context.x));
+            node.Arguments.Add("y", Visit(context.y));
+            node.Arguments.Add("r", Visit(context.r));
+            node.Arguments.Add("lx", Visit(context.lx));
+            node.Arguments.Add("ly", Visit(context.ly));
+            node.Arguments.Add("lr", Visit(context.lr));
+
+            return node;
+        }
+        #endregion Irregularity Visitors
+
         #region Expression & Variable Visitors
 
         /// <summary>
