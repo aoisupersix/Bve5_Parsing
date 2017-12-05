@@ -765,6 +765,120 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         }
 
         /// <summary>
+        /// 数学関数AbsVisitor
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
+        public override MapGrammarAstNodes VisitAbsExpr([NotNull] SyntaxDefinitions.MapGrammarParser.AbsExprContext context)
+        {
+            return new AbsNode { Value = Visit(context.value) };
+        }
+
+        /// <summary>
+        /// 数学関数Atan2Visitor
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
+        public override MapGrammarAstNodes VisitAtan2Expr([NotNull] SyntaxDefinitions.MapGrammarParser.Atan2ExprContext context)
+        {
+            return new Atan2Node { Y = Visit(context.y), X = Visit(context.x) };
+        }
+
+        /// <summary>
+        /// 数学関数CeilVisitor
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
+        public override MapGrammarAstNodes VisitCeilExpr([NotNull] SyntaxDefinitions.MapGrammarParser.CeilExprContext context)
+        {
+            return new CeilNode { Value = Visit(context.value) };
+        }
+
+        /// <summary>
+        /// 数学関数CosVisitor
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
+        public override MapGrammarAstNodes VisitCosExpr([NotNull] SyntaxDefinitions.MapGrammarParser.CosExprContext context)
+        {
+            return new CosNode { Value = Visit(context.value) };
+        }
+
+        /// <summary>
+        /// 数学関数ExpVisitor
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
+        public override MapGrammarAstNodes VisitExpExpr([NotNull] SyntaxDefinitions.MapGrammarParser.ExpExprContext context)
+        {
+            return new ExpNode { Value = Visit(context.value) };
+        }
+
+        /// <summary>
+        /// 数学関数FloorVisitor
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
+        public override MapGrammarAstNodes VisitFloorExpr([NotNull] SyntaxDefinitions.MapGrammarParser.FloorExprContext context)
+        {
+            return new FloorNode { Value = Visit(context.value) };
+        }
+
+        /// <summary>
+        /// 数学関数LogVisitor
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
+        public override MapGrammarAstNodes VisitLogExpr([NotNull] SyntaxDefinitions.MapGrammarParser.LogExprContext context)
+        {
+            return new LogNode { Value = Visit(context.value) };
+        }
+
+        /// <summary>
+        /// 数学関数PowVisitor
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
+        public override MapGrammarAstNodes VisitPowExpr([NotNull] SyntaxDefinitions.MapGrammarParser.PowExprContext context)
+        {
+            return new Atan2Node { X = Visit(context.x), Y = Visit(context.y) };
+        }
+
+        /// <summary>
+        /// 数学関数RandVisitor
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
+        public override MapGrammarAstNodes VisitRandExpr([NotNull] SyntaxDefinitions.MapGrammarParser.RandExprContext context)
+        {
+            RandNode node = new RandNode();
+            if (context.value != null)
+                node.Value = Visit(context.value);
+
+            return node;
+        }
+
+        /// <summary>
+        /// 数学関数SinVisitor
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
+        public override MapGrammarAstNodes VisitSinExpr([NotNull] SyntaxDefinitions.MapGrammarParser.SinExprContext context)
+        {
+            return new SinNode { Value = Visit(context.value) };
+        }
+
+        /// <summary>
+        /// 数学関数SqrtVisitor
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
+        public override MapGrammarAstNodes VisitSqrtExpr([NotNull] SyntaxDefinitions.MapGrammarParser.SqrtExprContext context)
+        {
+            return new SqrtNode { Value = Visit(context.value) };
+        }
+
+        /// <summary>
         /// 数字項Visitor
         /// </summary>
         /// <param name="context"></param>
