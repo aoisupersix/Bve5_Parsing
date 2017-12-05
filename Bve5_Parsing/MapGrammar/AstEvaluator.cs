@@ -22,6 +22,17 @@ namespace Bve5_Parsing.MapGrammar
         public abstract T Visit(DivisionNode node);
         public abstract T Visit(NegateNode node);
         public abstract T Visit(ModuloNode node);
+        public abstract T Visit(AbsNode node);
+        public abstract T Visit(Atan2Node node);
+        public abstract T Visit(CeilNode node);
+        public abstract T Visit(CosNode node);
+        public abstract T Visit(ExpNode node);
+        public abstract T Visit(FloorNode node);
+        public abstract T Visit(LogNode node);
+        public abstract T Visit(PowNode node);
+        public abstract T Visit(RandNode node);
+        public abstract T Visit(SinNode node);
+        public abstract T Visit(SqrtNode node);
         public abstract T Visit(NumberNode node);
         public abstract T Visit(DistanceVariableNode node);
         public abstract T Visit(StringNode node);
@@ -211,6 +222,121 @@ namespace Bve5_Parsing.MapGrammar
             if (Visit(node.Left).GetType() == typeof(string) || Visit(node.Right).GetType() == typeof(string))
                 throw new FormatException();
             return (double)Visit(node.Left) % (double)Visit(node.Right);
+        }
+
+        /// <summary>
+        /// 絶対値関数の評価
+        /// </summary>
+        /// <param name="node"></param>
+        /// <returns></returns>
+        public override object Visit(AbsNode node)
+        {
+            return Math.Abs((double)Visit(node.Value));
+        }
+
+        /// <summary>
+        /// Atan2関数の評価
+        /// </summary>
+        /// <param name="node"></param>
+        /// <returns></returns>
+        public override object Visit(Atan2Node node)
+        {
+            return Math.Atan2((double)Visit(node.X), (double)Visit(node.X));
+        }
+
+        /// <summary>
+        /// 切り上げ関数の評価
+        /// </summary>
+        /// <param name="node"></param>
+        /// <returns></returns>
+        public override object Visit(CeilNode node)
+        {
+            return Math.Ceiling((double)Visit(node.Value));
+        }
+
+        /// <summary>
+        /// 余弦関数の評価
+        /// </summary>
+        /// <param name="node"></param>
+        /// <returns></returns>
+        public override object Visit(CosNode node)
+        {
+            return Math.Cos((double)Visit(node.Value));
+        }
+
+        /// <summary>
+        /// 累乗関数の評価
+        /// </summary>
+        /// <param name="node"></param>
+        /// <returns></returns>
+        public override object Visit(ExpNode node)
+        {
+            return Math.Exp((double)Visit(node.Value));
+        }
+
+        /// <summary>
+        /// 切り捨て関数の評価
+        /// </summary>
+        /// <param name="node"></param>
+        /// <returns></returns>
+        public override object Visit(FloorNode node)
+        {
+            return Math.Floor((double)Visit(node.Value));
+        }
+
+        /// <summary>
+        /// 自然対数関数の評価
+        /// </summary>
+        /// <param name="node"></param>
+        /// <returns></returns>
+        public override object Visit(LogNode node)
+        {
+            return Math.Log((double)Visit(node.Value));
+        }
+
+        /// <summary>
+        /// べき乗関数の評価
+        /// </summary>
+        /// <param name="node"></param>
+        /// <returns></returns>
+        public override object Visit(PowNode node)
+        {
+            return Math.Pow((double)Visit(node.X), (double)Visit(node.Y));
+        }
+
+        /// <summary>
+        /// 乱数関数の評価
+        /// </summary>
+        /// <param name="node"></param>
+        /// <returns></returns>
+        public override object Visit(RandNode node)
+        {
+            System.Random random = new System.Random();
+            if (node.Value == null)
+                return random.NextDouble();
+
+
+            return random.Next((int)Visit(node.Value));
+        }
+
+        /// <summary>
+        /// 正弦関数の評価
+        /// </summary>
+        /// <param name="node"></param>
+        /// <returns></returns>
+        public override object Visit(SinNode node)
+        {
+            return Math.Sin((double)Visit(node.Value));
+        }
+
+        /// <summary>
+        /// 平方根関数の評価
+        /// </summary>
+        /// <param name="node"></param>
+        /// <returns></returns>
+        public override object Visit(SqrtNode node)
+        {
+            return Math.Sqrt((double)Visit(node.Value));
         }
 
         public override object Visit(NumberNode node)
