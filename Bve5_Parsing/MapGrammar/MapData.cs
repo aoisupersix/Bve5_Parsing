@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using Bve5_Parsing.MapGrammar.AstNodes;
 
 namespace Bve5_Parsing.MapGrammar
 {
@@ -22,7 +21,7 @@ namespace Bve5_Parsing.MapGrammar
         /// ストラクチャリストのファイルパス
         /// </summary>
         public string StructureListPath { get; set; }
-        
+
         /// <summary>
         /// 停車場リストのファイルパス
         /// </summary>
@@ -62,19 +61,19 @@ namespace Bve5_Parsing.MapGrammar
         {
             switch (elementName)
             {
-                case "Structure":
+                case "structure":
                     StructureListPath = path;
                     break;
-                case "Station":
+                case "station":
                     StationListPath = path;
                     break;
-                case "Signal":
+                case "signal":
                     SignalListPath = path;
                     break;
-                case "Sound":
+                case "sound":
                     SoundListPath = path;
                     break;
-                case "Sound3D":
+                case "sound3d":
                     Sound3DListPath = path;
                     break;
             }

@@ -1,0 +1,364 @@
+﻿using Bve5_Parsing.MapGrammar.AstNodes;
+using System;
+
+namespace Bve5_Parsing.MapGrammar
+{
+    /**
+     * ASTを辿って木を評価する
+     */
+
+    internal abstract class AstVisitor<T>
+    {
+        public abstract T Visit(RootNode node);
+        public abstract T Visit(DistanceNode node);
+        public abstract T Visit(Syntax1Node node);
+        public abstract T Visit(Syntax2Node node);
+        public abstract T Visit(Syntax3Node node);
+        public abstract T Visit(LoadListNode node);
+        public abstract T Visit(VarAssignNode node);
+        public abstract T Visit(AdditionNode node);
+        public abstract T Visit(SubtractionNode node);
+        public abstract T Visit(MultiplicationNode node);
+        public abstract T Visit(DivisionNode node);
+        public abstract T Visit(NegateNode node);
+        public abstract T Visit(ModuloNode node);
+        public abstract T Visit(AbsNode node);
+        public abstract T Visit(Atan2Node node);
+        public abstract T Visit(CeilNode node);
+        public abstract T Visit(CosNode node);
+        public abstract T Visit(ExpNode node);
+        public abstract T Visit(FloorNode node);
+        public abstract T Visit(LogNode node);
+        public abstract T Visit(PowNode node);
+        public abstract T Visit(RandNode node);
+        public abstract T Visit(SinNode node);
+        public abstract T Visit(SqrtNode node);
+        public abstract T Visit(NumberNode node);
+        public abstract T Visit(DistanceVariableNode node);
+        public abstract T Visit(StringNode node);
+        public abstract T Visit(VarNode node);
+
+        public T Visit(MapGrammarAstNodes node)
+        {
+            return Visit((dynamic)node);
+        }
+    }
+
+    internal class EvaluateMapGrammarVisitor : AstVisitor<object>
+    {
+        /// <summary>
+        /// 評価結果
+        /// </summary>
+        private MapData evaluateData;
+
+        /// <summary>
+        /// 現在評価中の距離程
+        /// </summary>
+        private double nowDistance = 0;
+
+        /// <summary>
+        /// ルートノードの評価
+        /// </summary>
+        /// <param name="node">ルートノード</param>
+        /// <returns>解析結果のMapData</returns>
+        public override object Visit(RootNode node)
+        {
+            evaluateData = new MapData();
+            foreach(var state in node.StatementList)
+            {
+                object childData = Visit(state);
+                if(childData != null)
+                    evaluateData.Statements.Add((SyntaxData)childData);
+            }
+
+            return evaluateData;
+        }
+
+        public override object Visit(DistanceNode node)
+        {
+            nowDistance = (double)Visit(node.Value);
+
+            return null;
+        }
+
+        /// <summary>
+        /// 構文タイプ1の評価
+        /// </summary>
+        /// <param name="node">Syntax1Node</param>
+        /// <returns>解析結果のSyntaxDataクラス</returns>
+        public override object Visit(Syntax1Node node)
+        {
+            SyntaxData returnData = new SyntaxData();
+            //構文情報を登録する
+            returnData.Distance = nowDistance;
+            returnData.MapElement = new string[1];
+            returnData.MapElement[0] = node.MapElementName;
+            returnData.Function = node.FunctionName;
+            foreach (string key in node.Arguments.Keys)
+            {
+                if (node.Arguments[key] != null)
+                    returnData.Arguments.Add(key, Visit(node.Arguments[key]));
+                else
+                    returnData.Arguments.Add(key, null);
+            }
+
+            return returnData;
+        }
+
+        /// <summary>
+        /// 構文タイプ2の評価
+        /// </summary>
+        /// <param name="node">Syntax2Node</param>
+        /// <returns>解析結果のSyntaxDataクラス</returns>
+        public override object Visit(Syntax2Node node)
+        {
+            SyntaxData returnData = new SyntaxData();
+            //構文情報を登録する
+            returnData.Distance = nowDistance;
+            returnData.MapElement = new string[1];
+            returnData.MapElement[0] = node.MapElementName;
+            returnData.Key = Visit(node.Key).ToString();
+            returnData.Function = node.FunctionName;
+            foreach (string key in node.Arguments.Keys)
+            {
+                if (node.Arguments[key] != null)
+                    returnData.Arguments.Add(key, Visit(node.Arguments[key]));
+                else
+                    returnData.Arguments.Add(key, null);
+            }
+
+            return returnData;
+        }
+
+        /// <summary>
+        /// 構文タイプ3の評価
+        /// </summary>
+        /// <param name="node">Syntax3Node</param>
+        /// <returns>解析結果のSyntaxDataクラス</returns>
+        public override object Visit(Syntax3Node node)
+        {
+            SyntaxData returnData = new SyntaxData();
+            //構文情報を登録する
+            returnData.Distance = nowDistance;
+            returnData.MapElement = node.MapElementNames;
+            returnData.Key = Visit(node.Key).ToString();
+            returnData.Function = node.FunctionName;
+            foreach (string key in node.Arguments.Keys)
+            {
+                if (node.Arguments[key] != null)
+                    returnData.Arguments.Add(key, Visit(node.Arguments[key]));
+                else
+                    returnData.Arguments.Add(key, null);
+            }
+
+            return returnData;
+        }
+
+        /// <summary>
+        /// リストファイルノードの評価
+        /// リストファイルの参照パスを追加する
+        /// </summary>
+        /// <param name="node"></param>
+        /// <returns></returns>
+        public override object Visit(LoadListNode node)
+        {
+            evaluateData.SetListPathToString(node.MapElementName, node.Path);
+            return null;
+        }
+
+        /// <summary>
+        /// 変数宣言ノードの評価
+        /// </summary>
+        /// <param name="node"></param>
+        /// <returns></returns>
+        public override object Visit(VarAssignNode node)
+        {
+            var val = Visit(node.Value);
+            VariableStore.SetVar(node.VarName, val);
+            return null;    //変数宣言ステートメントは不要なので捨てる
+        }
+
+        #region Evaluate Expression Nodes
+
+        public override object Visit(AdditionNode node)
+        {
+            if (Visit(node.Left).GetType() == typeof(string) || Visit(node.Right).GetType() == typeof(string))
+                return Visit(node.Left).ToString() + Visit(node.Right).ToString();
+
+            return (double)Visit(node.Left) + (double)Visit(node.Right);
+
+        }
+
+        public override object Visit(SubtractionNode node)
+        {
+            if (Visit(node.Left).GetType() == typeof(string) || Visit(node.Right).GetType() == typeof(string))
+                throw new FormatException();
+            return (double)Visit(node.Left) - (double)Visit(node.Right);
+        }
+
+        public override object Visit(MultiplicationNode node)
+        {
+            if (Visit(node.Left).GetType() == typeof(string) || Visit(node.Right).GetType() == typeof(string))
+                throw new FormatException();
+            return (double)Visit(node.Left) * (double)Visit(node.Right);
+        }
+
+        public override object Visit(DivisionNode node)
+        {
+            if (Visit(node.Left).GetType() == typeof(string) || Visit(node.Right).GetType() == typeof(string))
+                throw new FormatException();
+            return (double)Visit(node.Left) / (double)Visit(node.Right);
+        }
+
+        public override object Visit(NegateNode node)
+        {
+            if (Visit(node.InnerNode).GetType() == typeof(string))
+                throw new FormatException();
+            return -(double)Visit(node.InnerNode);
+        }
+
+        public override object Visit(ModuloNode node)
+        {
+            if (Visit(node.Left).GetType() == typeof(string) || Visit(node.Right).GetType() == typeof(string))
+                throw new FormatException();
+            return (double)Visit(node.Left) % (double)Visit(node.Right);
+        }
+
+        /// <summary>
+        /// 絶対値関数の評価
+        /// </summary>
+        /// <param name="node"></param>
+        /// <returns></returns>
+        public override object Visit(AbsNode node)
+        {
+            return Math.Abs((double)Visit(node.Value));
+        }
+
+        /// <summary>
+        /// Atan2関数の評価
+        /// </summary>
+        /// <param name="node"></param>
+        /// <returns></returns>
+        public override object Visit(Atan2Node node)
+        {
+            return Math.Atan2((double)Visit(node.X), (double)Visit(node.X));
+        }
+
+        /// <summary>
+        /// 切り上げ関数の評価
+        /// </summary>
+        /// <param name="node"></param>
+        /// <returns></returns>
+        public override object Visit(CeilNode node)
+        {
+            return Math.Ceiling((double)Visit(node.Value));
+        }
+
+        /// <summary>
+        /// 余弦関数の評価
+        /// </summary>
+        /// <param name="node"></param>
+        /// <returns></returns>
+        public override object Visit(CosNode node)
+        {
+            return Math.Cos((double)Visit(node.Value));
+        }
+
+        /// <summary>
+        /// 累乗関数の評価
+        /// </summary>
+        /// <param name="node"></param>
+        /// <returns></returns>
+        public override object Visit(ExpNode node)
+        {
+            return Math.Exp((double)Visit(node.Value));
+        }
+
+        /// <summary>
+        /// 切り捨て関数の評価
+        /// </summary>
+        /// <param name="node"></param>
+        /// <returns></returns>
+        public override object Visit(FloorNode node)
+        {
+            return Math.Floor((double)Visit(node.Value));
+        }
+
+        /// <summary>
+        /// 自然対数関数の評価
+        /// </summary>
+        /// <param name="node"></param>
+        /// <returns></returns>
+        public override object Visit(LogNode node)
+        {
+            return Math.Log((double)Visit(node.Value));
+        }
+
+        /// <summary>
+        /// べき乗関数の評価
+        /// </summary>
+        /// <param name="node"></param>
+        /// <returns></returns>
+        public override object Visit(PowNode node)
+        {
+            return Math.Pow((double)Visit(node.X), (double)Visit(node.Y));
+        }
+
+        /// <summary>
+        /// 乱数関数の評価
+        /// </summary>
+        /// <param name="node"></param>
+        /// <returns></returns>
+        public override object Visit(RandNode node)
+        {
+            System.Random random = new System.Random();
+            if (node.Value == null)
+                return random.NextDouble();
+
+
+            return random.Next((int)((double)Visit(node.Value)));
+        }
+
+        /// <summary>
+        /// 正弦関数の評価
+        /// </summary>
+        /// <param name="node"></param>
+        /// <returns></returns>
+        public override object Visit(SinNode node)
+        {
+            return Math.Sin((double)Visit(node.Value));
+        }
+
+        /// <summary>
+        /// 平方根関数の評価
+        /// </summary>
+        /// <param name="node"></param>
+        /// <returns></returns>
+        public override object Visit(SqrtNode node)
+        {
+            return Math.Sqrt((double)Visit(node.Value));
+        }
+
+        public override object Visit(NumberNode node)
+        {
+            return node.Value;
+        }
+
+        public override object Visit(DistanceVariableNode node)
+        {
+            return nowDistance;
+        }
+
+        public override object Visit(StringNode node)
+        {
+            return node.Value;
+        }
+
+        public override object Visit(VarNode node)
+        {
+            return VariableStore.GetVar(node.Key);
+        }
+
+        #endregion Evaluate Expression Nodes
+    }
+}

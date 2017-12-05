@@ -7,31 +7,13 @@ Bve5_Parsing
 ![bve5PasingImage](images/bve5Parsing.png)
 
 Bve5構文のパーサライブラリです。
-Bve5の構文はどのように処理されているのか？という疑問を解消すべく、構文解析用ライブラリIronyを利用し、Bve5.7構文の構文解析器を実装してみました。現在、Bve5.7.6224.40815の一部構文に対応していますが、動作はかなり不安定です。
+Bve5の構文はどのように処理されているのか？という疑問を解消すべく、パーサジェネレータ「ANTLR」を利用し、Bve5.7構文の構文解析器を実装してみました。現在、Bve5.7.6224.40815の一部構文に対応していますが、動作はかなり不安定です。
 
 成果物であるクラスライブラリはGithubのリリースからダウンロードするか、ソースをコンパイルして入手してください。
 
 
 
 ## Supported Syntaxes
-- #### Scenario File
-    - Bve5.7全構文に対応
-    - namespace: **ScenarioGrammar**
-    - 出力: **ScenarioDataクラス**
-    構文解析の結果は、ScenarioDataクラスで返します。ScenarioDataクラスは以下のフィールドで構成されています。
-      - **string Version**: シナリオファイルのバージョン情報
-      - **List\<FilePath\> Route**: マップファイルの相対パス
-      - **List\<FilePath\> Vehicle**: 車両ファイルの相対パス
-      - **string Image**: サムネイル画像の相対パス
-      - **string Title**: シナリオタイトル
-      - **string RouteTitle**: 路線名
-      - **string VehicleTitle**: 車両名
-      - **string Author**: 路線と車両の作者
-      - **string Comment**: シナリオの説明
-
-    なお、RouteとVechicleに関しては、複数ファイルの指定と重み係数に対応するため、相対パスと重み係数をまとめたFilePath構造体のリストを返します。相対パスは**FilePath.Value**、重み係数は**FilePath.Weight**に対応しています。
-
-    詳しくは、[ScenarioData.cs](/Bve5_Parsing/ScenarioGrammar/ScenarioData.cs)を参照してください。
 
 - #### Map File
     - 古い構文(ex.Legacyなど)や数学関数を除くBve5.7全構文と変数に対応
@@ -60,51 +42,21 @@ Bve5の構文はどのように処理されているのか？という疑問を�
 
 その他は今後作っていきます👍
 
-## Requirement
-Importing your projects, **Irony 0.9.1** & **Irony.Interpreter 0.9.1** from  
-+ [nuget Irony](https://www.nuget.org/packages/Irony/) & [nuget Irony.Interpreter](https://www.nuget.org/packages/Irony.Interpreter/)
-+ [Irony - .NET Language Implementation Kit.](https://irony.codeplex.com/)  
-
-and this library from [Bve5_Parsing](https://github.com/aoisupersix/Bve5_Parsing/releases/download/v0.1.6527.27089/Bve5_Parsing.dll).
-
 ## Usage for C\# ##
 
 ex. C#でMapFileの構文解析を行う場合.  
 
 ```csharp
-using Irony.Interpreter;
-using Irony.Parsing;
 using Bve5_Parsing.MapGrammar;
 
 ...
     string input; //String to be analyzed
-    ScriptApp app = new ScriptApp(new LanguageData(new MapGrammar()));
-    try
-    {
-        MapData result = (MapData)app.Evaluate(input); //result data
-
-        // Process result
-    }
-    catch(ScriptException e)
-    {
-        //Exception handling
-    }
-
+    MapGrammarParser parser = new MapGrammarParser();
+    parser.Parse(input);
 ...
 ```
 
 構文が正しく解析された場合、結果は**MapDataクラス**で返ってきます。例えば、ファイルヘッダのバージョン情報は**MapData.Version**に格納されています。
-
-## UsedLibrarys
-
-Bve5_Parsing is using the following library.
-
-#### [Irony - .NET Language Implementation Kit.](https://irony.codeplex.com/)
-> The MIT License (MIT)
->
-> Copyright (c) 2011 Roman Ivantsov
-
-* **ライセンス全文 :** [licenses\Irony.txt](https://github.com/aoisupersix/Bve5_Parsing/blob/master/licenses/Irony.txt)
 
 ## License
 The MIT License (MIT)
