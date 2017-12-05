@@ -1079,6 +1079,24 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         }
         #endregion Fog Visitors
 
+        #region DrawDistance Visitors
+
+        /// <summary>
+        /// 風景描画距離Visitor
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
+        public override MapGrammarAstNodes VisitDrawdistance([NotNull] SyntaxDefinitions.MapGrammarParser.DrawdistanceContext context)
+        {
+            Syntax1Node node = new Syntax1Node();
+            node.MapElementName = "drawdistance";
+            node.FunctionName = context.func.Text.ToLower();
+            node.Arguments.Add("value", Visit(context.value));
+
+            return node;
+        }
+        #endregion DrawDistance Visitors
+
         #region Expression & Variable Visitors
 
         /// <summary>
