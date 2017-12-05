@@ -264,6 +264,266 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         }
 
         /// <summary>
+        /// ステートメントVisitor(先行列車)
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
+        public override MapGrammarAstNodes VisitPretrainState([NotNull] SyntaxDefinitions.MapGrammarParser.PretrainStateContext context)
+        {
+            MapGrammarAstNodes node;
+            try
+            {
+                node = Visit(context.pretrain());
+            }
+            catch (NullReferenceException)
+            {
+                node = null;
+            }
+
+            return node;
+        }
+
+        /// <summary>
+        /// ステートメントVisitor(光源)
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
+        public override MapGrammarAstNodes VisitLightState([NotNull] SyntaxDefinitions.MapGrammarParser.LightStateContext context)
+        {
+            MapGrammarAstNodes node;
+            try
+            {
+                node = Visit(context.light());
+            }
+            catch (NullReferenceException)
+            {
+                node = null;
+            }
+
+            return node;
+        }
+
+        /// <summary>
+        /// ステートメントVisitor(霧効果)
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
+        public override MapGrammarAstNodes VisitFogState([NotNull] SyntaxDefinitions.MapGrammarParser.FogStateContext context)
+        {
+            MapGrammarAstNodes node;
+            try
+            {
+                node = Visit(context.fog());
+            }
+            catch (NullReferenceException)
+            {
+                node = null;
+            }
+
+            return node;
+        }
+
+        /// <summary>
+        /// ステートメントVisitor(風景描画距離)
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
+        public override MapGrammarAstNodes VisitDrawdistanceState([NotNull] SyntaxDefinitions.MapGrammarParser.DrawdistanceStateContext context)
+        {
+            MapGrammarAstNodes node;
+            try
+            {
+                node = Visit(context.drawdistance());
+            }
+            catch (NullReferenceException)
+            {
+                node = null;
+            }
+
+            return node;
+        }
+
+        /// <summary>
+        /// ステートメントVisitor(運転台の明るさ)
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
+        public override MapGrammarAstNodes VisitCabilluminanceState([NotNull] SyntaxDefinitions.MapGrammarParser.CabilluminanceStateContext context)
+        {
+            MapGrammarAstNodes node;
+            try
+            {
+                node = Visit(context.cabilluminance());
+            }
+            catch (NullReferenceException)
+            {
+                node = null;
+            }
+
+            return node;
+        }
+
+        /// <summary>
+        /// ステートメントVisitor(軌道変位)
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
+        public override MapGrammarAstNodes VisitIrregularityState([NotNull] SyntaxDefinitions.MapGrammarParser.IrregularityStateContext context)
+        {
+            MapGrammarAstNodes node;
+            try
+            {
+                node = Visit(context.irregularity());
+            }
+            catch (NullReferenceException)
+            {
+                node = null;
+            }
+
+            return node;
+        }
+
+        /// <summary>
+        /// ステートメントVisitor(粘着特性)
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
+        public override MapGrammarAstNodes VisitAdhesionState([NotNull] SyntaxDefinitions.MapGrammarParser.AdhesionStateContext context)
+        {
+            MapGrammarAstNodes node;
+            try
+            {
+                node = Visit(context.adhesion());
+            }
+            catch (NullReferenceException)
+            {
+                node = null;
+            }
+
+            return node;
+        }
+
+        /// <summary>
+        /// ステートメントVisitor(音)
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
+        public override MapGrammarAstNodes VisitSoundState([NotNull] SyntaxDefinitions.MapGrammarParser.SoundStateContext context)
+        {
+            MapGrammarAstNodes node;
+            try
+            {
+                node = Visit(context.sound());
+            }
+            catch (NullReferenceException)
+            {
+                node = null;
+            }
+
+            return node;
+        }
+
+        /// <summary>
+        /// ステートメントVisitor(固定音源)
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
+        public override MapGrammarAstNodes VisitSound3dState([NotNull] SyntaxDefinitions.MapGrammarParser.Sound3dStateContext context)
+        {
+            MapGrammarAstNodes node;
+            try
+            {
+                node = Visit(context.sound3d());
+            }
+            catch (NullReferenceException)
+            {
+                node = null;
+            }
+
+            return node;
+        }
+
+        /// <summary>
+        /// ステートメントVisitor(走行音)
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
+        public override MapGrammarAstNodes VisitRollingnoiseState([NotNull] SyntaxDefinitions.MapGrammarParser.RollingnoiseStateContext context)
+        {
+            MapGrammarAstNodes node;
+            try
+            {
+                node = Visit(context.rollingnoise());
+            }
+            catch (NullReferenceException)
+            {
+                node = null;
+            }
+
+            return node;
+        }
+
+        /// <summary>
+        /// ステートメントVisitor(フランジきしり音)
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
+        public override MapGrammarAstNodes VisitFlangenoiseState([NotNull] SyntaxDefinitions.MapGrammarParser.FlangenoiseStateContext context)
+        {
+            MapGrammarAstNodes node;
+            try
+            {
+                node = Visit(context.flangenoise());
+            }
+            catch (NullReferenceException)
+            {
+                node = null;
+            }
+
+            return node;
+        }
+
+        /// <summary>
+        /// ステートメントVisitor(分岐器通過音)
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
+        public override MapGrammarAstNodes VisitJointnoiseState([NotNull] SyntaxDefinitions.MapGrammarParser.JointnoiseStateContext context)
+        {
+            MapGrammarAstNodes node;
+            try
+            {
+                node = Visit(context.jointnoise());
+            }
+            catch (NullReferenceException)
+            {
+                node = null;
+            }
+
+            return node;
+        }
+
+        /// <summary>
+        /// ステートメントVisitor(他列車)
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
+        public override MapGrammarAstNodes VisitTrainState([NotNull] SyntaxDefinitions.MapGrammarParser.TrainStateContext context)
+        {
+            MapGrammarAstNodes node;
+            try
+            {
+                node = Visit(context.train());
+            }
+            catch (NullReferenceException)
+            {
+                node = null;
+            }
+
+            return node;
+        }
+
+        /// <summary>
         /// ステートメントVisitor(変数宣言)
         /// </summary>
         /// <param name="context"></param>
