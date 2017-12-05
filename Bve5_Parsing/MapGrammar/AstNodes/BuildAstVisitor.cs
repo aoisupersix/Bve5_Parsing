@@ -765,6 +765,53 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         }
 
         /// <summary>
+        /// 数学関数Visitor
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
+        public override MapGrammarAstNodes VisitFunctionExpr([NotNull] SyntaxDefinitions.MapGrammarParser.FunctionExprContext context)
+        {
+            NumberNode node = new NumberNode();
+            switch (context.func.Type)
+            {
+                case MapGrammarLexer.ABS:                                           /* abs(value) */
+
+                    break;
+                case MapGrammarLexer.ATAN2:                                         /* atan2(y,x) */
+
+                    break;
+                case MapGrammarLexer.CEIL:                                          /* ceil(value) */
+
+                    break;
+                case MapGrammarLexer.COS:                                           /* cos(value) */
+
+                    break;
+                case MapGrammarLexer.EXP:                                           /* exp(value) */
+
+                    break;
+                case MapGrammarLexer.FLOOR:                                         /* floor(value) */
+
+                    break;
+                case MapGrammarLexer.LOG:                                           /* log(value) */
+
+                    break;
+                case MapGrammarLexer.POW:                                           /* pow(x,y) */
+
+                    break;
+                case MapGrammarLexer.RAND:                                          /* rand(value?) */
+
+                    break;
+                case MapGrammarLexer.SIN:                                           /* sin(value) */
+
+                    break;
+                case MapGrammarLexer.SQRT:                                          /* sqrt(value) */
+
+                    break;
+            }
+            return node;
+        }
+
+        /// <summary>
         /// 数字項Visitor
         /// </summary>
         /// <param name="context"></param>

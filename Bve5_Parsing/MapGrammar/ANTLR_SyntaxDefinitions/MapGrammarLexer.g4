@@ -70,10 +70,6 @@ NULL : N U L L;
 //距離変数
 DISTANCE : D I S T A N C E;
 
-//変数
-VAR_START : '$';
-VAR : [a-zA-Z0-9_]+;
-
 //演算子
 EQUAL : '=';
 PLUS : '+';
@@ -130,6 +126,10 @@ fragment Y:('y'|'Y');
 fragment Z:('z'|'Z');
 
 WHITESPACE : (' ' | '\t' | '\r' | '\n' )+ -> channel(HIDDEN);
+
+//変数
+VAR_START : '$';
+VAR : [a-zA-Z0-9_]+;
 
 //文字列
 QUOTE : '\'' -> pushMode(STRING_MODE) ;
