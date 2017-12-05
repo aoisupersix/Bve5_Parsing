@@ -1097,6 +1097,25 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         }
         #endregion DrawDistance Visitors
 
+        #region CabIlluminance Visitors
+
+        /// <summary>
+        /// 運転台の明るさVisitor
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
+        public override MapGrammarAstNodes VisitCabilluminance([NotNull] SyntaxDefinitions.MapGrammarParser.CabilluminanceContext context)
+        {
+            Syntax1Node node = new Syntax1Node();
+            node.MapElementName = "cabilluminance";
+            node.FunctionName = context.func.Text.ToLower();
+            if (context.value != null)
+                node.Arguments.Add("value", Visit(context.value));
+
+            return node;
+        }
+        #endregion CabIlluminance Visitors
+
         #region Expression & Variable Visitors
 
         /// <summary>
