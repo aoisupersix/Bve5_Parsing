@@ -1139,6 +1139,29 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         }
         #endregion Irregularity Visitors
 
+        #region Adhesion Visitors
+
+        /// <summary>
+        /// 粘着特性Visitor
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
+        public override MapGrammarAstNodes VisitAdhesion([NotNull] SyntaxDefinitions.MapGrammarParser.AdhesionContext context)
+        {
+            Syntax1Node node = new Syntax1Node();
+            node.MapElementName = "adhesion";
+            node.FunctionName = context.func.Text.ToLower();
+            node.Arguments.Add("a", Visit(context.a));
+            if(context.b != null)
+            {
+                node.Arguments.Add("b", Visit(context.b));
+                node.Arguments.Add("c", Visit(context.c));
+            }
+
+            return node;
+        }
+        #endregion Adhesion Visitors
+
         #region Expression & Variable Visitors
 
         /// <summary>
