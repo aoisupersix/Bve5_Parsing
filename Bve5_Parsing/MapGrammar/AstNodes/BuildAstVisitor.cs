@@ -1164,6 +1164,11 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
 
         #region Sound Visitors
 
+        /// <summary>
+        /// 音Visitor
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
         public override MapGrammarAstNodes VisitSound([NotNull] SyntaxDefinitions.MapGrammarParser.SoundContext context)
         {
             if(context.path != null)                                /* Load(filePath) */
@@ -1181,6 +1186,33 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
             }
         }
         #endregion Sound Visitors
+
+        #region Sound3D Visitors
+
+        /// <summary>
+        /// 固定音源Visitor
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
+        public override MapGrammarAstNodes VisitSound3d([NotNull] SyntaxDefinitions.MapGrammarParser.Sound3dContext context)
+        {
+            if (context.path != null)                                /* Load(filePath) */
+            {
+                return new LoadListNode { MapElementName = "sound3d", Path = context.path.text };
+            }
+            else                                                    /* [soundkey].Put(x,y) */
+            {
+                Syntax2Node node = new Syntax2Node();
+                node.MapElementName = "sound3d";
+                node.Key = Visit(context.key);
+                node.FunctionName = context.func.Text.ToLower();
+                node.Arguments.Add("x", Visit(context.x));
+                node.Arguments.Add("y", Visit(context.y));
+
+                return node;
+            }
+        }
+        #endregion Sound3D Visitors
 
         #region Expression & Variable Visitors
 
