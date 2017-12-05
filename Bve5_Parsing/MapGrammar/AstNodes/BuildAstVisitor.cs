@@ -1268,6 +1268,52 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         }
         #endregion JointNoise Visitors
 
+        #region Train Visitors
+
+        public override MapGrammarAstNodes VisitTrain([NotNull] SyntaxDefinitions.MapGrammarParser.TrainContext context)
+        {
+            if(context.func.Type == MapGrammarLexer.ADD)                        /* Add(trainkey, filePath, trackkey, direction */
+            {
+                Syntax1Node node = new Syntax1Node();
+                node.MapElementName = "train";
+                node.FunctionName = context.func.Text.ToLower();
+                node.Arguments.Add("trainkey", Visit(context.trainkey));
+                node.Arguments.Add("filepath", Visit(context.path));
+                node.Arguments.Add("trackkey", Visit(context.trackkey));
+                node.Arguments.Add("direction", Visit(context.direction));
+
+                return node;
+            }
+            else
+            {
+                Syntax2Node node = new Syntax2Node();
+                node.MapElementName = "train";
+                node.Key = Visit(context.key);
+                node.FunctionName = context.func.Text.ToLower();
+
+                switch (context.func.Type)
+                {
+                    case MapGrammarLexer.LOAD:                                  /* Load(filePath, trackkey, direction) */
+                        node.Arguments.Add("filepath", Visit(context.path));
+                        node.Arguments.Add("trackkey", Visit(context.trackkey));
+                        node.Arguments.Add("direction", Visit(context.direction));
+                        break;
+                    case MapGrammarLexer.ENABLE:                                /* Enable(time) */
+                        node.Arguments.Add("time", Visit(context.time));
+                        break;
+                    case MapGrammarLexer.STOP:                                  /* Stop(decelerate, stopTime, accelerate, speed) */
+                        node.Arguments.Add("decelerate", Visit(context.decelerate));
+                        node.Arguments.Add("stoptime", Visit(context.stoptime));
+                        node.Arguments.Add("accelerate", Visit(context.accelerate));
+                        node.Arguments.Add("speed", Visit(context.speed));
+                        break;
+                }
+
+                return node;
+            }
+        }
+        #endregion Train Visitors
+
         #region Expression & Variable Visitors
 
         /// <summary>

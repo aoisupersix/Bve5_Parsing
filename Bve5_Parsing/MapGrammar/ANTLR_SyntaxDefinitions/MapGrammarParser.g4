@@ -204,7 +204,7 @@ jointnoise :
 train :
 	  DOT func=ADD OPN_PAR trainkey=nullableExpr COMMA path=expr COMMA trackkey=nullableExpr COMMA direction=nullableExpr CLS_PAR
 	| OPN_BRA key=expr CLS_BRA DOT func=LOAD OPN_PAR path=expr COMMA trackkey=nullableExpr COMMA direction=nullableExpr CLS_PAR
-	| OPN_BRA key=expr CLS_BRA DOT func=ENABLE OPN_PAR nullableExpr CLS_PAR
+	| OPN_BRA key=expr CLS_BRA DOT func=ENABLE OPN_PAR time=nullableExpr CLS_PAR
 	| OPN_BRA key=expr CLS_BRA DOT func=STOP OPN_PAR decelerate=nullableExpr COMMA stoptime=nullableExpr COMMA accelerate=nullableExpr COMMA speed=nullableExpr CLS_PAR
 	;
 
