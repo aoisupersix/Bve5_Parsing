@@ -19,6 +19,7 @@ statement :
 	| SECTION section						#sectionState
 	| SIGNAL signal							#signalState
 	| BEACON beacon							#beaconState
+	| SPEEDLIMIT speedlimit					#speedlimitState
 	| varAssign								#varAssignState
 	;
 
@@ -111,6 +112,12 @@ signal :
 //地上子
 beacon :
 	DOT func=PUT OPN_PAR type=nullableExpr COMMA sectionArgs=nullableExpr COMMA sendData=nullableExpr CLS_PAR
+	;
+
+//速度制限
+speedlimit :
+	  DOT func=BEGIN OPN_PAR v=nullableExpr CLS_PAR
+	| DOT func=END OPN_PAR CLS_PAR
 	;
 
 //連続ストラクチャリスト引数

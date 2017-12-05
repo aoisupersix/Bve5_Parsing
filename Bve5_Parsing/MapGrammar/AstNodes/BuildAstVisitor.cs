@@ -244,6 +244,26 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         }
 
         /// <summary>
+        /// ステートメントVisitor(速度制限)
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
+        public override MapGrammarAstNodes VisitSpeedlimitState([NotNull] SyntaxDefinitions.MapGrammarParser.SpeedlimitStateContext context)
+        {
+            MapGrammarAstNodes node;
+            try
+            {
+                node = Visit(context.speedlimit());
+            }
+            catch (NullReferenceException)
+            {
+                node = null;
+            }
+
+            return node;
+        }
+
+        /// <summary>
         /// ステートメントVisitor(変数宣言)
         /// </summary>
         /// <param name="context"></param>
@@ -697,6 +717,22 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
             return node;
         }
         #endregion Beacon Visitors
+
+        #region SpeedLimit Visitors
+
+        public override MapGrammarAstNodes VisitSpeedlimit([NotNull] SyntaxDefinitions.MapGrammarParser.SpeedlimitContext context)
+        {
+            Syntax1Node node = new Syntax1Node();
+            node.MapElementName = "speedlimit";
+            node.FunctionName = context.func.Text.ToLower();
+            if(context.func.Type == MapGrammarLexer.BEGIN)
+            {
+                node.Arguments.Add("v", Visit(context.v));
+            }
+
+            return node;
+        }
+        #endregion SpeedLimit Visitors
 
         #region Expression & Variable Visitors
 
