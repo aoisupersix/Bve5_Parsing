@@ -224,6 +224,26 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         }
 
         /// <summary>
+        /// ステートメントVisitor(地上子)
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
+        public override MapGrammarAstNodes VisitBeaconState([NotNull] SyntaxDefinitions.MapGrammarParser.BeaconStateContext context)
+        {
+            MapGrammarAstNodes node;
+            try
+            {
+                node = Visit(context.beacon());
+            }
+            catch (NullReferenceException)
+            {
+                node = null;
+            }
+
+            return node;
+        }
+
+        /// <summary>
         /// ステートメントVisitor(変数宣言)
         /// </summary>
         /// <param name="context"></param>
@@ -658,6 +678,25 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
             return node;
         }
         #endregion Signal Visitors
+
+        #region Beacon Visitors
+
+        /// <summary>
+        /// 地上子Visitor
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
+        public override MapGrammarAstNodes VisitBeacon([NotNull] SyntaxDefinitions.MapGrammarParser.BeaconContext context)
+        {
+            Syntax1Node node = new Syntax1Node();
+            node.MapElementName = "beacon";
+            node.FunctionName = context.func.Text.ToLower();
+            node.Arguments.Add("type", Visit(context.type));
+            node.Arguments.Add("section", Visit(context.sectionArgs));
+            node.Arguments.Add("senddata", Visit(context.sendData));
+            return node;
+        }
+        #endregion Beacon Visitors
 
         #region Expression & Variable Visitors
 

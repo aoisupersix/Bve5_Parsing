@@ -18,6 +18,7 @@ statement :
 	| STATION station 						#stationState
 	| SECTION section						#sectionState
 	| SIGNAL signal							#signalState
+	| BEACON beacon							#beaconState
 	| varAssign								#varAssignState
 	;
 
@@ -105,6 +106,11 @@ signal :
 	  DOT func=LOAD OPN_PAR path=string CLS_PAR
 	| OPN_BRA key=expr CLS_BRA DOT func=PUT OPN_PAR sectionArgs=nullableExpr COMMA trackkey=nullableExpr COMMA x=nullableExpr COMMA y=nullableExpr CLS_PAR
 	| OPN_BRA key=expr CLS_BRA DOT func=PUT OPN_PAR sectionArgs=nullableExpr COMMA trackkey=nullableExpr COMMA x=nullableExpr COMMA y=nullableExpr COMMA z=nullableExpr COMMA rx=nullableExpr COMMA ry=nullableExpr COMMA rz=nullableExpr COMMA tilt=nullableExpr COMMA span=nullableExpr CLS_PAR
+	;
+
+//地上子
+beacon :
+	DOT func=PUT OPN_PAR type=nullableExpr COMMA sectionArgs=nullableExpr COMMA sendData=nullableExpr CLS_PAR
 	;
 
 //連続ストラクチャリスト引数
