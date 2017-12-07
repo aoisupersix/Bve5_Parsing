@@ -10,7 +10,7 @@ namespace Bve5_Parsing.MapGrammar
     /// </summary>
     public class MapGrammarParser
     {
-        public ErrorListener ErrorListener { get; set; }
+        public ParseErrorListener ErrorListener { get; set; }
 
         /// <summary>
         /// 構文解析器を初期化します。
@@ -18,7 +18,17 @@ namespace Bve5_Parsing.MapGrammar
         public MapGrammarParser()
         {
             VariableStore.ClearVar(); //変数の初期化
-            ErrorListener = new ErrorListener();
+            ErrorListener = new ParseErrorListener();
+        }
+
+        /// <summary>
+        /// 構文解析器をエラーリスナーを指定して初期化します。
+        /// </summary>
+        /// <param name="listener">エラーリスナークラス</param>
+        public MapGrammarParser(ParseErrorListener listener)
+        {
+            VariableStore.ClearVar();
+            ErrorListener = listener;
         }
 
         /// <summary>
@@ -41,6 +51,7 @@ namespace Bve5_Parsing.MapGrammar
             //エラーの回復
             if (cst.exception != null)
                 cst = parser.root();
+
             var ast = new BuildAstVisitor().VisitRoot(cst);
             value = (MapData)new EvaluateMapGrammarVisitor().Visit(ast);
 
