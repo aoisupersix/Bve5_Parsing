@@ -3,9 +3,10 @@
 namespace Bve5_Parsing.MapGrammar
 {
     /// <summary>
-    /// パーサのエラー処理クラス TODO
+    /// パーサのデフォルトエラー処理クラス
+    /// エラーをコンソールに出力します。
     /// </summary>
-    public class ErrorListener : BaseErrorListener
+    public class ParseErrorListener : BaseErrorListener
     {
         public override void SyntaxError(IRecognizer recognizer, IToken offendingSymbol, int line, int charPositionInLine, string msg, RecognitionException e)
         {

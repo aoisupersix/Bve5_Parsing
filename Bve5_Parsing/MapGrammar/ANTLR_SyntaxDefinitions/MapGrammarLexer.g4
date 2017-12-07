@@ -1,4 +1,11 @@
+/*
+ *	MapGrammarのANTLR字句定義ファイルです。
+ */
 lexer grammar MapGrammarLexer;
+
+//ヘッダー
+BVETS : B V E T S;
+MAP : M A P;
 
 //インクルードディレクティブ
 INCLUDE : I N C L U D E;
@@ -60,6 +67,7 @@ STOP : S T O P;
 
 //ステートメント区切り
 STATE_END : ';';
+COLON : ':';
 DOT : '.';
 COMMA : ',';
 
@@ -125,7 +133,8 @@ fragment X:('x'|'X');
 fragment Y:('y'|'Y');
 fragment Z:('z'|'Z');
 
-WHITESPACE : (' ' | '\t' | '\r' | '\n' )+ -> channel(HIDDEN);
+WHITESPACE : (' ' | '\t' | '\r' | '\n' )+ -> skip;
+COMMENT : ('//' | '#') ~[\r\n]* -> skip;
 
 //変数
 VAR_START : '$';

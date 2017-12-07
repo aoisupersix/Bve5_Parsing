@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Bve5_Parsing.MapGrammar.AstNodes
 {
     /**
-     * AstNodeの定義クラス
+     * AstNodeの定義
      */
 
     /// <summary>
@@ -21,6 +21,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     internal class RootNode : MapGrammarAstNodes
     {
         public List<MapGrammarAstNodes> StatementList { get; set; }
+        public string Version { get; set; }
         public RootNode()
         {
             StatementList = new List<MapGrammarAstNodes>();
@@ -35,7 +36,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         public MapGrammarAstNodes Value { get; set; }
     }
 
-    #region Statement AST Nodes
+    #region ステートメント AST Nodes
 
     /// <summary>
     /// ステートメントノード1 MapElement.Function(Args)
@@ -94,10 +95,10 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         public string Path { get; set; }
     }
 
-    #endregion Statement AST Nodes
+    #endregion ステートメント AST Nodes
 
 
-    #region VarAssign AST Nodes
+    #region 変数宣言 AST Nodes
 
     /// <summary>
     /// 変数宣言AstNode
@@ -107,9 +108,9 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         public string VarName { get; set; }
         public MapGrammarAstNodes Value { get; set; }
     }
-    #endregion VarAssign AST Nodes
+    #endregion 変数宣言 AST Nodes
 
-    #region Expression AST Nodes
+    #region 数式 AST Nodes
     internal abstract class InfixExpressionNode : MapGrammarAstNodes
     {
         public MapGrammarAstNodes Left { get; set; }
@@ -206,21 +207,33 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
 
     #endregion 数学関数ノード
 
+    /// <summary>
+    /// 数値ノード
+    /// </summary>
     internal class NumberNode : MapGrammarAstNodes
     {
         public double Value { get; set; }
     }
 
+    /// <summary>
+    /// 距離変数ノード
+    /// </summary>
     internal class DistanceVariableNode : MapGrammarAstNodes{ }
 
+    /// <summary>
+    /// 文字列ノード
+    /// </summary>
     internal class StringNode : MapGrammarAstNodes
     {
         public string Value { get; set; }
     }
 
+    /// <summary>
+    /// 変数ノード
+    /// </summary>
     internal class VarNode : MapGrammarAstNodes
     {
         public string Key { get; set; }
     }
-    #endregion Expression AST Nodes
+    #endregion 数式 AST Nodes
 }

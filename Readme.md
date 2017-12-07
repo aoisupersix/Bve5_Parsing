@@ -11,8 +11,6 @@ Bve5の構文はどのように処理されているのか？という疑問を�
 
 成果物であるクラスライブラリはGithubのリリースからダウンロードするか、ソースをコンパイルして入手してください。
 
-
-
 ## Supported Syntaxes
 
 - #### Map File
@@ -52,11 +50,29 @@ using Bve5_Parsing.MapGrammar;
 ...
     string input; //String to be analyzed
     MapGrammarParser parser = new MapGrammarParser();
-    parser.Parse(input);
+
+    MapData returnData;
+    try{
+        returnData = parser.Parse(input);
+    }catch(Exception e){
+
+    }
 ...
 ```
 
-構文が正しく解析された場合、結果は**MapDataクラス**で返ってきます。例えば、ファイルヘッダのバージョン情報は**MapData.Version**に格納されています。
+構文が解析された場合、結果は**MapDataクラス**で返ってきます。例えば、ファイルヘッダのバージョン情報は**MapData.Version**に格納されています。
+
+構文解析のエラーは**ErrorListenerクラス**を継承したクラスをパーサのコンストラクタの引数に指定することで取得できます。
+
+## Used Librarys
+Bve5_Parsing is using the following library.
+
+#### [ANTLR](http://www.antlr.org/index.html)
+> The BSD License (3-clause BSD License)
+>
+> Copyright (c) 2012 Terence Parr and Sam Harwell
+
+* **ライセンス全文 :** [Licenses\Irony.txt](/Licenses/ANTLR4.txt)
 
 ## License
 The MIT License (MIT)

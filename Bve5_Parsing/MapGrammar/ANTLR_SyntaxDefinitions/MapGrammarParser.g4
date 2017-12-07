@@ -1,39 +1,42 @@
+/*
+ *	MapGrammarのANTLR構文定義ファイルです。
+ */
 parser grammar MapGrammarParser;
 options{
 	tokenVocab=MapGrammarLexer;
 }
 
 root :
-	(statement STATE_END)* EOF
+	BVETS MAP version=NUM statement* EOF
 	;
 
 statement :
-	  distance								#distState
-	| CURVE curve							#curveState
-	| GRADIENT gradient						#gradientState
-	| TRACK track							#trackState
-	| STRUCTURE structure					#structureState
-	| REPEATER repeater						#repeaterState
-	| BACKGROUND background					#backgroundState
-	| STATION station 						#stationState
-	| SECTION section						#sectionState
-	| SIGNAL signal							#signalState
-	| BEACON beacon							#beaconState
-	| SPEEDLIMIT speedlimit					#speedlimitState
-	| PRETRAIN pretrain						#pretrainState
-	| LIGHT light							#lightState
-	| FOG fog								#fogState
-	| DRAWDISTANCE drawdistance				#drawdistanceState
-	| CABILLUMINANCE cabilluminance			#cabilluminanceState
-	| IRREGULARITY irregularity				#irregularityState
-	| ADHESION adhesion						#adhesionState
-	| SOUND sound							#soundState
-	| SOUND3D sound3d						#sound3dState
-	| ROLLINGNOISE rollingnoise				#rollingnoiseState
-	| FLANGENOISE flangenoise				#flangenoiseState
-	| JOINTNOISE jointnoise					#jointnoiseState
-	| TRAIN train							#trainState
-	| varAssign								#varAssignState
+	  distance STATE_END						#distState
+	| CURVE curve STATE_END						#curveState
+	| GRADIENT gradient STATE_END				#gradientState
+	| TRACK track STATE_END						#trackState
+	| STRUCTURE structure STATE_END				#structureState
+	| REPEATER repeater STATE_END				#repeaterState
+	| BACKGROUND background STATE_END			#backgroundState
+	| STATION station STATE_END					#stationState
+	| SECTION section STATE_END					#sectionState
+	| SIGNAL signal STATE_END					#signalState
+	| BEACON beacon STATE_END					#beaconState
+	| SPEEDLIMIT speedlimit STATE_END			#speedlimitState
+	| PRETRAIN pretrain STATE_END				#pretrainState
+	| LIGHT light STATE_END						#lightState
+	| FOG fog STATE_END							#fogState
+	| DRAWDISTANCE drawdistance STATE_END		#drawdistanceState
+	| CABILLUMINANCE cabilluminance STATE_END	#cabilluminanceState
+	| IRREGULARITY irregularity STATE_END		#irregularityState
+	| ADHESION adhesion STATE_END				#adhesionState
+	| SOUND sound STATE_END						#soundState
+	| SOUND3D sound3d STATE_END					#sound3dState
+	| ROLLINGNOISE rollingnoise STATE_END		#rollingnoiseState
+	| FLANGENOISE flangenoise STATE_END			#flangenoiseState
+	| JOINTNOISE jointnoise STATE_END			#jointnoiseState
+	| TRAIN train STATE_END						#trainState
+	| varAssign STATE_END						#varAssignState
 	;
 
 //距離程

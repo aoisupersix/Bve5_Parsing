@@ -3,10 +3,11 @@ using System;
 
 namespace Bve5_Parsing.MapGrammar
 {
-    /**
-     * ASTを辿って木を評価する
-     */
 
+    /// <summary>
+    /// ASTノードの評価クラス定義
+    /// </summary>
+    /// <typeparam name="T">ASTノードの種類</typeparam>
     internal abstract class AstVisitor<T>
     {
         public abstract T Visit(RootNode node);
@@ -38,12 +39,20 @@ namespace Bve5_Parsing.MapGrammar
         public abstract T Visit(StringNode node);
         public abstract T Visit(VarNode node);
 
+        /// <summary>
+        /// 引数に与えられたASTノードを評価します。
+        /// </summary>
+        /// <param name="node">評価するASTノード</param>
+        /// <returns>評価結果</returns>
         public T Visit(MapGrammarAstNodes node)
         {
             return Visit((dynamic)node);
         }
     }
 
+    /// <summary>
+    /// ASTノードの評価手続きクラス
+    /// </summary>
     internal class EvaluateMapGrammarVisitor : AstVisitor<object>
     {
         /// <summary>
@@ -64,6 +73,7 @@ namespace Bve5_Parsing.MapGrammar
         public override object Visit(RootNode node)
         {
             evaluateData = new MapData();
+            evaluateData.Version = node.Version;
             foreach(var state in node.StatementList)
             {
                 object childData = Visit(state);
@@ -178,7 +188,7 @@ namespace Bve5_Parsing.MapGrammar
             return null;    //変数宣言ステートメントは不要なので捨てる
         }
 
-        #region Evaluate Expression Nodes
+        #region 数式ノードの評価
 
         public override object Visit(AdditionNode node)
         {
@@ -359,6 +369,6 @@ namespace Bve5_Parsing.MapGrammar
             return VariableStore.GetVar(node.Key);
         }
 
-        #endregion Evaluate Expression Nodes
+        #endregion 数式ノードの評価
     }
 }

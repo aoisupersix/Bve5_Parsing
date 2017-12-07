@@ -5,31 +5,27 @@ using System;
 
 namespace Bve5_Parsing.MapGrammar
 {
+    /// <summary>
+    /// MapGrammar構文解析器のエラーからの復帰処理を行うクラス
+    /// 次のステートメントの終わり、もしくは構文の終わり(EOF)まで字句を読み飛ばします。
+    /// </summary>
     internal class MapGrammarErrorStrategy : DefaultErrorStrategy
     {
+        /// <summary>
+        /// エラーの復帰処理を行います。
+        /// </summary>
+        /// <param name="recognizer"></param>
+        /// <param name="e"></param>
         public override void Recover(Parser recognizer, RecognitionException e)
         {
-            // This should should move the current position to the next 'END' token
-            //base.Recover(recognizer, e);
-
-            ITokenStream tokenStream = (ITokenStream)recognizer.InputStream;
-
-            Console.WriteLine(tokenStream.Index + ":" + tokenStream.La(1));
-
-            if (tokenStream.Index > 0 && ( tokenStream.La(-1) == MapGrammarLexer.STATE_END || tokenStream.La(-1) == MapGrammarLexer.Eof) )
-                return;
-
-            // Verify we are where we expect to be
-            while (tokenStream.La(1) != MapGrammarLexer.STATE_END && tokenStream.La(1) != MapGrammarLexer.Eof)
+            int ttype = recognizer.InputStream.La(1);
+            while (ttype != MapGrammarLexer.Eof && ttype != MapGrammarLexer.STATE_END)
             {
-                // Get the next possible tokens
-                IntervalSet intervalSet = GetErrorRecoverySet(recognizer);
-
-                // Move to the next token
-                tokenStream.Consume();
-
-                Console.WriteLine(tokenStream.Index + ":" + tokenStream.La(-1) + "->" + tokenStream.La(1));
+                recognizer.Consume();
+                ttype = recognizer.InputStream.La(1);
             }
+            if (ttype == MapGrammarLexer.STATE_END)
+                recognizer.Consume();
         }
     }
 }

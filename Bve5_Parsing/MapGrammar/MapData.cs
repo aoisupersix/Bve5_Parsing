@@ -3,7 +3,7 @@
 namespace Bve5_Parsing.MapGrammar
 {
     /// <summary>
-    /// 構文解析の結果を格納するクラス
+    /// マップ構文の構文解析結果を格納するクラス
     /// </summary>
     public class MapData
     {
