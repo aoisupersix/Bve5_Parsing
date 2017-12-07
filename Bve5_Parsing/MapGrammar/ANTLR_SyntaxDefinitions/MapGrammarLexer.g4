@@ -1,7 +1,3 @@
-/*
- * MapGrammarのANTLR字句定義ファイルです。
- */
-
 lexer grammar MapGrammarLexer;
 
 //インクルードディレクティブ
@@ -130,6 +126,7 @@ fragment Y:('y'|'Y');
 fragment Z:('z'|'Z');
 
 WHITESPACE : (' ' | '\t' | '\r' | '\n' )+ -> skip;
+COMMENT : ('//' | '#') ~[\r\n]* -> skip;
 
 //変数
 VAR_START : '$';
