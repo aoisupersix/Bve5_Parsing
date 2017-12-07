@@ -1,14 +1,13 @@
 /*
  *	MapGrammarのANTLR構文定義ファイルです。
  */
-
 parser grammar MapGrammarParser;
 options{
 	tokenVocab=MapGrammarLexer;
 }
 
 root :
-	statement* EOF
+	BVETS MAP version=NUM statement* EOF
 	;
 
 statement :

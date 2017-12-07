@@ -73,6 +73,7 @@ namespace Bve5_Parsing.MapGrammar
         public override object Visit(RootNode node)
         {
             evaluateData = new MapData();
+            evaluateData.Version = node.Version;
             foreach(var state in node.StatementList)
             {
                 object childData = Visit(state);
