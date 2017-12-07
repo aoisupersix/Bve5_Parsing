@@ -1,3 +1,7 @@
+/*
+ *	MapGrammarのANTLR構文定義ファイルです。
+ */
+
 parser grammar MapGrammarParser;
 options{
 	tokenVocab=MapGrammarLexer;

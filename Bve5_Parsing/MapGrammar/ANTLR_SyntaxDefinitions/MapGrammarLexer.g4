@@ -1,3 +1,7 @@
+/*
+ * MapGrammarのANTLR字句定義ファイルです。
+ */
+
 lexer grammar MapGrammarLexer;
 
 //インクルードディレクティブ
