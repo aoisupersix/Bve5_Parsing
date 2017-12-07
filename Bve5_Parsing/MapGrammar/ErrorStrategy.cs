@@ -31,7 +31,6 @@ namespace Bve5_Parsing.MapGrammar
                 base.Recover(recognizer, e);
             }
 
-            this.Reset(recognizer);
         }
     }
 }

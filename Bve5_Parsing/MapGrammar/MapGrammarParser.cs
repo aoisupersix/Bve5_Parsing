@@ -38,7 +38,9 @@ namespace Bve5_Parsing.MapGrammar
             MapData value = null;
             var cst = parser.root();
 
-            cst = parser.root();
+            //エラーの回復
+            if (cst.exception != null)
+                cst = parser.root();
             var ast = new BuildAstVisitor().VisitRoot(cst);
             value = (MapData)new EvaluateMapGrammarVisitor().Visit(ast);
 

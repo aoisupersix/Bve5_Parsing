@@ -15,7 +15,7 @@ namespace Bve5_Parsing
         {
             if(testMode == 0)
             {
-                string input0 = "suman; Curve.Begin(); Curve.BeginTransition(); suman;";
+                string input0 = "Curve.Begin(); Curve.BeginTransition();";
                 MapGrammarTest(input0);
                 Console.ReadLine();
             }
