@@ -125,7 +125,7 @@ fragment X:('x'|'X');
 fragment Y:('y'|'Y');
 fragment Z:('z'|'Z');
 
-WHITESPACE : (' ' | '\t' | '\r' | '\n' )+ -> channel(HIDDEN);
+WHITESPACE : (' ' | '\t' | '\r' | '\n' )+ -> skip;
 
 //変数
 VAR_START : '$';
