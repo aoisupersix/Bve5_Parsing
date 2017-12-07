@@ -18,24 +18,20 @@ namespace Bve5_Parsing.MapGrammar
         /// <param name="e"></param>
         public override void Recover(Parser recognizer, RecognitionException e)
         {
-            // This should should move the current position to the next 'END' token
-            //base.Recover(recognizer, e);
-
-            ITokenStream tokenStream = (ITokenStream)recognizer.InputStream;
-
-            Console.WriteLine(tokenStream.Index + ":" + tokenStream.La(1));
-
-            if (tokenStream.Index > 0 && (tokenStream.La(-1) == MapGrammarLexer.STATE_END || tokenStream.La(-1) == MapGrammarLexer.Eof))
-                return;
-
-            // Verify we are where we expect to be
-            while (tokenStream.La(1) != MapGrammarLexer.STATE_END && tokenStream.La(1) != MapGrammarLexer.Eof)
-            {
-
-                // Move to the next token
-                recognizer.Consume();
-                Console.WriteLine(tokenStream.Index + ":" + tokenStream.La(-1) + "->" + tokenStream.La(1) + ",recognizer=" + recognizer.CurrentToken);
+            if (e is InputMismatchException) {
+                int ttype = recognizer.InputStream.La(1);
+                while (ttype != MapGrammarLexer.Eof && ttype != MapGrammarLexer.STATE_END)
+                {
+                    recognizer.Consume();
+                    ttype = recognizer.InputStream.La(1);
+                }
+                if (ttype == MapGrammarLexer.STATE_END)
+                    recognizer.Consume();
+            } else {
+                base.Recover(recognizer, e);
             }
+
+            this.Reset(recognizer);
         }
     }
 }

@@ -36,7 +36,9 @@ namespace Bve5_Parsing.MapGrammar
             parser.ErrorHandler = new MapGrammarErrorStrategy();
 
             MapData value = null;
-            var cst = parser.root();       
+            var cst = parser.root();
+
+            cst = parser.root();
             var ast = new BuildAstVisitor().VisitRoot(cst);
             value = (MapData)new EvaluateMapGrammarVisitor().Visit(ast);
 
