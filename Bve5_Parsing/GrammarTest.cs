@@ -56,7 +56,7 @@ namespace Bve5_Parsing
             string input = "";
             Console.WriteLine("Input your syntax. Enter \"EOF\" to end input.");
             string line = Console.ReadLine();
-            while (!line.Equals("EOF"))
+            while (!line.ToLower().Equals("eof"))
             {
                 input += line + Environment.NewLine;
                 line = Console.ReadLine();

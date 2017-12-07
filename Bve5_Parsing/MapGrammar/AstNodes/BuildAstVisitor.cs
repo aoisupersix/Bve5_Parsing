@@ -543,7 +543,8 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// <returns>距離程ASTノード</returns>
         public override MapGrammarAstNodes VisitDistance([NotNull] SyntaxDefinitions.MapGrammarParser.DistanceContext context)
         {
-            return new DistanceNode { Value = Visit(context.expr()) };
+            DistanceNode node = new DistanceNode { Value = Visit(context.expr()) };
+            return node;
         }
 
         /// <summary>

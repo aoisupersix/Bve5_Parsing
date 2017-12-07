@@ -18,19 +18,14 @@ namespace Bve5_Parsing.MapGrammar
         /// <param name="e"></param>
         public override void Recover(Parser recognizer, RecognitionException e)
         {
-            if (e is InputMismatchException) {
-                int ttype = recognizer.InputStream.La(1);
-                while (ttype != MapGrammarLexer.Eof && ttype != MapGrammarLexer.STATE_END)
-                {
-                    recognizer.Consume();
-                    ttype = recognizer.InputStream.La(1);
-                }
-                if (ttype == MapGrammarLexer.STATE_END)
-                    recognizer.Consume();
-            } else {
-                base.Recover(recognizer, e);
+            int ttype = recognizer.InputStream.La(1);
+            while (ttype != MapGrammarLexer.Eof && ttype != MapGrammarLexer.STATE_END)
+            {
+                recognizer.Consume();
+                ttype = recognizer.InputStream.La(1);
             }
-
+            if (ttype == MapGrammarLexer.STATE_END)
+                recognizer.Consume();
         }
     }
 }
