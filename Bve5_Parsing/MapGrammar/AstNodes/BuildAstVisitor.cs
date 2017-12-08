@@ -44,6 +44,26 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         }
 
         /// <summary>
+        /// インクルードステートメントの巡回
+        /// </summary>
+        /// <param name="context">構文解析の文脈データ</param>
+        /// <returns>構文ASTノード</returns>
+        public override MapGrammarAstNodes VisitIncludeState([NotNull] SyntaxDefinitions.MapGrammarParser.IncludeStateContext context)
+        {
+            MapGrammarAstNodes node;
+            try
+            {
+                node = Visit(context.include());
+            }
+            catch (NullReferenceException)
+            {
+                node = null;
+            }
+
+            return node;
+        }
+
+        /// <summary>
         /// 平面曲線ステートメントの巡回
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
@@ -544,6 +564,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         public override MapGrammarAstNodes VisitDistance([NotNull] SyntaxDefinitions.MapGrammarParser.DistanceContext context)
         {
             DistanceNode node = new DistanceNode { Value = Visit(context.expr()) };
+            return node;
+        }
+
+        public override MapGrammarAstNodes VisitInclude([NotNull] SyntaxDefinitions.MapGrammarParser.IncludeContext context)
+        {
+            Syntax1Node node = new Syntax1Node();
+            node.MapElementName = "include";
+            node.FunctionName = "";
+            node.Arguments.Add("path", new StringNode { Value = context.path.text });
+
             return node;
         }
 

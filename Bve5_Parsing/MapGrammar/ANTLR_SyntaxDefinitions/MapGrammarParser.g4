@@ -12,6 +12,7 @@ root :
 
 statement :
 	  distance STATE_END						#distState
+	| INCLUDE include STATE_END					#includeState
 	| CURVE curve STATE_END						#curveState
 	| GRADIENT gradient STATE_END				#gradientState
 	| TRACK track STATE_END						#trackState
@@ -42,6 +43,11 @@ statement :
 //距離程
 distance :
 	expr
+	;
+
+//インクルード構文
+include :
+	path=string
 	;
 
 //平面曲線
