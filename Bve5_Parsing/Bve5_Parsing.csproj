@@ -88,6 +88,16 @@
       <CustomToolNamespace>Bve5_Parsing.MapGrammar.SyntaxDefinitions</CustomToolNamespace>
     </Antlr4>
     <None Include="packages.config" />
+    <Antlr4 Include="ScenarioGrammar\ANTLR_SyntaxDefinitions\ScenarioGrammarLexer.g4">
+      <Generator>MSBuild:Compile</Generator>
+      <CustomToolNamespace>Bve5_Parsing.MapGrammar.SyntaxDefinitions</CustomToolNamespace>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Antlr4>
+    <Antlr4 Include="ScenarioGrammar\ANTLR_SyntaxDefinitions\ScenarioGrammarParser.g4">
+      <Generator>MSBuild:Compile</Generator>
+      <CustomToolNamespace>Bve5_Parsing.MapGrammar.SyntaxDefinitions</CustomToolNamespace>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Antlr4>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
