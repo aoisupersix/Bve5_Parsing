@@ -22,6 +22,7 @@ VERTICAL_LINE : '|';
 NUM : '0'..'9'+ ('.' ('0'..'9')+)?;
 
 ESCAPE_COMMENT : ('#' | ';') ~[\r\n]* -> skip;
+WHITESPACE : [\t ]+ -> skip;
 
 //ignore case
 fragment A:('a'|'A');
