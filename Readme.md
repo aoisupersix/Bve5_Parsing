@@ -67,12 +67,12 @@ using Bve5_Parsing.MapGrammar;
 ## Used Librarys
 Bve5_Parsing is using the following library.
 
-#### [ANTLR](http://www.antlr.org/index.html)
+#### [ANTLR v3](http://www.antlr.org/index.html)
 > The BSD License (3-clause BSD License)
 >
 > Copyright (c) 2012 Terence Parr and Sam Harwell
 
-* **ライセンス全文 :** [Licenses\Irony.txt](/Licenses/ANTLR4.txt)
+* **ライセンス全文 :** [Licenses\ANTLR4.txt](/Licenses/ANTLR4.txt)
 
 ## License
 The MIT License (MIT)
