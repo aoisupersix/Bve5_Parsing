@@ -54,6 +54,7 @@ S_NEWLINE : ( '\r' '\n'? | '\n') -> popMode;
 S_CHAR : .;
 
 mode WEIGHTING_MODE;
+W_COMMENT : ('#' | ';') ~[\r\n]* -> skip;
 W_NEWLINE : ('\r' '\n'? | '\n') -> popMode;
 W_WS : [\t ]+ -> skip;
 ASTERISK : '*';
