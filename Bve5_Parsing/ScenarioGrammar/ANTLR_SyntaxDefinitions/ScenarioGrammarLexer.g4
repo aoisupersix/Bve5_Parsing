@@ -16,10 +16,7 @@ VEHICLETITLE : V E H I C L E T I T L E;
 AUTHOR : A U T H O R;
 COMMENT : C O M M E N T;
 
-EQUAL : '=' -> pushMode(STRING_MODE);
-ASTERISK : '*';
-VERTICAL_LINE : '|';
-NUM : '0'..'9'+ ('.' ('0'..'9')+)?;
+EQUAL : '=' -> pushMode(WEIGHTING_MODE);
 
 ESCAPE_COMMENT : ('#' | ';') ~[\r\n]* -> skip;
 WHITESPACE : [\t ]+ -> skip;
@@ -53,5 +50,13 @@ fragment Y:('y'|'Y');
 fragment Z:('z'|'Z');
 
 mode STRING_MODE;
-NEWLINE : ( '\r' '\n'? | '\n') -> popMode;
-CHAR : .;
+S_NEWLINE : ( '\r' '\n'? | '\n') -> popMode;
+S_CHAR : .;
+
+mode WEIGHTING_MODE;
+W_NEWLINE : ('\r' '\n'? | '\n') -> popMode;
+W_WS : [\t ]+ -> skip;
+ASTERISK : '*';
+NUM : '0'..'9'+ ('.' ('0'..'9')+)?;
+W_SECTION : '|';
+W_CHAR : .;
