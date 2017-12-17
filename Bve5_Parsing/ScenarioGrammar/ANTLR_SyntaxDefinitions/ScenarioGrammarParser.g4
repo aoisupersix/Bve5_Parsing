@@ -7,12 +7,13 @@ options{
 	tokenVocab=ScenarioGrammarLexer;
 }
 root :
-	ROUTE EQUAL weight_path (W_SECTION weight_path)* W_NEWLINE;
-
-weight_path :
-	string_path (ASTERISK NUM)?
+	ROUTE EQUAL weight_path (SECTION weight_path)* NEWLINE?
 	;
 
-string_path :
-	W_CHAR*
+weight_path :
+	string (ASTERISK NUM)?
+	;
+
+string :
+	CHAR*
 	;

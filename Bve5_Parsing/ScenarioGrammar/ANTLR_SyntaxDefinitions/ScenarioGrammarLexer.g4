@@ -16,10 +16,10 @@ VEHICLETITLE : V E H I C L E T I T L E;
 AUTHOR : A U T H O R;
 COMMENT : C O M M E N T;
 
-EQUAL : '=' -> pushMode(WEIGHTING_MODE);
+EQUAL : '=' -> pushMode(TEXT_MODE);
 
 ESCAPE_COMMENT : ('#' | ';') ~[\r\n]* -> skip;
-WHITESPACE : [\t ]+ -> skip;
+WHITESPACE : [\t \r\n]+ -> skip;
 
 //ignore case
 fragment A:('a'|'A');
@@ -49,15 +49,15 @@ fragment X:('x'|'X');
 fragment Y:('y'|'Y');
 fragment Z:('z'|'Z');
 
-mode STRING_MODE;
-S_NEWLINE : ( '\r' '\n'? | '\n') -> popMode;
-S_CHAR : .;
+mode TEXT_MODE;
+T_COMMENT : ('#' | ';') ~[\r\n]* -> skip;
+NEWLINE : ('\r' '\n'? | '\n') -> popMode;
+T_WS : [\t ]+ -> skip;
+ASTERISK : '*' -> pushMode(WEIGHTING_MODE);
+SECTION : '|';
+CHAR : .;
 
 mode WEIGHTING_MODE;
-W_COMMENT : ('#' | ';') ~[\r\n]* -> skip;
-W_NEWLINE : ('\r' '\n'? | '\n') -> popMode;
 W_WS : [\t ]+ -> skip;
-ASTERISK : '*';
-NUM : '0'..'9'+ ('.' ('0'..'9')+)?;
-W_SECTION : '|';
-W_CHAR : .;
+NUM : '0'..'9'+ ('.' ('0'..'9')+)? -> popMode;
+
