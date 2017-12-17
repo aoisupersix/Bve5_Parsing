@@ -7,7 +7,7 @@ options{
 	tokenVocab=ScenarioGrammarLexer;
 }
 root :
-	statement* EOF
+	BVETS SCENARIO VERSION ( SELECT_ENCODE encoding HEADER_END)? statement* EOF
 	;
 
 statement :
@@ -19,6 +19,10 @@ statement :
 	| VEHICLETITLE EQUAL string NEWLINE?
 	| AUTHOR EQUAL string NEWLINE?
 	| COMMENT EQUAL string NEWLINE?
+	;
+
+encoding :
+	ENCODE_CHAR*
 	;
 
 weight_path :

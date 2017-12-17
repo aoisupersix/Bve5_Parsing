@@ -5,7 +5,9 @@ lexer grammar ScenarioGrammarLexer;
 
 //ヘッダー
 BVETS : B V E T S;
-MAP : M A P;
+SCENARIO : S C E N A R I O;
+VERSION : '0'..'9'+ ('.' ('0'..'9')+)?;
+SELECT_ENCODE : ':' -> pushMode(ENCODING_MODE);
 
 //シナリオ情報
 ROUTE : R O U T E;
@@ -49,6 +51,11 @@ fragment W:('w'|'W');
 fragment X:('x'|'X');
 fragment Y:('y'|'Y');
 fragment Z:('z'|'Z');
+
+mode ENCODING_MODE;
+E_WS : [\t ]+ -> skip;
+HEADER_END : ('\r' '\n'? | '\n') -> popMode;
+ENCODE_CHAR : .;
 
 mode TEXT_MODE;
 T_COMMENT : ('#' | ';') ~[\r\n]* -> skip;
