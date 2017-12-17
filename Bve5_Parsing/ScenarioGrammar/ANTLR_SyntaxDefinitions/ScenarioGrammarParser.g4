@@ -7,6 +7,10 @@ options{
 	tokenVocab=ScenarioGrammarLexer;
 }
 root :
+	statement* EOF
+	;
+
+statement :
 	ROUTE EQUAL weight_path (SECTION weight_path)* NEWLINE?
 	;
 
