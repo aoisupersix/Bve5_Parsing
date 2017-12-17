@@ -11,14 +11,14 @@ root :
 	;
 
 statement :
-	  ROUTE EQUAL weight_path (SECTION weight_path)* NEWLINE?
-	| VEHICLE EQUAL weight_path (SECTION weight_path)* NEWLINE?
-	| TITLE EQUAL string NEWLINE?
-	| IMAGE EQUAL string NEWLINE?
-	| ROUTETITLE EQUAL string NEWLINE?
-	| VEHICLETITLE EQUAL string NEWLINE?
-	| AUTHOR EQUAL string NEWLINE?
-	| COMMENT EQUAL string NEWLINE?
+	  stateName=ROUTE EQUAL weight_path (SECTION weight_path)* NEWLINE?		#routeState
+	| stateName=VEHICLE EQUAL weight_path (SECTION weight_path)* NEWLINE?	#vehicleState
+	| stateName=TITLE EQUAL string NEWLINE?									#titleState
+	| stateName=IMAGE EQUAL string NEWLINE?									#imageState
+	| stateName=ROUTETITLE EQUAL string NEWLINE?							#routeTitleState
+	| stateName=VEHICLETITLE EQUAL string NEWLINE?							#vehicleTitleState
+	| stateName=AUTHOR EQUAL string NEWLINE?								#authorState
+	| stateName=COMMENT EQUAL string NEWLINE?								#commentState
 	;
 
 encoding :
