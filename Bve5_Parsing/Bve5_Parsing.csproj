@@ -76,6 +76,7 @@
     <Compile Include="MapGrammar\MapGrammarParser.cs" />
     <Compile Include="MapGrammar\VariableStore.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScenarioGrammar\AstNodes\AstNodes.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
