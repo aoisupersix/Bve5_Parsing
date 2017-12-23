@@ -20,13 +20,22 @@ namespace Bve5_Parsing.ScenarioGrammar.AstNodes
     /// </summary>
     internal class RootNode : ScenarioGrammarAstNodes
     {
-        public List<ScenarioGrammarAstNodes> StatementList { get; set; }
         public string Version { get; set; }
-        public string Encoding { get; set; }
+        public ScenarioGrammarAstNodes Encoding { get; set; }
+        public List<ScenarioGrammarAstNodes> StatementList { get; set; }
+
         public RootNode()
         {
             StatementList = new List<ScenarioGrammarAstNodes>();
         }
+    }
+
+    /// <summary>
+    /// エンコーディング指定ノード
+    /// </summary>
+    internal class EncodingNode : ScenarioGrammarAstNodes
+    {
+        public string Text { get; set; }
     }
 
     /// <summary>
