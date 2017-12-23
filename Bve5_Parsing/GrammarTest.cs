@@ -1,4 +1,5 @@
 ﻿using Bve5_Parsing.MapGrammar;
+using Bve5_Parsing.ScenarioGrammar;
 using System;
 using System.Collections.Generic;
 
@@ -24,12 +25,13 @@ namespace Bve5_Parsing
         /// </summary>
         public enum GrammarTypes
         {
-            MAP
+            MAP,
+            SCENARIO
         }
 
         public const GrammarTestMode TEST_MODE = GrammarTestMode.DIALOGUE;
         public const string INPUT_STRING = "";
-        public const GrammarTypes DIRECT_TYPE = GrammarTypes.MAP;
+        public const GrammarTypes DIRECT_TYPE = GrammarTypes.SCENARIO;
 
         /// <summary>
         /// テストする構文解析器をユーザに選択させます。
@@ -77,6 +79,9 @@ namespace Bve5_Parsing
                 case GrammarTypes.MAP:
                     MapGrammarTest(input);
                     break;
+                case GrammarTypes.SCENARIO:
+                    ScenarioGrammarTest(input);
+                    break;
             }
         }
 
@@ -87,7 +92,19 @@ namespace Bve5_Parsing
         /// <param name="input">構文文字列</param>
         private static void ScenarioGrammarTest(string input)
         {
+            Console.WriteLine("====================================");
+            Console.WriteLine("ScenarioGrammar Parser Output:");
 
+            ScenarioGrammarParser parser = new ScenarioGrammarParser();
+            ScenarioData data = null;
+            try
+            {
+                data = parser.Parse(input);
+            }
+            catch(Exception e)
+            {
+                Console.Error.WriteLine(e.Message + ":" + e.StackTrace);
+            }
         }
 
         /// <summary>

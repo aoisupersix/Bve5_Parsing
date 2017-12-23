@@ -16,7 +16,7 @@ namespace Bve5_Parsing.ScenarioGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns>ルートASTノード</returns>
-        public override ScenarioGrammarAstNodes VisitRoot([NotNull] ScenarioGrammarParser.RootContext context)
+        public override ScenarioGrammarAstNodes VisitRoot([NotNull] SyntaxDefinitions.ScenarioGrammarParser.RootContext context)
         {
             RootNode node = new RootNode();
             node.Version = context.VERSION().ToString();
