@@ -21,8 +21,8 @@ statement :
 	| stateName=COMMENT EQUAL string NEWLINE?								#commentState
 	;
 
-encoding :
-	ENCODE_CHAR*
+encoding returns [string text]:
+	v=ENCODE_CHAR* {$text = $v.text; }
 	;
 
 weight_path :

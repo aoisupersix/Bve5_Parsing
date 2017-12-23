@@ -22,19 +22,17 @@ namespace Bve5_Parsing.ScenarioGrammar.AstNodes
             node.Version = context.VERSION().ToString();
             if(context.encoding() != null)
             {
-                node.Encoding = Visit(context.encoding());
+                node.Encoding = context.encoding().text;
+            }
+
+            //ステートメントの追加
+            foreach(var state in context.statement())
+            {
+                ScenarioGrammarAstNodes child = base.Visit(state);
+                if (child != null)
+                    node.StatementList.Add(child);
             }
             return node;
-        }
-
-        /// <summary>
-        /// エンコーディング指定の巡回
-        /// </summary>
-        /// <param name="context">構文解析の文脈データ</param>
-        /// <returns>エンコーディング指定ASTノード</returns>
-        public override ScenarioGrammarAstNodes VisitEncoding([NotNull] ScenarioGrammarParser.EncodingContext context)
-        {
-            return new EncodingNode { Text = "" };
         }
     }
 }
