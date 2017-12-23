@@ -36,4 +36,34 @@ namespace Bve5_Parsing.ScenarioGrammar.AstNodes
     {
         public string StateName { get; set; }
     }
+
+    /// <summary>
+    /// 重み付けステートメント
+    /// </summary>
+    internal class WeightStateNode : StatementNode
+    {
+        public List<WeightPath> PathList { get; set; }
+
+        public WeightStateNode()
+        {
+            PathList = new List<WeightPath>();
+        }
+    }
+
+    /// <summary>
+    /// テキストステートメント
+    /// </summary>
+    internal class TextStateNode : StatementNode
+    {
+        public string Text { get; set; }
+    }
+
+    /// <summary>
+    /// 重み付けパス
+    /// </summary>
+    internal class WeightPath : ScenarioGrammarAstNodes
+    {
+        public string Path { get; set; }
+        public double Weight { get; set; }
+    }
 }
