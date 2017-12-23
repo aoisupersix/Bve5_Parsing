@@ -79,6 +79,7 @@
     <Compile Include="ScenarioGrammar\AstNodes\AstNodes.cs" />
     <Compile Include="ScenarioGrammar\AstNodes\BuildAstVisitor.cs" />
     <Compile Include="ScenarioGrammar\ScenarioData.cs" />
+    <Compile Include="ScenarioGrammar\ScenarioGrammarParser.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
