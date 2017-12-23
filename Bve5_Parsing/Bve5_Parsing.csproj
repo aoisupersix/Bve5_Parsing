@@ -92,12 +92,12 @@
     <None Include="packages.config" />
     <Antlr4 Include="ScenarioGrammar\ANTLR_SyntaxDefinitions\ScenarioGrammarLexer.g4">
       <Generator>MSBuild:Compile</Generator>
-      <CustomToolNamespace>Bve5_Parsing.MapGrammar.SyntaxDefinitions</CustomToolNamespace>
+      <CustomToolNamespace>Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions</CustomToolNamespace>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Antlr4>
     <Antlr4 Include="ScenarioGrammar\ANTLR_SyntaxDefinitions\ScenarioGrammarParser.g4">
       <Generator>MSBuild:Compile</Generator>
-      <CustomToolNamespace>Bve5_Parsing.MapGrammar.SyntaxDefinitions</CustomToolNamespace>
+      <CustomToolNamespace>Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions</CustomToolNamespace>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Antlr4>
   </ItemGroup>
