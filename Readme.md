@@ -67,7 +67,7 @@ using Bve5_Parsing.MapGrammar;
 ## Used Librarys
 Bve5_Parsing is using the following library.
 
-#### [ANTLR v3](http://www.antlr.org/index.html)
+#### [ANTLR v4](http://www.antlr.org/index.html)
 > The BSD License (3-clause BSD License)
 >
 > Copyright (c) 2012 Terence Parr and Sam Harwell
