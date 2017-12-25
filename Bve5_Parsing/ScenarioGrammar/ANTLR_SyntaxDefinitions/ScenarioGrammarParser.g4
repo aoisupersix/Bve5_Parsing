@@ -22,7 +22,11 @@ statement :
 	;
 
 encoding returns [string text]:
-	v=ENCODE_CHAR* {$text = $v.text; }
+	v=encode_string {$text = $v.text; }
+	;
+
+encode_string :
+	ENCODE_CHAR*
 	;
 
 weight_path :
