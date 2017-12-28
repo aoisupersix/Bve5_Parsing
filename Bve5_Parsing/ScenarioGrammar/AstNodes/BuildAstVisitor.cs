@@ -111,6 +111,16 @@ namespace Bve5_Parsing.ScenarioGrammar.AstNodes
             return new TextStateNode { StateName = context.stateName.Text.ToLower(), Text = context.@string().GetText() };
         }
 
+        /// <summary>
+        /// 作者名ステートメントの巡回
+        /// </summary>
+        /// <param name="context">構文解析の文脈データ</param>
+        /// <returns>テキストASTノード</returns>
+        public override ScenarioGrammarAstNodes VisitAuthorState([NotNull] SyntaxDefinitions.ScenarioGrammarParser.AuthorStateContext context)
+        {
+            return new TextStateNode { StateName = context.stateName.Text.ToLower(), Text = context.@string().GetText() };
+        }
+
         #endregion ステートメントの巡回
 
         /// <summary>
