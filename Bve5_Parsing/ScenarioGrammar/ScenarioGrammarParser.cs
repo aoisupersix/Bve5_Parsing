@@ -11,11 +11,25 @@ namespace Bve5_Parsing.ScenarioGrammar
     {
 
         /// <summary>
+        /// 構文解析のエラーを取得するリスナー
+        /// </summary>
+        public ParseErrorListener ErrorListener { get; set; }
+
+        /// <summary>
         /// ScenarioGrammarの構文解析器を初期化します。
         /// </summary>
         public ScenarioGrammarParser()
         {
-            //TODO
+            ErrorListener = new ParseErrorListener();
+        }
+
+        /// <summary>
+        /// 構文解析器をエラーリスナーを指定して初期化します。
+        /// </summary>
+        /// <param name="listener">エラーリスナークラス</param>
+        public ScenarioGrammarParser(ParseErrorListener listener)
+        {
+
         }
 
         /// <summary>
@@ -29,6 +43,8 @@ namespace Bve5_Parsing.ScenarioGrammar
             ScenarioGrammarLexer lexer = new ScenarioGrammarLexer(inputStream);
             CommonTokenStream commonTokenStream = new CommonTokenStream(lexer);
             SyntaxDefinitions.ScenarioGrammarParser parser = new SyntaxDefinitions.ScenarioGrammarParser(commonTokenStream);
+
+            parser.AddErrorListener(ErrorListener);
 
             ScenarioData value = null;
             var cst = parser.root();

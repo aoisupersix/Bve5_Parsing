@@ -9,6 +9,9 @@ namespace Bve5_Parsing.MapGrammar
     /// </summary>
     public class MapGrammarParser
     {
+        /// <summary>
+        /// 構文解析のエラーを取得するリスナー
+        /// </summary>
         public ParseErrorListener ErrorListener { get; set; }
 
         /// <summary>
