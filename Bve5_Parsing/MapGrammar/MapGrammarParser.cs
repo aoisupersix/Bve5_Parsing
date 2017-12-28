@@ -1,5 +1,4 @@
-﻿using System;
-using Antlr4.Runtime;
+﻿using Antlr4.Runtime;
 using Bve5_Parsing.MapGrammar.AstNodes;
 using Bve5_Parsing.MapGrammar.SyntaxDefinitions;
 
@@ -10,6 +9,9 @@ namespace Bve5_Parsing.MapGrammar
     /// </summary>
     public class MapGrammarParser
     {
+        /// <summary>
+        /// 構文解析のエラーを取得するリスナー
+        /// </summary>
         public ParseErrorListener ErrorListener { get; set; }
 
         /// <summary>
