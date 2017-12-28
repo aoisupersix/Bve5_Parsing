@@ -82,11 +82,14 @@ namespace Bve5_Parsing.ScenarioGrammar.AstNodes
         /// <returns>WeightPathASTノード</returns>
         public override ScenarioGrammarAstNodes VisitWeight_path([NotNull] SyntaxDefinitions.ScenarioGrammarParser.Weight_pathContext context)
         {
-            WeightPathNode node = new WeightPathNode
-            {
-                Path = context.path.GetText(),
-                Weight = double.Parse(context.NUM().GetText())
-            };
+            WeightPathNode node = new WeightPathNode { Path = context.path.GetText() };
+
+            //Weightの取得
+            if(context.NUM() == null)
+                node.Weight = 1;
+            else
+                node.Weight = double.Parse(context.NUM().GetText());
+
             return node;
         }
 
