@@ -41,7 +41,7 @@ namespace Bve5_Parsing.ScenarioGrammar.AstNodes
         /// 路線ステートメントの巡回
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
-        /// <returns>RouteASTノード</returns>
+        /// <returns>重み付けファイルパスASTノード</returns>
         public override ScenarioGrammarAstNodes VisitRouteState([NotNull] SyntaxDefinitions.ScenarioGrammarParser.RouteStateContext context)
         {
             WeightStateNode node = new WeightStateNode();
@@ -59,7 +59,7 @@ namespace Bve5_Parsing.ScenarioGrammar.AstNodes
         /// 車両ステートメントの巡回
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
-        /// <returns>RouteASTノード</returns>
+        /// <returns>重み付けファイルパスASTノード</returns>
         public override ScenarioGrammarAstNodes VisitVehicleState([NotNull] SyntaxDefinitions.ScenarioGrammarParser.VehicleStateContext context)
         {
             WeightStateNode node = new WeightStateNode();
@@ -71,6 +71,16 @@ namespace Bve5_Parsing.ScenarioGrammar.AstNodes
                     node.PathList.Add(child);
             }
             return node;
+        }
+
+        /// <summary>
+        /// タイトルステートメントの巡回
+        /// </summary>
+        /// <param name="context">構文解析の文脈データ</param>
+        /// <returns>テキストASTノード</returns>
+        public override ScenarioGrammarAstNodes VisitTitleState([NotNull] SyntaxDefinitions.ScenarioGrammarParser.TitleStateContext context)
+        {
+            return new TextStateNode { StateName = context.stateName.Text.ToLower(), Text = context.@string().GetText() };
         }
 
         #endregion ステートメントの巡回
