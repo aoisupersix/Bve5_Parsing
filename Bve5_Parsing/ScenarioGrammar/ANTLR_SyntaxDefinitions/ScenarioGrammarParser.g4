@@ -30,7 +30,7 @@ encode_string :
 	;
 
 weight_path :
-	string (ASTERISK NUM)?
+	path=string (ASTERISK NUM)?
 	;
 
 string :

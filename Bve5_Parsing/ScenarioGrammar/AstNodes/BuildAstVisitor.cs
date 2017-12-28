@@ -34,5 +34,42 @@ namespace Bve5_Parsing.ScenarioGrammar.AstNodes
             }
             return node;
         }
+
+        #region ステートメントの巡回
+
+        /// <summary>
+        /// 路線ステートメントの巡回
+        /// </summary>
+        /// <param name="context">構文解析の文脈データ</param>
+        /// <returns>RouteASTノード</returns>
+        public override ScenarioGrammarAstNodes VisitRouteState([NotNull] SyntaxDefinitions.ScenarioGrammarParser.RouteStateContext context)
+        {
+            WeightStateNode node = new WeightStateNode();
+            node.StateName = context.stateName.Text.ToLower();
+            foreach (var weight in context.weight_path())
+            {
+                ScenarioGrammarAstNodes child = base.Visit(weight);
+                if (child != null)
+                    node.PathList.Add(child);
+            }
+            return node;
+        }
+        #endregion ステートメントの巡回
+
+        /// <summary>
+        /// 重み付けファイルパスの巡回
+        /// </summary>
+        /// <param name="context">構文解析の文脈データ</param>
+        /// <returns>WeightPathASTノード</returns>
+        public override ScenarioGrammarAstNodes VisitWeight_path([NotNull] SyntaxDefinitions.ScenarioGrammarParser.Weight_pathContext context)
+        {
+            WeightPathNode node = new WeightPathNode
+            {
+                Path = context.path.GetText(),
+                Weight = double.Parse(context.NUM().GetText())
+            };
+            return node;
+        }
+
     }
 }
