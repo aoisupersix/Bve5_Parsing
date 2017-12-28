@@ -1,7 +1,5 @@
-﻿using System;
-using Antlr4.Runtime.Misc;
+﻿using Antlr4.Runtime.Misc;
 using Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions;
-
 
 namespace Bve5_Parsing.ScenarioGrammar.AstNodes
 {
@@ -89,6 +87,16 @@ namespace Bve5_Parsing.ScenarioGrammar.AstNodes
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns>テキストASTノード</returns>
         public override ScenarioGrammarAstNodes VisitImageState([NotNull] SyntaxDefinitions.ScenarioGrammarParser.ImageStateContext context)
+        {
+            return new TextStateNode { StateName = context.stateName.Text.ToLower(), Text = context.@string().GetText() };
+        }
+
+        /// <summary>
+        /// 路線名ステートメントの巡回
+        /// </summary>
+        /// <param name="context">構文解析の文脈データ</param>
+        /// <returns>テキストASTノード</returns>
+        public override ScenarioGrammarAstNodes VisitRouteTitleState([NotNull] SyntaxDefinitions.ScenarioGrammarParser.RouteTitleStateContext context)
         {
             return new TextStateNode { StateName = context.stateName.Text.ToLower(), Text = context.@string().GetText() };
         }
