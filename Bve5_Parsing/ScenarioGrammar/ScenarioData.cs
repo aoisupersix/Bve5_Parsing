@@ -13,6 +13,11 @@ namespace Bve5_Parsing.ScenarioGrammar
         public string Version { get; set; }
 
         /// <summary>
+        /// シナリオファイルのエンコーディング
+        /// </summary>
+        public string Encoding { get; set; }
+
+        /// <summary>
         /// マップファイルの相対パス
         /// </summary>
         public List<FilePath> Route { get; set; }

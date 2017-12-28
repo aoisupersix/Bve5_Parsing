@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Collections.Generic;
 using Bve5_Parsing.ScenarioGrammar.AstNodes;
 
 namespace Bve5_Parsing.ScenarioGrammar
@@ -39,10 +39,13 @@ namespace Bve5_Parsing.ScenarioGrammar
         /// <returns>解析結果のScenarioData</returns>
         public override object Visit(RootNode node)
         {
-            ScenarioData evaluateData = new ScenarioData
+            evaluateData = new ScenarioData
             {
-                Version = node.Version
+                Version = node.Version,
+                Encoding = node.Encoding
             };
+            evaluateData.Route = new List<FilePath>();
+            evaluateData.Vehicle = new List<FilePath>();
 
             //ステートメントの巡回(出力は各ステートメントごとに行う)
             foreach(var statement in node.StatementList)
