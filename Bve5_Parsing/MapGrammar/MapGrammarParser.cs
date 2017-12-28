@@ -1,5 +1,4 @@
-﻿using System;
-using Antlr4.Runtime;
+﻿using Antlr4.Runtime;
 using Bve5_Parsing.MapGrammar.AstNodes;
 using Bve5_Parsing.MapGrammar.SyntaxDefinitions;
 

@@ -1,10 +1,11 @@
 ﻿using Antlr4.Runtime;
 
-namespace Bve5_Parsing.MapGrammar
+namespace Bve5_Parsing
 {
     /// <summary>
     /// パーサのデフォルトエラー処理クラス
     /// エラーをコンソールに出力します。
+    /// このクラスを継承し、パーサのErrorListenerに指定することで構文解析のエラーを取得できます。
     /// </summary>
     public class ParseErrorListener : BaseErrorListener
     {

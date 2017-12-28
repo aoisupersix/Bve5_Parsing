@@ -12,7 +12,24 @@ Bve5の構文はどのように処理されているのか？という疑問を�
 成果物であるクラスライブラリはGithubのリリースからダウンロードするか、ソースをコンパイルして入手してください。
 
 ## Supported Syntaxes
+- #### Scenario File
+    - Bve5.7全構文に対応
+    - namespace: **ScenarioGrammar**
+    - 出力: **ScenarioDataクラス**
+    構文解析の結果は、ScenarioDataクラスで返します。ScenarioDataクラスは以下のフィールドで構成されています。
+      - **string Version**: シナリオファイルのバージョン情報
+      - **List\<FilePath\> Route**: マップファイルの相対パス
+      - **List\<FilePath\> Vehicle**: 車両ファイルの相対パス
+      - **string Image**: サムネイル画像の相対パス
+      - **string Title**: シナリオタイトル
+      - **string RouteTitle**: 路線名
+      - **string VehicleTitle**: 車両名
+      - **string Author**: 路線と車両の作者
+      - **string Comment**: シナリオの説明
 
+    なお、RouteとVechicleに関しては、複数ファイルの指定と重み係数に対応するため、相対パスと重み係数をまとめたFilePath構造体のリストを返します。相対パスは**FilePath.Value**、重み係数は**FilePath.Weight**に対応しています。
+
+    詳しくは、[ScenarioData.cs](/Bve5_Parsing/ScenarioGrammar/ScenarioData.cs)を参照してください。
 - #### Map File
     - 古い構文(ex.Legacyなど)や数学関数を除くBve5.7全構文と変数に対応
     - namespace: **MapGrammar**
