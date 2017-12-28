@@ -83,6 +83,16 @@ namespace Bve5_Parsing.ScenarioGrammar.AstNodes
             return new TextStateNode { StateName = context.stateName.Text.ToLower(), Text = context.@string().GetText() };
         }
 
+        /// <summary>
+        /// サムネイルステートメントの巡回
+        /// </summary>
+        /// <param name="context">構文解析の文脈データ</param>
+        /// <returns>テキストASTノード</returns>
+        public override ScenarioGrammarAstNodes VisitImageState([NotNull] SyntaxDefinitions.ScenarioGrammarParser.ImageStateContext context)
+        {
+            return new TextStateNode { StateName = context.stateName.Text.ToLower(), Text = context.@string().GetText() };
+        }
+
         #endregion ステートメントの巡回
 
         /// <summary>
