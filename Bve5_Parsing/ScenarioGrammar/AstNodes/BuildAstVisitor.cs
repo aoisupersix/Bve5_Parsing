@@ -54,6 +54,25 @@ namespace Bve5_Parsing.ScenarioGrammar.AstNodes
             }
             return node;
         }
+
+        /// <summary>
+        /// 車両ステートメントの巡回
+        /// </summary>
+        /// <param name="context">構文解析の文脈データ</param>
+        /// <returns>RouteASTノード</returns>
+        public override ScenarioGrammarAstNodes VisitVehicleState([NotNull] SyntaxDefinitions.ScenarioGrammarParser.VehicleStateContext context)
+        {
+            WeightStateNode node = new WeightStateNode();
+            node.StateName = context.stateName.Text.ToLower();
+            foreach (var weight in context.weight_path())
+            {
+                ScenarioGrammarAstNodes child = base.Visit(weight);
+                if (child != null)
+                    node.PathList.Add(child);
+            }
+            return node;
+        }
+
         #endregion ステートメントの巡回
 
         /// <summary>
