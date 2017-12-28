@@ -6,7 +6,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{E40F06D9-546D-43C6-9015-25B4E41DDCC4}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <OutputType>Exe</OutputType>
     <RootNamespace>Bve5_Parsing</RootNamespace>
     <AssemblyName>Bve5_Parsing</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
@@ -76,6 +76,11 @@
     <Compile Include="MapGrammar\MapGrammarParser.cs" />
     <Compile Include="MapGrammar\VariableStore.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScenarioGrammar\AstEvaluator.cs" />
+    <Compile Include="ScenarioGrammar\AstNodes\AstNodes.cs" />
+    <Compile Include="ScenarioGrammar\AstNodes\BuildAstVisitor.cs" />
+    <Compile Include="ScenarioGrammar\ScenarioData.cs" />
+    <Compile Include="ScenarioGrammar\ScenarioGrammarParser.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -88,6 +93,16 @@
       <CustomToolNamespace>Bve5_Parsing.MapGrammar.SyntaxDefinitions</CustomToolNamespace>
     </Antlr4>
     <None Include="packages.config" />
+    <Antlr4 Include="ScenarioGrammar\ANTLR_SyntaxDefinitions\ScenarioGrammarLexer.g4">
+      <Generator>MSBuild:Compile</Generator>
+      <CustomToolNamespace>Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions</CustomToolNamespace>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Antlr4>
+    <Antlr4 Include="ScenarioGrammar\ANTLR_SyntaxDefinitions\ScenarioGrammarParser.g4">
+      <Generator>MSBuild:Compile</Generator>
+      <CustomToolNamespace>Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions</CustomToolNamespace>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Antlr4>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
