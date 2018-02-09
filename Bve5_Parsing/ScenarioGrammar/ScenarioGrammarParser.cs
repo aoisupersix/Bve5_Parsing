@@ -7,7 +7,7 @@ namespace Bve5_Parsing.ScenarioGrammar
     /// <summary>
     /// ScenarioGrammarの解析を行うクラス
     /// </summary>
-    class ScenarioGrammarParser
+    public class ScenarioGrammarParser
     {
 
         /// <summary>
