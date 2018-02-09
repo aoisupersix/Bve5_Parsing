@@ -94,6 +94,6 @@ Bve5_Parsing is using the following library.
 ## License
 The MIT License (MIT)
 
-Copyright(c) 2017 Aoi Tanaka
+Copyright(c) 2017 aoisupersix
 
 **[License.md](https://github.com/aoisupersix/Bve5_Parsing/blob/master/License.md)**
