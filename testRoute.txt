@@ -1,0 +1,9 @@
+BveTs Map 2.02
+
+Structure.Load('Structures.csv');
+
+$Span = 100 -95;
+$Interval = $Span * 2 - 5;
+0;
+    Track['Me'].Position(0,0);
+    Repeater['Track-Me'].Begin0('Me',3,$Span,$Interval,'Ballast5M');
