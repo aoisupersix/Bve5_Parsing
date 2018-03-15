@@ -12,7 +12,7 @@ BveTrainsim5とは、フリーの鉄道運転シミュレータで、用意さ�
 ___
 ## マップファイル構文
 <div>
-    <img src="images/MapFile.png" onmouseover="this.src='images/MapFile-HighLight.png'" onmouseout="this.src='images/MapFile.png'"
+    <img src="images/MapFile.png" onmouseover="this.src='images/MapFile-HighLight.png'" onmouseout="this.src='images/MapFile.png'">
 </div>
 ___
 ## パース処理の主な流れ
