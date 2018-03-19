@@ -7,7 +7,7 @@ Bve5_Parsing
 ![bve5PasingImage](images/bve5Parsing.png)
 
 Bve5構文のパーサライブラリです。
-Bve5の構文はどのように処理されているのか？という疑問を解消すべく、パーサジェネレータ「ANTLR」を利用し、Bve5.7構文の構文解析器を実装してみました。現在、Bve5.7.6224.40815の一部構文に対応していますが、動作はかなり不安定です。
+Bve5の構文はどのように処理されているのか？という疑問を解消すべく、パーサジェネレータ「ANTLR」を利用し、Bve5.7構文のパーサを実装してみました。現在、Bve5.7.6224.40815の一部構文に対応しています。
 
 成果物であるクラスライブラリはGithubのリリースからダウンロードするか、ソースをコンパイルして入手してください。
 
@@ -96,4 +96,7 @@ The MIT License (MIT)
 
 Copyright(c) 2017 aoisupersix
 
-**[License.md](https://github.com/aoisupersix/Bve5_Parsing/blob/master/License.md)**
+**[License.md](License.md)**
+
+## TechnicalCommentary
+-> [TechnicalCommentary.md](TechnicalCommentary.md)
