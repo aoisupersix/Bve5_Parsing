@@ -12,7 +12,6 @@ BveTrainsim5とは、フリーの鉄道運転シミュレータで、用意さ�
 
 ## マップファイル構文について
 ![mapFile](images/MapFile-HighLight.png)
-
 * 一つのファイルヘッダと0個以上のステートメントから成るファイル。
 * ステートメントは、
   * 現在の距離を表す**距離程**
@@ -23,10 +22,15 @@ BveTrainsim5とは、フリーの鉄道運転シミュレータで、用意さ�
 * 各数値や、識別子等には演算や数学関数、変数が使用可能。
 
 ## パース処理の主な流れ
-パースの処理は`MapGrammarParserクラス`の`Parseメソッド`で行っています。→[ソースコードへ](https://github.com/aoisupersix/Bve5_Parsing/blob/master/Bve5_Parsing/MapGrammar/MapGrammarParser.cs#L36-L61)
-処理の流れとしては、
-  **字句解析 → 構文解析 → CST(具象構文木)の取得 → AST(抽象構文木)の作成 → ASTの評価**
-となっており、字句解析と構文解析は後述の定義よりANTLR4が行ってくれます。
+パースの処理は`MapGrammarParserクラス`の`Parseメソッド`で行っています。→[ソースコードへ](/Bve5_Parsing/MapGrammar/MapGrammarParser.cs#L36-L61)  
+
+処理の流れとしては、  
+**字句解析 → 構文解析 → CST(具象構文木)の取得 → AST(抽象構文木)の作成 → ASTの評価**  
+となっており、これらの内字句解析と構文解析は後述の定義よりANTLR4が行ってくれます。
 ## 字句と構文の定義
+字句解析器と構文解析器を生成する元となる、ANTLR4の文法ファイルの定義。
+#### 字句解析 [MapGrammarLexer.g4](/Bve5_Parsing/MapGrammar/ANTLR_SyntaxDefinitions/MapGrammarLexer.g4)  
+
+#### 構文解析 [MapGrammarParser.g4](/Bve5_Parsing/MapGrammar/ANTLR_SyntaxDefinitions/MapGrammarParser.g4)  
 
 ``````
