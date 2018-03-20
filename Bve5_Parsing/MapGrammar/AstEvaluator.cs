@@ -21,7 +21,7 @@ namespace Bve5_Parsing.MapGrammar
         public abstract T Visit(SubtractionNode node);
         public abstract T Visit(MultiplicationNode node);
         public abstract T Visit(DivisionNode node);
-        public abstract T Visit(NegateNode node);
+        public abstract T Visit(UnaryNode node);
         public abstract T Visit(ModuloNode node);
         public abstract T Visit(AbsNode node);
         public abstract T Visit(Atan2Node node);
@@ -84,6 +84,11 @@ namespace Bve5_Parsing.MapGrammar
             return evaluateData;
         }
 
+        /// <summary>
+        /// 距離程の評価
+        /// </summary>
+        /// <param name="node">距離程ノード</param>
+        /// <returns>null</returns>
         public override object Visit(DistanceNode node)
         {
             nowDistance = (double)Visit(node.Value);
@@ -168,8 +173,8 @@ namespace Bve5_Parsing.MapGrammar
         /// リストファイルノードの評価
         /// リストファイルの参照パスを追加する
         /// </summary>
-        /// <param name="node"></param>
-        /// <returns></returns>
+        /// <param name="node">リストファイルノード</param>
+        /// <returns>null</returns>
         public override object Visit(LoadListNode node)
         {
             evaluateData.SetListPathToString(node.MapElementName, node.Path);
@@ -179,8 +184,8 @@ namespace Bve5_Parsing.MapGrammar
         /// <summary>
         /// 変数宣言ノードの評価
         /// </summary>
-        /// <param name="node"></param>
-        /// <returns></returns>
+        /// <param name="node">変数宣言ノード</param>
+        /// <returns>null</returns>
         public override object Visit(VarAssignNode node)
         {
             var val = Visit(node.Value);
@@ -190,15 +195,25 @@ namespace Bve5_Parsing.MapGrammar
 
         #region 数式ノードの評価
 
+        /// <summary>
+        /// 加算ノードの評価
+        /// </summary>
+        /// <param name="node">加算ノード</param>
+        /// <returns>演算後の数値(Double)、もしくは文字列(String)</returns>
         public override object Visit(AdditionNode node)
         {
             if (Visit(node.Left).GetType() == typeof(string) || Visit(node.Right).GetType() == typeof(string))
-                return Visit(node.Left).ToString() + Visit(node.Right).ToString();
+                return Visit(node.Left).ToString() + Visit(node.Right).ToString(); //文字列の結合
 
             return (double)Visit(node.Left) + (double)Visit(node.Right);
 
         }
 
+        /// <summary>
+        /// 減算ノードの評価
+        /// </summary>
+        /// <param name="node">減算ノード</param>
+        /// <returns>演算後の数値(Double)</returns>
         public override object Visit(SubtractionNode node)
         {
             if (Visit(node.Left).GetType() == typeof(string) || Visit(node.Right).GetType() == typeof(string))
@@ -206,6 +221,11 @@ namespace Bve5_Parsing.MapGrammar
             return (double)Visit(node.Left) - (double)Visit(node.Right);
         }
 
+        /// <summary>
+        /// 乗算ノードの評価
+        /// </summary>
+        /// <param name="node">乗算ノード</param>
+        /// <returns>演算後の数値(Double)</returns>
         public override object Visit(MultiplicationNode node)
         {
             if (Visit(node.Left).GetType() == typeof(string) || Visit(node.Right).GetType() == typeof(string))
@@ -213,6 +233,11 @@ namespace Bve5_Parsing.MapGrammar
             return (double)Visit(node.Left) * (double)Visit(node.Right);
         }
 
+        /// <summary>
+        /// 除算ノードの評価
+        /// </summary>
+        /// <param name="node">除算ノード</param>
+        /// <returns>演算後の数値(Double)</returns>
         public override object Visit(DivisionNode node)
         {
             if (Visit(node.Left).GetType() == typeof(string) || Visit(node.Right).GetType() == typeof(string))
@@ -220,13 +245,23 @@ namespace Bve5_Parsing.MapGrammar
             return (double)Visit(node.Left) / (double)Visit(node.Right);
         }
 
-        public override object Visit(NegateNode node)
+        /// <summary>
+        /// ユーナリ演算ノードの評価
+        /// </summary>
+        /// <param name="node">ユーナリ演算ノード</param>
+        /// <returns>演算後の数値(Double)</returns>
+        public override object Visit(UnaryNode node)
         {
             if (Visit(node.InnerNode).GetType() == typeof(string))
                 throw new FormatException();
             return -(double)Visit(node.InnerNode);
         }
 
+        /// <summary>
+        /// 剰余算ノードの評価
+        /// </summary>
+        /// <param name="node">剰余算ノード</param>
+        /// <returns>演算後の数値(Double)</returns>
         public override object Visit(ModuloNode node)
         {
             if (Visit(node.Left).GetType() == typeof(string) || Visit(node.Right).GetType() == typeof(string))
@@ -237,8 +272,8 @@ namespace Bve5_Parsing.MapGrammar
         /// <summary>
         /// 絶対値関数の評価
         /// </summary>
-        /// <param name="node"></param>
-        /// <returns></returns>
+        /// <param name="node">絶対値関数ノード</param>
+        /// <returns>演算後の数値(Double)</returns>
         public override object Visit(AbsNode node)
         {
             return Math.Abs((double)Visit(node.Value));
@@ -247,8 +282,8 @@ namespace Bve5_Parsing.MapGrammar
         /// <summary>
         /// Atan2関数の評価
         /// </summary>
-        /// <param name="node"></param>
-        /// <returns></returns>
+        /// <param name="node">Atan2ノード</param>
+        /// <returns>演算後の数値(Double)</returns>
         public override object Visit(Atan2Node node)
         {
             return Math.Atan2((double)Visit(node.X), (double)Visit(node.X));
@@ -257,8 +292,8 @@ namespace Bve5_Parsing.MapGrammar
         /// <summary>
         /// 切り上げ関数の評価
         /// </summary>
-        /// <param name="node"></param>
-        /// <returns></returns>
+        /// <param name="node">切り上げ関数ノード</param>
+        /// <returns>演算後の数値(Double)</returns>
         public override object Visit(CeilNode node)
         {
             return Math.Ceiling((double)Visit(node.Value));
@@ -267,8 +302,8 @@ namespace Bve5_Parsing.MapGrammar
         /// <summary>
         /// 余弦関数の評価
         /// </summary>
-        /// <param name="node"></param>
-        /// <returns></returns>
+        /// <param name="node">余弦関数ノード</param>
+        /// <returns>演算後の数値(Double)</returns>
         public override object Visit(CosNode node)
         {
             return Math.Cos((double)Visit(node.Value));
@@ -277,8 +312,8 @@ namespace Bve5_Parsing.MapGrammar
         /// <summary>
         /// 累乗関数の評価
         /// </summary>
-        /// <param name="node"></param>
-        /// <returns></returns>
+        /// <param name="node">累乗関数ノード</param>
+        /// <returns>演算後の数値(Double)</returns>
         public override object Visit(ExpNode node)
         {
             return Math.Exp((double)Visit(node.Value));
@@ -287,8 +322,8 @@ namespace Bve5_Parsing.MapGrammar
         /// <summary>
         /// 切り捨て関数の評価
         /// </summary>
-        /// <param name="node"></param>
-        /// <returns></returns>
+        /// <param name="node">切り捨て関数ノード</param>
+        /// <returns>演算後の数値(Double)</returns>
         public override object Visit(FloorNode node)
         {
             return Math.Floor((double)Visit(node.Value));
@@ -297,8 +332,8 @@ namespace Bve5_Parsing.MapGrammar
         /// <summary>
         /// 自然対数関数の評価
         /// </summary>
-        /// <param name="node"></param>
-        /// <returns></returns>
+        /// <param name="node">自然対数関数ノード</param>
+        /// <returns>演算後の数値(Double)</returns>
         public override object Visit(LogNode node)
         {
             return Math.Log((double)Visit(node.Value));
@@ -307,8 +342,8 @@ namespace Bve5_Parsing.MapGrammar
         /// <summary>
         /// べき乗関数の評価
         /// </summary>
-        /// <param name="node"></param>
-        /// <returns></returns>
+        /// <param name="node">べき乗関数ノード</param>
+        /// <returns>演算後の数値(Double)</returns>
         public override object Visit(PowNode node)
         {
             return Math.Pow((double)Visit(node.X), (double)Visit(node.Y));
@@ -317,8 +352,8 @@ namespace Bve5_Parsing.MapGrammar
         /// <summary>
         /// 乱数関数の評価
         /// </summary>
-        /// <param name="node"></param>
-        /// <returns></returns>
+        /// <param name="node">乱数関数ノード</param>
+        /// <returns>演算後の数値(Double)</returns>
         public override object Visit(RandNode node)
         {
             System.Random random = new System.Random();
@@ -332,8 +367,8 @@ namespace Bve5_Parsing.MapGrammar
         /// <summary>
         /// 正弦関数の評価
         /// </summary>
-        /// <param name="node"></param>
-        /// <returns></returns>
+        /// <param name="node">正弦関数ノード</param>
+        /// <returns>演算後の数値(Double)</returns>
         public override object Visit(SinNode node)
         {
             return Math.Sin((double)Visit(node.Value));
@@ -342,28 +377,49 @@ namespace Bve5_Parsing.MapGrammar
         /// <summary>
         /// 平方根関数の評価
         /// </summary>
-        /// <param name="node"></param>
-        /// <returns></returns>
+        /// <param name="node">平方根関数ノード</param>
+        /// <returns>演算後の数値(Double)</returns>
         public override object Visit(SqrtNode node)
         {
             return Math.Sqrt((double)Visit(node.Value));
         }
 
+        /// <summary>
+        /// 数値の評価
+        /// </summary>
+        /// <param name="node">数値ノード</param>
+        /// <returns>数値(String)</returns>
         public override object Visit(NumberNode node)
         {
             return node.Value;
         }
 
+        /// <summary>
+        /// Distance変数の評価
+        /// 現在の距離程を返します。
+        /// </summary>
+        /// <param name="node">距離程変数ノード</param>
+        /// <returns>現在の距離程(Double)</returns>
         public override object Visit(DistanceVariableNode node)
         {
             return nowDistance;
         }
 
+        /// <summary>
+        /// 文字列の評価
+        /// </summary>
+        /// <param name="node">文字列ノード</param>
+        /// <returns>文字列(String)</returns>
         public override object Visit(StringNode node)
         {
             return node.Value;
         }
 
+        /// <summary>
+        /// 変数の評価
+        /// </summary>
+        /// <param name="node">変数ノード</param>
+        /// <returns>変数に対応する値(Double)</returns>
         public override object Visit(VarNode node)
         {
             return VariableStore.GetVar(node.Key);

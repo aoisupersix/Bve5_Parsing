@@ -101,7 +101,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     #region 変数宣言 AST Nodes
 
     /// <summary>
-    /// 変数宣言AstNode
+    /// 変数宣言ノード
     /// </summary>
     internal class VarAssignNode : MapGrammarAstNodes
     {
@@ -111,23 +111,45 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     #endregion 変数宣言 AST Nodes
 
     #region 数式 AST Nodes
+
+    /// <summary>
+    /// 二項演算数式ノード
+    /// </summary>
     internal abstract class InfixExpressionNode : MapGrammarAstNodes
     {
         public MapGrammarAstNodes Left { get; set; }
         public MapGrammarAstNodes Right { get; set; }
     }
 
+    /// <summary>
+    /// 加算ノード
+    /// </summary>
     internal class AdditionNode : InfixExpressionNode { }
 
+    /// <summary>
+    /// 減算ノード
+    /// </summary>
     internal class SubtractionNode : InfixExpressionNode { }
 
+    /// <summary>
+    /// 乗算ノード
+    /// </summary>
     internal class MultiplicationNode : InfixExpressionNode { }
 
+    /// <summary>
+    /// 除算ノード
+    /// </summary>
     internal class DivisionNode : InfixExpressionNode { }
 
+    /// <summary>
+    /// 剰余算ノード
+    /// </summary>
     internal class ModuloNode : InfixExpressionNode { }
 
-    internal class NegateNode : MapGrammarAstNodes
+    /// <summary>
+    /// ユーナリ演算ノード
+    /// </summary>
+    internal class UnaryNode : MapGrammarAstNodes
     {
         public MapGrammarAstNodes InnerNode { get; set; }
     }
