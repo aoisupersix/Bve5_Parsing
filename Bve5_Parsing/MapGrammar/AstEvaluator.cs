@@ -1,6 +1,5 @@
 ﻿using Bve5_Parsing.MapGrammar.AstNodes;
 using System;
-using Antlr4;
 
 namespace Bve5_Parsing.MapGrammar
 {
