@@ -45,15 +45,10 @@ namespace Bve5_Parsing.MapGrammar
             SyntaxDefinitions.MapGrammarParser parser = new SyntaxDefinitions.MapGrammarParser(commonTokneStream);
 
             parser.AddErrorListener(ErrorListener);
-            parser.ErrorHandler = new MapGrammarErrorStrategy();
+            //parser.ErrorHandler = new MapGrammarErrorStrategy();
 
             MapData value = null;
             var cst = parser.root();
-
-            //エラーの回復
-            if (cst.exception != null)
-                cst = parser.root();
-
             var ast = new BuildAstVisitor().VisitRoot(cst);
             value = (MapData)new EvaluateMapGrammarVisitor().Visit(ast);
 

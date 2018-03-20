@@ -1,7 +1,6 @@
 ﻿using Bve5_Parsing.MapGrammar;
 using Bve5_Parsing.ScenarioGrammar;
 using System;
-using System.Collections.Generic;
 
 
 namespace Bve5_Parsing
@@ -125,6 +124,7 @@ namespace Bve5_Parsing
             catch(Exception e)
             {
                 Console.Error.WriteLine(e.Message + ":" + e.StackTrace);
+                return;
             }
 
             //結果の表示

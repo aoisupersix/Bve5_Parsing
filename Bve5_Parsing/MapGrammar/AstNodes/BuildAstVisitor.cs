@@ -1346,7 +1346,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
                 case MapGrammarLexer.PLUS:
                     return Visit(context.expr());
                 case MapGrammarLexer.MINUS:
-                    return new NegateNode { InnerNode = Visit(context.expr()) };
+                    return new UnaryNode { InnerNode = Visit(context.expr()) };
                 default:
                     throw new NotSupportedException();
             }
