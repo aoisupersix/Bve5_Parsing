@@ -142,8 +142,6 @@ VAR : [a-zA-Z0-9_]+;
 
 //文字列
 QUOTE : '\'' -> pushMode(STRING_MODE) ;
-//NEWLINE : ( '\r' '\n'? | '\n');
-OUTER_CHAR : . -> skip ;
 
 mode STRING_MODE;
 RQUOTE : '\'' -> popMode ;
