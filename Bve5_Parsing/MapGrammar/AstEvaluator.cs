@@ -1,5 +1,6 @@
 ﻿using Bve5_Parsing.MapGrammar.AstNodes;
 using System;
+using Antlr4;
 
 namespace Bve5_Parsing.MapGrammar
 {
@@ -216,8 +217,6 @@ namespace Bve5_Parsing.MapGrammar
         /// <returns>演算後の数値(Double)</returns>
         public override object Visit(SubtractionNode node)
         {
-            if (Visit(node.Left).GetType() == typeof(string) || Visit(node.Right).GetType() == typeof(string))
-                throw new FormatException();
             return (double)Visit(node.Left) - (double)Visit(node.Right);
         }
 
@@ -228,8 +227,6 @@ namespace Bve5_Parsing.MapGrammar
         /// <returns>演算後の数値(Double)</returns>
         public override object Visit(MultiplicationNode node)
         {
-            if (Visit(node.Left).GetType() == typeof(string) || Visit(node.Right).GetType() == typeof(string))
-                throw new FormatException();
             return (double)Visit(node.Left) * (double)Visit(node.Right);
         }
 
@@ -240,8 +237,6 @@ namespace Bve5_Parsing.MapGrammar
         /// <returns>演算後の数値(Double)</returns>
         public override object Visit(DivisionNode node)
         {
-            if (Visit(node.Left).GetType() == typeof(string) || Visit(node.Right).GetType() == typeof(string))
-                throw new FormatException();
             return (double)Visit(node.Left) / (double)Visit(node.Right);
         }
 
@@ -252,8 +247,6 @@ namespace Bve5_Parsing.MapGrammar
         /// <returns>演算後の数値(Double)</returns>
         public override object Visit(UnaryNode node)
         {
-            if (Visit(node.InnerNode).GetType() == typeof(string))
-                throw new FormatException();
             return -(double)Visit(node.InnerNode);
         }
 
@@ -264,8 +257,6 @@ namespace Bve5_Parsing.MapGrammar
         /// <returns>演算後の数値(Double)</returns>
         public override object Visit(ModuloNode node)
         {
-            if (Visit(node.Left).GetType() == typeof(string) || Visit(node.Right).GetType() == typeof(string))
-                throw new FormatException();
             return (double)Visit(node.Left) % (double)Visit(node.Right);
         }
 
