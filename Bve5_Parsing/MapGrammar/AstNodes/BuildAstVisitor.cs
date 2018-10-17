@@ -21,6 +21,9 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         {
             var node = new RootNode();
             node.Version = context.version.Text;
+            if (context.encoding() != null) {
+                node.Encoding = context.encoding().text;
+            }
 
             foreach (var state in context.statement())
             {
@@ -552,6 +555,26 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         {
             return base.Visit(context.varAssign());
         }
+
+        /// <summary>
+        /// レガシー関数ステートメントの巡回
+        /// </summary>
+        /// <param name="context">構文解析の文脈データ</param>
+        /// <returns>構文ASTノード</returns>
+        public override MapGrammarAstNodes VisitLegacyState([NotNull] SyntaxDefinitions.MapGrammarParser.LegacyStateContext context)
+        {
+            MapGrammarAstNodes node;
+            try
+            {
+                node = Visit(context.legacy());
+            }
+            catch (NullReferenceException)
+            {
+                node = null;
+            }
+
+            return node;
+        }
         #endregion ステートメントVisitors
 
         #region マップ構文Visitors
@@ -592,6 +615,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
             switch (node.FunctionName)
             {
                 case "setgauge":                                                    /* SetGauge(value) */
+                case "gauge":
                     node.Arguments.Add("value", Visit(context.value));
                     break;
                 case "setcenter":                                                   /* SetCenter(x) */
@@ -603,6 +627,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
                 case "begintransition":                                             /* BeginTransition() */
                     break;
                 case "begin":                                                       /* Begin(radius, cant?) */
+                case "begincircular":
                     node.Arguments.Add("radius", Visit(context.radius));
                     if (context.cant != null)
                         node.Arguments.Add("cant", Visit(context.cant));
@@ -650,6 +675,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
                 case "begintransition":                                             /* BeginTransition() */
                     break;
                 case "begin":                                                       /* Begin(gradient) */
+                case "beginconst":
                     node.Arguments.Add("gradient", Visit(context.gradientArgs));
                     break;
                 case "end":                                                         /* End() */
@@ -750,6 +776,12 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
                             if (context.radiusV != null)
                                 node.Arguments.Add("radiusv", Visit(context.radiusV));
                         }
+                        break;
+                    case "cant":
+                        node.Arguments.Add("cant", Visit(context.cantE));
+                        break;
+                    case "gauge":
+                        node.Arguments.Add("gauge", Visit(context.gauge));
                         break;
                 }
 
@@ -906,6 +938,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
             switch (node.FunctionName)
             {
                 case "begin":                                                           /* Begin(signalN+) */
+                case "beginnew":
                     node.Arguments.Add("signal0", Visit(context.nullableExpr()));
                     for (int i = 0; i < context.exprArgs().Length; i++)
                     {
@@ -933,28 +966,46 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
             string funcName = context.func.Text.ToLower();
 
             if (funcName.Equals("load"))                                                    /* Load(filePath) */
-                return new LoadListNode { MapElementName = "structure", Path = context.path.text };
-
-            Syntax2Node node = new Syntax2Node();                                           /* Put(section, trackkey, x, y, z?, rx?, ry?, rz?, tilt?, span?) */
-            node.MapElementName = "signal";
-            node.Key = Visit(context.key);
-            node.FunctionName = funcName;
-
-            node.Arguments.Add("section", Visit(context.sectionArgs));
-            node.Arguments.Add("trackkey", Visit(context.trackkey));
-            node.Arguments.Add("x", Visit(context.x));
-            node.Arguments.Add("y", Visit(context.y));
-            if (context.z != null)
+                return new LoadListNode { MapElementName = "signal", Path = context.path.text };
+            else if (funcName.Equals("speedlimit"))
             {
-                node.Arguments.Add("z", Visit(context.z));
-                node.Arguments.Add("rx", Visit(context.rx));
-                node.Arguments.Add("ry", Visit(context.ry));
-                node.Arguments.Add("rz", Visit(context.rz));
-                node.Arguments.Add("tilt", Visit(context.tilt));
-                node.Arguments.Add("span", Visit(context.span));
+                Syntax1Node node = new Syntax1Node();
+                node.MapElementName = "signal";
+                node.FunctionName = funcName;
+                switch (node.FunctionName)
+                {
+                    case "speedlimit":
+                        node.Arguments.Add("v0", Visit(context.nullableExpr()[0]));
+                        for (int i = 0; i < context.exprArgs().Length; i++)
+                        {
+                            node.Arguments.Add("v" + (i + 1), Visit(context.exprArgs()[i]));
+                        }
+                        break;
+                }
+                return node;
             }
+            else
+            {
+                Syntax2Node node = new Syntax2Node();                                           /* Put(section, trackkey, x, y, z?, rx?, ry?, rz?, tilt?, span?) */
+                node.MapElementName = "signal";
+                node.Key = Visit(context.key);
+                node.FunctionName = funcName;
 
-            return node;
+                node.Arguments.Add("section", Visit(context.sectionArgs));
+                node.Arguments.Add("trackkey", Visit(context.trackkey));
+                node.Arguments.Add("x", Visit(context.x));
+                node.Arguments.Add("y", Visit(context.y));
+                if (context.z != null)
+                {
+                    node.Arguments.Add("z", Visit(context.z));
+                    node.Arguments.Add("rx", Visit(context.rx));
+                    node.Arguments.Add("ry", Visit(context.ry));
+                    node.Arguments.Add("rz", Visit(context.rz));
+                    node.Arguments.Add("tilt", Visit(context.tilt));
+                    node.Arguments.Add("span", Visit(context.span));
+                }
+                return node;
+            }
         }
 
         /// <summary>
@@ -1270,6 +1321,41 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
 
                 return node;
             }
+        }
+
+        /// <summary>
+        /// レガシー関数の巡回
+        /// </summary>
+        /// <param name="context">構文解析の文脈データ</param>
+        /// <returns>構文ASTノード</returns>
+        public override MapGrammarAstNodes VisitLegacy([NotNull] SyntaxDefinitions.MapGrammarParser.LegacyContext context)
+        {
+            Syntax1Node node = new Syntax1Node();
+            node.MapElementName = "legacy";
+            node.FunctionName = context.func.Text.ToLower();
+
+            switch (context.func.Type)
+            {
+                case MapGrammarLexer.FOG:
+                    node.Arguments.Add("start", Visit(context.start));
+                    node.Arguments.Add("end", Visit(context.end));
+                    node.Arguments.Add("red", Visit(context.red));
+                    node.Arguments.Add("green", Visit(context.green));
+                    node.Arguments.Add("blue", Visit(context.blue));
+                    break;
+                case MapGrammarLexer.CURVE:
+                    node.Arguments.Add("radius", Visit(context.radius));
+                    node.Arguments.Add("cant", Visit(context.cant));
+                    break;
+                case MapGrammarLexer.PITCH:
+                    node.Arguments.Add("rate", Visit(context.rate));
+                    break;
+                case MapGrammarLexer.TURN:
+                    node.Arguments.Add("slope", Visit(context.slope));
+                    break;
+            }
+
+            return node;
         }
         #endregion マップ構文Visitors
 

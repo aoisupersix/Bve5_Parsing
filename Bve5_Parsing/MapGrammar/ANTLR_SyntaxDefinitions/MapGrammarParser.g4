@@ -7,7 +7,7 @@ options{
 }
 
 root :
-	BVETS MAP version=NUM (statement STATE_END)* EOF
+	BVETS MAP version=NUM (SELECT_ENCODE encoding HEADER_END)? (statement STATE_END)* EOF
 	;
 
 statement :
@@ -38,6 +38,7 @@ statement :
 	| JOINTNOISE jointnoise 			#jointnoiseState
 	| TRAIN train 						#trainState
 	| varAssign 						#varAssignState
+	| LEGACY legacy						#legacyState
 	;
 
 //ãóó£íˆ
@@ -52,11 +53,11 @@ include :
 
 //ïΩñ ã»ê¸
 curve :
-	  DOT func=SET_GAUGE OPN_PAR value=nullableExpr CLS_PAR
+	  DOT func=(SET_GAUGE | GAUGE) OPN_PAR value=nullableExpr CLS_PAR
 	| DOT func=SET_CENTER OPN_PAR x=nullableExpr CLS_PAR
 	| DOT func=SET_FUNCTION OPN_PAR id=nullableExpr CLS_PAR
 	| DOT func=BEGIN_TRANSITION OPN_PAR CLS_PAR
-	| DOT func=BEGIN OPN_PAR radius=nullableExpr (COMMA cant=nullableExpr)? CLS_PAR
+	| DOT func=(BEGIN | BEGIN_CIRCULAR) OPN_PAR radius=nullableExpr (COMMA cant=nullableExpr)? CLS_PAR
 	| DOT func=END OPN_PAR CLS_PAR
 	| DOT func=INTERPOLATE OPN_PAR CLS_PAR
 	| DOT func=INTERPOLATE OPN_PAR radiusE=expr CLS_PAR
@@ -67,7 +68,7 @@ curve :
 //ècã»ê¸
 gradient :
 	  DOT func=BEGIN_TRANSITION OPN_PAR CLS_PAR
-	| DOT func=BEGIN OPN_PAR gradientArgs=nullableExpr CLS_PAR	//à¯êîñºgradientÇ™îÌÇÈÇÃÇ≈gradientArgsÇ…ÇµÇƒÇ¢ÇÈ
+	| DOT func=(BEGIN | BEGIN_CONST) OPN_PAR gradientArgs=nullableExpr CLS_PAR	//à¯êîñºgradientÇ™îÌÇÈÇÃÇ≈gradientArgsÇ…ÇµÇƒÇ¢ÇÈ
 	| DOT func=END OPN_PAR CLS_PAR
 	| DOT func=INTERPOLATE OPN_PAR gradientArgsE=expr CLS_PAR
 	;
@@ -90,6 +91,8 @@ track :
 	| OPN_BRA key=expr CLS_BRA DOT element=CANT_ELEMENT DOT func=BEGIN OPN_PAR cant=nullableExpr CLS_PAR
 	| OPN_BRA key=expr CLS_BRA DOT element=CANT_ELEMENT DOT func=END OPN_PAR CLS_PAR
 	| OPN_BRA key=expr CLS_BRA DOT element=CANT_ELEMENT DOT func=INTERPOLATE OPN_PAR cantE=expr? CLS_PAR
+	| OPN_BRA key=expr CLS_BRA DOT func=CANT_ELEMENT OPN_PAR cantE=expr CLS_PAR
+	| OPN_BRA key=expr CLS_BRA DOT func=GAUGE OPN_PAR gauge=nullableExpr CLS_PAR
 	;
 
 //ÉXÉgÉâÉNÉ`ÉÉ
@@ -120,13 +123,14 @@ station :
 
 //ï¬ÇªÇ≠
 section :
-	  DOT func=BEGIN OPN_PAR nullableExpr exprArgs* CLS_PAR
+	  DOT func=(BEGIN | BEGIN_NEW) OPN_PAR nullableExpr exprArgs* CLS_PAR
 	| DOT func=SET_SPEEDLIMIT OPN_PAR nullableExpr exprArgs* CLS_PAR
 	;
 
 //êMçÜã@
 signal :
 	  DOT func=LOAD OPN_PAR path=string CLS_PAR
+	| DOT func=SPEEDLIMIT OPN_PAR nullableExpr exprArgs* CLS_PAR
 	| OPN_BRA key=expr CLS_BRA DOT func=PUT OPN_PAR sectionArgs=nullableExpr COMMA trackkey=nullableExpr COMMA x=nullableExpr COMMA y=nullableExpr CLS_PAR
 	| OPN_BRA key=expr CLS_BRA DOT func=PUT OPN_PAR sectionArgs=nullableExpr COMMA trackkey=nullableExpr COMMA x=nullableExpr COMMA y=nullableExpr COMMA z=nullableExpr COMMA rx=nullableExpr COMMA ry=nullableExpr COMMA rz=nullableExpr COMMA tilt=nullableExpr COMMA span=nullableExpr CLS_PAR
 	;
@@ -158,7 +162,7 @@ light :
 fog :
 	  DOT func=INTERPOLATE OPN_PAR CLS_PAR
 	| DOT func=INTERPOLATE OPN_PAR densityE=expr CLS_PAR
-	| DOT func=INTERPOLATE OPN_PAR density=nullableExpr COMMA red=nullableExpr COMMA green=nullableExpr COMMA blue=nullableExpr CLS_PAR
+	| DOT func=(INTERPOLATE | SET) OPN_PAR density=nullableExpr COMMA red=nullableExpr COMMA green=nullableExpr COMMA blue=nullableExpr CLS_PAR
 	;
 
 //ïóåiï`âÊãóó£
@@ -168,7 +172,7 @@ drawdistance :
 
 //â^ì]ë‰ÇÃñæÇÈÇ≥
 cabilluminance :
-	DOT func=INTERPOLATE OPN_PAR value=expr? CLS_PAR
+	DOT func=(INTERPOLATE | SET) OPN_PAR value=expr? CLS_PAR
 	;
 
 //ãOìπïœà 
@@ -229,6 +233,14 @@ exprArgs :
 varAssign :
 	v=var EQUAL expr;
 
+//ÉåÉKÉVÅ[ä÷êî
+legacy :
+	  DOT func=FOG OPN_PAR start=nullableExpr COMMA end=nullableExpr COMMA red=nullableExpr COMMA green=nullableExpr COMMA blue=nullableExpr CLS_PAR
+	| DOT func=CURVE OPN_PAR radius=nullableExpr COMMA cant=nullableExpr CLS_PAR
+	| DOT func=PITCH OPN_PAR rate=nullableExpr CLS_PAR
+	| DOT func=TURN OPN_PAR slope=nullableExpr CLS_PAR
+	;
+
 nullableExpr :
 	  expr
 	| nullSyntax=NULL
@@ -267,4 +279,12 @@ string returns [string text]:
 
 string_text :
 	CHAR*
+	;
+
+encoding returns [string text]:
+	v=encode_string {$text = $v.text; }
+	;
+
+encode_string :
+	ENCODE_CHAR*
 	;

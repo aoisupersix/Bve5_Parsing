@@ -6,6 +6,7 @@ lexer grammar MapGrammarLexer;
 //ヘッダー
 BVETS : B V E T S;
 MAP : M A P;
+SELECT_ENCODE : ':' -> pushMode(ENCODING_MODE);
 
 //インクルードディレクティブ
 INCLUDE : I N C L U D E;
@@ -36,17 +37,24 @@ FLANGENOISE : F L A N G E N O I S E;
 JOINTNOISE : J O I N T N O I S E;
 TRAIN : T R A I N;
 
+LEGACY : L E G A C Y;
+
 X_ELEMENT : X;
 Y_ELEMENT : Y;
 CANT_ELEMENT : C A N T;
 
 //関数名
 SET_GAUGE : S E T G A U G E;
+GAUGE : G A U G E;
 SET_CENTER : S E T C E N T E R;
 SET_FUNCTION : S E T F U N C T I O N;
+SET : S E T;
 BEGIN_TRANSITION : B E G I N T R A N S I T I O N;
 BEGIN : B E G I N;
 BEGIN0 : B E G I N '0';
+BEGIN_CIRCULAR : B E G I N C I R C U L A R;
+BEGIN_CONST : B E G I N C O N S T;
+BEGIN_NEW : B E G I N N E W;
 END : E N D;
 INTERPOLATE : I N T E R P O L A T E;
 CHANGE : C H A N G E;
@@ -64,6 +72,10 @@ PLAY : P L A Y;
 ADD : A D D;
 ENABLE : E N A B L E;
 STOP : S T O P;
+
+//レガシー関数
+PITCH : P I T C H;
+TURN : T U R N;
 
 //ステートメント区切り
 STATE_END : ';';
@@ -146,3 +158,8 @@ QUOTE : '\'' -> pushMode(STRING_MODE) ;
 mode STRING_MODE;
 RQUOTE : '\'' -> popMode ;
 CHAR : . ;
+
+mode ENCODING_MODE;
+E_WS : [\t ]+ -> skip;
+HEADER_END : ('\r' '\n'? | '\n') -> popMode;
+ENCODE_CHAR : .;

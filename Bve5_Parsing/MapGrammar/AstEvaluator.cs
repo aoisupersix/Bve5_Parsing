@@ -74,6 +74,7 @@ namespace Bve5_Parsing.MapGrammar
         {
             evaluateData = new MapData();
             evaluateData.Version = node.Version;
+            evaluateData.Encoding = node.Encoding;
             foreach(var state in node.StatementList)
             {
                 object childData = Visit(state);
@@ -91,7 +92,7 @@ namespace Bve5_Parsing.MapGrammar
         /// <returns>null</returns>
         public override object Visit(DistanceNode node)
         {
-            nowDistance = (double)Visit(node.Value);
+            nowDistance = Convert.ToDouble(Visit(node.Value));
 
             return null;
         }
@@ -205,7 +206,7 @@ namespace Bve5_Parsing.MapGrammar
             if (Visit(node.Left).GetType() == typeof(string) || Visit(node.Right).GetType() == typeof(string))
                 return Visit(node.Left).ToString() + Visit(node.Right).ToString(); //文字列の結合
 
-            return (double)Visit(node.Left) + (double)Visit(node.Right);
+            return Convert.ToDouble(Visit(node.Left)) + Convert.ToDouble(Visit(node.Right));
 
         }
 
@@ -216,7 +217,7 @@ namespace Bve5_Parsing.MapGrammar
         /// <returns>演算後の数値(Double)</returns>
         public override object Visit(SubtractionNode node)
         {
-            return (double)Visit(node.Left) - (double)Visit(node.Right);
+            return Convert.ToDouble(Visit(node.Left)) - Convert.ToDouble(Visit(node.Right));
         }
 
         /// <summary>
@@ -226,7 +227,7 @@ namespace Bve5_Parsing.MapGrammar
         /// <returns>演算後の数値(Double)</returns>
         public override object Visit(MultiplicationNode node)
         {
-            return (double)Visit(node.Left) * (double)Visit(node.Right);
+            return Convert.ToDouble(Visit(node.Left)) * Convert.ToDouble(Visit(node.Right));
         }
 
         /// <summary>
@@ -236,7 +237,7 @@ namespace Bve5_Parsing.MapGrammar
         /// <returns>演算後の数値(Double)</returns>
         public override object Visit(DivisionNode node)
         {
-            return (double)Visit(node.Left) / (double)Visit(node.Right);
+            return Convert.ToDouble(Visit(node.Left)) / Convert.ToDouble(Visit(node.Right));
         }
 
         /// <summary>
@@ -246,7 +247,7 @@ namespace Bve5_Parsing.MapGrammar
         /// <returns>演算後の数値(Double)</returns>
         public override object Visit(UnaryNode node)
         {
-            return -(double)Visit(node.InnerNode);
+            return -Convert.ToDouble(Visit(node.InnerNode));
         }
 
         /// <summary>
@@ -256,7 +257,7 @@ namespace Bve5_Parsing.MapGrammar
         /// <returns>演算後の数値(Double)</returns>
         public override object Visit(ModuloNode node)
         {
-            return (double)Visit(node.Left) % (double)Visit(node.Right);
+            return Convert.ToDouble(Visit(node.Left)) % Convert.ToDouble(Visit(node.Right));
         }
 
         /// <summary>
@@ -266,7 +267,7 @@ namespace Bve5_Parsing.MapGrammar
         /// <returns>演算後の数値(Double)</returns>
         public override object Visit(AbsNode node)
         {
-            return Math.Abs((double)Visit(node.Value));
+            return Math.Abs(Convert.ToDouble(Visit(node.Value)));
         }
 
         /// <summary>
@@ -276,7 +277,7 @@ namespace Bve5_Parsing.MapGrammar
         /// <returns>演算後の数値(Double)</returns>
         public override object Visit(Atan2Node node)
         {
-            return Math.Atan2((double)Visit(node.X), (double)Visit(node.X));
+            return Math.Atan2(Convert.ToDouble(Visit(node.X)), Convert.ToDouble(Visit(node.X)));
         }
 
         /// <summary>
@@ -286,7 +287,7 @@ namespace Bve5_Parsing.MapGrammar
         /// <returns>演算後の数値(Double)</returns>
         public override object Visit(CeilNode node)
         {
-            return Math.Ceiling((double)Visit(node.Value));
+            return Math.Ceiling(Convert.ToDouble(Visit(node.Value)));
         }
 
         /// <summary>
@@ -296,7 +297,7 @@ namespace Bve5_Parsing.MapGrammar
         /// <returns>演算後の数値(Double)</returns>
         public override object Visit(CosNode node)
         {
-            return Math.Cos((double)Visit(node.Value));
+            return Math.Cos(Convert.ToDouble(Visit(node.Value)));
         }
 
         /// <summary>
@@ -306,7 +307,7 @@ namespace Bve5_Parsing.MapGrammar
         /// <returns>演算後の数値(Double)</returns>
         public override object Visit(ExpNode node)
         {
-            return Math.Exp((double)Visit(node.Value));
+            return Math.Exp(Convert.ToDouble(Visit(node.Value)));
         }
 
         /// <summary>
@@ -316,7 +317,7 @@ namespace Bve5_Parsing.MapGrammar
         /// <returns>演算後の数値(Double)</returns>
         public override object Visit(FloorNode node)
         {
-            return Math.Floor((double)Visit(node.Value));
+            return Math.Floor(Convert.ToDouble(Visit(node.Value)));
         }
 
         /// <summary>
@@ -326,7 +327,7 @@ namespace Bve5_Parsing.MapGrammar
         /// <returns>演算後の数値(Double)</returns>
         public override object Visit(LogNode node)
         {
-            return Math.Log((double)Visit(node.Value));
+            return Math.Log(Convert.ToDouble(Visit(node.Value)));
         }
 
         /// <summary>
@@ -336,7 +337,7 @@ namespace Bve5_Parsing.MapGrammar
         /// <returns>演算後の数値(Double)</returns>
         public override object Visit(PowNode node)
         {
-            return Math.Pow((double)Visit(node.X), (double)Visit(node.Y));
+            return Math.Pow(Convert.ToDouble(Visit(node.X)), Convert.ToDouble(Visit(node.Y)));
         }
 
         /// <summary>
@@ -351,7 +352,7 @@ namespace Bve5_Parsing.MapGrammar
                 return random.NextDouble();
 
 
-            return random.Next((int)((double)Visit(node.Value)));
+            return random.Next(Convert.ToInt32(Visit(node.Value)));
         }
 
         /// <summary>
@@ -361,7 +362,7 @@ namespace Bve5_Parsing.MapGrammar
         /// <returns>演算後の数値(Double)</returns>
         public override object Visit(SinNode node)
         {
-            return Math.Sin((double)Visit(node.Value));
+            return Math.Sin(Convert.ToDouble(Visit(node.Value)));
         }
 
         /// <summary>
@@ -371,7 +372,7 @@ namespace Bve5_Parsing.MapGrammar
         /// <returns>演算後の数値(Double)</returns>
         public override object Visit(SqrtNode node)
         {
-            return Math.Sqrt((double)Visit(node.Value));
+            return Math.Sqrt(Convert.ToDouble(Visit(node.Value)));
         }
 
         /// <summary>
