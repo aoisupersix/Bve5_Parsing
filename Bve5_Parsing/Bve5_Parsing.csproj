@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\Antlr4.CodeGenerator.4.6.4\build\Antlr4.CodeGenerator.props" Condition="Exists('..\packages\Antlr4.CodeGenerator.4.6.4\build\Antlr4.CodeGenerator.props')" />
+  <Import Project="..\packages\Antlr4.CodeGenerator.4.6.5\build\Antlr4.CodeGenerator.props" Condition="Exists('..\packages\Antlr4.CodeGenerator.4.6.5\build\Antlr4.CodeGenerator.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -54,7 +54,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Antlr4.Runtime, Version=4.6.0.0, Culture=neutral, PublicKeyToken=09abb75b9ed49849, processorArchitecture=MSIL">
-      <HintPath>..\packages\Antlr4.Runtime.4.6.4\lib\net45\Antlr4.Runtime.dll</HintPath>
+      <HintPath>..\packages\Antlr4.Runtime.4.6.5\lib\net45\Antlr4.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -92,7 +92,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <CustomToolNamespace>Bve5_Parsing.MapGrammar.SyntaxDefinitions</CustomToolNamespace>
     </Antlr4>
-    <None Include="packages.config" />
     <Antlr4 Include="ScenarioGrammar\ANTLR_SyntaxDefinitions\ScenarioGrammarLexer.g4">
       <Generator>MSBuild:Compile</Generator>
       <CustomToolNamespace>Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions</CustomToolNamespace>
@@ -103,6 +102,7 @@
       <CustomToolNamespace>Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions</CustomToolNamespace>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Antlr4>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
@@ -122,8 +122,8 @@
     <PropertyGroup>
       <ErrorText>このプロジェクトは、このコンピューター上にない NuGet パッケージを参照しています。それらのパッケージをダウンロードするには、[NuGet パッケージの復元] を使用します。詳細については、http://go.microsoft.com/fwlink/?LinkID=322105 を参照してください。見つからないファイルは {0} です。</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\Antlr4.CodeGenerator.4.6.4\build\Antlr4.CodeGenerator.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Antlr4.CodeGenerator.4.6.4\build\Antlr4.CodeGenerator.props'))" />
-    <Error Condition="!Exists('..\packages\Antlr4.CodeGenerator.4.6.4\build\Antlr4.CodeGenerator.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Antlr4.CodeGenerator.4.6.4\build\Antlr4.CodeGenerator.targets'))" />
+    <Error Condition="!Exists('..\packages\Antlr4.CodeGenerator.4.6.5\build\Antlr4.CodeGenerator.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Antlr4.CodeGenerator.4.6.5\build\Antlr4.CodeGenerator.props'))" />
+    <Error Condition="!Exists('..\packages\Antlr4.CodeGenerator.4.6.5\build\Antlr4.CodeGenerator.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Antlr4.CodeGenerator.4.6.5\build\Antlr4.CodeGenerator.targets'))" />
   </Target>
-  <Import Project="..\packages\Antlr4.CodeGenerator.4.6.4\build\Antlr4.CodeGenerator.targets" Condition="Exists('..\packages\Antlr4.CodeGenerator.4.6.4\build\Antlr4.CodeGenerator.targets')" />
+  <Import Project="..\packages\Antlr4.CodeGenerator.4.6.5\build\Antlr4.CodeGenerator.targets" Condition="Exists('..\packages\Antlr4.CodeGenerator.4.6.5\build\Antlr4.CodeGenerator.targets')" />
 </Project>
