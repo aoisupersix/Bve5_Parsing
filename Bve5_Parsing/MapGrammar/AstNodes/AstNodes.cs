@@ -18,6 +18,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     {
         public List<MapGrammarAstNodes> StatementList { get; set; }
         public string Version { get; set; }
+        public string Encoding { get; set; }
         public RootNode()
         {
             StatementList = new List<MapGrammarAstNodes>();
