@@ -1,16 +1,17 @@
-<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
-    <FileUpgradeFlags>40</FileUpgradeFlags>
-    <OldToolsVersion>15.0</OldToolsVersion>
-    <UpgradeBackupLocation>D:\workspace\vs\Bve5_Parsing\Backup\</UpgradeBackupLocation>
     <ApplicationIcon />
-    <OutputType>Exe</OutputType>
+    <OutputType>Library</OutputType>
     <StartupObject />
+    <AssemblyName>Bve5_Parsing</AssemblyName>
   </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="Antlr4" Version="4.6.5" />
   </ItemGroup>
+
   <ItemGroup>
     <Antlr4 Update="MapGrammar\ANTLR_SyntaxDefinitions\MapGrammarLexer.g4">
       <CustomToolNamespace>Bve5_Parsing.MapGrammar.SyntaxDefinitions</CustomToolNamespace>
@@ -25,4 +26,5 @@
       <CustomToolNamespace>Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions</CustomToolNamespace>
     </Antlr4>
   </ItemGroup>
+
 </Project>

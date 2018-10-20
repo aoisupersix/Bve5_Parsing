@@ -1,9 +1,9 @@
 language: csharp
+solution: Bve5_Parsing.sln
+mono: none
+dotnet: 2.0.0
+
 script:
-  - xbuild /p:Configuration=Debug Bve5_Parsing.sln
-before_install:
-  - sudo apt-get install nunit-console
-before_script:
-  - nuget restore Bve5_Parsing.sln
-after_script:
-  - nunit-console Bve5_ParsingTests/bin/Debug/Bve5_ParsingTests.dll
+  - dotnet restore
+  - dotnet msbuild
+  - dotnet test Bve5_ParsingTests/Bve5_ParsingTests.csproj

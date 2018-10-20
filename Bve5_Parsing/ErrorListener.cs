@@ -1,4 +1,5 @@
 ﻿using Antlr4.Runtime;
+using System;
 
 namespace Bve5_Parsing
 {
@@ -11,7 +12,7 @@ namespace Bve5_Parsing
     {
         public override void SyntaxError(IRecognizer recognizer, IToken offendingSymbol, int line, int charPositionInLine, string msg, RecognitionException e)
         {
-            base.SyntaxError(recognizer, offendingSymbol, line, charPositionInLine, msg, e);
+            Console.Error.WriteLine(msg);
         }
     }
 }
