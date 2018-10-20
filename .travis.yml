@@ -1,2 +1,9 @@
 language: csharp
-solution: Bve5_Parsing.sln
+script:
+  - xbuild /p:Configuration=Debug Bve5_Parsing.sln
+before_install:
+  - sudo apt-get install nunit-console
+before_script:
+  - nuget restore Bve5_Parsing.sln
+after_script:
+  - nunit-console Bve5_ParsingTests/bin/Debug/Bve5_ParsingTests.dll
