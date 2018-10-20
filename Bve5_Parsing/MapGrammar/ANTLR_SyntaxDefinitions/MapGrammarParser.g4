@@ -7,7 +7,7 @@ options{
 }
 
 root :
-	BVETS MAP version=NUM (COLON ENCODING?)? (statement STATE_END)* EOF
+	BVETS MAP version=NUM encoding? (statement STATE_END)* EOF
 	;
 
 statement :
@@ -279,4 +279,12 @@ string returns [string text]:
 
 string_text :
 	CHAR*
+	;
+
+encoding returns [string text]:
+	SELECT_ENCODE v=encode_string ENCODE_END? {$text = $v.text; }
+	;
+
+encode_string :
+	ENCODE_CHAR*
 	;

@@ -22,8 +22,8 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
             var node = new RootNode();
             node.Version = context.version.Text;
 
-            if (context.ENCODING() != null) {
-                node.Encoding = context.ENCODING().ToString();
+            if (context.encoding() != null) {
+                node.Encoding = context.encoding().text;
             }
 
             foreach (var state in context.statement())
