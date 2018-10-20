@@ -1,0 +1,9 @@
+language: csharp
+solution: Bve5_Parsing.sln
+mono: none
+dotnet: 2.0.0
+
+script:
+  - dotnet restore
+  - dotnet msbuild
+  - dotnet test Bve5_ParsingTests/Bve5_ParsingTests.csproj
