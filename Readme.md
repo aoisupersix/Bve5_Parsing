@@ -29,7 +29,7 @@ Bve5の構文はどのように処理されているのか？という疑問を�
 
     詳しくは、[ScenarioData.cs](/Bve5_Parsing/ScenarioGrammar/ScenarioData.cs)を参照してください。
 - #### Map File
-    - 古い構文(ex.Legacyなど)や数学関数を除くBve5.7全構文と変数に対応
+    - Bve5.7全構文と変数、一部の古い構文(Legacy構文)に対応
     - namespace: **MapGrammar**
     - 出力: **MapDataクラス**
     構文解析の結果は、MapDataクラスで返します。MapDataクラスは以下のフィールドで構成されています。
@@ -56,6 +56,7 @@ Bve5の構文はどのように処理されているのか？という疑問を�
 その他は今後作っていきます👍
 
 ## Requirements
+* [.Net Core 1.1](https://www.microsoft.com/net/download/dotnet-core/1.1)
 * [ANTLR4.Runtime(C#)](https://www.nuget.org/packages/Antlr4.Runtime/)
 
 ## Installation
@@ -93,7 +94,14 @@ Bve5_Parsing is using the following library.
 >
 > Copyright (c) 2012 Terence Parr and Sam Harwell
 
-* **ライセンス全文 :** [Licenses\ANTLR4.txt](/Licenses/ANTLR4.txt)
+* **ライセンス全文 :** [ANTLR4ライセンス全文](/Licenses/ANTLR4.txt)
+
+#### [ReadJEnc](https://github.com/hnx8/ReadJEnc)
+> The MIT License (MIT)
+>
+> Copyright (c) 2017 hnx8
+
+* **ライセンス全文 :** [ReadJEncライセンス全文](https://github.com/hnx8/ReadJEnc/blob/master/LICENSE)
 
 ## License
 The MIT License (MIT)
