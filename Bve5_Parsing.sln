@@ -5,7 +5,9 @@ VisualStudioVersion = 15.0.27703.2042
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bve5_Parsing", "Bve5_Parsing\Bve5_Parsing.csproj", "{80AD08C5-CA3C-4364-853D-DD8A8DE93B99}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bve5_ParsingTests", "Bve5_ParsingTests\Bve5_ParsingTests.csproj", "{46EF81D6-D896-4080-B966-B044A311219B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bve5_ParsingTests", "Bve5_ParsingTests\Bve5_ParsingTests.csproj", "{46EF81D6-D896-4080-B966-B044A311219B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParseSampleApp", "ParseSampleApp\ParseSampleApp.csproj", "{28B671D6-1EFD-4F2C-9E2C-B8A33E336FBA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{46EF81D6-D896-4080-B966-B044A311219B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{46EF81D6-D896-4080-B966-B044A311219B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{46EF81D6-D896-4080-B966-B044A311219B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28B671D6-1EFD-4F2C-9E2C-B8A33E336FBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28B671D6-1EFD-4F2C-9E2C-B8A33E336FBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28B671D6-1EFD-4F2C-9E2C-B8A33E336FBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28B671D6-1EFD-4F2C-9E2C-B8A33E336FBA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

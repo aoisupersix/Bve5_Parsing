@@ -6,9 +6,9 @@ using System;
 namespace Bve5_Parsing
 {
     /// <summary>
-    /// 各種構文解析器のテストを行うクラス
+    /// 各種構文解析器の動作確認が出来ます。
     /// </summary>
-    class GrammarTest
+    class ParseSampleApp
     {
         /// <summary>
         /// 構文解析のテストモード
