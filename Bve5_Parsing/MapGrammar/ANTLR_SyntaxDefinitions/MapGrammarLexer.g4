@@ -6,7 +6,7 @@ lexer grammar MapGrammarLexer;
 //ヘッダー
 BVETS : B V E T S;
 MAP : M A P;
-SELECT_ENCODE : ':' -> pushMode(ENCODING_MODE);
+ENCODING : [a-zA-Z0-9\-_]+;
 
 //インクルードディレクティブ
 INCLUDE : I N C L U D E;
@@ -158,8 +158,3 @@ QUOTE : '\'' -> pushMode(STRING_MODE) ;
 mode STRING_MODE;
 RQUOTE : '\'' -> popMode ;
 CHAR : . ;
-
-mode ENCODING_MODE;
-E_WS : [\t ]+ -> skip;
-HEADER_END : ('\r' '\n'? | '\n') -> popMode;
-ENCODE_CHAR : .;
