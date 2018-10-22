@@ -16,6 +16,7 @@
     <Version>0.6.0</Version>
     <Company />
     <Authors>aoisupersix</Authors>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
