@@ -73,7 +73,7 @@ IP_COMMENT: SECTION_COMMENT -> skip;
 INPUT_PATH_END: NEWLINE -> mode(DEFAULT_MODE);
 ASTERISK : '*' -> pushMode(WEIGHTING_MODE);
 SECTION : '|';
-FILE_PATH : ~[*|#;\r\n]*;
+FILE_PATH : ~[*|#;\r\n]+;
 
 mode WEIGHTING_MODE;
 W_WS : SECTION_WS -> skip;
