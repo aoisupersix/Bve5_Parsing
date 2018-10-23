@@ -142,6 +142,76 @@ namespace Bve5_Parsing.MapGrammar
             Arguments = new Dictionary<string, object>();
         }
 
+        /// <summary>
+        /// 構文タイプ1のインスタンスを生成します。
+        /// </summary>
+        /// <param name="distance">距離程</param>
+        /// <param name="mapElement">マップ要素</param>
+        /// <param name="function">関数名</param>
+        public SyntaxData(double distance, string mapElement, string function)
+        {
+            Arguments = new Dictionary<string, object>();
+            Distance = distance;
+            MapElement = new string[] { mapElement };
+            Function = function;
+        }
+
+        /// <summary>
+        /// 構文タイプ2のインスタンスを生成します。
+        /// </summary>
+        /// <param name="distance">距離程</param>
+        /// <param name="mapElement">マップ要素</param>
+        /// <param name="key">キー名</param>
+        /// <param name="function">関数名</param>
+        public SyntaxData(double distance, string mapElement, string key, string function)
+        {
+            Arguments = new Dictionary<string, object>();
+            Distance = distance;
+            MapElement = new string[] { mapElement };
+            Key = key;
+            Function = function;
+        }
+
+        /// <summary>
+        /// 構文タイプ3のインスタンスを生成します。
+        /// </summary>
+        /// <param name="distance">距離程</param>
+        /// <param name="mapElement">マップ要素</param>
+        /// <param name="key">キー名</param>
+        /// <param name="function">関数名</param>
+        public SyntaxData(double distance, string mapElement1, string mapElement2, string key, string function)
+        {
+            Arguments = new Dictionary<string, object>();
+            Distance = distance;
+            MapElement = new string[] { mapElement1, mapElement2 };
+            Key = key;
+            Function = function;
+        }
+
+        /// <summary>
+        /// 引数を設定します。
+        /// テストで使用します。
+        /// </summary>
+        /// <param name="key"></param>
+        /// <param name="val"></param>
+        public SyntaxData SetArg(string key, string val)
+        {
+            Arguments.Add(key, val);
+            return this;
+        }
+
+        /// <summary>
+        /// 引数を設定します。
+        /// テストで使用します。
+        /// </summary>
+        /// <param name="key"></param>
+        /// <param name="val"></param>
+        public SyntaxData SetArg(string key, double val)
+        {
+            Arguments.Add(key, val);
+            return this;
+        }
+
         #region Override
         /// <summary>
         /// 等価チェック
@@ -160,7 +230,9 @@ namespace Bve5_Parsing.MapGrammar
                 ((s.MapElement == null && MapElement == null ) || (s.MapElement != null && MapElement != null && s.MapElement.SequenceEqual(MapElement))) &&
                 s.Key == Key &&
                 s.Function == Function &&
-                s.Arguments.SequenceEqual(Arguments) //Argumentsは必ずnullではない
+                s.Arguments.Count == Arguments.Count &&
+                s.Arguments.Keys.ToArray().SequenceEqual(Arguments.Keys.ToArray()) &&
+                s.Arguments.Values.ToArray().SequenceEqual(Arguments.Values.ToArray())
                 ;
         }
 
