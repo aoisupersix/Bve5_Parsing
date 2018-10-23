@@ -8,6 +8,7 @@ Bve5_Parsing
 
 Bve5構文のC#パーサライブラリです。
 Bve5の構文はどのように処理されているのか？という疑問を解消すべく、パーサジェネレータ「ANTLR」を利用し、Bve5.7構文のパーサを実装してみました。現在、Bve5.7.6224.40815の一部構文に対応しています。
+特にイレギュラーな入力(引数の数が異なる,構文名が異なる等）に対する処理が本家ソフトウェアと比べてかなり相違があります。
 
 ## Supported Syntaxes
 - #### Scenario File
@@ -56,11 +57,11 @@ Bve5の構文はどのように処理されているのか？という疑問を�
 その他は今後作っていきます👍
 
 ## Requirements
-* [.Net Core 1.1](https://www.microsoft.com/net/download/dotnet-core/1.1)
 * [ANTLR4.Runtime(C#)](https://www.nuget.org/packages/Antlr4.Runtime/)
+* .Net Standard 2.0で実装しているため、特定のバージョン以降の.Netであれば利用できます。詳しくは[こちら](https://docs.microsoft.com/ja-jp/dotnet/standard/net-standard)を参照して下さい。
 
 ## Installation
-[dllをGithubのリリースからダウンロード](https://github.com/aoisupersix/Bve5_Parsing/releases/download/v0.5.6593.25926/Bve5_Parsing.dll)するか、このプロジェクトをビルドしてdllを入手し、各自のプロジェクトにインポートしてください。
+Nugetから[Bve5_Parsing](https://www.nuget.org/packages/Bve5_Parsing/0.6.0)をインストールするか、このプロジェクトをビルドしてdllを入手し、各自のプロジェクトにインポートしてください。
 
 ## Usage for C\# ##
 
