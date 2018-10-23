@@ -45,14 +45,36 @@ namespace Bve5_ParsingTests
             return data;
         }
 
-        [Theory(DisplayName = "ルート(ファイルヘッダ等")]
-        [ClassData(typeof(MapGrammarTestData))]
-        public void RootTest(string input, MapData result)
+        /// <summary>
+        /// Assert.NotNullとAssert.Equalを実行します。
+        /// </summary>
+        /// <param name="expected">パーサによって生成されたMapData</param>
+        /// <param name="actual">確認用</param>
+        private void Check(MapData expected, MapData actual)
         {
-            var r = ExecParse(input);
+            Assert.NotNull(expected);
+            Assert.Equal(expected, actual);
+        }
 
-            Assert.NotNull(r);
-            Assert.Equal(r, result);
+        [Fact]
+        public void RootTest()
+        {
+            Check(
+                ExecParse($@"
+BveTs Map 2.02
+"),
+                new MapData() { Version = "2.02" });
+            Check(
+                ExecParse($@"
+BveTs Map 2.02 :utf-8
+"),
+                new MapData() { Version = "2.02", Encoding = "utf-8" });
+            Check(
+                ExecParse($@"
+BveTs Map 2.02 :utf-8
+
+"),
+                new MapData() { Version = "2.02", Encoding = "utf-8" });
         }
     }
 }
