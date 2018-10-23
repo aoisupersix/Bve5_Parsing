@@ -54,7 +54,7 @@ fragment Z:('z'|'Z');
 
 mode ENCODING_MODE;
 E_WS : [\t ]+ -> skip;
-HEADER_END : ('\r' '\n'? | '\n') -> popMode;
+ENCODE_END : ('\r' '\n'? | '\n') -> popMode;
 ENCODE_CHAR : .;
 
 mode TEXT_MODE;

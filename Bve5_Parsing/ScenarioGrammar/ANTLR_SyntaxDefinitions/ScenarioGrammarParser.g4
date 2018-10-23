@@ -7,7 +7,7 @@ options{
 	tokenVocab=ScenarioGrammarLexer;
 }
 root :
-	BVETS SCENARIO VERSION ( SELECT_ENCODE encoding HEADER_END)? statement* EOF
+	BVETS SCENARIO VERSION ( SELECT_ENCODE encoding ENCODE_END?)? statement* EOF
 	;
 
 statement :
