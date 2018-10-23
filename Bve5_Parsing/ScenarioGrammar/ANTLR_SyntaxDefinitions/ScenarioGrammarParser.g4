@@ -7,18 +7,18 @@ options{
 	tokenVocab=ScenarioGrammarLexer;
 }
 root :
-	BVETS SCENARIO VERSION ( SELECT_ENCODE encoding HEADER_END)? statement* EOF
+	BVETS SCENARIO VERSION ( SELECT_ENCODE encoding ENCODE_END?)? statement* EOF
 	;
 
 statement :
-	  stateName=ROUTE EQUAL weight_path (SECTION weight_path)* NEWLINE?		#routeState
-	| stateName=VEHICLE EQUAL weight_path (SECTION weight_path)* NEWLINE?	#vehicleState
-	| stateName=TITLE EQUAL string NEWLINE?									#titleState
-	| stateName=IMAGE EQUAL string NEWLINE?									#imageState
-	| stateName=ROUTETITLE EQUAL string NEWLINE?							#routeTitleState
-	| stateName=VEHICLETITLE EQUAL string NEWLINE?							#vehicleTitleState
-	| stateName=AUTHOR EQUAL string NEWLINE?								#authorState
-	| stateName=COMMENT EQUAL string NEWLINE?								#commentState
+	  stateName=ROUTE PATH_EQUAL weight_path (SECTION weight_path)* (INPUT_PATH_END | PATH_END)?		#routeState
+	| stateName=VEHICLE PATH_EQUAL weight_path (SECTION weight_path)* (INPUT_PATH_END | PATH_END)?		#vehicleState
+	| stateName=TITLE EQUAL string INPUT_TEXT_END?														#titleState
+	| stateName=IMAGE EQUAL string INPUT_TEXT_END?														#imageState
+	| stateName=ROUTETITLE EQUAL string INPUT_TEXT_END?													#routeTitleState
+	| stateName=VEHICLETITLE EQUAL string INPUT_TEXT_END?												#vehicleTitleState
+	| stateName=AUTHOR EQUAL string INPUT_TEXT_END?														#authorState
+	| stateName=COMMENT EQUAL string INPUT_TEXT_END?													#commentState
 	;
 
 encoding returns [string text]:
@@ -30,9 +30,9 @@ encode_string :
 	;
 
 weight_path :
-	path=string (ASTERISK NUM)?
+	path=FILE_PATH (ASTERISK NUM)?
 	;
 
 string :
-	CHAR*
+	INPUT_TEXT_CHAR*
 	;

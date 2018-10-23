@@ -10,8 +10,8 @@ VERSION : '0'..'9'+ ('.' ('0'..'9')+)?;
 SELECT_ENCODE : ':' -> pushMode(ENCODING_MODE);
 
 //シナリオ情報
-ROUTE : R O U T E;
-VEHICLE : V E H I C L E;
+ROUTE : R O U T E -> pushMode(PATH_MODE);
+VEHICLE : V E H I C L E -> pushMode(PATH_MODE);
 TITLE : T I T L E;
 IMAGE : I M A G E;
 ROUTETITLE : R O U T E T I T L E;
@@ -19,9 +19,9 @@ VEHICLETITLE : V E H I C L E T I T L E;
 AUTHOR : A U T H O R;
 COMMENT : C O M M E N T;
 
-EQUAL : '=' -> pushMode(TEXT_MODE);
+EQUAL : '=' -> pushMode(INPUT_TEXT_MODE);
 
-ESCAPE_COMMENT : ('#' | ';') ~[\r\n]* -> skip;
+ESCAPE_COMMENT : SECTION_COMMENT -> skip;
 WHITESPACE : [\t \r\n]+ -> skip;
 
 //ignore case
@@ -52,20 +52,35 @@ fragment X:('x'|'X');
 fragment Y:('y'|'Y');
 fragment Z:('z'|'Z');
 
+//各構文内(主にmode)で使用する字句
+fragment NEWLINE: ('\r' '\n'? | '\n');
+fragment SECTION_WS: [\t ]+;
+fragment SECTION_COMMENT: ('#' | ';') ~[\r\n]*;
+
 mode ENCODING_MODE;
-E_WS : [\t ]+ -> skip;
-HEADER_END : ('\r' '\n'? | '\n') -> popMode;
+E_WS : SECTION_WS -> skip;
+ENCODE_END : NEWLINE -> popMode;
 ENCODE_CHAR : .;
 
-mode TEXT_MODE;
-T_COMMENT : ('#' | ';') ~[\r\n]* -> skip;
-NEWLINE : ('\r' '\n'? | '\n') -> popMode;
-T_WS : [\t ]+ -> skip;
+mode PATH_MODE;
+P_WS: SECTION_WS -> skip;
+PATH_END: NEWLINE -> popMode;
+PATH_EQUAL: '=' -> pushMode(INPUT_PATH_MODE);
+
+mode INPUT_PATH_MODE;
+IP_WS: SECTION_WS -> skip;
+IP_COMMENT: SECTION_COMMENT -> skip;
+INPUT_PATH_END: NEWLINE -> mode(DEFAULT_MODE);
 ASTERISK : '*' -> pushMode(WEIGHTING_MODE);
 SECTION : '|';
-CHAR : .;
+FILE_PATH : ~[*|#;\r\n]*;
 
 mode WEIGHTING_MODE;
-W_WS : [\t ]+ -> skip;
+W_WS : SECTION_WS -> skip;
 NUM : '0'..'9'+ ('.' ('0'..'9')+)? -> popMode;
 
+mode INPUT_TEXT_MODE;
+IT_WS : SECTION_WS -> skip;
+IT_COMMENT : SECTION_COMMENT -> skip;
+INPUT_TEXT_END : NEWLINE -> popMode;
+INPUT_TEXT_CHAR : .;
