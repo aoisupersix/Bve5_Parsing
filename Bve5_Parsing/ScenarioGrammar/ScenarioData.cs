@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace Bve5_Parsing.ScenarioGrammar
 {
@@ -7,6 +8,7 @@ namespace Bve5_Parsing.ScenarioGrammar
     /// </summary>
     public class ScenarioData
     {
+        #region プロパティ
         /// <summary>
         /// シナリオファイルのバージョン
         /// </summary>
@@ -56,12 +58,57 @@ namespace Bve5_Parsing.ScenarioGrammar
         /// シナリオの説明
         /// </summary>
         public string Comment { get; set; }
+        #endregion
 
         public ScenarioData()
         {
             Route = new List<FilePath>();
             Vehicle = new List<FilePath>();
         }
+
+        #region Override
+        /// <summary>
+        /// 等価チェック
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
+        public override bool Equals(object obj)
+        {
+            if (obj == null || this.GetType() != obj.GetType())
+                return false;
+
+            var m = (ScenarioData)obj;
+
+            return
+                m.Version == Version &&
+                m.Encoding == Encoding &&
+                m.Route.SequenceEqual(Route) &&
+                m.Vehicle.SequenceEqual(Vehicle) &&
+                m.Image == Image &&
+                m.Title == Title &&
+                m.RouteTitle == RouteTitle &&
+                m.VehicleTitle == VehicleTitle &&
+                m.Author == Author &&
+                m.Comment == Comment
+                ;
+        }
+
+        public override int GetHashCode()
+        {
+            return
+                Version.GetHashCode() ^
+                Encoding.GetHashCode() ^
+                Route.GetHashCode() ^
+                Vehicle.GetHashCode() ^
+                Image.GetHashCode() ^
+                Title.GetHashCode() ^
+                RouteTitle.GetHashCode() ^
+                VehicleTitle.GetHashCode() ^
+                Author.GetHashCode() ^
+                Comment.GetHashCode()
+                ;
+        }
+        #endregion
     }
 
     /// <summary>
