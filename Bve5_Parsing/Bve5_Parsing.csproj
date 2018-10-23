@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>0.6.0</Version>
+    <Version>0.6.1</Version>
     <PackageLicenseUrl>https://github.com/aoisupersix/Bve5_Parsing/blob/master/License.md</PackageLicenseUrl>
     <Description>BveTrainsim5.7 Syntax parsing library.
 Bve5.7構文のパーサライブラリです。</Description>
@@ -14,6 +14,8 @@ Bve5.7構文のパーサライブラリです。</Description>
     <RepositoryUrl>https://github.com/aoisupersix/Bve5_Parsing</RepositoryUrl>
     <Copyright>Copyright © 2017-2018 aoisupersix</Copyright>
     <PackageTags>parsing, bve5</PackageTags>
+    <AssemblyVersion>0.6.1.0</AssemblyVersion>
+    <FileVersion>0.6.1.0</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
