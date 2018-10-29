@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/aoisupersix/Bve5_Parsing.svg?branch=master)](https://travis-ci.org/aoisupersix/Bve5_Parsing)
+[![NuGet version](https://badge.fury.io/nu/Bve5_Parsing.svg)](https://badge.fury.io/nu/Bve5_Parsing)
 [![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](/License.md)
 
 Bve5_Parsing
@@ -61,7 +62,7 @@ Bve5の構文はどのように処理されているのか？という疑問を�
 * .Net Standard 2.0で実装しているため、特定のバージョン以降の.Netであれば利用できます。詳しくは[こちら](https://docs.microsoft.com/ja-jp/dotnet/standard/net-standard)を参照して下さい。
 
 ## Installation
-Nugetから[Bve5_Parsing](https://www.nuget.org/packages/Bve5_Parsing/0.6.0)をインストールするか、このプロジェクトをビルドしてdllを入手し、各自のプロジェクトにインポートしてください。
+Nugetから[Bve5_Parsing](https://www.nuget.org/packages/Bve5_Parsing/)をインストールするか、このプロジェクトをビルドしてdllを入手し、各自のプロジェクトにインポートしてください。
 
 ## Usage for C\# ##
 
