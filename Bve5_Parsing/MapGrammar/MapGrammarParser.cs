@@ -12,7 +12,7 @@ namespace Bve5_Parsing.MapGrammar
         /// <summary>
         /// 構文解析のエラーを取得するリスナー
         /// </summary>
-        public ParseErrorListener ErrorListener { get; set; }
+        public ParseErrorListener ErrorListener { get; set; } = new ParseErrorListener();
 
         /// <summary>
         /// マップ構文の変数管理用
@@ -25,7 +25,6 @@ namespace Bve5_Parsing.MapGrammar
         public MapGrammarParser()
         {
             Store.ClearVar(); //変数の初期化
-            ErrorListener = new ParseErrorListener();
         }
 
         /// <summary>
