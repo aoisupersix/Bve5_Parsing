@@ -17,7 +17,7 @@ namespace Bve5_Parsing.MapGrammar
         /// <summary>
         /// マップ構文の変数管理用
         /// </summary>
-        public VariableStore Store { get; set; }
+        public VariableStore Store { get; set; } = new VariableStore();
 
         /// <summary>
         /// 構文解析器を初期化します。
