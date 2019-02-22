@@ -10,6 +10,19 @@ namespace Bve5_Parsing.MapGrammar
     /// <typeparam name="T">ASTノードの種類</typeparam>
     internal abstract class AstVisitor<T>
     {
+        /// <summary>
+        /// 変数管理
+        /// </summary>
+        protected VariableStore Store;
+
+        /// <summary>
+        /// 新しいインスタンスを生成します。
+        /// </summary>
+        /// <param name="store"></param>
+        public AstVisitor(VariableStore store) {
+            Store = store;
+        }
+
         public abstract T Visit(RootNode node);
         public abstract T Visit(DistanceNode node);
         public abstract T Visit(Syntax1Node node);
@@ -64,6 +77,8 @@ namespace Bve5_Parsing.MapGrammar
         /// 現在評価中の距離程
         /// </summary>
         private double nowDistance = 0;
+
+        public EvaluateMapGrammarVisitor(VariableStore store): base(store) { }
 
         /// <summary>
         /// ルートノードの評価
@@ -190,7 +205,7 @@ namespace Bve5_Parsing.MapGrammar
         public override object Visit(VarAssignNode node)
         {
             var val = Visit(node.Value);
-            VariableStore.SetVar(node.VarName, val);
+            Store.SetVar(node.VarName, val);
             return null;    //変数宣言ステートメントは不要なので捨てる
         }
 
@@ -413,7 +428,7 @@ namespace Bve5_Parsing.MapGrammar
         /// <returns>変数に対応する値(Double)</returns>
         public override object Visit(VarNode node)
         {
-            return VariableStore.GetVar(node.Key);
+            return Store.GetVar(node.Key);
         }
 
         #endregion 数式ノードの評価
