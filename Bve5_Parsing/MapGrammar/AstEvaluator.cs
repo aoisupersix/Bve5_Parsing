@@ -1,5 +1,7 @@
 ﻿using Bve5_Parsing.MapGrammar.AstNodes;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Bve5_Parsing.MapGrammar
 {
@@ -16,11 +18,17 @@ namespace Bve5_Parsing.MapGrammar
         protected VariableStore Store;
 
         /// <summary>
+        /// エラー保持
+        /// </summary>
+        protected List<ParseError> Errors;
+
+        /// <summary>
         /// 新しいインスタンスを生成します。
         /// </summary>
         /// <param name="store"></param>
-        public AstVisitor(VariableStore store) {
+        public AstVisitor(VariableStore store, IEnumerable<ParseError> errors) {
             Store = store;
+            Errors = errors.ToList();
         }
 
         public abstract T Visit(RootNode node);
@@ -78,7 +86,7 @@ namespace Bve5_Parsing.MapGrammar
         /// </summary>
         private double nowDistance = 0;
 
-        public EvaluateMapGrammarVisitor(VariableStore store): base(store) { }
+        public EvaluateMapGrammarVisitor(VariableStore store, IEnumerable<ParseError> errors): base(store, errors) { }
 
         /// <summary>
         /// ルートノードの評価
@@ -91,7 +99,8 @@ namespace Bve5_Parsing.MapGrammar
 
             if (node.Version == null)
             {
-                // TODO: バージョンなしエラー
+                var err = new ParseError(node.Line, node.Column, "ヘッダのバージョンが存在しません。");
+                Errors.Add(err);
             }
             else
                 evaluateData.Version = node.Version.Text;

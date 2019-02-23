@@ -60,7 +60,9 @@ namespace Bve5_Parsing
 
         public override void SyntaxError(IRecognizer recognizer, IToken offendingSymbol, int line, int charPositionInLine, string msg, RecognitionException e)
         {
-            var m = GetErrorMessage(recognizer, offendingSymbol, line, charPositionInLine, (dynamic)e.GetBaseException());
+            var m = msg;
+            if (e != null)
+                m = GetErrorMessage(recognizer, offendingSymbol, line, charPositionInLine, (dynamic)e.GetBaseException());
             var error = new ParseError(line, charPositionInLine, m);
             Errors.Add(error);
         }

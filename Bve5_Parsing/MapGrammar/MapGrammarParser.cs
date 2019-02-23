@@ -45,7 +45,7 @@ namespace Bve5_Parsing.MapGrammar
             MapData value = null;
             var cst = parser.root();
             var ast = new BuildAstVisitor().VisitRoot(cst);
-            value = (MapData)new EvaluateMapGrammarVisitor(Store).Visit(ast);
+            value = (MapData)new EvaluateMapGrammarVisitor(Store, ErrorListener.Errors).Visit(ast);
 
             return value;
         }

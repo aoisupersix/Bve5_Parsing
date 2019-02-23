@@ -127,6 +127,13 @@ namespace Bve5_Parsing
                 return;
             }
 
+            Console.Error.WriteLine("Errors:###################################");
+            foreach(var error in parser.ErrorListener.Errors)
+            {
+                Console.Error.WriteLine("{0},{1}: {2}", error.Line, error.Column, error.Message);
+            }
+            Console.Error.WriteLine("##########################################");
+
             //結果の表示
             Console.WriteLine($"Version: {data.Version}");
             Console.WriteLine($"Encoding: {data.Encoding}");
