@@ -39,7 +39,7 @@ namespace Bve5_Parsing.MapGrammar
             SyntaxDefinitions.MapGrammarParser parser = new SyntaxDefinitions.MapGrammarParser(commonTokneStream);
 
             parser.AddErrorListener(ErrorListener);
-            ErrorListener.ErrorMessages.Clear();
+            ErrorListener.Errors.Clear();
             //parser.ErrorHandler = new MapGrammarErrorStrategy();
 
             MapData value = null;
