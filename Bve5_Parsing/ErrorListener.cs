@@ -63,7 +63,7 @@ namespace Bve5_Parsing
             var m = msg;
             if (e != null)
                 m = GetErrorMessage(recognizer, offendingSymbol, line, charPositionInLine, (dynamic)e.GetBaseException());
-            var error = new ParseError(line, charPositionInLine, m);
+            var error = new ParseError(ParseErrorLevel.Error, line, charPositionInLine, m);
             Errors.Add(error);
         }
     }
