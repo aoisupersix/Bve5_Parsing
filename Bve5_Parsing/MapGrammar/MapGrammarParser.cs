@@ -28,16 +28,6 @@ namespace Bve5_Parsing.MapGrammar
         }
 
         /// <summary>
-        /// 構文解析器をエラーリスナーを指定して初期化します。
-        /// </summary>
-        /// <param name="listener">エラーリスナークラス</param>
-        public MapGrammarParser(ParseErrorListener listener)
-        {
-            Store.ClearVar();
-            ErrorListener = listener;
-        }
-
-        /// <summary>
         /// 引数に与えられたMapGrammarの構文解析を行います。
         /// </summary>
         /// <param name="input">解析する文字列</param>
