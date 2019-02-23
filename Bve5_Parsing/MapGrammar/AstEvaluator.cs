@@ -88,8 +88,17 @@ namespace Bve5_Parsing.MapGrammar
         public override object Visit(RootNode node)
         {
             evaluateData = new MapData();
-            evaluateData.Version = node.Version;
-            evaluateData.Encoding = node.Encoding;
+
+            if (node.Version == null)
+            {
+                // TODO: バージョンなしエラー
+            }
+            else
+                evaluateData.Version = node.Version.Text;
+
+            if (node.Encoding != null)
+                evaluateData.Encoding = node.Encoding.text;
+
             foreach(var state in node.StatementList)
             {
                 object childData = Visit(state);
@@ -193,7 +202,13 @@ namespace Bve5_Parsing.MapGrammar
         /// <returns>null</returns>
         public override object Visit(LoadListNode node)
         {
-            evaluateData.SetListPathToString(node.MapElementName, node.Path);
+            if (node.Path == null)
+            {
+                // TODO: エラー
+            }
+            else
+                evaluateData.SetListPathToString(node.MapElementName, node.Path.text);
+
             return null;
         }
 
@@ -397,7 +412,8 @@ namespace Bve5_Parsing.MapGrammar
         /// <returns>数値(String)</returns>
         public override object Visit(NumberNode node)
         {
-            return node.Value;
+            //TODO: バリデート&例外処理
+            return double.Parse(node.Value.Text, System.Globalization.NumberStyles.AllowDecimalPoint);
         }
 
         /// <summary>
@@ -418,7 +434,7 @@ namespace Bve5_Parsing.MapGrammar
         /// <returns>文字列(String)</returns>
         public override object Visit(StringNode node)
         {
-            return node.Value;
+            return node.Value.text;
         }
 
         /// <summary>

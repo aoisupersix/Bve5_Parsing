@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using Antlr4.Runtime;
+using System.Collections.Generic;
+using static Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser;
 
 namespace Bve5_Parsing.MapGrammar.AstNodes
 {
@@ -17,8 +19,8 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     internal class RootNode : MapGrammarAstNodes
     {
         public List<MapGrammarAstNodes> StatementList { get; set; }
-        public string Version { get; set; }
-        public string Encoding { get; set; }
+        public IToken Version { get; set; }
+        public EncodingContext Encoding { get; set; }
         public RootNode()
         {
             StatementList = new List<MapGrammarAstNodes>();
@@ -71,6 +73,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     /// </summary>
     internal class Syntax3Node : MapGrammarAstNodes
     {
+        // TODO: タプルの方がいい？
         public string[] MapElementNames { get; set; }
         public MapGrammarAstNodes Key { get; set; }
         public string FunctionName { get; set; }
@@ -89,7 +92,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     internal class LoadListNode : MapGrammarAstNodes
     {
         public string MapElementName { get; set; }
-        public string Path { get; set; }
+        public StringContext Path { get; set; }
     }
 
     #endregion ステートメント AST Nodes
@@ -231,7 +234,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     /// </summary>
     internal class NumberNode : MapGrammarAstNodes
     {
-        public double Value { get; set; }
+        public IToken Value { get; set; }
     }
 
     /// <summary>
@@ -244,7 +247,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     /// </summary>
     internal class StringNode : MapGrammarAstNodes
     {
-        public string Value { get; set; }
+        public StringContext Value { get; set; }
     }
 
     /// <summary>
