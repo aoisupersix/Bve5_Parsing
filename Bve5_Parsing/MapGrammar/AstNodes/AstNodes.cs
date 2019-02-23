@@ -11,7 +11,17 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     /// <summary>
     /// AST親クラス
     /// </summary>
-	internal abstract class MapGrammarAstNodes { }
+	internal abstract class MapGrammarAstNodes
+    {
+        public int Line { get; set; }
+        public int Column { get; set; }
+
+        public MapGrammarAstNodes(int line, int column)
+        {
+            Line = line;
+            Column = column;
+        }
+    }
 
     /// <summary>
     /// ルートノード
@@ -21,7 +31,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         public List<MapGrammarAstNodes> StatementList { get; set; }
         public IToken Version { get; set; }
         public EncodingContext Encoding { get; set; }
-        public RootNode()
+        public RootNode(int line, int column): base(line, column)
         {
             StatementList = new List<MapGrammarAstNodes>();
         }
@@ -33,6 +43,8 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     internal class DistanceNode : MapGrammarAstNodes
     {
         public MapGrammarAstNodes Value { get; set; }
+
+        public DistanceNode(int line, int column) : base(line, column) { }
     }
 
     #region ステートメント AST Nodes
@@ -46,7 +58,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         public string FunctionName { get; set; }
         public Dictionary<string, MapGrammarAstNodes> Arguments { get; set; }
 
-        public Syntax1Node()
+        public Syntax1Node(int line, int column) : base(line, column)
         {
             Arguments = new Dictionary<string, MapGrammarAstNodes>();
         }
@@ -62,7 +74,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         public string FunctionName { get; set; }
         public Dictionary<string, MapGrammarAstNodes> Arguments { get; set; }
 
-        public Syntax2Node()
+        public Syntax2Node(int line, int column) : base(line, column)
         {
             Arguments = new Dictionary<string, MapGrammarAstNodes>();
         }
@@ -79,7 +91,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         public string FunctionName { get; set; }
         public Dictionary<string, MapGrammarAstNodes> Arguments { get; set; }
 
-        public Syntax3Node()
+        public Syntax3Node(int line, int column) : base(line, column)
         {
             Arguments = new Dictionary<string, MapGrammarAstNodes>();
             MapElementNames = new string[2];
@@ -93,6 +105,8 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     {
         public string MapElementName { get; set; }
         public StringContext Path { get; set; }
+
+        public LoadListNode(int line, int column) : base(line, column) { }
     }
 
     #endregion ステートメント AST Nodes
@@ -107,6 +121,8 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     {
         public string VarName { get; set; }
         public MapGrammarAstNodes Value { get; set; }
+
+        public VarAssignNode(int line, int column) : base(line, column) { }
     }
     #endregion 変数宣言 AST Nodes
 
@@ -119,32 +135,49 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     {
         public MapGrammarAstNodes Left { get; set; }
         public MapGrammarAstNodes Right { get; set; }
+
+        public InfixExpressionNode(int line, int column) : base(line, column) { }
     }
 
     /// <summary>
     /// 加算ノード
     /// </summary>
-    internal class AdditionNode : InfixExpressionNode { }
+    internal class AdditionNode : InfixExpressionNode
+    {
+        public AdditionNode(int line, int column) : base(line, column) { }
+    }
 
     /// <summary>
     /// 減算ノード
     /// </summary>
-    internal class SubtractionNode : InfixExpressionNode { }
+    internal class SubtractionNode : InfixExpressionNode
+    {
+        public SubtractionNode(int line, int column) : base(line, column) { }
+    }
 
     /// <summary>
     /// 乗算ノード
     /// </summary>
-    internal class MultiplicationNode : InfixExpressionNode { }
+    internal class MultiplicationNode : InfixExpressionNode
+    {
+        public MultiplicationNode(int line, int column) : base(line, column) { }
+    }
 
     /// <summary>
     /// 除算ノード
     /// </summary>
-    internal class DivisionNode : InfixExpressionNode { }
+    internal class DivisionNode : InfixExpressionNode
+    {
+        public DivisionNode(int line, int column) : base(line, column) { }
+    }
 
     /// <summary>
     /// 剰余算ノード
     /// </summary>
-    internal class ModuloNode : InfixExpressionNode { }
+    internal class ModuloNode : InfixExpressionNode
+    {
+        public ModuloNode(int line, int column) : base(line, column) { }
+    }
 
     /// <summary>
     /// ユーナリ演算ノード
@@ -152,6 +185,8 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     internal class UnaryNode : MapGrammarAstNodes
     {
         public MapGrammarAstNodes InnerNode { get; set; }
+
+        public UnaryNode(int line, int column) : base(line, column) { }
     }
 
     #region 数学関数ノード
@@ -162,12 +197,17 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     internal abstract class SingleArgFunctionNode : MapGrammarAstNodes
     {
         public MapGrammarAstNodes Value { get; set; }
+
+        public SingleArgFunctionNode(int line, int column) : base(line, column) { }
     }
 
     /// <summary>
     /// ABSノード
     /// </summary>
-    internal class AbsNode : SingleArgFunctionNode { }
+    internal class AbsNode : SingleArgFunctionNode
+    {
+        public AbsNode(int line, int column) : base(line, column) { }
+    }
 
     /// <summary>
     /// ATAN2ノード
@@ -176,32 +216,49 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     {
         public MapGrammarAstNodes Y { get; set; }
         public MapGrammarAstNodes X { get; set; }
+
+        public Atan2Node(int line, int column) : base(line, column) { }
     }
 
     /// <summary>
     /// CEILノード
     /// </summary>
-    internal class CeilNode : SingleArgFunctionNode { }
+    internal class CeilNode : SingleArgFunctionNode
+    {
+        public CeilNode(int line, int column) : base(line, column) { }
+    }
 
     /// <summary>
     /// COSノード
     /// </summary>
-    internal class CosNode : SingleArgFunctionNode { }
+    internal class CosNode : SingleArgFunctionNode
+    {
+        public CosNode(int line, int column) : base(line, column) { }
+    }
 
     /// <summary>
     /// EXPノード
     /// </summary>
-    internal class ExpNode : SingleArgFunctionNode { }
+    internal class ExpNode : SingleArgFunctionNode
+    {
+        public ExpNode(int line, int column) : base(line, column) { }
+    }
 
     /// <summary>
     /// FLOORノード
     /// </summary>
-    internal class FloorNode : SingleArgFunctionNode { }
+    internal class FloorNode : SingleArgFunctionNode
+    {
+        public FloorNode(int line, int column) : base(line, column) { }
+    }
 
     /// <summary>
     /// LOGノード
     /// </summary>
-    internal class LogNode : SingleArgFunctionNode { }
+    internal class LogNode : SingleArgFunctionNode
+    {
+        public LogNode(int line, int column) : base(line, column) { }
+    }
 
     /// <summary>
     /// POWノード
@@ -210,22 +267,33 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     {
         public MapGrammarAstNodes X { get; set; }
         public MapGrammarAstNodes Y { get; set; }
+
+        public PowNode(int line, int column) : base(line, column) { }
     }
 
     /// <summary>
     /// RANDノード
     /// </summary>
-    internal class RandNode : SingleArgFunctionNode { }
+    internal class RandNode : SingleArgFunctionNode
+    {
+        public RandNode(int line, int column) : base(line, column) { }
+    }
 
     /// <summary>
     /// SINノード
     /// </summary>
-    internal class SinNode : SingleArgFunctionNode { }
+    internal class SinNode : SingleArgFunctionNode
+    {
+        public SinNode(int line, int column) : base(line, column) { }
+    }
 
     /// <summary>
     /// SQRTノード
     /// </summary>
-    internal class SqrtNode : SingleArgFunctionNode { }
+    internal class SqrtNode : SingleArgFunctionNode
+    {
+        public SqrtNode(int line, int column) : base(line, column) { }
+    }
 
     #endregion 数学関数ノード
 
@@ -235,12 +303,17 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     internal class NumberNode : MapGrammarAstNodes
     {
         public IToken Value { get; set; }
+
+        public NumberNode(int line, int column) : base(line, column) { }
     }
 
     /// <summary>
     /// 距離変数ノード
     /// </summary>
-    internal class DistanceVariableNode : MapGrammarAstNodes{ }
+    internal class DistanceVariableNode : MapGrammarAstNodes
+    {
+        public DistanceVariableNode(int line, int column) : base(line, column) { }
+    }
 
     /// <summary>
     /// 文字列ノード
@@ -248,6 +321,8 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     internal class StringNode : MapGrammarAstNodes
     {
         public StringContext Value { get; set; }
+
+        public StringNode(int line, int column) : base(line, column) { }
     }
 
     /// <summary>
@@ -256,6 +331,8 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     internal class VarNode : MapGrammarAstNodes
     {
         public string Key { get; set; }
+
+        public VarNode(int line, int column) : base(line, column) { }
     }
     #endregion 数式 AST Nodes
 }
