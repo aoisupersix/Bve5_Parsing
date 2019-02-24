@@ -13,13 +13,23 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     /// </summary>
 	internal abstract class MapGrammarAstNodes
     {
-        public int Line { get; set; }
-        public int Column { get; set; }
+        public IToken Start { get; set; }
+        public IToken Stop { get; set; }
 
-        public MapGrammarAstNodes(int line, int column)
+        public MapGrammarAstNodes(IToken start, IToken stop)
         {
-            Line = line;
-            Column = column;
+            Start = start;
+            Stop = stop;
+        }
+
+        public ParseError CreateNewWarning(string msg)
+        {
+            return new ParseError(ParseErrorLevel.Warning, Start.Line, Start.Column, msg);
+        }
+
+        public ParseError CreateNewError(string msg)
+        {
+            return new ParseError(ParseErrorLevel.Error, Start.Line, Start.Column, msg);
         }
     }
 
@@ -31,7 +41,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         public List<MapGrammarAstNodes> StatementList { get; set; }
         public IToken Version { get; set; }
         public EncodingContext Encoding { get; set; }
-        public RootNode(int line, int column): base(line, column)
+        public RootNode(IToken start, IToken stop): base(start, stop)
         {
             StatementList = new List<MapGrammarAstNodes>();
         }
@@ -44,7 +54,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     {
         public MapGrammarAstNodes Value { get; set; }
 
-        public DistanceNode(int line, int column) : base(line, column) { }
+        public DistanceNode(IToken start, IToken stop): base(start, stop) { }
     }
 
     #region ステートメント AST Nodes
@@ -58,7 +68,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         public string FunctionName { get; set; }
         public Dictionary<string, MapGrammarAstNodes> Arguments { get; set; }
 
-        public Syntax1Node(int line, int column) : base(line, column)
+        public Syntax1Node(IToken start, IToken stop): base(start, stop)
         {
             Arguments = new Dictionary<string, MapGrammarAstNodes>();
         }
@@ -74,7 +84,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         public string FunctionName { get; set; }
         public Dictionary<string, MapGrammarAstNodes> Arguments { get; set; }
 
-        public Syntax2Node(int line, int column) : base(line, column)
+        public Syntax2Node(IToken start, IToken stop): base(start, stop)
         {
             Arguments = new Dictionary<string, MapGrammarAstNodes>();
         }
@@ -91,7 +101,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         public string FunctionName { get; set; }
         public Dictionary<string, MapGrammarAstNodes> Arguments { get; set; }
 
-        public Syntax3Node(int line, int column) : base(line, column)
+        public Syntax3Node(IToken start, IToken stop): base(start, stop)
         {
             Arguments = new Dictionary<string, MapGrammarAstNodes>();
             MapElementNames = new string[2];
@@ -106,7 +116,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         public string MapElementName { get; set; }
         public StringContext Path { get; set; }
 
-        public LoadListNode(int line, int column) : base(line, column) { }
+        public LoadListNode(IToken start, IToken stop): base(start, stop) { }
     }
 
     #endregion ステートメント AST Nodes
@@ -122,7 +132,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         public string VarName { get; set; }
         public MapGrammarAstNodes Value { get; set; }
 
-        public VarAssignNode(int line, int column) : base(line, column) { }
+        public VarAssignNode(IToken start, IToken stop): base(start, stop) { }
     }
     #endregion 変数宣言 AST Nodes
 
@@ -136,7 +146,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         public MapGrammarAstNodes Left { get; set; }
         public MapGrammarAstNodes Right { get; set; }
 
-        public InfixExpressionNode(int line, int column) : base(line, column) { }
+        public InfixExpressionNode(IToken start, IToken stop): base(start, stop) { }
     }
 
     /// <summary>
@@ -144,7 +154,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     /// </summary>
     internal class AdditionNode : InfixExpressionNode
     {
-        public AdditionNode(int line, int column) : base(line, column) { }
+        public AdditionNode(IToken start, IToken stop): base(start, stop) { }
     }
 
     /// <summary>
@@ -152,7 +162,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     /// </summary>
     internal class SubtractionNode : InfixExpressionNode
     {
-        public SubtractionNode(int line, int column) : base(line, column) { }
+        public SubtractionNode(IToken start, IToken stop): base(start, stop) { }
     }
 
     /// <summary>
@@ -160,7 +170,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     /// </summary>
     internal class MultiplicationNode : InfixExpressionNode
     {
-        public MultiplicationNode(int line, int column) : base(line, column) { }
+        public MultiplicationNode(IToken start, IToken stop): base(start, stop) { }
     }
 
     /// <summary>
@@ -168,7 +178,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     /// </summary>
     internal class DivisionNode : InfixExpressionNode
     {
-        public DivisionNode(int line, int column) : base(line, column) { }
+        public DivisionNode(IToken start, IToken stop): base(start, stop) { }
     }
 
     /// <summary>
@@ -176,7 +186,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     /// </summary>
     internal class ModuloNode : InfixExpressionNode
     {
-        public ModuloNode(int line, int column) : base(line, column) { }
+        public ModuloNode(IToken start, IToken stop): base(start, stop) { }
     }
 
     /// <summary>
@@ -186,7 +196,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     {
         public MapGrammarAstNodes InnerNode { get; set; }
 
-        public UnaryNode(int line, int column) : base(line, column) { }
+        public UnaryNode(IToken start, IToken stop): base(start, stop) { }
     }
 
     #region 数学関数ノード
@@ -198,7 +208,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     {
         public MapGrammarAstNodes Value { get; set; }
 
-        public SingleArgFunctionNode(int line, int column) : base(line, column) { }
+        public SingleArgFunctionNode(IToken start, IToken stop): base(start, stop) { }
     }
 
     /// <summary>
@@ -206,7 +216,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     /// </summary>
     internal class AbsNode : SingleArgFunctionNode
     {
-        public AbsNode(int line, int column) : base(line, column) { }
+        public AbsNode(IToken start, IToken stop): base(start, stop) { }
     }
 
     /// <summary>
@@ -217,7 +227,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         public MapGrammarAstNodes Y { get; set; }
         public MapGrammarAstNodes X { get; set; }
 
-        public Atan2Node(int line, int column) : base(line, column) { }
+        public Atan2Node(IToken start, IToken stop): base(start, stop) { }
     }
 
     /// <summary>
@@ -225,7 +235,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     /// </summary>
     internal class CeilNode : SingleArgFunctionNode
     {
-        public CeilNode(int line, int column) : base(line, column) { }
+        public CeilNode(IToken start, IToken stop): base(start, stop) { }
     }
 
     /// <summary>
@@ -233,7 +243,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     /// </summary>
     internal class CosNode : SingleArgFunctionNode
     {
-        public CosNode(int line, int column) : base(line, column) { }
+        public CosNode(IToken start, IToken stop): base(start, stop) { }
     }
 
     /// <summary>
@@ -241,7 +251,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     /// </summary>
     internal class ExpNode : SingleArgFunctionNode
     {
-        public ExpNode(int line, int column) : base(line, column) { }
+        public ExpNode(IToken start, IToken stop): base(start, stop) { }
     }
 
     /// <summary>
@@ -249,7 +259,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     /// </summary>
     internal class FloorNode : SingleArgFunctionNode
     {
-        public FloorNode(int line, int column) : base(line, column) { }
+        public FloorNode(IToken start, IToken stop): base(start, stop) { }
     }
 
     /// <summary>
@@ -257,7 +267,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     /// </summary>
     internal class LogNode : SingleArgFunctionNode
     {
-        public LogNode(int line, int column) : base(line, column) { }
+        public LogNode(IToken start, IToken stop): base(start, stop) { }
     }
 
     /// <summary>
@@ -268,7 +278,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         public MapGrammarAstNodes X { get; set; }
         public MapGrammarAstNodes Y { get; set; }
 
-        public PowNode(int line, int column) : base(line, column) { }
+        public PowNode(IToken start, IToken stop): base(start, stop) { }
     }
 
     /// <summary>
@@ -276,7 +286,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     /// </summary>
     internal class RandNode : SingleArgFunctionNode
     {
-        public RandNode(int line, int column) : base(line, column) { }
+        public RandNode(IToken start, IToken stop): base(start, stop) { }
     }
 
     /// <summary>
@@ -284,7 +294,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     /// </summary>
     internal class SinNode : SingleArgFunctionNode
     {
-        public SinNode(int line, int column) : base(line, column) { }
+        public SinNode(IToken start, IToken stop): base(start, stop) { }
     }
 
     /// <summary>
@@ -292,7 +302,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     /// </summary>
     internal class SqrtNode : SingleArgFunctionNode
     {
-        public SqrtNode(int line, int column) : base(line, column) { }
+        public SqrtNode(IToken start, IToken stop): base(start, stop) { }
     }
 
     #endregion 数学関数ノード
@@ -304,7 +314,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     {
         public IToken Value { get; set; }
 
-        public NumberNode(int line, int column) : base(line, column) { }
+        public NumberNode(IToken start, IToken stop): base(start, stop) { }
     }
 
     /// <summary>
@@ -312,7 +322,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     /// </summary>
     internal class DistanceVariableNode : MapGrammarAstNodes
     {
-        public DistanceVariableNode(int line, int column) : base(line, column) { }
+        public DistanceVariableNode(IToken start, IToken stop): base(start, stop) { }
     }
 
     /// <summary>
@@ -322,7 +332,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     {
         public StringContext Value { get; set; }
 
-        public StringNode(int line, int column) : base(line, column) { }
+        public StringNode(IToken start, IToken stop): base(start, stop) { }
     }
 
     /// <summary>
@@ -332,7 +342,8 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     {
         public string Key { get; set; }
 
-        public VarNode(int line, int column) : base(line, column) { }
+        public VarNode(IToken start, IToken stop) : base(start, stop) { }
+
     }
     #endregion 数式 AST Nodes
 }

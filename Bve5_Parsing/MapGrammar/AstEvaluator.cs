@@ -105,7 +105,7 @@ namespace Bve5_Parsing.MapGrammar
             {
                 evaluateData.Version = node.Version.Text;
                 if (node.Version.Text != "2.02")
-                    Errors.Add(new ParseError(ParseErrorLevel.Warning, node.Line, node.Column, $"バージョン：\"{node.Version.Text}\"はBve5_Parsingではサポートしていないバージョンです。"));
+                    Errors.Add(node.CreateNewWarning($"バージョン：\"{node.Version.Text}\"はBve5_Parsingではサポートしていないバージョンです。"));
             }
 
             if (node.Encoding != null)
