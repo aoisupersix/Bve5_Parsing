@@ -29,6 +29,7 @@ namespace Bve5_Parsing.MapGrammar
         /// <returns>変数の値</returns>
         public object GetVar(string key)
         {
+            // TODO: 本家仕様を確認する。変数がない場合は0だっけ？
             if (Vars.ContainsKey(key))     /*変数が登録されてる*/
                 return Vars[key];
             else                           /*変数が登録されていない*/

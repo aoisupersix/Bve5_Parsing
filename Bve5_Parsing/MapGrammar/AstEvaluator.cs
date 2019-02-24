@@ -215,9 +215,7 @@ namespace Bve5_Parsing.MapGrammar
         public override object Visit(LoadListNode node)
         {
             if (node.Path == null)
-            {
-                // TODO: エラー
-            }
+                Errors.Add(node.CreateNewError("ファイルパスが指定されていません。"));
             else
                 evaluateData.SetListPathToString(node.MapElementName, node.Path.text);
 
@@ -233,7 +231,7 @@ namespace Bve5_Parsing.MapGrammar
         {
             var val = Visit(node.Value);
             Store.SetVar(node.VarName, val);
-            return null;    //変数宣言ステートメントは不要なので捨てる
+            return null;
         }
 
         #region 数式ノードの評価
@@ -245,10 +243,12 @@ namespace Bve5_Parsing.MapGrammar
         /// <returns>演算後の数値(Double)、もしくは文字列(String)</returns>
         public override object Visit(AdditionNode node)
         {
-            if (Visit(node.Left).GetType() == typeof(string) || Visit(node.Right).GetType() == typeof(string))
-                return Visit(node.Left).ToString() + Visit(node.Right).ToString(); //文字列の結合
+            var left = Visit(node.Left);
+            var right = Visit(node.Right);
+            if (left.GetType() == typeof(string) || right.GetType() == typeof(string))
+                return left.ToString() + right.ToString(); //文字列の結合
 
-            return Convert.ToDouble(Visit(node.Left)) + Convert.ToDouble(Visit(node.Right));
+            return Convert.ToDouble(left) + Convert.ToDouble(right);
 
         }
 
@@ -259,7 +259,17 @@ namespace Bve5_Parsing.MapGrammar
         /// <returns>演算後の数値(Double)</returns>
         public override object Visit(SubtractionNode node)
         {
-            return Convert.ToDouble(Visit(node.Left)) - Convert.ToDouble(Visit(node.Right));
+            var left = Visit(node.Left);
+            var right = Visit(node.Right);
+            if (left == null || right == null)
+                return null;
+            if (left.GetType() == typeof(string) || right.GetType() == typeof(string))
+            {
+                Errors.Add(node.CreateNewError($"'{left.ToString()} - {right.ToString()}'は有効な式ではありません。"));
+                return null;
+            }
+
+            return Convert.ToDouble(left) - Convert.ToDouble(right);
         }
 
         /// <summary>
@@ -269,7 +279,17 @@ namespace Bve5_Parsing.MapGrammar
         /// <returns>演算後の数値(Double)</returns>
         public override object Visit(MultiplicationNode node)
         {
-            return Convert.ToDouble(Visit(node.Left)) * Convert.ToDouble(Visit(node.Right));
+            var left = Visit(node.Left);
+            var right = Visit(node.Right);
+            if (left == null || right == null)
+                return null;
+            if (left.GetType() == typeof(string) || right.GetType() == typeof(string))
+            {
+                Errors.Add(node.CreateNewError($"'{left.ToString()} * {right.ToString()}'は有効な式ではありません。"));
+                return null;
+            }
+
+            return Convert.ToDouble(left) * Convert.ToDouble(right);
         }
 
         /// <summary>
@@ -279,7 +299,18 @@ namespace Bve5_Parsing.MapGrammar
         /// <returns>演算後の数値(Double)</returns>
         public override object Visit(DivisionNode node)
         {
-            return Convert.ToDouble(Visit(node.Left)) / Convert.ToDouble(Visit(node.Right));
+            var left = Visit(node.Left);
+            var right = Visit(node.Right);
+            if (left == null || right == null)
+                return null;
+            if (left.GetType() == typeof(string) || right.GetType() == typeof(string))
+            {
+                Errors.Add(node.CreateNewError($"'{left.ToString()} / {right.ToString()}'は有効な式ではありません。"));
+                return null;
+            }
+
+            //TODO: 0除算対策
+            return Convert.ToDouble(left) / Convert.ToDouble(right);
         }
 
         /// <summary>
@@ -424,7 +455,6 @@ namespace Bve5_Parsing.MapGrammar
         /// <returns>数値(String)</returns>
         public override object Visit(NumberNode node)
         {
-            //TODO: バリデート&例外処理
             return double.Parse(node.Value.Text, System.Globalization.NumberStyles.AllowDecimalPoint);
         }
 
