@@ -1,7 +1,7 @@
 ﻿using Bve5_Parsing.MapGrammar;
 using Bve5_Parsing.ScenarioGrammar;
 using System;
-
+using System.Linq;
 
 namespace Bve5_Parsing
 {
@@ -128,7 +128,7 @@ namespace Bve5_Parsing
             }
 
             Console.Error.WriteLine("Errors:###################################");
-            foreach(var error in parser.ParserErrors)
+            foreach(var error in parser.ParserErrors.OrderBy(e => e.Line).ThenBy(e => e.Column))
             {
                 Console.Error.WriteLine("[{0}:{1}] {2}: {3}", error.Line, error.Column, error.ErrorLevel, error.Message);
             }
