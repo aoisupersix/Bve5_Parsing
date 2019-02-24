@@ -1,5 +1,7 @@
 ﻿using Bve5_Parsing.MapGrammar.AstNodes;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Bve5_Parsing.MapGrammar
 {
@@ -16,11 +18,17 @@ namespace Bve5_Parsing.MapGrammar
         protected VariableStore Store;
 
         /// <summary>
+        /// エラー保持
+        /// </summary>
+        protected ICollection<ParseError> Errors;
+
+        /// <summary>
         /// 新しいインスタンスを生成します。
         /// </summary>
         /// <param name="store"></param>
-        public AstVisitor(VariableStore store) {
+        public AstVisitor(VariableStore store, ICollection<ParseError> errors) {
             Store = store;
+            Errors = errors;
         }
 
         public abstract T Visit(RootNode node);
@@ -78,7 +86,7 @@ namespace Bve5_Parsing.MapGrammar
         /// </summary>
         private double nowDistance = 0;
 
-        public EvaluateMapGrammarVisitor(VariableStore store): base(store) { }
+        public EvaluateMapGrammarVisitor(VariableStore store, ICollection<ParseError> errors): base(store, errors) { }
 
         /// <summary>
         /// ルートノードの評価
@@ -88,8 +96,21 @@ namespace Bve5_Parsing.MapGrammar
         public override object Visit(RootNode node)
         {
             evaluateData = new MapData();
-            evaluateData.Version = node.Version;
-            evaluateData.Encoding = node.Encoding;
+
+            if (node.Version == null)
+            {
+
+            }
+            else
+            {
+                evaluateData.Version = node.Version.Text;
+                if (node.Version.Text != "2.02")
+                    Errors.Add(node.CreateNewWarning($"バージョン：\"{node.Version.Text}\"はBve5_Parsingではサポートしていないバージョンです。"));
+            }
+
+            if (node.Encoding != null)
+                evaluateData.Encoding = node.Encoding.text;
+
             foreach(var state in node.StatementList)
             {
                 object childData = Visit(state);
@@ -193,7 +214,11 @@ namespace Bve5_Parsing.MapGrammar
         /// <returns>null</returns>
         public override object Visit(LoadListNode node)
         {
-            evaluateData.SetListPathToString(node.MapElementName, node.Path);
+            if (node.Path == null)
+                Errors.Add(node.CreateNewError("ファイルパスが指定されていません。"));
+            else
+                evaluateData.SetListPathToString(node.MapElementName, node.Path.text);
+
             return null;
         }
 
@@ -206,7 +231,7 @@ namespace Bve5_Parsing.MapGrammar
         {
             var val = Visit(node.Value);
             Store.SetVar(node.VarName, val);
-            return null;    //変数宣言ステートメントは不要なので捨てる
+            return null;
         }
 
         #region 数式ノードの評価
@@ -218,10 +243,12 @@ namespace Bve5_Parsing.MapGrammar
         /// <returns>演算後の数値(Double)、もしくは文字列(String)</returns>
         public override object Visit(AdditionNode node)
         {
-            if (Visit(node.Left).GetType() == typeof(string) || Visit(node.Right).GetType() == typeof(string))
-                return Visit(node.Left).ToString() + Visit(node.Right).ToString(); //文字列の結合
+            var left = Visit(node.Left);
+            var right = Visit(node.Right);
+            if (left.GetType() == typeof(string) || right.GetType() == typeof(string))
+                return left.ToString() + right.ToString(); //文字列の結合
 
-            return Convert.ToDouble(Visit(node.Left)) + Convert.ToDouble(Visit(node.Right));
+            return Convert.ToDouble(left) + Convert.ToDouble(right);
 
         }
 
@@ -232,7 +259,17 @@ namespace Bve5_Parsing.MapGrammar
         /// <returns>演算後の数値(Double)</returns>
         public override object Visit(SubtractionNode node)
         {
-            return Convert.ToDouble(Visit(node.Left)) - Convert.ToDouble(Visit(node.Right));
+            var left = Visit(node.Left);
+            var right = Visit(node.Right);
+            if (left == null || right == null)
+                return null;
+            if (left.GetType() == typeof(string) || right.GetType() == typeof(string))
+            {
+                Errors.Add(node.CreateNewError($"'{left.ToString()} - {right.ToString()}'は有効な式ではありません。"));
+                return null;
+            }
+
+            return Convert.ToDouble(left) - Convert.ToDouble(right);
         }
 
         /// <summary>
@@ -242,7 +279,17 @@ namespace Bve5_Parsing.MapGrammar
         /// <returns>演算後の数値(Double)</returns>
         public override object Visit(MultiplicationNode node)
         {
-            return Convert.ToDouble(Visit(node.Left)) * Convert.ToDouble(Visit(node.Right));
+            var left = Visit(node.Left);
+            var right = Visit(node.Right);
+            if (left == null || right == null)
+                return null;
+            if (left.GetType() == typeof(string) || right.GetType() == typeof(string))
+            {
+                Errors.Add(node.CreateNewError($"'{left.ToString()} * {right.ToString()}'は有効な式ではありません。"));
+                return null;
+            }
+
+            return Convert.ToDouble(left) * Convert.ToDouble(right);
         }
 
         /// <summary>
@@ -252,7 +299,18 @@ namespace Bve5_Parsing.MapGrammar
         /// <returns>演算後の数値(Double)</returns>
         public override object Visit(DivisionNode node)
         {
-            return Convert.ToDouble(Visit(node.Left)) / Convert.ToDouble(Visit(node.Right));
+            var left = Visit(node.Left);
+            var right = Visit(node.Right);
+            if (left == null || right == null)
+                return null;
+            if (left.GetType() == typeof(string) || right.GetType() == typeof(string))
+            {
+                Errors.Add(node.CreateNewError($"'{left.ToString()} / {right.ToString()}'は有効な式ではありません。"));
+                return null;
+            }
+
+            //TODO: 0除算対策
+            return Convert.ToDouble(left) / Convert.ToDouble(right);
         }
 
         /// <summary>
@@ -262,6 +320,14 @@ namespace Bve5_Parsing.MapGrammar
         /// <returns>演算後の数値(Double)</returns>
         public override object Visit(UnaryNode node)
         {
+            var inner = Visit(node.InnerNode);
+            if (inner == null)
+                return null;
+            if (inner.GetType() == typeof(string))
+            {
+                Errors.Add(node.CreateNewError($"'- {inner.ToString()}'は有効な式ではありません。"));
+                return null;
+            }
             return -Convert.ToDouble(Visit(node.InnerNode));
         }
 
@@ -272,7 +338,17 @@ namespace Bve5_Parsing.MapGrammar
         /// <returns>演算後の数値(Double)</returns>
         public override object Visit(ModuloNode node)
         {
-            return Convert.ToDouble(Visit(node.Left)) % Convert.ToDouble(Visit(node.Right));
+            var left = Visit(node.Left);
+            var right = Visit(node.Right);
+            if (left == null || right == null)
+                return null;
+            if (left.GetType() == typeof(string) || right.GetType() == typeof(string))
+            {
+                Errors.Add(node.CreateNewError($"'{left.ToString()} % {right.ToString()}'は有効な式ではありません。"));
+                return null;
+            }
+
+            return Convert.ToDouble(left) % Convert.ToDouble(right);
         }
 
         /// <summary>
@@ -282,7 +358,15 @@ namespace Bve5_Parsing.MapGrammar
         /// <returns>演算後の数値(Double)</returns>
         public override object Visit(AbsNode node)
         {
-            return Math.Abs(Convert.ToDouble(Visit(node.Value)));
+            var value = Visit(node.Value);
+            if (value == null)
+                return null;
+            if (value.GetType() == typeof(string))
+            {
+                Errors.Add(node.CreateNewError($"'abs({value.ToString()})'は有効な式ではありません。"));
+                return null;
+            }
+            return Math.Abs(Convert.ToDouble(value));
         }
 
         /// <summary>
@@ -292,7 +376,17 @@ namespace Bve5_Parsing.MapGrammar
         /// <returns>演算後の数値(Double)</returns>
         public override object Visit(Atan2Node node)
         {
-            return Math.Atan2(Convert.ToDouble(Visit(node.X)), Convert.ToDouble(Visit(node.X)));
+            var y = Visit(node.Y);
+            var x = Visit(node.X);
+            if (y == null || x == null)
+                return null;
+            if (y.GetType() == typeof(string) || x.GetType() == typeof(string))
+            {
+                Errors.Add(node.CreateNewError($"'atan2({y.ToString()}, {x.ToString()})'は有効な式ではありません。"));
+                return null;
+            }
+
+            return Math.Atan2(Convert.ToDouble(y), Convert.ToDouble(x));
         }
 
         /// <summary>
@@ -302,7 +396,15 @@ namespace Bve5_Parsing.MapGrammar
         /// <returns>演算後の数値(Double)</returns>
         public override object Visit(CeilNode node)
         {
-            return Math.Ceiling(Convert.ToDouble(Visit(node.Value)));
+            var value = Visit(node.Value);
+            if (value == null)
+                return null;
+            if (value.GetType() == typeof(string))
+            {
+                Errors.Add(node.CreateNewError($"'ceil({value.ToString()})'は有効な式ではありません。"));
+                return null;
+            }
+            return Math.Ceiling(Convert.ToDouble(value));
         }
 
         /// <summary>
@@ -312,7 +414,15 @@ namespace Bve5_Parsing.MapGrammar
         /// <returns>演算後の数値(Double)</returns>
         public override object Visit(CosNode node)
         {
-            return Math.Cos(Convert.ToDouble(Visit(node.Value)));
+            var value = Visit(node.Value);
+            if (value == null)
+                return null;
+            if (value.GetType() == typeof(string))
+            {
+                Errors.Add(node.CreateNewError($"'cos({value.ToString()})'は有効な式ではありません。"));
+                return null;
+            }
+            return Math.Cos(Convert.ToDouble(value));
         }
 
         /// <summary>
@@ -322,7 +432,15 @@ namespace Bve5_Parsing.MapGrammar
         /// <returns>演算後の数値(Double)</returns>
         public override object Visit(ExpNode node)
         {
-            return Math.Exp(Convert.ToDouble(Visit(node.Value)));
+            var value = Visit(node.Value);
+            if (value == null)
+                return null;
+            if (value.GetType() == typeof(string))
+            {
+                Errors.Add(node.CreateNewError($"'exp({value.ToString()})'は有効な式ではありません。"));
+                return null;
+            }
+            return Math.Exp(Convert.ToDouble(value));
         }
 
         /// <summary>
@@ -332,7 +450,15 @@ namespace Bve5_Parsing.MapGrammar
         /// <returns>演算後の数値(Double)</returns>
         public override object Visit(FloorNode node)
         {
-            return Math.Floor(Convert.ToDouble(Visit(node.Value)));
+            var value = Visit(node.Value);
+            if (value == null)
+                return null;
+            if (value.GetType() == typeof(string))
+            {
+                Errors.Add(node.CreateNewError($"'floor({value.ToString()})'は有効な式ではありません。"));
+                return null;
+            }
+            return Math.Floor(Convert.ToDouble(value));
         }
 
         /// <summary>
@@ -342,7 +468,15 @@ namespace Bve5_Parsing.MapGrammar
         /// <returns>演算後の数値(Double)</returns>
         public override object Visit(LogNode node)
         {
-            return Math.Log(Convert.ToDouble(Visit(node.Value)));
+            var value = Visit(node.Value);
+            if (value == null)
+                return null;
+            if (value.GetType() == typeof(string))
+            {
+                Errors.Add(node.CreateNewError($"'log({value.ToString()})'は有効な式ではありません。"));
+                return null;
+            }
+            return Math.Log(Convert.ToDouble(value));
         }
 
         /// <summary>
@@ -352,7 +486,16 @@ namespace Bve5_Parsing.MapGrammar
         /// <returns>演算後の数値(Double)</returns>
         public override object Visit(PowNode node)
         {
-            return Math.Pow(Convert.ToDouble(Visit(node.X)), Convert.ToDouble(Visit(node.Y)));
+            var x = Visit(node.X);
+            var y = Visit(node.Y);
+            if (x == null || y == null)
+                return null;
+            if (x.GetType() == typeof(string) || y.GetType() == typeof(string))
+            {
+                Errors.Add(node.CreateNewError($"'pow({x.ToString()}, {y.ToString()})'は有効な式ではありません。"));
+                return null;
+            }
+            return Math.Pow(Convert.ToDouble(x), Convert.ToDouble(y));
         }
 
         /// <summary>
@@ -362,12 +505,18 @@ namespace Bve5_Parsing.MapGrammar
         /// <returns>演算後の数値(Double)</returns>
         public override object Visit(RandNode node)
         {
-            System.Random random = new System.Random();
-            if (node.Value == null)
+            Random random = new Random();
+
+            var value = Visit(node.Value);
+            if (value == null)
                 return random.NextDouble();
+            if (value.GetType() == typeof(string))
+            {
+                Errors.Add(node.CreateNewError($"'rand({value.ToString()})'は有効な式ではありません。"));
+                return null;
+            }
 
-
-            return random.Next(Convert.ToInt32(Visit(node.Value)));
+            return random.Next(Convert.ToInt32(value));
         }
 
         /// <summary>
@@ -377,7 +526,15 @@ namespace Bve5_Parsing.MapGrammar
         /// <returns>演算後の数値(Double)</returns>
         public override object Visit(SinNode node)
         {
-            return Math.Sin(Convert.ToDouble(Visit(node.Value)));
+            var value = Visit(node.Value);
+            if (value == null)
+                return null;
+            if (value.GetType() == typeof(string))
+            {
+                Errors.Add(node.CreateNewError($"'sin({value.ToString()})'は有効な式ではありません。"));
+                return null;
+            }
+            return Math.Sin(Convert.ToDouble(value));
         }
 
         /// <summary>
@@ -387,7 +544,15 @@ namespace Bve5_Parsing.MapGrammar
         /// <returns>演算後の数値(Double)</returns>
         public override object Visit(SqrtNode node)
         {
-            return Math.Sqrt(Convert.ToDouble(Visit(node.Value)));
+            var value = Visit(node.Value);
+            if (value == null)
+                return null;
+            if (value.GetType() == typeof(string))
+            {
+                Errors.Add(node.CreateNewError($"'sqrt({value.ToString()})'は有効な式ではありません。"));
+                return null;
+            }
+            return Math.Sqrt(Convert.ToDouble(value));
         }
 
         /// <summary>
@@ -397,7 +562,7 @@ namespace Bve5_Parsing.MapGrammar
         /// <returns>数値(String)</returns>
         public override object Visit(NumberNode node)
         {
-            return node.Value;
+            return double.Parse(node.Value.Text, System.Globalization.NumberStyles.AllowDecimalPoint);
         }
 
         /// <summary>
@@ -418,7 +583,7 @@ namespace Bve5_Parsing.MapGrammar
         /// <returns>文字列(String)</returns>
         public override object Visit(StringNode node)
         {
-            return node.Value;
+            return node.Value.text;
         }
 
         /// <summary>

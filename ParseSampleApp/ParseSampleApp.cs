@@ -1,7 +1,7 @@
 ﻿using Bve5_Parsing.MapGrammar;
 using Bve5_Parsing.ScenarioGrammar;
 using System;
-
+using System.Linq;
 
 namespace Bve5_Parsing
 {
@@ -117,15 +117,14 @@ namespace Bve5_Parsing
 
             MapGrammarParser parser = new MapGrammarParser();
             MapData data = null;
-            try
+            data = parser.Parse(input);
+
+            Console.Error.WriteLine("Errors:###################################");
+            foreach(var error in parser.ParserErrors.OrderBy(e => e.Line).ThenBy(e => e.Column))
             {
-                data = parser.Parse(input);
+                Console.Error.WriteLine("[{0}:{1}] {2}: {3}", error.Line, error.Column, error.ErrorLevel, error.Message);
             }
-            catch(Exception e)
-            {
-                Console.Error.WriteLine(e.Message + ":" + e.StackTrace);
-                return;
-            }
+            Console.Error.WriteLine("##########################################");
 
             //結果の表示
             Console.WriteLine($"Version: {data.Version}");

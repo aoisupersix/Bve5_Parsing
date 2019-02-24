@@ -154,6 +154,8 @@ VAR : [a-zA-Z0-9_]+;
 //文字列
 QUOTE : '\'' -> pushMode(STRING_MODE) ;
 
+ERROR_CHAR : .;
+
 mode STRING_MODE;
 RQUOTE : '\'' -> popMode ;
 CHAR : . ;
