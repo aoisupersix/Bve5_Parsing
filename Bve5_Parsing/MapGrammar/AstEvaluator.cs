@@ -20,15 +20,15 @@ namespace Bve5_Parsing.MapGrammar
         /// <summary>
         /// エラー保持
         /// </summary>
-        protected List<ParseError> Errors;
+        protected ICollection<ParseError> Errors;
 
         /// <summary>
         /// 新しいインスタンスを生成します。
         /// </summary>
         /// <param name="store"></param>
-        public AstVisitor(VariableStore store, IEnumerable<ParseError> errors) {
+        public AstVisitor(VariableStore store, ICollection<ParseError> errors) {
             Store = store;
-            Errors = errors.ToList();
+            Errors = errors;
         }
 
         public abstract T Visit(RootNode node);
@@ -86,7 +86,7 @@ namespace Bve5_Parsing.MapGrammar
         /// </summary>
         private double nowDistance = 0;
 
-        public EvaluateMapGrammarVisitor(VariableStore store, IEnumerable<ParseError> errors): base(store, errors) { }
+        public EvaluateMapGrammarVisitor(VariableStore store, ICollection<ParseError> errors): base(store, errors) { }
 
         /// <summary>
         /// ルートノードの評価

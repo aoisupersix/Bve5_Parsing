@@ -28,7 +28,7 @@ namespace Bve5_Parsing
         /// <summary>
         /// パースエラーメッセージ
         /// </summary>
-        public List<ParseError> Errors { get; }
+        public ICollection<ParseError> Errors { get; }
         #endregion
 
         #region エラーメッセージ生成
@@ -53,9 +53,9 @@ namespace Bve5_Parsing
             Errors = new List<ParseError>();
         }
 
-        public ParseErrorListener(IEnumerable<ParseError> errors)
+        public ParseErrorListener(ICollection<ParseError> errors)
         {
-            Errors = errors.ToList();
+            Errors = errors;
         }
 
         public override void SyntaxError(IRecognizer recognizer, IToken offendingSymbol, int line, int charPositionInLine, string msg, RecognitionException e)
