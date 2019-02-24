@@ -128,7 +128,7 @@ namespace Bve5_Parsing
             }
 
             Console.Error.WriteLine("Errors:###################################");
-            foreach(var error in parser.ErrorListener.Errors)
+            foreach(var error in parser.ParserErrors)
             {
                 Console.Error.WriteLine("[{0}:{1}] {2}: {3}", error.Line, error.Column, error.ErrorLevel, error.Message);
             }

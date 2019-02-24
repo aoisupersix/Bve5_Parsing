@@ -1,6 +1,7 @@
 ﻿using Antlr4.Runtime;
 using Bve5_Parsing.MapGrammar.AstNodes;
 using Bve5_Parsing.MapGrammar.SyntaxDefinitions;
+using System.Collections.Generic;
 
 namespace Bve5_Parsing.MapGrammar
 {
@@ -10,21 +11,28 @@ namespace Bve5_Parsing.MapGrammar
     public class MapGrammarParser
     {
         /// <summary>
+        /// 構文解析エラー
+        /// </summary>
+        public List<ParseError> ParserErrors { get; }
+
+        /// <summary>
         /// 構文解析のエラーを取得するリスナー
         /// </summary>
-        public ParseErrorListener ErrorListener { get; set; } = new ParseErrorListener();
+        public ParseErrorListener ErrorListener { get; set; }
 
         /// <summary>
         /// マップ構文の変数管理用
         /// </summary>
-        public VariableStore Store { get; set; } = new VariableStore();
+        public VariableStore Store { get; set; }
 
         /// <summary>
         /// 構文解析器を初期化します。
         /// </summary>
         public MapGrammarParser()
         {
-            Store.ClearVar(); //変数の初期化
+            ParserErrors = new List<ParseError>();
+            ErrorListener = new ParseErrorListener(ParserErrors);
+            Store = new VariableStore();
         }
 
         /// <summary>
@@ -33,6 +41,9 @@ namespace Bve5_Parsing.MapGrammar
         /// <param name="input">解析する文字列</param>
         public MapData Parse(string input)
         {
+            Store.ClearVar();
+            ParserErrors.Clear();
+
             AntlrInputStream inputStream = new AntlrInputStream(input);
             MapGrammarLexer lexer = new MapGrammarLexer(inputStream);
             CommonTokenStream commonTokneStream = new CommonTokenStream(lexer);
@@ -42,10 +53,9 @@ namespace Bve5_Parsing.MapGrammar
             ErrorListener.Errors.Clear();
             parser.ErrorHandler = new MapGrammarErrorStrategy();
 
-            MapData value = null;
             var cst = parser.root();
             var ast = new BuildAstVisitor().VisitRoot(cst);
-            value = (MapData)new EvaluateMapGrammarVisitor(Store, ErrorListener.Errors).Visit(ast);
+            MapData value = (MapData)new EvaluateMapGrammarVisitor(Store, ParserErrors).Visit(ast);
 
             return value;
         }
