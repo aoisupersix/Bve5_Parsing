@@ -1,4 +1,5 @@
 ﻿using Antlr4.Runtime;
+using Antlr4.Runtime.Misc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,12 +17,12 @@ namespace Bve5_Parsing
         /// <summary>
         /// InputMismatchExceptionのエラーメッセージ
         /// </summary>
-        public const string ERRMSG_INPUT_MISMATCH = "入力文字列\"{0}\"がマップ構文と一致しませんでした。";
+        public const string ERRMSG_INPUT_MISMATCH = "入力文字列{0}が予期されたマップ構文'{1}'と一致しませんでした。";
 
         /// <summary>
         /// NoViableExceptionのエラーメッセージ
         /// </summary>
-        public const string ERRMSG_NO_VIABLE = "入力文字列\"{0}\"の構文を特定できませんでした。";
+        public const string ERRMSG_NO_VIABLE = "入力文字列{0}の構文を特定できませんでした。";
         #endregion
 
         #region プロパティ
@@ -31,20 +32,54 @@ namespace Bve5_Parsing
         public ICollection<ParseError> Errors { get; }
         #endregion
 
+        protected string GetTokenDisplayName(IToken t)
+        {
+            if (t == null)
+            {
+                return "<no token>";
+            }
+            string s = t.Text;
+            if (s == null)
+            {
+                if (t.Type == TokenConstants.Eof)
+                {
+                    s = "<EOF>";
+                }
+                else
+                {
+                    s = "<" + t.Type + ">";
+                }
+            }
+            return EscapeWSAndQuote(s);
+        }
+
+        protected string EscapeWSAndQuote([NotNull] string s)
+        {
+            s = s.Replace("\n", "\\n");
+            s = s.Replace("\r", "\\r");
+            s = s.Replace("\t", "\\t");
+            return "'" + s + "'";
+        }
+
         #region エラーメッセージ生成
-        private string GetErrorMessage(IRecognizer recognizer, IToken token, int line, int charPositionInLine, InputMismatchException e)
+        protected string GetErrorMessage(IRecognizer recognizer, IToken token, InputMismatchException e)
         {
-            return string.Format(ERRMSG_INPUT_MISMATCH, token.Text);
+            return string.Format(ERRMSG_INPUT_MISMATCH, GetTokenDisplayName(token), e.GetExpectedTokens().ToString(recognizer.Vocabulary));
         }
 
-        private string GetErrorMessage(IRecognizer recognizer, IToken token, int line, int charPositionInLine, NoViableAltException e)
+        protected string GetErrorMessage(IRecognizer recognizer, IToken token, NoViableAltException e)
         {
-            return string.Format(ERRMSG_NO_VIABLE, token.Text);
+            return string.Format(ERRMSG_NO_VIABLE, GetTokenDisplayName(token));
         }
 
-        private string GetErrorMessage(IRecognizer recognizer, IToken token, int line, int charPositionInLine, LexerNoViableAltException e)
+        protected string GetErrorMessage(IRecognizer recognizer, IToken token, LexerNoViableAltException e)
         {
-            return string.Format(ERRMSG_NO_VIABLE, token.Text);
+            return string.Format(ERRMSG_NO_VIABLE, GetTokenDisplayName(token));
+        }
+
+        protected string GetErrorMessage(IRecognizer recognizer, IToken token, FailedPredicateException e)
+        {
+            return string.Format(ERRMSG_NO_VIABLE, GetTokenDisplayName(token));
         }
         #endregion
 
@@ -62,7 +97,7 @@ namespace Bve5_Parsing
         {
             var m = msg;
             if (e != null)
-                m = GetErrorMessage(recognizer, offendingSymbol, line, charPositionInLine, (dynamic)e.GetBaseException());
+                m = GetErrorMessage(recognizer, offendingSymbol, (dynamic)e.GetBaseException());
             var error = new ParseError(ParseErrorLevel.Error, line, charPositionInLine, m);
             Errors.Add(error);
         }

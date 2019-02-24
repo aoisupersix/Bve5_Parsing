@@ -40,7 +40,7 @@ namespace Bve5_Parsing.MapGrammar
 
             parser.AddErrorListener(ErrorListener);
             ErrorListener.Errors.Clear();
-            //parser.ErrorHandler = new MapGrammarErrorStrategy();
+            parser.ErrorHandler = new MapGrammarErrorStrategy();
 
             MapData value = null;
             var cst = parser.root();
