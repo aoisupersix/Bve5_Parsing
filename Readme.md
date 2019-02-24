@@ -75,18 +75,23 @@ using Bve5_Parsing.MapGrammar;
     string input; //String to be analyzed
     MapGrammarParser parser = new MapGrammarParser();
 
-    MapData returnData;
-    try{
-        returnData = parser.Parse(input);
-    }catch(Exception e){
+    var mapData = parser.Parse(input);
 
+    Console.WriteLine(mapData.Version); //マップ構文のバージョン情報を表示
+    foreach(var statement in mapData.Statements) {
+      /* 各構文情報 */
+      Console.WriteLine(statement.Distance); //構文の距離程
+      Console.WriteLine(statement.Function); //構文の関数名
     }
 ...
 ```
 
-構文が解析された場合、結果は**MapDataクラス**で返ってきます。例えば、ファイルヘッダのバージョン情報は**MapData.Version**に格納されています。
+構文が解析された場合、結果は**MapDataクラス**で返ってきます。例えば、ファイルヘッダのバージョン情報は**MapData.Version**に格納されています。また、構文解析のエラーは**MapGrammarParser.ParserErrors**に格納されています。**MapGrammarParser.ParserErrors**ではエラーの種別(警告かエラーか)やエラーとなった構文の位置、エラーメッセージが取得出来ます。独自のエラーメッセージを実装する場合は、**ParserErrorListener**を継承したカスタムクラスを実装し、**MapGrammarParser.ErrorListener**に指定して下さい。
 
-構文解析のエラーは**ErrorListenerクラス**を継承したクラスをパーサのコンストラクタの引数に指定することで取得できます。
+Bve5_Parsing.slnに含まれているParseSampleAppプロジェクトからは、コンソール上でパーサの動作を確かめることができます。Bve5_Parsingの実装例として適宜利用して下さい。
+
+## Versioning
+
 
 ## Used Librarys
 Bve5_Parsing is using the following library.
