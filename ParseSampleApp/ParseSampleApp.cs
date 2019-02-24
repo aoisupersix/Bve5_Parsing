@@ -112,8 +112,6 @@ namespace Bve5_Parsing
         /// <param name="input">構文文字列</param>
         private static void MapGrammarTest(string input)
         {
-            Console.WriteLine("====================================");
-            Console.WriteLine("MapGrammar Parser Output:");
 
             MapGrammarParser parser = new MapGrammarParser();
             MapData data = null;
@@ -125,6 +123,13 @@ namespace Bve5_Parsing
                 Console.Error.WriteLine("[{0}:{1}] {2}: {3}", error.Line, error.Column, error.ErrorLevel, error.Message);
             }
             Console.Error.WriteLine("##########################################");
+
+            // エラー内容を見やすくするために一回入力を挟む
+            Console.Write("Press any key to continue...");
+            Console.ReadLine();
+
+            Console.WriteLine("====================================");
+            Console.WriteLine("MapGrammar Parser Output:");
 
             //結果の表示
             Console.WriteLine($"Version: {data.Version}");
