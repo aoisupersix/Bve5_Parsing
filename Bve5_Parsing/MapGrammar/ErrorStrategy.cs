@@ -43,7 +43,7 @@ namespace Bve5_Parsing.MapGrammar
             IntervalSet expecting = GetExpectedTokens(recognizer);
 
             var msg = string.Format(ERRMSG_MISSING_TOKEN, GetTokenErrorDisplay(t), expecting.ToString(recognizer.Vocabulary));
-            NotifyErrorListeners(recognizer, msg, null);
+            NotifyErrorListeners(recognizer, t, msg);
         }
 
         protected override void ReportNoViableAlternative([NotNull] Parser recognizer, [NotNull] NoViableAltException e)
@@ -64,7 +64,17 @@ namespace Bve5_Parsing.MapGrammar
             IntervalSet expecting = GetExpectedTokens(recognizer);
 
             var msg = string.Format(ERRMSG_UNWANTED_TOKEN, tokenName, expecting.ToString(recognizer.Vocabulary));
-            NotifyErrorListeners(recognizer, msg, null);
+            NotifyErrorListeners(recognizer, t, msg);
+        }
+
+        protected override void NotifyErrorListeners([NotNull] Parser recognizer, string message, RecognitionException e)
+        {
+            recognizer.NotifyErrorListeners(e.OffendingToken, message, e);
+        }
+
+        protected void NotifyErrorListeners([NotNull] Parser recognizer, IToken offendingToken, string message)
+        {
+            recognizer.NotifyErrorListeners(offendingToken, message, null);
         }
         #endregion
 
