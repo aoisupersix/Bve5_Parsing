@@ -92,8 +92,6 @@ namespace Bve5_Parsing.MapGrammar
                 recognizer.Consume();
                 ttype = recognizer.InputStream.La(1);
             }
-            if (ttype == MapGrammarLexer.STATE_END)
-                recognizer.Consume();
         }
     }
 }
