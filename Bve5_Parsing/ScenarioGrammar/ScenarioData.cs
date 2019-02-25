@@ -64,6 +64,24 @@ namespace Bve5_Parsing.ScenarioGrammar
         #endregion
 
         /// <summary>
+        /// 路線ファイルのパスを追加します。
+        /// </summary>
+        /// <param name="filePath"></param>
+        protected internal void AddRoute(FilePath filePath)
+        {
+            _route.Add(filePath);
+        }
+
+        /// <summary>
+        /// 車両ファイルのパスを追加します。
+        /// </summary>
+        /// <param name="filePath"></param>
+        protected internal void AddVehicle(FilePath filePath)
+        {
+            _vehicle.Add(filePath);
+        }
+
+        /// <summary>
         /// 新しいインスタンスを生成します。
         /// </summary>
         public ScenarioData()
