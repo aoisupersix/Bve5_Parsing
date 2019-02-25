@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
 namespace Bve5_Parsing.MapGrammar
 {
@@ -7,7 +8,18 @@ namespace Bve5_Parsing.MapGrammar
     /// </summary>
     public class VariableStore
     {
-        public Dictionary<string, object> Vars { get; private set; }
+        private Dictionary<string, object> _vars;
+
+        public IReadOnlyDictionary<string, object> Vars { get; }
+
+        /// <summary>
+        /// 新しいインスタンスを生成します。
+        /// </summary>
+        public VariableStore()
+        {
+            _vars = new Dictionary<string, object>();
+            Vars = new ReadOnlyDictionary<string, object>(_vars);
+        }
 
         /// <summary>
         /// 変数を追加、もしくは上書きします。
@@ -17,9 +29,9 @@ namespace Bve5_Parsing.MapGrammar
         public void SetVar(string key, object val)
         {
             if (Vars.ContainsKey(key))
-                Vars[key] = val;
+                _vars[key] = val;
             else
-                Vars.Add(key, val);
+                _vars.Add(key, val);
         }
 
         /// <summary>
@@ -31,7 +43,7 @@ namespace Bve5_Parsing.MapGrammar
         {
             // TODO: 本家仕様を確認する。変数がない場合は0だっけ？
             if (Vars.ContainsKey(key))     /*変数が登録されてる*/
-                return Vars[key];
+                return _vars[key];
             else                           /*変数が登録されていない*/
                 return 0;
         }
@@ -41,7 +53,7 @@ namespace Bve5_Parsing.MapGrammar
         /// </summary>
         public void ClearVar()
         {
-            Vars = new Dictionary<string, object>();
+            _vars = new Dictionary<string, object>();
         }
     }
 }
