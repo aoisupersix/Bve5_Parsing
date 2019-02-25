@@ -18,6 +18,10 @@ Bve5.7構文のパーサライブラリです。</Description>
     <FileVersion>0.6.2.0</FileVersion>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="Antlr4" Version="4.6.5" />
     <PackageReference Include="Microsoft.CSharp" Version="4.5.0" />

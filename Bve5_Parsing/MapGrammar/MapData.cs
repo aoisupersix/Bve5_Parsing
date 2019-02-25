@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 
 namespace Bve5_Parsing.MapGrammar
@@ -8,6 +9,10 @@ namespace Bve5_Parsing.MapGrammar
     /// </summary>
     public class MapData
     {
+        #region フィールド
+        private List<SyntaxData> _statements;
+        #endregion
+
         #region プロパティ
         /// <summary>
         /// マップファイルのバージョン
@@ -45,9 +50,9 @@ namespace Bve5_Parsing.MapGrammar
         public string Sound3DListPath { get; set; }
 
         /// <summary>
-        /// 構文
+        /// 構文データ
         /// </summary>
-        public List<SyntaxData> Statements { get; set; }
+        public IReadOnlyCollection<SyntaxData> Statements { get; }
         #endregion
 
         /// <summary>
@@ -55,7 +60,8 @@ namespace Bve5_Parsing.MapGrammar
         /// </summary>
         public MapData()
         {
-            Statements = new List<SyntaxData>();
+            _statements = new List<SyntaxData>();
+            Statements = _statements.AsReadOnly();
         }
 
         #region Override
@@ -99,6 +105,15 @@ namespace Bve5_Parsing.MapGrammar
         #endregion
 
         /// <summary>
+        /// 構文データを追加します。
+        /// </summary>
+        /// <param name="data"></param>
+        public void AddStatement(SyntaxData data)
+        {
+            _statements.Add(data);
+        }
+
+        /// <summary>
         /// 文字列から対応するリストファイルのパスを設定する
         /// </summary>
         /// <param name="elementName">LoadListFileNodeのelementName</param>
@@ -131,15 +146,42 @@ namespace Bve5_Parsing.MapGrammar
     /// </summary>
     public class SyntaxData
     {
+        #region フィールド
+        /// <summary>
+        /// 引数
+        /// </summary>
+        private Dictionary<string, object> _arguments;
+        #endregion
+
+        /// <summary>
+        /// 距離程
+        /// </summary>
         public double Distance { get; set; }
+
+        /// <summary>
+        /// マップ要素名
+        /// </summary>
         public string[] MapElement { get; set; }
+
+        /// <summary>
+        /// キー名
+        /// </summary>
         public string Key { get; set; }
+
+        /// <summary>
+        /// 関数名
+        /// </summary>
         public string Function { get; set; }
-        public Dictionary<string, object> Arguments { get; set; }
+
+        /// <summary>
+        /// 引数
+        /// </summary>
+        public IReadOnlyDictionary<string, object> Arguments { get; }
 
         public SyntaxData()
         {
-            Arguments = new Dictionary<string, object>();
+            _arguments = new Dictionary<string, object>();
+            Arguments = new ReadOnlyDictionary<string, object>(_arguments);
         }
 
         /// <summary>
@@ -190,25 +232,29 @@ namespace Bve5_Parsing.MapGrammar
 
         /// <summary>
         /// 引数を設定します。
-        /// テストで使用します。
         /// </summary>
         /// <param name="key"></param>
         /// <param name="val"></param>
         public SyntaxData SetArg(string key, string val)
         {
-            Arguments.Add(key, val);
+            _arguments.Add(key, val);
             return this;
         }
 
         /// <summary>
         /// 引数を設定します。
-        /// テストで使用します。
         /// </summary>
         /// <param name="key"></param>
         /// <param name="val"></param>
         public SyntaxData SetArg(string key, double val)
         {
-            Arguments.Add(key, val);
+            _arguments.Add(key, val);
+            return this;
+        }
+
+        public SyntaxData SetArg(string key, object val)
+        {
+            _arguments.Add(key, val);
             return this;
         }
 
