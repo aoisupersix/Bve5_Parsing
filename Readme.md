@@ -106,7 +106,7 @@ Bve5_Parsing is using the following library.
 ## License
 The MIT License (MIT)
 
-Copyright(c) 2017 aoisupersix
+Copyright(c) 2017-2019 aoisupersix
 
 **[License.md](License.md)**
 
