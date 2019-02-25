@@ -17,43 +17,79 @@ namespace Bve5_Parsing.MapGrammar
         /// <summary>
         /// マップファイルのバージョン
         /// </summary>
-        public string Version { get; set; }
+        public string Version { get; protected internal set; }
 
         /// <summary>
         /// マップファイルのエンコーディング
         /// </summary>
-        public string Encoding { get; set; }
+        public string Encoding { get; protected internal set; }
 
         /// <summary>
         /// ストラクチャリストのファイルパス
         /// </summary>
-        public string StructureListPath { get; set; }
+        public string StructureListPath { get; protected internal set; }
 
         /// <summary>
         /// 停車場リストのファイルパス
         /// </summary>
-        public string StationListPath { get; set; }
+        public string StationListPath { get; protected internal set; }
 
         /// <summary>
         /// 信号リストのファイルパス
         /// </summary>
-        public string SignalListPath { get; set; }
+        public string SignalListPath { get; protected internal set; }
 
         /// <summary>
         /// 音リストのファイルパス
         /// </summary>
-        public string SoundListPath { get; set; }
+        public string SoundListPath { get; protected internal set; }
 
         /// <summary>
         /// 固定音源リストのファイルパス
         /// </summary>
-        public string Sound3DListPath { get; set; }
+        public string Sound3DListPath { get; protected internal set; }
 
         /// <summary>
         /// 構文データ
         /// </summary>
         public IReadOnlyCollection<SyntaxData> Statements { get; }
         #endregion
+
+        /// <summary>
+        /// 構文データを追加します。
+        /// </summary>
+        /// <param name="data"></param>
+        protected internal void AddStatement(SyntaxData data)
+        {
+            _statements.Add(data);
+        }
+
+        /// <summary>
+        /// 文字列から対応するリストファイルのパスを設定する
+        /// </summary>
+        /// <param name="elementName">LoadListFileNodeのelementName</param>
+        /// <param name="path">設定するファイルパス</param>
+        protected internal void SetListPathToString(string elementName, string path)
+        {
+            switch (elementName)
+            {
+                case "structure":
+                    StructureListPath = path;
+                    break;
+                case "station":
+                    StationListPath = path;
+                    break;
+                case "signal":
+                    SignalListPath = path;
+                    break;
+                case "sound":
+                    SoundListPath = path;
+                    break;
+                case "sound3d":
+                    Sound3DListPath = path;
+                    break;
+            }
+        }
 
         /// <summary>
         /// インスタンスを生成します。
@@ -103,42 +139,6 @@ namespace Bve5_Parsing.MapGrammar
                 ;
         }
         #endregion
-
-        /// <summary>
-        /// 構文データを追加します。
-        /// </summary>
-        /// <param name="data"></param>
-        public void AddStatement(SyntaxData data)
-        {
-            _statements.Add(data);
-        }
-
-        /// <summary>
-        /// 文字列から対応するリストファイルのパスを設定する
-        /// </summary>
-        /// <param name="elementName">LoadListFileNodeのelementName</param>
-        /// <param name="path">設定するファイルパス</param>
-        public void SetListPathToString(string elementName, string path)
-        {
-            switch (elementName)
-            {
-                case "structure":
-                    StructureListPath = path;
-                    break;
-                case "station":
-                    StationListPath = path;
-                    break;
-                case "signal":
-                    SignalListPath = path;
-                    break;
-                case "sound":
-                    SoundListPath = path;
-                    break;
-                case "sound3d":
-                    Sound3DListPath = path;
-                    break;
-            }
-        }
     }
 
     /// <summary>
@@ -156,22 +156,22 @@ namespace Bve5_Parsing.MapGrammar
         /// <summary>
         /// 距離程
         /// </summary>
-        public double Distance { get; set; }
+        public double Distance { get; protected internal set; }
 
         /// <summary>
         /// マップ要素名
         /// </summary>
-        public string[] MapElement { get; set; }
+        public string[] MapElement { get; protected internal set; }
 
         /// <summary>
         /// キー名
         /// </summary>
-        public string Key { get; set; }
+        public string Key { get; protected internal set; }
 
         /// <summary>
         /// 関数名
         /// </summary>
-        public string Function { get; set; }
+        public string Function { get; protected internal set; }
 
         /// <summary>
         /// 引数
@@ -252,6 +252,12 @@ namespace Bve5_Parsing.MapGrammar
             return this;
         }
 
+        /// <summary>
+        /// 引数を設定します。
+        /// </summary>
+        /// <param name="key"></param>
+        /// <param name="val"></param>
+        /// <returns></returns>
         public SyntaxData SetArg(string key, object val)
         {
             _arguments.Add(key, val);
