@@ -63,12 +63,63 @@ namespace Bve5_Parsing.ScenarioGrammar
         public string Comment { get; protected internal set; }
         #endregion
 
+        /// <summary>
+        /// 新しいインスタンスを生成します。
+        /// </summary>
         public ScenarioData()
         {
             _route = new List<FilePath>();
             _vehicle = new List<FilePath>();
             Route = _route.AsReadOnly();
             Vehicle = _vehicle.AsReadOnly();
+        }
+
+        /// <summary>
+        /// 新しいインスタンスを生成します。
+        /// </summary>
+        /// <param name="version"></param>
+        /// <param name="encoding"></param>
+        /// <param name="route"></param>
+        /// <param name="vehicle"></param>
+        /// <param name="image"></param>
+        /// <param name="title"></param>
+        /// <param name="routeTitle"></param>
+        /// <param name="vehicleTitle"></param>
+        /// <param name="author"></param>
+        /// <param name="comment"></param>
+        public ScenarioData(
+            string version = null,
+            string encoding = null,
+            IEnumerable<FilePath> route = null,
+            IEnumerable<FilePath> vehicle = null,
+            string image = null,
+            string title = null,
+            string routeTitle = null,
+            string vehicleTitle = null,
+            string author = null,
+            string comment = null)
+        {
+            Version = version;
+            Encoding = encoding;
+
+            if (route == null)
+                _route = new List<FilePath>();
+            else
+                _route = route.ToList();
+            Route = _route.AsReadOnly();
+
+            if (vehicle == null)
+                _vehicle = new List<FilePath>();
+            else
+                _vehicle = vehicle.ToList();
+            Vehicle = _vehicle.AsReadOnly();
+
+            Image = image;
+            Title = title;
+            RouteTitle = routeTitle;
+            VehicleTitle = vehicleTitle;
+            Author = author;
+            Comment = comment;
         }
 
         #region Override
