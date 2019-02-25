@@ -50,13 +50,13 @@ namespace Bve5_ParsingTests
             // メモ：エンコード指定の前後には空白は入れられないはずだが、出来てしまう
             Check(
                 ExecParse("BveTs Scenario 1.00"),
-                new ScenarioData() { Version = "1.00" });
+                new ScenarioData("1.00"));
             Check(
                 ExecParse("BveTs Scenario 1.00:shift_jis"),
-                new ScenarioData() { Version = "1.00", Encoding = "shift_jis" });
+                new ScenarioData("1.00", "shift_jis"));
             Check(
                 ExecParse("bVETS sCeNARIO 1.00:ShiFt_Jis"),
-                new ScenarioData() { Version = "1.00", Encoding = "ShiFt_Jis" });
+                new ScenarioData("1.00", "ShiFt_Jis"));
         }
         #endregion
     }

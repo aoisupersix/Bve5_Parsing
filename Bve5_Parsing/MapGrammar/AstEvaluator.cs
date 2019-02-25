@@ -115,7 +115,7 @@ namespace Bve5_Parsing.MapGrammar
             {
                 object childData = Visit(state);
                 if(childData != null)
-                    evaluateData.Statements.Add((SyntaxData)childData);
+                    evaluateData.AddStatement((SyntaxData)childData);
             }
 
             return evaluateData;
@@ -149,9 +149,9 @@ namespace Bve5_Parsing.MapGrammar
             foreach (string key in node.Arguments.Keys)
             {
                 if (node.Arguments[key] != null)
-                    returnData.Arguments.Add(key, Visit(node.Arguments[key]));
+                    returnData.SetArg(key, Visit(node.Arguments[key]));
                 else
-                    returnData.Arguments.Add(key, null);
+                    returnData.SetArg(key, null);
             }
 
             return returnData;
@@ -174,9 +174,9 @@ namespace Bve5_Parsing.MapGrammar
             foreach (string key in node.Arguments.Keys)
             {
                 if (node.Arguments[key] != null)
-                    returnData.Arguments.Add(key, Visit(node.Arguments[key]));
+                    returnData.SetArg(key, Visit(node.Arguments[key]));
                 else
-                    returnData.Arguments.Add(key, null);
+                    returnData.SetArg(key, null);
             }
 
             return returnData;
@@ -198,9 +198,9 @@ namespace Bve5_Parsing.MapGrammar
             foreach (string key in node.Arguments.Keys)
             {
                 if (node.Arguments[key] != null)
-                    returnData.Arguments.Add(key, Visit(node.Arguments[key]));
+                    returnData.SetArg(key, Visit(node.Arguments[key]));
                 else
-                    returnData.Arguments.Add(key, null);
+                    returnData.SetArg(key, null);
             }
 
             return returnData;

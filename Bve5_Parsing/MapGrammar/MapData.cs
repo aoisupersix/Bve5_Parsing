@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 
 namespace Bve5_Parsing.MapGrammar
@@ -8,54 +9,132 @@ namespace Bve5_Parsing.MapGrammar
     /// </summary>
     public class MapData
     {
+        #region フィールド
+        private List<SyntaxData> _statements;
+        #endregion
+
         #region プロパティ
         /// <summary>
         /// マップファイルのバージョン
         /// </summary>
-        public string Version { get; set; }
+        public string Version { get; protected internal set; }
 
         /// <summary>
         /// マップファイルのエンコーディング
         /// </summary>
-        public string Encoding { get; set; }
+        public string Encoding { get; protected internal set; }
 
         /// <summary>
         /// ストラクチャリストのファイルパス
         /// </summary>
-        public string StructureListPath { get; set; }
+        public string StructureListPath { get; protected internal set; }
 
         /// <summary>
         /// 停車場リストのファイルパス
         /// </summary>
-        public string StationListPath { get; set; }
+        public string StationListPath { get; protected internal set; }
 
         /// <summary>
         /// 信号リストのファイルパス
         /// </summary>
-        public string SignalListPath { get; set; }
+        public string SignalListPath { get; protected internal set; }
 
         /// <summary>
         /// 音リストのファイルパス
         /// </summary>
-        public string SoundListPath { get; set; }
+        public string SoundListPath { get; protected internal set; }
 
         /// <summary>
         /// 固定音源リストのファイルパス
         /// </summary>
-        public string Sound3DListPath { get; set; }
+        public string Sound3DListPath { get; protected internal set; }
 
         /// <summary>
-        /// 構文
+        /// 構文データ
         /// </summary>
-        public List<SyntaxData> Statements { get; set; }
+        public IReadOnlyCollection<SyntaxData> Statements { get; }
         #endregion
+
+        /// <summary>
+        /// 構文データを追加します。
+        /// </summary>
+        /// <param name="data"></param>
+        protected internal void AddStatement(SyntaxData data)
+        {
+            _statements.Add(data);
+        }
+
+        /// <summary>
+        /// 文字列から対応するリストファイルのパスを設定する
+        /// </summary>
+        /// <param name="elementName">LoadListFileNodeのelementName</param>
+        /// <param name="path">設定するファイルパス</param>
+        protected internal void SetListPathToString(string elementName, string path)
+        {
+            switch (elementName)
+            {
+                case "structure":
+                    StructureListPath = path;
+                    break;
+                case "station":
+                    StationListPath = path;
+                    break;
+                case "signal":
+                    SignalListPath = path;
+                    break;
+                case "sound":
+                    SoundListPath = path;
+                    break;
+                case "sound3d":
+                    Sound3DListPath = path;
+                    break;
+            }
+        }
 
         /// <summary>
         /// インスタンスを生成します。
         /// </summary>
         public MapData()
         {
-            Statements = new List<SyntaxData>();
+            _statements = new List<SyntaxData>();
+            Statements = _statements.AsReadOnly();
+        }
+
+        /// <summary>
+        /// 初期値を代入したインスタンスを生成します。
+        /// </summary>
+        /// <param name="version">バージョン情報</param>
+        /// <param name="encoding">エンコーディング情報</param>
+        /// <param name="strListPath">ストラクチャーリストのファイルパス</param>
+        /// <param name="staListPath">停車場リストのファイルパス</param>
+        /// <param name="sigListPath">信号リストのファイルパス</param>
+        /// <param name="souListPath">音リストのファイルパス</param>
+        /// <param name="so3ListPath">固定音源リストのファイルパス</param>
+        /// <param name="syntaxes">構文</param>
+        public MapData(
+            string version = null,
+            string encoding = null,
+            string strListPath = null,
+            string staListPath = null,
+            string sigListPath = null,
+            string souListPath = null,
+            string so3ListPath = null,
+            IEnumerable<SyntaxData> syntaxes = null
+            )
+        {
+            Version = version;
+            Encoding = encoding;
+            StructureListPath = strListPath;
+            StationListPath = staListPath;
+            SignalListPath = sigListPath;
+            SoundListPath = souListPath;
+            Sound3DListPath = so3ListPath;
+
+            if (syntaxes == null)
+                _statements = new List<SyntaxData>();
+            else
+                _statements = syntaxes.ToList();
+            Statements = _statements.AsReadOnly();
         }
 
         #region Override
@@ -97,33 +176,6 @@ namespace Bve5_Parsing.MapGrammar
                 ;
         }
         #endregion
-
-        /// <summary>
-        /// 文字列から対応するリストファイルのパスを設定する
-        /// </summary>
-        /// <param name="elementName">LoadListFileNodeのelementName</param>
-        /// <param name="path">設定するファイルパス</param>
-        public void SetListPathToString(string elementName, string path)
-        {
-            switch (elementName)
-            {
-                case "structure":
-                    StructureListPath = path;
-                    break;
-                case "station":
-                    StationListPath = path;
-                    break;
-                case "signal":
-                    SignalListPath = path;
-                    break;
-                case "sound":
-                    SoundListPath = path;
-                    break;
-                case "sound3d":
-                    Sound3DListPath = path;
-                    break;
-            }
-        }
     }
 
     /// <summary>
@@ -131,15 +183,42 @@ namespace Bve5_Parsing.MapGrammar
     /// </summary>
     public class SyntaxData
     {
-        public double Distance { get; set; }
-        public string[] MapElement { get; set; }
-        public string Key { get; set; }
-        public string Function { get; set; }
-        public Dictionary<string, object> Arguments { get; set; }
+        #region フィールド
+        /// <summary>
+        /// 引数
+        /// </summary>
+        private Dictionary<string, object> _arguments;
+        #endregion
+
+        /// <summary>
+        /// 距離程
+        /// </summary>
+        public double Distance { get; protected internal set; }
+
+        /// <summary>
+        /// マップ要素名
+        /// </summary>
+        public string[] MapElement { get; protected internal set; }
+
+        /// <summary>
+        /// キー名
+        /// </summary>
+        public string Key { get; protected internal set; }
+
+        /// <summary>
+        /// 関数名
+        /// </summary>
+        public string Function { get; protected internal set; }
+
+        /// <summary>
+        /// 引数
+        /// </summary>
+        public IReadOnlyDictionary<string, object> Arguments { get; }
 
         public SyntaxData()
         {
-            Arguments = new Dictionary<string, object>();
+            _arguments = new Dictionary<string, object>();
+            Arguments = new ReadOnlyDictionary<string, object>(_arguments);
         }
 
         /// <summary>
@@ -154,6 +233,9 @@ namespace Bve5_Parsing.MapGrammar
             Distance = distance;
             MapElement = new string[] { mapElement };
             Function = function;
+
+            _arguments = new Dictionary<string, object>();
+            Arguments = new ReadOnlyDictionary<string, object>(_arguments);
         }
 
         /// <summary>
@@ -170,6 +252,9 @@ namespace Bve5_Parsing.MapGrammar
             MapElement = new string[] { mapElement };
             Key = key;
             Function = function;
+
+            _arguments = new Dictionary<string, object>();
+            Arguments = new ReadOnlyDictionary<string, object>(_arguments);
         }
 
         /// <summary>
@@ -186,29 +271,42 @@ namespace Bve5_Parsing.MapGrammar
             MapElement = new string[] { mapElement1, mapElement2 };
             Key = key;
             Function = function;
+
+            _arguments = new Dictionary<string, object>();
+            Arguments = new ReadOnlyDictionary<string, object>(_arguments);
         }
 
         /// <summary>
         /// 引数を設定します。
-        /// テストで使用します。
         /// </summary>
         /// <param name="key"></param>
         /// <param name="val"></param>
         public SyntaxData SetArg(string key, string val)
         {
-            Arguments.Add(key, val);
+            _arguments.Add(key, val);
             return this;
         }
 
         /// <summary>
         /// 引数を設定します。
-        /// テストで使用します。
         /// </summary>
         /// <param name="key"></param>
         /// <param name="val"></param>
         public SyntaxData SetArg(string key, double val)
         {
-            Arguments.Add(key, val);
+            _arguments.Add(key, val);
+            return this;
+        }
+
+        /// <summary>
+        /// 引数を設定します。
+        /// </summary>
+        /// <param name="key"></param>
+        /// <param name="val"></param>
+        /// <returns></returns>
+        public SyntaxData SetArg(string key, object val)
+        {
+            _arguments.Add(key, val);
             return this;
         }
 

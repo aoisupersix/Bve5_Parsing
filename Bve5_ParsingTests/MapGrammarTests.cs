@@ -50,26 +50,24 @@ namespace Bve5_ParsingTests
             // メモ：エンコード指定の前後には空白は入れられないはずだが、出来てしまう
             Check(
                 ExecParse("BveTs Map 2.02"),
-                new MapData() { Version = "2.02" });
+                new MapData("2.02"));
             Check(
                 ExecParse("BveTs Map 2.02:utf-8"),
-                new MapData() { Version = "2.02", Encoding = "utf-8" });
+                new MapData("2.02", "utf-8"));
             Check(
                 ExecParse("BveTs Map 2.00:utf-8"),
-                new MapData() { Version = "2.00", Encoding = "utf-8" });
+                new MapData("2.00","utf-8"));
             Check(
                 ExecParse("BVEtS maP 2.02:UtF-8"),
-                new MapData() { Version = "2.02", Encoding = "UtF-8" });
+                new MapData("2.02", "UtF-8"));
             Check(
                 ExecParse("BveTs Map 2.02:utf-8\n0;Curve.BeginTransition();"),
-                new MapData()
-                {
-                    Version = "2.02",
-                    Encoding = "utf-8",
-                    Statements = new List<SyntaxData>() {
+                new MapData(
+                    version: "2.02", encoding: "utf-8",
+                    syntaxes: new List<SyntaxData>()
+                    {
                         new SyntaxData(0, "curve", "begintransition")
-                    }
-                });
+                    }));
         }
 
         [Fact]
@@ -78,14 +76,12 @@ namespace Bve5_ParsingTests
             // Curve.SetGauge(value)
             Check(
                 ExecParse("BveTs Map 2.02\n0;Curve.SetGauge(400);"),
-                new MapData()
-                {
-                    Version = "2.02",
-                    Statements = new List<SyntaxData>()
+                new MapData(
+                    version: "2.02",
+                    syntaxes: new List<SyntaxData>()
                     {
                         new SyntaxData(0, "curve", "setgauge").SetArg("value", 400)
-                    }
-                });
+                    }));
         }
         #endregion
     }

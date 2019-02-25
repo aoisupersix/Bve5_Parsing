@@ -10,10 +10,15 @@ namespace Bve5_Parsing.MapGrammar
     /// </summary>
     public class MapGrammarParser
     {
+        #region フィールド
+        protected List<ParseError> _parserError;
+        #endregion
+
+        #region プロパティ
         /// <summary>
         /// 構文解析エラー
         /// </summary>
-        public List<ParseError> ParserErrors { get; }
+        public IReadOnlyCollection<ParseError> ParserErrors { get; }
 
         /// <summary>
         /// 構文解析のエラーを取得するリスナー
@@ -24,14 +29,16 @@ namespace Bve5_Parsing.MapGrammar
         /// マップ構文の変数管理用
         /// </summary>
         public VariableStore Store { get; set; }
+        #endregion
 
         /// <summary>
         /// 構文解析器を初期化します。
         /// </summary>
         public MapGrammarParser()
         {
-            ParserErrors = new List<ParseError>();
-            ErrorListener = new ParseErrorListener(ParserErrors);
+            _parserError = new List<ParseError>();
+            ParserErrors = _parserError.AsReadOnly();
+            ErrorListener = new ParseErrorListener(_parserError);
             Store = new VariableStore();
         }
 
@@ -42,7 +49,7 @@ namespace Bve5_Parsing.MapGrammar
         public MapData Parse(string input)
         {
             Store.ClearVar();
-            ParserErrors.Clear();
+            _parserError.Clear();
 
             AntlrInputStream inputStream = new AntlrInputStream(input);
             MapGrammarLexer lexer = new MapGrammarLexer(inputStream);
@@ -55,7 +62,7 @@ namespace Bve5_Parsing.MapGrammar
 
             var cst = parser.root();
             var ast = new BuildAstVisitor().VisitRoot(cst);
-            MapData value = (MapData)new EvaluateMapGrammarVisitor(Store, ParserErrors).Visit(ast);
+            MapData value = (MapData)new EvaluateMapGrammarVisitor(Store, _parserError).Visit(ast);
 
             return value;
         }
