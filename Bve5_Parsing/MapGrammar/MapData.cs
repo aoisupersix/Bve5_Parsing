@@ -233,6 +233,9 @@ namespace Bve5_Parsing.MapGrammar
             Distance = distance;
             MapElement = new string[] { mapElement };
             Function = function;
+
+            _arguments = new Dictionary<string, object>();
+            Arguments = new ReadOnlyDictionary<string, object>(_arguments);
         }
 
         /// <summary>
@@ -249,6 +252,9 @@ namespace Bve5_Parsing.MapGrammar
             MapElement = new string[] { mapElement };
             Key = key;
             Function = function;
+
+            _arguments = new Dictionary<string, object>();
+            Arguments = new ReadOnlyDictionary<string, object>(_arguments);
         }
 
         /// <summary>
@@ -265,6 +271,9 @@ namespace Bve5_Parsing.MapGrammar
             MapElement = new string[] { mapElement1, mapElement2 };
             Key = key;
             Function = function;
+
+            _arguments = new Dictionary<string, object>();
+            Arguments = new ReadOnlyDictionary<string, object>(_arguments);
         }
 
         /// <summary>
