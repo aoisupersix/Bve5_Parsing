@@ -100,6 +100,43 @@ namespace Bve5_Parsing.MapGrammar
             Statements = _statements.AsReadOnly();
         }
 
+        /// <summary>
+        /// 初期値を代入したインスタンスを生成します。
+        /// </summary>
+        /// <param name="version">バージョン情報</param>
+        /// <param name="encoding">エンコーディング情報</param>
+        /// <param name="strListPath">ストラクチャーリストのファイルパス</param>
+        /// <param name="staListPath">停車場リストのファイルパス</param>
+        /// <param name="sigListPath">信号リストのファイルパス</param>
+        /// <param name="souListPath">音リストのファイルパス</param>
+        /// <param name="so3ListPath">固定音源リストのファイルパス</param>
+        /// <param name="syntaxes">構文</param>
+        public MapData(
+            string version = null,
+            string encoding = null,
+            string strListPath = null,
+            string staListPath = null,
+            string sigListPath = null,
+            string souListPath = null,
+            string so3ListPath = null,
+            IEnumerable<SyntaxData> syntaxes = null
+            )
+        {
+            Version = version;
+            Encoding = encoding;
+            StructureListPath = strListPath;
+            StationListPath = staListPath;
+            SignalListPath = sigListPath;
+            SoundListPath = souListPath;
+            Sound3DListPath = so3ListPath;
+
+            if (syntaxes == null)
+                _statements = new List<SyntaxData>();
+            else
+                _statements = syntaxes.ToList();
+            Statements = _statements.AsReadOnly();
+        }
+
         #region Override
         /// <summary>
         /// 等価チェック
