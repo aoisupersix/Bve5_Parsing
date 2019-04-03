@@ -1,6 +1,8 @@
 ﻿using Bve5_Parsing.MapGrammar.AstNodes;
+using Hnx8.ReadJEnc;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 
 namespace Bve5_Parsing.MapGrammar
@@ -84,9 +86,14 @@ namespace Bve5_Parsing.MapGrammar
         /// <summary>
         /// 現在評価中の距離程
         /// </summary>
-        private double nowDistance = 0;
+        public double NowDistance { get; protected set; } = 0;
 
         public EvaluateMapGrammarVisitor(VariableStore store, ICollection<ParseError> errors): base(store, errors) { }
+
+        public EvaluateMapGrammarVisitor(VariableStore store, ICollection<ParseError> errors, double nowDistance): base(store, errors)
+        {
+            NowDistance = nowDistance;
+        }
 
         /// <summary>
         /// ルートノードの評価
@@ -128,7 +135,7 @@ namespace Bve5_Parsing.MapGrammar
         /// <returns>null</returns>
         public override object Visit(DistanceNode node)
         {
-            nowDistance = Convert.ToDouble(Visit(node.Value));
+            NowDistance = Convert.ToDouble(Visit(node.Value));
 
             return null;
         }
@@ -142,7 +149,7 @@ namespace Bve5_Parsing.MapGrammar
         {
             SyntaxData returnData = new SyntaxData();
             //構文情報を登録する
-            returnData.Distance = nowDistance;
+            returnData.Distance = NowDistance;
             returnData.MapElement = new string[1];
             returnData.MapElement[0] = node.MapElementName;
             returnData.Function = node.FunctionName;
@@ -152,6 +159,33 @@ namespace Bve5_Parsing.MapGrammar
                     returnData.SetArg(key, Visit(node.Arguments[key]));
                 else
                     returnData.SetArg(key, null);
+            }
+
+            // TODO: Include対応
+            if (returnData.MapElement[0] == "include")
+            {
+                var path = returnData.Arguments["path"].ToString();
+                if (!File.Exists(path))
+                {
+                    // TODO: Include先ファイルが存在しない
+                }
+                var file = new FileInfo(path);
+                using (Hnx8.ReadJEnc.FileReader reader = new FileReader(file))
+                {
+                    reader.Read(file);
+                    var includeText = reader.Text;
+                    if (includeText == null)
+                    {
+                        // TODO: ファイル読み込み失敗
+                    }
+
+                    var parser = new MapGrammarParser();
+                    parser.Store = Store;
+                    var includeData = parser.ParseWithDistance(includeText, NowDistance);
+                    NowDistance = parser.MapGrammarEvaluter.NowDistance;
+                    Store = parser.Store;
+                    Errors.ToList().AddRange(parser.ParserErrors);
+                }
             }
 
             return returnData;
@@ -166,7 +200,7 @@ namespace Bve5_Parsing.MapGrammar
         {
             SyntaxData returnData = new SyntaxData();
             //構文情報を登録する
-            returnData.Distance = nowDistance;
+            returnData.Distance = NowDistance;
             returnData.MapElement = new string[1];
             returnData.MapElement[0] = node.MapElementName;
             returnData.Key = Visit(node.Key).ToString();
@@ -191,7 +225,7 @@ namespace Bve5_Parsing.MapGrammar
         {
             SyntaxData returnData = new SyntaxData();
             //構文情報を登録する
-            returnData.Distance = nowDistance;
+            returnData.Distance = NowDistance;
             returnData.MapElement = node.MapElementNames;
             returnData.Key = Visit(node.Key).ToString();
             returnData.Function = node.FunctionName;
@@ -573,7 +607,7 @@ namespace Bve5_Parsing.MapGrammar
         /// <returns>現在の距離程(Double)</returns>
         public override object Visit(DistanceVariableNode node)
         {
-            return nowDistance;
+            return NowDistance;
         }
 
         /// <summary>

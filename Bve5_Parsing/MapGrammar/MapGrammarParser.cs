@@ -29,6 +29,8 @@ namespace Bve5_Parsing.MapGrammar
         /// マップ構文の変数管理用
         /// </summary>
         public VariableStore Store { get; set; }
+
+        internal EvaluateMapGrammarVisitor MapGrammarEvaluter { get; private set; }
         #endregion
 
         /// <summary>
@@ -40,6 +42,7 @@ namespace Bve5_Parsing.MapGrammar
             ParserErrors = _parserError.AsReadOnly();
             ErrorListener = new ParseErrorListener(_parserError);
             Store = new VariableStore();
+            MapGrammarEvaluter = new EvaluateMapGrammarVisitor(Store, _parserError);
         }
 
         /// <summary>
@@ -48,8 +51,9 @@ namespace Bve5_Parsing.MapGrammar
         /// <param name="input">解析する文字列</param>
         public MapData Parse(string input)
         {
-            Store.ClearVar();
-            _parserError.Clear();
+            //Store.ClearVar();
+            //_parserError.Clear();
+            MapGrammarEvaluter = new EvaluateMapGrammarVisitor(Store, _parserError);
 
             AntlrInputStream inputStream = new AntlrInputStream(input);
             MapGrammarLexer lexer = new MapGrammarLexer(inputStream);
@@ -62,7 +66,29 @@ namespace Bve5_Parsing.MapGrammar
 
             var cst = parser.root();
             var ast = new BuildAstVisitor().VisitRoot(cst);
-            MapData value = (MapData)new EvaluateMapGrammarVisitor(Store, _parserError).Visit(ast);
+            MapData value = (MapData)MapGrammarEvaluter.Visit(ast);
+
+            return value;
+        }
+
+        public MapData ParseWithDistance(string input, double nowDistance)
+        {
+            //Store.ClearVar();
+            //_parserError.Clear();
+            MapGrammarEvaluter = new EvaluateMapGrammarVisitor(Store, _parserError, nowDistance);
+
+            AntlrInputStream inputStream = new AntlrInputStream(input);
+            MapGrammarLexer lexer = new MapGrammarLexer(inputStream);
+            CommonTokenStream commonTokneStream = new CommonTokenStream(lexer);
+            SyntaxDefinitions.MapGrammarParser parser = new SyntaxDefinitions.MapGrammarParser(commonTokneStream);
+
+            parser.AddErrorListener(ErrorListener);
+            ErrorListener.Errors.Clear();
+            parser.ErrorHandler = new MapGrammarErrorStrategy();
+
+            var cst = parser.root();
+            var ast = new BuildAstVisitor().VisitRoot(cst);
+            MapData value = (MapData)MapGrammarEvaluter.Visit(ast);
 
             return value;
         }
