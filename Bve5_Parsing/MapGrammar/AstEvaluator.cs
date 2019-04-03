@@ -4,6 +4,8 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
+using System.Text;
 
 namespace Bve5_Parsing.MapGrammar
 {
@@ -606,15 +608,24 @@ namespace Bve5_Parsing.MapGrammar
 
     public class EvaluateMapGrammarVisitorWithInclude : EvaluateMapGrammarVisitor
     {
+        [DllImport("shlwapi.dll",
+            CharSet = CharSet.Auto)]
+        private static extern IntPtr PathCombine(
+            [Out] StringBuilder lpszDest,
+            string lpszDir,
+            string lpszFile);
 
         private string dirAbsolutePath;
 
         private string GetIncludeAbsolutePath(string path)
         {
-            var dir = new Uri(dirAbsolutePath);
-            var target = new Uri(dir, path);
-
-            return target.LocalPath;
+            StringBuilder sb = new StringBuilder(2048);
+            IntPtr res = PathCombine(sb, dirAbsolutePath, path);
+            if (res == IntPtr.Zero)
+            {
+                throw new Exception("絶対パスの取得に失敗しました。");
+            }
+            return sb.ToString();
         }
 
         public EvaluateMapGrammarVisitorWithInclude(VariableStore store, string dirAbsolutePath, ICollection<ParseError> errors): base(store, errors)
@@ -654,7 +665,14 @@ namespace Bve5_Parsing.MapGrammar
                     var includeAst = parser.ParseToAst(includeText);
                     Errors.ToList().AddRange(parser.ParserErrors);
                     var evaluator = new EvaluateMapGrammarVisitor(Store, Errors);
-                    var includeData = (RootNode)evaluator.Visit(includeAst);
+                    var includeData = (MapData)evaluator.Visit(includeAst);
+
+                    // TODO: AddStatementsメソッドがほしい
+                    // TODO: ListPathの上書き
+                    foreach(var statement in includeData.Statements)
+                    {
+                        evaluateData.AddStatement(statement);
+                    }
                     NowDistance = evaluator.NowDistance;
                 }
             }
