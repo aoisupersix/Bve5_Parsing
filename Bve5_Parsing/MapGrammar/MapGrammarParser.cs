@@ -71,6 +71,23 @@ namespace Bve5_Parsing.MapGrammar
             return value;
         }
 
+        public MapGrammarAstNodes ParseToAst(string input)
+        {
+            AntlrInputStream inputStream = new AntlrInputStream(input);
+            MapGrammarLexer lexer = new MapGrammarLexer(inputStream);
+            CommonTokenStream commonTokneStream = new CommonTokenStream(lexer);
+            SyntaxDefinitions.MapGrammarParser parser = new SyntaxDefinitions.MapGrammarParser(commonTokneStream);
+
+            parser.AddErrorListener(ErrorListener);
+            ErrorListener.Errors.Clear();
+            parser.ErrorHandler = new MapGrammarErrorStrategy();
+
+            var cst = parser.root();
+            var ast = new BuildAstVisitor().VisitRoot(cst);
+
+            return ast;
+        }
+
         public MapData ParseWithDistance(string input, double nowDistance)
         {
             //Store.ClearVar();

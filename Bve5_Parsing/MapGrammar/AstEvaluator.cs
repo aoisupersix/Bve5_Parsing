@@ -12,26 +12,8 @@ namespace Bve5_Parsing.MapGrammar
     /// ASTノードの評価クラス定義
     /// </summary>
     /// <typeparam name="T">ASTノードの種類</typeparam>
-    internal abstract class AstVisitor<T>
+    public abstract class AstVisitor<T>
     {
-        /// <summary>
-        /// 変数管理
-        /// </summary>
-        protected VariableStore Store;
-
-        /// <summary>
-        /// エラー保持
-        /// </summary>
-        protected ICollection<ParseError> Errors;
-
-        /// <summary>
-        /// 新しいインスタンスを生成します。
-        /// </summary>
-        /// <param name="store"></param>
-        public AstVisitor(VariableStore store, ICollection<ParseError> errors) {
-            Store = store;
-            Errors = errors;
-        }
 
         public abstract T Visit(RootNode node);
         public abstract T Visit(DistanceNode node);
@@ -76,8 +58,18 @@ namespace Bve5_Parsing.MapGrammar
     /// <summary>
     /// ASTノードの評価手続きクラス
     /// </summary>
-    internal class EvaluateMapGrammarVisitor : AstVisitor<object>
+    public class EvaluateMapGrammarVisitor : AstVisitor<object>
     {
+        /// <summary>
+        /// 変数管理
+        /// </summary>
+        protected VariableStore Store;
+
+        /// <summary>
+        /// エラー保持
+        /// </summary>
+        protected ICollection<ParseError> Errors;
+
         /// <summary>
         /// 評価結果
         /// </summary>
@@ -88,10 +80,16 @@ namespace Bve5_Parsing.MapGrammar
         /// </summary>
         public double NowDistance { get; protected set; } = 0;
 
-        public EvaluateMapGrammarVisitor(VariableStore store, ICollection<ParseError> errors): base(store, errors) { }
-
-        public EvaluateMapGrammarVisitor(VariableStore store, ICollection<ParseError> errors, double nowDistance): base(store, errors)
+        public EvaluateMapGrammarVisitor(VariableStore store, ICollection<ParseError> errors)
         {
+            Store = store;
+            Errors = errors;
+        }
+
+        public EvaluateMapGrammarVisitor(VariableStore store, ICollection<ParseError> errors, double nowDistance)
+        {
+            Store = store;
+            Errors = errors;
             NowDistance = nowDistance;
         }
 
