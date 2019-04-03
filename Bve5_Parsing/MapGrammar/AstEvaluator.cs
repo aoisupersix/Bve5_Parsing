@@ -73,7 +73,7 @@ namespace Bve5_Parsing.MapGrammar
         /// <summary>
         /// 評価結果
         /// </summary>
-        private MapData evaluateData;
+        protected MapData evaluateData;
 
         /// <summary>
         /// 現在評価中の距離程
@@ -157,33 +157,6 @@ namespace Bve5_Parsing.MapGrammar
                     returnData.SetArg(key, Visit(node.Arguments[key]));
                 else
                     returnData.SetArg(key, null);
-            }
-
-            // TODO: Include対応
-            if (returnData.MapElement[0] == "include")
-            {
-                var path = returnData.Arguments["path"].ToString();
-                if (!File.Exists(path))
-                {
-                    // TODO: Include先ファイルが存在しない
-                }
-                var file = new FileInfo(path);
-                using (Hnx8.ReadJEnc.FileReader reader = new FileReader(file))
-                {
-                    reader.Read(file);
-                    var includeText = reader.Text;
-                    if (includeText == null)
-                    {
-                        // TODO: ファイル読み込み失敗
-                    }
-
-                    var parser = new MapGrammarParser();
-                    parser.Store = Store;
-                    var includeData = parser.ParseWithDistance(includeText, NowDistance);
-                    NowDistance = parser.MapGrammarEvaluter.NowDistance;
-                    Store = parser.Store;
-                    Errors.ToList().AddRange(parser.ParserErrors);
-                }
             }
 
             return returnData;
@@ -629,5 +602,64 @@ namespace Bve5_Parsing.MapGrammar
         }
 
         #endregion 数式ノードの評価
+    }
+
+    public class EvaluateMapGrammarVisitorWithInclude : EvaluateMapGrammarVisitor
+    {
+
+        private string dirAbsolutePath;
+
+        private string GetIncludeAbsolutePath(string path)
+        {
+            var dir = new Uri(dirAbsolutePath);
+            var target = new Uri(dir, path);
+
+            return target.LocalPath;
+        }
+
+        public EvaluateMapGrammarVisitorWithInclude(VariableStore store, string dirAbsolutePath, ICollection<ParseError> errors): base(store, errors)
+        {
+            this.dirAbsolutePath = dirAbsolutePath;
+        }
+
+        public EvaluateMapGrammarVisitorWithInclude(VariableStore store, string dirAbsolutePath, ICollection<ParseError> errors, double nowDistance): base(store, errors, nowDistance)
+        {
+            this.dirAbsolutePath = dirAbsolutePath;
+        }
+
+        public override object Visit(Syntax1Node node)
+        {
+            var returnData = (SyntaxData)base.Visit(node);
+            
+            // Include対応
+            if (returnData.MapElement[0] == "include")
+            {
+                var path = GetIncludeAbsolutePath(returnData.Arguments["path"].ToString());
+                if (!File.Exists(path))
+                {
+                    // TODO: Include先ファイルが存在しない
+                }
+                var file = new FileInfo(path);
+                using (var reader = new FileReader(file))
+                {
+                    reader.Read(file);
+                    var includeText = reader.Text;
+                    if (includeText == null)
+                    {
+                        // TODO: ファイル読み込み失敗
+                    }
+
+                    // Include先構文を評価して追加
+                    var parser = new MapGrammarParser();
+                    var includeAst = parser.ParseToAst(includeText);
+                    Errors.ToList().AddRange(parser.ParserErrors);
+                    var evaluator = new EvaluateMapGrammarVisitor(Store, Errors);
+                    var includeData = (RootNode)evaluator.Visit(includeAst);
+                    NowDistance = evaluator.NowDistance;
+                }
+            }
+
+            return returnData;
+        }
     }
 }

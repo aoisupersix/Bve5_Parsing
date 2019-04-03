@@ -51,21 +51,7 @@ namespace Bve5_Parsing.MapGrammar
         /// <param name="input">解析する文字列</param>
         public MapData Parse(string input)
         {
-            //Store.ClearVar();
-            //_parserError.Clear();
-            MapGrammarEvaluter = new EvaluateMapGrammarVisitor(Store, _parserError);
-
-            AntlrInputStream inputStream = new AntlrInputStream(input);
-            MapGrammarLexer lexer = new MapGrammarLexer(inputStream);
-            CommonTokenStream commonTokneStream = new CommonTokenStream(lexer);
-            SyntaxDefinitions.MapGrammarParser parser = new SyntaxDefinitions.MapGrammarParser(commonTokneStream);
-
-            parser.AddErrorListener(ErrorListener);
-            ErrorListener.Errors.Clear();
-            parser.ErrorHandler = new MapGrammarErrorStrategy();
-
-            var cst = parser.root();
-            var ast = new BuildAstVisitor().VisitRoot(cst);
+            var ast = ParseToAst(input);
             MapData value = (MapData)MapGrammarEvaluter.Visit(ast);
 
             return value;
@@ -86,28 +72,6 @@ namespace Bve5_Parsing.MapGrammar
             var ast = new BuildAstVisitor().VisitRoot(cst);
 
             return ast;
-        }
-
-        public MapData ParseWithDistance(string input, double nowDistance)
-        {
-            //Store.ClearVar();
-            //_parserError.Clear();
-            MapGrammarEvaluter = new EvaluateMapGrammarVisitor(Store, _parserError, nowDistance);
-
-            AntlrInputStream inputStream = new AntlrInputStream(input);
-            MapGrammarLexer lexer = new MapGrammarLexer(inputStream);
-            CommonTokenStream commonTokneStream = new CommonTokenStream(lexer);
-            SyntaxDefinitions.MapGrammarParser parser = new SyntaxDefinitions.MapGrammarParser(commonTokneStream);
-
-            parser.AddErrorListener(ErrorListener);
-            ErrorListener.Errors.Clear();
-            parser.ErrorHandler = new MapGrammarErrorStrategy();
-
-            var cst = parser.root();
-            var ast = new BuildAstVisitor().VisitRoot(cst);
-            MapData value = (MapData)MapGrammarEvaluter.Visit(ast);
-
-            return value;
         }
     }
 }
