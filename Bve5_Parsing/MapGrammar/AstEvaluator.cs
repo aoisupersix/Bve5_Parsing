@@ -606,6 +606,9 @@ namespace Bve5_Parsing.MapGrammar
         #endregion 数式ノードの評価
     }
 
+    /// <summary>
+    /// ASTノードの評価手続きクラス(Include構文対応)
+    /// </summary>
     public class EvaluateMapGrammarVisitorWithInclude : EvaluateMapGrammarVisitor
     {
         [DllImport("shlwapi.dll",
@@ -617,6 +620,11 @@ namespace Bve5_Parsing.MapGrammar
 
         private string dirAbsolutePath;
 
+        /// <summary>
+        /// Include先ファイルの絶対パスを取得します。
+        /// </summary>
+        /// <param name="path"></param>
+        /// <returns></returns>
         private string GetIncludeAbsolutePath(string path)
         {
             StringBuilder sb = new StringBuilder(2048);
@@ -628,11 +636,24 @@ namespace Bve5_Parsing.MapGrammar
             return sb.ToString();
         }
 
+        /// <summary>
+        /// 新しいインスタンスを生成します。
+        /// </summary>
+        /// <param name="store"></param>
+        /// <param name="dirAbsolutePath"></param>
+        /// <param name="errors"></param>
         public EvaluateMapGrammarVisitorWithInclude(VariableStore store, string dirAbsolutePath, ICollection<ParseError> errors): base(store, errors)
         {
             this.dirAbsolutePath = dirAbsolutePath;
         }
 
+        /// <summary>
+        /// 新しいインスタンスを生成します。
+        /// </summary>
+        /// <param name="store"></param>
+        /// <param name="dirAbsolutePath"></param>
+        /// <param name="errors"></param>
+        /// <param name="nowDistance"></param>
         public EvaluateMapGrammarVisitorWithInclude(VariableStore store, string dirAbsolutePath, ICollection<ParseError> errors, double nowDistance): base(store, errors, nowDistance)
         {
             this.dirAbsolutePath = dirAbsolutePath;
@@ -648,7 +669,8 @@ namespace Bve5_Parsing.MapGrammar
                 var path = GetIncludeAbsolutePath(returnData.Arguments["path"].ToString());
                 if (!File.Exists(path))
                 {
-                    // TODO: Include先ファイルが存在しない
+                    Errors.Add(node.CreateNewError($"指定されたファイル「{path}」は存在しません。"));
+                    return returnData;
                 }
                 var file = new FileInfo(path);
                 using (var reader = new FileReader(file))
@@ -657,7 +679,8 @@ namespace Bve5_Parsing.MapGrammar
                     var includeText = reader.Text;
                     if (includeText == null)
                     {
-                        // TODO: ファイル読み込み失敗
+                        Errors.Add(node.CreateNewError($"「{path}」の読み込みに失敗しました。"));
+                        return returnData;
                     }
 
                     // Include先構文を評価して追加
