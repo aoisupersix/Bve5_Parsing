@@ -115,7 +115,7 @@ namespace Bve5_Parsing
 
             MapGrammarParser parser = new MapGrammarParser();
             MapData data = null;
-            data = parser.ParseFromFile(@"PathToMapFile\1370T.txt", MapGrammarParser.MapGrammarParserOption.ParseIncludeSyntaxRecursively);
+            data = parser.Parse(input, MapGrammarParser.MapGrammarParserOption.ParseIncludeSyntaxRecursively);
 
             Console.Error.WriteLine("Errors:###################################");
             foreach(var error in parser.ParserErrors.OrderBy(e => e.Line).ThenBy(e => e.Column))

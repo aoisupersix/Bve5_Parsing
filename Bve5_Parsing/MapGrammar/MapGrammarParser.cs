@@ -85,6 +85,28 @@ namespace Bve5_Parsing.MapGrammar
         }
 
         /// <summary>
+        /// 引数に与えられたマップ構文文字列の構文解析と評価を行い、MapDataを生成します。
+        /// </summary>
+        /// <param name="input"></param>
+        /// <param name="dirAbsolutePath"></param>
+        /// <param name="option"></param>
+        /// <returns></returns>
+        public MapData Parse(string input, string dirAbsolutePath, MapGrammarParserOption option)
+        {
+            // Includeを再帰的にパースするか？
+            if (option.HasFlag(MapGrammarParserOption.ParseIncludeSyntaxRecursively))
+            {
+                var ast = ParseToAst(input);
+                var value = (MapData)new EvaluateMapGrammarVisitorWithInclude(Store, dirAbsolutePath, _parserError).Visit(ast);
+                return value;
+            }
+            else
+            {
+                return Parse(input, option);
+            }
+        }
+
+        /// <summary>
         /// 引数に与えられたマップ構文ファイルの構文解析と評価を行い、MapDataを生成します。
         /// </summary>
         /// <param name="filePath">解析するマップ構文のファイルパス</param>
@@ -116,17 +138,7 @@ namespace Bve5_Parsing.MapGrammar
                 reader.Read(fileInfo);
                 if (reader.Text == null)
                     throw new IOException(); // TODO
-                var ast = ParseToAst(reader.Text);
-
-                // Includeを再帰的にパースするか？
-                if (option.HasFlag(MapGrammarParserOption.ParseIncludeSyntaxRecursively))
-                {
-                    var dirPath = fileInfo.Directory.FullName;
-                    var value = (MapData)new EvaluateMapGrammarVisitorWithInclude(Store, dirPath, _parserError).Visit(ast);
-                    return value;
-                }
-                else
-                    return Parse(reader.Text);
+                return Parse(reader.Text, fileInfo.Directory.FullName, option);
             }
         }
 
