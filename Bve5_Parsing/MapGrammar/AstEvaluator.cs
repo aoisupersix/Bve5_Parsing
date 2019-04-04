@@ -687,7 +687,7 @@ namespace Bve5_Parsing.MapGrammar
                     var parser = new MapGrammarParser();
                     var includeAst = parser.ParseToAst(includeText);
                     Errors.ToList().AddRange(parser.ParserErrors);
-                    var evaluator = new EvaluateMapGrammarVisitor(Store, Errors);
+                    var evaluator = new EvaluateMapGrammarVisitorWithInclude(Store, dirAbsolutePath, Errors, NowDistance);
                     var includeData = (MapData)evaluator.Visit(includeAst);
 
                     evaluateData.AddStatements(includeData.Statements);
