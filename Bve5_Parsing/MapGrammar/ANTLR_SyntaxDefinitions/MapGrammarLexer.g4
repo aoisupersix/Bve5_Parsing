@@ -148,13 +148,15 @@ WHITESPACE : (' ' | '\t' | '\r' | '\n' )+ -> skip;
 COMMENT : ('//' | '#') ~[\r\n]* -> skip;
 
 //変数
-VAR_START : '$';
-VAR : [a-zA-Z0-9_]+;
+VAR_START : '$' -> pushMode(VAR_MODE);
 
 //文字列
-QUOTE : '\'' -> pushMode(STRING_MODE) ;
+QUOTE : '\'' -> pushMode(STRING_MODE);
 
 ERROR_CHAR : .;
+
+mode VAR_MODE;
+VAR : [a-zA-Z0-9_]+ -> popMode;
 
 mode STRING_MODE;
 RQUOTE : '\'' -> popMode ;
