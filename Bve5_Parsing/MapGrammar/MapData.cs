@@ -56,42 +56,6 @@ namespace Bve5_Parsing.MapGrammar
         #endregion
 
         /// <summary>
-        /// 構文データを追加します。
-        /// </summary>
-        /// <param name="data"></param>
-        protected internal void AddStatement(SyntaxData data)
-        {
-            _statements.Add(data);
-        }
-
-        /// <summary>
-        /// 文字列から対応するリストファイルのパスを設定する
-        /// </summary>
-        /// <param name="elementName">LoadListFileNodeのelementName</param>
-        /// <param name="path">設定するファイルパス</param>
-        protected internal void SetListPathToString(string elementName, string path)
-        {
-            switch (elementName)
-            {
-                case "structure":
-                    StructureListPath = path;
-                    break;
-                case "station":
-                    StationListPath = path;
-                    break;
-                case "signal":
-                    SignalListPath = path;
-                    break;
-                case "sound":
-                    SoundListPath = path;
-                    break;
-                case "sound3d":
-                    Sound3DListPath = path;
-                    break;
-            }
-        }
-
-        /// <summary>
         /// インスタンスを生成します。
         /// </summary>
         public MapData()
@@ -135,6 +99,42 @@ namespace Bve5_Parsing.MapGrammar
             else
                 _statements = syntaxes.ToList();
             Statements = _statements.AsReadOnly();
+        }
+
+        /// <summary>
+        /// 構文データを追加します。
+        /// </summary>
+        /// <param name="data"></param>
+        public void AddStatement(SyntaxData data)
+        {
+            _statements.Add(data);
+        }
+
+        /// <summary>
+        /// 文字列から対応するリストファイルのパスを設定する
+        /// </summary>
+        /// <param name="elementName">LoadListFileNodeのelementName</param>
+        /// <param name="path">設定するファイルパス</param>
+        public void SetListPathToString(string elementName, string path)
+        {
+            switch (elementName)
+            {
+                case "structure":
+                    StructureListPath = path;
+                    break;
+                case "station":
+                    StationListPath = path;
+                    break;
+                case "signal":
+                    SignalListPath = path;
+                    break;
+                case "sound":
+                    SoundListPath = path;
+                    break;
+                case "sound3d":
+                    Sound3DListPath = path;
+                    break;
+            }
         }
 
         #region Override
