@@ -690,12 +690,8 @@ namespace Bve5_Parsing.MapGrammar
                     var evaluator = new EvaluateMapGrammarVisitor(Store, Errors);
                     var includeData = (MapData)evaluator.Visit(includeAst);
 
-                    // TODO: AddStatementsメソッドがほしい
-                    // TODO: ListPathの上書き
-                    foreach(var statement in includeData.Statements)
-                    {
-                        evaluateData.AddStatement(statement);
-                    }
+                    evaluateData.AddStatements(includeData.Statements);
+                    evaluateData.OverwriteListPath(includeData);
                     NowDistance = evaluator.NowDistance;
                 }
             }
