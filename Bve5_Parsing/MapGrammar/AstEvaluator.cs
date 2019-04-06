@@ -4,8 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
 
 namespace Bve5_Parsing.MapGrammar
 {
@@ -611,14 +609,8 @@ namespace Bve5_Parsing.MapGrammar
     /// </summary>
     public class EvaluateMapGrammarVisitorWithInclude : EvaluateMapGrammarVisitor
     {
-        [DllImport("shlwapi.dll",
-            CharSet = CharSet.Auto)]
-        private static extern IntPtr PathCombine(
-            [Out] StringBuilder lpszDest,
-            string lpszDir,
-            string lpszFile);
 
-        private string dirAbsolutePath;
+        private readonly string dirAbsolutePath;
 
         /// <summary>
         /// Include先ファイルの絶対パスを取得します。
@@ -627,13 +619,11 @@ namespace Bve5_Parsing.MapGrammar
         /// <returns></returns>
         private string GetIncludeAbsolutePath(string path)
         {
-            StringBuilder sb = new StringBuilder(2048);
-            IntPtr res = PathCombine(sb, dirAbsolutePath, path);
-            if (res == IntPtr.Zero)
-            {
-                throw new Exception("絶対パスの取得に失敗しました。");
-            }
-            return sb.ToString();
+            if (string.IsNullOrEmpty(path))
+                return path;
+
+            var fileRelativePath = path.Replace('\\', Path.DirectorySeparatorChar).Replace('/', Path.DirectorySeparatorChar);
+            return Path.GetFullPath(Path.Combine(dirAbsolutePath, fileRelativePath));
         }
 
         /// <summary>
