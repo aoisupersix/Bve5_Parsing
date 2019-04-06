@@ -30,7 +30,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
 {{#args}}
 
         /// <summary>
-        /// 引数：{{desc}}
+        /// 引数：{{desc}}{{#opt}}（省略可能）{{/opt}}
         /// </summary>
         public object {{name}} { get; set; }
 {{/args}}

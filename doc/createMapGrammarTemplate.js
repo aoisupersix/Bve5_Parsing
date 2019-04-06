@@ -21,22 +21,18 @@ function parse(template, json, output) {
           var jsonData = JSON.parse(stripBom(data));
           jsonData.states.forEach(state => {
             // 構文種別の判定
-            switch(state.type) {
-              case 1:
-                state["syntax1"] = true;
-                state["syntax2"] = false;
-                state["syntax3"] = false;
-                break;
-              case 2:
-                state["syntax1"] = false;
-                state["syntax2"] = true;
-                state["syntax3"] = false;
-                break;
-              case 3:
-                state["syntax1"] = false;
-                state["syntax2"] = false;
-                state["syntax3"] = true;
-                break;
+            if (state.key === undefined) {
+              state["syntax1"] = true;
+              state["syntax2"] = false;
+              state["syntax3"] = false;
+            }else if(state.elem2 === undefined) {
+              state["syntax1"] = false;
+              state["syntax2"] = true;
+              state["syntax3"] = false;
+            }else {
+              state["syntax1"] = false;
+              state["syntax2"] = false;
+              state["syntax3"] = true;
             }
             if (state.args.length == 0) {
               state["noarg"] = true;

@@ -1,13 +1,83 @@
 {
   "states": [
     {
-      "type": 1,
       "elem": "Curve",
       "func": "Setgauge",
       "args": [
         {
           "name": "Value",
           "desc": "軌間 [m]",
+          "opt": false
+        }
+      ]
+    },
+    {
+      "elem": "Curve",
+      "func": "Setcenter",
+      "args": [
+        {
+          "name": "X",
+          "desc": "回転中心の x 座標 [m] (正: 曲線の内側, 負: 曲線の外側)",
+          "opt": false
+        }
+      ]
+    },
+    {
+      "elem": "Curve",
+      "func": "Setfunction",
+      "args": [
+        {
+          "name": "Id",
+          "desc": "関数番号 (0: サイン半波長逓減, 1: 直線逓減)",
+          "opt": false
+        }
+      ]
+    },
+    {
+      "elem": "Curve",
+      "func": "Begin",
+      "args": [
+        {
+          "name": "Radius",
+          "desc": "曲線半径 [m] (正: 右曲線, 負: 左曲線)",
+          "opt": false
+        },
+        {
+          "name": "Cant",
+          "desc": "カント [m]",
+          "opt": true
+        }
+      ]
+    },
+    {
+      "elem": "Curve",
+      "func": "End",
+      "args": [
+      ]
+    },
+    {
+      "elem": "Curve",
+      "func": "Interpolate",
+      "args": [
+        {
+          "name": "Radius",
+          "desc": "曲線半径 [m] (正: 右曲線, 負: 左曲線, 0: 直線)",
+          "opt": true
+        },
+        {
+          "name": "Cant",
+          "desc": "カント [m]",
+          "opt": true
+        }
+      ]
+    },
+    {
+      "elem": "Curve",
+      "func": "Change",
+      "args": [
+        {
+          "name": "Radius",
+          "desc": "曲線半径 [m] (正: 右曲線, 負: 左曲線, 0: 直線)",
           "opt": false
         }
       ]
