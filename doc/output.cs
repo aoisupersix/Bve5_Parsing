@@ -8,7 +8,7 @@ using System;
 namespace Bve5_Parsing.MapGrammar.AstNodes {
 
     /// <summary>
-    /// Curve.Setgauge();
+    /// Curve.Setgauge(Value);
     /// </summary>
     public class CurveSetgaugeNode : SyntaxNode
     {

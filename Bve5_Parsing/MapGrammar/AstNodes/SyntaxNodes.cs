@@ -3,46 +3,41 @@
  * 編集は行わないでください。
  */
 using Antlr4.Runtime;
+using System;
 
 namespace Bve5_Parsing.MapGrammar.AstNodes {
-{{#states}}
 
     /// <summary>
-    /// {{elem}}{{^syntax1}}[{{key}}]{{/syntax1}}{{#syntax3}}.{{elem2}}{{/syntax3}}.{{func}}({{#args}}{{name}}{{#opt}}?{{/opt}}{{^last}}, {{/last}}{{/args}});
+    /// Curve.Setgauge(Value);
     /// </summary>
-    public class {{elem}}{{#syntax2}}{{elem2}}_{{/syntax2}}{{func}}Node : SyntaxNode
+    public class CurveSetgaugeNode : SyntaxNode
     {
         #region Property
 
         /// <summary>
         /// マップ要素名
         /// </summary>
-        public override string ElementName => "{{elem}}";
+        public override string ElementName => "Curve";
 
         /// <summary>
         /// 関数名
         /// </summary>
-        public override string FunctionName => "{{#syntax3}}{{elem2}}_{{/syntax3}}{{func}}";
+        public override string FunctionName => "Setgauge";
         #endregion Property
 
-{{^noarg}}
         #region Args
-{{#args}}
 
         /// <summary>
-        /// 引数：{{desc}}
+        /// 引数：軌間 [m]
         /// </summary>
-        public object {{name}} { get; set; }
-{{/args}}
+        public object Value { get; set; }
         #endregion Args
-{{/noarg}}
-
+        
         /// <summary>
         /// 新しいインスタンスを生成します。
         /// </summary>
         /// <param name="start"></param>
         /// <param name="stop"></param>
-        public {{elem}}{{#syntax2}}{{elem2}}_{{/syntax2}}{{func}}Node(IToken start, IToken stop) : base(start, stop) { }
+        public CurveSetgaugeNode(IToken start, IToken stop) : base(start, stop) { }
     }
-{{/states}}
 }

@@ -6,8 +6,9 @@
       "func": "Setgauge",
       "args": [
         {
-          "name": "value",
-          "optional": false
+          "name": "Value",
+          "desc": "軌間 [m]",
+          "opt": false
         }
       ]
     }

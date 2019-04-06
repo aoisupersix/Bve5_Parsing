@@ -2,7 +2,7 @@ var fs = require('fs');
 var stripBom = require('strip-bom');
 var mustache = require('mustache');
 
-parse("doc/map_grammar_ast.mst", "doc/map_grammar_syntax.json", "doc/output.cs");
+parse("doc/map_grammar_ast.mst", "doc/map_grammar_syntax.json", "Bve5_Parsing/MapGrammar/AstNodes/SyntaxNodes.cs");
 
 function parse(template, json, output) {
   fs.readFile(template, 'utf-8', function (err, template) {
@@ -38,7 +38,9 @@ function parse(template, json, output) {
                 state["syntax3"] = true;
                 break;
             }
-            if (state.args.length > 0) {
+            if (state.args.length == 0) {
+              state["noarg"] = true;
+            }else {
               state.args.slice(-1)[0]["last"] = true;
             }
           })
