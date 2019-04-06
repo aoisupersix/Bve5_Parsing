@@ -78,7 +78,12 @@ using Bve5_Parsing.MapGrammar;
     string input; //String to be analyzed
     MapGrammarParser parser = new MapGrammarParser();
 
+    // 文字列をマップ構文としてパースする
     var mapData = parser.Parse(input);
+    // マップファイルへのファイルパスを指定してパースする
+    var mapData2 = parser.ParseFromFile(@"PATH_TO_MAP_FILE");
+    // Include構文の参照先を再帰的にパースする
+    var mapDataWithInclude = parser.ParseFromFile(@"PATH_TO_MAP_FILE", MapGrammarParserOption.ParseIncludeSyntaxRecursively)
 
     Console.WriteLine(mapData.Version); //マップ構文のバージョン情報を表示
     foreach(var statement in mapData.Statements) {
@@ -102,6 +107,13 @@ Bve5_Parsing is using the following library.
 > Copyright (c) 2012 Terence Parr and Sam Harwell
 
 * **ライセンス全文 :** [ANTLR4ライセンス全文](/Licenses/ANTLR4.txt)
+
+#### [ReadJEnc](https://github.com/hnx8/ReadJEnc)
+> The MIT License (MIT)
+>
+> Copyright (c) 2017 hnx8
+
+* **ライセンス全文 ：** [ReadJEncライセンス全文](https://github.com/hnx8/ReadJEnc/blob/master/LICENSE)
 
 ## License
 The MIT License (MIT)
