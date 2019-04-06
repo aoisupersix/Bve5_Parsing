@@ -77,14 +77,29 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     /// </summary>
     public partial class RepeaterBeginNode
     {
-        protected List<string> _structureKeys = new List<string>();
+        protected List<MapGrammarAstNodes> _structureKeys = new List<MapGrammarAstNodes>();
 
-        public IReadOnlyCollection<string> StructureKeys => _structureKeys.AsReadOnly();
+        public IReadOnlyCollection<MapGrammarAstNodes> StructureKeys => _structureKeys.AsReadOnly();
 
-        /// <param name="strKey"></param>
-        public void AddStructureKey(string strKey)
+        public void AddStructureKey(MapGrammarAstNodes strKey)
         {
             _structureKeys.Add(strKey);
+        }
+    }
+
+    /// <summary>
+    /// Section.Beginの手動対応
+    /// 可変長のsignalIndexへ対応する
+    /// </summary>
+    public partial class SectionBeginNode
+    {
+        protected List<MapGrammarAstNodes> _signalIndexes = new List<MapGrammarAstNodes>();
+
+        public IReadOnlyCollection<MapGrammarAstNodes> StructureKeys => _signalIndexes.AsReadOnly();
+
+        public void AddSignalIndex(MapGrammarAstNodes sigIdx)
+        {
+            _signalIndexes.Add(sigIdx);
         }
     }
 

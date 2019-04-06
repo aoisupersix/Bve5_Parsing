@@ -424,6 +424,539 @@
           "opt": false
         }
       ]
+    },
+    {
+      "_comment": "structureKeyに関しては手動で対応する。",
+      "elem": "Repeater",
+      "key": "RepeaterKey",
+      "func": "Begin0",
+      "args": [
+        {
+          "name": "TrackKey",
+          "desc": "配置先の軌道名 (0: 自軌道)",
+          "opt": false
+        },
+        {
+          "name": "Tilt",
+          "desc": "傾斜オプション (0: 常に水平, 1: 勾配に連動, 2: カントに連動, 3: 勾配とカントに連動)",
+          "opt": false
+        },
+        {
+          "name": "Span",
+          "desc": "曲線における弦の長さ [m]",
+          "opt": false
+        },
+        {
+          "name": "Interval",
+          "desc": "配置間隔 [m]",
+          "opt": false
+        }
+      ]
+    },
+    {
+      "elem": "Repeater",
+      "key": "RepeaterKey",
+      "func": "End",
+      "args": [
+      ]
+    },
+    {
+      "elem": "Background",
+      "func": "Change",
+      "args": [
+        {
+          "name": "StructureKey",
+          "desc": "ストラクチャー名",
+          "opt": false
+        }
+      ]
+    },
+    {
+      "elem": "Station",
+      "func": "Load",
+      "args": [
+        {
+          "name": "FilePath",
+          "desc": "このファイルから停車場リストファイルへの相対パス",
+          "opt": false
+        }
+      ]
+    },
+    {
+      "elem": "Station",
+      "key": "StationKey",
+      "func": "Put",
+      "args": [
+        {
+          "name": "Door",
+          "desc": "開くドアの方向 (-1: 左, 1: 右)",
+          "opt": false
+        },
+        {
+          "name": "Margin1",
+          "desc": "停止位置誤差の後方許容範囲 (負の値で設定)",
+          "opt": false
+        },
+        {
+          "name": "Margin2",
+          "desc": "停止位置誤差の後方許容範囲",
+          "opt": false
+        }
+      ]
+    },
+    {
+      "_comment": "signalに関しては手動で対応する。",
+      "elem": "Section",
+      "func": "Begin",
+      "args": [
+      ]
+    },
+    {
+      "_comment": "vに関しては手動で対応する。",
+      "elem": "Section",
+      "func": "Setspeedlimit",
+      "args": [
+      ]
+    },
+    {
+      "elem": "Signal",
+      "func": "Load",
+      "args": [
+        {
+          "name": "FilePath",
+          "desc": "このファイルから信号現示リストファイルへの相対パス",
+          "opt": false
+        }
+      ]
+    },
+    {
+      "elem": "Signal",
+      "key": "SignalAspectKey",
+      "func": "Put",
+      "args": [
+        {
+          "name": "Section",
+          "desc": "関連づける閉そくの相対インデックス",
+          "opt": false
+        },
+        {
+          "name": "TrackKey",
+          "desc": "配置先の軌道名",
+          "opt": false
+        },
+        {
+          "name": "X",
+          "desc": "軌道からの x 座標 [m]",
+          "opt": false
+        },
+        {
+          "name": "Y",
+          "desc": "軌道からの y 座標 [m]",
+          "opt": false
+        },
+        {
+          "name": "Z",
+          "desc": "軌道からの z 座標 [m]",
+          "opt": true
+        },
+        {
+          "name": "RX",
+          "desc": "軌道に対する x 軸回りの角 [deg]",
+          "opt": true
+        },
+        {
+          "name": "RY",
+          "desc": "軌道に対する y 軸回りの角 [deg]",
+          "opt": true
+        },
+        {
+          "name": "RZ",
+          "desc": "軌道に対する z 軸回りの角 [deg]",
+          "opt": true
+        },
+        {
+          "name": "Tilt",
+          "desc": "傾斜オプション (0: 常に水平, 1: 勾配に連動, 2: カントに連動, 3: 勾配とカントに連動)",
+          "opt": true
+        },
+        {
+          "name": "Span",
+          "desc": "曲線における弦の長さ [m]",
+          "opt": true
+        }
+      ]
+    },
+    {
+      "elem": "Beacon",
+      "func": "Put",
+      "args": [
+        {
+          "name": "Type",
+          "desc": "保安装置に送る地上子種別 (整数)",
+          "opt": false
+        },
+        {
+          "name": "Section",
+          "desc": "関連づける閉そくの相対インデックス",
+          "opt": false
+        },
+        {
+          "name": "SendData",
+          "desc": "保安装置に送る値 (整数)",
+          "opt": false
+        }
+      ]
+    },
+    {
+      "elem": "Speedlimit",
+      "func": "Begin",
+      "args": [
+        {
+          "name": "V",
+          "desc": "走行速度 [km/h]",
+          "opt": false
+        }
+      ]
+    },
+    {
+      "elem": "Speedlimit",
+      "func": "End",
+      "args": [
+      ]
+    },
+    {
+      "elem": "Pretrain",
+      "func": "Pass",
+      "args": [
+        {
+          "name": "Time",
+          "desc": "時刻を表す文字列 ('hh:mm:ss')",
+          "opt": true
+        },
+        {
+          "name": "Second",
+          "desc": "00:00:00 からの経過時間 [sec]",
+          "opt": true
+        }
+      ]
+    },
+    {
+      "elem": "Light",
+      "func": "Ambient",
+      "args": [
+        {
+          "name": "Red",
+          "desc": "赤成分 (0 ~ 1)",
+          "opt": false
+        },
+        {
+          "name": "Green",
+          "desc": "緑成分 (0 ~ 1)",
+          "opt": false
+        },
+        {
+          "name": "Blue",
+          "desc": "青成分 (0 ~ 1)",
+          "opt": false
+        }
+      ]
+    },
+    {
+      "elem": "Light",
+      "func": "Diffuse",
+      "args": [
+        {
+          "name": "Red",
+          "desc": "赤成分 (0 ~ 1)",
+          "opt": false
+        },
+        {
+          "name": "Green",
+          "desc": "緑成分 (0 ~ 1)",
+          "opt": false
+        },
+        {
+          "name": "Blue",
+          "desc": "青成分 (0 ~ 1)",
+          "opt": false
+        }
+      ]
+    },
+    {
+      "elem": "Fog",
+      "func": "Interpolate",
+      "args": [
+        {
+          "name": "Density",
+          "desc": "濃度",
+          "opt": true
+        },
+        {
+          "name": "Red",
+          "desc": "赤成分 (0 ~ 1)",
+          "opt": true
+        },
+        {
+          "name": "Green",
+          "desc": "緑成分 (0 ~ 1)",
+          "opt": true
+        },
+        {
+          "name": "Blue",
+          "desc": "青成分 (0 ~ 1)",
+          "opt": true
+        }
+      ]
+    },
+    {
+      "elem": "Drawdistance",
+      "func": "Change",
+      "args": [
+        {
+          "name": "Value",
+          "desc": "距離 [m] (0: [設定] ウィンドウで設定される描画距離を適用)",
+          "opt": true
+        }
+      ]
+    },
+    {
+      "elem": "Cabilluminance",
+      "func": "Interpolate",
+      "args": [
+        {
+          "name": "Value",
+          "desc": "昼間画像と夜間画像の混合比 (0: 夜間画像 ~ 1: 昼間画像)",
+          "opt": true
+        }
+      ]
+    },
+    {
+      "elem": "Irregularity",
+      "func": "Change",
+      "args": [
+        {
+          "name": "X",
+          "desc": "左右変位 (左と右のレールの通り変位の平均に相当) の標準偏差 [m]",
+          "opt": false
+        },
+        {
+          "name": "Y",
+          "desc": "上下変位 (左と右のレールの高低変位の平均に相当) の標準偏差 [m]",
+          "opt": false
+        },
+        {
+          "name": "R",
+          "desc": "ロール変位 (水準変位を軌間で除した値に相当) の標準偏差 [rad]",
+          "opt": false
+        },
+        {
+          "name": "LX",
+          "desc": "左右変位の遮断波長 [m]",
+          "opt": false
+        },
+        {
+          "name": "LY",
+          "desc": "上下変位の遮断波長 [m]",
+          "opt": false
+        },
+        {
+          "name": "LR",
+          "desc": "ロール変位の遮断波長 [m]",
+          "opt": false
+        }
+      ]
+    },
+    {
+      "elem": "Adhision",
+      "func": "Change",
+      "args": [
+        {
+          "name": "A",
+          "desc": "走行速度 0 km/h における粘着係数",
+          "opt": false
+        },
+        {
+          "name": "B",
+          "desc": "粘着係数の走行速度に対する変化を表す係数",
+          "opt": true
+        },
+        {
+          "name": "C",
+          "desc": "粘着係数の走行速度に対する変化を表す係数",
+          "opt": true
+        }
+      ]
+    },
+    {
+      "elem": "Sound",
+      "func": "Load",
+      "args": [
+        {
+          "name": "FilePath",
+          "desc": "このファイルからサウンドリストファイルへの相対パス",
+          "opt": false
+        }
+      ]
+    },
+    {
+      "elem": "Sound",
+      "key": "SoundKey",
+      "func": "Play",
+      "args": [
+      ]
+    },
+    {
+      "elem": "Sound3d",
+      "func": "Load",
+      "args": [
+        {
+          "name": "FilePath",
+          "desc": "このファイルからサウンドリストファイルへの相対パス",
+          "opt": false
+        }
+      ]
+    },
+    {
+      "elem": "Sound3d",
+      "key": "SoundKey",
+      "func": "Put",
+      "args": [
+        {
+          "name": "X",
+          "desc": "軌道からの x 座標 [m]",
+          "opt": false
+        },
+        {
+          "name": "Y",
+          "desc": "軌道からの y 座標 [m]",
+          "opt": false
+        }
+      ]
+    },
+    {
+      "elem": "Rollingnoise",
+      "func": "Change",
+      "args": [
+        {
+          "name": "Index",
+          "desc": "車両サウンドファイルの [Run] セクションで定義したインデックス",
+          "opt": false
+        }
+      ]
+    },
+    {
+      "elem": "Flangenoise",
+      "func": "Change",
+      "args": [
+        {
+          "name": "Index",
+          "desc": "車両サウンドファイルの [Flange] セクションで定義したインデックス",
+          "opt": false
+        }
+      ]
+    },
+    {
+      "elem": "Jointnoise",
+      "func": "Play",
+      "args": [
+        {
+          "name": "Index",
+          "desc": "車両サウンドファイルの [Joint] セクションで定義したインデックス",
+          "opt": false
+        }
+      ]
+    },
+    {
+      "elem": "Train",
+      "func": "Add",
+      "args": [
+        {
+          "name": "TrainKey",
+          "desc": "他列車名 (任意の文字列)",
+          "opt": false
+        },
+        {
+          "name": "FilePath",
+          "desc": "このファイルから他列車ファイルへの相対パス",
+          "opt": false
+        },
+        {
+          "name": "TrackKey",
+          "desc": "走行する軌道",
+          "opt": false
+        },
+        {
+          "name": "Direction",
+          "desc": "進行方向 (-1: 対向, 1: 並走)",
+          "opt": false
+        }
+      ]
+    },
+    {
+      "elem": "Train",
+      "key": "TrainKey",
+      "func": "Load",
+      "args": [
+        {
+          "name": "FilePath",
+          "desc": "このファイルから他列車ファイルへの相対パス",
+          "opt": false
+        },
+        {
+          "name": "TrackKey",
+          "desc": "走行する軌道",
+          "opt": false
+        },
+        {
+          "name": "Direction",
+          "desc": "進行方向 (-1: 対向, 1: 並走)",
+          "opt": false
+        }
+      ]
+    },
+    {
+      "elem": "Train",
+      "key": "TrainKey",
+      "func": "Enable",
+      "args": [
+        {
+          "name": "Time",
+          "desc": "時刻を表す文字列 ('hh:mm:ss')",
+          "opt": true
+        },
+        {
+          "name": "Second",
+          "desc": "00:00:00 からの経過時間 [sec]",
+          "opt": true
+        }
+      ]
+    },
+    {
+      "elem": "Train",
+      "key": "TrainKey",
+      "func": "Stop",
+      "args": [
+        {
+          "name": "Decelerate",
+          "desc": "減速度 [km/h/s]",
+          "opt": false
+        },
+        {
+          "name": "StopTime",
+          "desc": "停車時間 [s]",
+          "opt": false
+        },
+        {
+          "name": "Accelerate",
+          "desc": "加速度 [km/h/s]",
+          "opt": false
+        },
+        {
+          "name": "Speed",
+          "desc": "加速後の走行速度 [km/h]",
+          "opt": false
+        }
+      ]
     }
   ]
 }
