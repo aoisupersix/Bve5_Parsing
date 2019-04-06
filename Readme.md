@@ -103,6 +103,13 @@ Bve5_Parsing is using the following library.
 
 * **ライセンス全文 :** [ANTLR4ライセンス全文](/Licenses/ANTLR4.txt)
 
+#### [ReadJEnc](https://github.com/hnx8/ReadJEnc)
+> The MIT License (MIT)
+>
+> Copyright (c) 2017 hnx8
+
+* **ライセンス全文 ：** [ReadJEncライセンス全文](https://github.com/hnx8/ReadJEnc/blob/master/LICENSE)
+
 ## License
 The MIT License (MIT)
 
