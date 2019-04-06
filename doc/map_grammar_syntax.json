@@ -1,0 +1,15 @@
+{
+  "states": [
+    {
+      "type": 1,
+      "elem": "Curve",
+      "func": "Setgauge",
+      "args": [
+        {
+          "name": "value",
+          "optional": false
+        }
+      ]
+    }
+  ]
+}

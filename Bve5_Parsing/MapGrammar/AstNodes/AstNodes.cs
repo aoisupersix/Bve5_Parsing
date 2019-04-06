@@ -60,6 +60,18 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     #region ステートメント AST Nodes
 
     /// <summary>
+    /// 構文ASTノードのベースとなるノード
+    /// </summary>
+    public abstract class SyntaxNode : MapGrammarAstNodes
+    {
+        public abstract string ElementName { get; }
+
+        public abstract string FunctionName { get; }
+
+        public SyntaxNode(IToken start, IToken stop) : base(start, stop) { }
+    }
+
+    /// <summary>
     /// ステートメントノード1 MapElement.Function(Args)
     /// </summary>
     public class Syntax1Node : MapGrammarAstNodes
