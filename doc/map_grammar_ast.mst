@@ -10,9 +10,9 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     /// <summary>
     /// {{elem}}{{^syntax1}}[{{key}}]{{/syntax1}}{{#syntax3}}.{{elem2}}{{/syntax3}}.{{func}}({{#args}}{{name}}{{#opt}}?{{/opt}}{{^last}}, {{/last}}{{/args}});
     /// </summary>
-    public class {{elem}}{{#syntax2}}{{elem2}}_{{/syntax2}}{{func}}Node : SyntaxNode
+    public class {{elem}}{{#syntax3}}{{elem2}}{{/syntax3}}{{func}}Node : SyntaxNode
     {
-        #region Property
+        #region SyntaxInfo
 
         /// <summary>
         /// マップ要素名
@@ -23,8 +23,14 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// 関数名
         /// </summary>
         public override string FunctionName => "{{#syntax3}}{{elem2}}_{{/syntax3}}{{func}}";
-        #endregion Property
+        #endregion SyntaxInfo
 
+{{#key}}
+        /// <summary>
+        /// Key：{{key}}
+        /// </summary>
+        public string Key { get; set; }
+{{/key}}
 {{^noarg}}
         #region Args
 {{#args}}
@@ -42,7 +48,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// </summary>
         /// <param name="start"></param>
         /// <param name="stop"></param>
-        public {{elem}}{{#syntax2}}{{elem2}}_{{/syntax2}}{{func}}Node(IToken start, IToken stop) : base(start, stop) { }
+        public {{elem}}{{#syntax3}}{{elem2}}{{/syntax3}}{{func}}Node(IToken start, IToken stop) : base(start, stop) { }
     }
 {{/states}}
 }

@@ -81,6 +81,184 @@
           "opt": false
         }
       ]
+    },
+    {
+      "elem": "Gradient",
+      "func": "Begintransition",
+      "args": [
+      ]
+    },
+    {
+      "elem": "Gradient",
+      "func": "Begin",
+      "args": [
+        {
+          "name": "Gradient",
+          "desc": "勾配 [‰]",
+          "opt": false
+        }
+      ]
+    },
+    {
+      "elem": "Gradient",
+      "func": "End",
+      "args": [
+      ]
+    },
+    {
+      "elem": "Gradient",
+      "func": "Interpolate",
+      "args": [
+        {
+          "name": "Gradient",
+          "desc": "勾配 [‰]",
+          "opt": true
+        }
+      ]
+    },
+    {
+      "elem": "Track",
+      "elem2": "X",
+      "key": "TrackKey",
+      "func": "Interpolate",
+      "args": [
+        {
+          "name": "X",
+          "desc": "自軌道からの x 座標 [m]",
+          "opt": true
+        },
+        {
+          "name": "Radius",
+          "desc": "現在の距離程以降の自軌道との平面曲線相対半径 [m] (0: 直線)",
+          "opt": true
+        }
+      ]
+    },
+    {
+      "elem": "Track",
+      "elem2": "Y",
+      "key": "TrackKey",
+      "func": "Interpolate",
+      "args": [
+        {
+          "name": "Y",
+          "desc": "自軌道からの y 座標 [m]",
+          "opt": true
+        },
+        {
+          "name": "Radius",
+          "desc": "現在の距離程以降の自軌道との縦曲線相対半径 [m] (0: 直線)",
+          "opt": true
+        }
+      ]
+    },
+    {
+      "elem": "Track",
+      "key": "TrackKey",
+      "func": "Position",
+      "args": [
+        {
+          "name": "X",
+          "desc": "自軌道からの x 座標 [m]",
+          "opt": false
+        },
+        {
+          "name": "Y",
+          "desc": "自軌道からの y 座標 [m]",
+          "opt": false
+        },
+        {
+          "name": "RadiusH",
+          "desc": "現在の距離程以降の自軌道との平面曲線相対半径 [m] (0: 直線)",
+          "opt": true
+        },
+        {
+          "name": "RadiusV",
+          "desc": "現在の距離程以降の自軌道との縦曲線相対半径 [m] (0: 直線)",
+          "opt": true
+        }
+      ]
+    },
+    {
+      "elem": "Track",
+      "elem2": "Cant",
+      "key": "TrackKey",
+      "func": "Setgauge",
+      "args": [
+        {
+          "name": "Gauge",
+          "desc": "軌間 [m]",
+          "opt": false
+        }
+      ]
+    },
+    {
+      "elem": "Track",
+      "elem2": "Cant",
+      "key": "TrackKey",
+      "func": "Setcenter",
+      "args": [
+        {
+          "name": "X",
+          "desc": "回転中心の x 座標 [m] (正: 曲線の内側, 負: 曲線の外側)",
+          "opt": false
+        }
+      ]
+    },
+    {
+      "elem": "Track",
+      "elem2": "Cant",
+      "key": "TrackKey",
+      "func": "Setfunction",
+      "args": [
+        {
+          "name": "Id",
+          "desc": "関数番号 (0: サイン半波長逓減, 1: 直線逓減)",
+          "opt": false
+        }
+      ]
+    },
+    {
+      "elem": "Track",
+      "elem2": "Cant",
+      "key": "TrackKey",
+      "func": "Begintransition",
+      "args": [
+      ]
+    },
+    {
+      "elem": "Track",
+      "elem2": "Cant",
+      "key": "TrackKey",
+      "func": "Begin",
+      "args": [
+        {
+          "name": "Cant",
+          "desc": "カント [m] (正: 右に傾ける, 負: 左に傾ける)",
+          "opt": false
+        }
+      ]
+    },
+    {
+      "elem": "Track",
+      "elem2": "Cant",
+      "key": "TrackKey",
+      "func": "End",
+      "args": [
+      ]
+    },
+    {
+      "elem": "Track",
+      "elem2": "Cant",
+      "key": "TrackKey",
+      "func": "Interpolate",
+      "args": [
+        {
+          "name": "Cant",
+          "desc": "カント [m] (正: 右に傾ける, 負: 左に傾ける)",
+          "opt": true
+        }
+      ]
     }
   ]
 }
