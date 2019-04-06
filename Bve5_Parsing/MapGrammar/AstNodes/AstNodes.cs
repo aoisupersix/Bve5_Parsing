@@ -72,6 +72,23 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     }
 
     /// <summary>
+    /// Repeater.Beginの手動対応
+    /// 可変長のstructureKeyへ対応する
+    /// </summary>
+    public partial class RepeaterBeginNode
+    {
+        protected List<string> _structureKeys = new List<string>();
+
+        public IReadOnlyCollection<string> StructureKeys => _structureKeys.AsReadOnly();
+
+        /// <param name="strKey"></param>
+        public void AddStructureKey(string strKey)
+        {
+            _structureKeys.Add(strKey);
+        }
+    }
+
+    /// <summary>
     /// ステートメントノード1 MapElement.Function(Args)
     /// </summary>
     public class Syntax1Node : MapGrammarAstNodes

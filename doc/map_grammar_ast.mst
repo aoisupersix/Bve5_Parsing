@@ -10,7 +10,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     /// <summary>
     /// {{elem}}{{^syntax1}}[{{key}}]{{/syntax1}}{{#syntax3}}.{{elem2}}{{/syntax3}}.{{func}}({{#args}}{{name}}{{#opt}}?{{/opt}}{{^last}}, {{/last}}{{/args}});
     /// </summary>
-    public class {{elem}}{{#syntax3}}{{elem2}}{{/syntax3}}{{func}}Node : SyntaxNode
+    public partial class {{elem}}{{#syntax3}}{{elem2}}{{/syntax3}}{{func}}Node : SyntaxNode
     {
         #region SyntaxInfo
 
@@ -29,7 +29,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// Key：{{key}}
         /// </summary>
-        public string Key { get; set; }
+        public MapGrammarAstNodes Key { get; set; }
 {{/key}}
 {{^noarg}}
         #region Args
@@ -38,7 +38,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// 引数：{{desc}}{{#opt}}（省略可能）{{/opt}}
         /// </summary>
-        public object {{name}} { get; set; }
+        public MapGrammarAstNodes {{name}} { get; set; }
 {{/args}}
         #endregion Args
 {{/noarg}}
