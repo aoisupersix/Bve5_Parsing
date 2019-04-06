@@ -112,11 +112,12 @@ namespace Bve5_Parsing
         /// <param name="input">構文文字列</param>
         private static void MapGrammarTest(string input)
         {
+            var parser = new MapGrammarParser();
+            var currentDir = System.Environment.CurrentDirectory;
+            var data = parser.Parse(input, currentDir, MapGrammarParser.MapGrammarParserOption.ParseIncludeSyntaxRecursively);
+            //var data = parser.ParseFromFile(@"PATH_TO_MAP_FILE", MapGrammarParser.MapGrammarParserOption.ParseIncludeSyntaxRecursively);
 
-            MapGrammarParser parser = new MapGrammarParser();
-            MapData data = null;
-            data = parser.Parse(input, MapGrammarParser.MapGrammarParserOption.ParseIncludeSyntaxRecursively);
-            //data = parser.ParseFromFile(@"PATH_TO_MAP_FILE", MapGrammarParser.MapGrammarParserOption.ParseIncludeSyntaxRecursively);
+            Console.WriteLine("CurrentDir: {0}", currentDir);
 
             Console.Error.WriteLine("Errors:###################################");
             foreach(var error in parser.ParserErrors.OrderBy(e => e.Line).ThenBy(e => e.Column))
