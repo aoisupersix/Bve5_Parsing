@@ -28,7 +28,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
             foreach (var state in context.statement())
             {
                 var child = base.Visit(state);
-                if(child != null)
+                if (child != null)
                     node.StatementList.Add(child);
             }
             return node;
@@ -78,7 +78,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
             {
                 node = Visit(context.curve());
             }
-            catch(NullReferenceException)
+            catch (NullReferenceException)
             {
                 node = null;
             }
@@ -714,8 +714,8 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
                 switch (node.FunctionName)
                 {
                     case "interpolate":
-                        if (node.MapElementNames[1].Equals("cant"))
-                        {                                                           /* Cant.Interpolate(cant?) */
+                        if (node.MapElementNames[1].Equals("cant"))                 /* Cant.Interpolate(cant?) */
+                        {
                             if (context.cant != null)
                             {
                                 node.Arguments.Add("cant", Visit(context.cant));
@@ -725,13 +725,29 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
                                 //引数なし TODO
                             }
                         }
-                        else
-                        {                                                           /* (X | Y).Interpolate(x?, radius?) */
+                        else if (node.MapElementNames[1].Equals("x"))               /* X.Interpolate(x?, radius?) */
+                        {
                             if (context.xE != null)
                                 node.Arguments.Add(node.MapElementNames[1], Visit(context.xE));
                             else if (context.x != null)
                             {
                                 node.Arguments.Add(node.MapElementNames[1], Visit(context.x));
+
+                                if (context.radius != null)
+                                    node.Arguments.Add("radius", Visit(context.radius));
+                            }
+                            else
+                            {
+                                //引数なし TODO
+                            }
+                        }
+                        else if (node.MapElementNames[1].Equals("y"))               /* Y.Interpolate(y?, radius?) */
+                        {
+                            if (context.yE != null)
+                                node.Arguments.Add(node.MapElementNames[1], Visit(context.yE));
+                            else if (context.y != null)
+                            {
+                                node.Arguments.Add(node.MapElementNames[1], Visit(context.y));
 
                                 if (context.radius != null)
                                     node.Arguments.Add("radius", Visit(context.radius));
