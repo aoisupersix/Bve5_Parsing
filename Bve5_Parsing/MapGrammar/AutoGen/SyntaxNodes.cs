@@ -1952,16 +1952,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     }
 
     /// <summary>
-    /// Adhision.Change(A, B?, C?);
+    /// Adhesion.Change(A, B?, C?);
     /// </summary>
-    public partial class AdhisionChangeNode : SyntaxNode
+    public partial class AdhesionChangeNode : SyntaxNode
     {
         #region SyntaxInfo
 
         /// <summary>
         /// マップ要素名
         /// </summary>
-        public override MapElementName ElementName => MapElementName.Adhision;
+        public override MapElementName ElementName => MapElementName.Adhesion;
 
         /// <summary>
         /// 関数名
@@ -1995,7 +1995,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// </summary>
         /// <param name="start"></param>
         /// <param name="stop"></param>
-        public AdhisionChangeNode(IToken start, IToken stop) : base(start, stop) { }
+        public AdhesionChangeNode(IToken start, IToken stop) : base(start, stop) { }
     }
 
     /// <summary>

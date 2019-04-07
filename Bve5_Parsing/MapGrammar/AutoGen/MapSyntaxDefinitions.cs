@@ -114,10 +114,10 @@ namespace Bve5_Parsing.MapGrammar {
         Irregularity,
 
         /// <summary>
-        /// Adhision
+        /// Adhesion
         /// </summary>
-        [StringValue("Adhision")]
-        Adhision,
+        [StringValue("Adhesion")]
+        Adhesion,
 
         /// <summary>
         /// Sound

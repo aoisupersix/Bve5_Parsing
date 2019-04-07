@@ -17,6 +17,10 @@ parse(astVisitorTemp, jsonData, "Bve5_Parsing/MapGrammar/AutoGen/AstVisitor.cs")
 const enumTemp = loadFile("doc/map_grammar_enum.mst");
 parse(enumTemp, jsonData, "Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs");
 
+// 構文テスト生成
+const testTemp = loadFile("doc/map_grammar_test.mst");
+parse(testTemp, jsonData, "Bve5_ParsingTests/AutoGen/MapGrammarSyntaxTests.cs");
+
 console.log("all completed !");
 
 function loadJson(jsonPath) {
@@ -40,8 +44,31 @@ function loadJson(jsonPath) {
       state["syntax3"] = true;
     }
 
+    // テスト用に構文が取りうる引数の全パターンを作成
+    // 引数は必ず指定順に並んでいることとする
+    const argPattern = []
+    const nonOptArgs = linq.from(state.args).where(a => !a.opt).toArray();
+    const optArgs = linq.from(state.args).where(a => a.opt).toArray();
+    argPattern.push(deepCopy(nonOptArgs));
+
+    while(optArgs.length > 0) {
+      nonOptArgs.push(optArgs.shift());
+      argPattern.push(deepCopy(nonOptArgs));
+    }
+    argPattern.forEach((val) => {
+      if (val.length <= 0) {
+        val["noarg"] = true;
+      }else {
+        val.forEach((a) => {
+          a.name = (a.name + '').toLowerCase();
+        });
+        val.slice(-1)[0]["last"] = true;
+      }
+    });
+    state["argPattern"] = argPattern;
+
     // 引数があるか
-    if (state.args.length == 0) {
+    if (state.args.length <= 0) {
       state["noarg"] = true;
     }else {
       state.args.slice(-1)[0]["last"] = true;
@@ -62,6 +89,13 @@ function loadJson(jsonPath) {
     if (linq.from(funcs).all(f => f["name"] != funcName)) {
       funcs.push({name: funcName, str: funcString});
     }
+
+    // 小文字要素名＆関数名作成
+    state["elem_lower"] = (state.elem + '').toLowerCase();
+    state["func_lower"] = (state.func + '').toLowerCase();
+    if (state.syntax3 == true) {
+      state["elem2_lower"] = (state.elem2 + '').toLowerCase();
+    }
   });
 
   json["elems"] = elems;
@@ -71,6 +105,10 @@ function loadJson(jsonPath) {
 
 function loadFile(filePath) {
   return fs.readFileSync(filePath, 'utf-8');
+}
+
+function deepCopy(array) {
+  return JSON.parse(JSON.stringify(array));
 }
 
 function parse(template, jsonData, outputPath) {

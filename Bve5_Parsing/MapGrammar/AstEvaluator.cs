@@ -396,7 +396,7 @@ namespace Bve5_Parsing.MapGrammar
             return node.CreateSyntaxData(this, NowDistance);
         }
 
-        public override object Visit(AdhisionChangeNode node)
+        public override object Visit(AdhesionChangeNode node)
         {
             return node.CreateSyntaxData(this, NowDistance);
         }

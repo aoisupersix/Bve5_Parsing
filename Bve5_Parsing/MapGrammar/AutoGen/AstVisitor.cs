@@ -62,7 +62,7 @@ namespace Bve5_Parsing.MapGrammar
         public abstract T Visit(DrawdistanceChangeNode node);
         public abstract T Visit(CabilluminanceInterpolateNode node);
         public abstract T Visit(IrregularityChangeNode node);
-        public abstract T Visit(AdhisionChangeNode node);
+        public abstract T Visit(AdhesionChangeNode node);
         public abstract T Visit(SoundLoadNode node);
         public abstract T Visit(SoundPlayNode node);
         public abstract T Visit(Sound3dLoadNode node);
