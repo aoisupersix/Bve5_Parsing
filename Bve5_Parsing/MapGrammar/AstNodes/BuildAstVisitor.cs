@@ -640,43 +640,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// <returns>構文ASTノード</returns>
         public override MapGrammarAstNodes VisitStructure([NotNull] SyntaxDefinitions.MapGrammarParser.StructureContext context)
         {
-            string funcName = context.func.Text.ToLower();
-
-            if (funcName.Equals("load"))                                                    /* Load(filePath) */
-                return new LoadListNode(context.Start, context.Stop) { MapElementName = "structure", Path = context.path };
-
-            Syntax2Node node = new Syntax2Node(context.Start, context.Stop);
-            node.MapElementName = "structure";
-            node.Key = Visit(context.key);
-            node.FunctionName = context.func.Text.ToLower();
-
-            switch (node.FunctionName)
-            {
-                case "put":                                                                 /* Put(trackkey,x,y,z,rx,ry,rz,tilt,span) */
-                    node.Arguments.Add("trackkey", Visit(context.trackkey));
-                    node.Arguments.Add("x", Visit(context.x));
-                    node.Arguments.Add("y", Visit(context.y));
-                    node.Arguments.Add("z", Visit(context.z));
-                    node.Arguments.Add("rx", Visit(context.rx));
-                    node.Arguments.Add("ry", Visit(context.ry));
-                    node.Arguments.Add("rz", Visit(context.rz));
-                    node.Arguments.Add("tilt", Visit(context.tilt));
-                    node.Arguments.Add("span", Visit(context.span));
-                    break;
-                case "put0":                                                                /* Put0(trackkey, tilt, span) */
-                    node.Arguments.Add("trackkey", Visit(context.trackkey));
-                    node.Arguments.Add("tilt", Visit(context.tilt));
-                    node.Arguments.Add("span", Visit(context.span));
-                    break;
-                case "putbetween":                                                          /* PutBetween(trackkey1, trackkey2, flag?) */
-                    node.Arguments.Add("trackkey1", Visit(context.trackkey1));
-                    node.Arguments.Add("trackkey2", Visit(context.trackkey2));
-                    if (context.flag != null)
-                        node.Arguments.Add("flag", Visit(context.flag));
-                    break;
-            }
-
-            return node;
+            return SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Structure, context.func.Text);
         }
 
         /// <summary>
