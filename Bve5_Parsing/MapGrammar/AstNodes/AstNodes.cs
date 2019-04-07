@@ -132,15 +132,18 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// <returns></returns>
         protected internal static SyntaxNode CreateSyntaxAstNode(BuildAstVisitor visitor, ParserRuleContext ctx, MapElementName elementName, string funcName, string element2Name = null)
         {
+            // 関数名は必ず2文字以上あるので
             if (funcName.Length < 2)
                 throw new ArgumentOutOfRangeException("関数名が短すぎます。");
-            if (element2Name != null && element2Name.Length < 2)
-                throw new ArgumentOutOfRangeException("サブ要素名が短すぎます。");
 
             // ASTのインスタンス取得
-            var astClassName = element2Name == null ?
-                elementName.GetStringValue() + char.ToUpper(funcName[0]) + funcName.Substring(1).ToLower() + "Node" :
-                elementName.GetStringValue() + char.ToUpper(element2Name[0]) + element2Name.Substring(1).ToLower() + char.ToUpper(funcName[0]) + funcName.Substring(1).ToLower() + "Node";
+            var astClassName = elementName.GetStringValue() + char.ToUpper(funcName[0]) + funcName.Substring(1).ToLower() + "Node";
+            
+            if (element2Name != null)
+            {
+                var ele2 = element2Name.Length <= 1 ? element2Name.ToUpper() : char.ToUpper(element2Name[0]) + element2Name.Substring(1).ToLower();
+                astClassName = elementName.GetStringValue() + ele2 + char.ToUpper(funcName[0]) + funcName.Substring(1).ToLower() + "Node";
+            }
             var astClassType = Type.GetType(typeof(MapGrammarAstNodes).Namespace + "." + astClassName);
 
             if (astClassType == null)
