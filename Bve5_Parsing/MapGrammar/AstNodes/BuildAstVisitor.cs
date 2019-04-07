@@ -862,7 +862,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         {
             Syntax1Node node = new Syntax1Node(context.Start, context.Stop);
             node.MapElementName = "background";
-            node.FunctionName = context.func.Text;
+            node.FunctionName = context.func.Text.ToLower();
             node.Arguments.Add("structurekey", Visit(context.structurekey));
 
             return node;
