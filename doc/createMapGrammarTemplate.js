@@ -67,26 +67,6 @@ function loadJson(jsonPath) {
     });
     state["argPattern"] = argPattern;
 
-    // テストスキップ設定
-    // 以下の構文は所々の理由でテストを自動生成しない
-    if (state.elem != "Train" && state.func == "Load") {
-      state["test_skip"] = true;
-    }else if (state.elem == "Adhesion" && state.func == "Change") {
-      state["test_skip"] = true;
-    }else if (state.elem == "Fog" && state.func == "Interpolate") { 
-      state["test_skip"] = true;
-    }else if (state.elem == "Pretrain" && state.func == "Pass") {
-      state["test_skip"] = true;
-    }else if (state.elem == "Section" && state.func == "Begin") {
-      state["test_skip"] = true;
-    }else if (state.elem == "Section" && state.func == "Setspeedlimit") {
-      state["test_skip"] = true;
-    }else if (state.elem == "Signal" && state.func == "Put") {
-      state["test_skip"] = true;
-    }else if (state.elem == "Train" && state.func == "Enable") {
-      state["test_skip"] = true;
-    }
-
     // 引数があるか
     if (state.args.length <= 0) {
       state["noarg"] = true;

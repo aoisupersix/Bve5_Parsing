@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text.RegularExpressions;
 using Antlr4.Runtime.Misc;
 using Bve5_Parsing.MapGrammar.SyntaxDefinitions;
 

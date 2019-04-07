@@ -52,14 +52,14 @@ namespace Bve5_ParsingTests
         [Fact]
         public void {{elem}}{{#syntax3}}{{elem2}}{{/syntax3}}{{func}}Test()
         {
-{{#test_skip}}
+{{#skip_test}}
             /*
              * THIS TEST IS SKIPPED.
              * この構文のテストは諸事情によりテストの自動生成から外されました。
              * {{elem}}{{^syntax1}}[{{key}}]{{/syntax1}}{{#syntax3}}.{{elem2}}{{/syntax3}}.{{func}}({{#args}}{{name}}{{#opt}}?{{/opt}}{{^last}}, {{/last}}{{/args}})構文のテストは手動で作成してください。
              */
-{{/test_skip}}
-{{^test_skip}}
+{{/skip_test}}
+{{^skip_test}}
 {{#argPattern}}
 
             // {{elem}}{{^syntax1}}[{{key}}]{{/syntax1}}{{#syntax3}}.{{elem2}}{{/syntax3}}.{{func}}({{#.}}{{name}}{{^last}}, {{/last}}{{/.}});
@@ -72,7 +72,7 @@ namespace Bve5_ParsingTests
                         new SyntaxData(0, "{{elem_lower}}",{{#syntax3}} "{{elem2_lower}}",{{/syntax3}}{{^syntax1}} "{{key}}",{{/syntax1}} "{{func_lower}}"){{^noarg}}{{#.}}.SetArg("{{name}}", 1.0){{/.}}{{/noarg}}
                     }));
 {{/argPattern}}
-{{/test_skip}}
+{{/skip_test}}
         }
 {{/states}}
         #endregion

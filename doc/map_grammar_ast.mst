@@ -11,7 +11,8 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     /// <summary>
     /// {{elem}}{{^syntax1}}[{{key}}]{{/syntax1}}{{#syntax3}}.{{elem2}}{{/syntax3}}.{{func}}({{#args}}{{name}}{{#opt}}?{{/opt}}{{^last}}, {{/last}}{{/args}});
     /// </summary>
-    public partial class {{elem}}{{#syntax3}}{{elem2}}{{/syntax3}}{{func}}Node : SyntaxNode
+    {{#deprecated}}[Deprecated]{{/deprecated}}
+    public partial class {{elem}}{{#syntax3}}{{elem2}}{{/syntax3}}{{func}}Node : {{^inheritance}}SyntaxNode{{/inheritance}}{{#inheritance}}{{inheritance}}{{/inheritance}}
     {
         #region SyntaxInfo
 

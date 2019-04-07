@@ -64,6 +64,24 @@ namespace Bve5_ParsingTests
         }
 
         /// <summary>
+        /// Curve.Gauge(Value);
+        /// </summary>
+        [Fact]
+        public void CurveGaugeTest()
+        {
+
+            // Curve.Gauge(value);
+            Check(
+                ExecParse("BveTs Map 2.02\n0;Curve.Gauge(1.0);"),
+                new MapData(
+                    version: "2.02",
+                    syntaxes: new List<SyntaxData>()
+                    {
+                        new SyntaxData(0, "curve", "gauge").SetArg("value", 1.0)
+                    }));
+        }
+
+        /// <summary>
         /// Curve.Setcenter(X);
         /// </summary>
         [Fact]
@@ -142,6 +160,34 @@ namespace Bve5_ParsingTests
                     syntaxes: new List<SyntaxData>()
                     {
                         new SyntaxData(0, "curve", "begin").SetArg("radius", 1.0).SetArg("cant", 1.0)
+                    }));
+        }
+
+        /// <summary>
+        /// Curve.Begincircular(Radius, Cant?);
+        /// </summary>
+        [Fact]
+        public void CurveBegincircularTest()
+        {
+
+            // Curve.Begincircular(radius);
+            Check(
+                ExecParse("BveTs Map 2.02\n0;Curve.Begincircular(1.0);"),
+                new MapData(
+                    version: "2.02",
+                    syntaxes: new List<SyntaxData>()
+                    {
+                        new SyntaxData(0, "curve", "begincircular").SetArg("radius", 1.0)
+                    }));
+
+            // Curve.Begincircular(radius, cant);
+            Check(
+                ExecParse("BveTs Map 2.02\n0;Curve.Begincircular(1.0, 1.0);"),
+                new MapData(
+                    version: "2.02",
+                    syntaxes: new List<SyntaxData>()
+                    {
+                        new SyntaxData(0, "curve", "begincircular").SetArg("radius", 1.0).SetArg("cant", 1.0)
                     }));
         }
 
@@ -252,6 +298,24 @@ namespace Bve5_ParsingTests
                     syntaxes: new List<SyntaxData>()
                     {
                         new SyntaxData(0, "gradient", "begin").SetArg("gradient", 1.0)
+                    }));
+        }
+
+        /// <summary>
+        /// Gradient.Beginconst(Gradient);
+        /// </summary>
+        [Fact]
+        public void GradientBeginconstTest()
+        {
+
+            // Gradient.Beginconst(gradient);
+            Check(
+                ExecParse("BveTs Map 2.02\n0;Gradient.Beginconst(1.0);"),
+                new MapData(
+                    version: "2.02",
+                    syntaxes: new List<SyntaxData>()
+                    {
+                        new SyntaxData(0, "gradient", "beginconst").SetArg("gradient", 1.0)
                     }));
         }
 
@@ -434,6 +498,24 @@ namespace Bve5_ParsingTests
         }
 
         /// <summary>
+        /// Track[TrackKey].Gauge(Gauge);
+        /// </summary>
+        [Fact]
+        public void TrackGaugeTest()
+        {
+
+            // Track[TrackKey].Gauge(gauge);
+            Check(
+                ExecParse("BveTs Map 2.02\n0;Track['TrackKey'].Gauge(1.0);"),
+                new MapData(
+                    version: "2.02",
+                    syntaxes: new List<SyntaxData>()
+                    {
+                        new SyntaxData(0, "track", "TrackKey", "gauge").SetArg("gauge", 1.0)
+                    }));
+        }
+
+        /// <summary>
         /// Track[TrackKey].Cant.Setcenter(X);
         /// </summary>
         [Fact]
@@ -548,6 +630,34 @@ namespace Bve5_ParsingTests
                     syntaxes: new List<SyntaxData>()
                     {
                         new SyntaxData(0, "track", "cant", "TrackKey", "interpolate").SetArg("cant", 1.0)
+                    }));
+        }
+
+        /// <summary>
+        /// Track[TrackKey].Cant(Cant?);
+        /// </summary>
+        [Fact]
+        public void TrackCantTest()
+        {
+
+            // Track[TrackKey].Cant();
+            Check(
+                ExecParse("BveTs Map 2.02\n0;Track['TrackKey'].Cant();"),
+                new MapData(
+                    version: "2.02",
+                    syntaxes: new List<SyntaxData>()
+                    {
+                        new SyntaxData(0, "track", "TrackKey", "cant")
+                    }));
+
+            // Track[TrackKey].Cant(cant);
+            Check(
+                ExecParse("BveTs Map 2.02\n0;Track['TrackKey'].Cant(1.0);"),
+                new MapData(
+                    version: "2.02",
+                    syntaxes: new List<SyntaxData>()
+                    {
+                        new SyntaxData(0, "track", "TrackKey", "cant").SetArg("cant", 1.0)
                     }));
         }
 
@@ -745,6 +855,19 @@ namespace Bve5_ParsingTests
         }
 
         /// <summary>
+        /// Section.Beginnew();
+        /// </summary>
+        [Fact]
+        public void SectionBeginnewTest()
+        {
+            /*
+             * THIS TEST IS SKIPPED.
+             * この構文のテストは諸事情によりテストの自動生成から外されました。
+             * Section.Beginnew()構文のテストは手動で作成してください。
+             */
+        }
+
+        /// <summary>
         /// Section.Setspeedlimit();
         /// </summary>
         [Fact]
@@ -754,6 +877,19 @@ namespace Bve5_ParsingTests
              * THIS TEST IS SKIPPED.
              * この構文のテストは諸事情によりテストの自動生成から外されました。
              * Section.Setspeedlimit()構文のテストは手動で作成してください。
+             */
+        }
+
+        /// <summary>
+        /// Signal.Speedlimit();
+        /// </summary>
+        [Fact]
+        public void SignalSpeedlimitTest()
+        {
+            /*
+             * THIS TEST IS SKIPPED.
+             * この構文のテストは諸事情によりテストの自動生成から外されました。
+             * Signal.Speedlimit()構文のテストは手動で作成してください。
              */
         }
 
@@ -900,6 +1036,19 @@ namespace Bve5_ParsingTests
         }
 
         /// <summary>
+        /// Fog.Set(Density?, Red?, Green?, Blue?);
+        /// </summary>
+        [Fact]
+        public void FogSetTest()
+        {
+            /*
+             * THIS TEST IS SKIPPED.
+             * この構文のテストは諸事情によりテストの自動生成から外されました。
+             * Fog.Set(Density?, Red?, Green?, Blue?)構文のテストは手動で作成してください。
+             */
+        }
+
+        /// <summary>
         /// Drawdistance.Change(Value);
         /// </summary>
         [Fact]
@@ -942,6 +1091,34 @@ namespace Bve5_ParsingTests
                     syntaxes: new List<SyntaxData>()
                     {
                         new SyntaxData(0, "cabilluminance", "interpolate").SetArg("value", 1.0)
+                    }));
+        }
+
+        /// <summary>
+        /// Cabilluminance.Set(Value?);
+        /// </summary>
+        [Fact]
+        public void CabilluminanceSetTest()
+        {
+
+            // Cabilluminance.Set();
+            Check(
+                ExecParse("BveTs Map 2.02\n0;Cabilluminance.Set();"),
+                new MapData(
+                    version: "2.02",
+                    syntaxes: new List<SyntaxData>()
+                    {
+                        new SyntaxData(0, "cabilluminance", "set")
+                    }));
+
+            // Cabilluminance.Set(value);
+            Check(
+                ExecParse("BveTs Map 2.02\n0;Cabilluminance.Set(1.0);"),
+                new MapData(
+                    version: "2.02",
+                    syntaxes: new List<SyntaxData>()
+                    {
+                        new SyntaxData(0, "cabilluminance", "set").SetArg("value", 1.0)
                     }));
         }
 
@@ -1116,16 +1293,11 @@ namespace Bve5_ParsingTests
         [Fact]
         public void TrainLoadTest()
         {
-
-            // Train[TrainKey].Load(filepath, trackkey, direction);
-            Check(
-                ExecParse("BveTs Map 2.02\n0;Train['TrainKey'].Load(1.0, 1.0, 1.0);"),
-                new MapData(
-                    version: "2.02",
-                    syntaxes: new List<SyntaxData>()
-                    {
-                        new SyntaxData(0, "train", "TrainKey", "load").SetArg("filepath", 1.0).SetArg("trackkey", 1.0).SetArg("direction", 1.0)
-                    }));
+            /*
+             * THIS TEST IS SKIPPED.
+             * この構文のテストは諸事情によりテストの自動生成から外されました。
+             * Train[TrainKey].Load(FilePath, TrackKey, Direction)構文のテストは手動で作成してください。
+             */
         }
 
         /// <summary>

@@ -13,6 +13,19 @@
     },
     {
       "elem": "Curve",
+      "func": "Gauge",
+      "deprecated": "true",
+      "inheritance": "CurveSetgaugeNode",
+      "args": [
+        {
+          "name": "Value",
+          "desc": "軌間 [m]",
+          "opt": false
+        }
+      ]
+    },
+    {
+      "elem": "Curve",
       "func": "Setcenter",
       "args": [
         {
@@ -42,6 +55,24 @@
     {
       "elem": "Curve",
       "func": "Begin",
+      "args": [
+        {
+          "name": "Radius",
+          "desc": "曲線半径 [m] (正: 右曲線, 負: 左曲線)",
+          "opt": false
+        },
+        {
+          "name": "Cant",
+          "desc": "カント [m]",
+          "opt": true
+        }
+      ]
+    },
+    {
+      "elem": "Curve",
+      "func": "Begincircular",
+      "deprecated": true,
+      "inheritance": "CurveBeginNode",
       "args": [
         {
           "name": "Radius",
@@ -97,6 +128,19 @@
     {
       "elem": "Gradient",
       "func": "Begin",
+      "args": [
+        {
+          "name": "Gradient",
+          "desc": "勾配 [‰]",
+          "opt": false
+        }
+      ]
+    },
+    {
+      "elem": "Gradient",
+      "func": "Beginconst",
+      "deprecated": true,
+      "inheritance": "GradientBeginNode",
       "args": [
         {
           "name": "Gradient",
@@ -200,6 +244,20 @@
     },
     {
       "elem": "Track",
+      "key": "TrackKey",
+      "func": "Gauge",
+      "deprecated": true,
+      "inheritance": "TrackCantSetgaugeNode",
+      "args": [
+        {
+          "name": "Gauge",
+          "desc": "軌間 [m]",
+          "opt": false
+        }
+      ]
+    },
+    {
+      "elem": "Track",
       "elem2": "Cant",
       "key": "TrackKey",
       "func": "Setcenter",
@@ -267,8 +325,23 @@
       ]
     },
     {
+      "elem": "Track",
+      "key": "TrackKey",
+      "func": "Cant",
+      "deprecated": true,
+      "inheritance": "TrackCantInterpolateNode",
+      "args": [
+        {
+          "name": "Cant",
+          "desc": "カント [m] (正: 右に傾ける, 負: 左に傾ける)",
+          "opt": true
+        }
+      ]
+    },
+    {
       "elem": "Structure",
       "func": "Load",
+      "skip_test": true,
       "args": [
         {
           "name": "FilePath",
@@ -480,6 +553,7 @@
     {
       "elem": "Station",
       "func": "Load",
+      "skip_test": true,
       "args": [
         {
           "name": "FilePath",
@@ -514,6 +588,17 @@
       "_comment": "signalに関しては手動で対応する。",
       "elem": "Section",
       "func": "Begin",
+      "skip_test": true,
+      "args": [
+      ]
+    },
+    {
+      "_comment": "signalに関しては手動で対応する。",
+      "elem": "Section",
+      "func": "Beginnew",
+      "skip_test": true,
+      "deprecated": true,
+      "inheritance": "SectionBeginNode",
       "args": [
       ]
     },
@@ -521,12 +606,24 @@
       "_comment": "vに関しては手動で対応する。",
       "elem": "Section",
       "func": "Setspeedlimit",
+      "skip_test": true,
+      "args": [
+      ]
+    },
+    {
+      "_comment": "vに関しては手動で対応する。",
+      "elem": "Signal",
+      "func": "Speedlimit",
+      "skip_test": true,
+      "deprecated": true,
+      "inheritance": "SectionSetspeedlimitNode",
       "args": [
       ]
     },
     {
       "elem": "Signal",
       "func": "Load",
+      "skip_test": true,
       "args": [
         {
           "name": "FilePath",
@@ -539,6 +636,7 @@
       "elem": "Signal",
       "key": "SignalAspectKey",
       "func": "Put",
+      "skip_test": true,
       "args": [
         {
           "name": "Section",
@@ -633,6 +731,7 @@
     {
       "elem": "Pretrain",
       "func": "Pass",
+      "skip_test": true,
       "args": [
         {
           "name": "Time",
@@ -691,6 +790,36 @@
     {
       "elem": "Fog",
       "func": "Interpolate",
+      "skip_test": true,
+      "args": [
+        {
+          "name": "Density",
+          "desc": "濃度",
+          "opt": true
+        },
+        {
+          "name": "Red",
+          "desc": "赤成分 (0 ~ 1)",
+          "opt": true
+        },
+        {
+          "name": "Green",
+          "desc": "緑成分 (0 ~ 1)",
+          "opt": true
+        },
+        {
+          "name": "Blue",
+          "desc": "青成分 (0 ~ 1)",
+          "opt": true
+        }
+      ]
+    },
+    {
+      "elem": "Fog",
+      "func": "Set",
+      "skip_test": true,
+      "deprecated": true,
+      "inheritance": "FogInterpolateNode",
       "args": [
         {
           "name": "Density",
@@ -728,6 +857,19 @@
     {
       "elem": "Cabilluminance",
       "func": "Interpolate",
+      "args": [
+        {
+          "name": "Value",
+          "desc": "昼間画像と夜間画像の混合比 (0: 夜間画像 ~ 1: 昼間画像)",
+          "opt": true
+        }
+      ]
+    },
+    {
+      "elem": "Cabilluminance",
+      "func": "Set",
+      "deprecated": true,
+      "inheritance": "CabilluminanceInterpolateNode",
       "args": [
         {
           "name": "Value",
@@ -775,6 +917,7 @@
     {
       "elem": "Adhesion",
       "func": "Change",
+      "skip_test": true,
       "args": [
         {
           "name": "A",
@@ -796,6 +939,7 @@
     {
       "elem": "Sound",
       "func": "Load",
+      "skip_test": true,
       "args": [
         {
           "name": "FilePath",
@@ -814,6 +958,7 @@
     {
       "elem": "Sound3d",
       "func": "Load",
+      "skip_test": true,
       "args": [
         {
           "name": "FilePath",
@@ -902,6 +1047,7 @@
       "elem": "Train",
       "key": "TrainKey",
       "func": "Load",
+      "skip_test": true,
       "args": [
         {
           "name": "FilePath",
@@ -924,6 +1070,7 @@
       "elem": "Train",
       "key": "TrainKey",
       "func": "Enable",
+      "skip_test": true,
       "args": [
         {
           "name": "Time",

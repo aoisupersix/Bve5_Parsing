@@ -244,6 +244,30 @@ namespace Bve5_Parsing.MapGrammar
             return syntax;
         }
 
+        public override object Visit(SectionBeginnewNode node)
+        {
+            // Section.BeginNewは手動対応
+            var syntax = node.CreateSyntaxData(this, NowDistance);
+            for (var i = 0; i < node.SignalIndexes.Count(); i++)
+            {
+                syntax.SetArg($"signal{i}", Visit(node.SignalIndexes.ElementAt(i)));
+            }
+
+            return syntax;
+        }
+
+        public override object Visit(SignalSpeedlimitNode node)
+        {
+            //Signal.Setspeedlimitは手動対応
+            var syntax = node.CreateSyntaxData(this, NowDistance);
+            for (var i = 0; i < node.SpeedLimits.Count(); i++)
+            {
+                syntax.SetArg($"v{i}", Visit(node.SpeedLimits.ElementAt(i)));
+            }
+
+            return syntax;
+        }
+
         public override object Visit(IncludeNode node)
         {
             // Includeディレクティブは仮対応
@@ -496,6 +520,42 @@ namespace Bve5_Parsing.MapGrammar
         }
 
         public override object Visit(TrainStopNode node)
+        {
+            return node.CreateSyntaxData(this, NowDistance);
+        }
+
+
+        public override object Visit(CurveGaugeNode node)
+        {
+            return node.CreateSyntaxData(this, NowDistance);
+        }
+
+        public override object Visit(CurveBegincircularNode node)
+        {
+            return node.CreateSyntaxData(this, NowDistance);
+        }
+
+        public override object Visit(GradientBeginconstNode node)
+        {
+            return node.CreateSyntaxData(this, NowDistance);
+        }
+
+        public override object Visit(TrackGaugeNode node)
+        {
+            return node.CreateSyntaxData(this, NowDistance);
+        }
+
+        public override object Visit(TrackCantNode node)
+        {
+            return node.CreateSyntaxData(this, NowDistance);
+        }
+
+        public override object Visit(FogSetNode node)
+        {
+            return node.CreateSyntaxData(this, NowDistance);
+        }
+
+        public override object Visit(CabilluminanceSetNode node)
         {
             return node.CreateSyntaxData(this, NowDistance);
         }

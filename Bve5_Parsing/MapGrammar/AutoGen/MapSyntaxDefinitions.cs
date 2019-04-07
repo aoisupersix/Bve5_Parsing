@@ -168,6 +168,12 @@ namespace Bve5_Parsing.MapGrammar {
         Setgauge,
 
         /// <summary>
+        /// Gauge（Gauge）
+        /// </summary>
+        [StringValue("Gauge")]
+        Gauge,
+
+        /// <summary>
         /// Setcenter（Setcenter）
         /// </summary>
         [StringValue("Setcenter")]
@@ -192,6 +198,12 @@ namespace Bve5_Parsing.MapGrammar {
         Begin,
 
         /// <summary>
+        /// Begincircular（Begincircular）
+        /// </summary>
+        [StringValue("Begincircular")]
+        Begincircular,
+
+        /// <summary>
         /// End（End）
         /// </summary>
         [StringValue("End")]
@@ -208,6 +220,12 @@ namespace Bve5_Parsing.MapGrammar {
         /// </summary>
         [StringValue("Change")]
         Change,
+
+        /// <summary>
+        /// Beginconst（Beginconst）
+        /// </summary>
+        [StringValue("Beginconst")]
+        Beginconst,
 
         /// <summary>
         /// X_Interpolate（X.Interpolate）
@@ -270,6 +288,12 @@ namespace Bve5_Parsing.MapGrammar {
         Cant_Interpolate,
 
         /// <summary>
+        /// Cant（Cant）
+        /// </summary>
+        [StringValue("Cant")]
+        Cant,
+
+        /// <summary>
         /// Load（Load）
         /// </summary>
         [StringValue("Load")]
@@ -300,10 +324,22 @@ namespace Bve5_Parsing.MapGrammar {
         Begin0,
 
         /// <summary>
+        /// Beginnew（Beginnew）
+        /// </summary>
+        [StringValue("Beginnew")]
+        Beginnew,
+
+        /// <summary>
         /// Setspeedlimit（Setspeedlimit）
         /// </summary>
         [StringValue("Setspeedlimit")]
         Setspeedlimit,
+
+        /// <summary>
+        /// Speedlimit（Speedlimit）
+        /// </summary>
+        [StringValue("Speedlimit")]
+        Speedlimit,
 
         /// <summary>
         /// Pass（Pass）
@@ -322,6 +358,12 @@ namespace Bve5_Parsing.MapGrammar {
         /// </summary>
         [StringValue("Diffuse")]
         Diffuse,
+
+        /// <summary>
+        /// Set（Set）
+        /// </summary>
+        [StringValue("Set")]
+        Set,
 
         /// <summary>
         /// Play（Play）
