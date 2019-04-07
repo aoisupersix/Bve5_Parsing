@@ -63,6 +63,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         public DistanceNode(IToken start, IToken stop): base(start, stop) { }
     }
 
+    /// <summary>
+    /// Includeディレクティブノード
+    /// </summary>
+    public class IncludeNode : MapGrammarAstNodes
+    {
+        public MapGrammarAstNodes FilePath { get; set; }
+
+        public IncludeNode(IToken start, IToken stop) : base(start, stop) { }
+    }
+
     #region ステートメント AST Nodes
 
     /// <summary>
@@ -275,6 +285,22 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     }
 
     /// <summary>
+    /// Repeater.Begin0の手動対応
+    /// 可変長のstructureKeyへ対応する
+    /// </summary>
+    public partial class RepeaterBegin0Node
+    {
+        protected List<MapGrammarAstNodes> _structureKeys = new List<MapGrammarAstNodes>();
+
+        public IReadOnlyCollection<MapGrammarAstNodes> StructureKeys => _structureKeys.AsReadOnly();
+
+        public void AddStructureKey(MapGrammarAstNodes strKey)
+        {
+            _structureKeys.Add(strKey);
+        }
+    }
+
+    /// <summary>
     /// Section.Beginの手動対応
     /// 可変長のsignalIndexへ対応する
     /// </summary>
@@ -282,11 +308,28 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     {
         protected List<MapGrammarAstNodes> _signalIndexes = new List<MapGrammarAstNodes>();
 
-        public IReadOnlyCollection<MapGrammarAstNodes> StructureKeys => _signalIndexes.AsReadOnly();
+        public IReadOnlyCollection<MapGrammarAstNodes> SignalIndexes => _signalIndexes.AsReadOnly();
 
         public void AddSignalIndex(MapGrammarAstNodes sigIdx)
         {
             _signalIndexes.Add(sigIdx);
+        }
+    }
+
+    /// <summary>
+    /// Section.Setspeedlimitの手動対応
+    /// 可変長の速度制限へ対応する
+    /// </summary>
+    public partial class SectionSetspeedlimitNode
+    {
+        protected List<MapGrammarAstNodes> _speedLimits = new List<MapGrammarAstNodes>();
+
+        public IReadOnlyCollection<MapGrammarAstNodes> SpeedLimits => _speedLimits.AsReadOnly();
+
+        // TODO: NULLの可能性もある
+        public void AddSpeedLimit(MapGrammarAstNodes spdLmt)
+        {
+            _speedLimits.Add(spdLmt);
         }
     }
 

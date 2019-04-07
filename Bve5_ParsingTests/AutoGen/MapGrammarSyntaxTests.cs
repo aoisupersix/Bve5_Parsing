@@ -784,7 +784,7 @@ namespace Bve5_ParsingTests
         }
 
         /// <summary>
-        /// Beacon.Put(Type, Section, SendData);
+        /// Beacon.Put(Type, Section, Senddata);
         /// </summary>
         [Fact]
         public void BeaconPutTest()

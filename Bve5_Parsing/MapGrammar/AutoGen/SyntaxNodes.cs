@@ -1520,7 +1520,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     }
 
     /// <summary>
-    /// Beacon.Put(Type, Section, SendData);
+    /// Beacon.Put(Type, Section, Senddata);
     /// </summary>
     public partial class BeaconPutNode : SyntaxNode
     {
@@ -1555,7 +1555,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// 引数：保安装置に送る値 (整数)
         /// </summary>
         [Argument]
-        public MapGrammarAstNodes SendData { get; set; }
+        public MapGrammarAstNodes Senddata { get; set; }
         #endregion Args
 
         /// <summary>

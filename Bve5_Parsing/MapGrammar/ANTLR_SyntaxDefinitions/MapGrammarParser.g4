@@ -137,7 +137,7 @@ signal :
 
 //ínè„éq
 beacon :
-	DOT func=PUT OPN_PAR type=nullableExpr COMMA sectionArgs=nullableExpr COMMA sendData=nullableExpr CLS_PAR
+	DOT func=PUT OPN_PAR type=nullableExpr COMMA sectionArgs=nullableExpr COMMA senddata=nullableExpr CLS_PAR
 	;
 
 //ë¨ìxêßå¿

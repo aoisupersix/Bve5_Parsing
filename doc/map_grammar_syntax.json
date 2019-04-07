@@ -607,7 +607,7 @@
           "opt": false
         },
         {
-          "name": "SendData",
+          "name": "Senddata",
           "desc": "保安装置に送る値 (整数)",
           "opt": false
         }

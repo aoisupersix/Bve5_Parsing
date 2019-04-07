@@ -24,6 +24,7 @@ namespace Bve5_Parsing.MapGrammar
         public abstract T Visit(Syntax2Node node);
         public abstract T Visit(Syntax3Node node);
         public abstract T Visit(LoadListNode node);
+        public abstract T Visit(IncludeNode node);
         public abstract T Visit(VarAssignNode node);
         public abstract T Visit(AdditionNode node);
         public abstract T Visit(SubtractionNode node);

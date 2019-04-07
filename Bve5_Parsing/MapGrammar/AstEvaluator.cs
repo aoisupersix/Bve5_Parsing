@@ -91,8 +91,6 @@ namespace Bve5_Parsing.MapGrammar
             return null;
         }
 
-        #region 構文ノードの評価
-
         /// <summary>
         /// 構文タイプ1の評価
         /// </summary>
@@ -166,6 +164,7 @@ namespace Bve5_Parsing.MapGrammar
             return returnData;
         }
 
+        #region リストファイルロード構文
         public override object Visit(StructureLoadNode node)
         {
             evaluateData.StructureListPath = Visit(node.FilePath).ToString();
@@ -195,8 +194,67 @@ namespace Bve5_Parsing.MapGrammar
             evaluateData.Sound3DListPath = Visit(node.FilePath).ToString();
             return null;
         }
+        #endregion
 
-        #region 構文
+        public override object Visit(RepeaterBeginNode node)
+        {
+            //Repeater.Beginは手動対応
+            var syntax = node.CreateSyntaxData(this, NowDistance);
+            for(var i = 0; i < node.StructureKeys.Count(); i++)
+            {
+                syntax.SetArg($"structurekey{i + 1}", Visit(node.StructureKeys.ElementAt(i)));
+            }
+
+            return syntax;
+        }
+
+        public override object Visit(RepeaterBegin0Node node)
+        {
+            //Repeater.Begin0は手動対応
+            var syntax = node.CreateSyntaxData(this, NowDistance);
+            for (var i = 0; i < node.StructureKeys.Count(); i++)
+            {
+                syntax.SetArg($"structurekey{i + 1}", Visit(node.StructureKeys.ElementAt(i)));
+            }
+
+            return syntax;
+        }
+
+        public override object Visit(SectionBeginNode node)
+        {
+            // Section.Beginは手動対応
+            var syntax = node.CreateSyntaxData(this, NowDistance);
+            for (var i = 0; i < node.SignalIndexes.Count(); i++)
+            {
+                syntax.SetArg($"signal{i}", Visit(node.SignalIndexes.ElementAt(i)));
+            }
+
+            return syntax;
+        }
+
+        public override object Visit(SectionSetspeedlimitNode node)
+        {
+            //Section.Setspeedlimitは手動対応
+            var syntax = node.CreateSyntaxData(this, NowDistance);
+            for (var i = 0; i < node.SpeedLimits.Count(); i++)
+            {
+                syntax.SetArg($"v{i}", Visit(node.SpeedLimits.ElementAt(i)));
+            }
+
+            return syntax;
+        }
+
+        public override object Visit(IncludeNode node)
+        {
+            // Includeディレクティブは仮対応
+            // 無理やりSyntaxDataに入れておく
+            var syntax = new SyntaxData(NowDistance, "include", "");
+            syntax.SetArg("FilePath", Visit(node.FilePath));
+
+            return syntax;
+        }
+
+        #region 自動生成構文
         public override object Visit(CurveSetgaugeNode node)
         {
             return node.CreateSyntaxData(this, NowDistance);
@@ -322,16 +380,6 @@ namespace Bve5_Parsing.MapGrammar
             return node.CreateSyntaxData(this, NowDistance);
         }
 
-        public override object Visit(RepeaterBeginNode node)
-        {
-            return node.CreateSyntaxData(this, NowDistance);
-        }
-
-        public override object Visit(RepeaterBegin0Node node)
-        {
-            return node.CreateSyntaxData(this, NowDistance);
-        }
-
         public override object Visit(RepeaterEndNode node)
         {
             return node.CreateSyntaxData(this, NowDistance);
@@ -343,16 +391,6 @@ namespace Bve5_Parsing.MapGrammar
         }
 
         public override object Visit(StationPutNode node)
-        {
-            return node.CreateSyntaxData(this, NowDistance);
-        }
-
-        public override object Visit(SectionBeginNode node)
-        {
-            return node.CreateSyntaxData(this, NowDistance);
-        }
-
-        public override object Visit(SectionSetspeedlimitNode node)
         {
             return node.CreateSyntaxData(this, NowDistance);
         }
@@ -461,7 +499,7 @@ namespace Bve5_Parsing.MapGrammar
         {
             return node.CreateSyntaxData(this, NowDistance);
         }
-        #endregion 構文
+        #endregion
 
         /// <summary>
         /// リストファイルノードの評価
@@ -478,8 +516,6 @@ namespace Bve5_Parsing.MapGrammar
 
             return null;
         }
-
-        #endregion
 
         /// <summary>
         /// 変数宣言ノードの評価
