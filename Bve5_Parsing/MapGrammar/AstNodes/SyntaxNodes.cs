@@ -16,12 +16,12 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// マップ要素名
         /// </summary>
-        public override string ElementName => "Curve";
+        public override MapElementName ElementName => MapElementName.Curve;
 
         /// <summary>
         /// 関数名
         /// </summary>
-        public override string FunctionName => "Setgauge";
+        public override MapFunctionName FunctionName => MapFunctionName.Setgauge;
         #endregion SyntaxInfo
 
         #region Args
@@ -50,12 +50,12 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// マップ要素名
         /// </summary>
-        public override string ElementName => "Curve";
+        public override MapElementName ElementName => MapElementName.Curve;
 
         /// <summary>
         /// 関数名
         /// </summary>
-        public override string FunctionName => "Setcenter";
+        public override MapFunctionName FunctionName => MapFunctionName.Setcenter;
         #endregion SyntaxInfo
 
         #region Args
@@ -84,12 +84,12 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// マップ要素名
         /// </summary>
-        public override string ElementName => "Curve";
+        public override MapElementName ElementName => MapElementName.Curve;
 
         /// <summary>
         /// 関数名
         /// </summary>
-        public override string FunctionName => "Setfunction";
+        public override MapFunctionName FunctionName => MapFunctionName.Setfunction;
         #endregion SyntaxInfo
 
         #region Args
@@ -118,12 +118,12 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// マップ要素名
         /// </summary>
-        public override string ElementName => "Curve";
+        public override MapElementName ElementName => MapElementName.Curve;
 
         /// <summary>
         /// 関数名
         /// </summary>
-        public override string FunctionName => "Begin";
+        public override MapFunctionName FunctionName => MapFunctionName.Begin;
         #endregion SyntaxInfo
 
         #region Args
@@ -157,12 +157,12 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// マップ要素名
         /// </summary>
-        public override string ElementName => "Curve";
+        public override MapElementName ElementName => MapElementName.Curve;
 
         /// <summary>
         /// 関数名
         /// </summary>
-        public override string FunctionName => "End";
+        public override MapFunctionName FunctionName => MapFunctionName.End;
         #endregion SyntaxInfo
 
 
@@ -184,12 +184,12 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// マップ要素名
         /// </summary>
-        public override string ElementName => "Curve";
+        public override MapElementName ElementName => MapElementName.Curve;
 
         /// <summary>
         /// 関数名
         /// </summary>
-        public override string FunctionName => "Interpolate";
+        public override MapFunctionName FunctionName => MapFunctionName.Interpolate;
         #endregion SyntaxInfo
 
         #region Args
@@ -223,12 +223,12 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// マップ要素名
         /// </summary>
-        public override string ElementName => "Curve";
+        public override MapElementName ElementName => MapElementName.Curve;
 
         /// <summary>
         /// 関数名
         /// </summary>
-        public override string FunctionName => "Change";
+        public override MapFunctionName FunctionName => MapFunctionName.Change;
         #endregion SyntaxInfo
 
         #region Args
@@ -257,12 +257,12 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// マップ要素名
         /// </summary>
-        public override string ElementName => "Gradient";
+        public override MapElementName ElementName => MapElementName.Gradient;
 
         /// <summary>
         /// 関数名
         /// </summary>
-        public override string FunctionName => "Begintransition";
+        public override MapFunctionName FunctionName => MapFunctionName.Begintransition;
         #endregion SyntaxInfo
 
 
@@ -284,12 +284,12 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// マップ要素名
         /// </summary>
-        public override string ElementName => "Gradient";
+        public override MapElementName ElementName => MapElementName.Gradient;
 
         /// <summary>
         /// 関数名
         /// </summary>
-        public override string FunctionName => "Begin";
+        public override MapFunctionName FunctionName => MapFunctionName.Begin;
         #endregion SyntaxInfo
 
         #region Args
@@ -318,12 +318,12 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// マップ要素名
         /// </summary>
-        public override string ElementName => "Gradient";
+        public override MapElementName ElementName => MapElementName.Gradient;
 
         /// <summary>
         /// 関数名
         /// </summary>
-        public override string FunctionName => "End";
+        public override MapFunctionName FunctionName => MapFunctionName.End;
         #endregion SyntaxInfo
 
 
@@ -345,12 +345,12 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// マップ要素名
         /// </summary>
-        public override string ElementName => "Gradient";
+        public override MapElementName ElementName => MapElementName.Gradient;
 
         /// <summary>
         /// 関数名
         /// </summary>
-        public override string FunctionName => "Interpolate";
+        public override MapFunctionName FunctionName => MapFunctionName.Interpolate;
         #endregion SyntaxInfo
 
         #region Args
@@ -379,12 +379,12 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// マップ要素名
         /// </summary>
-        public override string ElementName => "Track";
+        public override MapElementName ElementName => MapElementName.Track;
 
         /// <summary>
         /// 関数名
         /// </summary>
-        public override string FunctionName => "X_Interpolate";
+        public override MapFunctionName FunctionName => MapFunctionName.X_Interpolate;
         #endregion SyntaxInfo
 
         /// <summary>
@@ -422,12 +422,12 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// マップ要素名
         /// </summary>
-        public override string ElementName => "Track";
+        public override MapElementName ElementName => MapElementName.Track;
 
         /// <summary>
         /// 関数名
         /// </summary>
-        public override string FunctionName => "Y_Interpolate";
+        public override MapFunctionName FunctionName => MapFunctionName.Y_Interpolate;
         #endregion SyntaxInfo
 
         /// <summary>
@@ -465,12 +465,12 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// マップ要素名
         /// </summary>
-        public override string ElementName => "Track";
+        public override MapElementName ElementName => MapElementName.Track;
 
         /// <summary>
         /// 関数名
         /// </summary>
-        public override string FunctionName => "Position";
+        public override MapFunctionName FunctionName => MapFunctionName.Position;
         #endregion SyntaxInfo
 
         /// <summary>
@@ -518,12 +518,12 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// マップ要素名
         /// </summary>
-        public override string ElementName => "Track";
+        public override MapElementName ElementName => MapElementName.Track;
 
         /// <summary>
         /// 関数名
         /// </summary>
-        public override string FunctionName => "Cant_Setgauge";
+        public override MapFunctionName FunctionName => MapFunctionName.Cant_Setgauge;
         #endregion SyntaxInfo
 
         /// <summary>
@@ -556,12 +556,12 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// マップ要素名
         /// </summary>
-        public override string ElementName => "Track";
+        public override MapElementName ElementName => MapElementName.Track;
 
         /// <summary>
         /// 関数名
         /// </summary>
-        public override string FunctionName => "Cant_Setcenter";
+        public override MapFunctionName FunctionName => MapFunctionName.Cant_Setcenter;
         #endregion SyntaxInfo
 
         /// <summary>
@@ -594,12 +594,12 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// マップ要素名
         /// </summary>
-        public override string ElementName => "Track";
+        public override MapElementName ElementName => MapElementName.Track;
 
         /// <summary>
         /// 関数名
         /// </summary>
-        public override string FunctionName => "Cant_Setfunction";
+        public override MapFunctionName FunctionName => MapFunctionName.Cant_Setfunction;
         #endregion SyntaxInfo
 
         /// <summary>
@@ -632,12 +632,12 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// マップ要素名
         /// </summary>
-        public override string ElementName => "Track";
+        public override MapElementName ElementName => MapElementName.Track;
 
         /// <summary>
         /// 関数名
         /// </summary>
-        public override string FunctionName => "Cant_Begintransition";
+        public override MapFunctionName FunctionName => MapFunctionName.Cant_Begintransition;
         #endregion SyntaxInfo
 
         /// <summary>
@@ -663,12 +663,12 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// マップ要素名
         /// </summary>
-        public override string ElementName => "Track";
+        public override MapElementName ElementName => MapElementName.Track;
 
         /// <summary>
         /// 関数名
         /// </summary>
-        public override string FunctionName => "Cant_Begin";
+        public override MapFunctionName FunctionName => MapFunctionName.Cant_Begin;
         #endregion SyntaxInfo
 
         /// <summary>
@@ -701,12 +701,12 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// マップ要素名
         /// </summary>
-        public override string ElementName => "Track";
+        public override MapElementName ElementName => MapElementName.Track;
 
         /// <summary>
         /// 関数名
         /// </summary>
-        public override string FunctionName => "Cant_End";
+        public override MapFunctionName FunctionName => MapFunctionName.Cant_End;
         #endregion SyntaxInfo
 
         /// <summary>
@@ -732,12 +732,12 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// マップ要素名
         /// </summary>
-        public override string ElementName => "Track";
+        public override MapElementName ElementName => MapElementName.Track;
 
         /// <summary>
         /// 関数名
         /// </summary>
-        public override string FunctionName => "Cant_Interpolate";
+        public override MapFunctionName FunctionName => MapFunctionName.Cant_Interpolate;
         #endregion SyntaxInfo
 
         /// <summary>
@@ -770,12 +770,12 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// マップ要素名
         /// </summary>
-        public override string ElementName => "Structure";
+        public override MapElementName ElementName => MapElementName.Structure;
 
         /// <summary>
         /// 関数名
         /// </summary>
-        public override string FunctionName => "Load";
+        public override MapFunctionName FunctionName => MapFunctionName.Load;
         #endregion SyntaxInfo
 
         #region Args
@@ -804,12 +804,12 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// マップ要素名
         /// </summary>
-        public override string ElementName => "Structure";
+        public override MapElementName ElementName => MapElementName.Structure;
 
         /// <summary>
         /// 関数名
         /// </summary>
-        public override string FunctionName => "Put";
+        public override MapFunctionName FunctionName => MapFunctionName.Put;
         #endregion SyntaxInfo
 
         /// <summary>
@@ -882,12 +882,12 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// マップ要素名
         /// </summary>
-        public override string ElementName => "Structure";
+        public override MapElementName ElementName => MapElementName.Structure;
 
         /// <summary>
         /// 関数名
         /// </summary>
-        public override string FunctionName => "Put0";
+        public override MapFunctionName FunctionName => MapFunctionName.Put0;
         #endregion SyntaxInfo
 
         /// <summary>
@@ -930,12 +930,12 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// マップ要素名
         /// </summary>
-        public override string ElementName => "Structure";
+        public override MapElementName ElementName => MapElementName.Structure;
 
         /// <summary>
         /// 関数名
         /// </summary>
-        public override string FunctionName => "Putbetween";
+        public override MapFunctionName FunctionName => MapFunctionName.Putbetween;
         #endregion SyntaxInfo
 
         /// <summary>
@@ -978,12 +978,12 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// マップ要素名
         /// </summary>
-        public override string ElementName => "Repeater";
+        public override MapElementName ElementName => MapElementName.Repeater;
 
         /// <summary>
         /// 関数名
         /// </summary>
-        public override string FunctionName => "Begin";
+        public override MapFunctionName FunctionName => MapFunctionName.Begin;
         #endregion SyntaxInfo
 
         /// <summary>
@@ -1061,12 +1061,12 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// マップ要素名
         /// </summary>
-        public override string ElementName => "Repeater";
+        public override MapElementName ElementName => MapElementName.Repeater;
 
         /// <summary>
         /// 関数名
         /// </summary>
-        public override string FunctionName => "Begin0";
+        public override MapFunctionName FunctionName => MapFunctionName.Begin0;
         #endregion SyntaxInfo
 
         /// <summary>
@@ -1114,12 +1114,12 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// マップ要素名
         /// </summary>
-        public override string ElementName => "Repeater";
+        public override MapElementName ElementName => MapElementName.Repeater;
 
         /// <summary>
         /// 関数名
         /// </summary>
-        public override string FunctionName => "End";
+        public override MapFunctionName FunctionName => MapFunctionName.End;
         #endregion SyntaxInfo
 
         /// <summary>
@@ -1145,12 +1145,12 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// マップ要素名
         /// </summary>
-        public override string ElementName => "Background";
+        public override MapElementName ElementName => MapElementName.Background;
 
         /// <summary>
         /// 関数名
         /// </summary>
-        public override string FunctionName => "Change";
+        public override MapFunctionName FunctionName => MapFunctionName.Change;
         #endregion SyntaxInfo
 
         #region Args
@@ -1179,12 +1179,12 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// マップ要素名
         /// </summary>
-        public override string ElementName => "Station";
+        public override MapElementName ElementName => MapElementName.Station;
 
         /// <summary>
         /// 関数名
         /// </summary>
-        public override string FunctionName => "Load";
+        public override MapFunctionName FunctionName => MapFunctionName.Load;
         #endregion SyntaxInfo
 
         #region Args
@@ -1213,12 +1213,12 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// マップ要素名
         /// </summary>
-        public override string ElementName => "Station";
+        public override MapElementName ElementName => MapElementName.Station;
 
         /// <summary>
         /// 関数名
         /// </summary>
-        public override string FunctionName => "Put";
+        public override MapFunctionName FunctionName => MapFunctionName.Put;
         #endregion SyntaxInfo
 
         /// <summary>
@@ -1261,12 +1261,12 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// マップ要素名
         /// </summary>
-        public override string ElementName => "Section";
+        public override MapElementName ElementName => MapElementName.Section;
 
         /// <summary>
         /// 関数名
         /// </summary>
-        public override string FunctionName => "Begin";
+        public override MapFunctionName FunctionName => MapFunctionName.Begin;
         #endregion SyntaxInfo
 
 
@@ -1288,12 +1288,12 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// マップ要素名
         /// </summary>
-        public override string ElementName => "Section";
+        public override MapElementName ElementName => MapElementName.Section;
 
         /// <summary>
         /// 関数名
         /// </summary>
-        public override string FunctionName => "Setspeedlimit";
+        public override MapFunctionName FunctionName => MapFunctionName.Setspeedlimit;
         #endregion SyntaxInfo
 
 
@@ -1315,12 +1315,12 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// マップ要素名
         /// </summary>
-        public override string ElementName => "Signal";
+        public override MapElementName ElementName => MapElementName.Signal;
 
         /// <summary>
         /// 関数名
         /// </summary>
-        public override string FunctionName => "Load";
+        public override MapFunctionName FunctionName => MapFunctionName.Load;
         #endregion SyntaxInfo
 
         #region Args
@@ -1349,12 +1349,12 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// マップ要素名
         /// </summary>
-        public override string ElementName => "Signal";
+        public override MapElementName ElementName => MapElementName.Signal;
 
         /// <summary>
         /// 関数名
         /// </summary>
-        public override string FunctionName => "Put";
+        public override MapFunctionName FunctionName => MapFunctionName.Put;
         #endregion SyntaxInfo
 
         /// <summary>
@@ -1432,12 +1432,12 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// マップ要素名
         /// </summary>
-        public override string ElementName => "Beacon";
+        public override MapElementName ElementName => MapElementName.Beacon;
 
         /// <summary>
         /// 関数名
         /// </summary>
-        public override string FunctionName => "Put";
+        public override MapFunctionName FunctionName => MapFunctionName.Put;
         #endregion SyntaxInfo
 
         #region Args
@@ -1476,12 +1476,12 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// マップ要素名
         /// </summary>
-        public override string ElementName => "Speedlimit";
+        public override MapElementName ElementName => MapElementName.Speedlimit;
 
         /// <summary>
         /// 関数名
         /// </summary>
-        public override string FunctionName => "Begin";
+        public override MapFunctionName FunctionName => MapFunctionName.Begin;
         #endregion SyntaxInfo
 
         #region Args
@@ -1510,12 +1510,12 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// マップ要素名
         /// </summary>
-        public override string ElementName => "Speedlimit";
+        public override MapElementName ElementName => MapElementName.Speedlimit;
 
         /// <summary>
         /// 関数名
         /// </summary>
-        public override string FunctionName => "End";
+        public override MapFunctionName FunctionName => MapFunctionName.End;
         #endregion SyntaxInfo
 
 
@@ -1537,12 +1537,12 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// マップ要素名
         /// </summary>
-        public override string ElementName => "Pretrain";
+        public override MapElementName ElementName => MapElementName.Pretrain;
 
         /// <summary>
         /// 関数名
         /// </summary>
-        public override string FunctionName => "Pass";
+        public override MapFunctionName FunctionName => MapFunctionName.Pass;
         #endregion SyntaxInfo
 
         #region Args
@@ -1576,12 +1576,12 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// マップ要素名
         /// </summary>
-        public override string ElementName => "Light";
+        public override MapElementName ElementName => MapElementName.Light;
 
         /// <summary>
         /// 関数名
         /// </summary>
-        public override string FunctionName => "Ambient";
+        public override MapFunctionName FunctionName => MapFunctionName.Ambient;
         #endregion SyntaxInfo
 
         #region Args
@@ -1620,12 +1620,12 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// マップ要素名
         /// </summary>
-        public override string ElementName => "Light";
+        public override MapElementName ElementName => MapElementName.Light;
 
         /// <summary>
         /// 関数名
         /// </summary>
-        public override string FunctionName => "Diffuse";
+        public override MapFunctionName FunctionName => MapFunctionName.Diffuse;
         #endregion SyntaxInfo
 
         #region Args
@@ -1664,12 +1664,12 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// マップ要素名
         /// </summary>
-        public override string ElementName => "Fog";
+        public override MapElementName ElementName => MapElementName.Fog;
 
         /// <summary>
         /// 関数名
         /// </summary>
-        public override string FunctionName => "Interpolate";
+        public override MapFunctionName FunctionName => MapFunctionName.Interpolate;
         #endregion SyntaxInfo
 
         #region Args
@@ -1713,12 +1713,12 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// マップ要素名
         /// </summary>
-        public override string ElementName => "Drawdistance";
+        public override MapElementName ElementName => MapElementName.Drawdistance;
 
         /// <summary>
         /// 関数名
         /// </summary>
-        public override string FunctionName => "Change";
+        public override MapFunctionName FunctionName => MapFunctionName.Change;
         #endregion SyntaxInfo
 
         #region Args
@@ -1747,12 +1747,12 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// マップ要素名
         /// </summary>
-        public override string ElementName => "Cabilluminance";
+        public override MapElementName ElementName => MapElementName.Cabilluminance;
 
         /// <summary>
         /// 関数名
         /// </summary>
-        public override string FunctionName => "Interpolate";
+        public override MapFunctionName FunctionName => MapFunctionName.Interpolate;
         #endregion SyntaxInfo
 
         #region Args
@@ -1781,12 +1781,12 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// マップ要素名
         /// </summary>
-        public override string ElementName => "Irregularity";
+        public override MapElementName ElementName => MapElementName.Irregularity;
 
         /// <summary>
         /// 関数名
         /// </summary>
-        public override string FunctionName => "Change";
+        public override MapFunctionName FunctionName => MapFunctionName.Change;
         #endregion SyntaxInfo
 
         #region Args
@@ -1840,12 +1840,12 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// マップ要素名
         /// </summary>
-        public override string ElementName => "Adhision";
+        public override MapElementName ElementName => MapElementName.Adhision;
 
         /// <summary>
         /// 関数名
         /// </summary>
-        public override string FunctionName => "Change";
+        public override MapFunctionName FunctionName => MapFunctionName.Change;
         #endregion SyntaxInfo
 
         #region Args
@@ -1884,12 +1884,12 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// マップ要素名
         /// </summary>
-        public override string ElementName => "Sound";
+        public override MapElementName ElementName => MapElementName.Sound;
 
         /// <summary>
         /// 関数名
         /// </summary>
-        public override string FunctionName => "Load";
+        public override MapFunctionName FunctionName => MapFunctionName.Load;
         #endregion SyntaxInfo
 
         #region Args
@@ -1918,12 +1918,12 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// マップ要素名
         /// </summary>
-        public override string ElementName => "Sound";
+        public override MapElementName ElementName => MapElementName.Sound;
 
         /// <summary>
         /// 関数名
         /// </summary>
-        public override string FunctionName => "Play";
+        public override MapFunctionName FunctionName => MapFunctionName.Play;
         #endregion SyntaxInfo
 
         /// <summary>
@@ -1949,12 +1949,12 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// マップ要素名
         /// </summary>
-        public override string ElementName => "Sound3d";
+        public override MapElementName ElementName => MapElementName.Sound3d;
 
         /// <summary>
         /// 関数名
         /// </summary>
-        public override string FunctionName => "Load";
+        public override MapFunctionName FunctionName => MapFunctionName.Load;
         #endregion SyntaxInfo
 
         #region Args
@@ -1983,12 +1983,12 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// マップ要素名
         /// </summary>
-        public override string ElementName => "Sound3d";
+        public override MapElementName ElementName => MapElementName.Sound3d;
 
         /// <summary>
         /// 関数名
         /// </summary>
-        public override string FunctionName => "Put";
+        public override MapFunctionName FunctionName => MapFunctionName.Put;
         #endregion SyntaxInfo
 
         /// <summary>
@@ -2026,12 +2026,12 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// マップ要素名
         /// </summary>
-        public override string ElementName => "Rollingnoise";
+        public override MapElementName ElementName => MapElementName.Rollingnoise;
 
         /// <summary>
         /// 関数名
         /// </summary>
-        public override string FunctionName => "Change";
+        public override MapFunctionName FunctionName => MapFunctionName.Change;
         #endregion SyntaxInfo
 
         #region Args
@@ -2060,12 +2060,12 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// マップ要素名
         /// </summary>
-        public override string ElementName => "Flangenoise";
+        public override MapElementName ElementName => MapElementName.Flangenoise;
 
         /// <summary>
         /// 関数名
         /// </summary>
-        public override string FunctionName => "Change";
+        public override MapFunctionName FunctionName => MapFunctionName.Change;
         #endregion SyntaxInfo
 
         #region Args
@@ -2094,12 +2094,12 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// マップ要素名
         /// </summary>
-        public override string ElementName => "Jointnoise";
+        public override MapElementName ElementName => MapElementName.Jointnoise;
 
         /// <summary>
         /// 関数名
         /// </summary>
-        public override string FunctionName => "Play";
+        public override MapFunctionName FunctionName => MapFunctionName.Play;
         #endregion SyntaxInfo
 
         #region Args
@@ -2128,12 +2128,12 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// マップ要素名
         /// </summary>
-        public override string ElementName => "Train";
+        public override MapElementName ElementName => MapElementName.Train;
 
         /// <summary>
         /// 関数名
         /// </summary>
-        public override string FunctionName => "Add";
+        public override MapFunctionName FunctionName => MapFunctionName.Add;
         #endregion SyntaxInfo
 
         #region Args
@@ -2177,12 +2177,12 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// マップ要素名
         /// </summary>
-        public override string ElementName => "Train";
+        public override MapElementName ElementName => MapElementName.Train;
 
         /// <summary>
         /// 関数名
         /// </summary>
-        public override string FunctionName => "Load";
+        public override MapFunctionName FunctionName => MapFunctionName.Load;
         #endregion SyntaxInfo
 
         /// <summary>
@@ -2225,12 +2225,12 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// マップ要素名
         /// </summary>
-        public override string ElementName => "Train";
+        public override MapElementName ElementName => MapElementName.Train;
 
         /// <summary>
         /// 関数名
         /// </summary>
-        public override string FunctionName => "Enable";
+        public override MapFunctionName FunctionName => MapFunctionName.Enable;
         #endregion SyntaxInfo
 
         /// <summary>
@@ -2268,12 +2268,12 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// マップ要素名
         /// </summary>
-        public override string ElementName => "Train";
+        public override MapElementName ElementName => MapElementName.Train;
 
         /// <summary>
         /// 関数名
         /// </summary>
-        public override string FunctionName => "Stop";
+        public override MapFunctionName FunctionName => MapFunctionName.Stop;
         #endregion SyntaxInfo
 
         /// <summary>

@@ -17,12 +17,12 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// マップ要素名
         /// </summary>
-        public override string ElementName => "{{elem}}";
+        public override MapElementName ElementName => MapElementName.{{elem}};
 
         /// <summary>
         /// 関数名
         /// </summary>
-        public override string FunctionName => "{{#syntax3}}{{elem2}}_{{/syntax3}}{{func}}";
+        public override MapFunctionName FunctionName => MapFunctionName.{{#syntax3}}{{elem2}}_{{/syntax3}}{{func}};
         #endregion SyntaxInfo
 
 {{#key}}

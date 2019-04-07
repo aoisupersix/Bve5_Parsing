@@ -64,9 +64,9 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     /// </summary>
     public abstract class SyntaxNode : MapGrammarAstNodes
     {
-        public abstract string ElementName { get; }
+        public abstract MapElementName ElementName { get; }
 
-        public abstract string FunctionName { get; }
+        public abstract MapFunctionName FunctionName { get; }
 
         public SyntaxNode(IToken start, IToken stop) : base(start, stop) { }
     }
