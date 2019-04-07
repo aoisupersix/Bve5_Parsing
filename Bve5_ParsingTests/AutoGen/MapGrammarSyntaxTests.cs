@@ -557,16 +557,11 @@ namespace Bve5_ParsingTests
         [Fact]
         public void StructureLoadTest()
         {
-
-            // Structure.Load(filepath);
-            Check(
-                ExecParse("BveTs Map 2.02\n0;Structure.Load(1.0);"),
-                new MapData(
-                    version: "2.02",
-                    syntaxes: new List<SyntaxData>()
-                    {
-                        new SyntaxData(0, "structure", "load").SetArg("filepath", 1.0)
-                    }));
+            /*
+             * THIS TEST IS SKIPPED.
+             * この構文のテストは諸事情によりテストの自動生成から外されました。
+             * Structure.Load(FilePath)構文のテストは手動で作成してください。
+             */
         }
 
         /// <summary>
@@ -711,16 +706,11 @@ namespace Bve5_ParsingTests
         [Fact]
         public void StationLoadTest()
         {
-
-            // Station.Load(filepath);
-            Check(
-                ExecParse("BveTs Map 2.02\n0;Station.Load(1.0);"),
-                new MapData(
-                    version: "2.02",
-                    syntaxes: new List<SyntaxData>()
-                    {
-                        new SyntaxData(0, "station", "load").SetArg("filepath", 1.0)
-                    }));
+            /*
+             * THIS TEST IS SKIPPED.
+             * この構文のテストは諸事情によりテストの自動生成から外されました。
+             * Station.Load(FilePath)構文のテストは手動で作成してください。
+             */
         }
 
         /// <summary>
@@ -747,16 +737,11 @@ namespace Bve5_ParsingTests
         [Fact]
         public void SectionBeginTest()
         {
-
-            // Section.Begin();
-            Check(
-                ExecParse("BveTs Map 2.02\n0;Section.Begin();"),
-                new MapData(
-                    version: "2.02",
-                    syntaxes: new List<SyntaxData>()
-                    {
-                        new SyntaxData(0, "section", "begin")
-                    }));
+            /*
+             * THIS TEST IS SKIPPED.
+             * この構文のテストは諸事情によりテストの自動生成から外されました。
+             * Section.Begin()構文のテストは手動で作成してください。
+             */
         }
 
         /// <summary>
@@ -765,16 +750,11 @@ namespace Bve5_ParsingTests
         [Fact]
         public void SectionSetspeedlimitTest()
         {
-
-            // Section.Setspeedlimit();
-            Check(
-                ExecParse("BveTs Map 2.02\n0;Section.Setspeedlimit();"),
-                new MapData(
-                    version: "2.02",
-                    syntaxes: new List<SyntaxData>()
-                    {
-                        new SyntaxData(0, "section", "setspeedlimit")
-                    }));
+            /*
+             * THIS TEST IS SKIPPED.
+             * この構文のテストは諸事情によりテストの自動生成から外されました。
+             * Section.Setspeedlimit()構文のテストは手動で作成してください。
+             */
         }
 
         /// <summary>
@@ -783,16 +763,11 @@ namespace Bve5_ParsingTests
         [Fact]
         public void SignalLoadTest()
         {
-
-            // Signal.Load(filepath);
-            Check(
-                ExecParse("BveTs Map 2.02\n0;Signal.Load(1.0);"),
-                new MapData(
-                    version: "2.02",
-                    syntaxes: new List<SyntaxData>()
-                    {
-                        new SyntaxData(0, "signal", "load").SetArg("filepath", 1.0)
-                    }));
+            /*
+             * THIS TEST IS SKIPPED.
+             * この構文のテストは諸事情によりテストの自動生成から外されました。
+             * Signal.Load(FilePath)構文のテストは手動で作成してください。
+             */
         }
 
         /// <summary>
@@ -801,76 +776,11 @@ namespace Bve5_ParsingTests
         [Fact]
         public void SignalPutTest()
         {
-
-            // Signal[SignalAspectKey].Put(section, trackkey, x, y);
-            Check(
-                ExecParse("BveTs Map 2.02\n0;Signal['SignalAspectKey'].Put(1.0, 1.0, 1.0, 1.0);"),
-                new MapData(
-                    version: "2.02",
-                    syntaxes: new List<SyntaxData>()
-                    {
-                        new SyntaxData(0, "signal", "SignalAspectKey", "put").SetArg("section", 1.0).SetArg("trackkey", 1.0).SetArg("x", 1.0).SetArg("y", 1.0)
-                    }));
-
-            // Signal[SignalAspectKey].Put(section, trackkey, x, y, z);
-            Check(
-                ExecParse("BveTs Map 2.02\n0;Signal['SignalAspectKey'].Put(1.0, 1.0, 1.0, 1.0, 1.0);"),
-                new MapData(
-                    version: "2.02",
-                    syntaxes: new List<SyntaxData>()
-                    {
-                        new SyntaxData(0, "signal", "SignalAspectKey", "put").SetArg("section", 1.0).SetArg("trackkey", 1.0).SetArg("x", 1.0).SetArg("y", 1.0).SetArg("z", 1.0)
-                    }));
-
-            // Signal[SignalAspectKey].Put(section, trackkey, x, y, z, rx);
-            Check(
-                ExecParse("BveTs Map 2.02\n0;Signal['SignalAspectKey'].Put(1.0, 1.0, 1.0, 1.0, 1.0, 1.0);"),
-                new MapData(
-                    version: "2.02",
-                    syntaxes: new List<SyntaxData>()
-                    {
-                        new SyntaxData(0, "signal", "SignalAspectKey", "put").SetArg("section", 1.0).SetArg("trackkey", 1.0).SetArg("x", 1.0).SetArg("y", 1.0).SetArg("z", 1.0).SetArg("rx", 1.0)
-                    }));
-
-            // Signal[SignalAspectKey].Put(section, trackkey, x, y, z, rx, ry);
-            Check(
-                ExecParse("BveTs Map 2.02\n0;Signal['SignalAspectKey'].Put(1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0);"),
-                new MapData(
-                    version: "2.02",
-                    syntaxes: new List<SyntaxData>()
-                    {
-                        new SyntaxData(0, "signal", "SignalAspectKey", "put").SetArg("section", 1.0).SetArg("trackkey", 1.0).SetArg("x", 1.0).SetArg("y", 1.0).SetArg("z", 1.0).SetArg("rx", 1.0).SetArg("ry", 1.0)
-                    }));
-
-            // Signal[SignalAspectKey].Put(section, trackkey, x, y, z, rx, ry, rz);
-            Check(
-                ExecParse("BveTs Map 2.02\n0;Signal['SignalAspectKey'].Put(1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0);"),
-                new MapData(
-                    version: "2.02",
-                    syntaxes: new List<SyntaxData>()
-                    {
-                        new SyntaxData(0, "signal", "SignalAspectKey", "put").SetArg("section", 1.0).SetArg("trackkey", 1.0).SetArg("x", 1.0).SetArg("y", 1.0).SetArg("z", 1.0).SetArg("rx", 1.0).SetArg("ry", 1.0).SetArg("rz", 1.0)
-                    }));
-
-            // Signal[SignalAspectKey].Put(section, trackkey, x, y, z, rx, ry, rz, tilt);
-            Check(
-                ExecParse("BveTs Map 2.02\n0;Signal['SignalAspectKey'].Put(1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0);"),
-                new MapData(
-                    version: "2.02",
-                    syntaxes: new List<SyntaxData>()
-                    {
-                        new SyntaxData(0, "signal", "SignalAspectKey", "put").SetArg("section", 1.0).SetArg("trackkey", 1.0).SetArg("x", 1.0).SetArg("y", 1.0).SetArg("z", 1.0).SetArg("rx", 1.0).SetArg("ry", 1.0).SetArg("rz", 1.0).SetArg("tilt", 1.0)
-                    }));
-
-            // Signal[SignalAspectKey].Put(section, trackkey, x, y, z, rx, ry, rz, tilt, span);
-            Check(
-                ExecParse("BveTs Map 2.02\n0;Signal['SignalAspectKey'].Put(1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0);"),
-                new MapData(
-                    version: "2.02",
-                    syntaxes: new List<SyntaxData>()
-                    {
-                        new SyntaxData(0, "signal", "SignalAspectKey", "put").SetArg("section", 1.0).SetArg("trackkey", 1.0).SetArg("x", 1.0).SetArg("y", 1.0).SetArg("z", 1.0).SetArg("rx", 1.0).SetArg("ry", 1.0).SetArg("rz", 1.0).SetArg("tilt", 1.0).SetArg("span", 1.0)
-                    }));
+            /*
+             * THIS TEST IS SKIPPED.
+             * この構文のテストは諸事情によりテストの自動生成から外されました。
+             * Signal[SignalAspectKey].Put(Section, TrackKey, X, Y, Z?, RX?, RY?, RZ?, Tilt?, Span?)構文のテストは手動で作成してください。
+             */
         }
 
         /// <summary>
@@ -933,36 +843,11 @@ namespace Bve5_ParsingTests
         [Fact]
         public void PretrainPassTest()
         {
-
-            // Pretrain.Pass();
-            Check(
-                ExecParse("BveTs Map 2.02\n0;Pretrain.Pass();"),
-                new MapData(
-                    version: "2.02",
-                    syntaxes: new List<SyntaxData>()
-                    {
-                        new SyntaxData(0, "pretrain", "pass")
-                    }));
-
-            // Pretrain.Pass(time);
-            Check(
-                ExecParse("BveTs Map 2.02\n0;Pretrain.Pass(1.0);"),
-                new MapData(
-                    version: "2.02",
-                    syntaxes: new List<SyntaxData>()
-                    {
-                        new SyntaxData(0, "pretrain", "pass").SetArg("time", 1.0)
-                    }));
-
-            // Pretrain.Pass(time, second);
-            Check(
-                ExecParse("BveTs Map 2.02\n0;Pretrain.Pass(1.0, 1.0);"),
-                new MapData(
-                    version: "2.02",
-                    syntaxes: new List<SyntaxData>()
-                    {
-                        new SyntaxData(0, "pretrain", "pass").SetArg("time", 1.0).SetArg("second", 1.0)
-                    }));
+            /*
+             * THIS TEST IS SKIPPED.
+             * この構文のテストは諸事情によりテストの自動生成から外されました。
+             * Pretrain.Pass(Time?, Second?)構文のテストは手動で作成してください。
+             */
         }
 
         /// <summary>
@@ -1007,56 +892,11 @@ namespace Bve5_ParsingTests
         [Fact]
         public void FogInterpolateTest()
         {
-
-            // Fog.Interpolate();
-            Check(
-                ExecParse("BveTs Map 2.02\n0;Fog.Interpolate();"),
-                new MapData(
-                    version: "2.02",
-                    syntaxes: new List<SyntaxData>()
-                    {
-                        new SyntaxData(0, "fog", "interpolate")
-                    }));
-
-            // Fog.Interpolate(density);
-            Check(
-                ExecParse("BveTs Map 2.02\n0;Fog.Interpolate(1.0);"),
-                new MapData(
-                    version: "2.02",
-                    syntaxes: new List<SyntaxData>()
-                    {
-                        new SyntaxData(0, "fog", "interpolate").SetArg("density", 1.0)
-                    }));
-
-            // Fog.Interpolate(density, red);
-            Check(
-                ExecParse("BveTs Map 2.02\n0;Fog.Interpolate(1.0, 1.0);"),
-                new MapData(
-                    version: "2.02",
-                    syntaxes: new List<SyntaxData>()
-                    {
-                        new SyntaxData(0, "fog", "interpolate").SetArg("density", 1.0).SetArg("red", 1.0)
-                    }));
-
-            // Fog.Interpolate(density, red, green);
-            Check(
-                ExecParse("BveTs Map 2.02\n0;Fog.Interpolate(1.0, 1.0, 1.0);"),
-                new MapData(
-                    version: "2.02",
-                    syntaxes: new List<SyntaxData>()
-                    {
-                        new SyntaxData(0, "fog", "interpolate").SetArg("density", 1.0).SetArg("red", 1.0).SetArg("green", 1.0)
-                    }));
-
-            // Fog.Interpolate(density, red, green, blue);
-            Check(
-                ExecParse("BveTs Map 2.02\n0;Fog.Interpolate(1.0, 1.0, 1.0, 1.0);"),
-                new MapData(
-                    version: "2.02",
-                    syntaxes: new List<SyntaxData>()
-                    {
-                        new SyntaxData(0, "fog", "interpolate").SetArg("density", 1.0).SetArg("red", 1.0).SetArg("green", 1.0).SetArg("blue", 1.0)
-                    }));
+            /*
+             * THIS TEST IS SKIPPED.
+             * この構文のテストは諸事情によりテストの自動生成から外されました。
+             * Fog.Interpolate(Density?, Red?, Green?, Blue?)構文のテストは手動で作成してください。
+             */
         }
 
         /// <summary>
@@ -1139,36 +979,11 @@ namespace Bve5_ParsingTests
         [Fact]
         public void AdhesionChangeTest()
         {
-
-            // Adhesion.Change(a);
-            Check(
-                ExecParse("BveTs Map 2.02\n0;Adhesion.Change(1.0);"),
-                new MapData(
-                    version: "2.02",
-                    syntaxes: new List<SyntaxData>()
-                    {
-                        new SyntaxData(0, "adhesion", "change").SetArg("a", 1.0)
-                    }));
-
-            // Adhesion.Change(a, b);
-            Check(
-                ExecParse("BveTs Map 2.02\n0;Adhesion.Change(1.0, 1.0);"),
-                new MapData(
-                    version: "2.02",
-                    syntaxes: new List<SyntaxData>()
-                    {
-                        new SyntaxData(0, "adhesion", "change").SetArg("a", 1.0).SetArg("b", 1.0)
-                    }));
-
-            // Adhesion.Change(a, b, c);
-            Check(
-                ExecParse("BveTs Map 2.02\n0;Adhesion.Change(1.0, 1.0, 1.0);"),
-                new MapData(
-                    version: "2.02",
-                    syntaxes: new List<SyntaxData>()
-                    {
-                        new SyntaxData(0, "adhesion", "change").SetArg("a", 1.0).SetArg("b", 1.0).SetArg("c", 1.0)
-                    }));
+            /*
+             * THIS TEST IS SKIPPED.
+             * この構文のテストは諸事情によりテストの自動生成から外されました。
+             * Adhesion.Change(A, B?, C?)構文のテストは手動で作成してください。
+             */
         }
 
         /// <summary>
@@ -1177,16 +992,11 @@ namespace Bve5_ParsingTests
         [Fact]
         public void SoundLoadTest()
         {
-
-            // Sound.Load(filepath);
-            Check(
-                ExecParse("BveTs Map 2.02\n0;Sound.Load(1.0);"),
-                new MapData(
-                    version: "2.02",
-                    syntaxes: new List<SyntaxData>()
-                    {
-                        new SyntaxData(0, "sound", "load").SetArg("filepath", 1.0)
-                    }));
+            /*
+             * THIS TEST IS SKIPPED.
+             * この構文のテストは諸事情によりテストの自動生成から外されました。
+             * Sound.Load(FilePath)構文のテストは手動で作成してください。
+             */
         }
 
         /// <summary>
@@ -1213,16 +1023,11 @@ namespace Bve5_ParsingTests
         [Fact]
         public void Sound3dLoadTest()
         {
-
-            // Sound3d.Load(filepath);
-            Check(
-                ExecParse("BveTs Map 2.02\n0;Sound3d.Load(1.0);"),
-                new MapData(
-                    version: "2.02",
-                    syntaxes: new List<SyntaxData>()
-                    {
-                        new SyntaxData(0, "sound3d", "load").SetArg("filepath", 1.0)
-                    }));
+            /*
+             * THIS TEST IS SKIPPED.
+             * この構文のテストは諸事情によりテストの自動生成から外されました。
+             * Sound3d.Load(FilePath)構文のテストは手動で作成してください。
+             */
         }
 
         /// <summary>
@@ -1339,36 +1144,11 @@ namespace Bve5_ParsingTests
         [Fact]
         public void TrainEnableTest()
         {
-
-            // Train[TrainKey].Enable();
-            Check(
-                ExecParse("BveTs Map 2.02\n0;Train['TrainKey'].Enable();"),
-                new MapData(
-                    version: "2.02",
-                    syntaxes: new List<SyntaxData>()
-                    {
-                        new SyntaxData(0, "train", "TrainKey", "enable")
-                    }));
-
-            // Train[TrainKey].Enable(time);
-            Check(
-                ExecParse("BveTs Map 2.02\n0;Train['TrainKey'].Enable(1.0);"),
-                new MapData(
-                    version: "2.02",
-                    syntaxes: new List<SyntaxData>()
-                    {
-                        new SyntaxData(0, "train", "TrainKey", "enable").SetArg("time", 1.0)
-                    }));
-
-            // Train[TrainKey].Enable(time, second);
-            Check(
-                ExecParse("BveTs Map 2.02\n0;Train['TrainKey'].Enable(1.0, 1.0);"),
-                new MapData(
-                    version: "2.02",
-                    syntaxes: new List<SyntaxData>()
-                    {
-                        new SyntaxData(0, "train", "TrainKey", "enable").SetArg("time", 1.0).SetArg("second", 1.0)
-                    }));
+            /*
+             * THIS TEST IS SKIPPED.
+             * この構文のテストは諸事情によりテストの自動生成から外されました。
+             * Train[TrainKey].Enable(Time?, Second?)構文のテストは手動で作成してください。
+             */
         }
 
         /// <summary>
