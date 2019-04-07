@@ -1817,7 +1817,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     }
 
     /// <summary>
-    /// Drawdistance.Change(Value?);
+    /// Drawdistance.Change(Value);
     /// </summary>
     public partial class DrawdistanceChangeNode : SyntaxNode
     {
@@ -1837,9 +1837,9 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         #region Args
 
         /// <summary>
-        /// 引数：距離 [m] (0: [設定] ウィンドウで設定される描画距離を適用)（省略可能）
+        /// 引数：距離 [m] (0: [設定] ウィンドウで設定される描画距離を適用)
         /// </summary>
-        [Argument(Optional = true)]
+        [Argument]
         public MapGrammarAstNodes Value { get; set; }
         #endregion Args
 

@@ -900,21 +900,11 @@ namespace Bve5_ParsingTests
         }
 
         /// <summary>
-        /// Drawdistance.Change(Value?);
+        /// Drawdistance.Change(Value);
         /// </summary>
         [Fact]
         public void DrawdistanceChangeTest()
         {
-
-            // Drawdistance.Change();
-            Check(
-                ExecParse("BveTs Map 2.02\n0;Drawdistance.Change();"),
-                new MapData(
-                    version: "2.02",
-                    syntaxes: new List<SyntaxData>()
-                    {
-                        new SyntaxData(0, "drawdistance", "change")
-                    }));
 
             // Drawdistance.Change(value);
             Check(
