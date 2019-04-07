@@ -7,11 +7,11 @@ const jsonData = loadJson("doc/map_grammar_syntax.json");
 
 // Ast生成
 const astTemp = loadFile("doc/map_grammar_ast.mst");
-parse(astTemp, jsonData, "Bve5_Parsing/MapGrammar/AstNodes/SyntaxNodes.cs");
+parse(astTemp, jsonData, "Bve5_Parsing/MapGrammar/AutoGen/SyntaxNodes.cs");
 
 // 構文名定義生成
 const enumTemp = loadFile("doc/map_grammar_enum.mst");
-parse(enumTemp, jsonData, "Bve5_Parsing/MapGrammar/MapSyntaxDefinitions.cs");
+parse(enumTemp, jsonData, "Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs");
 
 console.log("all completed !");
 
