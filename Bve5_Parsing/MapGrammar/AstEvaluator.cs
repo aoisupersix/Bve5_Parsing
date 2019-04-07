@@ -9,53 +9,6 @@ namespace Bve5_Parsing.MapGrammar
 {
 
     /// <summary>
-    /// ASTノードの評価クラス定義
-    /// </summary>
-    /// <typeparam name="T">ASTノードの種類</typeparam>
-    public abstract class AstVisitor<T>
-    {
-
-        public abstract T Visit(RootNode node);
-        public abstract T Visit(DistanceNode node);
-        public abstract T Visit(Syntax1Node node);
-        public abstract T Visit(Syntax2Node node);
-        public abstract T Visit(Syntax3Node node);
-        public abstract T Visit(LoadListNode node);
-        public abstract T Visit(VarAssignNode node);
-        public abstract T Visit(AdditionNode node);
-        public abstract T Visit(SubtractionNode node);
-        public abstract T Visit(MultiplicationNode node);
-        public abstract T Visit(DivisionNode node);
-        public abstract T Visit(UnaryNode node);
-        public abstract T Visit(ModuloNode node);
-        public abstract T Visit(AbsNode node);
-        public abstract T Visit(Atan2Node node);
-        public abstract T Visit(CeilNode node);
-        public abstract T Visit(CosNode node);
-        public abstract T Visit(ExpNode node);
-        public abstract T Visit(FloorNode node);
-        public abstract T Visit(LogNode node);
-        public abstract T Visit(PowNode node);
-        public abstract T Visit(RandNode node);
-        public abstract T Visit(SinNode node);
-        public abstract T Visit(SqrtNode node);
-        public abstract T Visit(NumberNode node);
-        public abstract T Visit(DistanceVariableNode node);
-        public abstract T Visit(StringNode node);
-        public abstract T Visit(VarNode node);
-
-        /// <summary>
-        /// 引数に与えられたASTノードを評価します。
-        /// </summary>
-        /// <param name="node">評価するASTノード</param>
-        /// <returns>評価結果</returns>
-        public T Visit(MapGrammarAstNodes node)
-        {
-            return Visit((dynamic)node);
-        }
-    }
-
-    /// <summary>
     /// ASTノードの評価手続きクラス
     /// </summary>
     public class EvaluateMapGrammarVisitor : AstVisitor<object>
@@ -138,6 +91,8 @@ namespace Bve5_Parsing.MapGrammar
             return null;
         }
 
+        #region 構文ノードの評価
+
         /// <summary>
         /// 構文タイプ1の評価
         /// </summary>
@@ -211,6 +166,291 @@ namespace Bve5_Parsing.MapGrammar
             return returnData;
         }
 
+        public override object Visit(CurveSetgaugeNode node)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override object Visit(CurveSetcenterNode node)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override object Visit(CurveSetfunctionNode node)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override object Visit(CurveBeginNode node)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override object Visit(CurveEndNode node)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override object Visit(CurveInterpolateNode node)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override object Visit(CurveChangeNode node)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override object Visit(GradientBegintransitionNode node)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override object Visit(GradientBeginNode node)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override object Visit(GradientEndNode node)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override object Visit(GradientInterpolateNode node)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override object Visit(TrackXInterpolateNode node)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override object Visit(TrackYInterpolateNode node)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override object Visit(TrackPositionNode node)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override object Visit(TrackCantSetgaugeNode node)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override object Visit(TrackCantSetcenterNode node)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override object Visit(TrackCantSetfunctionNode node)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override object Visit(TrackCantBegintransitionNode node)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override object Visit(TrackCantBeginNode node)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override object Visit(TrackCantEndNode node)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override object Visit(TrackCantInterpolateNode node)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override object Visit(StructureLoadNode node)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override object Visit(StructurePutNode node)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override object Visit(StructurePut0Node node)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override object Visit(StructurePutbetweenNode node)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override object Visit(RepeaterBeginNode node)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override object Visit(RepeaterBegin0Node node)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override object Visit(RepeaterEndNode node)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override object Visit(BackgroundChangeNode node)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override object Visit(StationLoadNode node)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override object Visit(StationPutNode node)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override object Visit(SectionBeginNode node)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override object Visit(SectionSetspeedlimitNode node)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override object Visit(SignalLoadNode node)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override object Visit(SignalPutNode node)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override object Visit(BeaconPutNode node)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override object Visit(SpeedlimitBeginNode node)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override object Visit(SpeedlimitEndNode node)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override object Visit(PretrainPassNode node)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override object Visit(LightAmbientNode node)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override object Visit(LightDiffuseNode node)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override object Visit(FogInterpolateNode node)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override object Visit(DrawdistanceChangeNode node)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override object Visit(CabilluminanceInterpolateNode node)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override object Visit(IrregularityChangeNode node)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override object Visit(AdhisionChangeNode node)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override object Visit(SoundLoadNode node)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override object Visit(SoundPlayNode node)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override object Visit(Sound3dLoadNode node)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override object Visit(Sound3dPutNode node)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override object Visit(RollingnoiseChangeNode node)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override object Visit(FlangenoiseChangeNode node)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override object Visit(JointnoisePlayNode node)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override object Visit(TrainAddNode node)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override object Visit(TrainLoadNode node)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override object Visit(TrainEnableNode node)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override object Visit(TrainStopNode node)
+        {
+            throw new NotImplementedException();
+        }
+
         /// <summary>
         /// リストファイルノードの評価
         /// リストファイルの参照パスを追加する
@@ -226,6 +466,8 @@ namespace Bve5_Parsing.MapGrammar
 
             return null;
         }
+
+        #endregion
 
         /// <summary>
         /// 変数宣言ノードの評価

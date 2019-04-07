@@ -9,6 +9,10 @@ const jsonData = loadJson("doc/map_grammar_syntax.json");
 const astTemp = loadFile("doc/map_grammar_ast.mst");
 parse(astTemp, jsonData, "Bve5_Parsing/MapGrammar/AutoGen/SyntaxNodes.cs");
 
+// AstVisitor生成
+const astVisitorTemp = loadFile("doc/map_grammar_ast_visitor.mst");
+parse(astVisitorTemp, jsonData, "Bve5_Parsing/MapGrammar/AutoGen/AstVisitor.cs");
+
 // 構文名定義生成
 const enumTemp = loadFile("doc/map_grammar_enum.mst");
 parse(enumTemp, jsonData, "Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs");

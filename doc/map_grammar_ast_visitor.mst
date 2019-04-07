@@ -1,0 +1,60 @@
+/*
+ * このファイルは自動生成doc/createMapGrammarTemplate.jsによって自動生成されています。
+ * 編集は行わないでください。
+ */
+using Bve5_Parsing.MapGrammar.AstNodes;
+
+namespace Bve5_Parsing.MapGrammar
+{
+
+    /// <summary>
+    /// ASTノードの評価クラス定義
+    /// </summary>
+    /// <typeparam name="T">ASTノードの種類</typeparam>
+    public abstract class AstVisitor<T>
+    {
+{{! 面倒なのでSyntaxNode以外はとりあえず固定で生成しちゃいます。}}
+
+        public abstract T Visit(RootNode node);
+        public abstract T Visit(DistanceNode node);
+{{#states}}
+        public abstract T Visit({{elem}}{{#syntax3}}{{elem2}}{{/syntax3}}{{func}}Node node);
+{{/states}}
+        public abstract T Visit(Syntax1Node node);
+        public abstract T Visit(Syntax2Node node);
+        public abstract T Visit(Syntax3Node node);
+        public abstract T Visit(LoadListNode node);
+        public abstract T Visit(VarAssignNode node);
+        public abstract T Visit(AdditionNode node);
+        public abstract T Visit(SubtractionNode node);
+        public abstract T Visit(MultiplicationNode node);
+        public abstract T Visit(DivisionNode node);
+        public abstract T Visit(UnaryNode node);
+        public abstract T Visit(ModuloNode node);
+        public abstract T Visit(AbsNode node);
+        public abstract T Visit(Atan2Node node);
+        public abstract T Visit(CeilNode node);
+        public abstract T Visit(CosNode node);
+        public abstract T Visit(ExpNode node);
+        public abstract T Visit(FloorNode node);
+        public abstract T Visit(LogNode node);
+        public abstract T Visit(PowNode node);
+        public abstract T Visit(RandNode node);
+        public abstract T Visit(SinNode node);
+        public abstract T Visit(SqrtNode node);
+        public abstract T Visit(NumberNode node);
+        public abstract T Visit(DistanceVariableNode node);
+        public abstract T Visit(StringNode node);
+        public abstract T Visit(VarNode node);
+
+        /// <summary>
+        /// 引数に与えられたASTノードを評価します。
+        /// </summary>
+        /// <param name="node">評価するASTノード</param>
+        /// <returns>評価結果</returns>
+        public T Visit(MapGrammarAstNodes node)
+        {
+            return Visit((dynamic)node);
+        }
+    }
+}
