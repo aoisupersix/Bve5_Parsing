@@ -35,6 +35,12 @@
     },
     {
       "elem": "Curve",
+      "func": "BeginTransition",
+      "args": [
+      ]
+    },
+    {
+      "elem": "Curve",
       "func": "Begin",
       "args": [
         {

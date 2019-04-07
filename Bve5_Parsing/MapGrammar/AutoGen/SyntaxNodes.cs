@@ -109,6 +109,33 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     }
 
     /// <summary>
+    /// Curve.BeginTransition();
+    /// </summary>
+    public partial class CurveBeginTransitionNode : SyntaxNode
+    {
+        #region SyntaxInfo
+
+        /// <summary>
+        /// マップ要素名
+        /// </summary>
+        public override MapElementName ElementName => MapElementName.Curve;
+
+        /// <summary>
+        /// 関数名
+        /// </summary>
+        public override MapFunctionName FunctionName => MapFunctionName.BeginTransition;
+        #endregion SyntaxInfo
+
+
+        /// <summary>
+        /// 新しいインスタンスを生成します。
+        /// </summary>
+        /// <param name="start"></param>
+        /// <param name="stop"></param>
+        public CurveBeginTransitionNode(IToken start, IToken stop) : base(start, stop) { }
+    }
+
+    /// <summary>
     /// Curve.Begin(Radius, Cant?);
     /// </summary>
     public partial class CurveBeginNode : SyntaxNode

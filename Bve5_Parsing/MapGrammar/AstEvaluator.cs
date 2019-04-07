@@ -181,6 +181,11 @@ namespace Bve5_Parsing.MapGrammar
             throw new NotImplementedException();
         }
 
+        public override object Visit(CurveBeginTransitionNode node)
+        {
+            throw new NotImplementedException();
+        }
+
         public override object Visit(CurveBeginNode node)
         {
             throw new NotImplementedException();

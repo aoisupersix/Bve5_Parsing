@@ -180,6 +180,12 @@ namespace Bve5_Parsing.MapGrammar {
         Setfunction,
 
         /// <summary>
+        /// BeginTransition（BeginTransition）
+        /// </summary>
+        [StringValue("BeginTransition")]
+        BeginTransition,
+
+        /// <summary>
         /// Begin（Begin）
         /// </summary>
         [StringValue("Begin")]
