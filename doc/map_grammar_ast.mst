@@ -26,13 +26,15 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// </summary>
         public override MapFunctionName FunctionName => MapFunctionName.{{#syntax3}}{{elem2}}_{{/syntax3}}{{func}};
         #endregion SyntaxInfo
-
+{{^inheritance}}
 {{#key}}
+
         /// <summary>
         /// Key：{{key}}
         /// </summary>
         public MapGrammarAstNodes Key { get; set; }
 {{/key}}
+
 {{^noarg}}
         #region Args
 {{#args}}
@@ -45,6 +47,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
 {{/args}}
         #endregion Args
 {{/noarg}}
+{{/inheritance}}
 
         /// <summary>
         /// 新しいインスタンスを生成します。

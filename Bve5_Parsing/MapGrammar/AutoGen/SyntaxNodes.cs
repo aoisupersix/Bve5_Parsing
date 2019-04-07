@@ -62,15 +62,6 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         public override MapFunctionName FunctionName => MapFunctionName.Gauge;
         #endregion SyntaxInfo
 
-        #region Args
-
-        /// <summary>
-        /// 引数：軌間 [m]
-        /// </summary>
-        [Argument]
-        public MapGrammarAstNodes Value { get; set; }
-        #endregion Args
-
         /// <summary>
         /// 新しいインスタンスを生成します。
         /// </summary>
@@ -239,21 +230,6 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// </summary>
         public override MapFunctionName FunctionName => MapFunctionName.Begincircular;
         #endregion SyntaxInfo
-
-        #region Args
-
-        /// <summary>
-        /// 引数：曲線半径 [m] (正: 右曲線, 負: 左曲線)
-        /// </summary>
-        [Argument]
-        public MapGrammarAstNodes Radius { get; set; }
-
-        /// <summary>
-        /// 引数：カント [m]（省略可能）
-        /// </summary>
-        [Argument(Optional = true)]
-        public MapGrammarAstNodes Cant { get; set; }
-        #endregion Args
 
         /// <summary>
         /// 新しいインスタンスを生成します。
@@ -452,15 +428,6 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         public override MapFunctionName FunctionName => MapFunctionName.Beginconst;
         #endregion SyntaxInfo
 
-        #region Args
-
-        /// <summary>
-        /// 引数：勾配 [‰]
-        /// </summary>
-        [Argument]
-        public MapGrammarAstNodes Gradient { get; set; }
-        #endregion Args
-
         /// <summary>
         /// 新しいインスタンスを生成します。
         /// </summary>
@@ -556,6 +523,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// Key：TrackKey
         /// </summary>
         public MapGrammarAstNodes Key { get; set; }
+
         #region Args
 
         /// <summary>
@@ -602,6 +570,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// Key：TrackKey
         /// </summary>
         public MapGrammarAstNodes Key { get; set; }
+
         #region Args
 
         /// <summary>
@@ -648,6 +617,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// Key：TrackKey
         /// </summary>
         public MapGrammarAstNodes Key { get; set; }
+
         #region Args
 
         /// <summary>
@@ -706,6 +676,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// Key：TrackKey
         /// </summary>
         public MapGrammarAstNodes Key { get; set; }
+
         #region Args
 
         /// <summary>
@@ -743,19 +714,6 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         #endregion SyntaxInfo
 
         /// <summary>
-        /// Key：TrackKey
-        /// </summary>
-        public MapGrammarAstNodes Key { get; set; }
-        #region Args
-
-        /// <summary>
-        /// 引数：軌間 [m]
-        /// </summary>
-        [Argument]
-        public MapGrammarAstNodes Gauge { get; set; }
-        #endregion Args
-
-        /// <summary>
         /// 新しいインスタンスを生成します。
         /// </summary>
         /// <param name="start"></param>
@@ -786,6 +744,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// Key：TrackKey
         /// </summary>
         public MapGrammarAstNodes Key { get; set; }
+
         #region Args
 
         /// <summary>
@@ -826,6 +785,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// Key：TrackKey
         /// </summary>
         public MapGrammarAstNodes Key { get; set; }
+
         #region Args
 
         /// <summary>
@@ -867,6 +827,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// </summary>
         public MapGrammarAstNodes Key { get; set; }
 
+
         /// <summary>
         /// 新しいインスタンスを生成します。
         /// </summary>
@@ -898,6 +859,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// Key：TrackKey
         /// </summary>
         public MapGrammarAstNodes Key { get; set; }
+
         #region Args
 
         /// <summary>
@@ -939,6 +901,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// </summary>
         public MapGrammarAstNodes Key { get; set; }
 
+
         /// <summary>
         /// 新しいインスタンスを生成します。
         /// </summary>
@@ -970,6 +933,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// Key：TrackKey
         /// </summary>
         public MapGrammarAstNodes Key { get; set; }
+
         #region Args
 
         /// <summary>
@@ -1005,19 +969,6 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// </summary>
         public override MapFunctionName FunctionName => MapFunctionName.Cant;
         #endregion SyntaxInfo
-
-        /// <summary>
-        /// Key：TrackKey
-        /// </summary>
-        public MapGrammarAstNodes Key { get; set; }
-        #region Args
-
-        /// <summary>
-        /// 引数：カント [m] (正: 右に傾ける, 負: 左に傾ける)（省略可能）
-        /// </summary>
-        [Argument(Optional = true)]
-        public MapGrammarAstNodes Cant { get; set; }
-        #endregion Args
 
         /// <summary>
         /// 新しいインスタンスを生成します。
@@ -1086,6 +1037,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// Key：StructureKey
         /// </summary>
         public MapGrammarAstNodes Key { get; set; }
+
         #region Args
 
         /// <summary>
@@ -1174,6 +1126,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// Key：StructureKey
         /// </summary>
         public MapGrammarAstNodes Key { get; set; }
+
         #region Args
 
         /// <summary>
@@ -1226,6 +1179,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// Key：StructureKey
         /// </summary>
         public MapGrammarAstNodes Key { get; set; }
+
         #region Args
 
         /// <summary>
@@ -1278,6 +1232,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// Key：RepeaterKey
         /// </summary>
         public MapGrammarAstNodes Key { get; set; }
+
         #region Args
 
         /// <summary>
@@ -1372,6 +1327,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// Key：RepeaterKey
         /// </summary>
         public MapGrammarAstNodes Key { get; set; }
+
         #region Args
 
         /// <summary>
@@ -1430,6 +1386,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// Key：RepeaterKey
         /// </summary>
         public MapGrammarAstNodes Key { get; set; }
+
 
         /// <summary>
         /// 新しいインスタンスを生成します。
@@ -1534,6 +1491,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// Key：StationKey
         /// </summary>
         public MapGrammarAstNodes Key { get; set; }
+
         #region Args
 
         /// <summary>
@@ -1610,7 +1568,6 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         public override MapFunctionName FunctionName => MapFunctionName.Beginnew;
         #endregion SyntaxInfo
 
-
         /// <summary>
         /// 新しいインスタンスを生成します。
         /// </summary>
@@ -1665,7 +1622,6 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// </summary>
         public override MapFunctionName FunctionName => MapFunctionName.Speedlimit;
         #endregion SyntaxInfo
-
 
         /// <summary>
         /// 新しいインスタンスを生成します。
@@ -1734,6 +1690,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// Key：SignalAspectKey
         /// </summary>
         public MapGrammarAstNodes Key { get; set; }
+
         #region Args
 
         /// <summary>
@@ -2128,33 +2085,6 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         public override MapFunctionName FunctionName => MapFunctionName.Set;
         #endregion SyntaxInfo
 
-        #region Args
-
-        /// <summary>
-        /// 引数：濃度（省略可能）
-        /// </summary>
-        [Argument(Optional = true)]
-        public MapGrammarAstNodes Density { get; set; }
-
-        /// <summary>
-        /// 引数：赤成分 (0 ~ 1)（省略可能）
-        /// </summary>
-        [Argument(Optional = true)]
-        public MapGrammarAstNodes Red { get; set; }
-
-        /// <summary>
-        /// 引数：緑成分 (0 ~ 1)（省略可能）
-        /// </summary>
-        [Argument(Optional = true)]
-        public MapGrammarAstNodes Green { get; set; }
-
-        /// <summary>
-        /// 引数：青成分 (0 ~ 1)（省略可能）
-        /// </summary>
-        [Argument(Optional = true)]
-        public MapGrammarAstNodes Blue { get; set; }
-        #endregion Args
-
         /// <summary>
         /// 新しいインスタンスを生成します。
         /// </summary>
@@ -2253,15 +2183,6 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// </summary>
         public override MapFunctionName FunctionName => MapFunctionName.Set;
         #endregion SyntaxInfo
-
-        #region Args
-
-        /// <summary>
-        /// 引数：昼間画像と夜間画像の混合比 (0: 夜間画像 ~ 1: 昼間画像)（省略可能）
-        /// </summary>
-        [Argument(Optional = true)]
-        public MapGrammarAstNodes Value { get; set; }
-        #endregion Args
 
         /// <summary>
         /// 新しいインスタンスを生成します。
@@ -2445,6 +2366,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// </summary>
         public MapGrammarAstNodes Key { get; set; }
 
+
         /// <summary>
         /// 新しいインスタンスを生成します。
         /// </summary>
@@ -2512,6 +2434,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// Key：SoundKey
         /// </summary>
         public MapGrammarAstNodes Key { get; set; }
+
         #region Args
 
         /// <summary>
@@ -2720,6 +2643,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// Key：TrainKey
         /// </summary>
         public MapGrammarAstNodes Key { get; set; }
+
         #region Args
 
         /// <summary>
@@ -2772,6 +2696,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// Key：TrainKey
         /// </summary>
         public MapGrammarAstNodes Key { get; set; }
+
         #region Args
 
         /// <summary>
@@ -2818,6 +2743,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// Key：TrainKey
         /// </summary>
         public MapGrammarAstNodes Key { get; set; }
+
         #region Args
 
         /// <summary>
