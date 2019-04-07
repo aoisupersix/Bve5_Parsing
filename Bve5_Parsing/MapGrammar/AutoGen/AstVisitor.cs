@@ -19,7 +19,7 @@ namespace Bve5_Parsing.MapGrammar
         public abstract T Visit(CurveSetgaugeNode node);
         public abstract T Visit(CurveSetcenterNode node);
         public abstract T Visit(CurveSetfunctionNode node);
-        public abstract T Visit(CurveBeginTransitionNode node);
+        public abstract T Visit(CurveBegintransitionNode node);
         public abstract T Visit(CurveBeginNode node);
         public abstract T Visit(CurveEndNode node);
         public abstract T Visit(CurveInterpolateNode node);

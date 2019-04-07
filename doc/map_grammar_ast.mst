@@ -3,6 +3,7 @@
  * 編集は行わないでください。
  */
 using Antlr4.Runtime;
+using Bve5_Parsing.Attributes;
 
 namespace Bve5_Parsing.MapGrammar.AstNodes {
 {{#states}}
@@ -38,6 +39,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// 引数：{{{desc}}}{{#opt}}（省略可能）{{/opt}}
         /// </summary>
+        [Argument{{#opt}}(Optional = true){{/opt}}]
         public MapGrammarAstNodes {{name}} { get; set; }
 {{/args}}
         #endregion Args

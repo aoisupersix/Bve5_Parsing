@@ -1,6 +1,11 @@
 ﻿using Antlr4.Runtime;
+using Bve5_Parsing.Attributes;
+using System.Linq;
 using System.Collections.Generic;
 using static Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser;
+using System.Reflection;
+using System;
+using Antlr4.Runtime.Tree;
 
 namespace Bve5_Parsing.MapGrammar.AstNodes
 {
@@ -38,6 +43,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     /// </summary>
     public class RootNode : MapGrammarAstNodes
     {
+
         public List<MapGrammarAstNodes> StatementList { get; set; }
         public IToken Version { get; set; }
         public EncodingContext Encoding { get; set; }
@@ -68,7 +74,140 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
 
         public abstract MapFunctionName FunctionName { get; }
 
+        public bool HasKey => GetType().GetProperty("Key") != null;
+
         public SyntaxNode(IToken start, IToken stop) : base(start, stop) { }
+
+        /// <summary>
+        /// アトリビュートからASTノードの引数を取得します。
+        /// </summary>
+        /// <returns></returns>
+        protected internal IEnumerable<PropertyInfo> GetAllArguments()
+        {
+            return GetType().GetProperties()
+                .Select(p => new { Property = p, Attr = p.GetCustomAttribute(typeof(ArgumentAttribute), true) })
+                .Where(p => p.Attr != null)
+                .Select(p => p.Property)
+                ;
+        }
+
+        /// <summary>
+        /// アトリビュートからASTノードの省略不可能な引数を取得します。
+        /// </summary>
+        /// <returns></returns>
+        protected internal IEnumerable<PropertyInfo> GetNonOptionalArguments()
+        {
+            return GetType().GetProperties()
+                .Select(p => new { Property = p, Attr = p.GetCustomAttribute(typeof(ArgumentAttribute), true) as ArgumentAttribute })
+                .Where(p => p.Attr != null && !p.Attr.Optional)
+                .Select(p => p.Property)
+                ;
+        }
+
+        /// <summary>
+        /// アトリビュートからASTノードの省略可能引数を取得します。
+        /// </summary>
+        /// <returns></returns>
+        protected internal IEnumerable<PropertyInfo> GetOptionalArguments()
+        {
+            return GetType().GetProperties()
+                .Select(p => new { Property = p, Attr = p.GetCustomAttribute(typeof(ArgumentAttribute), true) as ArgumentAttribute })
+                .Where(p => p.Attr != null && p.Attr.Optional)
+                .Select(p => p.Property)
+                ;
+        }
+
+        /// <summary>
+        /// メタ情報から対応するAstを生成して返します。
+        /// 対応していない構文が存在する可能性があるため、使用には注意して下さい。
+        /// </summary>
+        /// <param name="visitor"></param>
+        /// <param name="ctx"></param>
+        /// <param name="elementName"></param>
+        /// <param name="funcName"></param>
+        /// <param name="element2Name"></param>
+        /// <returns></returns>
+        protected internal static SyntaxNode CreateSyntaxAstNode(BuildAstVisitor visitor, ParserRuleContext ctx, MapElementName elementName, string funcName, string element2Name = null)
+        {
+            if (funcName.Length < 2)
+                throw new ArgumentOutOfRangeException("関数名が短すぎます。");
+
+            // ASTのインスタンス取得
+            var astClassName = elementName.GetStringValue() + char.ToUpper(funcName[0]) + funcName.Substring(1).ToLower() + "Node";
+            var astClassType = Type.GetType(typeof(MapGrammarAstNodes).Namespace + "." + astClassName);
+
+            if (astClassType == null)
+                throw new NotSupportedException("対応するAstNodeの取得に失敗しました。");
+
+            var instanceArg = new object[] { ctx.Start, ctx.Stop };
+            var node = Activator.CreateInstance(astClassType, instanceArg) as SyntaxNode;
+
+            // 引数の取得
+            foreach (var arg in node.GetNonOptionalArguments())
+            {
+                var argCtxInfo = ctx.GetType().GetField(arg.Name.ToLower());
+                var argCtx = argCtxInfo?.GetValue(ctx);
+                if (argCtx == null)
+                    throw new NotSupportedException($"引数：{arg.Name}に対応するContextの取得に失敗しました。");
+
+                arg.SetValue(node, visitor.Visit(argCtx as IParseTree));
+            }
+
+            // 省略可能引数の取得
+            foreach(var arg in node.GetOptionalArguments())
+            {
+                var argCtxInfo = ctx.GetType().GetField(arg.Name.ToLower());
+                var argCtx = argCtxInfo?.GetValue(ctx);
+                if (argCtx != null)
+                    arg.SetValue(node, visitor.Visit(argCtx as IParseTree));
+            }
+
+            return node;
+        }
+
+        /// <summary>
+        /// ASTノードのメタ情報からSyntaxDataを生成して返します。
+        /// </summary>
+        /// <param name="evaluator"></param>
+        /// <param name="distance"></param>
+        /// <returns></returns>
+        public SyntaxData CreateSyntaxData(EvaluateMapGrammarVisitor evaluator, double distance)
+        {
+            var funcName = FunctionName.GetStringValue();
+            var syntax = new SyntaxData();
+            syntax.Distance = distance;
+
+            // TODO: 構文タイプの判定を属性でやりたい
+            if (funcName.Contains("_"))
+            {
+                //Syntax3
+                syntax.MapElement = new string[2]
+                {
+                    ElementName.GetStringValue().ToLower(),
+                    funcName.Substring(0, funcName.IndexOf("_"))
+                };
+            }else
+            {
+                syntax.MapElement = new string[1]
+                {
+                    ElementName.GetStringValue().ToLower()
+                };
+            }
+
+            if (HasKey)
+                syntax.Key = evaluator.Visit(GetType().GetProperty("Key").GetValue(this) as MapGrammarAstNodes).ToString();
+            syntax.Function = funcName.Substring(funcName.IndexOf("_") + 1).ToLower();
+            foreach(var argument in GetAllArguments())
+            {
+                var val = argument.GetValue(this) as MapGrammarAstNodes;
+                if (val == null)
+                    continue;
+
+                syntax.SetArg(argument.Name.ToLower(), evaluator.Visit(val));
+            }
+
+            return syntax;
+        }
     }
 
     /// <summary>

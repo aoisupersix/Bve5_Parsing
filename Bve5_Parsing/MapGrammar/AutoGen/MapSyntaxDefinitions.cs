@@ -180,10 +180,10 @@ namespace Bve5_Parsing.MapGrammar {
         Setfunction,
 
         /// <summary>
-        /// BeginTransition（BeginTransition）
+        /// Begintransition（Begintransition）
         /// </summary>
-        [StringValue("BeginTransition")]
-        BeginTransition,
+        [StringValue("Begintransition")]
+        Begintransition,
 
         /// <summary>
         /// Begin（Begin）
@@ -208,12 +208,6 @@ namespace Bve5_Parsing.MapGrammar {
         /// </summary>
         [StringValue("Change")]
         Change,
-
-        /// <summary>
-        /// Begintransition（Begintransition）
-        /// </summary>
-        [StringValue("Begintransition")]
-        Begintransition,
 
         /// <summary>
         /// X_Interpolate（X.Interpolate）

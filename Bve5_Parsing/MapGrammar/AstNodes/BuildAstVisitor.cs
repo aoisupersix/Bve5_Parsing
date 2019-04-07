@@ -8,7 +8,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     /// <summary>
     /// CSTを巡回してASTを作成するVisitorクラス
     /// </summary>
-    internal class BuildAstVisitor : MapGrammarParserBaseVisitor<MapGrammarAstNodes>
+    public class BuildAstVisitor : MapGrammarParserBaseVisitor<MapGrammarAstNodes>
     {
 
         /// <summary>
@@ -610,56 +610,8 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// <returns>構文ASTノード</returns>
         public override MapGrammarAstNodes VisitCurve([NotNull] SyntaxDefinitions.MapGrammarParser.CurveContext context)
         {
-            Syntax1Node node = new Syntax1Node(context.Start, context.Stop);
-            node.MapElementName = "curve";
-            node.FunctionName = context.func.Text.ToLower();
-
-            //引数の登録
-            switch (node.FunctionName)
-            {
-                case "setgauge":                                                    /* SetGauge(value) */
-                case "gauge":
-                    node.Arguments.Add("value", Visit(context.value));
-                    break;
-                case "setcenter":                                                   /* SetCenter(x) */
-                    node.Arguments.Add("x", Visit(context.x));
-                    break;
-                case "setfunction":                                                 /* SetFunction(id) */
-                    node.Arguments.Add("id", Visit(context.id));
-                    break;
-                case "begintransition":                                             /* BeginTransition() */
-                    break;
-                case "begin":                                                       /* Begin(radius, cant?) */
-                case "begincircular":
-                    node.Arguments.Add("radius", Visit(context.radius));
-                    if (context.cant != null)
-                        node.Arguments.Add("cant", Visit(context.cant));
-                    break;
-                case "end":                                                         /* End() */
-                    break;
-                case "interpolate":                                                 /* Interpolate(radius?, cant?) */
-                    if (context.radiusE != null)
-                        node.Arguments.Add("radius", Visit(context.radiusE));
-                    else if (context.radius != null)
-                    {
-                        node.Arguments.Add("radius", Visit(context.radius));
-
-                        if (context.cant != null)
-                            node.Arguments.Add("cant", Visit(context.cant));
-                    }
-                    else
-                    {
-                        //引数なし TODO
-                    }
-
-                    break;
-                case "change":                                                      /* Change(radius) */
-                    node.Arguments.Add("radius", Visit(context.radius));
-                    break;
-
-            }
-
-            return node;
+            // Test
+            return SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Curve, context.func.Text);
         }
 
         /// <summary>

@@ -3,6 +3,7 @@
  * 編集は行わないでください。
  */
 using Antlr4.Runtime;
+using Bve5_Parsing.Attributes;
 
 namespace Bve5_Parsing.MapGrammar.AstNodes {
 
@@ -29,6 +30,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// 引数：軌間 [m]
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes Value { get; set; }
         #endregion Args
 
@@ -63,6 +65,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// 引数：回転中心の x 座標 [m] (正: 曲線の内側, 負: 曲線の外側)
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes X { get; set; }
         #endregion Args
 
@@ -97,6 +100,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// 引数：関数番号 (0: サイン半波長逓減, 1: 直線逓減)
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes Id { get; set; }
         #endregion Args
 
@@ -109,9 +113,9 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     }
 
     /// <summary>
-    /// Curve.BeginTransition();
+    /// Curve.Begintransition();
     /// </summary>
-    public partial class CurveBeginTransitionNode : SyntaxNode
+    public partial class CurveBegintransitionNode : SyntaxNode
     {
         #region SyntaxInfo
 
@@ -123,7 +127,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.BeginTransition;
+        public override MapFunctionName FunctionName => MapFunctionName.Begintransition;
         #endregion SyntaxInfo
 
 
@@ -132,7 +136,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// </summary>
         /// <param name="start"></param>
         /// <param name="stop"></param>
-        public CurveBeginTransitionNode(IToken start, IToken stop) : base(start, stop) { }
+        public CurveBegintransitionNode(IToken start, IToken stop) : base(start, stop) { }
     }
 
     /// <summary>
@@ -158,11 +162,13 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// 引数：曲線半径 [m] (正: 右曲線, 負: 左曲線)
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes Radius { get; set; }
 
         /// <summary>
         /// 引数：カント [m]（省略可能）
         /// </summary>
+        [Argument(Optional = true)]
         public MapGrammarAstNodes Cant { get; set; }
         #endregion Args
 
@@ -224,11 +230,13 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// 引数：曲線半径 [m] (正: 右曲線, 負: 左曲線, 0: 直線)（省略可能）
         /// </summary>
+        [Argument(Optional = true)]
         public MapGrammarAstNodes Radius { get; set; }
 
         /// <summary>
         /// 引数：カント [m]（省略可能）
         /// </summary>
+        [Argument(Optional = true)]
         public MapGrammarAstNodes Cant { get; set; }
         #endregion Args
 
@@ -263,6 +271,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// 引数：曲線半径 [m] (正: 右曲線, 負: 左曲線, 0: 直線)
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes Radius { get; set; }
         #endregion Args
 
@@ -324,6 +333,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// 引数：勾配 [‰]
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes Gradient { get; set; }
         #endregion Args
 
@@ -385,6 +395,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// 引数：勾配 [‰]（省略可能）
         /// </summary>
+        [Argument(Optional = true)]
         public MapGrammarAstNodes Gradient { get; set; }
         #endregion Args
 
@@ -423,11 +434,13 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// 引数：自軌道からの x 座標 [m]（省略可能）
         /// </summary>
+        [Argument(Optional = true)]
         public MapGrammarAstNodes X { get; set; }
 
         /// <summary>
         /// 引数：現在の距離程以降の自軌道との平面曲線相対半径 [m] (0: 直線)（省略可能）
         /// </summary>
+        [Argument(Optional = true)]
         public MapGrammarAstNodes Radius { get; set; }
         #endregion Args
 
@@ -466,11 +479,13 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// 引数：自軌道からの y 座標 [m]（省略可能）
         /// </summary>
+        [Argument(Optional = true)]
         public MapGrammarAstNodes Y { get; set; }
 
         /// <summary>
         /// 引数：現在の距離程以降の自軌道との縦曲線相対半径 [m] (0: 直線)（省略可能）
         /// </summary>
+        [Argument(Optional = true)]
         public MapGrammarAstNodes Radius { get; set; }
         #endregion Args
 
@@ -509,21 +524,25 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// 引数：自軌道からの x 座標 [m]
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes X { get; set; }
 
         /// <summary>
         /// 引数：自軌道からの y 座標 [m]
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes Y { get; set; }
 
         /// <summary>
         /// 引数：現在の距離程以降の自軌道との平面曲線相対半径 [m] (0: 直線)（省略可能）
         /// </summary>
+        [Argument(Optional = true)]
         public MapGrammarAstNodes RadiusH { get; set; }
 
         /// <summary>
         /// 引数：現在の距離程以降の自軌道との縦曲線相対半径 [m] (0: 直線)（省略可能）
         /// </summary>
+        [Argument(Optional = true)]
         public MapGrammarAstNodes RadiusV { get; set; }
         #endregion Args
 
@@ -562,6 +581,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// 引数：軌間 [m]
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes Gauge { get; set; }
         #endregion Args
 
@@ -600,6 +620,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// 引数：回転中心の x 座標 [m] (正: 曲線の内側, 負: 曲線の外側)
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes X { get; set; }
         #endregion Args
 
@@ -638,6 +659,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// 引数：関数番号 (0: サイン半波長逓減, 1: 直線逓減)
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes Id { get; set; }
         #endregion Args
 
@@ -707,6 +729,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// 引数：カント [m] (正: 右に傾ける, 負: 左に傾ける)
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes Cant { get; set; }
         #endregion Args
 
@@ -776,6 +799,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// 引数：カント [m] (正: 右に傾ける, 負: 左に傾ける)（省略可能）
         /// </summary>
+        [Argument(Optional = true)]
         public MapGrammarAstNodes Cant { get; set; }
         #endregion Args
 
@@ -810,6 +834,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// 引数：このファイルからストラクチャーリストファイルへの相対パス
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes FilePath { get; set; }
         #endregion Args
 
@@ -848,46 +873,55 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// 引数：配置先の軌道名 (0: 自軌道)
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes TrackKey { get; set; }
 
         /// <summary>
         /// 引数：軌道からの x 座標 [m]
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes X { get; set; }
 
         /// <summary>
         /// 引数：軌道からの y 座標 [m]
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes Y { get; set; }
 
         /// <summary>
         /// 引数：軌道からの z 座標 [m]
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes Z { get; set; }
 
         /// <summary>
         /// 引数：軌道に対する x 軸回りの角 [deg]
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes RX { get; set; }
 
         /// <summary>
         /// 引数：軌道に対する y 軸回りの角 [deg]
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes RY { get; set; }
 
         /// <summary>
         /// 引数：軌道に対する z 軸回りの角 [deg]
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes RZ { get; set; }
 
         /// <summary>
         /// 引数：傾斜オプション (0: 常に水平, 1: 勾配に連動, 2: カントに連動, 3: 勾配とカントに連動)
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes Tilt { get; set; }
 
         /// <summary>
         /// 引数：曲線における弦の長さ [m]
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes Span { get; set; }
         #endregion Args
 
@@ -926,16 +960,19 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// 引数：配置先の軌道名 (0: 自軌道)
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes TrackKey { get; set; }
 
         /// <summary>
         /// 引数：傾斜オプション (0: 常に水平, 1: 勾配に連動, 2: カントに連動, 3: 勾配とカントに連動)
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes Tilt { get; set; }
 
         /// <summary>
         /// 引数：曲線における弦の長さ [m]
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes Span { get; set; }
         #endregion Args
 
@@ -974,16 +1011,19 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// 引数：一方の軌道の軌道名 (0: 自軌道)
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes TrackKey1 { get; set; }
 
         /// <summary>
         /// 引数：他方の軌道の軌道名
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes TrackKey2 { get; set; }
 
         /// <summary>
         /// 引数：変形方向 (0: x および y 方向に変形, 1: x 方向のみに変形)（省略可能）
         /// </summary>
+        [Argument(Optional = true)]
         public MapGrammarAstNodes Flag { get; set; }
         #endregion Args
 
@@ -1022,51 +1062,61 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// 引数：配置先の軌道名 (0: 自軌道)
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes TrackKey { get; set; }
 
         /// <summary>
         /// 引数：軌道からの x 座標 [m]
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes X { get; set; }
 
         /// <summary>
         /// 引数：軌道からの y 座標 [m]
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes Y { get; set; }
 
         /// <summary>
         /// 引数：軌道からの z 座標 [m]
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes Z { get; set; }
 
         /// <summary>
         /// 引数：軌道に対する x 軸回りの角 [deg]
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes RX { get; set; }
 
         /// <summary>
         /// 引数：軌道に対する y 軸回りの角 [deg]
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes RY { get; set; }
 
         /// <summary>
         /// 引数：軌道に対する z 軸回りの角 [deg]
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes RZ { get; set; }
 
         /// <summary>
         /// 引数：傾斜オプション (0: 常に水平, 1: 勾配に連動, 2: カントに連動, 3: 勾配とカントに連動)
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes Tilt { get; set; }
 
         /// <summary>
         /// 引数：曲線における弦の長さ [m]
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes Span { get; set; }
 
         /// <summary>
         /// 引数：配置間隔 [m]
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes Interval { get; set; }
         #endregion Args
 
@@ -1105,21 +1155,25 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// 引数：配置先の軌道名 (0: 自軌道)
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes TrackKey { get; set; }
 
         /// <summary>
         /// 引数：傾斜オプション (0: 常に水平, 1: 勾配に連動, 2: カントに連動, 3: 勾配とカントに連動)
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes Tilt { get; set; }
 
         /// <summary>
         /// 引数：曲線における弦の長さ [m]
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes Span { get; set; }
 
         /// <summary>
         /// 引数：配置間隔 [m]
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes Interval { get; set; }
         #endregion Args
 
@@ -1185,6 +1239,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// 引数：ストラクチャー名
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes StructureKey { get; set; }
         #endregion Args
 
@@ -1219,6 +1274,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// 引数：このファイルから停車場リストファイルへの相対パス
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes FilePath { get; set; }
         #endregion Args
 
@@ -1257,16 +1313,19 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// 引数：開くドアの方向 (-1: 左, 1: 右)
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes Door { get; set; }
 
         /// <summary>
         /// 引数：停止位置誤差の後方許容範囲 (負の値で設定)
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes Margin1 { get; set; }
 
         /// <summary>
         /// 引数：停止位置誤差の後方許容範囲
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes Margin2 { get; set; }
         #endregion Args
 
@@ -1355,6 +1414,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// 引数：このファイルから信号現示リストファイルへの相対パス
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes FilePath { get; set; }
         #endregion Args
 
@@ -1393,51 +1453,61 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// 引数：関連づける閉そくの相対インデックス
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes Section { get; set; }
 
         /// <summary>
         /// 引数：配置先の軌道名
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes TrackKey { get; set; }
 
         /// <summary>
         /// 引数：軌道からの x 座標 [m]
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes X { get; set; }
 
         /// <summary>
         /// 引数：軌道からの y 座標 [m]
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes Y { get; set; }
 
         /// <summary>
         /// 引数：軌道からの z 座標 [m]（省略可能）
         /// </summary>
+        [Argument(Optional = true)]
         public MapGrammarAstNodes Z { get; set; }
 
         /// <summary>
         /// 引数：軌道に対する x 軸回りの角 [deg]（省略可能）
         /// </summary>
+        [Argument(Optional = true)]
         public MapGrammarAstNodes RX { get; set; }
 
         /// <summary>
         /// 引数：軌道に対する y 軸回りの角 [deg]（省略可能）
         /// </summary>
+        [Argument(Optional = true)]
         public MapGrammarAstNodes RY { get; set; }
 
         /// <summary>
         /// 引数：軌道に対する z 軸回りの角 [deg]（省略可能）
         /// </summary>
+        [Argument(Optional = true)]
         public MapGrammarAstNodes RZ { get; set; }
 
         /// <summary>
         /// 引数：傾斜オプション (0: 常に水平, 1: 勾配に連動, 2: カントに連動, 3: 勾配とカントに連動)（省略可能）
         /// </summary>
+        [Argument(Optional = true)]
         public MapGrammarAstNodes Tilt { get; set; }
 
         /// <summary>
         /// 引数：曲線における弦の長さ [m]（省略可能）
         /// </summary>
+        [Argument(Optional = true)]
         public MapGrammarAstNodes Span { get; set; }
         #endregion Args
 
@@ -1472,16 +1542,19 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// 引数：保安装置に送る地上子種別 (整数)
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes Type { get; set; }
 
         /// <summary>
         /// 引数：関連づける閉そくの相対インデックス
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes Section { get; set; }
 
         /// <summary>
         /// 引数：保安装置に送る値 (整数)
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes SendData { get; set; }
         #endregion Args
 
@@ -1516,6 +1589,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// 引数：走行速度 [km/h]
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes V { get; set; }
         #endregion Args
 
@@ -1577,11 +1651,13 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// 引数：時刻を表す文字列 ('hh:mm:ss')（省略可能）
         /// </summary>
+        [Argument(Optional = true)]
         public MapGrammarAstNodes Time { get; set; }
 
         /// <summary>
         /// 引数：00:00:00 からの経過時間 [sec]（省略可能）
         /// </summary>
+        [Argument(Optional = true)]
         public MapGrammarAstNodes Second { get; set; }
         #endregion Args
 
@@ -1616,16 +1692,19 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// 引数：赤成分 (0 ~ 1)
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes Red { get; set; }
 
         /// <summary>
         /// 引数：緑成分 (0 ~ 1)
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes Green { get; set; }
 
         /// <summary>
         /// 引数：青成分 (0 ~ 1)
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes Blue { get; set; }
         #endregion Args
 
@@ -1660,16 +1739,19 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// 引数：赤成分 (0 ~ 1)
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes Red { get; set; }
 
         /// <summary>
         /// 引数：緑成分 (0 ~ 1)
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes Green { get; set; }
 
         /// <summary>
         /// 引数：青成分 (0 ~ 1)
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes Blue { get; set; }
         #endregion Args
 
@@ -1704,21 +1786,25 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// 引数：濃度（省略可能）
         /// </summary>
+        [Argument(Optional = true)]
         public MapGrammarAstNodes Density { get; set; }
 
         /// <summary>
         /// 引数：赤成分 (0 ~ 1)（省略可能）
         /// </summary>
+        [Argument(Optional = true)]
         public MapGrammarAstNodes Red { get; set; }
 
         /// <summary>
         /// 引数：緑成分 (0 ~ 1)（省略可能）
         /// </summary>
+        [Argument(Optional = true)]
         public MapGrammarAstNodes Green { get; set; }
 
         /// <summary>
         /// 引数：青成分 (0 ~ 1)（省略可能）
         /// </summary>
+        [Argument(Optional = true)]
         public MapGrammarAstNodes Blue { get; set; }
         #endregion Args
 
@@ -1753,6 +1839,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// 引数：距離 [m] (0: [設定] ウィンドウで設定される描画距離を適用)（省略可能）
         /// </summary>
+        [Argument(Optional = true)]
         public MapGrammarAstNodes Value { get; set; }
         #endregion Args
 
@@ -1787,6 +1874,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// 引数：昼間画像と夜間画像の混合比 (0: 夜間画像 ~ 1: 昼間画像)（省略可能）
         /// </summary>
+        [Argument(Optional = true)]
         public MapGrammarAstNodes Value { get; set; }
         #endregion Args
 
@@ -1821,31 +1909,37 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// 引数：左右変位 (左と右のレールの通り変位の平均に相当) の標準偏差 [m]
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes X { get; set; }
 
         /// <summary>
         /// 引数：上下変位 (左と右のレールの高低変位の平均に相当) の標準偏差 [m]
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes Y { get; set; }
 
         /// <summary>
         /// 引数：ロール変位 (水準変位を軌間で除した値に相当) の標準偏差 [rad]
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes R { get; set; }
 
         /// <summary>
         /// 引数：左右変位の遮断波長 [m]
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes LX { get; set; }
 
         /// <summary>
         /// 引数：上下変位の遮断波長 [m]
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes LY { get; set; }
 
         /// <summary>
         /// 引数：ロール変位の遮断波長 [m]
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes LR { get; set; }
         #endregion Args
 
@@ -1880,16 +1974,19 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// 引数：走行速度 0 km/h における粘着係数
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes A { get; set; }
 
         /// <summary>
         /// 引数：粘着係数の走行速度に対する変化を表す係数（省略可能）
         /// </summary>
+        [Argument(Optional = true)]
         public MapGrammarAstNodes B { get; set; }
 
         /// <summary>
         /// 引数：粘着係数の走行速度に対する変化を表す係数（省略可能）
         /// </summary>
+        [Argument(Optional = true)]
         public MapGrammarAstNodes C { get; set; }
         #endregion Args
 
@@ -1924,6 +2021,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// 引数：このファイルからサウンドリストファイルへの相対パス
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes FilePath { get; set; }
         #endregion Args
 
@@ -1989,6 +2087,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// 引数：このファイルからサウンドリストファイルへの相対パス
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes FilePath { get; set; }
         #endregion Args
 
@@ -2027,11 +2126,13 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// 引数：軌道からの x 座標 [m]
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes X { get; set; }
 
         /// <summary>
         /// 引数：軌道からの y 座標 [m]
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes Y { get; set; }
         #endregion Args
 
@@ -2066,6 +2167,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// 引数：車両サウンドファイルの [Run] セクションで定義したインデックス
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes Index { get; set; }
         #endregion Args
 
@@ -2100,6 +2202,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// 引数：車両サウンドファイルの [Flange] セクションで定義したインデックス
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes Index { get; set; }
         #endregion Args
 
@@ -2134,6 +2237,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// 引数：車両サウンドファイルの [Joint] セクションで定義したインデックス
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes Index { get; set; }
         #endregion Args
 
@@ -2168,21 +2272,25 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// 引数：他列車名 (任意の文字列)
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes TrainKey { get; set; }
 
         /// <summary>
         /// 引数：このファイルから他列車ファイルへの相対パス
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes FilePath { get; set; }
 
         /// <summary>
         /// 引数：走行する軌道
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes TrackKey { get; set; }
 
         /// <summary>
         /// 引数：進行方向 (-1: 対向, 1: 並走)
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes Direction { get; set; }
         #endregion Args
 
@@ -2221,16 +2329,19 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// 引数：このファイルから他列車ファイルへの相対パス
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes FilePath { get; set; }
 
         /// <summary>
         /// 引数：走行する軌道
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes TrackKey { get; set; }
 
         /// <summary>
         /// 引数：進行方向 (-1: 対向, 1: 並走)
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes Direction { get; set; }
         #endregion Args
 
@@ -2269,11 +2380,13 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// 引数：時刻を表す文字列 ('hh:mm:ss')（省略可能）
         /// </summary>
+        [Argument(Optional = true)]
         public MapGrammarAstNodes Time { get; set; }
 
         /// <summary>
         /// 引数：00:00:00 からの経過時間 [sec]（省略可能）
         /// </summary>
+        [Argument(Optional = true)]
         public MapGrammarAstNodes Second { get; set; }
         #endregion Args
 
@@ -2312,21 +2425,25 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// 引数：減速度 [km/h/s]
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes Decelerate { get; set; }
 
         /// <summary>
         /// 引数：停車時間 [s]
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes StopTime { get; set; }
 
         /// <summary>
         /// 引数：加速度 [km/h/s]
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes Accelerate { get; set; }
 
         /// <summary>
         /// 引数：加速後の走行速度 [km/h]
         /// </summary>
+        [Argument]
         public MapGrammarAstNodes Speed { get; set; }
         #endregion Args
 

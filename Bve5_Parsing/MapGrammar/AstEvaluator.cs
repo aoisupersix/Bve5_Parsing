@@ -168,292 +168,292 @@ namespace Bve5_Parsing.MapGrammar
 
         public override object Visit(CurveSetgaugeNode node)
         {
-            throw new NotImplementedException();
+            return node.CreateSyntaxData(this, NowDistance);
         }
 
         public override object Visit(CurveSetcenterNode node)
         {
-            throw new NotImplementedException();
+            return node.CreateSyntaxData(this, NowDistance);
         }
 
         public override object Visit(CurveSetfunctionNode node)
         {
-            throw new NotImplementedException();
+            return node.CreateSyntaxData(this, NowDistance);
         }
 
-        public override object Visit(CurveBeginTransitionNode node)
+        public override object Visit(CurveBegintransitionNode node)
         {
-            throw new NotImplementedException();
+            return node.CreateSyntaxData(this, NowDistance);
         }
 
         public override object Visit(CurveBeginNode node)
         {
-            throw new NotImplementedException();
+            return node.CreateSyntaxData(this, NowDistance);
         }
 
         public override object Visit(CurveEndNode node)
         {
-            throw new NotImplementedException();
+            return node.CreateSyntaxData(this, NowDistance);
         }
 
         public override object Visit(CurveInterpolateNode node)
         {
-            throw new NotImplementedException();
+            return node.CreateSyntaxData(this, NowDistance);
         }
 
         public override object Visit(CurveChangeNode node)
         {
-            throw new NotImplementedException();
+            return node.CreateSyntaxData(this, NowDistance);
         }
 
         public override object Visit(GradientBegintransitionNode node)
         {
-            throw new NotImplementedException();
+            return node.CreateSyntaxData(this, NowDistance);
         }
 
         public override object Visit(GradientBeginNode node)
         {
-            throw new NotImplementedException();
+            return node.CreateSyntaxData(this, NowDistance);
         }
 
         public override object Visit(GradientEndNode node)
         {
-            throw new NotImplementedException();
+            return node.CreateSyntaxData(this, NowDistance);
         }
 
         public override object Visit(GradientInterpolateNode node)
         {
-            throw new NotImplementedException();
+            return node.CreateSyntaxData(this, NowDistance);
         }
 
         public override object Visit(TrackXInterpolateNode node)
         {
-            throw new NotImplementedException();
+            return node.CreateSyntaxData(this, NowDistance);
         }
 
         public override object Visit(TrackYInterpolateNode node)
         {
-            throw new NotImplementedException();
+            return node.CreateSyntaxData(this, NowDistance);
         }
 
         public override object Visit(TrackPositionNode node)
         {
-            throw new NotImplementedException();
+            return node.CreateSyntaxData(this, NowDistance);
         }
 
         public override object Visit(TrackCantSetgaugeNode node)
         {
-            throw new NotImplementedException();
+            return node.CreateSyntaxData(this, NowDistance);
         }
 
         public override object Visit(TrackCantSetcenterNode node)
         {
-            throw new NotImplementedException();
+            return node.CreateSyntaxData(this, NowDistance);
         }
 
         public override object Visit(TrackCantSetfunctionNode node)
         {
-            throw new NotImplementedException();
+            return node.CreateSyntaxData(this, NowDistance);
         }
 
         public override object Visit(TrackCantBegintransitionNode node)
         {
-            throw new NotImplementedException();
+            return node.CreateSyntaxData(this, NowDistance);
         }
 
         public override object Visit(TrackCantBeginNode node)
         {
-            throw new NotImplementedException();
+            return node.CreateSyntaxData(this, NowDistance);
         }
 
         public override object Visit(TrackCantEndNode node)
         {
-            throw new NotImplementedException();
+            return node.CreateSyntaxData(this, NowDistance);
         }
 
         public override object Visit(TrackCantInterpolateNode node)
         {
-            throw new NotImplementedException();
+            return node.CreateSyntaxData(this, NowDistance);
         }
 
         public override object Visit(StructureLoadNode node)
         {
-            throw new NotImplementedException();
+            return node.CreateSyntaxData(this, NowDistance);
         }
 
         public override object Visit(StructurePutNode node)
         {
-            throw new NotImplementedException();
+            return node.CreateSyntaxData(this, NowDistance);
         }
 
         public override object Visit(StructurePut0Node node)
         {
-            throw new NotImplementedException();
+            return node.CreateSyntaxData(this, NowDistance);
         }
 
         public override object Visit(StructurePutbetweenNode node)
         {
-            throw new NotImplementedException();
+            return node.CreateSyntaxData(this, NowDistance);
         }
 
         public override object Visit(RepeaterBeginNode node)
         {
-            throw new NotImplementedException();
+            return node.CreateSyntaxData(this, NowDistance);
         }
 
         public override object Visit(RepeaterBegin0Node node)
         {
-            throw new NotImplementedException();
+            return node.CreateSyntaxData(this, NowDistance);
         }
 
         public override object Visit(RepeaterEndNode node)
         {
-            throw new NotImplementedException();
+            return node.CreateSyntaxData(this, NowDistance);
         }
 
         public override object Visit(BackgroundChangeNode node)
         {
-            throw new NotImplementedException();
+            return node.CreateSyntaxData(this, NowDistance);
         }
 
         public override object Visit(StationLoadNode node)
         {
-            throw new NotImplementedException();
+            return node.CreateSyntaxData(this, NowDistance);
         }
 
         public override object Visit(StationPutNode node)
         {
-            throw new NotImplementedException();
+            return node.CreateSyntaxData(this, NowDistance);
         }
 
         public override object Visit(SectionBeginNode node)
         {
-            throw new NotImplementedException();
+            return node.CreateSyntaxData(this, NowDistance);
         }
 
         public override object Visit(SectionSetspeedlimitNode node)
         {
-            throw new NotImplementedException();
+            return node.CreateSyntaxData(this, NowDistance);
         }
 
         public override object Visit(SignalLoadNode node)
         {
-            throw new NotImplementedException();
+            return node.CreateSyntaxData(this, NowDistance);
         }
 
         public override object Visit(SignalPutNode node)
         {
-            throw new NotImplementedException();
+            return node.CreateSyntaxData(this, NowDistance);
         }
 
         public override object Visit(BeaconPutNode node)
         {
-            throw new NotImplementedException();
+            return node.CreateSyntaxData(this, NowDistance);
         }
 
         public override object Visit(SpeedlimitBeginNode node)
         {
-            throw new NotImplementedException();
+            return node.CreateSyntaxData(this, NowDistance);
         }
 
         public override object Visit(SpeedlimitEndNode node)
         {
-            throw new NotImplementedException();
+            return node.CreateSyntaxData(this, NowDistance);
         }
 
         public override object Visit(PretrainPassNode node)
         {
-            throw new NotImplementedException();
+            return node.CreateSyntaxData(this, NowDistance);
         }
 
         public override object Visit(LightAmbientNode node)
         {
-            throw new NotImplementedException();
+            return node.CreateSyntaxData(this, NowDistance);
         }
 
         public override object Visit(LightDiffuseNode node)
         {
-            throw new NotImplementedException();
+            return node.CreateSyntaxData(this, NowDistance);
         }
 
         public override object Visit(FogInterpolateNode node)
         {
-            throw new NotImplementedException();
+            return node.CreateSyntaxData(this, NowDistance);
         }
 
         public override object Visit(DrawdistanceChangeNode node)
         {
-            throw new NotImplementedException();
+            return node.CreateSyntaxData(this, NowDistance);
         }
 
         public override object Visit(CabilluminanceInterpolateNode node)
         {
-            throw new NotImplementedException();
+            return node.CreateSyntaxData(this, NowDistance);
         }
 
         public override object Visit(IrregularityChangeNode node)
         {
-            throw new NotImplementedException();
+            return node.CreateSyntaxData(this, NowDistance);
         }
 
         public override object Visit(AdhisionChangeNode node)
         {
-            throw new NotImplementedException();
+            return node.CreateSyntaxData(this, NowDistance);
         }
 
         public override object Visit(SoundLoadNode node)
         {
-            throw new NotImplementedException();
+            return node.CreateSyntaxData(this, NowDistance);
         }
 
         public override object Visit(SoundPlayNode node)
         {
-            throw new NotImplementedException();
+            return node.CreateSyntaxData(this, NowDistance);
         }
 
         public override object Visit(Sound3dLoadNode node)
         {
-            throw new NotImplementedException();
+            return node.CreateSyntaxData(this, NowDistance);
         }
 
         public override object Visit(Sound3dPutNode node)
         {
-            throw new NotImplementedException();
+            return node.CreateSyntaxData(this, NowDistance);
         }
 
         public override object Visit(RollingnoiseChangeNode node)
         {
-            throw new NotImplementedException();
+            return node.CreateSyntaxData(this, NowDistance);
         }
 
         public override object Visit(FlangenoiseChangeNode node)
         {
-            throw new NotImplementedException();
+            return node.CreateSyntaxData(this, NowDistance);
         }
 
         public override object Visit(JointnoisePlayNode node)
         {
-            throw new NotImplementedException();
+            return node.CreateSyntaxData(this, NowDistance);
         }
 
         public override object Visit(TrainAddNode node)
         {
-            throw new NotImplementedException();
+            return node.CreateSyntaxData(this, NowDistance);
         }
 
         public override object Visit(TrainLoadNode node)
         {
-            throw new NotImplementedException();
+            return node.CreateSyntaxData(this, NowDistance);
         }
 
         public override object Visit(TrainEnableNode node)
         {
-            throw new NotImplementedException();
+            return node.CreateSyntaxData(this, NowDistance);
         }
 
         public override object Visit(TrainStopNode node)
         {
-            throw new NotImplementedException();
+            return node.CreateSyntaxData(this, NowDistance);
         }
 
         /// <summary>
