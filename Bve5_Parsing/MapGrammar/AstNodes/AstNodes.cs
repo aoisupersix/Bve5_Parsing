@@ -74,6 +74,9 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
 
         public abstract MapFunctionName FunctionName { get; }
 
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
         public bool HasKey => GetType().GetProperty("Key") != null;
 
         public SyntaxNode(IToken start, IToken stop) : base(start, stop) { }
@@ -119,7 +122,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
 
         /// <summary>
         /// メタ情報から対応するAstを生成して返します。
-        /// 対応していない構文が存在する可能性があるため、使用には注意して下さい。
+        /// MapGrammarParserの定義ファイル更新時に使えなくなる可能性が高いため、更新時は注意して下さい。
         /// </summary>
         /// <param name="visitor"></param>
         /// <param name="ctx"></param>
@@ -131,9 +134,13 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         {
             if (funcName.Length < 2)
                 throw new ArgumentOutOfRangeException("関数名が短すぎます。");
+            if (element2Name != null && element2Name.Length < 2)
+                throw new ArgumentOutOfRangeException("サブ要素名が短すぎます。");
 
             // ASTのインスタンス取得
-            var astClassName = elementName.GetStringValue() + char.ToUpper(funcName[0]) + funcName.Substring(1).ToLower() + "Node";
+            var astClassName = element2Name == null ?
+                elementName.GetStringValue() + char.ToUpper(funcName[0]) + funcName.Substring(1).ToLower() + "Node" :
+                elementName.GetStringValue() + char.ToUpper(element2Name[0]) + element2Name.Substring(1).ToLower() + char.ToUpper(funcName[0]) + funcName.Substring(1).ToLower() + "Node";
             var astClassType = Type.GetType(typeof(MapGrammarAstNodes).Namespace + "." + astClassName);
 
             if (astClassType == null)
@@ -141,6 +148,13 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
 
             var instanceArg = new object[] { ctx.Start, ctx.Stop };
             var node = Activator.CreateInstance(astClassType, instanceArg) as SyntaxNode;
+
+            // キー
+            if (node.HasKey)
+            {
+                var key = ctx.GetType().GetField("key").GetValue(ctx) as IParseTree;
+                node.GetType().GetProperty("Key").SetValue(node, visitor.Visit(key));
+            }
 
             // 引数の取得
             foreach (var arg in node.GetNonOptionalArguments())
@@ -205,13 +219,13 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
             syntax.Distance = distance;
 
             // TODO: 構文タイプの判定を属性でやりたい
-            if (funcName.Contains("_"))
+            if (funcName.Contains("."))
             {
                 //Syntax3
                 syntax.MapElement = new string[2]
                 {
                     ElementName.GetStringValue().ToLower(),
-                    funcName.Substring(0, funcName.IndexOf("_"))
+                    funcName.Substring(0, funcName.IndexOf(".")).ToLower()
                 };
             }else
             {
@@ -222,8 +236,12 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
             }
 
             if (HasKey)
-                syntax.Key = evaluator.Visit(GetType().GetProperty("Key").GetValue(this) as MapGrammarAstNodes).ToString();
-            syntax.Function = funcName.Substring(funcName.IndexOf("_") + 1).ToLower();
+            {
+                var key = GetType().GetProperty("Key").GetValue(this) as MapGrammarAstNodes;
+                syntax.Key = evaluator.Visit(key).ToString();
+            }
+                
+            syntax.Function = funcName.Substring(funcName.IndexOf(".") + 1).ToLower();
             foreach(var argument in GetAllArguments())
             {
                 var val = argument.GetValue(this) as MapGrammarAstNodes;
