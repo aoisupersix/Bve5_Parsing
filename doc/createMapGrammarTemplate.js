@@ -9,6 +9,10 @@ const jsonData = loadJson("doc/map_grammar_syntax.json");
 const astTemp = loadFile("doc/map_grammar_ast.mst");
 parse(astTemp, jsonData, "Bve5_Parsing/MapGrammar/AstNodes/SyntaxNodes.cs");
 
+// 構文名定義生成
+const enumTemp = loadFile("doc/map_grammar_enum.mst");
+parse(enumTemp, jsonData, "Bve5_Parsing/MapGrammar/MapSyntaxDefinitions.cs");
+
 console.log("all completed !");
 
 function loadJson(jsonPath) {
@@ -40,17 +44,19 @@ function loadJson(jsonPath) {
     }
 
     // マップ要素名取得
-    if (linq.from(elems).all(e => e != state.elem)) {
-      elems.push(state.elem);
+    if (linq.from(elems).all(e => e["name"] != state.elem)) {
+      elems.push({name: state.elem});
     }
 
     // 関数名取得
     let funcName = state.func;
+    let funcString = funcName;
     if (state.syntax3 == true) {
       funcName = state.elem2 + "_" + funcName;
+      funcString = state.elem2 + "." + state.func;
     }
-    if (linq.from(funcs).all(f => f != funcName)) {
-      funcs.push(funcName);
+    if (linq.from(funcs).all(f => f["name"] != funcName)) {
+      funcs.push({name: funcName, str: funcString});
     }
   });
 
