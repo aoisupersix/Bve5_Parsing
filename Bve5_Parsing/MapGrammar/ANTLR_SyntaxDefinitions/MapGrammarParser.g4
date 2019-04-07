@@ -48,7 +48,7 @@ distance :
 
 //インクルード構文
 include :
-	path=string
+	filepath=string
 	;
 
 //平面曲線
@@ -97,7 +97,7 @@ track :
 
 //ストラクチャ
 structure :
-	  DOT func=LOAD OPN_PAR path=string CLS_PAR
+	  DOT func=LOAD OPN_PAR filepath=string CLS_PAR
 	| OPN_BRA key=expr CLS_BRA DOT func=PUT OPN_PAR trackkey=nullableExpr COMMA x=nullableExpr COMMA y=nullableExpr COMMA z=nullableExpr COMMA rx=nullableExpr COMMA ry=nullableExpr COMMA rz=nullableExpr COMMA tilt=nullableExpr COMMA span=nullableExpr CLS_PAR
 	| OPN_BRA key=expr CLS_BRA DOT func=PUT0 OPN_PAR trackkey=nullableExpr COMMA tilt=nullableExpr COMMA span=nullableExpr CLS_PAR
 	| OPN_BRA key=expr CLS_BRA DOT func=PUTBETWEEN OPN_PAR trackkey1=nullableExpr COMMA trackkey2=nullableExpr ( COMMA flag=nullableExpr )? CLS_PAR
@@ -117,7 +117,7 @@ background :
 
 //停車場
 station :
-	  DOT func=LOAD OPN_PAR path=string CLS_PAR
+	  DOT func=LOAD OPN_PAR filepath=string CLS_PAR
 	| OPN_BRA key=expr CLS_BRA DOT func=PUT OPN_PAR door=nullableExpr COMMA margin1=nullableExpr COMMA margin2=nullableExpr CLS_PAR
 	;
 
@@ -129,7 +129,7 @@ section :
 
 //信号機
 signal :
-	  DOT func=LOAD OPN_PAR path=string CLS_PAR
+	  DOT func=LOAD OPN_PAR filepath=string CLS_PAR
 	| DOT func=SPEEDLIMIT OPN_PAR nullableExpr exprArgs* CLS_PAR
 	| OPN_BRA key=expr CLS_BRA DOT func=PUT OPN_PAR sectionArgs=nullableExpr COMMA trackkey=nullableExpr COMMA x=nullableExpr COMMA y=nullableExpr CLS_PAR
 	| OPN_BRA key=expr CLS_BRA DOT func=PUT OPN_PAR sectionArgs=nullableExpr COMMA trackkey=nullableExpr COMMA x=nullableExpr COMMA y=nullableExpr COMMA z=nullableExpr COMMA rx=nullableExpr COMMA ry=nullableExpr COMMA rz=nullableExpr COMMA tilt=nullableExpr COMMA span=nullableExpr CLS_PAR
@@ -188,13 +188,13 @@ adhesion :
 
 //音
 sound :
-	  DOT func=LOAD OPN_PAR path=string CLS_PAR
+	  DOT func=LOAD OPN_PAR filepath=string CLS_PAR
 	| OPN_BRA key=expr CLS_BRA DOT func=PLAY OPN_PAR CLS_PAR
 	;
 
 //固定音源
 sound3d :
-	  DOT func=LOAD OPN_PAR path=string CLS_PAR
+	  DOT func=LOAD OPN_PAR filepath=string CLS_PAR
 	| OPN_BRA key=expr CLS_BRA DOT func=PUT OPN_PAR x=nullableExpr COMMA y=nullableExpr CLS_PAR
 	;
 
@@ -215,8 +215,8 @@ jointnoise :
 
 //他列車
 train :
-	  DOT func=ADD OPN_PAR trainkey=nullableExpr COMMA path=expr COMMA trackkey=nullableExpr COMMA direction=nullableExpr CLS_PAR
-	| OPN_BRA key=expr CLS_BRA DOT func=LOAD OPN_PAR path=expr COMMA trackkey=nullableExpr COMMA direction=nullableExpr CLS_PAR
+	  DOT func=ADD OPN_PAR trainkey=nullableExpr COMMA filepath=expr COMMA trackkey=nullableExpr COMMA direction=nullableExpr CLS_PAR
+	| OPN_BRA key=expr CLS_BRA DOT func=LOAD OPN_PAR filepath=expr COMMA trackkey=nullableExpr COMMA direction=nullableExpr CLS_PAR
 	| OPN_BRA key=expr CLS_BRA DOT func=ENABLE OPN_PAR time=nullableExpr CLS_PAR
 	| OPN_BRA key=expr CLS_BRA DOT func=STOP OPN_PAR decelerate=nullableExpr COMMA stoptime=nullableExpr COMMA accelerate=nullableExpr COMMA speed=nullableExpr CLS_PAR
 	;
@@ -234,6 +234,7 @@ varAssign :
 	v=var EQUAL expr;
 
 //レガシー関数
+//TODO: startがParseRuleContextとかぶってる
 legacy :
 	  DOT func=FOG OPN_PAR start=nullableExpr COMMA end=nullableExpr COMMA red=nullableExpr COMMA green=nullableExpr COMMA blue=nullableExpr CLS_PAR
 	| DOT func=CURVE OPN_PAR radius=nullableExpr COMMA cant=nullableExpr CLS_PAR

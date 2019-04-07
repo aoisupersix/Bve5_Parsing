@@ -43,7 +43,6 @@ namespace Bve5_ParsingTests
             Assert.Equal(expected, actual);
         }
 
-        #region 各構文のテスト
         [Fact]
         public void RootTest()
         {
@@ -70,18 +69,73 @@ namespace Bve5_ParsingTests
                     }));
         }
 
+        #region 各構文の手動テスト
+        /// <summary>
+        /// Structure.Load(FilePath);
+        /// </summary>
         [Fact]
-        public void CurveTest()
+        public void StructureLoadTest()
         {
-            // Curve.SetGauge(value)
+
+            // Structure.Load(filePath);
             Check(
-                ExecParse("BveTs Map 2.02\n0;Curve.SetGauge(400);"),
-                new MapData(
-                    version: "2.02",
-                    syntaxes: new List<SyntaxData>()
-                    {
-                        new SyntaxData(0, "curve", "setgauge").SetArg("value", 400)
-                    }));
+                ExecParse("BveTs Map 2.02\n0;Structure.Load('path');"),
+                new MapData(version: "2.02", strListPath: "path")
+                );
+        }
+
+        /// <summary>
+        /// Station.Load(FilePath);
+        /// </summary>
+        [Fact]
+        public void StationLoadTest()
+        {
+
+            // Station.Load(filePath);
+            Check(
+                ExecParse("BveTs Map 2.02\n0;Station.Load('path');"),
+                new MapData(version: "2.02", staListPath: "path")
+                );
+        }
+
+        /// <summary>
+        /// Signal.Load(FilePath);
+        /// </summary>
+        [Fact]
+        public void SignalLoadTest()
+        {
+
+            // Signal.Load(filePath);
+            Check(
+                ExecParse("BveTs Map 2.02\n0;Signal.Load('path');"),
+                new MapData(version: "2.02", sigListPath: "path")
+                );
+        }
+
+        /// <summary>
+        /// Sound.Load(FilePath);
+        /// </summary>
+        [Fact]
+        public void SoundLoadTest()
+        {
+            // Sound.Load(filePath);
+            Check(
+                ExecParse("BveTs Map 2.02\n0;Sound.Load('path');"),
+                new MapData(version: "2.02", souListPath: "path")
+                );
+        }
+
+        /// <summary>
+        /// Sound3d.Load(FilePath);
+        /// </summary>
+        [Fact]
+        public void Sound3dLoadTest()
+        {
+            // Structure.Load(filePath);
+            Check(
+                ExecParse("BveTs Map 2.02\n0;Sound3D.Load('path');"),
+                new MapData(version: "2.02", so3ListPath: "path")
+                );
         }
         #endregion
     }

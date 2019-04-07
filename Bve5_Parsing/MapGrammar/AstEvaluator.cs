@@ -166,6 +166,37 @@ namespace Bve5_Parsing.MapGrammar
             return returnData;
         }
 
+        public override object Visit(StructureLoadNode node)
+        {
+            evaluateData.StructureListPath = Visit(node.FilePath).ToString();
+            return null;
+        }
+
+        public override object Visit(StationLoadNode node)
+        {
+            evaluateData.StationListPath = Visit(node.FilePath).ToString();
+            return null;
+        }
+
+        public override object Visit(SignalLoadNode node)
+        {
+            evaluateData.SignalListPath = Visit(node.FilePath).ToString();
+            return null;
+        }
+
+        public override object Visit(SoundLoadNode node)
+        {
+            evaluateData.SoundListPath = Visit(node.FilePath).ToString();
+            return null;
+        }
+
+        public override object Visit(Sound3dLoadNode node)
+        {
+            evaluateData.Sound3DListPath = Visit(node.FilePath).ToString();
+            return null;
+        }
+
+        #region 構文
         public override object Visit(CurveSetgaugeNode node)
         {
             return node.CreateSyntaxData(this, NowDistance);
@@ -276,11 +307,6 @@ namespace Bve5_Parsing.MapGrammar
             return node.CreateSyntaxData(this, NowDistance);
         }
 
-        public override object Visit(StructureLoadNode node)
-        {
-            return node.CreateSyntaxData(this, NowDistance);
-        }
-
         public override object Visit(StructurePutNode node)
         {
             return node.CreateSyntaxData(this, NowDistance);
@@ -316,11 +342,6 @@ namespace Bve5_Parsing.MapGrammar
             return node.CreateSyntaxData(this, NowDistance);
         }
 
-        public override object Visit(StationLoadNode node)
-        {
-            return node.CreateSyntaxData(this, NowDistance);
-        }
-
         public override object Visit(StationPutNode node)
         {
             return node.CreateSyntaxData(this, NowDistance);
@@ -332,11 +353,6 @@ namespace Bve5_Parsing.MapGrammar
         }
 
         public override object Visit(SectionSetspeedlimitNode node)
-        {
-            return node.CreateSyntaxData(this, NowDistance);
-        }
-
-        public override object Visit(SignalLoadNode node)
         {
             return node.CreateSyntaxData(this, NowDistance);
         }
@@ -401,17 +417,7 @@ namespace Bve5_Parsing.MapGrammar
             return node.CreateSyntaxData(this, NowDistance);
         }
 
-        public override object Visit(SoundLoadNode node)
-        {
-            return node.CreateSyntaxData(this, NowDistance);
-        }
-
         public override object Visit(SoundPlayNode node)
-        {
-            return node.CreateSyntaxData(this, NowDistance);
-        }
-
-        public override object Visit(Sound3dLoadNode node)
         {
             return node.CreateSyntaxData(this, NowDistance);
         }
@@ -455,6 +461,7 @@ namespace Bve5_Parsing.MapGrammar
         {
             return node.CreateSyntaxData(this, NowDistance);
         }
+        #endregion 構文
 
         /// <summary>
         /// リストファイルノードの評価

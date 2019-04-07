@@ -598,7 +598,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
             Syntax1Node node = new Syntax1Node(context.Start, context.Stop);
             node.MapElementName = "include";
             node.FunctionName = "";
-            node.Arguments.Add("path", Visit(context.path));
+            node.Arguments.Add("path", Visit(context.filepath));
 
             return node;
         }
@@ -715,7 +715,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
             string funcName = context.func.Text.ToLower();
             if (funcName.Equals("load"))                                                    /* Load(filePath) */
             {
-                return new LoadListNode(context.Start, context.Stop) { MapElementName = "station", Path = context.path };
+                return new LoadListNode(context.Start, context.Stop) { MapElementName = "station", Path = context.filepath };
             }
             else if (funcName.Equals("put"))                                                /* Put(door, margin1, margin2) */
             {
@@ -774,7 +774,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
             string funcName = context.func.Text.ToLower();
 
             if (funcName.Equals("load"))                                                    /* Load(filePath) */
-                return new LoadListNode(context.Start, context.Stop) { MapElementName = "signal", Path = context.path };
+                return new LoadListNode(context.Start, context.Stop) { MapElementName = "signal", Path = context.filepath };
             else if (funcName.Equals("speedlimit"))
             {
                 Syntax1Node node = new Syntax1Node(context.Start, context.Stop);
@@ -999,9 +999,9 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// <returns>構文ASTノード</returns>
         public override MapGrammarAstNodes VisitSound([NotNull] SyntaxDefinitions.MapGrammarParser.SoundContext context)
         {
-            if (context.path != null)                                /* Load(filePath) */
+            if (context.filepath != null)                                /* Load(filePath) */
             {
-                return new LoadListNode(context.Start, context.Stop) { MapElementName = "sound", Path = context.path };
+                return new LoadListNode(context.Start, context.Stop) { MapElementName = "sound", Path = context.filepath };
             }
             else                                                    /* [soundkey].Play() */
             {
@@ -1021,9 +1021,9 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// <returns>構文ASTノード</returns>
         public override MapGrammarAstNodes VisitSound3d([NotNull] SyntaxDefinitions.MapGrammarParser.Sound3dContext context)
         {
-            if (context.path != null)                                /* Load(filePath) */
+            if (context.filepath != null)                                /* Load(filePath) */
             {
-                return new LoadListNode(context.Start, context.Stop) { MapElementName = "sound3d", Path = context.path };
+                return new LoadListNode(context.Start, context.Stop) { MapElementName = "sound3d", Path = context.filepath };
             }
             else                                                    /* [soundkey].Put(x,y) */
             {
@@ -1096,7 +1096,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
                 node.MapElementName = "train";
                 node.FunctionName = context.func.Text.ToLower();
                 node.Arguments.Add("trainkey", Visit(context.trainkey));
-                node.Arguments.Add("filepath", Visit(context.path));
+                node.Arguments.Add("filepath", Visit(context.filepath));
                 node.Arguments.Add("trackkey", Visit(context.trackkey));
                 node.Arguments.Add("direction", Visit(context.direction));
 
@@ -1112,7 +1112,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
                 switch (context.func.Type)
                 {
                     case MapGrammarLexer.LOAD:                                  /* Load(filePath, trackkey, direction) */
-                        node.Arguments.Add("filepath", Visit(context.path));
+                        node.Arguments.Add("filepath", Visit(context.filepath));
                         node.Arguments.Add("trackkey", Visit(context.trackkey));
                         node.Arguments.Add("direction", Visit(context.direction));
                         break;
