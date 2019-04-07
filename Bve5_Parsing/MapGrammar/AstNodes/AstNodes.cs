@@ -160,6 +160,14 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
                 var argCtx = argCtxInfo?.GetValue(ctx);
                 if (argCtx != null)
                     arg.SetValue(node, visitor.Visit(argCtx as IParseTree));
+                else
+                {
+                    // "引数名" + Eのコンテキスト名に対応させる
+                    var argECtxInfo = ctx.GetType().GetField(arg.Name.ToLower() + "E");
+                    var argECtx = argECtxInfo?.GetValue(ctx);
+                    if (argECtx != null)
+                        arg.SetValue(node, visitor.Visit(argECtx as IParseTree));
+                }
             }
 
             return node;
