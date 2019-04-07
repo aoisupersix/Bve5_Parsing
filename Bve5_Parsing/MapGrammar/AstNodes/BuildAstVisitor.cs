@@ -610,7 +610,6 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// <returns>構文ASTノード</returns>
         public override MapGrammarAstNodes VisitCurve([NotNull] SyntaxDefinitions.MapGrammarParser.CurveContext context)
         {
-            // Test
             return SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Curve, context.func.Text);
         }
 
@@ -621,30 +620,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// <returns>構文ASTノード</returns>
         public override MapGrammarAstNodes VisitGradient([NotNull] SyntaxDefinitions.MapGrammarParser.GradientContext context)
         {
-            Syntax1Node node = new Syntax1Node(context.Start, context.Stop);   //Gradient構文は全て構文タイプ1
-            node.MapElementName = "gradient";
-            node.FunctionName = context.func.Text.ToLower();
-
-            switch (node.FunctionName)
-            {
-                case "begintransition":                                             /* BeginTransition() */
-                    break;
-                case "begin":                                                       /* Begin(gradient) */
-                case "beginconst":
-                    node.Arguments.Add("gradient", Visit(context.gradientArgs));
-                    break;
-                case "end":                                                         /* End() */
-                    break;
-                case "interpolate":                                                 /* Interpolate(gradient?) */
-                    if (context.gradientArgsE != null)
-                        node.Arguments.Add("gradient", Visit(context.gradientArgsE));
-                    else
-                    {
-                        //引数なし TODO
-                    }
-                    break;
-            }
-            return node;
+            return SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Gradient, context.func.Text);
         }
 
         /// <summary>

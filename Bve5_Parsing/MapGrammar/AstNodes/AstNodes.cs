@@ -147,10 +147,23 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
             {
                 var argCtxInfo = ctx.GetType().GetField(arg.Name.ToLower());
                 var argCtx = argCtxInfo?.GetValue(ctx);
-                if (argCtx == null)
-                    throw new NotSupportedException($"引数：{arg.Name}に対応するContextの取得に失敗しました。");
+                if (argCtx != null)
+                {
+                    arg.SetValue(node, visitor.Visit(argCtx as IParseTree));
+                    continue;
+                }
 
-                arg.SetValue(node, visitor.Visit(argCtx as IParseTree));
+                // Gradientに関しては特別対応
+                // Graident -> GradientArgs
+                var argGCtxInfo = ctx.GetType().GetField(arg.Name.ToLower() + "Args");
+                var argGCtx = argGCtxInfo?.GetValue(ctx);
+                if (argGCtx != null)
+                {
+                    arg.SetValue(node, visitor.Visit(argGCtx as IParseTree));
+                    continue;
+                }
+
+                throw new NotSupportedException($"引数：{arg.Name}に対応するContextの取得に失敗しました。");
             }
 
             // 省略可能引数の取得
@@ -167,6 +180,12 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
                     var argECtx = argECtxInfo?.GetValue(ctx);
                     if (argECtx != null)
                         arg.SetValue(node, visitor.Visit(argECtx as IParseTree));
+
+                    // Graident -> GradientArgsE
+                    var argGECtxInfo = ctx.GetType().GetField(arg.Name.ToLower() + "ArgsE");
+                    var argGECtx = argGECtxInfo?.GetValue(ctx);
+                    if (argGECtx != null)
+                        arg.SetValue(node, visitor.Visit(argGECtx as IParseTree));
                 }
             }
 
