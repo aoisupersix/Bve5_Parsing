@@ -3,6 +3,7 @@ using Bve5_Parsing.MapGrammar.AstNodes;
 using Bve5_Parsing.MapGrammar.SyntaxDefinitions;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 
 namespace Bve5_Parsing.MapGrammar
@@ -36,7 +37,7 @@ namespace Bve5_Parsing.MapGrammar
         /// <summary>
         /// 構文解析エラー
         /// </summary>
-        public IReadOnlyCollection<ParseError> ParserErrors { get; }
+        public ReadOnlyCollection<ParseError> ParserErrors { get; }
 
         /// <summary>
         /// 構文解析のエラーを取得するリスナー

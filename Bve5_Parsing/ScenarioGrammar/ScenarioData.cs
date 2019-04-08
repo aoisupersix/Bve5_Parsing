@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 
 namespace Bve5_Parsing.ScenarioGrammar
@@ -25,12 +26,12 @@ namespace Bve5_Parsing.ScenarioGrammar
         /// <summary>
         /// マップファイルの相対パス
         /// </summary>
-        public IReadOnlyCollection<FilePath> Route { get; }
+        public ReadOnlyCollection<FilePath> Route { get; }
 
         /// <summary>
         /// 車両ファイルの相対パス
         /// </summary>
-        public IReadOnlyCollection<FilePath> Vehicle { get; }
+        public ReadOnlyCollection<FilePath> Vehicle { get; }
 
         /// <summary>
         /// サムネイル画像の相対パス

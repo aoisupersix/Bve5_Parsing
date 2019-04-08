@@ -10,7 +10,7 @@ namespace Bve5_Parsing.MapGrammar
     {
         private Dictionary<string, object> _vars;
 
-        public IReadOnlyDictionary<string, object> Vars { get; }
+        public ReadOnlyDictionary<string, object> Vars { get; }
 
         /// <summary>
         /// 新しいインスタンスを生成します。

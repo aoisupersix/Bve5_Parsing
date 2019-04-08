@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using Bve5_Parsing.ScenarioGrammar.AstNodes;
+﻿using Bve5_Parsing.ScenarioGrammar.AstNodes;
 
 namespace Bve5_Parsing.ScenarioGrammar
 {

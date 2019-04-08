@@ -52,7 +52,7 @@ namespace Bve5_Parsing.MapGrammar
         /// <summary>
         /// 構文データ
         /// </summary>
-        public IReadOnlyCollection<SyntaxData> Statements { get; }
+        public ReadOnlyCollection<SyntaxData> Statements { get; }
         #endregion
 
         /// <summary>
@@ -235,7 +235,7 @@ namespace Bve5_Parsing.MapGrammar
         /// <summary>
         /// 引数
         /// </summary>
-        public IReadOnlyDictionary<string, object> Arguments { get; }
+        public ReadOnlyDictionary<string, object> Arguments { get; }
 
         public SyntaxData()
         {
@@ -251,7 +251,6 @@ namespace Bve5_Parsing.MapGrammar
         /// <param name="function">関数名</param>
         public SyntaxData(double distance, string mapElement, string function)
         {
-            Arguments = new Dictionary<string, object>();
             Distance = distance;
             MapElement = new string[] { mapElement };
             Function = function;
@@ -269,7 +268,6 @@ namespace Bve5_Parsing.MapGrammar
         /// <param name="function">関数名</param>
         public SyntaxData(double distance, string mapElement, string key, string function)
         {
-            Arguments = new Dictionary<string, object>();
             Distance = distance;
             MapElement = new string[] { mapElement };
             Key = key;
@@ -288,7 +286,6 @@ namespace Bve5_Parsing.MapGrammar
         /// <param name="function">関数名</param>
         public SyntaxData(double distance, string mapElement1, string mapElement2, string key, string function)
         {
-            Arguments = new Dictionary<string, object>();
             Distance = distance;
             MapElement = new string[] { mapElement1, mapElement2 };
             Key = key;
@@ -350,7 +347,7 @@ namespace Bve5_Parsing.MapGrammar
                 ((s.MapElement == null && MapElement == null ) || (s.MapElement != null && MapElement != null && s.MapElement.SequenceEqual(MapElement))) &&
                 s.Key == Key &&
                 s.Function == Function &&
-                s.Arguments.Count == Arguments.Count &&
+                s.Arguments.Count() == Arguments.Count &&
                 s.Arguments.Keys.ToArray().SequenceEqual(Arguments.Keys.ToArray()) &&
                 s.Arguments.Values.ToArray().SequenceEqual(Arguments.Values.ToArray())
                 ;
