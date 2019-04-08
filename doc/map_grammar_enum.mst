@@ -1,0 +1,37 @@
+/*
+ * このファイルは自動生成doc/createMapGrammarTemplate.jsによって自動生成されています。
+ * 編集は行わないでください。
+ */
+
+namespace Bve5_Parsing.MapGrammar {
+
+    /// <summary>
+    /// マップ要素名
+    /// </summary>
+    public enum MapElementName
+    {
+{{#elems}}
+
+        /// <summary>
+        /// {{name}}
+        /// </summary>
+        [StringValue("{{name}}")]
+        {{name}},
+{{/elems}}
+    }
+
+    /// <summary>
+    /// マップ関数名
+    /// </summary>
+    public enum MapFunctionName {
+{{#funcs}}
+
+        /// <summary>
+        /// {{name}}（{{str}}）
+        /// </summary>
+        [StringValue("{{str}}")]
+        {{name}},
+{{/funcs}}
+    }
+
+}

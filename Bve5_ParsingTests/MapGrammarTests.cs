@@ -43,7 +43,6 @@ namespace Bve5_ParsingTests
             Assert.Equal(expected, actual);
         }
 
-        #region 各構文のテスト
         [Fact]
         public void RootTest()
         {
@@ -70,19 +69,164 @@ namespace Bve5_ParsingTests
                     }));
         }
 
+        #region 各構文の手動テスト
+        /// <summary>
+        /// Structure.Load(FilePath);
+        /// </summary>
         [Fact]
-        public void CurveTest()
+        public void StructureLoadTest()
         {
-            // Curve.SetGauge(value)
+
+            // Structure.Load(filePath);
             Check(
-                ExecParse("BveTs Map 2.02\n0;Curve.SetGauge(400);"),
+                ExecParse("BveTs Map 2.02\n0;Structure.Load('path');"),
+                new MapData(version: "2.02", strListPath: "path")
+                );
+        }
+
+        /// <summary>
+        /// Station.Load(FilePath);
+        /// </summary>
+        [Fact]
+        public void StationLoadTest()
+        {
+
+            // Station.Load(filePath);
+            Check(
+                ExecParse("BveTs Map 2.02\n0;Station.Load('path');"),
+                new MapData(version: "2.02", staListPath: "path")
+                );
+        }
+
+        /// <summary>
+        /// Signal.Load(FilePath);
+        /// </summary>
+        [Fact]
+        public void SignalLoadTest()
+        {
+
+            // Signal.Load(filePath);
+            Check(
+                ExecParse("BveTs Map 2.02\n0;Signal.Load('path');"),
+                new MapData(version: "2.02", sigListPath: "path")
+                );
+        }
+
+        /// <summary>
+        /// Sound.Load(FilePath);
+        /// </summary>
+        [Fact]
+        public void SoundLoadTest()
+        {
+            // Sound.Load(filePath);
+            Check(
+                ExecParse("BveTs Map 2.02\n0;Sound.Load('path');"),
+                new MapData(version: "2.02", souListPath: "path")
+                );
+        }
+
+        /// <summary>
+        /// Sound3d.Load(FilePath);
+        /// </summary>
+        [Fact]
+        public void Sound3dLoadTest()
+        {
+            // Structure.Load(filePath);
+            Check(
+                ExecParse("BveTs Map 2.02\n0;Sound3D.Load('path');"),
+                new MapData(version: "2.02", so3ListPath: "path")
+                );
+        }
+
+        /// <summary>
+        /// Section.Begin();
+        /// </summary>
+        [Fact]
+        public void SectionBeginTest()
+        {
+            //Section.Begin(signal0);
+            Check(
+                ExecParse("BveTs Map 2.02\n0;Section.Begin(0);"),
                 new MapData(
                     version: "2.02",
                     syntaxes: new List<SyntaxData>()
                     {
-                        new SyntaxData(0, "curve", "setgauge").SetArg("value", 400)
+                        new SyntaxData(0, "section", "begin").SetArg("signal0", 0)
+                    }));
+
+            //Section.Begin(signal0, signal1, signal2);
+            Check(
+                ExecParse("BveTs Map 2.02\n0;Section.Begin(0,1,2);"),
+                new MapData(
+                    version: "2.02",
+                    syntaxes: new List<SyntaxData>()
+                    {
+                        new SyntaxData(0, "section", "begin").SetArg("signal0", 0).SetArg("signal1", 1).SetArg("signal2", 2)
+                    }));
+        }
+
+        /// <summary>
+        /// Section.Setspeedlimit();
+        /// </summary>
+        [Fact]
+        public void SectionSetspeedlimitTest()
+        {
+            //Section.Setspeedlimit(v0);
+            Check(
+                ExecParse("BveTs Map 2.02\n0;Section.SetSpeedLimit(0);"),
+                new MapData(
+                    version: "2.02",
+                    syntaxes: new List<SyntaxData>()
+                    {
+                        new SyntaxData(0, "section", "setspeedlimit").SetArg("v0", 0)
+                    }));
+
+            //Section.Setspeedlimit(v0, v1, v2);
+            Check(
+                ExecParse("BveTs Map 2.02\n0;Section.SetSpeedLimit(0, 1, 2);"),
+                new MapData(
+                    version: "2.02",
+                    syntaxes: new List<SyntaxData>()
+                    {
+                        new SyntaxData(0, "section", "setspeedlimit").SetArg("v0", 0).SetArg("v1", 1).SetArg("v2", 2)
                     }));
         }
         #endregion
+
+        /// <summary>
+        /// Repeater[RepeaterKey].Begin(TrackKey, X, Y, Z, RX, RY, RZ, Tilt, Span, Interval);
+        /// </summary>
+        [Fact]
+        public void RepeaterBeginTest()
+        {
+
+            // Repeater[RepeaterKey].Begin(trackkey, x, y, z, rx, ry, rz, tilt, span, interval, 'key1');
+            Check(
+                ExecParse("BveTs Map 2.02\n0;Repeater['RepeaterKey'].Begin(1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 'key1');"),
+                new MapData(
+                    version: "2.02",
+                    syntaxes: new List<SyntaxData>()
+                    {
+                        new SyntaxData(0, "repeater", "RepeaterKey", "begin").SetArg("trackkey", 1.0).SetArg("x", 1.0).SetArg("y", 1.0).SetArg("z", 1.0).SetArg("rx", 1.0).SetArg("ry", 1.0).SetArg("rz", 1.0).SetArg("tilt", 1.0).SetArg("span", 1.0).SetArg("interval", 1.0).SetArg("structurekey1", "key1")
+                    }));
+        }
+
+        /// <summary>
+        /// Repeater[RepeaterKey].Begin0(TrackKey, Tilt, Span, Interval);
+        /// </summary>
+        [Fact]
+        public void RepeaterBegin0Test()
+        {
+
+            // Repeater[RepeaterKey].Begin0(trackkey, tilt, span, interval);
+            Check(
+                ExecParse("BveTs Map 2.02\n0;Repeater['RepeaterKey'].Begin0(1.0, 1.0, 1.0, 1.0, 'key1', 'key2', 'key3');"),
+                new MapData(
+                    version: "2.02",
+                    syntaxes: new List<SyntaxData>()
+                    {
+                        new SyntaxData(0, "repeater", "RepeaterKey", "begin0").SetArg("trackkey", 1.0).SetArg("tilt", 1.0).SetArg("span", 1.0).SetArg("interval", 1.0).SetArg("structurekey1", "key1").SetArg("structurekey2", "key2").SetArg("structurekey3", "key3")
+                    }));
+        }
     }
 }

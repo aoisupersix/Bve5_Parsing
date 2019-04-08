@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text.RegularExpressions;
 using Antlr4.Runtime.Misc;
 using Bve5_Parsing.MapGrammar.SyntaxDefinitions;
 
@@ -8,7 +9,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     /// <summary>
     /// CSTを巡回してASTを作成するVisitorクラス
     /// </summary>
-    internal class BuildAstVisitor : MapGrammarParserBaseVisitor<MapGrammarAstNodes>
+    public class BuildAstVisitor : MapGrammarParserBaseVisitor<MapGrammarAstNodes>
     {
 
         /// <summary>
@@ -595,12 +596,10 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
 
         public override MapGrammarAstNodes VisitInclude([NotNull] SyntaxDefinitions.MapGrammarParser.IncludeContext context)
         {
-            Syntax1Node node = new Syntax1Node(context.Start, context.Stop);
-            node.MapElementName = "include";
-            node.FunctionName = "";
-            node.Arguments.Add("path", Visit(context.path));
-
-            return node;
+            return new IncludeNode(context.Start, context.Stop)
+            {
+                FilePath = Visit(context.filepath)
+            };
         }
 
         /// <summary>
@@ -610,56 +609,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// <returns>構文ASTノード</returns>
         public override MapGrammarAstNodes VisitCurve([NotNull] SyntaxDefinitions.MapGrammarParser.CurveContext context)
         {
-            Syntax1Node node = new Syntax1Node(context.Start, context.Stop);
-            node.MapElementName = "curve";
-            node.FunctionName = context.func.Text.ToLower();
-
-            //引数の登録
-            switch (node.FunctionName)
-            {
-                case "setgauge":                                                    /* SetGauge(value) */
-                case "gauge":
-                    node.Arguments.Add("value", Visit(context.value));
-                    break;
-                case "setcenter":                                                   /* SetCenter(x) */
-                    node.Arguments.Add("x", Visit(context.x));
-                    break;
-                case "setfunction":                                                 /* SetFunction(id) */
-                    node.Arguments.Add("id", Visit(context.id));
-                    break;
-                case "begintransition":                                             /* BeginTransition() */
-                    break;
-                case "begin":                                                       /* Begin(radius, cant?) */
-                case "begincircular":
-                    node.Arguments.Add("radius", Visit(context.radius));
-                    if (context.cant != null)
-                        node.Arguments.Add("cant", Visit(context.cant));
-                    break;
-                case "end":                                                         /* End() */
-                    break;
-                case "interpolate":                                                 /* Interpolate(radius?, cant?) */
-                    if (context.radiusE != null)
-                        node.Arguments.Add("radius", Visit(context.radiusE));
-                    else if (context.radius != null)
-                    {
-                        node.Arguments.Add("radius", Visit(context.radius));
-
-                        if (context.cant != null)
-                            node.Arguments.Add("cant", Visit(context.cant));
-                    }
-                    else
-                    {
-                        //引数なし TODO
-                    }
-
-                    break;
-                case "change":                                                      /* Change(radius) */
-                    node.Arguments.Add("radius", Visit(context.radius));
-                    break;
-
-            }
-
-            return node;
+            return SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Curve, context.func.Text);
         }
 
         /// <summary>
@@ -669,30 +619,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// <returns>構文ASTノード</returns>
         public override MapGrammarAstNodes VisitGradient([NotNull] SyntaxDefinitions.MapGrammarParser.GradientContext context)
         {
-            Syntax1Node node = new Syntax1Node(context.Start, context.Stop);   //Gradient構文は全て構文タイプ1
-            node.MapElementName = "gradient";
-            node.FunctionName = context.func.Text.ToLower();
-
-            switch (node.FunctionName)
-            {
-                case "begintransition":                                             /* BeginTransition() */
-                    break;
-                case "begin":                                                       /* Begin(gradient) */
-                case "beginconst":
-                    node.Arguments.Add("gradient", Visit(context.gradientArgs));
-                    break;
-                case "end":                                                         /* End() */
-                    break;
-                case "interpolate":                                                 /* Interpolate(gradient?) */
-                    if (context.gradientArgsE != null)
-                        node.Arguments.Add("gradient", Visit(context.gradientArgsE));
-                    else
-                    {
-                        //引数なし TODO
-                    }
-                    break;
-            }
-            return node;
+            return SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Gradient, context.func.Text);
         }
 
         /// <summary>
@@ -702,110 +629,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// <returns>構文ASTノード</returns>
         public override MapGrammarAstNodes VisitTrack([NotNull] SyntaxDefinitions.MapGrammarParser.TrackContext context)
         {
-            MapGrammarAstNodes key = Visit(context.key);
-            if (context.element != null)                                             /* Syntax3Node */
-            {
-                Syntax3Node node = new Syntax3Node(context.Start, context.Stop);
-                node.MapElementNames[0] = "track";
-                node.MapElementNames[1] = context.element.Text.ToLower();
-                node.Key = key;
-                node.FunctionName = context.func.Text.ToLower();
-
-                switch (node.FunctionName)
-                {
-                    case "interpolate":
-                        if (node.MapElementNames[1].Equals("cant"))                 /* Cant.Interpolate(cant?) */
-                        {
-                            if (context.cant != null)
-                            {
-                                node.Arguments.Add("cant", Visit(context.cant));
-                            }
-                            else
-                            {
-                                //引数なし TODO
-                            }
-                        }
-                        else if (node.MapElementNames[1].Equals("x"))               /* X.Interpolate(x?, radius?) */
-                        {
-                            if (context.xE != null)
-                                node.Arguments.Add(node.MapElementNames[1], Visit(context.xE));
-                            else if (context.x != null)
-                            {
-                                node.Arguments.Add(node.MapElementNames[1], Visit(context.x));
-
-                                if (context.radius != null)
-                                    node.Arguments.Add("radius", Visit(context.radius));
-                            }
-                            else
-                            {
-                                //引数なし TODO
-                            }
-                        }
-                        else if (node.MapElementNames[1].Equals("y"))               /* Y.Interpolate(y?, radius?) */
-                        {
-                            if (context.yE != null)
-                                node.Arguments.Add(node.MapElementNames[1], Visit(context.yE));
-                            else if (context.y != null)
-                            {
-                                node.Arguments.Add(node.MapElementNames[1], Visit(context.y));
-
-                                if (context.radius != null)
-                                    node.Arguments.Add("radius", Visit(context.radius));
-                            }
-                            else
-                            {
-                                //引数なし TODO
-                            }
-                        }
-
-                        break;
-                    case "setcenter":                                               /* Cant.SetCenter(x) */
-                        node.Arguments.Add("x", Visit(context.x));
-                        break;
-                    case "setgauge":                                                /* Cant.SetGauge(gauge) */
-                        node.Arguments.Add("gauge", Visit(context.gauge));
-                        break;
-                    case "setfunction":                                             /* Cant.SetFunction(id) */
-                        node.Arguments.Add("id", Visit(context.id));
-                        break;
-                    case "begintransition":                                         /* Cant.BeginTransition() */
-                        break;
-                    case "begin":                                                   /* Cant.Begin(cant) */
-                        node.Arguments.Add("cant", Visit(context.cant));
-                        break;
-                }
-
-                return node;
-            }
-            else                                                                    /* Syntax2Node */
-            {
-                Syntax2Node node = new Syntax2Node(context.Start, context.Stop);
-                node.MapElementName = "track";
-                node.Key = key;
-                node.FunctionName = context.func.Text.ToLower();
-
-                switch (node.FunctionName)
-                {
-                    case "position":                                                    /* Position(x, y, radiush?, radiusv?) */
-                        node.Arguments.Add("x", Visit(context.x));
-                        node.Arguments.Add("y", Visit(context.y));
-                        if (context.radiusH != null)
-                        {
-                            node.Arguments.Add("radiush", Visit(context.radiusH));
-                            if (context.radiusV != null)
-                                node.Arguments.Add("radiusv", Visit(context.radiusV));
-                        }
-                        break;
-                    case "cant":
-                        node.Arguments.Add("cant", Visit(context.cantE));
-                        break;
-                    case "gauge":
-                        node.Arguments.Add("gauge", Visit(context.gauge));
-                        break;
-                }
-
-                return node;
-            }
+            return SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Track, context.func.Text, context.element?.Text);
         }
 
         /// <summary>
@@ -815,43 +639,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// <returns>構文ASTノード</returns>
         public override MapGrammarAstNodes VisitStructure([NotNull] SyntaxDefinitions.MapGrammarParser.StructureContext context)
         {
-            string funcName = context.func.Text.ToLower();
-
-            if (funcName.Equals("load"))                                                    /* Load(filePath) */
-                return new LoadListNode(context.Start, context.Stop) { MapElementName = "structure", Path = context.path };
-
-            Syntax2Node node = new Syntax2Node(context.Start, context.Stop);
-            node.MapElementName = "structure";
-            node.Key = Visit(context.key);
-            node.FunctionName = context.func.Text.ToLower();
-
-            switch (node.FunctionName)
-            {
-                case "put":                                                                 /* Put(trackkey,x,y,z,rx,ry,rz,tilt,span) */
-                    node.Arguments.Add("trackkey", Visit(context.trackkey));
-                    node.Arguments.Add("x", Visit(context.x));
-                    node.Arguments.Add("y", Visit(context.y));
-                    node.Arguments.Add("z", Visit(context.z));
-                    node.Arguments.Add("rx", Visit(context.rx));
-                    node.Arguments.Add("ry", Visit(context.ry));
-                    node.Arguments.Add("rz", Visit(context.rz));
-                    node.Arguments.Add("tilt", Visit(context.tilt));
-                    node.Arguments.Add("span", Visit(context.span));
-                    break;
-                case "put0":                                                                /* Put0(trackkey, tilt, span) */
-                    node.Arguments.Add("trackkey", Visit(context.trackkey));
-                    node.Arguments.Add("tilt", Visit(context.tilt));
-                    node.Arguments.Add("span", Visit(context.span));
-                    break;
-                case "putbetween":                                                          /* PutBetween(trackkey1, trackkey2, flag?) */
-                    node.Arguments.Add("trackkey1", Visit(context.trackkey1));
-                    node.Arguments.Add("trackkey2", Visit(context.trackkey2));
-                    if (context.flag != null)
-                        node.Arguments.Add("flag", Visit(context.flag));
-                    break;
-            }
-
-            return node;
+            return SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Structure, context.func.Text);
         }
 
         /// <summary>
@@ -861,41 +649,27 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// <returns>構文ASTノード</returns>
         public override MapGrammarAstNodes VisitRepeater([NotNull] SyntaxDefinitions.MapGrammarParser.RepeaterContext context)
         {
-            Syntax2Node node = new Syntax2Node(context.Start, context.Stop);
-            node.MapElementName = "repeater";
-            node.Key = Visit(context.key);
-            node.FunctionName = context.func.Text.ToLower();
+            var node = SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Repeater, context.func.Text);
 
-            switch (node.FunctionName)
+            if (node.FunctionName == MapFunctionName.Begin)
             {
-                case "begin":                                                               /* Begin(trackkey,x,y,z,rx,ry,rz,tilt,span,interval, strkey+) */
-                    node.Arguments.Add("trackkey", Visit(context.trackkey));
-                    node.Arguments.Add("x", Visit(context.x));
-                    node.Arguments.Add("y", Visit(context.y));
-                    node.Arguments.Add("z", Visit(context.z));
-                    node.Arguments.Add("rx", Visit(context.rx));
-                    node.Arguments.Add("ry", Visit(context.ry));
-                    node.Arguments.Add("rz", Visit(context.rz));
-                    node.Arguments.Add("tilt", Visit(context.tilt));
-                    node.Arguments.Add("span", Visit(context.span));
-                    node.Arguments.Add("interval", Visit(context.interval));
-                    for (int i = 0; i < context.strkey().Length; i++)
-                    {
-                        node.Arguments.Add("key" + (i + 1), Visit(context.strkey()[i]));
-                    }
-                    break;
-                case "begin0":                                                              /* Begin0(trackkey,tilt,span,interval,strkey+) */
-                    node.Arguments.Add("trackkey", Visit(context.trackkey));
-                    node.Arguments.Add("tilt", Visit(context.tilt));
-                    node.Arguments.Add("span", Visit(context.span));
-                    node.Arguments.Add("interval", Visit(context.interval));
-                    for (int i = 0; i < context.strkey().Length; i++)
-                    {
-                        node.Arguments.Add("key" + (i + 1), Visit(context.strkey()[i]));
-                    }
-                    break;
-                case "end":                                                                 /* End() */
-                    break;
+                //Repeater.Beginは手動対応
+                var beginNode = node as RepeaterBeginNode;
+                foreach(var strKey in context.strkey())
+                {
+                    beginNode.AddStructureKey(Visit(strKey));
+                }
+                return beginNode;
+            }
+            else if(node.FunctionName == MapFunctionName.Begin0)
+            {
+                //Repeater.Begin0は手動対応
+                var begin0Node = node as RepeaterBegin0Node;
+                foreach (var strKey in context.strkey())
+                {
+                    begin0Node.AddStructureKey(Visit(strKey));
+                }
+                return begin0Node;
             }
 
             return node;
@@ -908,12 +682,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// <returns>構文ASTノード</returns>
         public override MapGrammarAstNodes VisitBackground([NotNull] SyntaxDefinitions.MapGrammarParser.BackgroundContext context)
         {
-            Syntax1Node node = new Syntax1Node(context.Start, context.Stop);
-            node.MapElementName = "background";
-            node.FunctionName = context.func.Text;
-            node.Arguments.Add("structurekey", Visit(context.structurekey));
-
-            return node;
+            return SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Background, context.func.Text);
         }
 
         /// <summary>
@@ -923,25 +692,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// <returns>構文ASTノード</returns>
         public override MapGrammarAstNodes VisitStation([NotNull] SyntaxDefinitions.MapGrammarParser.StationContext context)
         {
-            string funcName = context.func.Text.ToLower();
-            if (funcName.Equals("load"))                                                    /* Load(filePath) */
-            {
-                return new LoadListNode(context.Start, context.Stop) { MapElementName = "station", Path = context.path };
-            }
-            else if (funcName.Equals("put"))                                                /* Put(door, margin1, margin2) */
-            {
-                Syntax2Node node = new Syntax2Node(context.Start, context.Stop);
-                node.MapElementName = "station";
-                node.Key = Visit(context.key);
-                node.FunctionName = funcName;
-                node.Arguments.Add("door", Visit(context.door));
-                node.Arguments.Add("margin1", Visit(context.margin1));
-                node.Arguments.Add("margin2", Visit(context.margin2));
-
-                return node;
-            }
-
-            return null;
+            return SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Station, context.func.Text);
         }
 
         /// <summary>
@@ -951,27 +702,31 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// <returns>構文ASTノード</returns>
         public override MapGrammarAstNodes VisitSection([NotNull] SyntaxDefinitions.MapGrammarParser.SectionContext context)
         {
-            Syntax1Node node = new Syntax1Node(context.Start, context.Stop);
-            node.MapElementName = "section";
-            node.FunctionName = context.func.Text.ToLower();
-            switch (node.FunctionName)
+            var node = SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Section, context.func.Text);
+
+            if (node.FunctionName == MapFunctionName.Begin)
             {
-                case "begin":                                                           /* Begin(signalN+) */
-                case "beginnew":
-                    node.Arguments.Add("signal0", Visit(context.nullableExpr()));
-                    for (int i = 0; i < context.exprArgs().Length; i++)
-                    {
-                        node.Arguments.Add("signal" + (i + 1), Visit(context.exprArgs()[i]));
-                    }
-                    break;
-                case "setspeedlimit":                                                   /* SetSpeedlimit(vN+) */
-                    node.Arguments.Add("v0", Visit(context.nullableExpr()));
-                    for (int i = 0; i < context.exprArgs().Length; i++)
-                    {
-                        node.Arguments.Add("v" + (i + 1), Visit(context.exprArgs()[i]));
-                    }
-                    break;
+                //Section.Beginは手動対応
+                var beginNode = node as SectionBeginNode;
+                beginNode.AddSignalIndex(Visit(context.nullableExpr()));
+                foreach (var sigIdx in context.exprArgs())
+                {
+                    beginNode.AddSignalIndex(Visit(sigIdx));
+                }
+                return beginNode;
             }
+            else if (node.FunctionName == MapFunctionName.Setspeedlimit)
+            {
+                //Repeater.Begin0は手動対応
+                var speedlimitNode = node as SectionSetspeedlimitNode;
+                speedlimitNode.AddSpeedLimit(Visit(context.nullableExpr()));
+                foreach (var spdLmt in context.exprArgs())
+                {
+                    speedlimitNode.AddSpeedLimit(Visit(spdLmt));
+                }
+                return speedlimitNode;
+            }
+
             return node;
         }
 
@@ -982,49 +737,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// <returns>構文ASTノード</returns>
         public override MapGrammarAstNodes VisitSignal([NotNull] SyntaxDefinitions.MapGrammarParser.SignalContext context)
         {
-            string funcName = context.func.Text.ToLower();
-
-            if (funcName.Equals("load"))                                                    /* Load(filePath) */
-                return new LoadListNode(context.Start, context.Stop) { MapElementName = "signal", Path = context.path };
-            else if (funcName.Equals("speedlimit"))
-            {
-                Syntax1Node node = new Syntax1Node(context.Start, context.Stop);
-                node.MapElementName = "signal";
-                node.FunctionName = funcName;
-                switch (node.FunctionName)
-                {
-                    case "speedlimit":
-                        node.Arguments.Add("v0", Visit(context.nullableExpr()[0]));
-                        for (int i = 0; i < context.exprArgs().Length; i++)
-                        {
-                            node.Arguments.Add("v" + (i + 1), Visit(context.exprArgs()[i]));
-                        }
-                        break;
-                }
-                return node;
-            }
-            else
-            {
-                Syntax2Node node = new Syntax2Node(context.Start, context.Stop);    /* Put(section, trackkey, x, y, z?, rx?, ry?, rz?, tilt?, span?) */
-                node.MapElementName = "signal";
-                node.Key = Visit(context.key);
-                node.FunctionName = funcName;
-
-                node.Arguments.Add("section", Visit(context.sectionArgs));
-                node.Arguments.Add("trackkey", Visit(context.trackkey));
-                node.Arguments.Add("x", Visit(context.x));
-                node.Arguments.Add("y", Visit(context.y));
-                if (context.z != null)
-                {
-                    node.Arguments.Add("z", Visit(context.z));
-                    node.Arguments.Add("rx", Visit(context.rx));
-                    node.Arguments.Add("ry", Visit(context.ry));
-                    node.Arguments.Add("rz", Visit(context.rz));
-                    node.Arguments.Add("tilt", Visit(context.tilt));
-                    node.Arguments.Add("span", Visit(context.span));
-                }
-                return node;
-            }
+            return SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Signal, context.func.Text);
         }
 
         /// <summary>
@@ -1034,13 +747,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// <returns>構文ASTノード</returns>
         public override MapGrammarAstNodes VisitBeacon([NotNull] SyntaxDefinitions.MapGrammarParser.BeaconContext context)
         {
-            Syntax1Node node = new Syntax1Node(context.Start, context.Stop);
-            node.MapElementName = "beacon";
-            node.FunctionName = context.func.Text.ToLower();
-            node.Arguments.Add("type", Visit(context.type));
-            node.Arguments.Add("section", Visit(context.sectionArgs));
-            node.Arguments.Add("senddata", Visit(context.sendData));
-            return node;
+            return SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Beacon, context.func.Text);
         }
 
         /// <summary>
@@ -1050,15 +757,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// <returns>構文ASTノード</returns>
         public override MapGrammarAstNodes VisitSpeedlimit([NotNull] SyntaxDefinitions.MapGrammarParser.SpeedlimitContext context)
         {
-            Syntax1Node node = new Syntax1Node(context.Start, context.Stop);
-            node.MapElementName = "speedlimit";
-            node.FunctionName = context.func.Text.ToLower();
-            if (context.func.Type == MapGrammarLexer.BEGIN)
-            {
-                node.Arguments.Add("v", Visit(context.v));
-            }
-
-            return node;
+            return SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Speedlimit, context.func.Text);
         }
 
         /// <summary>
@@ -1068,12 +767,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// <returns>構文ASTノード</returns>
         public override MapGrammarAstNodes VisitPretrain([NotNull] SyntaxDefinitions.MapGrammarParser.PretrainContext context)
         {
-            Syntax1Node node = new Syntax1Node(context.Start, context.Stop);
-            node.MapElementName = "pretrain";
-            node.FunctionName = context.func.Text.ToLower();
-            node.Arguments.Add("time", Visit(context.nullableExpr()));
-
-            return node;
+            return SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Pretrain, context.func.Text);
         }
 
         /// <summary>
@@ -1083,28 +777,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// <returns>構文ASTノード</returns>
         public override MapGrammarAstNodes VisitLight([NotNull] SyntaxDefinitions.MapGrammarParser.LightContext context)
         {
-            Syntax1Node node = new Syntax1Node(context.Start, context.Stop);
-            node.MapElementName = "light";
-            node.FunctionName = context.func.Text.ToLower();
-
-            switch (context.func.Type)
-            {
-                case MapGrammarLexer.AMBIENT:                           /* ambient(red, green, blue) */
-                    node.Arguments.Add("red", Visit(context.red));
-                    node.Arguments.Add("green", Visit(context.green));
-                    node.Arguments.Add("blue", Visit(context.blue));
-                    break;
-                case MapGrammarLexer.DIFFUSE:                           /* diffuse(red, green, blue) */
-                    node.Arguments.Add("red", Visit(context.red));
-                    node.Arguments.Add("green", Visit(context.green));
-                    node.Arguments.Add("blue", Visit(context.blue));
-                    break;
-                case MapGrammarLexer.DIRECTION:                         /* direction(pitch, yaw) */
-                    node.Arguments.Add("pitch", Visit(context.pitch));
-                    node.Arguments.Add("yaw", Visit(context.yaw));
-                    break;
-            }
-            return node;
+            return SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Light, context.func.Text);
         }
 
         /// <summary>
@@ -1114,22 +787,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// <returns>構文ASTノード</returns>
         public override MapGrammarAstNodes VisitFog([NotNull] SyntaxDefinitions.MapGrammarParser.FogContext context)
         {
-            Syntax1Node node = new Syntax1Node(context.Start, context.Stop);
-            node.MapElementName = "fog";
-            node.FunctionName = context.func.Text.ToLower();
-            if (context.red != null)                                         /* Interpolate(density, red, green, blue) */
-            {
-                node.Arguments.Add("density", Visit(context.density));
-                node.Arguments.Add("red", Visit(context.red));
-                node.Arguments.Add("green", Visit(context.green));
-                node.Arguments.Add("blue", Visit(context.blue));
-            }
-            else if (context.densityE != null)                               /* Interpolate(density) */
-            {
-                node.Arguments.Add("density", Visit(context.densityE));
-            }
-
-            return node;
+            return SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Fog, context.func.Text);
         }
 
         /// <summary>
@@ -1139,12 +797,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// <returns>構文ASTノード</returns>
         public override MapGrammarAstNodes VisitDrawdistance([NotNull] SyntaxDefinitions.MapGrammarParser.DrawdistanceContext context)
         {
-            Syntax1Node node = new Syntax1Node(context.Start, context.Stop);
-            node.MapElementName = "drawdistance";
-            node.FunctionName = context.func.Text.ToLower();
-            node.Arguments.Add("value", Visit(context.value));
-
-            return node;
+            return SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Drawdistance, context.func.Text);
         }
 
         /// <summary>
@@ -1154,13 +807,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// <returns>構文ASTノード</returns>
         public override MapGrammarAstNodes VisitCabilluminance([NotNull] SyntaxDefinitions.MapGrammarParser.CabilluminanceContext context)
         {
-            Syntax1Node node = new Syntax1Node(context.Start, context.Stop);
-            node.MapElementName = "cabilluminance";
-            node.FunctionName = context.func.Text.ToLower();
-            if (context.value != null)
-                node.Arguments.Add("value", Visit(context.value));
-
-            return node;
+            return SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Cabilluminance, context.func.Text);
         }
 
         /// <summary>
@@ -1170,17 +817,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// <returns>構文ASTノード</returns>
         public override MapGrammarAstNodes VisitIrregularity([NotNull] SyntaxDefinitions.MapGrammarParser.IrregularityContext context)
         {
-            Syntax1Node node = new Syntax1Node(context.Start, context.Stop);
-            node.MapElementName = "irregularity";
-            node.FunctionName = context.func.Text.ToLower();
-            node.Arguments.Add("x", Visit(context.x));
-            node.Arguments.Add("y", Visit(context.y));
-            node.Arguments.Add("r", Visit(context.r));
-            node.Arguments.Add("lx", Visit(context.lx));
-            node.Arguments.Add("ly", Visit(context.ly));
-            node.Arguments.Add("lr", Visit(context.lr));
-
-            return node;
+            return SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Irregularity, context.func.Text);
         }
 
         /// <summary>
@@ -1190,17 +827,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// <returns>構文ASTノード</returns>
         public override MapGrammarAstNodes VisitAdhesion([NotNull] SyntaxDefinitions.MapGrammarParser.AdhesionContext context)
         {
-            Syntax1Node node = new Syntax1Node(context.Start, context.Stop);
-            node.MapElementName = "adhesion";
-            node.FunctionName = context.func.Text.ToLower();
-            node.Arguments.Add("a", Visit(context.a));
-            if (context.b != null)
-            {
-                node.Arguments.Add("b", Visit(context.b));
-                node.Arguments.Add("c", Visit(context.c));
-            }
-
-            return node;
+            return SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Adhesion, context.func.Text);
         }
 
         /// <summary>
@@ -1210,19 +837,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// <returns>構文ASTノード</returns>
         public override MapGrammarAstNodes VisitSound([NotNull] SyntaxDefinitions.MapGrammarParser.SoundContext context)
         {
-            if (context.path != null)                                /* Load(filePath) */
-            {
-                return new LoadListNode(context.Start, context.Stop) { MapElementName = "sound", Path = context.path };
-            }
-            else                                                    /* [soundkey].Play() */
-            {
-                Syntax2Node node = new Syntax2Node(context.Start, context.Stop);
-                node.MapElementName = "sound";
-                node.Key = Visit(context.key);
-                node.FunctionName = context.func.Text.ToLower();
-
-                return node;
-            }
+            return SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Sound, context.func.Text);
         }
 
         /// <summary>
@@ -1232,21 +847,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// <returns>構文ASTノード</returns>
         public override MapGrammarAstNodes VisitSound3d([NotNull] SyntaxDefinitions.MapGrammarParser.Sound3dContext context)
         {
-            if (context.path != null)                                /* Load(filePath) */
-            {
-                return new LoadListNode(context.Start, context.Stop) { MapElementName = "sound3d", Path = context.path };
-            }
-            else                                                    /* [soundkey].Put(x,y) */
-            {
-                Syntax2Node node = new Syntax2Node(context.Start, context.Stop);
-                node.MapElementName = "sound3d";
-                node.Key = Visit(context.key);
-                node.FunctionName = context.func.Text.ToLower();
-                node.Arguments.Add("x", Visit(context.x));
-                node.Arguments.Add("y", Visit(context.y));
-
-                return node;
-            }
+            return SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Sound3d, context.func.Text);
         }
 
         /// <summary>
@@ -1256,12 +857,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// <returns>構文ASTノード</returns>
         public override MapGrammarAstNodes VisitRollingnoise([NotNull] SyntaxDefinitions.MapGrammarParser.RollingnoiseContext context)
         {
-            Syntax1Node node = new Syntax1Node(context.Start, context.Stop);
-            node.MapElementName = "rollingnoise";
-            node.FunctionName = context.func.Text.ToLower();
-            node.Arguments.Add("index", Visit(context.index));
-
-            return node;
+            return SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Rollingnoise, context.func.Text);
         }
 
         /// <summary>
@@ -1271,12 +867,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// <returns>構文ASTノード</returns>
         public override MapGrammarAstNodes VisitFlangenoise([NotNull] SyntaxDefinitions.MapGrammarParser.FlangenoiseContext context)
         {
-            Syntax1Node node = new Syntax1Node(context.Start, context.Stop);
-            node.MapElementName = "flangenoise";
-            node.FunctionName = context.func.Text.ToLower();
-            node.Arguments.Add("index", Visit(context.index));
-
-            return node;
+            return SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Flangenoise, context.func.Text);
         }
 
         /// <summary>
@@ -1286,12 +877,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// <returns>構文ASTノード</returns>
         public override MapGrammarAstNodes VisitJointnoise([NotNull] SyntaxDefinitions.MapGrammarParser.JointnoiseContext context)
         {
-            Syntax1Node node = new Syntax1Node(context.Start, context.Stop);
-            node.MapElementName = "jointnoise";
-            node.FunctionName = context.func.Text.ToLower();
-            node.Arguments.Add("index", Visit(context.index));
-
-            return node;
+            return SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Jointnoise, context.func.Text);
         }
 
         /// <summary>
@@ -1301,45 +887,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// <returns>構文ASTノード</returns>
         public override MapGrammarAstNodes VisitTrain([NotNull] SyntaxDefinitions.MapGrammarParser.TrainContext context)
         {
-            if (context.func.Type == MapGrammarLexer.ADD)                        /* Add(trainkey, filePath, trackkey, direction */
-            {
-                Syntax1Node node = new Syntax1Node(context.Start, context.Stop);
-                node.MapElementName = "train";
-                node.FunctionName = context.func.Text.ToLower();
-                node.Arguments.Add("trainkey", Visit(context.trainkey));
-                node.Arguments.Add("filepath", Visit(context.path));
-                node.Arguments.Add("trackkey", Visit(context.trackkey));
-                node.Arguments.Add("direction", Visit(context.direction));
-
-                return node;
-            }
-            else
-            {
-                Syntax2Node node = new Syntax2Node(context.Start, context.Stop);
-                node.MapElementName = "train";
-                node.Key = Visit(context.key);
-                node.FunctionName = context.func.Text.ToLower();
-
-                switch (context.func.Type)
-                {
-                    case MapGrammarLexer.LOAD:                                  /* Load(filePath, trackkey, direction) */
-                        node.Arguments.Add("filepath", Visit(context.path));
-                        node.Arguments.Add("trackkey", Visit(context.trackkey));
-                        node.Arguments.Add("direction", Visit(context.direction));
-                        break;
-                    case MapGrammarLexer.ENABLE:                                /* Enable(time) */
-                        node.Arguments.Add("time", Visit(context.time));
-                        break;
-                    case MapGrammarLexer.STOP:                                  /* Stop(decelerate, stopTime, accelerate, speed) */
-                        node.Arguments.Add("decelerate", Visit(context.decelerate));
-                        node.Arguments.Add("stoptime", Visit(context.stoptime));
-                        node.Arguments.Add("accelerate", Visit(context.accelerate));
-                        node.Arguments.Add("speed", Visit(context.speed));
-                        break;
-                }
-
-                return node;
-            }
+            return SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Train, context.func.Text);
         }
 
         /// <summary>

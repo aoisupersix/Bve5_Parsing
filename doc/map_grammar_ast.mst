@@ -1,0 +1,60 @@
+/*
+ * このファイルは自動生成doc/createMapGrammarTemplate.jsによって自動生成されています。
+ * 編集は行わないでください。
+ */
+using Antlr4.Runtime;
+using Bve5_Parsing.Attributes;
+
+namespace Bve5_Parsing.MapGrammar.AstNodes {
+{{#states}}
+
+    /// <summary>
+    /// {{elem}}{{^syntax1}}[{{key}}]{{/syntax1}}{{#syntax3}}.{{elem2}}{{/syntax3}}.{{func}}({{#args}}{{name}}{{#opt}}?{{/opt}}{{^last}}, {{/last}}{{/args}});
+    /// </summary>
+    {{#deprecated}}[Deprecated]{{/deprecated}}
+    public partial class {{elem}}{{#syntax3}}{{elem2}}{{/syntax3}}{{func}}Node : {{^inheritance}}SyntaxNode{{/inheritance}}{{#inheritance}}{{inheritance}}{{/inheritance}}
+    {
+        #region SyntaxInfo
+
+        /// <summary>
+        /// マップ要素名
+        /// </summary>
+        public override MapElementName ElementName => MapElementName.{{elem}};
+
+        /// <summary>
+        /// 関数名
+        /// </summary>
+        public override MapFunctionName FunctionName => MapFunctionName.{{#syntax3}}{{elem2}}_{{/syntax3}}{{func}};
+        #endregion SyntaxInfo
+{{^inheritance}}
+{{#key}}
+
+        /// <summary>
+        /// Key：{{key}}
+        /// </summary>
+        public MapGrammarAstNodes Key { get; set; }
+{{/key}}
+
+{{^noarg}}
+        #region Args
+{{#args}}
+
+        /// <summary>
+        /// 引数：{{{desc}}}{{#opt}}（省略可能）{{/opt}}
+        /// </summary>
+        [Argument{{#opt}}(Optional = true){{/opt}}]
+        public MapGrammarAstNodes {{name}} { get; set; }
+{{/args}}
+        #endregion Args
+{{/noarg}}
+{{/inheritance}}
+
+        /// <summary>
+        /// 新しいインスタンスを生成します。
+        /// </summary>
+        /// <param name="start"></param>
+        /// <param name="stop"></param>
+        public {{elem}}{{#syntax3}}{{elem2}}{{/syntax3}}{{func}}Node(IToken start, IToken stop) : base(start, stop) { }
+    }
+{{/states}}
+}

@@ -1,0 +1,80 @@
+/*
+ * このファイルは自動生成doc/createMapGrammarTemplate.jsによって自動生成されています。
+ * 編集は行わないでください。
+ */
+using System;
+using Xunit;
+using Bve5_Parsing.MapGrammar;
+using System.Collections.Generic;
+
+namespace Bve5_ParsingTests
+{
+    public class MapGrammarSyntaxTests
+    {
+        /// <summary>
+        /// 引数に与えられた構文文字列をパースします。
+        /// </summary>
+        /// <param name="input">マップ構文</param>
+        /// <returns>MapData</returns>
+        private MapData ExecParse(string input)
+        {
+            var mParser = new MapGrammarParser();
+            MapData data = null;
+            try
+            {
+                data = mParser.Parse(input);
+            }
+            catch (Exception e)
+            {
+                Console.Error.WriteLine(e.Message + ":" + e.StackTrace);
+            }
+
+            return data;
+        }
+
+        /// <summary>
+        /// Assert.NotNullとAssert.Equalを実行します。
+        /// </summary>
+        /// <param name="expected">パーサによって生成されたMapData</param>
+        /// <param name="actual">確認用</param>
+        private void Check(MapData expected, MapData actual)
+        {
+            Assert.NotNull(expected);
+            Assert.Equal(expected, actual);
+        }
+
+        #region 各構文のテスト
+{{#states}}
+
+        /// <summary>
+        /// {{elem}}{{^syntax1}}[{{key}}]{{/syntax1}}{{#syntax3}}.{{elem2}}{{/syntax3}}.{{func}}({{#args}}{{name}}{{#opt}}?{{/opt}}{{^last}}, {{/last}}{{/args}});
+        /// </summary>
+        [Fact]
+        public void {{elem}}{{#syntax3}}{{elem2}}{{/syntax3}}{{func}}Test()
+        {
+{{#skip_test}}
+            /*
+             * THIS TEST IS SKIPPED.
+             * この構文のテストは諸事情によりテストの自動生成から外されました。
+             * {{elem}}{{^syntax1}}[{{key}}]{{/syntax1}}{{#syntax3}}.{{elem2}}{{/syntax3}}.{{func}}({{#args}}{{name}}{{#opt}}?{{/opt}}{{^last}}, {{/last}}{{/args}})構文のテストは手動で作成してください。
+             */
+{{/skip_test}}
+{{^skip_test}}
+{{#argPattern}}
+
+            // {{elem}}{{^syntax1}}[{{key}}]{{/syntax1}}{{#syntax3}}.{{elem2}}{{/syntax3}}.{{func}}({{#.}}{{name}}{{^last}}, {{/last}}{{/.}});
+            Check(
+                ExecParse("BveTs Map 2.02\n0;{{elem}}{{^syntax1}}['{{key}}']{{/syntax1}}{{#syntax3}}.{{elem2}}{{/syntax3}}.{{func}}({{#.}}1.0{{^last}}, {{/last}}{{/.}});"),
+                new MapData(
+                    version: "2.02",
+                    syntaxes: new List<SyntaxData>()
+                    {
+                        new SyntaxData(0, "{{elem_lower}}",{{#syntax3}} "{{elem2_lower}}",{{/syntax3}}{{^syntax1}} "{{key}}",{{/syntax1}} "{{func_lower}}"){{^noarg}}{{#.}}.SetArg("{{name}}", 1.0){{/.}}{{/noarg}}
+                    }));
+{{/argPattern}}
+{{/skip_test}}
+        }
+{{/states}}
+        #endregion
+    }
+}
