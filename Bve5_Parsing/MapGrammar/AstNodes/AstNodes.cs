@@ -99,8 +99,14 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         protected internal IEnumerable<PropertyInfo> GetAllArguments()
         {
             return GetType().GetProperties()
-                .Select(p => new { Property = p, Attr = p.GetCustomAttributes(typeof(ArgumentAttribute), true).First() })
-                .Where(p => p.Attr != null)
+                .Select(p => new
+                {
+                    Property = p,
+                    Attr = p.GetCustomAttributes(typeof(ArgumentAttribute), true)
+                        .Select(a => a as ArgumentAttribute)
+                        .Where(a => a != null)
+                })
+                .Where(p => p.Attr.Any())
                 .Select(p => p.Property)
                 ;
         }
@@ -112,8 +118,14 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         protected internal IEnumerable<PropertyInfo> GetNonOptionalArguments()
         {
             return GetType().GetProperties()
-                .Select(p => new { Property = p, Attr = p.GetCustomAttributes(typeof(ArgumentAttribute), true).First() as ArgumentAttribute })
-                .Where(p => p.Attr != null && !p.Attr.Optional)
+                .Select(p => new
+                {
+                    Property = p,
+                    Attr = p.GetCustomAttributes(typeof(ArgumentAttribute), true)
+                        .Select(a => a as ArgumentAttribute)
+                        .Where(a => a != null)
+                })
+                .Where(p => p.Attr.Any() && false == p.Attr.Single().Optional)
                 .Select(p => p.Property)
                 ;
         }
@@ -125,8 +137,14 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         protected internal IEnumerable<PropertyInfo> GetOptionalArguments()
         {
             return GetType().GetProperties()
-                .Select(p => new { Property = p, Attr = p.GetCustomAttributes(typeof(ArgumentAttribute), true).First() as ArgumentAttribute })
-                .Where(p => p.Attr != null && p.Attr.Optional)
+                .Select(p => new
+                {
+                    Property = p,
+                    Attr = p.GetCustomAttributes(typeof(ArgumentAttribute), true)
+                        .Select(a => a as ArgumentAttribute)
+                        .Where(a => a != null)
+                })
+                .Where(p => p.Attr.Any() && p.Attr.Single().Optional)
                 .Select(p => p.Property)
                 ;
         }
