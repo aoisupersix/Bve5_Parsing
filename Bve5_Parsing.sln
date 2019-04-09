@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27703.2042
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28729.10
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bve5_Parsing", "Bve5_Parsing\Bve5_Parsing.csproj", "{3B91B732-A637-4E73-8264-9297F53BEBAC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bve5_Parsing", "Bve5_Parsing\Bve5_Parsing.csproj", "{78C3A34A-3BA9-4259-8D06-30F635152725}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bve5_ParsingTests", "Bve5_ParsingTests\Bve5_ParsingTests.csproj", "{607CB944-4EF1-4E40-A3C6-12A5CADC68F7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bve5_ParsingTests", "Bve5_ParsingTests\Bve5_ParsingTests.csproj", "{C069E38E-9733-4445-A2AF-45BEA116C22A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParseSampleApp", "ParseSampleApp\ParseSampleApp.csproj", "{14EA4B52-D2C7-4C23-8E10-A6DED2700485}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParseSampleApp", "ParseSampleApp\ParseSampleApp.csproj", "{763AB417-9A82-4869-AF96-0F800DC2F3A5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,23 +15,23 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3B91B732-A637-4E73-8264-9297F53BEBAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3B91B732-A637-4E73-8264-9297F53BEBAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3B91B732-A637-4E73-8264-9297F53BEBAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3B91B732-A637-4E73-8264-9297F53BEBAC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{607CB944-4EF1-4E40-A3C6-12A5CADC68F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{607CB944-4EF1-4E40-A3C6-12A5CADC68F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{607CB944-4EF1-4E40-A3C6-12A5CADC68F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{607CB944-4EF1-4E40-A3C6-12A5CADC68F7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{14EA4B52-D2C7-4C23-8E10-A6DED2700485}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{14EA4B52-D2C7-4C23-8E10-A6DED2700485}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{14EA4B52-D2C7-4C23-8E10-A6DED2700485}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{14EA4B52-D2C7-4C23-8E10-A6DED2700485}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78C3A34A-3BA9-4259-8D06-30F635152725}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78C3A34A-3BA9-4259-8D06-30F635152725}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78C3A34A-3BA9-4259-8D06-30F635152725}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78C3A34A-3BA9-4259-8D06-30F635152725}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C069E38E-9733-4445-A2AF-45BEA116C22A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C069E38E-9733-4445-A2AF-45BEA116C22A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C069E38E-9733-4445-A2AF-45BEA116C22A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C069E38E-9733-4445-A2AF-45BEA116C22A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{763AB417-9A82-4869-AF96-0F800DC2F3A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{763AB417-9A82-4869-AF96-0F800DC2F3A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{763AB417-9A82-4869-AF96-0F800DC2F3A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{763AB417-9A82-4869-AF96-0F800DC2F3A5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {CDFA6D37-E045-40B7-BE45-B9DD6B09F232}
+		SolutionGuid = {834DFF1A-8D5E-424B-A165-48A5FFA97235}
 	EndGlobalSection
 EndGlobal

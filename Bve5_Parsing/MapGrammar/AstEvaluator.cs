@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text;
 
 namespace Bve5_Parsing.MapGrammar
 {
@@ -1012,6 +1013,9 @@ namespace Bve5_Parsing.MapGrammar
                     Errors.Add(node.CreateNewError($"指定されたファイル「{path}」は存在しません。"));
                     return returnData;
                 }
+#if NETSTANDARD2_0
+                Encoding.RegisterProvider(CodePagesEncodingProvider.Instance); // Shift-Jisを扱うために必要
+#endif
                 var file = new FileInfo(path);
                 using (var reader = new FileReader(file))
                 {

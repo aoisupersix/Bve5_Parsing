@@ -6,6 +6,7 @@ using static Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser;
 using System.Reflection;
 using System;
 using Antlr4.Runtime.Tree;
+using System.Collections.ObjectModel;
 
 namespace Bve5_Parsing.MapGrammar.AstNodes
 {
@@ -98,8 +99,14 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         protected internal IEnumerable<PropertyInfo> GetAllArguments()
         {
             return GetType().GetProperties()
-                .Select(p => new { Property = p, Attr = p.GetCustomAttribute(typeof(ArgumentAttribute), true) })
-                .Where(p => p.Attr != null)
+                .Select(p => new
+                {
+                    Property = p,
+                    Attr = p.GetCustomAttributes(typeof(ArgumentAttribute), true)
+                        .Select(a => a as ArgumentAttribute)
+                        .Where(a => a != null)
+                })
+                .Where(p => p.Attr.Any())
                 .Select(p => p.Property)
                 ;
         }
@@ -111,8 +118,14 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         protected internal IEnumerable<PropertyInfo> GetNonOptionalArguments()
         {
             return GetType().GetProperties()
-                .Select(p => new { Property = p, Attr = p.GetCustomAttribute(typeof(ArgumentAttribute), true) as ArgumentAttribute })
-                .Where(p => p.Attr != null && !p.Attr.Optional)
+                .Select(p => new
+                {
+                    Property = p,
+                    Attr = p.GetCustomAttributes(typeof(ArgumentAttribute), true)
+                        .Select(a => a as ArgumentAttribute)
+                        .Where(a => a != null)
+                })
+                .Where(p => p.Attr.Any() && false == p.Attr.Single().Optional)
                 .Select(p => p.Property)
                 ;
         }
@@ -124,8 +137,14 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         protected internal IEnumerable<PropertyInfo> GetOptionalArguments()
         {
             return GetType().GetProperties()
-                .Select(p => new { Property = p, Attr = p.GetCustomAttribute(typeof(ArgumentAttribute), true) as ArgumentAttribute })
-                .Where(p => p.Attr != null && p.Attr.Optional)
+                .Select(p => new
+                {
+                    Property = p,
+                    Attr = p.GetCustomAttributes(typeof(ArgumentAttribute), true)
+                        .Select(a => a as ArgumentAttribute)
+                        .Where(a => a != null)
+                })
+                .Where(p => p.Attr.Any() && p.Attr.Single().Optional)
                 .Select(p => p.Property)
                 ;
         }
@@ -166,7 +185,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
             if (node.HasKey)
             {
                 var key = ctx.GetType().GetField("key").GetValue(ctx) as IParseTree;
-                node.GetType().GetProperty("Key").SetValue(node, visitor.Visit(key));
+                node.GetType().GetProperty("Key").SetValue(node, visitor.Visit(key), null);
             }
 
             // 引数の取得
@@ -176,7 +195,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
                 var argCtx = argCtxInfo?.GetValue(ctx);
                 if (argCtx != null)
                 {
-                    arg.SetValue(node, visitor.Visit(argCtx as IParseTree));
+                    arg.SetValue(node, visitor.Visit(argCtx as IParseTree), null);
                     continue;
                 }
 
@@ -186,7 +205,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
                 var argGCtx = argGCtxInfo?.GetValue(ctx);
                 if (argGCtx != null)
                 {
-                    arg.SetValue(node, visitor.Visit(argGCtx as IParseTree));
+                    arg.SetValue(node, visitor.Visit(argGCtx as IParseTree), null);
                     continue;
                 }
 
@@ -199,20 +218,20 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
                 var argCtxInfo = ctx.GetType().GetField(arg.Name.ToLower());
                 var argCtx = argCtxInfo?.GetValue(ctx);
                 if (argCtx != null)
-                    arg.SetValue(node, visitor.Visit(argCtx as IParseTree));
+                    arg.SetValue(node, visitor.Visit(argCtx as IParseTree), null);
                 else
                 {
                     // "引数名" + Eのコンテキスト名に対応させる
                     var argECtxInfo = ctx.GetType().GetField(arg.Name.ToLower() + "E");
                     var argECtx = argECtxInfo?.GetValue(ctx);
                     if (argECtx != null)
-                        arg.SetValue(node, visitor.Visit(argECtx as IParseTree));
+                        arg.SetValue(node, visitor.Visit(argECtx as IParseTree), null);
 
                     // Graident -> GradientArgsE
                     var argGECtxInfo = ctx.GetType().GetField(arg.Name.ToLower() + "ArgsE");
                     var argGECtx = argGECtxInfo?.GetValue(ctx);
                     if (argGECtx != null)
-                        arg.SetValue(node, visitor.Visit(argGECtx as IParseTree));
+                        arg.SetValue(node, visitor.Visit(argGECtx as IParseTree), null);
                 }
             }
 
@@ -250,14 +269,14 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
 
             if (HasKey)
             {
-                var key = GetType().GetProperty("Key").GetValue(this) as MapGrammarAstNodes;
+                var key = GetType().GetProperty("Key").GetValue(this, null) as MapGrammarAstNodes;
                 syntax.Key = evaluator.Visit(key).ToString();
             }
                 
             syntax.Function = funcName.Substring(funcName.IndexOf(".") + 1).ToLower();
             foreach(var argument in GetAllArguments())
             {
-                var val = argument.GetValue(this) as MapGrammarAstNodes;
+                var val = argument.GetValue(this, null) as MapGrammarAstNodes;
                 if (val == null)
                     continue;
 
@@ -276,7 +295,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     {
         protected List<MapGrammarAstNodes> _structureKeys = new List<MapGrammarAstNodes>();
 
-        public IReadOnlyCollection<MapGrammarAstNodes> StructureKeys => _structureKeys.AsReadOnly();
+        public ReadOnlyCollection<MapGrammarAstNodes> StructureKeys => _structureKeys.AsReadOnly();
 
         public void AddStructureKey(MapGrammarAstNodes strKey)
         {
@@ -292,7 +311,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     {
         protected List<MapGrammarAstNodes> _structureKeys = new List<MapGrammarAstNodes>();
 
-        public IReadOnlyCollection<MapGrammarAstNodes> StructureKeys => _structureKeys.AsReadOnly();
+        public ReadOnlyCollection<MapGrammarAstNodes> StructureKeys => _structureKeys.AsReadOnly();
 
         public void AddStructureKey(MapGrammarAstNodes strKey)
         {
@@ -308,7 +327,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     {
         protected List<MapGrammarAstNodes> _signalIndexes = new List<MapGrammarAstNodes>();
 
-        public IReadOnlyCollection<MapGrammarAstNodes> SignalIndexes => _signalIndexes.AsReadOnly();
+        public ReadOnlyCollection<MapGrammarAstNodes> SignalIndexes => _signalIndexes.AsReadOnly();
 
         public void AddSignalIndex(MapGrammarAstNodes sigIdx)
         {
@@ -324,7 +343,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     {
         protected List<MapGrammarAstNodes> _speedLimits = new List<MapGrammarAstNodes>();
 
-        public IReadOnlyCollection<MapGrammarAstNodes> SpeedLimits => _speedLimits.AsReadOnly();
+        public ReadOnlyCollection<MapGrammarAstNodes> SpeedLimits => _speedLimits.AsReadOnly();
 
         // TODO: NULLの可能性もある
         public void AddSpeedLimit(MapGrammarAstNodes spdLmt)

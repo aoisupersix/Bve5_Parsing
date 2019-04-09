@@ -3,7 +3,9 @@ using Bve5_Parsing.MapGrammar.AstNodes;
 using Bve5_Parsing.MapGrammar.SyntaxDefinitions;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
+using System.Text;
 
 namespace Bve5_Parsing.MapGrammar
 {
@@ -36,7 +38,7 @@ namespace Bve5_Parsing.MapGrammar
         /// <summary>
         /// 構文解析エラー
         /// </summary>
-        public IReadOnlyCollection<ParseError> ParserErrors { get; }
+        public ReadOnlyCollection<ParseError> ParserErrors { get; }
 
         /// <summary>
         /// 構文解析のエラーを取得するリスナー
@@ -114,6 +116,9 @@ namespace Bve5_Parsing.MapGrammar
         public MapData ParseFromFile(string filePath)
         {
             var fileInfo = new FileInfo(filePath);
+#if NETSTANDARD2_0
+            Encoding.RegisterProvider(CodePagesEncodingProvider.Instance); // Shift-Jisを扱うために必要
+#endif
             using (var reader = new Hnx8.ReadJEnc.FileReader(fileInfo))
             {
                 reader.Read(fileInfo);
@@ -133,7 +138,10 @@ namespace Bve5_Parsing.MapGrammar
         public MapData ParseFromFile(string filePath, MapGrammarParserOption option)
         {
             var fileInfo = new FileInfo(filePath);
-            using(var reader = new Hnx8.ReadJEnc.FileReader(fileInfo))
+#if NETSTANDARD2_0
+            Encoding.RegisterProvider(CodePagesEncodingProvider.Instance); // Shift-Jisを扱うために必要
+#endif
+            using (var reader = new Hnx8.ReadJEnc.FileReader(fileInfo))
             {
                 reader.Read(fileInfo);
                 if (reader.Text == null)
