@@ -6,5 +6,5 @@ dist: trusty
 
 script:
   - dotnet restore
-  - dotnet msbuild
+  - dotnet msbuild Bve5_ParsingTests/Bve5_ParsingTests.csproj
   - dotnet test Bve5_ParsingTests/Bve5_ParsingTests.csproj
