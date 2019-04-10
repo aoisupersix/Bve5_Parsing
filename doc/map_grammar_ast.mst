@@ -1,5 +1,5 @@
 /*
- * このファイルは自動生成doc/createMapGrammarTemplate.jsによって自動生成されています。
+ * このファイルはdoc/createMapGrammarTemplate.jsによって自動生成されています。
  * 編集は行わないでください。
  */
 using Antlr4.Runtime;
