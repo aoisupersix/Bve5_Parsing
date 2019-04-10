@@ -1,5 +1,5 @@
 /*
- * このファイルは自動生成doc/createMapGrammarTemplate.jsによって自動生成されています。
+ * このファイルはdoc/createMapGrammarTemplate.jsによって自動生成されています。
  * 編集は行わないでください。
  */
 using Antlr4.Runtime;
@@ -10,7 +10,6 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     /// <summary>
     /// Curve.Setgauge(Value);
     /// </summary>
-    
     public partial class CurveSetgaugeNode : SyntaxNode
     {
         #region SyntaxInfo
@@ -73,7 +72,6 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     /// <summary>
     /// Curve.Setcenter(X);
     /// </summary>
-    
     public partial class CurveSetcenterNode : SyntaxNode
     {
         #region SyntaxInfo
@@ -109,7 +107,6 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     /// <summary>
     /// Curve.Setfunction(Id);
     /// </summary>
-    
     public partial class CurveSetfunctionNode : SyntaxNode
     {
         #region SyntaxInfo
@@ -145,7 +142,6 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     /// <summary>
     /// Curve.Begintransition();
     /// </summary>
-    
     public partial class CurveBegintransitionNode : SyntaxNode
     {
         #region SyntaxInfo
@@ -173,7 +169,6 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     /// <summary>
     /// Curve.Begin(Radius, Cant?);
     /// </summary>
-    
     public partial class CurveBeginNode : SyntaxNode
     {
         #region SyntaxInfo
@@ -242,7 +237,6 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     /// <summary>
     /// Curve.End();
     /// </summary>
-    
     public partial class CurveEndNode : SyntaxNode
     {
         #region SyntaxInfo
@@ -270,7 +264,6 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     /// <summary>
     /// Curve.Interpolate(Radius?, Cant?);
     /// </summary>
-    
     public partial class CurveInterpolateNode : SyntaxNode
     {
         #region SyntaxInfo
@@ -312,7 +305,6 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     /// <summary>
     /// Curve.Change(Radius);
     /// </summary>
-    
     public partial class CurveChangeNode : SyntaxNode
     {
         #region SyntaxInfo
@@ -348,7 +340,6 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     /// <summary>
     /// Gradient.Begintransition();
     /// </summary>
-    
     public partial class GradientBegintransitionNode : SyntaxNode
     {
         #region SyntaxInfo
@@ -376,7 +367,6 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     /// <summary>
     /// Gradient.Begin(Gradient);
     /// </summary>
-    
     public partial class GradientBeginNode : SyntaxNode
     {
         #region SyntaxInfo
@@ -439,7 +429,6 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     /// <summary>
     /// Gradient.End();
     /// </summary>
-    
     public partial class GradientEndNode : SyntaxNode
     {
         #region SyntaxInfo
@@ -467,7 +456,6 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     /// <summary>
     /// Gradient.Interpolate(Gradient?);
     /// </summary>
-    
     public partial class GradientInterpolateNode : SyntaxNode
     {
         #region SyntaxInfo
@@ -503,7 +491,6 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     /// <summary>
     /// Track[TrackKey].X.Interpolate(X?, Radius?);
     /// </summary>
-    
     public partial class TrackXInterpolateNode : SyntaxNode
     {
         #region SyntaxInfo
@@ -514,9 +501,14 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         public override MapElementName ElementName => MapElementName.Track;
 
         /// <summary>
+        /// マップ副要素名
+        /// </summary>
+        public MapSubElementName SubElementName => MapSubElementName.X;
+
+        /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.X_Interpolate;
+        public override MapFunctionName FunctionName => MapFunctionName.Interpolate;
         #endregion SyntaxInfo
 
         /// <summary>
@@ -550,7 +542,6 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     /// <summary>
     /// Track[TrackKey].Y.Interpolate(Y?, Radius?);
     /// </summary>
-    
     public partial class TrackYInterpolateNode : SyntaxNode
     {
         #region SyntaxInfo
@@ -561,9 +552,14 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         public override MapElementName ElementName => MapElementName.Track;
 
         /// <summary>
+        /// マップ副要素名
+        /// </summary>
+        public MapSubElementName SubElementName => MapSubElementName.Y;
+
+        /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Y_Interpolate;
+        public override MapFunctionName FunctionName => MapFunctionName.Interpolate;
         #endregion SyntaxInfo
 
         /// <summary>
@@ -597,7 +593,6 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     /// <summary>
     /// Track[TrackKey].Position(X, Y, RadiusH?, RadiusV?);
     /// </summary>
-    
     public partial class TrackPositionNode : SyntaxNode
     {
         #region SyntaxInfo
@@ -656,7 +651,6 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     /// <summary>
     /// Track[TrackKey].Cant.Setgauge(Gauge);
     /// </summary>
-    
     public partial class TrackCantSetgaugeNode : SyntaxNode
     {
         #region SyntaxInfo
@@ -667,9 +661,14 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         public override MapElementName ElementName => MapElementName.Track;
 
         /// <summary>
+        /// マップ副要素名
+        /// </summary>
+        public MapSubElementName SubElementName => MapSubElementName.Cant;
+
+        /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Cant_Setgauge;
+        public override MapFunctionName FunctionName => MapFunctionName.Setgauge;
         #endregion SyntaxInfo
 
         /// <summary>
@@ -724,7 +723,6 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     /// <summary>
     /// Track[TrackKey].Cant.Setcenter(X);
     /// </summary>
-    
     public partial class TrackCantSetcenterNode : SyntaxNode
     {
         #region SyntaxInfo
@@ -735,9 +733,14 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         public override MapElementName ElementName => MapElementName.Track;
 
         /// <summary>
+        /// マップ副要素名
+        /// </summary>
+        public MapSubElementName SubElementName => MapSubElementName.Cant;
+
+        /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Cant_Setcenter;
+        public override MapFunctionName FunctionName => MapFunctionName.Setcenter;
         #endregion SyntaxInfo
 
         /// <summary>
@@ -765,7 +768,6 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     /// <summary>
     /// Track[TrackKey].Cant.Setfunction(Id);
     /// </summary>
-    
     public partial class TrackCantSetfunctionNode : SyntaxNode
     {
         #region SyntaxInfo
@@ -776,9 +778,14 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         public override MapElementName ElementName => MapElementName.Track;
 
         /// <summary>
+        /// マップ副要素名
+        /// </summary>
+        public MapSubElementName SubElementName => MapSubElementName.Cant;
+
+        /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Cant_Setfunction;
+        public override MapFunctionName FunctionName => MapFunctionName.Setfunction;
         #endregion SyntaxInfo
 
         /// <summary>
@@ -806,7 +813,6 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     /// <summary>
     /// Track[TrackKey].Cant.Begintransition();
     /// </summary>
-    
     public partial class TrackCantBegintransitionNode : SyntaxNode
     {
         #region SyntaxInfo
@@ -817,9 +823,14 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         public override MapElementName ElementName => MapElementName.Track;
 
         /// <summary>
+        /// マップ副要素名
+        /// </summary>
+        public MapSubElementName SubElementName => MapSubElementName.Cant;
+
+        /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Cant_Begintransition;
+        public override MapFunctionName FunctionName => MapFunctionName.Begintransition;
         #endregion SyntaxInfo
 
         /// <summary>
@@ -839,7 +850,6 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     /// <summary>
     /// Track[TrackKey].Cant.Begin(Cant);
     /// </summary>
-    
     public partial class TrackCantBeginNode : SyntaxNode
     {
         #region SyntaxInfo
@@ -850,9 +860,14 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         public override MapElementName ElementName => MapElementName.Track;
 
         /// <summary>
+        /// マップ副要素名
+        /// </summary>
+        public MapSubElementName SubElementName => MapSubElementName.Cant;
+
+        /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Cant_Begin;
+        public override MapFunctionName FunctionName => MapFunctionName.Begin;
         #endregion SyntaxInfo
 
         /// <summary>
@@ -880,7 +895,6 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     /// <summary>
     /// Track[TrackKey].Cant.End();
     /// </summary>
-    
     public partial class TrackCantEndNode : SyntaxNode
     {
         #region SyntaxInfo
@@ -891,9 +905,14 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         public override MapElementName ElementName => MapElementName.Track;
 
         /// <summary>
+        /// マップ副要素名
+        /// </summary>
+        public MapSubElementName SubElementName => MapSubElementName.Cant;
+
+        /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Cant_End;
+        public override MapFunctionName FunctionName => MapFunctionName.End;
         #endregion SyntaxInfo
 
         /// <summary>
@@ -913,7 +932,6 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     /// <summary>
     /// Track[TrackKey].Cant.Interpolate(Cant?);
     /// </summary>
-    
     public partial class TrackCantInterpolateNode : SyntaxNode
     {
         #region SyntaxInfo
@@ -924,9 +942,14 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         public override MapElementName ElementName => MapElementName.Track;
 
         /// <summary>
+        /// マップ副要素名
+        /// </summary>
+        public MapSubElementName SubElementName => MapSubElementName.Cant;
+
+        /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Cant_Interpolate;
+        public override MapFunctionName FunctionName => MapFunctionName.Interpolate;
         #endregion SyntaxInfo
 
         /// <summary>
@@ -981,7 +1004,6 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     /// <summary>
     /// Structure.Load(FilePath);
     /// </summary>
-    
     public partial class StructureLoadNode : SyntaxNode
     {
         #region SyntaxInfo
@@ -1017,7 +1039,6 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     /// <summary>
     /// Structure[StructureKey].Put(TrackKey, X, Y, Z, RX, RY, RZ, Tilt, Span);
     /// </summary>
-    
     public partial class StructurePutNode : SyntaxNode
     {
         #region SyntaxInfo
@@ -1106,7 +1127,6 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     /// <summary>
     /// Structure[StructureKey].Put0(TrackKey, Tilt, Span);
     /// </summary>
-    
     public partial class StructurePut0Node : SyntaxNode
     {
         #region SyntaxInfo
@@ -1159,7 +1179,6 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     /// <summary>
     /// Structure[StructureKey].Putbetween(TrackKey1, TrackKey2, Flag?);
     /// </summary>
-    
     public partial class StructurePutbetweenNode : SyntaxNode
     {
         #region SyntaxInfo
@@ -1212,7 +1231,6 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     /// <summary>
     /// Repeater[RepeaterKey].Begin(TrackKey, X, Y, Z, RX, RY, RZ, Tilt, Span, Interval);
     /// </summary>
-    
     public partial class RepeaterBeginNode : SyntaxNode
     {
         #region SyntaxInfo
@@ -1307,7 +1325,6 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     /// <summary>
     /// Repeater[RepeaterKey].Begin0(TrackKey, Tilt, Span, Interval);
     /// </summary>
-    
     public partial class RepeaterBegin0Node : SyntaxNode
     {
         #region SyntaxInfo
@@ -1366,7 +1383,6 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     /// <summary>
     /// Repeater[RepeaterKey].End();
     /// </summary>
-    
     public partial class RepeaterEndNode : SyntaxNode
     {
         #region SyntaxInfo
@@ -1399,7 +1415,6 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     /// <summary>
     /// Background.Change(StructureKey);
     /// </summary>
-    
     public partial class BackgroundChangeNode : SyntaxNode
     {
         #region SyntaxInfo
@@ -1435,7 +1450,6 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     /// <summary>
     /// Station.Load(FilePath);
     /// </summary>
-    
     public partial class StationLoadNode : SyntaxNode
     {
         #region SyntaxInfo
@@ -1471,7 +1485,6 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     /// <summary>
     /// Station[StationKey].Put(Door, Margin1, Margin2);
     /// </summary>
-    
     public partial class StationPutNode : SyntaxNode
     {
         #region SyntaxInfo
@@ -1524,7 +1537,6 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     /// <summary>
     /// Section.Begin();
     /// </summary>
-    
     public partial class SectionBeginNode : SyntaxNode
     {
         #region SyntaxInfo
@@ -1579,7 +1591,6 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     /// <summary>
     /// Section.Setspeedlimit();
     /// </summary>
-    
     public partial class SectionSetspeedlimitNode : SyntaxNode
     {
         #region SyntaxInfo
@@ -1634,7 +1645,6 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     /// <summary>
     /// Signal.Load(FilePath);
     /// </summary>
-    
     public partial class SignalLoadNode : SyntaxNode
     {
         #region SyntaxInfo
@@ -1670,7 +1680,6 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     /// <summary>
     /// Signal[SignalAspectKey].Put(Section, TrackKey, X, Y, Z?, RX?, RY?, RZ?, Tilt?, Span?);
     /// </summary>
-    
     public partial class SignalPutNode : SyntaxNode
     {
         #region SyntaxInfo
@@ -1765,7 +1774,6 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     /// <summary>
     /// Beacon.Put(Type, Section, Senddata);
     /// </summary>
-    
     public partial class BeaconPutNode : SyntaxNode
     {
         #region SyntaxInfo
@@ -1813,7 +1821,6 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     /// <summary>
     /// Speedlimit.Begin(V);
     /// </summary>
-    
     public partial class SpeedlimitBeginNode : SyntaxNode
     {
         #region SyntaxInfo
@@ -1849,7 +1856,6 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     /// <summary>
     /// Speedlimit.End();
     /// </summary>
-    
     public partial class SpeedlimitEndNode : SyntaxNode
     {
         #region SyntaxInfo
@@ -1877,7 +1883,6 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     /// <summary>
     /// Pretrain.Pass(Time?, Second?);
     /// </summary>
-    
     public partial class PretrainPassNode : SyntaxNode
     {
         #region SyntaxInfo
@@ -1919,7 +1924,6 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     /// <summary>
     /// Light.Ambient(Red, Green, Blue);
     /// </summary>
-    
     public partial class LightAmbientNode : SyntaxNode
     {
         #region SyntaxInfo
@@ -1967,7 +1971,6 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     /// <summary>
     /// Light.Diffuse(Red, Green, Blue);
     /// </summary>
-    
     public partial class LightDiffuseNode : SyntaxNode
     {
         #region SyntaxInfo
@@ -2015,7 +2018,6 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     /// <summary>
     /// Fog.Interpolate(Density?, Red?, Green?, Blue?);
     /// </summary>
-    
     public partial class FogInterpolateNode : SyntaxNode
     {
         #region SyntaxInfo
@@ -2096,7 +2098,6 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     /// <summary>
     /// Drawdistance.Change(Value);
     /// </summary>
-    
     public partial class DrawdistanceChangeNode : SyntaxNode
     {
         #region SyntaxInfo
@@ -2132,7 +2133,6 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     /// <summary>
     /// Cabilluminance.Interpolate(Value?);
     /// </summary>
-    
     public partial class CabilluminanceInterpolateNode : SyntaxNode
     {
         #region SyntaxInfo
@@ -2195,7 +2195,6 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     /// <summary>
     /// Irregularity.Change(X, Y, R, LX, LY, LR);
     /// </summary>
-    
     public partial class IrregularityChangeNode : SyntaxNode
     {
         #region SyntaxInfo
@@ -2261,7 +2260,6 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     /// <summary>
     /// Adhesion.Change(A, B?, C?);
     /// </summary>
-    
     public partial class AdhesionChangeNode : SyntaxNode
     {
         #region SyntaxInfo
@@ -2309,7 +2307,6 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     /// <summary>
     /// Sound.Load(FilePath);
     /// </summary>
-    
     public partial class SoundLoadNode : SyntaxNode
     {
         #region SyntaxInfo
@@ -2345,7 +2342,6 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     /// <summary>
     /// Sound[SoundKey].Play();
     /// </summary>
-    
     public partial class SoundPlayNode : SyntaxNode
     {
         #region SyntaxInfo
@@ -2378,7 +2374,6 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     /// <summary>
     /// Sound3d.Load(FilePath);
     /// </summary>
-    
     public partial class Sound3dLoadNode : SyntaxNode
     {
         #region SyntaxInfo
@@ -2414,7 +2409,6 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     /// <summary>
     /// Sound3d[SoundKey].Put(X, Y);
     /// </summary>
-    
     public partial class Sound3dPutNode : SyntaxNode
     {
         #region SyntaxInfo
@@ -2461,7 +2455,6 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     /// <summary>
     /// Rollingnoise.Change(Index);
     /// </summary>
-    
     public partial class RollingnoiseChangeNode : SyntaxNode
     {
         #region SyntaxInfo
@@ -2497,7 +2490,6 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     /// <summary>
     /// Flangenoise.Change(Index);
     /// </summary>
-    
     public partial class FlangenoiseChangeNode : SyntaxNode
     {
         #region SyntaxInfo
@@ -2533,7 +2525,6 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     /// <summary>
     /// Jointnoise.Play(Index);
     /// </summary>
-    
     public partial class JointnoisePlayNode : SyntaxNode
     {
         #region SyntaxInfo
@@ -2569,7 +2560,6 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     /// <summary>
     /// Train.Add(TrainKey, FilePath, TrackKey, Direction);
     /// </summary>
-    
     public partial class TrainAddNode : SyntaxNode
     {
         #region SyntaxInfo
@@ -2623,7 +2613,6 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     /// <summary>
     /// Train[TrainKey].Load(FilePath, TrackKey, Direction);
     /// </summary>
-    
     public partial class TrainLoadNode : SyntaxNode
     {
         #region SyntaxInfo
@@ -2676,7 +2665,6 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     /// <summary>
     /// Train[TrainKey].Enable(Time?, Second?);
     /// </summary>
-    
     public partial class TrainEnableNode : SyntaxNode
     {
         #region SyntaxInfo
@@ -2723,7 +2711,6 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     /// <summary>
     /// Train[TrainKey].Stop(Decelerate, StopTime, Accelerate, Speed);
     /// </summary>
-    
     public partial class TrainStopNode : SyntaxNode
     {
         #region SyntaxInfo

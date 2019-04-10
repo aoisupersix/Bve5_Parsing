@@ -1,5 +1,5 @@
 /*
- * このファイルは自動生成doc/createMapGrammarTemplate.jsによって自動生成されています。
+ * このファイルはdoc/createMapGrammarTemplate.jsによって自動生成されています。
  * 編集は行わないでください。
  */
 
@@ -157,6 +157,30 @@ namespace Bve5_Parsing.MapGrammar {
     }
 
     /// <summary>
+    /// マップ副要素名（一部構文のみに存在します）
+    /// </summary>
+    public enum MapSubElementName {
+
+        /// <summary>
+        /// X
+        /// </summary>
+        [StringValue("X")]
+        X,
+
+        /// <summary>
+        /// Y
+        /// </summary>
+        [StringValue("Y")]
+        Y,
+
+        /// <summary>
+        /// Cant
+        /// </summary>
+        [StringValue("Cant")]
+        Cant,
+    }
+
+    /// <summary>
     /// マップ関数名
     /// </summary>
     public enum MapFunctionName {
@@ -228,64 +252,10 @@ namespace Bve5_Parsing.MapGrammar {
         Beginconst,
 
         /// <summary>
-        /// X_Interpolate（X.Interpolate）
-        /// </summary>
-        [StringValue("X.Interpolate")]
-        X_Interpolate,
-
-        /// <summary>
-        /// Y_Interpolate（Y.Interpolate）
-        /// </summary>
-        [StringValue("Y.Interpolate")]
-        Y_Interpolate,
-
-        /// <summary>
         /// Position（Position）
         /// </summary>
         [StringValue("Position")]
         Position,
-
-        /// <summary>
-        /// Cant_Setgauge（Cant.Setgauge）
-        /// </summary>
-        [StringValue("Cant.Setgauge")]
-        Cant_Setgauge,
-
-        /// <summary>
-        /// Cant_Setcenter（Cant.Setcenter）
-        /// </summary>
-        [StringValue("Cant.Setcenter")]
-        Cant_Setcenter,
-
-        /// <summary>
-        /// Cant_Setfunction（Cant.Setfunction）
-        /// </summary>
-        [StringValue("Cant.Setfunction")]
-        Cant_Setfunction,
-
-        /// <summary>
-        /// Cant_Begintransition（Cant.Begintransition）
-        /// </summary>
-        [StringValue("Cant.Begintransition")]
-        Cant_Begintransition,
-
-        /// <summary>
-        /// Cant_Begin（Cant.Begin）
-        /// </summary>
-        [StringValue("Cant.Begin")]
-        Cant_Begin,
-
-        /// <summary>
-        /// Cant_End（Cant.End）
-        /// </summary>
-        [StringValue("Cant.End")]
-        Cant_End,
-
-        /// <summary>
-        /// Cant_Interpolate（Cant.Interpolate）
-        /// </summary>
-        [StringValue("Cant.Interpolate")]
-        Cant_Interpolate,
 
         /// <summary>
         /// Cant（Cant）

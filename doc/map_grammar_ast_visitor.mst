@@ -18,7 +18,7 @@ namespace Bve5_Parsing.MapGrammar
         public abstract T Visit(RootNode node);
         public abstract T Visit(DistanceNode node);
 {{#states}}
-        public abstract T Visit({{elem}}{{#syntax3}}{{elem2}}{{/syntax3}}{{func}}Node node);
+        public abstract T Visit({{elem}}{{#syntax3}}{{sub_elem}}{{/syntax3}}{{func}}Node node);
 {{/states}}
         public abstract T Visit(Syntax1Node node);
         public abstract T Visit(Syntax2Node node);

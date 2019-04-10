@@ -115,7 +115,7 @@ namespace Bve5_Parsing
             var parser = new MapGrammarParser();
             var currentDir = System.Environment.CurrentDirectory;
             //var data = parser.Parse(input, currentDir, MapGrammarParser.MapGrammarParserOption.ParseIncludeSyntaxRecursively);
-            var data = parser.ParseFromFile(@"G:\Library\Documents\Bvets\Scenarios\都営浅草線・京急本線\1020N_Map.txt", MapGrammarParser.MapGrammarParserOption.ParseIncludeSyntaxRecursively);
+            var data = parser.ParseFromFile(@"PATH", MapGrammarParser.MapGrammarParserOption.ParseIncludeSyntaxRecursively);
 
             Console.WriteLine("CurrentDir: {0}", currentDir);
 

@@ -47,29 +47,29 @@ namespace Bve5_ParsingTests
 {{#states}}
 
         /// <summary>
-        /// {{elem}}{{^syntax1}}[{{key}}]{{/syntax1}}{{#syntax3}}.{{elem2}}{{/syntax3}}.{{func}}({{#args}}{{name}}{{#opt}}?{{/opt}}{{^last}}, {{/last}}{{/args}});
+        /// {{elem}}{{^syntax1}}[{{key}}]{{/syntax1}}{{#syntax3}}.{{sub_elem}}{{/syntax3}}.{{func}}({{#args}}{{name}}{{#opt}}?{{/opt}}{{^last}}, {{/last}}{{/args}});
         /// </summary>
         [Fact]
-        public void {{elem}}{{#syntax3}}{{elem2}}{{/syntax3}}{{func}}Test()
+        public void {{elem}}{{#syntax3}}{{sub_elem}}{{/syntax3}}{{func}}Test()
         {
 {{#skip_test}}
             /*
              * THIS TEST IS SKIPPED.
              * この構文のテストは諸事情によりテストの自動生成から外されました。
-             * {{elem}}{{^syntax1}}[{{key}}]{{/syntax1}}{{#syntax3}}.{{elem2}}{{/syntax3}}.{{func}}({{#args}}{{name}}{{#opt}}?{{/opt}}{{^last}}, {{/last}}{{/args}})構文のテストは手動で作成してください。
+             * {{elem}}{{^syntax1}}[{{key}}]{{/syntax1}}{{#syntax3}}.{{sub_elem}}{{/syntax3}}.{{func}}({{#args}}{{name}}{{#opt}}?{{/opt}}{{^last}}, {{/last}}{{/args}})構文のテストは手動で作成してください。
              */
 {{/skip_test}}
 {{^skip_test}}
 {{#argPattern}}
 
-            // {{elem}}{{^syntax1}}[{{key}}]{{/syntax1}}{{#syntax3}}.{{elem2}}{{/syntax3}}.{{func}}({{#.}}{{name}}{{^last}}, {{/last}}{{/.}});
+            // {{elem}}{{^syntax1}}[{{key}}]{{/syntax1}}{{#syntax3}}.{{sub_elem}}{{/syntax3}}.{{func}}({{#.}}{{name}}{{^last}}, {{/last}}{{/.}});
             Check(
-                ExecParse("BveTs Map 2.02\n0;{{elem}}{{^syntax1}}['{{key}}']{{/syntax1}}{{#syntax3}}.{{elem2}}{{/syntax3}}.{{func}}({{#.}}1.0{{^last}}, {{/last}}{{/.}});"),
+                ExecParse("BveTs Map 2.02\n0;{{elem}}{{^syntax1}}['{{key}}']{{/syntax1}}{{#syntax3}}.{{sub_elem}}{{/syntax3}}.{{func}}({{#.}}1.0{{^last}}, {{/last}}{{/.}});"),
                 new MapData(
                     version: "2.02",
                     syntaxes: new List<SyntaxData>()
                     {
-                        new SyntaxData(0, "{{elem_lower}}",{{#syntax3}} "{{elem2_lower}}",{{/syntax3}}{{^syntax1}} "{{key}}",{{/syntax1}} "{{func_lower}}"){{^noarg}}{{#.}}.SetArg("{{name}}", 1.0){{/.}}{{/noarg}}
+                        new SyntaxData(0, "{{elem_lower}}",{{#syntax3}} "{{sub_elem_lower}}",{{/syntax3}}{{^syntax1}} "{{key}}",{{/syntax1}} "{{func_lower}}"){{^noarg}}{{#.}}.SetArg("{{name}}", 1.0){{/.}}{{/noarg}}
                     }));
 {{/argPattern}}
 {{/skip_test}}

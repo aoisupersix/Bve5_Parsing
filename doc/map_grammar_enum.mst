@@ -21,6 +21,20 @@ namespace Bve5_Parsing.MapGrammar {
     }
 
     /// <summary>
+    /// マップ副要素名（一部構文のみに存在します）
+    /// </summary>
+    public enum MapSubElementName {
+{{#subElems}}
+
+        /// <summary>
+        /// {{name}}
+        /// </summary>
+        [StringValue("{{name}}")]
+        {{name}},
+{{/subElems}}
+    }
+
+    /// <summary>
     /// マップ関数名
     /// </summary>
     public enum MapFunctionName {

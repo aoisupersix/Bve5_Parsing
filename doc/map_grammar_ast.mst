@@ -9,10 +9,12 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
 {{#states}}
 
     /// <summary>
-    /// {{elem}}{{^syntax1}}[{{key}}]{{/syntax1}}{{#syntax3}}.{{elem2}}{{/syntax3}}.{{func}}({{#args}}{{name}}{{#opt}}?{{/opt}}{{^last}}, {{/last}}{{/args}});
+    /// {{elem}}{{^syntax1}}[{{key}}]{{/syntax1}}{{#syntax3}}.{{sub_elem}}{{/syntax3}}.{{func}}({{#args}}{{name}}{{#opt}}?{{/opt}}{{^last}}, {{/last}}{{/args}});
     /// </summary>
-    {{#deprecated}}[Deprecated]{{/deprecated}}
-    public partial class {{elem}}{{#syntax3}}{{elem2}}{{/syntax3}}{{func}}Node : {{^inheritance}}SyntaxNode{{/inheritance}}{{#inheritance}}{{inheritance}}{{/inheritance}}
+{{#deprecated}}
+    [Deprecated]
+{{/deprecated}}
+    public partial class {{elem}}{{#syntax3}}{{sub_elem}}{{/syntax3}}{{func}}Node : {{^inheritance}}SyntaxNode{{/inheritance}}{{#inheritance}}{{inheritance}}{{/inheritance}}
     {
         #region SyntaxInfo
 
@@ -20,11 +22,18 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// マップ要素名
         /// </summary>
         public override MapElementName ElementName => MapElementName.{{elem}};
+{{#sub_elem}}
+
+        /// <summary>
+        /// マップ副要素名
+        /// </summary>
+        public MapSubElementName SubElementName => MapSubElementName.{{sub_elem}};
+{{/sub_elem}}
 
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.{{#syntax3}}{{elem2}}_{{/syntax3}}{{func}};
+        public override MapFunctionName FunctionName => MapFunctionName.{{func}};
         #endregion SyntaxInfo
 {{^inheritance}}
 {{#key}}
@@ -54,7 +63,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// </summary>
         /// <param name="start"></param>
         /// <param name="stop"></param>
-        public {{elem}}{{#syntax3}}{{elem2}}{{/syntax3}}{{func}}Node(IToken start, IToken stop) : base(start, stop) { }
+        public {{elem}}{{#syntax3}}{{sub_elem}}{{/syntax3}}{{func}}Node(IToken start, IToken stop) : base(start, stop) { }
     }
 {{/states}}
 }

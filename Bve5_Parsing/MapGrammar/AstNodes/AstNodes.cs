@@ -90,6 +90,11 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         public bool HasKey => GetType().GetProperty("Key") != null;
 
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public bool HasSubElement => GetType().GetProperty("SubElementName") != null;
+
         public SyntaxNode(IToken start, IToken stop) : base(start, stop) { }
 
         /// <summary>
@@ -250,17 +255,18 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
             var syntax = new SyntaxData();
             syntax.Distance = distance;
 
-            // TODO: 構文タイプの判定を属性でやりたい
-            if (funcName.Contains("."))
+            if (HasSubElement)
             {
                 //Syntax3
+                var subElem = (MapSubElementName)GetType().GetProperty("SubElementName").GetValue(this, null);
                 syntax.MapElement = new string[2]
                 {
                     ElementName.GetStringValue().ToLower(),
-                    funcName.Substring(0, funcName.IndexOf(".")).ToLower()
+                    subElem.GetStringValue().ToLower()
                 };
             }else
             {
+                //Syntax1 or Syntax2
                 syntax.MapElement = new string[1]
                 {
                     ElementName.GetStringValue().ToLower()
@@ -273,7 +279,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
                 syntax.Key = evaluator.Visit(key).ToString();
             }
                 
-            syntax.Function = funcName.Substring(funcName.IndexOf(".") + 1).ToLower();
+            syntax.Function = funcName.ToLower();
             foreach(var argument in GetAllArguments())
             {
                 var val = argument.GetValue(this, null) as MapGrammarAstNodes;

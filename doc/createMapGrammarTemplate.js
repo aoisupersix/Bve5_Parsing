@@ -3,29 +3,30 @@ const linq = require('linq');
 const stripBom = require('strip-bom');
 const mustache = require('mustache');
 
-const jsonData = loadJson("doc/map_grammar_syntax.json");
+const jsonData = loadJson("./map_grammar_syntax.json");
 
 // Ast生成
-const astTemp = loadFile("doc/map_grammar_ast.mst");
-parse(astTemp, jsonData, "Bve5_Parsing/MapGrammar/AutoGen/SyntaxNodes.cs");
+const astTemp = loadFile("./map_grammar_ast.mst");
+parse(astTemp, jsonData, "../Bve5_Parsing/MapGrammar/AutoGen/SyntaxNodes.cs");
 
 // AstVisitor生成
-const astVisitorTemp = loadFile("doc/map_grammar_ast_visitor.mst");
-parse(astVisitorTemp, jsonData, "Bve5_Parsing/MapGrammar/AutoGen/AstVisitor.cs");
+const astVisitorTemp = loadFile("./map_grammar_ast_visitor.mst");
+parse(astVisitorTemp, jsonData, "../Bve5_Parsing/MapGrammar/AutoGen/AstVisitor.cs");
 
 // 構文名定義生成
-const enumTemp = loadFile("doc/map_grammar_enum.mst");
-parse(enumTemp, jsonData, "Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs");
+const enumTemp = loadFile("./map_grammar_enum.mst");
+parse(enumTemp, jsonData, "../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs");
 
 // 構文テスト生成
-const testTemp = loadFile("doc/map_grammar_test.mst");
-parse(testTemp, jsonData, "Bve5_ParsingTests/AutoGen/MapGrammarSyntaxTests.cs");
+const testTemp = loadFile("./map_grammar_test.mst");
+parse(testTemp, jsonData, "../Bve5_ParsingTests/AutoGen/MapGrammarSyntaxTests.cs");
 
 console.log("all completed !");
 
 function loadJson(jsonPath) {
   const json = JSON.parse(loadFile(jsonPath));
   let elems = [];
+  let subElems = [];
   let funcs = [];
   //Jsonの前処理
   json.states.forEach(state => {
@@ -34,7 +35,7 @@ function loadJson(jsonPath) {
       state["syntax1"] = true;
       state["syntax2"] = false;
       state["syntax3"] = false;
-    }else if(state.elem2 === undefined) {
+    }else if(state.sub_elem === undefined) {
       state["syntax1"] = false;
       state["syntax2"] = true;
       state["syntax3"] = false;
@@ -79,13 +80,14 @@ function loadJson(jsonPath) {
       elems.push({name: state.elem});
     }
 
+    // サブ要素名取得
+    if (state.syntax3 && linq.from(subElems).all(e => e["name"] != state.sub_elem)) {
+      subElems.push({name: state.sub_elem});
+    }
+
     // 関数名取得
     let funcName = state.func;
     let funcString = funcName;
-    if (state.syntax3 == true) {
-      funcName = state.elem2 + "_" + funcName;
-      funcString = state.elem2 + "." + state.func;
-    }
     if (linq.from(funcs).all(f => f["name"] != funcName)) {
       funcs.push({name: funcName, str: funcString});
     }
@@ -94,11 +96,12 @@ function loadJson(jsonPath) {
     state["elem_lower"] = (state.elem + '').toLowerCase();
     state["func_lower"] = (state.func + '').toLowerCase();
     if (state.syntax3 == true) {
-      state["elem2_lower"] = (state.elem2 + '').toLowerCase();
+      state["sub_elem_lower"] = (state.sub_elem + '').toLowerCase();
     }
   });
 
   json["elems"] = elems;
+  json["subElems"] = subElems;
   json["funcs"] = funcs;
   return json
 }

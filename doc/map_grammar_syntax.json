@@ -168,7 +168,7 @@
     },
     {
       "elem": "Track",
-      "elem2": "X",
+      "sub_elem": "X",
       "key": "TrackKey",
       "func": "Interpolate",
       "args": [
@@ -186,7 +186,7 @@
     },
     {
       "elem": "Track",
-      "elem2": "Y",
+      "sub_elem": "Y",
       "key": "TrackKey",
       "func": "Interpolate",
       "args": [
@@ -231,7 +231,7 @@
     },
     {
       "elem": "Track",
-      "elem2": "Cant",
+      "sub_elem": "Cant",
       "key": "TrackKey",
       "func": "Setgauge",
       "args": [
@@ -258,7 +258,7 @@
     },
     {
       "elem": "Track",
-      "elem2": "Cant",
+      "sub_elem": "Cant",
       "key": "TrackKey",
       "func": "Setcenter",
       "args": [
@@ -271,7 +271,7 @@
     },
     {
       "elem": "Track",
-      "elem2": "Cant",
+      "sub_elem": "Cant",
       "key": "TrackKey",
       "func": "Setfunction",
       "args": [
@@ -284,7 +284,7 @@
     },
     {
       "elem": "Track",
-      "elem2": "Cant",
+      "sub_elem": "Cant",
       "key": "TrackKey",
       "func": "Begintransition",
       "args": [
@@ -292,7 +292,7 @@
     },
     {
       "elem": "Track",
-      "elem2": "Cant",
+      "sub_elem": "Cant",
       "key": "TrackKey",
       "func": "Begin",
       "args": [
@@ -305,7 +305,7 @@
     },
     {
       "elem": "Track",
-      "elem2": "Cant",
+      "sub_elem": "Cant",
       "key": "TrackKey",
       "func": "End",
       "args": [
@@ -313,7 +313,7 @@
     },
     {
       "elem": "Track",
-      "elem2": "Cant",
+      "sub_elem": "Cant",
       "key": "TrackKey",
       "func": "Interpolate",
       "args": [
