@@ -34,6 +34,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// 関数名
         /// </summary>
         public override MapFunctionName FunctionName => MapFunctionName.{{func}};
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => {{#key}}true{{/key}}{{^key}}false{{/key}};
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => {{#sub_elem}}true{{/sub_elem}}{{^sub_elem}}false{{/sub_elem}};
         #endregion SyntaxInfo
 {{^inheritance}}
 {{#key}}

@@ -114,8 +114,8 @@ namespace Bve5_Parsing
         {
             var parser = new MapGrammarParser();
             var currentDir = System.Environment.CurrentDirectory;
-            //var data = parser.Parse(input, currentDir, MapGrammarParser.MapGrammarParserOption.ParseIncludeSyntaxRecursively);
-            var data = parser.ParseFromFile(@"PATH", MapGrammarParser.MapGrammarParserOption.ParseIncludeSyntaxRecursively);
+            var data = parser.Parse(input, currentDir, MapGrammarParser.MapGrammarParserOption.ParseIncludeSyntaxRecursively);
+            //var data = parser.ParseFromFile(@"PATH", MapGrammarParser.MapGrammarParserOption.ParseIncludeSyntaxRecursively);
 
             Console.WriteLine("CurrentDir: {0}", currentDir);
 

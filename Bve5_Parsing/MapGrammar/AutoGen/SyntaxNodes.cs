@@ -23,6 +23,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// 関数名
         /// </summary>
         public override MapFunctionName FunctionName => MapFunctionName.Setgauge;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => false;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => false;
         #endregion SyntaxInfo
 
         #region Args
@@ -59,6 +69,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// 関数名
         /// </summary>
         public override MapFunctionName FunctionName => MapFunctionName.Gauge;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => false;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => false;
         #endregion SyntaxInfo
 
         /// <summary>
@@ -85,6 +105,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// 関数名
         /// </summary>
         public override MapFunctionName FunctionName => MapFunctionName.Setcenter;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => false;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => false;
         #endregion SyntaxInfo
 
         #region Args
@@ -120,6 +150,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// 関数名
         /// </summary>
         public override MapFunctionName FunctionName => MapFunctionName.Setfunction;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => false;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => false;
         #endregion SyntaxInfo
 
         #region Args
@@ -155,6 +195,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// 関数名
         /// </summary>
         public override MapFunctionName FunctionName => MapFunctionName.Begintransition;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => false;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => false;
         #endregion SyntaxInfo
 
 
@@ -182,6 +232,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// 関数名
         /// </summary>
         public override MapFunctionName FunctionName => MapFunctionName.Begin;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => false;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => false;
         #endregion SyntaxInfo
 
         #region Args
@@ -224,6 +284,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// 関数名
         /// </summary>
         public override MapFunctionName FunctionName => MapFunctionName.Begincircular;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => false;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => false;
         #endregion SyntaxInfo
 
         /// <summary>
@@ -250,6 +320,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// 関数名
         /// </summary>
         public override MapFunctionName FunctionName => MapFunctionName.End;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => false;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => false;
         #endregion SyntaxInfo
 
 
@@ -277,6 +357,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// 関数名
         /// </summary>
         public override MapFunctionName FunctionName => MapFunctionName.Interpolate;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => false;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => false;
         #endregion SyntaxInfo
 
         #region Args
@@ -318,6 +408,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// 関数名
         /// </summary>
         public override MapFunctionName FunctionName => MapFunctionName.Change;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => false;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => false;
         #endregion SyntaxInfo
 
         #region Args
@@ -353,6 +453,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// 関数名
         /// </summary>
         public override MapFunctionName FunctionName => MapFunctionName.Begintransition;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => false;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => false;
         #endregion SyntaxInfo
 
 
@@ -380,6 +490,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// 関数名
         /// </summary>
         public override MapFunctionName FunctionName => MapFunctionName.Begin;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => false;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => false;
         #endregion SyntaxInfo
 
         #region Args
@@ -416,6 +536,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// 関数名
         /// </summary>
         public override MapFunctionName FunctionName => MapFunctionName.Beginconst;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => false;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => false;
         #endregion SyntaxInfo
 
         /// <summary>
@@ -442,6 +572,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// 関数名
         /// </summary>
         public override MapFunctionName FunctionName => MapFunctionName.End;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => false;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => false;
         #endregion SyntaxInfo
 
 
@@ -469,6 +609,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// 関数名
         /// </summary>
         public override MapFunctionName FunctionName => MapFunctionName.Interpolate;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => false;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => false;
         #endregion SyntaxInfo
 
         #region Args
@@ -509,6 +659,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// 関数名
         /// </summary>
         public override MapFunctionName FunctionName => MapFunctionName.Interpolate;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => true;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => true;
         #endregion SyntaxInfo
 
         /// <summary>
@@ -560,6 +720,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// 関数名
         /// </summary>
         public override MapFunctionName FunctionName => MapFunctionName.Interpolate;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => true;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => true;
         #endregion SyntaxInfo
 
         /// <summary>
@@ -606,6 +776,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// 関数名
         /// </summary>
         public override MapFunctionName FunctionName => MapFunctionName.Position;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => true;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => false;
         #endregion SyntaxInfo
 
         /// <summary>
@@ -669,6 +849,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// 関数名
         /// </summary>
         public override MapFunctionName FunctionName => MapFunctionName.Setgauge;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => true;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => true;
         #endregion SyntaxInfo
 
         /// <summary>
@@ -710,6 +900,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// 関数名
         /// </summary>
         public override MapFunctionName FunctionName => MapFunctionName.Gauge;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => true;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => false;
         #endregion SyntaxInfo
 
         /// <summary>
@@ -741,6 +941,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// 関数名
         /// </summary>
         public override MapFunctionName FunctionName => MapFunctionName.Setcenter;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => true;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => true;
         #endregion SyntaxInfo
 
         /// <summary>
@@ -786,6 +996,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// 関数名
         /// </summary>
         public override MapFunctionName FunctionName => MapFunctionName.Setfunction;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => true;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => true;
         #endregion SyntaxInfo
 
         /// <summary>
@@ -831,6 +1051,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// 関数名
         /// </summary>
         public override MapFunctionName FunctionName => MapFunctionName.Begintransition;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => true;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => true;
         #endregion SyntaxInfo
 
         /// <summary>
@@ -868,6 +1098,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// 関数名
         /// </summary>
         public override MapFunctionName FunctionName => MapFunctionName.Begin;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => true;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => true;
         #endregion SyntaxInfo
 
         /// <summary>
@@ -913,6 +1153,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// 関数名
         /// </summary>
         public override MapFunctionName FunctionName => MapFunctionName.End;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => true;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => true;
         #endregion SyntaxInfo
 
         /// <summary>
@@ -950,6 +1200,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// 関数名
         /// </summary>
         public override MapFunctionName FunctionName => MapFunctionName.Interpolate;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => true;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => true;
         #endregion SyntaxInfo
 
         /// <summary>
@@ -991,6 +1251,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// 関数名
         /// </summary>
         public override MapFunctionName FunctionName => MapFunctionName.Cant;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => true;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => false;
         #endregion SyntaxInfo
 
         /// <summary>
@@ -1017,6 +1287,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// 関数名
         /// </summary>
         public override MapFunctionName FunctionName => MapFunctionName.Load;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => false;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => false;
         #endregion SyntaxInfo
 
         #region Args
@@ -1052,6 +1332,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// 関数名
         /// </summary>
         public override MapFunctionName FunctionName => MapFunctionName.Put;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => true;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => false;
         #endregion SyntaxInfo
 
         /// <summary>
@@ -1140,6 +1430,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// 関数名
         /// </summary>
         public override MapFunctionName FunctionName => MapFunctionName.Put0;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => true;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => false;
         #endregion SyntaxInfo
 
         /// <summary>
@@ -1192,6 +1492,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// 関数名
         /// </summary>
         public override MapFunctionName FunctionName => MapFunctionName.Putbetween;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => true;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => false;
         #endregion SyntaxInfo
 
         /// <summary>
@@ -1244,6 +1554,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// 関数名
         /// </summary>
         public override MapFunctionName FunctionName => MapFunctionName.Begin;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => true;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => false;
         #endregion SyntaxInfo
 
         /// <summary>
@@ -1338,6 +1658,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// 関数名
         /// </summary>
         public override MapFunctionName FunctionName => MapFunctionName.Begin0;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => true;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => false;
         #endregion SyntaxInfo
 
         /// <summary>
@@ -1396,6 +1726,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// 関数名
         /// </summary>
         public override MapFunctionName FunctionName => MapFunctionName.End;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => true;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => false;
         #endregion SyntaxInfo
 
         /// <summary>
@@ -1428,6 +1768,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// 関数名
         /// </summary>
         public override MapFunctionName FunctionName => MapFunctionName.Change;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => false;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => false;
         #endregion SyntaxInfo
 
         #region Args
@@ -1463,6 +1813,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// 関数名
         /// </summary>
         public override MapFunctionName FunctionName => MapFunctionName.Load;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => false;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => false;
         #endregion SyntaxInfo
 
         #region Args
@@ -1498,6 +1858,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// 関数名
         /// </summary>
         public override MapFunctionName FunctionName => MapFunctionName.Put;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => true;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => false;
         #endregion SyntaxInfo
 
         /// <summary>
@@ -1550,6 +1920,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// 関数名
         /// </summary>
         public override MapFunctionName FunctionName => MapFunctionName.Begin;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => false;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => false;
         #endregion SyntaxInfo
 
 
@@ -1578,6 +1958,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// 関数名
         /// </summary>
         public override MapFunctionName FunctionName => MapFunctionName.Beginnew;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => false;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => false;
         #endregion SyntaxInfo
 
         /// <summary>
@@ -1604,6 +1994,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// 関数名
         /// </summary>
         public override MapFunctionName FunctionName => MapFunctionName.Setspeedlimit;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => false;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => false;
         #endregion SyntaxInfo
 
 
@@ -1632,6 +2032,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// 関数名
         /// </summary>
         public override MapFunctionName FunctionName => MapFunctionName.Speedlimit;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => false;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => false;
         #endregion SyntaxInfo
 
         /// <summary>
@@ -1658,6 +2068,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// 関数名
         /// </summary>
         public override MapFunctionName FunctionName => MapFunctionName.Load;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => false;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => false;
         #endregion SyntaxInfo
 
         #region Args
@@ -1693,6 +2113,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// 関数名
         /// </summary>
         public override MapFunctionName FunctionName => MapFunctionName.Put;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => true;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => false;
         #endregion SyntaxInfo
 
         /// <summary>
@@ -1787,6 +2217,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// 関数名
         /// </summary>
         public override MapFunctionName FunctionName => MapFunctionName.Put;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => false;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => false;
         #endregion SyntaxInfo
 
         #region Args
@@ -1834,6 +2274,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// 関数名
         /// </summary>
         public override MapFunctionName FunctionName => MapFunctionName.Begin;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => false;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => false;
         #endregion SyntaxInfo
 
         #region Args
@@ -1869,6 +2319,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// 関数名
         /// </summary>
         public override MapFunctionName FunctionName => MapFunctionName.End;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => false;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => false;
         #endregion SyntaxInfo
 
 
@@ -1896,6 +2356,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// 関数名
         /// </summary>
         public override MapFunctionName FunctionName => MapFunctionName.Pass;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => false;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => false;
         #endregion SyntaxInfo
 
         #region Args
@@ -1937,6 +2407,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// 関数名
         /// </summary>
         public override MapFunctionName FunctionName => MapFunctionName.Ambient;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => false;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => false;
         #endregion SyntaxInfo
 
         #region Args
@@ -1984,6 +2464,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// 関数名
         /// </summary>
         public override MapFunctionName FunctionName => MapFunctionName.Diffuse;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => false;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => false;
         #endregion SyntaxInfo
 
         #region Args
@@ -2031,6 +2521,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// 関数名
         /// </summary>
         public override MapFunctionName FunctionName => MapFunctionName.Interpolate;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => false;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => false;
         #endregion SyntaxInfo
 
         #region Args
@@ -2085,6 +2585,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// 関数名
         /// </summary>
         public override MapFunctionName FunctionName => MapFunctionName.Set;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => false;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => false;
         #endregion SyntaxInfo
 
         /// <summary>
@@ -2111,6 +2621,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// 関数名
         /// </summary>
         public override MapFunctionName FunctionName => MapFunctionName.Change;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => false;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => false;
         #endregion SyntaxInfo
 
         #region Args
@@ -2146,6 +2666,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// 関数名
         /// </summary>
         public override MapFunctionName FunctionName => MapFunctionName.Interpolate;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => false;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => false;
         #endregion SyntaxInfo
 
         #region Args
@@ -2182,6 +2712,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// 関数名
         /// </summary>
         public override MapFunctionName FunctionName => MapFunctionName.Set;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => false;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => false;
         #endregion SyntaxInfo
 
         /// <summary>
@@ -2208,6 +2748,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// 関数名
         /// </summary>
         public override MapFunctionName FunctionName => MapFunctionName.Change;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => false;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => false;
         #endregion SyntaxInfo
 
         #region Args
@@ -2273,6 +2823,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// 関数名
         /// </summary>
         public override MapFunctionName FunctionName => MapFunctionName.Change;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => false;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => false;
         #endregion SyntaxInfo
 
         #region Args
@@ -2320,6 +2880,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// 関数名
         /// </summary>
         public override MapFunctionName FunctionName => MapFunctionName.Load;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => false;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => false;
         #endregion SyntaxInfo
 
         #region Args
@@ -2355,6 +2925,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// 関数名
         /// </summary>
         public override MapFunctionName FunctionName => MapFunctionName.Play;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => true;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => false;
         #endregion SyntaxInfo
 
         /// <summary>
@@ -2387,6 +2967,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// 関数名
         /// </summary>
         public override MapFunctionName FunctionName => MapFunctionName.Load;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => false;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => false;
         #endregion SyntaxInfo
 
         #region Args
@@ -2422,6 +3012,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// 関数名
         /// </summary>
         public override MapFunctionName FunctionName => MapFunctionName.Put;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => true;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => false;
         #endregion SyntaxInfo
 
         /// <summary>
@@ -2468,6 +3068,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// 関数名
         /// </summary>
         public override MapFunctionName FunctionName => MapFunctionName.Change;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => false;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => false;
         #endregion SyntaxInfo
 
         #region Args
@@ -2503,6 +3113,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// 関数名
         /// </summary>
         public override MapFunctionName FunctionName => MapFunctionName.Change;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => false;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => false;
         #endregion SyntaxInfo
 
         #region Args
@@ -2538,6 +3158,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// 関数名
         /// </summary>
         public override MapFunctionName FunctionName => MapFunctionName.Play;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => false;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => false;
         #endregion SyntaxInfo
 
         #region Args
@@ -2573,6 +3203,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// 関数名
         /// </summary>
         public override MapFunctionName FunctionName => MapFunctionName.Add;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => false;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => false;
         #endregion SyntaxInfo
 
         #region Args
@@ -2626,6 +3266,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// 関数名
         /// </summary>
         public override MapFunctionName FunctionName => MapFunctionName.Load;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => true;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => false;
         #endregion SyntaxInfo
 
         /// <summary>
@@ -2678,6 +3328,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// 関数名
         /// </summary>
         public override MapFunctionName FunctionName => MapFunctionName.Enable;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => true;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => false;
         #endregion SyntaxInfo
 
         /// <summary>
@@ -2724,6 +3384,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// 関数名
         /// </summary>
         public override MapFunctionName FunctionName => MapFunctionName.Stop;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => true;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => false;
         #endregion SyntaxInfo
 
         /// <summary>
