@@ -3,7 +3,7 @@
  * 編集は行わないでください。
  */
 using Antlr4.Runtime;
-using Bve5_Parsing.Attributes;
+using Bve5_Parsing.MapGrammar.Attributes;
 
 namespace Bve5_Parsing.MapGrammar.AstNodes {
 {{#states}}

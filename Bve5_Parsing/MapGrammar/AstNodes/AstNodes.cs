@@ -1,5 +1,5 @@
 ﻿using Antlr4.Runtime;
-using Bve5_Parsing.Attributes;
+using Bve5_Parsing.MapGrammar.Attributes;
 using System.Linq;
 using System.Collections.Generic;
 using static Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser;
