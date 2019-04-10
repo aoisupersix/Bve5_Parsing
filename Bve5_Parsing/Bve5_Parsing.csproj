@@ -12,6 +12,9 @@ Bve5.7構文のパーサライブラリです。</Description>
     <RepositoryUrl>https://github.com/aoisupersix/Bve5_Parsing</RepositoryUrl>
     <PackageTags>parsing, bve5</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/aoisupersix/Bve5_Parsing</PackageProjectUrl>
+    <RepositoryType>git</RepositoryType>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
