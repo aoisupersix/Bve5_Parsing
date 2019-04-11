@@ -3,6 +3,7 @@ using Xunit;
 using Bve5_Parsing.MapGrammar;
 using System.Collections.Generic;
 using System.Collections;
+using System.Linq;
 
 namespace Bve5_ParsingTests
 {
@@ -40,6 +41,19 @@ namespace Bve5_ParsingTests
         private void Check(MapData expected, MapData actual)
         {
             Assert.NotNull(expected);
+            Assert.Equal(expected.Version, actual.Version);
+            Assert.Equal(expected.Encoding, actual.Encoding);
+            Assert.Equal(expected.StructureListPath, actual.StructureListPath);
+            Assert.Equal(expected.StationListPath, actual.StationListPath);
+            Assert.Equal(expected.SignalListPath, actual.SignalListPath);
+            Assert.Equal(expected.SoundListPath, actual.SoundListPath);
+            Assert.Equal(expected.Sound3DListPath, actual.Sound3DListPath);
+
+            Assert.Equal(expected.Statements.Count(), actual.Statements.Count());
+            for(var i = 0; i < expected.Statements.Count(); i++)
+            {
+                // TODO
+            }
             Assert.Equal(expected, actual);
         }
 
