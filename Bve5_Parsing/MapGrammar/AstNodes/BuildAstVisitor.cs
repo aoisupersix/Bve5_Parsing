@@ -704,9 +704,9 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         {
             var node = SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Section, context.func.Text);
 
-            if (node.FunctionName == MapFunctionName.Begin)
+            if (node.FunctionName == MapFunctionName.Begin || node.FunctionName == MapFunctionName.Beginnew)
             {
-                //Section.Beginは手動対応
+                //Section.BeginとSection.Beginnewは手動対応
                 var beginNode = node as SectionBeginNode;
                 beginNode.AddSignalIndex(Visit(context.nullableExpr()));
                 foreach (var sigIdx in context.exprArgs())
@@ -717,7 +717,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
             }
             else if (node.FunctionName == MapFunctionName.Setspeedlimit)
             {
-                //Repeater.Begin0は手動対応
+                //Section.Setspeedlimitは手動対応
                 var speedlimitNode = node as SectionSetspeedlimitNode;
                 speedlimitNode.AddSpeedLimit(Visit(context.nullableExpr()));
                 foreach (var spdLmt in context.exprArgs())
@@ -737,7 +737,21 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// <returns>構文ASTノード</returns>
         public override MapGrammarAstNodes VisitSignal([NotNull] SyntaxDefinitions.MapGrammarParser.SignalContext context)
         {
-            return SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Signal, context.func.Text);
+            var node = SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Signal, context.func.Text);
+
+            if (node.FunctionName == MapFunctionName.Speedlimit)
+            {
+                //Signal.Speedlimitは手動対応
+                var speedlimitNode = node as SignalSpeedlimitNode;
+                speedlimitNode.AddSpeedLimit(Visit(context.nullableExpr()[0]));
+                foreach (var spdLmt in context.exprArgs())
+                {
+                    speedlimitNode.AddSpeedLimit(Visit(spdLmt));
+                }
+                return speedlimitNode;
+            }
+
+            return node;
         }
 
         /// <summary>
