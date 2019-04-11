@@ -139,61 +139,6 @@ namespace Bve5_ParsingTests
         }
 
         /// <summary>
-        /// Section.Begin();
-        /// </summary>
-        [Fact]
-        public void SectionBeginTest()
-        {
-            //Section.Begin(signal0);
-            Check(
-                ExecParse("BveTs Map 2.02\n0;Section.Begin(0);"),
-                new MapData(
-                    version: "2.02",
-                    syntaxes: new List<SyntaxData>()
-                    {
-                        new SyntaxData(0, "section", "begin").SetArg("signal0", 0)
-                    }));
-
-            //Section.Begin(signal0, signal1, signal2);
-            Check(
-                ExecParse("BveTs Map 2.02\n0;Section.Begin(0,1,2);"),
-                new MapData(
-                    version: "2.02",
-                    syntaxes: new List<SyntaxData>()
-                    {
-                        new SyntaxData(0, "section", "begin").SetArg("signal0", 0).SetArg("signal1", 1).SetArg("signal2", 2)
-                    }));
-        }
-
-        /// <summary>
-        /// Section.Setspeedlimit();
-        /// </summary>
-        [Fact]
-        public void SectionSetspeedlimitTest()
-        {
-            //Section.Setspeedlimit(v0);
-            Check(
-                ExecParse("BveTs Map 2.02\n0;Section.SetSpeedLimit(0);"),
-                new MapData(
-                    version: "2.02",
-                    syntaxes: new List<SyntaxData>()
-                    {
-                        new SyntaxData(0, "section", "setspeedlimit").SetArg("v0", 0)
-                    }));
-
-            //Section.Setspeedlimit(v0, v1, v2);
-            Check(
-                ExecParse("BveTs Map 2.02\n0;Section.SetSpeedLimit(0, 1, 2);"),
-                new MapData(
-                    version: "2.02",
-                    syntaxes: new List<SyntaxData>()
-                    {
-                        new SyntaxData(0, "section", "setspeedlimit").SetArg("v0", 0).SetArg("v1", 1).SetArg("v2", 2)
-                    }));
-        }
-        #endregion
-
-        /// <summary>
         /// Repeater[RepeaterKey].Begin(TrackKey, X, Y, Z, RX, RY, RZ, Tilt, Span, Interval);
         /// </summary>
         [Fact]
@@ -228,5 +173,143 @@ namespace Bve5_ParsingTests
                         new SyntaxData(0, "repeater", "RepeaterKey", "begin0").SetArg("trackkey", 1.0).SetArg("tilt", 1.0).SetArg("span", 1.0).SetArg("interval", 1.0).SetArg("structurekey1", "key1").SetArg("structurekey2", "key2").SetArg("structurekey3", "key3")
                     }));
         }
+
+        /// <summary>
+        /// Section.Begin();
+        /// </summary>
+        [Fact]
+        public void SectionBeginTest()
+        {
+            //Section.Begin(signal0);
+            Check(
+                ExecParse("BveTs Map 2.02\n0;Section.Begin(0);"),
+                new MapData(
+                    version: "2.02",
+                    syntaxes: new List<SyntaxData>()
+                    {
+                        new SyntaxData(0, "section", "begin").SetArg("signal0", 0)
+                    }));
+
+            //Section.Begin(signal0, signal1, signal2);
+            Check(
+                ExecParse("BveTs Map 2.02\n0;Section.Begin(0,1,2);"),
+                new MapData(
+                    version: "2.02",
+                    syntaxes: new List<SyntaxData>()
+                    {
+                        new SyntaxData(0, "section", "begin").SetArg("signal0", 0).SetArg("signal1", 1).SetArg("signal2", 2)
+                    }));
+        }
+
+        /// <summary>
+        /// Section.Beginnew();
+        /// </summary>
+        [Fact]
+        public void SectionBeginnewTest()
+        {
+            //Section.Beginnew(signal0);
+            Check(
+                ExecParse("BveTs Map 2.02\n0;Section.Beginnew(0);"),
+                new MapData(
+                    version: "2.02",
+                    syntaxes: new List<SyntaxData>()
+                    {
+                        new SyntaxData(0, "section", "beginnew").SetArg("signal0", 0)
+                    }));
+
+            //Section.Beginnew(signal0, signal1, signal2);
+            Check(
+                ExecParse("BveTs Map 2.02\n0;Section.Beginnew(0,1,2);"),
+                new MapData(
+                    version: "2.02",
+                    syntaxes: new List<SyntaxData>()
+                    {
+                        new SyntaxData(0, "section", "beginnew").SetArg("signal0", 0).SetArg("signal1", 1).SetArg("signal2", 2)
+                    }));
+        }
+
+        /// <summary>
+        /// Section.Setspeedlimit();
+        /// </summary>
+        [Fact]
+        public void SectionSetspeedlimitTest()
+        {
+            //Section.Setspeedlimit(v0);
+            Check(
+                ExecParse("BveTs Map 2.02\n0;Section.SetSpeedLimit(0);"),
+                new MapData(
+                    version: "2.02",
+                    syntaxes: new List<SyntaxData>()
+                    {
+                        new SyntaxData(0, "section", "setspeedlimit").SetArg("v0", 0)
+                    }));
+
+            //Section.Setspeedlimit(v0, v1, v2);
+            Check(
+                ExecParse("BveTs Map 2.02\n0;Section.SetSpeedLimit(0, 1, 2);"),
+                new MapData(
+                    version: "2.02",
+                    syntaxes: new List<SyntaxData>()
+                    {
+                        new SyntaxData(0, "section", "setspeedlimit").SetArg("v0", 0).SetArg("v1", 1).SetArg("v2", 2)
+                    }));
+        }
+
+        /// <summary>
+        /// Signal.Speedlimit();
+        /// </summary>
+        [Fact]
+        public void SignalSpeedlimitTest()
+        {
+            //Signal.Speedlimit(v0);
+            Check(
+                ExecParse("BveTs Map 2.02\n0;Signal.SpeedLimit(0);"),
+                new MapData(
+                    version: "2.02",
+                    syntaxes: new List<SyntaxData>()
+                    {
+                        new SyntaxData(0, "signal", "speedlimit").SetArg("v0", 0)
+                    }));
+
+            //Signal.Speedlimit(v0, v1, v2);
+            Check(
+                ExecParse("BveTs Map 2.02\n0;Signal.SpeedLimit(0, 1, 2);"),
+                new MapData(
+                    version: "2.02",
+                    syntaxes: new List<SyntaxData>()
+                    {
+                        new SyntaxData(0, "signal", "speedlimit").SetArg("v0", 0).SetArg("v1", 1).SetArg("v2", 2)
+                    }));
+        }
+
+        /// <summary>
+        /// Signal[SignalAspectKey].Put(Section, TrackKey, X, Y, Z?, RX?, RY?, RZ?, Tilt?, Span?);
+        /// </summary>
+        [Fact]
+        public void SignalPutTest()
+        {
+            //Signal[SignalAspectKey].Put(Section, TrackKey, X, Y);
+            Check(
+                ExecParse("BveTs Map 2.02\n0;Signal['Key'].Put(0, 'track', 0, 0);"),
+                new MapData(
+                    version: "2.02",
+                    syntaxes: new List<SyntaxData>()
+                    {
+                        new SyntaxData(0, "signal", "Key", "put").SetArg("section", 0).SetArg("trackkey", "track").SetArg("x", 0).SetArg("y", 0)
+                    }));
+
+            //Signal[SignalAspectKey].Put(Section, TrackKey, X, Y, Z, RX, RY, RZ, Tilt, Span);
+            Check(
+                ExecParse("BveTs Map 2.02\n0;Signal['Key'].Put(0, 'track', 0, 1, 2, 3, 4, 5, 6, 7);"),
+                new MapData(
+                    version: "2.02",
+                    syntaxes: new List<SyntaxData>()
+                    {
+                        new SyntaxData(0, "signal", "Key", "put").SetArg("section", 0).SetArg("trackkey", "track").SetArg("x", 0).SetArg("y", 1)
+                            .SetArg("z", 2).SetArg("rx", 3).SetArg("ry", 4).SetArg("rz", 5).SetArg("tilt", 6).SetArg("span", 7)
+                    }));
+        }
+
+        #endregion
     }
 }
