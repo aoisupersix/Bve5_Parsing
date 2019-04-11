@@ -904,8 +904,8 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
             switch (context.func.Type)
             {
                 case MapGrammarLexer.FOG:
-                    node.Arguments.Add("start", Visit(context.start));
-                    node.Arguments.Add("end", Visit(context.end));
+                    node.Arguments.Add("start", Visit(context.startArgs));
+                    node.Arguments.Add("end", Visit(context.endArgs));
                     node.Arguments.Add("red", Visit(context.red));
                     node.Arguments.Add("green", Visit(context.green));
                     node.Arguments.Add("blue", Visit(context.blue));
