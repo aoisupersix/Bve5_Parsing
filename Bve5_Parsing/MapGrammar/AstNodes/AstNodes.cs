@@ -204,14 +204,15 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
             {
                 var argCtxInfo = ctx.GetType().GetField(arg.Name.ToLower());
                 var argCtx = argCtxInfo?.GetValue(ctx);
-                if (argCtx != null)
+                if (argCtx is IParseTree)
                 {
                     arg.SetValue(node, visitor.Visit(argCtx as IParseTree), null);
                     continue;
                 }
 
-                // Gradientに関しては特別対応
+                // GradientやLegacyに関しては特別対応
                 // Graident -> GradientArgs
+                // Start -> StartArgs など
                 var argGCtxInfo = ctx.GetType().GetField(arg.Name.ToLower() + "Args");
                 var argGCtx = argGCtxInfo?.GetValue(ctx);
                 if (argGCtx != null)

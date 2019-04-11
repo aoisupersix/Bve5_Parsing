@@ -911,32 +911,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// <returns>構文ASTノード</returns>
         public override MapGrammarAstNodes VisitLegacy([NotNull] SyntaxDefinitions.MapGrammarParser.LegacyContext context)
         {
-            Syntax1Node node = new Syntax1Node(context.Start, context.Stop);
-            node.MapElementName = "legacy";
-            node.FunctionName = context.func.Text.ToLower();
-
-            switch (context.func.Type)
-            {
-                case MapGrammarLexer.FOG:
-                    node.Arguments.Add("start", Visit(context.startArgs));
-                    node.Arguments.Add("end", Visit(context.endArgs));
-                    node.Arguments.Add("red", Visit(context.red));
-                    node.Arguments.Add("green", Visit(context.green));
-                    node.Arguments.Add("blue", Visit(context.blue));
-                    break;
-                case MapGrammarLexer.CURVE:
-                    node.Arguments.Add("radius", Visit(context.radius));
-                    node.Arguments.Add("cant", Visit(context.cant));
-                    break;
-                case MapGrammarLexer.PITCH:
-                    node.Arguments.Add("rate", Visit(context.rate));
-                    break;
-                case MapGrammarLexer.TURN:
-                    node.Arguments.Add("slope", Visit(context.slope));
-                    break;
-            }
-
-            return node;
+            return SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Legacy, context.func.Text);
         }
         #endregion マップ構文Visitors
 

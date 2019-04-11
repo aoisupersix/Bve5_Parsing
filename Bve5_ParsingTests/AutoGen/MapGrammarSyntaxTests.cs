@@ -1330,6 +1330,78 @@ namespace Bve5_ParsingTests
                         new SyntaxData(0, "train", "TrainKey", "stop").SetArg("decelerate", 1.0).SetArg("stoptime", 1.0).SetArg("accelerate", 1.0).SetArg("speed", 1.0)
                     }));
         }
+
+        /// <summary>
+        /// Legacy.Fog(Fogstart, Fogend, red, green, blue);
+        /// </summary>
+        [Fact]
+        public void LegacyFogTest()
+        {
+
+            // Legacy.Fog(fogstart, fogend, red, green, blue);
+            Check(
+                ExecParse("BveTs Map 2.02\n0;Legacy.Fog(1.0, 1.0, 1.0, 1.0, 1.0);"),
+                new MapData(
+                    version: "2.02",
+                    syntaxes: new List<SyntaxData>()
+                    {
+                        new SyntaxData(0, "legacy", "fog").SetArg("fogstart", 1.0).SetArg("fogend", 1.0).SetArg("red", 1.0).SetArg("green", 1.0).SetArg("blue", 1.0)
+                    }));
+        }
+
+        /// <summary>
+        /// Legacy.Curve(radius, cant);
+        /// </summary>
+        [Fact]
+        public void LegacyCurveTest()
+        {
+
+            // Legacy.Curve(radius, cant);
+            Check(
+                ExecParse("BveTs Map 2.02\n0;Legacy.Curve(1.0, 1.0);"),
+                new MapData(
+                    version: "2.02",
+                    syntaxes: new List<SyntaxData>()
+                    {
+                        new SyntaxData(0, "legacy", "curve").SetArg("radius", 1.0).SetArg("cant", 1.0)
+                    }));
+        }
+
+        /// <summary>
+        /// Legacy.Pitch(rate);
+        /// </summary>
+        [Fact]
+        public void LegacyPitchTest()
+        {
+
+            // Legacy.Pitch(rate);
+            Check(
+                ExecParse("BveTs Map 2.02\n0;Legacy.Pitch(1.0);"),
+                new MapData(
+                    version: "2.02",
+                    syntaxes: new List<SyntaxData>()
+                    {
+                        new SyntaxData(0, "legacy", "pitch").SetArg("rate", 1.0)
+                    }));
+        }
+
+        /// <summary>
+        /// Legacy.Turn(slope);
+        /// </summary>
+        [Fact]
+        public void LegacyTurnTest()
+        {
+
+            // Legacy.Turn(slope);
+            Check(
+                ExecParse("BveTs Map 2.02\n0;Legacy.Turn(1.0);"),
+                new MapData(
+                    version: "2.02",
+                    syntaxes: new List<SyntaxData>()
+                    {
+                        new SyntaxData(0, "legacy", "turn").SetArg("slope", 1.0)
+                    }));
+        }
         #endregion
     }
 }

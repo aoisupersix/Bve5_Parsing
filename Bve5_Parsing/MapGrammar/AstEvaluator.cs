@@ -560,6 +560,26 @@ namespace Bve5_Parsing.MapGrammar
         {
             return node.CreateSyntaxData(this, NowDistance);
         }
+
+        public override object Visit(LegacyFogNode node)
+        {
+            return node.CreateSyntaxData(this, NowDistance);
+        }
+
+        public override object Visit(LegacyCurveNode node)
+        {
+            return node.CreateSyntaxData(this, NowDistance);
+        }
+
+        public override object Visit(LegacyPitchNode node)
+        {
+            return node.CreateSyntaxData(this, NowDistance);
+        }
+
+        public override object Visit(LegacyTurnNode node)
+        {
+            return node.CreateSyntaxData(this, NowDistance);
+        }
         #endregion
 
         /// <summary>
