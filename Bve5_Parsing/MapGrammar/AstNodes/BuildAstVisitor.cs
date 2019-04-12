@@ -906,6 +906,18 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// <returns>構文ASTノード</returns>
         public override MapGrammarAstNodes VisitTrain([NotNull] SyntaxDefinitions.MapGrammarParser.TrainContext context)
         {
+            var funcName = context.func.Text;
+            if (funcName.ToLower() == MapFunctionName.Enable.GetStringValue().ToLower())
+            {
+                var node = new TrainEnableNode(context.Start, context.Stop);
+                node.Key = Visit(context.key);
+
+                // Train.Enable構文の引数がTimeかSecondかの判定は評価時に行う
+                // 現時点ではTimeに代入しておく。
+                node.Time = Visit(context.nullableExpr()[0]);
+
+                return node;
+            }
             return SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Train, context.func.Text);
         }
 

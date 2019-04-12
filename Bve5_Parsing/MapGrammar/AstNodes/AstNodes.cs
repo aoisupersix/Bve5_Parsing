@@ -389,6 +389,30 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     }
 
     /// <summary>
+    /// Train.Enableへの手動対応
+    /// 引数の種別を判定する
+    /// </summary>
+    public partial class TrainEnableNode
+    {
+        public override SyntaxData CreateSyntaxData(EvaluateMapGrammarVisitor evaluator, double distance)
+        {
+            var key = evaluator.Visit(Key).ToString();
+            var data = new SyntaxData(distance, ElementName.GetStringValue().ToLower(), key, FunctionName.GetStringValue().ToLower());
+            var arg = evaluator.Visit(Time); // 必ずTimeに引数が入っている
+
+            if (arg is string)
+            {
+                // TODO: Validate
+                return data.SetArg("time", arg);
+            }
+            else
+            {
+                return data.SetArg("second", arg);
+            }
+        }
+    }
+
+    /// <summary>
     /// ステートメントノード1 MapElement.Function(Args)
     /// </summary>
     public class Syntax1Node : MapGrammarAstNodes

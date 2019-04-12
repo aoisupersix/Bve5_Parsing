@@ -446,11 +446,15 @@ namespace Bve5_ParsingTests
         [Fact]
         public void TrainLoadTest()
         {
-            /*
-             * THIS TEST IS SKIPPED.
-             * この構文のテストは諸事情によりテストの自動生成から外されました。
-             * Train[TrainKey].Load(FilePath, TrackKey, Direction)構文のテストは手動で作成してください。
-             */
+            //Train[TrainKey].Load(FilePath, TrackKey, Direction);
+            Check(
+                ExecParse("BveTs Map 2.02\n0;Train['track'].Load('path', 'key', 0);"),
+                new MapData(
+                    version: "2.02",
+                    syntaxes: new List<SyntaxData>()
+                    {
+                        new SyntaxData(0, "train", "track", "load").SetArg("filepath", "path").SetArg("trackkey", "key").SetArg("direction", 0)
+                    }));
         }
 
         /// <summary>
@@ -459,11 +463,25 @@ namespace Bve5_ParsingTests
         [Fact]
         public void TrainEnableTest()
         {
-            /*
-             * THIS TEST IS SKIPPED.
-             * この構文のテストは諸事情によりテストの自動生成から外されました。
-             * Train[TrainKey].Enable(Time?, Second?)構文のテストは手動で作成してください。
-             */
+            //Train[TrainKey].Enable(Time);
+            Check(
+                ExecParse("BveTs Map 2.02\n0;Train['track'].Enable('10:00:00');"),
+                new MapData(
+                    version: "2.02",
+                    syntaxes: new List<SyntaxData>()
+                    {
+                        new SyntaxData(0, "train", "track", "enable").SetArg("time", "10:00:00")
+                    }));
+
+            //Train[TrainKey].Enable(Second);
+            Check(
+                ExecParse("BveTs Map 2.02\n0;Train['track'].Enable(0);"),
+                new MapData(
+                    version: "2.02",
+                    syntaxes: new List<SyntaxData>()
+                    {
+                        new SyntaxData(0, "train", "track", "enable").SetArg("second", 0)
+                    }));
         }
 
         #endregion
