@@ -1146,11 +1146,36 @@ namespace Bve5_ParsingTests
         [Fact]
         public void AdhesionChangeTest()
         {
-            /*
-             * THIS TEST IS SKIPPED.
-             * この構文のテストは諸事情によりテストの自動生成から外されました。
-             * Adhesion.Change(A, B?, C?)構文のテストは手動で作成してください。
-             */
+
+            // Adhesion.Change(a);
+            Check(
+                ExecParse("BveTs Map 2.02\n0;Adhesion.Change(1.0);"),
+                new MapData(
+                    version: "2.02",
+                    syntaxes: new List<SyntaxData>()
+                    {
+                        new SyntaxData(0, "adhesion", "change").SetArg("a", 1.0)
+                    }));
+
+            // Adhesion.Change(a, b);
+            Check(
+                ExecParse("BveTs Map 2.02\n0;Adhesion.Change(1.0, 1.0);"),
+                new MapData(
+                    version: "2.02",
+                    syntaxes: new List<SyntaxData>()
+                    {
+                        new SyntaxData(0, "adhesion", "change").SetArg("a", 1.0).SetArg("b", 1.0)
+                    }));
+
+            // Adhesion.Change(a, b, c);
+            Check(
+                ExecParse("BveTs Map 2.02\n0;Adhesion.Change(1.0, 1.0, 1.0);"),
+                new MapData(
+                    version: "2.02",
+                    syntaxes: new List<SyntaxData>()
+                    {
+                        new SyntaxData(0, "adhesion", "change").SetArg("a", 1.0).SetArg("b", 1.0).SetArg("c", 1.0)
+                    }));
         }
 
         /// <summary>

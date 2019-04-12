@@ -917,7 +917,6 @@
     {
       "elem": "Adhesion",
       "func": "Change",
-      "skip_test": true,
       "args": [
         {
           "name": "A",

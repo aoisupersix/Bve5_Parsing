@@ -441,19 +441,6 @@ namespace Bve5_ParsingTests
         }
 
         /// <summary>
-        /// Adhesion.Change(A, B?, C?);
-        /// </summary>
-        [Fact]
-        public void AdhesionChangeTest()
-        {
-            /*
-             * THIS TEST IS SKIPPED.
-             * この構文のテストは諸事情によりテストの自動生成から外されました。
-             * Adhesion.Change(A, B?, C?)構文のテストは手動で作成してください。
-             */
-        }
-
-        /// <summary>
         /// Train[TrainKey].Load(FilePath, TrackKey, Direction);
         /// </summary>
         [Fact]
