@@ -339,6 +339,98 @@ namespace Bve5_ParsingTests
                     }));
         }
 
+        /// <summary>
+        /// Pretrain.Pass(Time?, Second?);
+        /// </summary>
+        [Fact]
+        public void PretrainPassTest()
+        {
+            //Pretrain.Pass(Time);
+            Check(
+                ExecParse("BveTs Map 2.02\n0;Pretrain.Pass('12:44:30');"),
+                new MapData(
+                    version: "2.02",
+                    syntaxes: new List<SyntaxData>()
+                    {
+                        new SyntaxData(0, "pretrain", "pass").SetArg("time", "12:44:30")
+                    }));
+
+            //Pretrain.Pass(Second);
+            Check(
+                ExecParse("BveTs Map 2.02\n0;Pretrain.Pass(100);"),
+                new MapData(
+                    version: "2.02",
+                    syntaxes: new List<SyntaxData>()
+                    {
+                        new SyntaxData(0, "pretrain", "pass").SetArg("second", 100)
+                    }));
+        }
+
+        /// <summary>
+        /// Fog.Interpolate(Density?, Red?, Green?, Blue?);
+        /// </summary>
+        [Fact]
+        public void FogInterpolateTest()
+        {
+            /*
+             * THIS TEST IS SKIPPED.
+             * この構文のテストは諸事情によりテストの自動生成から外されました。
+             * Fog.Interpolate(Density?, Red?, Green?, Blue?)構文のテストは手動で作成してください。
+             */
+        }
+
+        /// <summary>
+        /// Fog.Set(Density?, Red?, Green?, Blue?);
+        /// </summary>
+        [Fact]
+        public void FogSetTest()
+        {
+            /*
+             * THIS TEST IS SKIPPED.
+             * この構文のテストは諸事情によりテストの自動生成から外されました。
+             * Fog.Set(Density?, Red?, Green?, Blue?)構文のテストは手動で作成してください。
+             */
+        }
+
+        /// <summary>
+        /// Adhesion.Change(A, B?, C?);
+        /// </summary>
+        [Fact]
+        public void AdhesionChangeTest()
+        {
+            /*
+             * THIS TEST IS SKIPPED.
+             * この構文のテストは諸事情によりテストの自動生成から外されました。
+             * Adhesion.Change(A, B?, C?)構文のテストは手動で作成してください。
+             */
+        }
+
+        /// <summary>
+        /// Train[TrainKey].Load(FilePath, TrackKey, Direction);
+        /// </summary>
+        [Fact]
+        public void TrainLoadTest()
+        {
+            /*
+             * THIS TEST IS SKIPPED.
+             * この構文のテストは諸事情によりテストの自動生成から外されました。
+             * Train[TrainKey].Load(FilePath, TrackKey, Direction)構文のテストは手動で作成してください。
+             */
+        }
+
+        /// <summary>
+        /// Train[TrainKey].Enable(Time?, Second?);
+        /// </summary>
+        [Fact]
+        public void TrainEnableTest()
+        {
+            /*
+             * THIS TEST IS SKIPPED.
+             * この構文のテストは諸事情によりテストの自動生成から外されました。
+             * Train[TrainKey].Enable(Time?, Second?)構文のテストは手動で作成してください。
+             */
+        }
+
         #endregion
     }
 }

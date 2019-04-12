@@ -781,7 +781,12 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// <returns>構文ASTノード</returns>
         public override MapGrammarAstNodes VisitPretrain([NotNull] SyntaxDefinitions.MapGrammarParser.PretrainContext context)
         {
-            return SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Pretrain, context.func.Text);
+            var node = new PretrainPassNode(context.start, context.stop);
+            // Pretrain.Pass構文の引数がTimeかSecondかの判定は評価時に行う
+            // 現時点ではTimeに代入しておく。
+            node.Time = Visit(context.nullableExpr());
+
+            return node;
         }
 
         /// <summary>
