@@ -52,7 +52,22 @@ namespace Bve5_ParsingTests
             Assert.Equal(expected.Statements.Count(), actual.Statements.Count());
             for(var i = 0; i < expected.Statements.Count(); i++)
             {
-                // TODO
+                var exp = expected.Statements[i];
+                var act = expected.Statements[i];
+                Assert.Equal(exp.Distance, act.Distance);
+                Assert.Equal(exp.MapElement.Length, act.MapElement.Length);
+                for(var j = 0; j < exp.MapElement.Length; j++)
+                {
+                    Assert.Equal(exp.MapElement[j], act.MapElement[j]);
+                }
+                Assert.Equal(exp.Key, act.Key);
+                Assert.Equal(exp.Function, act.Function);
+                Assert.Equal(exp.Arguments.Count(), act.Arguments.Count());
+                foreach(KeyValuePair<string, object> arg in exp.Arguments)
+                {
+                    var val = act.Arguments[arg.Key];
+                    Assert.Equal(arg.Value, val);
+                }
             }
             Assert.Equal(expected, actual);
         }
