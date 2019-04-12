@@ -372,11 +372,35 @@ namespace Bve5_ParsingTests
         [Fact]
         public void FogInterpolateTest()
         {
-            /*
-             * THIS TEST IS SKIPPED.
-             * この構文のテストは諸事情によりテストの自動生成から外されました。
-             * Fog.Interpolate(Density?, Red?, Green?, Blue?)構文のテストは手動で作成してください。
-             */
+            //Fog.Interpolate();
+            Check(
+                ExecParse("BveTs Map 2.02\n0;Fog.Interpolate();"),
+                new MapData(
+                    version: "2.02",
+                    syntaxes: new List<SyntaxData>()
+                    {
+                        new SyntaxData(0, "fog", "interpolate")
+                    }));
+
+            //Fog.Interpolate(Density);
+            Check(
+                ExecParse("BveTs Map 2.02\n0;Fog.Interpolate(0);"),
+                new MapData(
+                    version: "2.02",
+                    syntaxes: new List<SyntaxData>()
+                    {
+                        new SyntaxData(0, "fog", "interpolate").SetArg("density", 0)
+                    }));
+
+            //Fog.Interpolate(Density, Red, Green, Blue);
+            Check(
+                ExecParse("BveTs Map 2.02\n0;Fog.Interpolate(0, 1, 2, 3);"),
+                new MapData(
+                    version: "2.02",
+                    syntaxes: new List<SyntaxData>()
+                    {
+                        new SyntaxData(0, "fog", "interpolate").SetArg("density", 0).SetArg("red", 1).SetArg("green", 2).SetArg("blue", 3)
+                    }));
         }
 
         /// <summary>
@@ -385,11 +409,35 @@ namespace Bve5_ParsingTests
         [Fact]
         public void FogSetTest()
         {
-            /*
-             * THIS TEST IS SKIPPED.
-             * この構文のテストは諸事情によりテストの自動生成から外されました。
-             * Fog.Set(Density?, Red?, Green?, Blue?)構文のテストは手動で作成してください。
-             */
+            //Fog.Set();
+            Check(
+                ExecParse("BveTs Map 2.02\n0;Fog.Set();"),
+                new MapData(
+                    version: "2.02",
+                    syntaxes: new List<SyntaxData>()
+                    {
+                        new SyntaxData(0, "fog", "set")
+                    }));
+
+            //Fog.Set(Density);
+            Check(
+                ExecParse("BveTs Map 2.02\n0;Fog.Set(0);"),
+                new MapData(
+                    version: "2.02",
+                    syntaxes: new List<SyntaxData>()
+                    {
+                        new SyntaxData(0, "fog", "set").SetArg("density", 0)
+                    }));
+
+            //Fog.Set(Density, Red, Green, Blue);
+            Check(
+                ExecParse("BveTs Map 2.02\n0;Fog.Set(0, 1, 2, 3);"),
+                new MapData(
+                    version: "2.02",
+                    syntaxes: new List<SyntaxData>()
+                    {
+                        new SyntaxData(0, "fog", "set").SetArg("density", 0).SetArg("red", 1).SetArg("green", 2).SetArg("blue", 3)
+                    }));
         }
 
         /// <summary>
