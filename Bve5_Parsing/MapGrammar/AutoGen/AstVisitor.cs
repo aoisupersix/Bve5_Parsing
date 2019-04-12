@@ -83,6 +83,10 @@ namespace Bve5_Parsing.MapGrammar
         public abstract T Visit(TrainLoadNode node);
         public abstract T Visit(TrainEnableNode node);
         public abstract T Visit(TrainStopNode node);
+        public abstract T Visit(LegacyFogNode node);
+        public abstract T Visit(LegacyCurveNode node);
+        public abstract T Visit(LegacyPitchNode node);
+        public abstract T Visit(LegacyTurnNode node);
         public abstract T Visit(Syntax1Node node);
         public abstract T Visit(Syntax2Node node);
         public abstract T Visit(Syntax3Node node);

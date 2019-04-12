@@ -204,14 +204,15 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
             {
                 var argCtxInfo = ctx.GetType().GetField(arg.Name.ToLower());
                 var argCtx = argCtxInfo?.GetValue(ctx);
-                if (argCtx != null)
+                if (argCtx is IParseTree)
                 {
                     arg.SetValue(node, visitor.Visit(argCtx as IParseTree), null);
                     continue;
                 }
 
-                // Gradientに関しては特別対応
+                // GradientやLegacyに関しては特別対応
                 // Graident -> GradientArgs
+                // Start -> StartArgs など
                 var argGCtxInfo = ctx.GetType().GetField(arg.Name.ToLower() + "Args");
                 var argGCtx = argGCtxInfo?.GetValue(ctx);
                 if (argGCtx != null)
@@ -255,7 +256,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// <param name="evaluator"></param>
         /// <param name="distance"></param>
         /// <returns></returns>
-        public SyntaxData CreateSyntaxData(EvaluateMapGrammarVisitor evaluator, double distance)
+        public virtual SyntaxData CreateSyntaxData(EvaluateMapGrammarVisitor evaluator, double distance)
         {
             var funcName = FunctionName.GetStringValue();
             var syntax = new SyntaxData();
@@ -361,6 +362,53 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         public void AddSpeedLimit(MapGrammarAstNodes spdLmt)
         {
             _speedLimits.Add(spdLmt);
+        }
+    }
+
+    /// <summary>
+    /// Pretrain.Passへの手動対応
+    /// 引数の種別を判定する
+    /// </summary>
+    public partial class PretrainPassNode
+    {
+        public override SyntaxData CreateSyntaxData(EvaluateMapGrammarVisitor evaluator, double distance)
+        {
+            var data = new SyntaxData(distance, ElementName.GetStringValue().ToLower(), FunctionName.GetStringValue().ToLower());
+            var arg = evaluator.Visit(Time); // 必ずTimeに引数が入っている
+            
+            if (arg is string)
+            {
+                // TODO: Validate
+                return data.SetArg("time", arg);
+            }
+            else
+            {
+                return data.SetArg("second", arg);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Train.Enableへの手動対応
+    /// 引数の種別を判定する
+    /// </summary>
+    public partial class TrainEnableNode
+    {
+        public override SyntaxData CreateSyntaxData(EvaluateMapGrammarVisitor evaluator, double distance)
+        {
+            var key = evaluator.Visit(Key).ToString();
+            var data = new SyntaxData(distance, ElementName.GetStringValue().ToLower(), key, FunctionName.GetStringValue().ToLower());
+            var arg = evaluator.Visit(Time); // 必ずTimeに引数が入っている
+
+            if (arg is string)
+            {
+                // TODO: Validate
+                return data.SetArg("time", arg);
+            }
+            else
+            {
+                return data.SetArg("second", arg);
+            }
         }
     }
 

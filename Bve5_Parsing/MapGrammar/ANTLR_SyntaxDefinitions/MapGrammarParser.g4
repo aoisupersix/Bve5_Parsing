@@ -234,9 +234,8 @@ varAssign :
 	v=var EQUAL expr;
 
 //ÉåÉKÉVÅ[ä÷êî
-//TODO: startÇ™ParseRuleContextÇ∆Ç©Ç‘Ç¡ÇƒÇÈ
 legacy :
-	  DOT func=FOG OPN_PAR start=nullableExpr COMMA end=nullableExpr COMMA red=nullableExpr COMMA green=nullableExpr COMMA blue=nullableExpr CLS_PAR
+	  DOT func=FOG OPN_PAR fogstart=nullableExpr COMMA fogend=nullableExpr COMMA red=nullableExpr COMMA green=nullableExpr COMMA blue=nullableExpr CLS_PAR
 	| DOT func=CURVE OPN_PAR radius=nullableExpr COMMA cant=nullableExpr CLS_PAR
 	| DOT func=PITCH OPN_PAR rate=nullableExpr CLS_PAR
 	| DOT func=TURN OPN_PAR slope=nullableExpr CLS_PAR

@@ -3435,4 +3435,218 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <param name="stop"></param>
         public TrainStopNode(IToken start, IToken stop) : base(start, stop) { }
     }
+
+    /// <summary>
+    /// Legacy.Fog(Fogstart, Fogend, red, green, blue);
+    /// </summary>
+    [Deprecated]
+    public partial class LegacyFogNode : SyntaxNode
+    {
+        #region SyntaxInfo
+
+        /// <summary>
+        /// マップ要素名
+        /// </summary>
+        public override MapElementName ElementName => MapElementName.Legacy;
+
+        /// <summary>
+        /// 関数名
+        /// </summary>
+        public override MapFunctionName FunctionName => MapFunctionName.Fog;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => false;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => false;
+        #endregion SyntaxInfo
+
+        #region Args
+
+        /// <summary>
+        /// 引数：視界が100%の距離 [m]
+        /// </summary>
+        [Argument]
+        public MapGrammarAstNodes Fogstart { get; set; }
+
+        /// <summary>
+        /// 引数：視界が0%になる距離 [m]
+        /// </summary>
+        [Argument]
+        public MapGrammarAstNodes Fogend { get; set; }
+
+        /// <summary>
+        /// 引数：赤成分 (0 ~ 1)
+        /// </summary>
+        [Argument]
+        public MapGrammarAstNodes red { get; set; }
+
+        /// <summary>
+        /// 引数：緑成分 (0 ~ 1)
+        /// </summary>
+        [Argument]
+        public MapGrammarAstNodes green { get; set; }
+
+        /// <summary>
+        /// 引数：青成分 (0 ~ 1)
+        /// </summary>
+        [Argument]
+        public MapGrammarAstNodes blue { get; set; }
+        #endregion Args
+
+        /// <summary>
+        /// 新しいインスタンスを生成します。
+        /// </summary>
+        /// <param name="start"></param>
+        /// <param name="stop"></param>
+        public LegacyFogNode(IToken start, IToken stop) : base(start, stop) { }
+    }
+
+    /// <summary>
+    /// Legacy.Curve(radius, cant);
+    /// </summary>
+    [Deprecated]
+    public partial class LegacyCurveNode : SyntaxNode
+    {
+        #region SyntaxInfo
+
+        /// <summary>
+        /// マップ要素名
+        /// </summary>
+        public override MapElementName ElementName => MapElementName.Legacy;
+
+        /// <summary>
+        /// 関数名
+        /// </summary>
+        public override MapFunctionName FunctionName => MapFunctionName.Curve;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => false;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => false;
+        #endregion SyntaxInfo
+
+        #region Args
+
+        /// <summary>
+        /// 引数：曲線半径 [m] (正: 右曲線, 負: 左曲線)
+        /// </summary>
+        [Argument]
+        public MapGrammarAstNodes radius { get; set; }
+
+        /// <summary>
+        /// 引数：カント [m]
+        /// </summary>
+        [Argument]
+        public MapGrammarAstNodes cant { get; set; }
+        #endregion Args
+
+        /// <summary>
+        /// 新しいインスタンスを生成します。
+        /// </summary>
+        /// <param name="start"></param>
+        /// <param name="stop"></param>
+        public LegacyCurveNode(IToken start, IToken stop) : base(start, stop) { }
+    }
+
+    /// <summary>
+    /// Legacy.Pitch(rate);
+    /// </summary>
+    [Deprecated]
+    public partial class LegacyPitchNode : SyntaxNode
+    {
+        #region SyntaxInfo
+
+        /// <summary>
+        /// マップ要素名
+        /// </summary>
+        public override MapElementName ElementName => MapElementName.Legacy;
+
+        /// <summary>
+        /// 関数名
+        /// </summary>
+        public override MapFunctionName FunctionName => MapFunctionName.Pitch;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => false;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => false;
+        #endregion SyntaxInfo
+
+        #region Args
+
+        /// <summary>
+        /// 引数：勾配 [‰]
+        /// </summary>
+        [Argument]
+        public MapGrammarAstNodes rate { get; set; }
+        #endregion Args
+
+        /// <summary>
+        /// 新しいインスタンスを生成します。
+        /// </summary>
+        /// <param name="start"></param>
+        /// <param name="stop"></param>
+        public LegacyPitchNode(IToken start, IToken stop) : base(start, stop) { }
+    }
+
+    /// <summary>
+    /// Legacy.Turn(slope);
+    /// </summary>
+    [Deprecated]
+    public partial class LegacyTurnNode : SyntaxNode
+    {
+        #region SyntaxInfo
+
+        /// <summary>
+        /// マップ要素名
+        /// </summary>
+        public override MapElementName ElementName => MapElementName.Legacy;
+
+        /// <summary>
+        /// 関数名
+        /// </summary>
+        public override MapFunctionName FunctionName => MapFunctionName.Turn;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => false;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => false;
+        #endregion SyntaxInfo
+
+        #region Args
+
+        /// <summary>
+        /// 引数：傾き(+: 右, -: 左)
+        /// </summary>
+        [Argument]
+        public MapGrammarAstNodes slope { get; set; }
+        #endregion Args
+
+        /// <summary>
+        /// 新しいインスタンスを生成します。
+        /// </summary>
+        /// <param name="start"></param>
+        /// <param name="stop"></param>
+        public LegacyTurnNode(IToken start, IToken stop) : base(start, stop) { }
+    }
 }

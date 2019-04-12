@@ -704,9 +704,9 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         {
             var node = SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Section, context.func.Text);
 
-            if (node.FunctionName == MapFunctionName.Begin)
+            if (node.FunctionName == MapFunctionName.Begin || node.FunctionName == MapFunctionName.Beginnew)
             {
-                //Section.Beginは手動対応
+                //Section.BeginとSection.Beginnewは手動対応
                 var beginNode = node as SectionBeginNode;
                 beginNode.AddSignalIndex(Visit(context.nullableExpr()));
                 foreach (var sigIdx in context.exprArgs())
@@ -717,7 +717,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
             }
             else if (node.FunctionName == MapFunctionName.Setspeedlimit)
             {
-                //Repeater.Begin0は手動対応
+                //Section.Setspeedlimitは手動対応
                 var speedlimitNode = node as SectionSetspeedlimitNode;
                 speedlimitNode.AddSpeedLimit(Visit(context.nullableExpr()));
                 foreach (var spdLmt in context.exprArgs())
@@ -737,7 +737,21 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// <returns>構文ASTノード</returns>
         public override MapGrammarAstNodes VisitSignal([NotNull] SyntaxDefinitions.MapGrammarParser.SignalContext context)
         {
-            return SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Signal, context.func.Text);
+            var node = SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Signal, context.func.Text);
+
+            if (node.FunctionName == MapFunctionName.Speedlimit)
+            {
+                //Signal.Speedlimitは手動対応
+                var speedlimitNode = node as SignalSpeedlimitNode;
+                speedlimitNode.AddSpeedLimit(Visit(context.nullableExpr()[0]));
+                foreach (var spdLmt in context.exprArgs())
+                {
+                    speedlimitNode.AddSpeedLimit(Visit(spdLmt));
+                }
+                return speedlimitNode;
+            }
+
+            return node;
         }
 
         /// <summary>
@@ -767,7 +781,12 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// <returns>構文ASTノード</returns>
         public override MapGrammarAstNodes VisitPretrain([NotNull] SyntaxDefinitions.MapGrammarParser.PretrainContext context)
         {
-            return SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Pretrain, context.func.Text);
+            var node = new PretrainPassNode(context.start, context.stop);
+            // Pretrain.Pass構文の引数がTimeかSecondかの判定は評価時に行う
+            // 現時点ではTimeに代入しておく。
+            node.Time = Visit(context.nullableExpr());
+
+            return node;
         }
 
         /// <summary>
@@ -887,6 +906,18 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// <returns>構文ASTノード</returns>
         public override MapGrammarAstNodes VisitTrain([NotNull] SyntaxDefinitions.MapGrammarParser.TrainContext context)
         {
+            var funcName = context.func.Text;
+            if (funcName.ToLower() == MapFunctionName.Enable.GetStringValue().ToLower())
+            {
+                var node = new TrainEnableNode(context.Start, context.Stop);
+                node.Key = Visit(context.key);
+
+                // Train.Enable構文の引数がTimeかSecondかの判定は評価時に行う
+                // 現時点ではTimeに代入しておく。
+                node.Time = Visit(context.nullableExpr()[0]);
+
+                return node;
+            }
             return SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Train, context.func.Text);
         }
 
@@ -897,32 +928,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// <returns>構文ASTノード</returns>
         public override MapGrammarAstNodes VisitLegacy([NotNull] SyntaxDefinitions.MapGrammarParser.LegacyContext context)
         {
-            Syntax1Node node = new Syntax1Node(context.Start, context.Stop);
-            node.MapElementName = "legacy";
-            node.FunctionName = context.func.Text.ToLower();
-
-            switch (context.func.Type)
-            {
-                case MapGrammarLexer.FOG:
-                    node.Arguments.Add("start", Visit(context.start));
-                    node.Arguments.Add("end", Visit(context.end));
-                    node.Arguments.Add("red", Visit(context.red));
-                    node.Arguments.Add("green", Visit(context.green));
-                    node.Arguments.Add("blue", Visit(context.blue));
-                    break;
-                case MapGrammarLexer.CURVE:
-                    node.Arguments.Add("radius", Visit(context.radius));
-                    node.Arguments.Add("cant", Visit(context.cant));
-                    break;
-                case MapGrammarLexer.PITCH:
-                    node.Arguments.Add("rate", Visit(context.rate));
-                    break;
-                case MapGrammarLexer.TURN:
-                    node.Arguments.Add("slope", Visit(context.slope));
-                    break;
-            }
-
-            return node;
+            return SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Legacy, context.func.Text);
         }
         #endregion マップ構文Visitors
 

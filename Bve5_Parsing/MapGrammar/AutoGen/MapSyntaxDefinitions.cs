@@ -154,6 +154,12 @@ namespace Bve5_Parsing.MapGrammar {
         /// </summary>
         [StringValue("Train")]
         Train,
+
+        /// <summary>
+        /// Legacy
+        /// </summary>
+        [StringValue("Legacy")]
+        Legacy,
     }
 
     /// <summary>
@@ -358,6 +364,30 @@ namespace Bve5_Parsing.MapGrammar {
         /// </summary>
         [StringValue("Stop")]
         Stop,
+
+        /// <summary>
+        /// Fog（Fog）
+        /// </summary>
+        [StringValue("Fog")]
+        Fog,
+
+        /// <summary>
+        /// Curve（Curve）
+        /// </summary>
+        [StringValue("Curve")]
+        Curve,
+
+        /// <summary>
+        /// Pitch（Pitch）
+        /// </summary>
+        [StringValue("Pitch")]
+        Pitch,
+
+        /// <summary>
+        /// Turn（Turn）
+        /// </summary>
+        [StringValue("Turn")]
+        Turn,
     }
 
 }

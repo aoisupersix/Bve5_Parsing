@@ -917,7 +917,6 @@
     {
       "elem": "Adhesion",
       "func": "Change",
-      "skip_test": true,
       "args": [
         {
           "name": "A",
@@ -1107,6 +1106,79 @@
         {
           "name": "Speed",
           "desc": "加速後の走行速度 [km/h]",
+          "opt": false
+        }
+      ]
+    },
+    {
+      "elem": "Legacy",
+      "func": "Fog",
+      "deprecated": true,
+      "args": [
+        {
+          "name": "Fogstart",
+          "desc": "視界が100%の距離 [m]",
+          "opt": false
+        },
+        {
+          "name": "Fogend",
+          "desc": "視界が0%になる距離 [m]",
+          "opt": false
+        },
+        {
+          "name": "red",
+          "desc": "赤成分 (0 ~ 1)",
+          "opt": false
+        },
+        {
+          "name": "green",
+          "desc": "緑成分 (0 ~ 1)",
+          "opt": false
+        },
+        {
+          "name": "blue",
+          "desc": "青成分 (0 ~ 1)",
+          "opt": false
+        }
+      ]
+    },
+    {
+      "elem": "Legacy",
+      "func": "Curve",
+      "deprecated": true,
+      "args": [
+        {
+          "name": "radius",
+          "desc": "曲線半径 [m] (正: 右曲線, 負: 左曲線)",
+          "opt": false
+        },
+        {
+          "name": "cant",
+          "desc": "カント [m]",
+          "opt": false
+        }
+      ]
+    },
+    {
+      "elem": "Legacy",
+      "func": "Pitch",
+      "deprecated": true,
+      "args": [
+        {
+          "name": "rate",
+          "desc": "勾配 [‰]",
+          "opt": false
+        }
+      ]
+    },
+    {
+      "elem": "Legacy",
+      "func": "Turn",
+      "deprecated": true,
+      "args": [
+        {
+          "name": "slope",
+          "desc": "傾き(+: 右, -: 左)",
           "opt": false
         }
       ]
