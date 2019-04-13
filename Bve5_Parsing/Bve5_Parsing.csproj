@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;net40;</TargetFrameworks>
-    <Version>0.8.0</Version>
+    <Version>0.8.1</Version>
     <PackageLicense>https://github.com/aoisupersix/Bve5_Parsing/blob/master/License.md</PackageLicense>
     <Description>BveTrainsim5.7 Syntax parsing library.
 Bve5.7構文のパーサライブラリです。</Description>
