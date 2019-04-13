@@ -7,15 +7,15 @@ const jsonData = loadJson("./map_grammar_syntax.json");
 
 // Ast生成
 const astTemp = loadFile("./map_grammar_ast.mst");
-parse(astTemp, jsonData, "../Bve5_Parsing/MapGrammar/AutoGen/SyntaxNodes.cs");
+parse(astTemp, jsonData, "../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs");
 
 // Statement生成
 const stateTemp = loadFile("./map_grammar_statements.mst");
-parse(stateTemp, jsonData, "../Bve5_Parsing/MapGrammar/AutoGen/Statements.cs");
+parse(stateTemp, jsonData, "../Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs");
 
 // AstVisitor生成
 const astVisitorTemp = loadFile("./map_grammar_ast_visitor.mst");
-parse(astVisitorTemp, jsonData, "../Bve5_Parsing/MapGrammar/AutoGen/AstVisitor.cs");
+parse(astVisitorTemp, jsonData, "../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs");
 
 // 構文名定義生成
 const enumTemp = loadFile("./map_grammar_enum.mst");
