@@ -5,6 +5,7 @@
 using System;
 using Xunit;
 using Bve5_Parsing.MapGrammar;
+using Bve5_Parsing.MapGrammar.EvaluateData;
 using System.Collections.Generic;
 
 namespace Bve5_ParsingTests

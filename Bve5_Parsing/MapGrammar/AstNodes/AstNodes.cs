@@ -7,6 +7,7 @@ using System.Reflection;
 using System;
 using Antlr4.Runtime.Tree;
 using System.Collections.ObjectModel;
+using Bve5_Parsing.MapGrammar.EvaluateData;
 
 namespace Bve5_Parsing.MapGrammar.AstNodes
 {
