@@ -62,7 +62,7 @@ Bve5_Parsingは開発中のライブラリです。Nugetでパッケージを公
 
 ## Requirements
 * [ANTLR4.Runtime(C#)](https://www.nuget.org/packages/Antlr4.Runtime/)
-* .Net Standard 2.0で実装しているため、特定のバージョン以降の.Netであれば利用できます。詳しくは[こちら](https://docs.microsoft.com/ja-jp/dotnet/standard/net-standard)を参照して下さい。
+* .Net Standard 2.0 or .Net framework 4.0
 
 ## Installation
 Nugetから[Bve5_Parsing](https://www.nuget.org/packages/Bve5_Parsing/)をインストールするか、このプロジェクトをビルドしてdllを入手し、各自のプロジェクトにインポートしてください。
