@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace Bve5_Parsing.MapGrammar
 {
@@ -274,7 +275,7 @@ namespace Bve5_Parsing.MapGrammar
             // Includeディレクティブは仮対応
             // 無理やりSyntaxDataに入れておく
             var syntax = new SyntaxData(NowDistance, "include", "");
-            syntax.SetArg("FilePath", Visit(node.FilePath));
+            syntax.SetArg("filepath", Visit(node.FilePath));
 
             return syntax;
         }
@@ -985,6 +986,7 @@ namespace Bve5_Parsing.MapGrammar
 
         /// <summary>
         /// Include先ファイルの絶対パスを取得します。
+        /// 
         /// </summary>
         /// <param name="path"></param>
         /// <returns></returns>
@@ -994,7 +996,41 @@ namespace Bve5_Parsing.MapGrammar
                 return path;
 
             var fileRelativePath = path.Replace('\\', Path.DirectorySeparatorChar).Replace('/', Path.DirectorySeparatorChar);
-            return Path.GetFullPath(Path.Combine(dirAbsolutePath, fileRelativePath));
+            var absolutePath = Path.GetFullPath(Path.Combine(dirAbsolutePath, fileRelativePath));
+
+            if (File.Exists(absolutePath))
+                return absolutePath;
+
+            // NTFSではパスの大文字小文字が無視されるが、ext3では区別されるため、環境によっては構文内に指定されたパスを取得できない可能性がある。
+            // そのため大文字小文字を無視してファイルパスを取得する
+            var splitPath = fileRelativePath.Split(new char[] { Path.DirectorySeparatorChar }, StringSplitOptions.RemoveEmptyEntries);
+
+            // ディレクトリ取得
+            var oridinallyDirPath = dirAbsolutePath;
+            foreach (var singlePath in splitPath.Take(splitPath.Count() - 1))
+            {
+                var tmpDirRelativePaths = Directory.EnumerateDirectories(oridinallyDirPath)
+                    .Concat(new List<string>() { ".", ".." })
+                    .Where(p => Regex.IsMatch(p, $"^{singlePath}$", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant))
+                    .Select(p => Path.GetFullPath(Path.Combine(dirAbsolutePath, p)))
+                    ;
+
+                if (false == tmpDirRelativePaths.Any())
+                    return null;
+
+                oridinallyDirPath = tmpDirRelativePaths.First();
+            }
+
+            // ファイル取得
+            var oridinallyAbsolutePath = Directory.EnumerateFiles(oridinallyDirPath)
+                .Where(p => Regex.IsMatch(p, $"^{splitPath.Last()}$", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant))
+                .Select(p => Path.GetFullPath(Path.Combine(dirAbsolutePath, p)))
+                ;
+
+            if (false == oridinallyAbsolutePath.Any())
+                return null;
+
+            return oridinallyAbsolutePath.First();
         }
 
         /// <summary>
@@ -1020,46 +1056,48 @@ namespace Bve5_Parsing.MapGrammar
             this.dirAbsolutePath = dirAbsolutePath;
         }
 
-        public override object Visit(Syntax1Node node)
+        public override object Visit(IncludeNode node)
         {
             var returnData = (SyntaxData)base.Visit(node);
-            
-            // Include対応
-            if (returnData.MapElement[0] == "include")
+            var path = Visit(node.FilePath)?.ToString();
+            if (path == null)
             {
-                var path = GetIncludeAbsolutePath(returnData.Arguments["path"].ToString());
-                if (!File.Exists(path))
-                {
-                    Errors.Add(node.CreateNewError($"指定されたファイル「{path}」は存在しません。"));
-                    return returnData;
-                }
-#if NETSTANDARD2_0
-                Encoding.RegisterProvider(CodePagesEncodingProvider.Instance); // Shift-Jisを扱うために必要
-#endif
-                var file = new FileInfo(path);
-                using (var reader = new FileReader(file))
-                {
-                    reader.Read(file);
-                    var includeText = reader.Text;
-                    if (includeText == null)
-                    {
-                        Errors.Add(node.CreateNewError($"「{path}」の読み込みに失敗しました。"));
-                        return returnData;
-                    }
-
-                    // Include先構文を評価して追加
-                    var parser = new MapGrammarParser();
-                    var includeAst = parser.ParseToAst(includeText);
-                    Errors.ToList().AddRange(parser.ParserErrors);
-                    var evaluator = new EvaluateMapGrammarVisitorWithInclude(Store, dirAbsolutePath, Errors, NowDistance);
-                    var includeData = (MapData)evaluator.Visit(includeAst);
-
-                    evaluateData.AddStatements(includeData.Statements);
-                    evaluateData.OverwriteListPath(includeData);
-                    NowDistance = evaluator.NowDistance;
-                }
+                Errors.Add(node.CreateNewError($"ファイルパスが指定されていません。"));
+                return returnData;
             }
 
+            var absolutePath = GetIncludeAbsolutePath(path);
+
+            if (absolutePath == null)
+            {
+                Errors.Add(node.CreateNewError($"指定されたファイル「{path}」は存在しません。"));
+                return returnData;
+            }
+#if NETSTANDARD2_0
+            Encoding.RegisterProvider(CodePagesEncodingProvider.Instance); // Shift-Jisを扱うために必要
+#endif
+            var file = new FileInfo(absolutePath);
+            using (var reader = new FileReader(file))
+            {
+                reader.Read(file);
+                var includeText = reader.Text;
+                if (includeText == null)
+                {
+                    Errors.Add(node.CreateNewError($"「{path}」の読み込みに失敗しました。"));
+                    return returnData;
+                }
+
+                // Include先構文を評価して追加
+                var parser = new MapGrammarParser();
+                var includeAst = parser.ParseToAst(includeText);
+                parser.ParserErrors.ToList().ForEach(err => Errors.Add(err));
+                var evaluator = new EvaluateMapGrammarVisitorWithInclude(Store, dirAbsolutePath, Errors, NowDistance);
+                var includeData = (MapData)evaluator.Visit(includeAst);
+
+                evaluateData.AddStatements(includeData.Statements);
+                evaluateData.OverwriteListPath(includeData);
+                NowDistance = evaluator.NowDistance;
+            }
             return returnData;
         }
     }
