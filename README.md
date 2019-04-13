@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/aoisupersix/Bve5_Parsing.svg?branch=master)](https://travis-ci.org/aoisupersix/Bve5_Parsing)
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
 [![NuGet version](https://badge.fury.io/nu/Bve5_Parsing.svg)](https://badge.fury.io/nu/Bve5_Parsing)
 [![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](/License.md)
 
@@ -125,3 +126,15 @@ Copyright(c) 2017-2019 aoisupersix
 ## TechnicalCommentary
 Bve5_Parsingの技術解説です。  
 -> [TechnicalCommentary.md](TechnicalCommentary.md)
+
+## Contributors
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore -->
+<table><tr><td align="center"><a href="https://aoisupersix.tokyo/"><img src="https://avatars0.githubusercontent.com/u/17172912?v=4" width="100px;" alt="Aoi Tanaka"/><br /><sub><b>Aoi Tanaka</b></sub></a><br /><a href="https://github.com/aoisupersix/Bve5_Parsing/commits?author=aoisupersix" title="Code">💻</a></td></tr></table>
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
