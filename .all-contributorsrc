@@ -1,0 +1,23 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "aoisupersix",
+      "name": "Aoi Tanaka",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/17172912?v=4",
+      "profile": "https://aoisupersix.tokyo/",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "Bve5_Parsing",
+  "projectOwner": "aoisupersix",
+  "repoType": "github",
+  "repoHost": "https://github.com"
+}
