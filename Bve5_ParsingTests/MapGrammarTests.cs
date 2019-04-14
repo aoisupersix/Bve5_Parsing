@@ -3,6 +3,7 @@ using static Bve5_ParsingTests.MapGrammarTestUtility;
 using Bve5_Parsing.MapGrammar.EvaluateData;
 using System.Collections.Generic;
 using System.Linq;
+using Bve5_Parsing.MapGrammar;
 
 namespace Bve5_ParsingTests
 {
@@ -36,6 +37,14 @@ namespace Bve5_ParsingTests
                     {
                         new CurveBegintransitionStatement(0)
                     }));
+        }
+
+        [Fact]
+        public void InvalidArgumentTest()
+        {
+            var parser = new MapGrammarParser();
+            parser.Parse("BveTs Map 2.02\n0;Curve.Setgauge('test');");
+            Assert.Single(parser.ParserErrors);
         }
 
         #region 各構文の手動テスト
