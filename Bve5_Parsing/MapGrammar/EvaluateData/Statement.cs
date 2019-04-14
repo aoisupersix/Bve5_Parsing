@@ -1,9 +1,7 @@
 ﻿using Bve5_Parsing.MapGrammar.Attributes;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using System.Text;
 
 namespace Bve5_Parsing.MapGrammar.EvaluateData
 {
@@ -33,6 +31,11 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData
         public abstract bool HasSubElement { get; }
 
         /// <summary>
+        /// 距離程
+        /// </summary>
+        public double Distance { get; set; }
+
+        /// <summary>
         /// すべての引数を取得します。
         /// </summary>
         /// <returns></returns>
@@ -49,6 +52,55 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData
                 .Where(p => p.Attr.Any())
                 .Select(p => p.Property)
                 ;
+        }
+
+        /// <summary>
+        /// StatementからSyntaxDataを生成して返します。
+        /// </summary>
+        /// <param name="evaluator"></param>
+        /// <param name="distance"></param>
+        /// <returns></returns>
+        public virtual SyntaxData ToSyntaxData()
+        {
+            var funcName = FunctionName.GetStringValue();
+            var syntax = new SyntaxData();
+            syntax.Distance = Distance;
+
+            if (HasSubElement)
+            {
+                //Syntax3
+                var subElem = (MapSubElementName)GetType().GetProperty("SubElementName").GetValue(this, null);
+                syntax.MapElement = new string[2]
+                {
+                    ElementName.GetStringValue().ToLower(),
+                    subElem.GetStringValue().ToLower()
+                };
+            }
+            else
+            {
+                //Syntax1 or Syntax2
+                syntax.MapElement = new string[1]
+                {
+                    ElementName.GetStringValue().ToLower()
+                };
+            }
+
+            if (HasKey)
+            {
+                syntax.Key = GetType().GetProperty("Key").GetValue(this, null) as string;
+            }
+
+            syntax.Function = funcName.ToLower();
+            foreach (var argument in GetAllArguments())
+            {
+                var val = argument.GetValue(this, null);
+                if (val == null)
+                    continue;
+
+                syntax.SetArg(argument.Name.ToLower(), val);
+            }
+
+            return syntax;
         }
     }
 }
