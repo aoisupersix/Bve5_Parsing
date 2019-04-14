@@ -154,7 +154,7 @@ namespace Bve5_ParsingTests
                     {
                         new RepeaterBegin0Statement(0)
                         {
-                            Key = "key",
+                            Key = "RepeaterKey",
                             TrackKey = "key",
                             Tilt = 1,
                             Span = 1,
@@ -286,7 +286,7 @@ namespace Bve5_ParsingTests
                     {
                         new SignalPutStatement(0)
                         {
-                            Key = "key",
+                            Key = "Key",
                             Section = 0,
                             TrackKey = "track",
                             X = 0,
@@ -303,17 +303,17 @@ namespace Bve5_ParsingTests
                     {
                         new SignalPutStatement(0)
                         {
-                            Key = "key",
+                            Key = "Key",
                             Section = 0,
                             TrackKey = "track",
                             X = 0,
-                            Y = 0,
-                            Z = 0,
-                            RX = 0,
-                            RY = 0,
-                            RZ = 0,
-                            Tilt = 0,
-                            Span = 0,
+                            Y = 1,
+                            Z = 2,
+                            RX = 3,
+                            RY = 4,
+                            RZ = 5,
+                            Tilt = 6,
+                            Span = 7,
                         }
                     }));
         }
@@ -481,6 +481,7 @@ namespace Bve5_ParsingTests
                     {
                         new TrainEnableStatement(0)
                         {
+                            Key = "track",
                             Time = "10:00:00",
                         }
                     }));
@@ -494,6 +495,7 @@ namespace Bve5_ParsingTests
                     {
                         new TrainEnableStatement(0)
                         {
+                            Key = "track",
                             Second = 0,
                         }
                     }));

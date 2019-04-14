@@ -57,7 +57,6 @@ namespace Bve5_ParsingTests
                     Assert.Equal(arg.exp, arg.act);
                 }
             }
-            Assert.Equal(expected, actual);
         }
     }
 }

@@ -41,13 +41,14 @@ namespace Bve5_ParsingTests
                     syntaxes: new List<Statement>()
                     {
                         new {{elem}}{{#syntax3}}{{sub_elem}}{{/syntax3}}{{func}}Statement(0)
-{{^noarg}}
                         {
+{{#key}}
+                            Key = "{{key}}",
+{{/key}}
 {{#.}}
                             {{name}} = {{{test_value_csharp}}}{{^last}},{{/last}}
 {{/.}}
                         }
-{{/noarg}}                        
                     }));
 {{/argPattern}}
 {{/skip_test}}

@@ -202,7 +202,11 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
 
             foreach (var arg in args)
             {
-                var argValue = evaluator.Visit(arg.Ast.GetValue(this, null) as MapGrammarAstNodes);
+                var argNode = arg.Ast.GetValue(this, null) as MapGrammarAstNodes;
+                if (argNode == null)
+                    continue;
+
+                var argValue = evaluator.Visit(argNode);
                 var argType = Nullable.GetUnderlyingType(arg.Statement.PropertyType) ?? arg.Statement.PropertyType;
                 var convArg = Convert.ChangeType(argValue, argType);
                 arg.Statement.SetValue(statement, convArg, null);
@@ -225,8 +229,9 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
 
             if (HasKey)
             {
-                var key = GetType().GetProperty("Key").GetValue(this, null) as string;
-                statement.GetType().GetProperty("Key").SetValue(statement, key, null);
+                var key = GetType().GetProperty("Key").GetValue(this, null) as StringNode;
+                if (key != null)
+                    statement.GetType().GetProperty("Key").SetValue(statement, evaluator.Visit(key), null);
             }
 
             return SetArgument(evaluator, statement);

@@ -115,6 +115,8 @@ namespace Bve5_ParsingTests
                     syntaxes: new List<Statement>()
                     {
                         new CurveBegintransitionStatement(0)
+                        {
+                        }
                     }));
         }
 
@@ -203,6 +205,8 @@ namespace Bve5_ParsingTests
                     syntaxes: new List<Statement>()
                     {
                         new CurveEndStatement(0)
+                        {
+                        }
                     }));
         }
 
@@ -221,6 +225,8 @@ namespace Bve5_ParsingTests
                     syntaxes: new List<Statement>()
                     {
                         new CurveInterpolateStatement(0)
+                        {
+                        }
                     }));
 
             // Curve.Interpolate(Radius);
@@ -287,6 +293,8 @@ namespace Bve5_ParsingTests
                     syntaxes: new List<Statement>()
                     {
                         new GradientBegintransitionStatement(0)
+                        {
+                        }
                     }));
         }
 
@@ -347,6 +355,8 @@ namespace Bve5_ParsingTests
                     syntaxes: new List<Statement>()
                     {
                         new GradientEndStatement(0)
+                        {
+                        }
                     }));
         }
 
@@ -365,6 +375,8 @@ namespace Bve5_ParsingTests
                     syntaxes: new List<Statement>()
                     {
                         new GradientInterpolateStatement(0)
+                        {
+                        }
                     }));
 
             // Gradient.Interpolate(Gradient);
@@ -396,6 +408,9 @@ namespace Bve5_ParsingTests
                     syntaxes: new List<Statement>()
                     {
                         new TrackXInterpolateStatement(0)
+                        {
+                            Key = "TrackKey",
+                        }
                     }));
 
             // Track[TrackKey].X.Interpolate(X);
@@ -407,6 +422,7 @@ namespace Bve5_ParsingTests
                     {
                         new TrackXInterpolateStatement(0)
                         {
+                            Key = "TrackKey",
                             X = 1
                         }
                     }));
@@ -420,6 +436,7 @@ namespace Bve5_ParsingTests
                     {
                         new TrackXInterpolateStatement(0)
                         {
+                            Key = "TrackKey",
                             X = 1,
                             Radius = 1
                         }
@@ -441,6 +458,9 @@ namespace Bve5_ParsingTests
                     syntaxes: new List<Statement>()
                     {
                         new TrackYInterpolateStatement(0)
+                        {
+                            Key = "TrackKey",
+                        }
                     }));
 
             // Track[TrackKey].Y.Interpolate(Y);
@@ -452,6 +472,7 @@ namespace Bve5_ParsingTests
                     {
                         new TrackYInterpolateStatement(0)
                         {
+                            Key = "TrackKey",
                             Y = 1
                         }
                     }));
@@ -465,6 +486,7 @@ namespace Bve5_ParsingTests
                     {
                         new TrackYInterpolateStatement(0)
                         {
+                            Key = "TrackKey",
                             Y = 1,
                             Radius = 1
                         }
@@ -487,6 +509,7 @@ namespace Bve5_ParsingTests
                     {
                         new TrackPositionStatement(0)
                         {
+                            Key = "TrackKey",
                             X = 1,
                             Y = 1
                         }
@@ -501,6 +524,7 @@ namespace Bve5_ParsingTests
                     {
                         new TrackPositionStatement(0)
                         {
+                            Key = "TrackKey",
                             X = 1,
                             Y = 1,
                             RadiusH = 1
@@ -516,6 +540,7 @@ namespace Bve5_ParsingTests
                     {
                         new TrackPositionStatement(0)
                         {
+                            Key = "TrackKey",
                             X = 1,
                             Y = 1,
                             RadiusH = 1,
@@ -540,6 +565,7 @@ namespace Bve5_ParsingTests
                     {
                         new TrackCantSetgaugeStatement(0)
                         {
+                            Key = "TrackKey",
                             Gauge = 1
                         }
                     }));
@@ -561,6 +587,7 @@ namespace Bve5_ParsingTests
                     {
                         new TrackGaugeStatement(0)
                         {
+                            Key = "TrackKey",
                             Gauge = 1
                         }
                     }));
@@ -582,6 +609,7 @@ namespace Bve5_ParsingTests
                     {
                         new TrackCantSetcenterStatement(0)
                         {
+                            Key = "TrackKey",
                             X = 1
                         }
                     }));
@@ -603,6 +631,7 @@ namespace Bve5_ParsingTests
                     {
                         new TrackCantSetfunctionStatement(0)
                         {
+                            Key = "TrackKey",
                             Id = 1
                         }
                     }));
@@ -623,6 +652,9 @@ namespace Bve5_ParsingTests
                     syntaxes: new List<Statement>()
                     {
                         new TrackCantBegintransitionStatement(0)
+                        {
+                            Key = "TrackKey",
+                        }
                     }));
         }
 
@@ -642,6 +674,7 @@ namespace Bve5_ParsingTests
                     {
                         new TrackCantBeginStatement(0)
                         {
+                            Key = "TrackKey",
                             Cant = 1
                         }
                     }));
@@ -662,6 +695,9 @@ namespace Bve5_ParsingTests
                     syntaxes: new List<Statement>()
                     {
                         new TrackCantEndStatement(0)
+                        {
+                            Key = "TrackKey",
+                        }
                     }));
         }
 
@@ -680,6 +716,9 @@ namespace Bve5_ParsingTests
                     syntaxes: new List<Statement>()
                     {
                         new TrackCantInterpolateStatement(0)
+                        {
+                            Key = "TrackKey",
+                        }
                     }));
 
             // Track[TrackKey].Cant.Interpolate(Cant);
@@ -691,6 +730,7 @@ namespace Bve5_ParsingTests
                     {
                         new TrackCantInterpolateStatement(0)
                         {
+                            Key = "TrackKey",
                             Cant = 1
                         }
                     }));
@@ -711,6 +751,9 @@ namespace Bve5_ParsingTests
                     syntaxes: new List<Statement>()
                     {
                         new TrackCantStatement(0)
+                        {
+                            Key = "TrackKey",
+                        }
                     }));
 
             // Track[TrackKey].Cant(Cant);
@@ -722,6 +765,7 @@ namespace Bve5_ParsingTests
                     {
                         new TrackCantStatement(0)
                         {
+                            Key = "TrackKey",
                             Cant = 1
                         }
                     }));
@@ -756,6 +800,7 @@ namespace Bve5_ParsingTests
                     {
                         new StructurePutStatement(0)
                         {
+                            Key = "StructureKey",
                             TrackKey = "string_test_value",
                             X = 1,
                             Y = 1,
@@ -785,6 +830,7 @@ namespace Bve5_ParsingTests
                     {
                         new StructurePut0Statement(0)
                         {
+                            Key = "StructureKey",
                             TrackKey = "string_test_value",
                             Tilt = 1,
                             Span = 1
@@ -808,6 +854,7 @@ namespace Bve5_ParsingTests
                     {
                         new StructurePutbetweenStatement(0)
                         {
+                            Key = "StructureKey",
                             TrackKey1 = "string_test_value",
                             TrackKey2 = "string_test_value"
                         }
@@ -822,6 +869,7 @@ namespace Bve5_ParsingTests
                     {
                         new StructurePutbetweenStatement(0)
                         {
+                            Key = "StructureKey",
                             TrackKey1 = "string_test_value",
                             TrackKey2 = "string_test_value",
                             Flag = 1
@@ -845,6 +893,7 @@ namespace Bve5_ParsingTests
                     {
                         new RepeaterBeginStatement(0)
                         {
+                            Key = "RepeaterKey",
                             TrackKey = "string_test_value",
                             X = 1,
                             Y = 1,
@@ -875,6 +924,7 @@ namespace Bve5_ParsingTests
                     {
                         new RepeaterBegin0Statement(0)
                         {
+                            Key = "RepeaterKey",
                             TrackKey = "string_test_value",
                             Tilt = 1,
                             Span = 1,
@@ -898,6 +948,9 @@ namespace Bve5_ParsingTests
                     syntaxes: new List<Statement>()
                     {
                         new RepeaterEndStatement(0)
+                        {
+                            Key = "RepeaterKey",
+                        }
                     }));
         }
 
@@ -951,6 +1004,7 @@ namespace Bve5_ParsingTests
                     {
                         new StationPutStatement(0)
                         {
+                            Key = "StationKey",
                             Door = 1,
                             Margin1 = 1,
                             Margin2 = 1
@@ -1095,6 +1149,8 @@ namespace Bve5_ParsingTests
                     syntaxes: new List<Statement>()
                     {
                         new SpeedlimitEndStatement(0)
+                        {
+                        }
                     }));
         }
 
@@ -1219,6 +1275,8 @@ namespace Bve5_ParsingTests
                     syntaxes: new List<Statement>()
                     {
                         new CabilluminanceInterpolateStatement(0)
+                        {
+                        }
                     }));
 
             // Cabilluminance.Interpolate(Value);
@@ -1250,6 +1308,8 @@ namespace Bve5_ParsingTests
                     syntaxes: new List<Statement>()
                     {
                         new CabilluminanceSetStatement(0)
+                        {
+                        }
                     }));
 
             // Cabilluminance.Set(Value);
@@ -1370,6 +1430,9 @@ namespace Bve5_ParsingTests
                     syntaxes: new List<Statement>()
                     {
                         new SoundPlayStatement(0)
+                        {
+                            Key = "SoundKey",
+                        }
                     }));
         }
 
@@ -1402,6 +1465,7 @@ namespace Bve5_ParsingTests
                     {
                         new Sound3dPutStatement(0)
                         {
+                            Key = "SoundKey",
                             X = 1,
                             Y = 1
                         }
@@ -1537,6 +1601,7 @@ namespace Bve5_ParsingTests
                     {
                         new TrainStopStatement(0)
                         {
+                            Key = "TrainKey",
                             Decelerate = 1,
                             StopTime = 1,
                             Accelerate = 1,
