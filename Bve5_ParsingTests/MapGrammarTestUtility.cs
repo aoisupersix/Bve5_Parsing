@@ -16,16 +16,7 @@ namespace Bve5_ParsingTests
         public static MapData ExecParse(string input)
         {
             var mParser = new MapGrammarParser();
-            MapData data = null;
-            try
-            {
-                data = mParser.Parse(input);
-            }
-            catch (Exception e)
-            {
-                Console.Error.WriteLine(e.Message + ":" + e.StackTrace);
-            }
-            return data;
+            return mParser.Parse(input);
         }
 
         /// <summary>
