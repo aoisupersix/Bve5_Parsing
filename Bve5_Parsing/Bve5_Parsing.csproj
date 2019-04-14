@@ -61,4 +61,9 @@ Bve5.7構文のパーサライブラリです。</Description>
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="MapGrammar\AstNodes\AutoGen\" />
+    <Folder Include="MapGrammar\EvaluateData\AutoGen\" />
+  </ItemGroup>
+
 </Project>

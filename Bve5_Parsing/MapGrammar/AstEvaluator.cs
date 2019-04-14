@@ -1,4 +1,5 @@
 ﻿using Bve5_Parsing.MapGrammar.AstNodes;
+using Bve5_Parsing.MapGrammar.EvaluateData;
 using Hnx8.ReadJEnc;
 using System;
 using System.Collections.Generic;
@@ -75,7 +76,7 @@ namespace Bve5_Parsing.MapGrammar
             {
                 object childData = Visit(state);
                 if(childData != null)
-                    evaluateData.AddStatement((SyntaxData)childData);
+                    evaluateData.AddStatement((Statement)childData);
             }
 
             return evaluateData;
@@ -92,6 +93,8 @@ namespace Bve5_Parsing.MapGrammar
 
             return null;
         }
+
+        #region 未使用（あとで消す）
 
         /// <summary>
         /// 構文タイプ1の評価
@@ -166,6 +169,23 @@ namespace Bve5_Parsing.MapGrammar
             return returnData;
         }
 
+        /// <summary>
+        /// リストファイルノードの評価
+        /// リストファイルの参照パスを追加する
+        /// </summary>
+        /// <param name="node">リストファイルノード</param>
+        /// <returns>null</returns>
+        public override object Visit(LoadListNode node)
+        {
+            if (node.Path == null)
+                Errors.Add(node.CreateNewError("ファイルパスが指定されていません。"));
+            else
+                evaluateData.SetListPathToString(node.MapElementName, node.Path.text);
+
+            return null;
+        }
+        #endregion
+
         #region リストファイルロード構文
         public override object Visit(StructureLoadNode node)
         {
@@ -198,78 +218,6 @@ namespace Bve5_Parsing.MapGrammar
         }
         #endregion
 
-        public override object Visit(RepeaterBeginNode node)
-        {
-            //Repeater.Beginは手動対応
-            var syntax = node.CreateSyntaxData(this, NowDistance);
-            for(var i = 0; i < node.StructureKeys.Count(); i++)
-            {
-                syntax.SetArg($"structurekey{i + 1}", Visit(node.StructureKeys.ElementAt(i)));
-            }
-
-            return syntax;
-        }
-
-        public override object Visit(RepeaterBegin0Node node)
-        {
-            //Repeater.Begin0は手動対応
-            var syntax = node.CreateSyntaxData(this, NowDistance);
-            for (var i = 0; i < node.StructureKeys.Count(); i++)
-            {
-                syntax.SetArg($"structurekey{i + 1}", Visit(node.StructureKeys.ElementAt(i)));
-            }
-
-            return syntax;
-        }
-
-        public override object Visit(SectionBeginNode node)
-        {
-            // Section.Beginは手動対応
-            var syntax = node.CreateSyntaxData(this, NowDistance);
-            for (var i = 0; i < node.SignalIndexes.Count(); i++)
-            {
-                syntax.SetArg($"signal{i}", Visit(node.SignalIndexes.ElementAt(i)));
-            }
-
-            return syntax;
-        }
-
-        public override object Visit(SectionSetspeedlimitNode node)
-        {
-            //Section.Setspeedlimitは手動対応
-            var syntax = node.CreateSyntaxData(this, NowDistance);
-            for (var i = 0; i < node.SpeedLimits.Count(); i++)
-            {
-                syntax.SetArg($"v{i}", Visit(node.SpeedLimits.ElementAt(i)));
-            }
-
-            return syntax;
-        }
-
-        public override object Visit(SectionBeginnewNode node)
-        {
-            // Section.BeginNewは手動対応
-            var syntax = node.CreateSyntaxData(this, NowDistance);
-            for (var i = 0; i < node.SignalIndexes.Count(); i++)
-            {
-                syntax.SetArg($"signal{i}", Visit(node.SignalIndexes.ElementAt(i)));
-            }
-
-            return syntax;
-        }
-
-        public override object Visit(SignalSpeedlimitNode node)
-        {
-            //Signal.Setspeedlimitは手動対応
-            var syntax = node.CreateSyntaxData(this, NowDistance);
-            for (var i = 0; i < node.SpeedLimits.Count(); i++)
-            {
-                syntax.SetArg($"v{i}", Visit(node.SpeedLimits.ElementAt(i)));
-            }
-
-            return syntax;
-        }
-
         public override object Visit(IncludeNode node)
         {
             // Includeディレクティブは仮対応
@@ -283,321 +231,335 @@ namespace Bve5_Parsing.MapGrammar
         #region 自動生成構文
         public override object Visit(CurveSetgaugeNode node)
         {
-            return node.CreateSyntaxData(this, NowDistance);
+            return node.CreateStatement(this);
         }
 
         public override object Visit(CurveSetcenterNode node)
         {
-            return node.CreateSyntaxData(this, NowDistance);
+            return node.CreateStatement(this);
         }
 
         public override object Visit(CurveSetfunctionNode node)
         {
-            return node.CreateSyntaxData(this, NowDistance);
+            return node.CreateStatement(this);
         }
 
         public override object Visit(CurveBegintransitionNode node)
         {
-            return node.CreateSyntaxData(this, NowDistance);
+            return node.CreateStatement(this);
         }
 
         public override object Visit(CurveBeginNode node)
         {
-            return node.CreateSyntaxData(this, NowDistance);
+            return node.CreateStatement(this);
         }
 
         public override object Visit(CurveEndNode node)
         {
-            return node.CreateSyntaxData(this, NowDistance);
+            return node.CreateStatement(this);
         }
 
         public override object Visit(CurveInterpolateNode node)
         {
-            return node.CreateSyntaxData(this, NowDistance);
+            return node.CreateStatement(this);
         }
 
         public override object Visit(CurveChangeNode node)
         {
-            return node.CreateSyntaxData(this, NowDistance);
+            return node.CreateStatement(this);
         }
 
         public override object Visit(GradientBegintransitionNode node)
         {
-            return node.CreateSyntaxData(this, NowDistance);
+            return node.CreateStatement(this);
         }
 
         public override object Visit(GradientBeginNode node)
         {
-            return node.CreateSyntaxData(this, NowDistance);
+            return node.CreateStatement(this);
         }
 
         public override object Visit(GradientEndNode node)
         {
-            return node.CreateSyntaxData(this, NowDistance);
+            return node.CreateStatement(this);
         }
 
         public override object Visit(GradientInterpolateNode node)
         {
-            return node.CreateSyntaxData(this, NowDistance);
+            return node.CreateStatement(this);
         }
 
         public override object Visit(TrackXInterpolateNode node)
         {
-            return node.CreateSyntaxData(this, NowDistance);
+            return node.CreateStatement(this);
         }
 
         public override object Visit(TrackYInterpolateNode node)
         {
-            return node.CreateSyntaxData(this, NowDistance);
+            return node.CreateStatement(this);
         }
 
         public override object Visit(TrackPositionNode node)
         {
-            return node.CreateSyntaxData(this, NowDistance);
+            return node.CreateStatement(this);
         }
 
         public override object Visit(TrackCantSetgaugeNode node)
         {
-            return node.CreateSyntaxData(this, NowDistance);
+            return node.CreateStatement(this);
         }
 
         public override object Visit(TrackCantSetcenterNode node)
         {
-            return node.CreateSyntaxData(this, NowDistance);
+            return node.CreateStatement(this);
         }
 
         public override object Visit(TrackCantSetfunctionNode node)
         {
-            return node.CreateSyntaxData(this, NowDistance);
+            return node.CreateStatement(this);
         }
 
         public override object Visit(TrackCantBegintransitionNode node)
         {
-            return node.CreateSyntaxData(this, NowDistance);
+            return node.CreateStatement(this);
         }
 
         public override object Visit(TrackCantBeginNode node)
         {
-            return node.CreateSyntaxData(this, NowDistance);
+            return node.CreateStatement(this);
         }
 
         public override object Visit(TrackCantEndNode node)
         {
-            return node.CreateSyntaxData(this, NowDistance);
+            return node.CreateStatement(this);
         }
 
         public override object Visit(TrackCantInterpolateNode node)
         {
-            return node.CreateSyntaxData(this, NowDistance);
+            return node.CreateStatement(this);
         }
 
         public override object Visit(StructurePutNode node)
         {
-            return node.CreateSyntaxData(this, NowDistance);
+            return node.CreateStatement(this);
         }
 
         public override object Visit(StructurePut0Node node)
         {
-            return node.CreateSyntaxData(this, NowDistance);
+            return node.CreateStatement(this);
         }
 
         public override object Visit(StructurePutbetweenNode node)
         {
-            return node.CreateSyntaxData(this, NowDistance);
+            return node.CreateStatement(this);
+        }
+
+        public override object Visit(RepeaterBeginNode node)
+        {
+            return node.CreateStatement(this);
+        }
+
+        public override object Visit(RepeaterBegin0Node node)
+        {
+            return node.CreateStatement(this);
         }
 
         public override object Visit(RepeaterEndNode node)
         {
-            return node.CreateSyntaxData(this, NowDistance);
+            return node.CreateStatement(this);
         }
 
         public override object Visit(BackgroundChangeNode node)
         {
-            return node.CreateSyntaxData(this, NowDistance);
+            return node.CreateStatement(this);
         }
 
         public override object Visit(StationPutNode node)
         {
-            return node.CreateSyntaxData(this, NowDistance);
+            return node.CreateStatement(this);
+        }
+
+        public override object Visit(SectionBeginNode node)
+        {
+            return node.CreateStatement(this);
+        }
+
+        public override object Visit(SectionSetspeedlimitNode node)
+        {
+            return node.CreateStatement(this);
+        }
+
+        public override object Visit(SectionBeginnewNode node)
+        {
+            return node.CreateStatement(this);
+        }
+
+        public override object Visit(SignalSpeedlimitNode node)
+        {
+            return node.CreateStatement(this);
         }
 
         public override object Visit(SignalPutNode node)
         {
-            return node.CreateSyntaxData(this, NowDistance);
+            return node.CreateStatement(this);
         }
 
         public override object Visit(BeaconPutNode node)
         {
-            return node.CreateSyntaxData(this, NowDistance);
+            return node.CreateStatement(this);
         }
 
         public override object Visit(SpeedlimitBeginNode node)
         {
-            return node.CreateSyntaxData(this, NowDistance);
+            return node.CreateStatement(this);
         }
 
         public override object Visit(SpeedlimitEndNode node)
         {
-            return node.CreateSyntaxData(this, NowDistance);
+            return node.CreateStatement(this);
         }
 
         public override object Visit(PretrainPassNode node)
         {
-            return node.CreateSyntaxData(this, NowDistance);
+            return node.CreateStatement(this);
         }
 
         public override object Visit(LightAmbientNode node)
         {
-            return node.CreateSyntaxData(this, NowDistance);
+            return node.CreateStatement(this);
         }
 
         public override object Visit(LightDiffuseNode node)
         {
-            return node.CreateSyntaxData(this, NowDistance);
+            return node.CreateStatement(this);
         }
 
         public override object Visit(FogInterpolateNode node)
         {
-            return node.CreateSyntaxData(this, NowDistance);
+            return node.CreateStatement(this);
         }
 
         public override object Visit(DrawdistanceChangeNode node)
         {
-            return node.CreateSyntaxData(this, NowDistance);
+            return node.CreateStatement(this);
         }
 
         public override object Visit(CabilluminanceInterpolateNode node)
         {
-            return node.CreateSyntaxData(this, NowDistance);
+            return node.CreateStatement(this);
         }
 
         public override object Visit(IrregularityChangeNode node)
         {
-            return node.CreateSyntaxData(this, NowDistance);
+            return node.CreateStatement(this);
         }
 
         public override object Visit(AdhesionChangeNode node)
         {
-            return node.CreateSyntaxData(this, NowDistance);
+            return node.CreateStatement(this);
         }
 
         public override object Visit(SoundPlayNode node)
         {
-            return node.CreateSyntaxData(this, NowDistance);
+            return node.CreateStatement(this);
         }
 
         public override object Visit(Sound3dPutNode node)
         {
-            return node.CreateSyntaxData(this, NowDistance);
+            return node.CreateStatement(this);
         }
 
         public override object Visit(RollingnoiseChangeNode node)
         {
-            return node.CreateSyntaxData(this, NowDistance);
+            return node.CreateStatement(this);
         }
 
         public override object Visit(FlangenoiseChangeNode node)
         {
-            return node.CreateSyntaxData(this, NowDistance);
+            return node.CreateStatement(this);
         }
 
         public override object Visit(JointnoisePlayNode node)
         {
-            return node.CreateSyntaxData(this, NowDistance);
+            return node.CreateStatement(this);
         }
 
         public override object Visit(TrainAddNode node)
         {
-            return node.CreateSyntaxData(this, NowDistance);
+            return node.CreateStatement(this);
         }
 
         public override object Visit(TrainLoadNode node)
         {
-            return node.CreateSyntaxData(this, NowDistance);
+            return node.CreateStatement(this);
         }
 
         public override object Visit(TrainEnableNode node)
         {
-            return node.CreateSyntaxData(this, NowDistance);
+            return node.CreateStatement(this);
         }
 
         public override object Visit(TrainStopNode node)
         {
-            return node.CreateSyntaxData(this, NowDistance);
+            return node.CreateStatement(this);
         }
 
 
         public override object Visit(CurveGaugeNode node)
         {
-            return node.CreateSyntaxData(this, NowDistance);
+            return node.CreateStatement(this);
         }
 
         public override object Visit(CurveBegincircularNode node)
         {
-            return node.CreateSyntaxData(this, NowDistance);
+            return node.CreateStatement(this);
         }
 
         public override object Visit(GradientBeginconstNode node)
         {
-            return node.CreateSyntaxData(this, NowDistance);
+            return node.CreateStatement(this);
         }
 
         public override object Visit(TrackGaugeNode node)
         {
-            return node.CreateSyntaxData(this, NowDistance);
+            return node.CreateStatement(this);
         }
 
         public override object Visit(TrackCantNode node)
         {
-            return node.CreateSyntaxData(this, NowDistance);
+            return node.CreateStatement(this);
         }
 
         public override object Visit(FogSetNode node)
         {
-            return node.CreateSyntaxData(this, NowDistance);
+            return node.CreateStatement(this);
         }
 
         public override object Visit(CabilluminanceSetNode node)
         {
-            return node.CreateSyntaxData(this, NowDistance);
+            return node.CreateStatement(this);
         }
 
         public override object Visit(LegacyFogNode node)
         {
-            return node.CreateSyntaxData(this, NowDistance);
+            return node.CreateStatement(this);
         }
 
         public override object Visit(LegacyCurveNode node)
         {
-            return node.CreateSyntaxData(this, NowDistance);
+            return node.CreateStatement(this);
         }
 
         public override object Visit(LegacyPitchNode node)
         {
-            return node.CreateSyntaxData(this, NowDistance);
+            return node.CreateStatement(this);
         }
 
         public override object Visit(LegacyTurnNode node)
         {
-            return node.CreateSyntaxData(this, NowDistance);
+            return node.CreateStatement(this);
         }
         #endregion
-
-        /// <summary>
-        /// リストファイルノードの評価
-        /// リストファイルの参照パスを追加する
-        /// </summary>
-        /// <param name="node">リストファイルノード</param>
-        /// <returns>null</returns>
-        public override object Visit(LoadListNode node)
-        {
-            if (node.Path == null)
-                Errors.Add(node.CreateNewError("ファイルパスが指定されていません。"));
-            else
-                evaluateData.SetListPathToString(node.MapElementName, node.Path.text);
-
-            return null;
-        }
 
         /// <summary>
         /// 変数宣言ノードの評価

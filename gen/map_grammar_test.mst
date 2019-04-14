@@ -1,0 +1,59 @@
+/*
+ * このファイルはdoc/createMapGrammarTemplate.jsによって自動生成されています。
+ * 編集は行わないでください。
+ */
+using System;
+using Xunit;
+using Bve5_Parsing.MapGrammar;
+using Bve5_Parsing.MapGrammar.EvaluateData;
+using static Bve5_ParsingTests.MapGrammarTestUtility;
+using System.Collections.Generic;
+
+namespace Bve5_ParsingTests
+{
+    public class MapGrammarSyntaxTests
+    {
+
+        #region 各構文のテスト
+{{#states}}
+
+        /// <summary>
+        /// {{elem}}{{^syntax1}}[{{key}}]{{/syntax1}}{{#syntax3}}.{{sub_elem}}{{/syntax3}}.{{func}}({{#args}}{{name}}{{#opt}}?{{/opt}}{{^last}}, {{/last}}{{/args}});
+        /// </summary>
+        [Fact]
+        public void {{elem}}{{#syntax3}}{{sub_elem}}{{/syntax3}}{{func}}Test()
+        {
+{{#skip_test}}
+            /*
+             * THIS TEST IS SKIPPED.
+             * この構文のテストは諸事情によりテストの自動生成から外されました。
+             * {{elem}}{{^syntax1}}[{{key}}]{{/syntax1}}{{#syntax3}}.{{sub_elem}}{{/syntax3}}.{{func}}({{#args}}{{name}}{{#opt}}?{{/opt}}{{^last}}, {{/last}}{{/args}})構文のテストは手動で作成してください。
+             */
+{{/skip_test}}
+{{^skip_test}}
+{{#argPattern}}
+
+            // {{elem}}{{^syntax1}}[{{key}}]{{/syntax1}}{{#syntax3}}.{{sub_elem}}{{/syntax3}}.{{func}}({{#.}}{{name}}{{^last}}, {{/last}}{{/.}});
+            Check(
+                ExecParse("BveTs Map 2.02\n0;{{elem}}{{^syntax1}}['{{key}}']{{/syntax1}}{{#syntax3}}.{{sub_elem}}{{/syntax3}}.{{func}}({{#.}}{{{test_value_map_grammar}}}{{^last}}, {{/last}}{{/.}});"),
+                new MapData(
+                    version: "2.02",
+                    syntaxes: new List<Statement>()
+                    {
+                        new {{elem}}{{#syntax3}}{{sub_elem}}{{/syntax3}}{{func}}Statement(0)
+                        {
+{{#key}}
+                            Key = "{{key}}",
+{{/key}}
+{{#.}}
+                            {{name}} = {{{test_value_csharp}}}{{^last}},{{/last}}
+{{/.}}
+                        }
+                    }));
+{{/argPattern}}
+{{/skip_test}}
+        }
+{{/states}}
+        #endregion
+    }
+}
