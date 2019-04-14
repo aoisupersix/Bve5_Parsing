@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bve5_ParsingTests", "Bve5_P
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParseSampleApp", "ParseSampleApp\ParseSampleApp.csproj", "{763AB417-9A82-4869-AF96-0F800DC2F3A5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bve5_ParsingDoc", "Bve5_ParsingDoc\Bve5_ParsingDoc.csproj", "{03F7525A-103A-4F3F-A0AF-C8855D42ED2B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{763AB417-9A82-4869-AF96-0F800DC2F3A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{763AB417-9A82-4869-AF96-0F800DC2F3A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{763AB417-9A82-4869-AF96-0F800DC2F3A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03F7525A-103A-4F3F-A0AF-C8855D42ED2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03F7525A-103A-4F3F-A0AF-C8855D42ED2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03F7525A-103A-4F3F-A0AF-C8855D42ED2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03F7525A-103A-4F3F-A0AF-C8855D42ED2B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
