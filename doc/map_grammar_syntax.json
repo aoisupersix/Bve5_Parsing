@@ -6,7 +6,7 @@
       "args": [
         {
           "name": "Value",
-          "type": "double",
+          "type": "double?",
           "desc": "軌間 [m]",
           "opt": false
         }
@@ -20,7 +20,7 @@
       "args": [
         {
           "name": "Value",
-          "type": "double",
+          "type": "double?",
           "desc": "軌間 [m]",
           "opt": false
         }
@@ -32,7 +32,7 @@
       "args": [
         {
           "name": "X",
-          "type": "double",
+          "type": "double?",
           "desc": "回転中心の x 座標 [m] (正: 曲線の内側, 負: 曲線の外側)",
           "opt": false
         }
@@ -44,7 +44,7 @@
       "args": [
         {
           "name": "Id",
-          "type": "double",
+          "type": "double?",
           "desc": "関数番号 (0: サイン半波長逓減, 1: 直線逓減)",
           "opt": false
         }
@@ -62,13 +62,13 @@
       "args": [
         {
           "name": "Radius",
-          "type": "double",
+          "type": "double?",
           "desc": "曲線半径 [m] (正: 右曲線, 負: 左曲線)",
           "opt": false
         },
         {
           "name": "Cant",
-          "type": "double",
+          "type": "double?",
           "desc": "カント [m]",
           "opt": true
         }
@@ -82,13 +82,13 @@
       "args": [
         {
           "name": "Radius",
-          "type": "double",
+          "type": "double?",
           "desc": "曲線半径 [m] (正: 右曲線, 負: 左曲線)",
           "opt": false
         },
         {
           "name": "Cant",
-          "type": "double",
+          "type": "double?",
           "desc": "カント [m]",
           "opt": true
         }
@@ -106,13 +106,13 @@
       "args": [
         {
           "name": "Radius",
-          "type": "double",
+          "type": "double?",
           "desc": "曲線半径 [m] (正: 右曲線, 負: 左曲線, 0: 直線)",
           "opt": true
         },
         {
           "name": "Cant",
-          "type": "double",
+          "type": "double?",
           "desc": "カント [m]",
           "opt": true
         }
@@ -124,7 +124,7 @@
       "args": [
         {
           "name": "Radius",
-          "type": "double",
+          "type": "double?",
           "desc": "曲線半径 [m] (正: 右曲線, 負: 左曲線, 0: 直線)",
           "opt": false
         }
@@ -142,7 +142,7 @@
       "args": [
         {
           "name": "Gradient",
-          "type": "double",
+          "type": "double?",
           "desc": "勾配 [‰]",
           "opt": false
         }
@@ -156,7 +156,7 @@
       "args": [
         {
           "name": "Gradient",
-          "type": "double",
+          "type": "double?",
           "desc": "勾配 [‰]",
           "opt": false
         }
@@ -174,7 +174,7 @@
       "args": [
         {
           "name": "Gradient",
-          "type": "double",
+          "type": "double?",
           "desc": "勾配 [‰]",
           "opt": true
         }
@@ -188,13 +188,13 @@
       "args": [
         {
           "name": "X",
-          "type": "double",
+          "type": "double?",
           "desc": "自軌道からの x 座標 [m]",
           "opt": true
         },
         {
           "name": "Radius",
-          "type": "double",
+          "type": "double?",
           "desc": "現在の距離程以降の自軌道との平面曲線相対半径 [m] (0: 直線)",
           "opt": true
         }
@@ -208,13 +208,13 @@
       "args": [
         {
           "name": "Y",
-          "type": "double",
+          "type": "double?",
           "desc": "自軌道からの y 座標 [m]",
           "opt": true
         },
         {
           "name": "Radius",
-          "type": "double",
+          "type": "double?",
           "desc": "現在の距離程以降の自軌道との縦曲線相対半径 [m] (0: 直線)",
           "opt": true
         }
@@ -227,25 +227,25 @@
       "args": [
         {
           "name": "X",
-          "type": "double",
+          "type": "double?",
           "desc": "自軌道からの x 座標 [m]",
           "opt": false
         },
         {
           "name": "Y",
-          "type": "double",
+          "type": "double?",
           "desc": "自軌道からの y 座標 [m]",
           "opt": false
         },
         {
           "name": "RadiusH",
-          "type": "double",
+          "type": "double?",
           "desc": "現在の距離程以降の自軌道との平面曲線相対半径 [m] (0: 直線)",
           "opt": true
         },
         {
           "name": "RadiusV",
-          "type": "double",
+          "type": "double?",
           "desc": "現在の距離程以降の自軌道との縦曲線相対半径 [m] (0: 直線)",
           "opt": true
         }
@@ -259,7 +259,7 @@
       "args": [
         {
           "name": "Gauge",
-          "type": "double",
+          "type": "double?",
           "desc": "軌間 [m]",
           "opt": false
         }
@@ -274,7 +274,7 @@
       "args": [
         {
           "name": "Gauge",
-          "type": "double",
+          "type": "double?",
           "desc": "軌間 [m]",
           "opt": false
         }
@@ -288,7 +288,7 @@
       "args": [
         {
           "name": "X",
-          "type": "double",
+          "type": "double?",
           "desc": "回転中心の x 座標 [m] (正: 曲線の内側, 負: 曲線の外側)",
           "opt": false
         }
@@ -302,7 +302,7 @@
       "args": [
         {
           "name": "Id",
-          "type": "double",
+          "type": "double?",
           "desc": "関数番号 (0: サイン半波長逓減, 1: 直線逓減)",
           "opt": false
         }
@@ -324,7 +324,7 @@
       "args": [
         {
           "name": "Cant",
-          "type": "double",
+          "type": "double?",
           "desc": "カント [m] (正: 右に傾ける, 負: 左に傾ける)",
           "opt": false
         }
@@ -346,7 +346,7 @@
       "args": [
         {
           "name": "Cant",
-          "type": "double",
+          "type": "double?",
           "desc": "カント [m] (正: 右に傾ける, 負: 左に傾ける)",
           "opt": true
         }
@@ -361,7 +361,7 @@
       "args": [
         {
           "name": "Cant",
-          "type": "double",
+          "type": "double?",
           "desc": "カント [m] (正: 右に傾ける, 負: 左に傾ける)",
           "opt": true
         }
@@ -393,49 +393,49 @@
         },
         {
           "name": "X",
-          "type": "double",
+          "type": "double?",
           "desc": "軌道からの x 座標 [m]",
           "opt": false
         },
         {
           "name": "Y",
-          "type": "double",
+          "type": "double?",
           "desc": "軌道からの y 座標 [m]",
           "opt": false
         },
         {
           "name": "Z",
-          "type": "double",
+          "type": "double?",
           "desc": "軌道からの z 座標 [m]",
           "opt": false
         },
         {
           "name": "RX",
-          "type": "double",
+          "type": "double?",
           "desc": "軌道に対する x 軸回りの角 [deg]",
           "opt": false
         },
         {
           "name": "RY",
-          "type": "double",
+          "type": "double?",
           "desc": "軌道に対する y 軸回りの角 [deg]",
           "opt": false
         },
         {
           "name": "RZ",
-          "type": "double",
+          "type": "double?",
           "desc": "軌道に対する z 軸回りの角 [deg]",
           "opt": false
         },
         {
           "name": "Tilt",
-          "type": "double",
+          "type": "double?",
           "desc": "傾斜オプション (0: 常に水平, 1: 勾配に連動, 2: カントに連動, 3: 勾配とカントに連動)",
           "opt": false
         },
         {
           "name": "Span",
-          "type": "double",
+          "type": "double?",
           "desc": "曲線における弦の長さ [m]",
           "opt": false
         }
@@ -454,13 +454,13 @@
         },
         {
           "name": "Tilt",
-          "type": "double",
+          "type": "double?",
           "desc": "傾斜オプション (0: 常に水平, 1: 勾配に連動, 2: カントに連動, 3: 勾配とカントに連動)",
           "opt": false
         },
         {
           "name": "Span",
-          "type": "double",
+          "type": "double?",
           "desc": "曲線における弦の長さ [m]",
           "opt": false
         }
@@ -485,7 +485,7 @@
         },
         {
           "name": "Flag",
-          "type": "double",
+          "type": "double?",
           "desc": "変形方向 (0: x および y 方向に変形, 1: x 方向のみに変形)",
           "opt": true
         }
@@ -505,55 +505,55 @@
         },
         {
           "name": "X",
-          "type": "double",
+          "type": "double?",
           "desc": "軌道からの x 座標 [m]",
           "opt": false
         },
         {
           "name": "Y",
-          "type": "double",
+          "type": "double?",
           "desc": "軌道からの y 座標 [m]",
           "opt": false
         },
         {
           "name": "Z",
-          "type": "double",
+          "type": "double?",
           "desc": "軌道からの z 座標 [m]",
           "opt": false
         },
         {
           "name": "RX",
-          "type": "double",
+          "type": "double?",
           "desc": "軌道に対する x 軸回りの角 [deg]",
           "opt": false
         },
         {
           "name": "RY",
-          "type": "double",
+          "type": "double?",
           "desc": "軌道に対する y 軸回りの角 [deg]",
           "opt": false
         },
         {
           "name": "RZ",
-          "type": "double",
+          "type": "double?",
           "desc": "軌道に対する z 軸回りの角 [deg]",
           "opt": false
         },
         {
           "name": "Tilt",
-          "type": "double",
+          "type": "double?",
           "desc": "傾斜オプション (0: 常に水平, 1: 勾配に連動, 2: カントに連動, 3: 勾配とカントに連動)",
           "opt": false
         },
         {
           "name": "Span",
-          "type": "double",
+          "type": "double?",
           "desc": "曲線における弦の長さ [m]",
           "opt": false
         },
         {
           "name": "Interval",
-          "type": "double",
+          "type": "double?",
           "desc": "配置間隔 [m]",
           "opt": false
         }
@@ -573,19 +573,19 @@
         },
         {
           "name": "Tilt",
-          "type": "double",
+          "type": "double?",
           "desc": "傾斜オプション (0: 常に水平, 1: 勾配に連動, 2: カントに連動, 3: 勾配とカントに連動)",
           "opt": false
         },
         {
           "name": "Span",
-          "type": "double",
+          "type": "double?",
           "desc": "曲線における弦の長さ [m]",
           "opt": false
         },
         {
           "name": "Interval",
-          "type": "double",
+          "type": "double?",
           "desc": "配置間隔 [m]",
           "opt": false
         }
@@ -630,19 +630,19 @@
       "args": [
         {
           "name": "Door",
-          "type": "double",
+          "type": "double?",
           "desc": "開くドアの方向 (-1: 左, 1: 右)",
           "opt": false
         },
         {
           "name": "Margin1",
-          "type": "double",
+          "type": "double?",
           "desc": "停止位置誤差の後方許容範囲 (負の値で設定)",
           "opt": false
         },
         {
           "name": "Margin2",
-          "type": "double",
+          "type": "double?",
           "desc": "停止位置誤差の後方許容範囲",
           "opt": false
         }
@@ -705,7 +705,7 @@
       "args": [
         {
           "name": "Section",
-          "type": "double",
+          "type": "double?",
           "desc": "関連づける閉そくの相対インデックス",
           "opt": false
         },
@@ -717,49 +717,49 @@
         },
         {
           "name": "X",
-          "type": "double",
+          "type": "double?",
           "desc": "軌道からの x 座標 [m]",
           "opt": false
         },
         {
           "name": "Y",
-          "type": "double",
+          "type": "double?",
           "desc": "軌道からの y 座標 [m]",
           "opt": false
         },
         {
           "name": "Z",
-          "type": "double",
+          "type": "double?",
           "desc": "軌道からの z 座標 [m]",
           "opt": true
         },
         {
           "name": "RX",
-          "type": "double",
+          "type": "double?",
           "desc": "軌道に対する x 軸回りの角 [deg]",
           "opt": true
         },
         {
           "name": "RY",
-          "type": "double",
+          "type": "double?",
           "desc": "軌道に対する y 軸回りの角 [deg]",
           "opt": true
         },
         {
           "name": "RZ",
-          "type": "double",
+          "type": "double?",
           "desc": "軌道に対する z 軸回りの角 [deg]",
           "opt": true
         },
         {
           "name": "Tilt",
-          "type": "double",
+          "type": "double?",
           "desc": "傾斜オプション (0: 常に水平, 1: 勾配に連動, 2: カントに連動, 3: 勾配とカントに連動)",
           "opt": true
         },
         {
           "name": "Span",
-          "type": "double",
+          "type": "double?",
           "desc": "曲線における弦の長さ [m]",
           "opt": true
         }
@@ -771,19 +771,19 @@
       "args": [
         {
           "name": "Type",
-          "type": "double",
+          "type": "double?",
           "desc": "保安装置に送る地上子種別 (整数)",
           "opt": false
         },
         {
           "name": "Section",
-          "type": "double",
+          "type": "double?",
           "desc": "関連づける閉そくの相対インデックス",
           "opt": false
         },
         {
           "name": "Senddata",
-          "type": "double",
+          "type": "double?",
           "desc": "保安装置に送る値 (整数)",
           "opt": false
         }
@@ -795,7 +795,7 @@
       "args": [
         {
           "name": "V",
-          "type": "double",
+          "type": "double?",
           "desc": "走行速度 [km/h]",
           "opt": false
         }
@@ -820,7 +820,7 @@
         },
         {
           "name": "Second",
-          "type": "double",
+          "type": "double?",
           "desc": "00:00:00 からの経過時間 [sec]",
           "opt": true
         }
@@ -832,19 +832,19 @@
       "args": [
         {
           "name": "Red",
-          "type": "double",
+          "type": "double?",
           "desc": "赤成分 (0 ~ 1)",
           "opt": false
         },
         {
           "name": "Green",
-          "type": "double",
+          "type": "double?",
           "desc": "緑成分 (0 ~ 1)",
           "opt": false
         },
         {
           "name": "Blue",
-          "type": "double",
+          "type": "double?",
           "desc": "青成分 (0 ~ 1)",
           "opt": false
         }
@@ -856,19 +856,19 @@
       "args": [
         {
           "name": "Red",
-          "type": "double",
+          "type": "double?",
           "desc": "赤成分 (0 ~ 1)",
           "opt": false
         },
         {
           "name": "Green",
-          "type": "double",
+          "type": "double?",
           "desc": "緑成分 (0 ~ 1)",
           "opt": false
         },
         {
           "name": "Blue",
-          "type": "double",
+          "type": "double?",
           "desc": "青成分 (0 ~ 1)",
           "opt": false
         }
@@ -881,25 +881,25 @@
       "args": [
         {
           "name": "Density",
-          "type": "double",
+          "type": "double?",
           "desc": "濃度",
           "opt": true
         },
         {
           "name": "Red",
-          "type": "double",
+          "type": "double?",
           "desc": "赤成分 (0 ~ 1)",
           "opt": true
         },
         {
           "name": "Green",
-          "type": "double",
+          "type": "double?",
           "desc": "緑成分 (0 ~ 1)",
           "opt": true
         },
         {
           "name": "Blue",
-          "type": "double",
+          "type": "double?",
           "desc": "青成分 (0 ~ 1)",
           "opt": true
         }
@@ -914,25 +914,25 @@
       "args": [
         {
           "name": "Density",
-          "type": "double",
+          "type": "double?",
           "desc": "濃度",
           "opt": true
         },
         {
           "name": "Red",
-          "type": "double",
+          "type": "double?",
           "desc": "赤成分 (0 ~ 1)",
           "opt": true
         },
         {
           "name": "Green",
-          "type": "double",
+          "type": "double?",
           "desc": "緑成分 (0 ~ 1)",
           "opt": true
         },
         {
           "name": "Blue",
-          "type": "double",
+          "type": "double?",
           "desc": "青成分 (0 ~ 1)",
           "opt": true
         }
@@ -944,7 +944,7 @@
       "args": [
         {
           "name": "Value",
-          "type": "double",
+          "type": "double?",
           "desc": "距離 [m] (0: [設定] ウィンドウで設定される描画距離を適用)",
           "opt": false
         }
@@ -956,7 +956,7 @@
       "args": [
         {
           "name": "Value",
-          "type": "double",
+          "type": "double?",
           "desc": "昼間画像と夜間画像の混合比 (0: 夜間画像 ~ 1: 昼間画像)",
           "opt": true
         }
@@ -970,7 +970,7 @@
       "args": [
         {
           "name": "Value",
-          "type": "double",
+          "type": "double?",
           "desc": "昼間画像と夜間画像の混合比 (0: 夜間画像 ~ 1: 昼間画像)",
           "opt": true
         }
@@ -982,37 +982,37 @@
       "args": [
         {
           "name": "X",
-          "type": "double",
+          "type": "double?",
           "desc": "左右変位 (左と右のレールの通り変位の平均に相当) の標準偏差 [m]",
           "opt": false
         },
         {
           "name": "Y",
-          "type": "double",
+          "type": "double?",
           "desc": "上下変位 (左と右のレールの高低変位の平均に相当) の標準偏差 [m]",
           "opt": false
         },
         {
           "name": "R",
-          "type": "double",
+          "type": "double?",
           "desc": "ロール変位 (水準変位を軌間で除した値に相当) の標準偏差 [rad]",
           "opt": false
         },
         {
           "name": "LX",
-          "type": "double",
+          "type": "double?",
           "desc": "左右変位の遮断波長 [m]",
           "opt": false
         },
         {
           "name": "LY",
-          "type": "double",
+          "type": "double?",
           "desc": "上下変位の遮断波長 [m]",
           "opt": false
         },
         {
           "name": "LR",
-          "type": "double",
+          "type": "double?",
           "desc": "ロール変位の遮断波長 [m]",
           "opt": false
         }
@@ -1024,19 +1024,19 @@
       "args": [
         {
           "name": "A",
-          "type": "double",
+          "type": "double?",
           "desc": "走行速度 0 km/h における粘着係数",
           "opt": false
         },
         {
           "name": "B",
-          "type": "double",
+          "type": "double?",
           "desc": "粘着係数の走行速度に対する変化を表す係数",
           "opt": true
         },
         {
           "name": "C",
-          "type": "double",
+          "type": "double?",
           "desc": "粘着係数の走行速度に対する変化を表す係数",
           "opt": true
         }
@@ -1082,13 +1082,13 @@
       "args": [
         {
           "name": "X",
-          "type": "double",
+          "type": "double?",
           "desc": "軌道からの x 座標 [m]",
           "opt": false
         },
         {
           "name": "Y",
-          "type": "double",
+          "type": "double?",
           "desc": "軌道からの y 座標 [m]",
           "opt": false
         }
@@ -1100,7 +1100,7 @@
       "args": [
         {
           "name": "Index",
-          "type": "double",
+          "type": "double?",
           "desc": "車両サウンドファイルの [Run] セクションで定義したインデックス",
           "opt": false
         }
@@ -1112,7 +1112,7 @@
       "args": [
         {
           "name": "Index",
-          "type": "double",
+          "type": "double?",
           "desc": "車両サウンドファイルの [Flange] セクションで定義したインデックス",
           "opt": false
         }
@@ -1124,7 +1124,7 @@
       "args": [
         {
           "name": "Index",
-          "type": "double",
+          "type": "double?",
           "desc": "車両サウンドファイルの [Joint] セクションで定義したインデックス",
           "opt": false
         }
@@ -1154,7 +1154,7 @@
         },
         {
           "name": "Direction",
-          "type": "double",
+          "type": "double?",
           "desc": "進行方向 (-1: 対向, 1: 並走)",
           "opt": false
         }
@@ -1180,7 +1180,7 @@
         },
         {
           "name": "Direction",
-          "type": "double",
+          "type": "double?",
           "desc": "進行方向 (-1: 対向, 1: 並走)",
           "opt": false
         }
@@ -1200,7 +1200,7 @@
         },
         {
           "name": "Second",
-          "type": "double",
+          "type": "double?",
           "desc": "00:00:00 からの経過時間 [sec]",
           "opt": true
         }
@@ -1213,25 +1213,25 @@
       "args": [
         {
           "name": "Decelerate",
-          "type": "double",
+          "type": "double?",
           "desc": "減速度 [km/h/s]",
           "opt": false
         },
         {
           "name": "StopTime",
-          "type": "double",
+          "type": "double?",
           "desc": "停車時間 [s]",
           "opt": false
         },
         {
           "name": "Accelerate",
-          "type": "double",
+          "type": "double?",
           "desc": "加速度 [km/h/s]",
           "opt": false
         },
         {
           "name": "Speed",
-          "type": "double",
+          "type": "double?",
           "desc": "加速後の走行速度 [km/h]",
           "opt": false
         }
@@ -1244,31 +1244,31 @@
       "args": [
         {
           "name": "Fogstart",
-          "type": "double",
+          "type": "double?",
           "desc": "視界が100%の距離 [m]",
           "opt": false
         },
         {
           "name": "Fogend",
-          "type": "double",
+          "type": "double?",
           "desc": "視界が0%になる距離 [m]",
           "opt": false
         },
         {
           "name": "red",
-          "type": "double",
+          "type": "double?",
           "desc": "赤成分 (0 ~ 1)",
           "opt": false
         },
         {
           "name": "green",
-          "type": "double",
+          "type": "double?",
           "desc": "緑成分 (0 ~ 1)",
           "opt": false
         },
         {
           "name": "blue",
-          "type": "double",
+          "type": "double?",
           "desc": "青成分 (0 ~ 1)",
           "opt": false
         }
@@ -1281,13 +1281,13 @@
       "args": [
         {
           "name": "radius",
-          "type": "double",
+          "type": "double?",
           "desc": "曲線半径 [m] (正: 右曲線, 負: 左曲線)",
           "opt": false
         },
         {
           "name": "cant",
-          "type": "double",
+          "type": "double?",
           "desc": "カント [m]",
           "opt": false
         }
@@ -1300,7 +1300,7 @@
       "args": [
         {
           "name": "rate",
-          "type": "double",
+          "type": "double?",
           "desc": "勾配 [‰]",
           "opt": false
         }
@@ -1313,7 +1313,7 @@
       "args": [
         {
           "name": "slope",
-          "type": "double",
+          "type": "double?",
           "desc": "傾き(+: 右, -: 左)",
           "opt": false
         }

@@ -40,7 +40,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 引数：軌間 [m]
         /// </summary>
         [Argument]
-        public double Value { get; set; }
+        public double? Value { get; set; }
         #endregion Args
 
     }
@@ -79,7 +79,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 引数：軌間 [m]
         /// </summary>
         [Argument]
-        public double Value { get; set; }
+        public double? Value { get; set; }
         #endregion Args
 
     }
@@ -118,7 +118,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 引数：回転中心の x 座標 [m] (正: 曲線の内側, 負: 曲線の外側)
         /// </summary>
         [Argument]
-        public double X { get; set; }
+        public double? X { get; set; }
         #endregion Args
 
     }
@@ -157,7 +157,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 引数：関数番号 (0: サイン半波長逓減, 1: 直線逓減)
         /// </summary>
         [Argument]
-        public double Id { get; set; }
+        public double? Id { get; set; }
         #endregion Args
 
     }
@@ -227,13 +227,13 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 引数：曲線半径 [m] (正: 右曲線, 負: 左曲線)
         /// </summary>
         [Argument]
-        public double Radius { get; set; }
+        public double? Radius { get; set; }
 
         /// <summary>
         /// 引数：カント [m]（省略可能）
         /// </summary>
         [Argument(Optional = true)]
-        public double Cant { get; set; }
+        public double? Cant { get; set; }
         #endregion Args
 
     }
@@ -272,13 +272,13 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 引数：曲線半径 [m] (正: 右曲線, 負: 左曲線)
         /// </summary>
         [Argument]
-        public double Radius { get; set; }
+        public double? Radius { get; set; }
 
         /// <summary>
         /// 引数：カント [m]（省略可能）
         /// </summary>
         [Argument(Optional = true)]
-        public double Cant { get; set; }
+        public double? Cant { get; set; }
         #endregion Args
 
     }
@@ -348,13 +348,13 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 引数：曲線半径 [m] (正: 右曲線, 負: 左曲線, 0: 直線)（省略可能）
         /// </summary>
         [Argument(Optional = true)]
-        public double Radius { get; set; }
+        public double? Radius { get; set; }
 
         /// <summary>
         /// 引数：カント [m]（省略可能）
         /// </summary>
         [Argument(Optional = true)]
-        public double Cant { get; set; }
+        public double? Cant { get; set; }
         #endregion Args
 
     }
@@ -393,7 +393,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 引数：曲線半径 [m] (正: 右曲線, 負: 左曲線, 0: 直線)
         /// </summary>
         [Argument]
-        public double Radius { get; set; }
+        public double? Radius { get; set; }
         #endregion Args
 
     }
@@ -463,7 +463,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 引数：勾配 [‰]
         /// </summary>
         [Argument]
-        public double Gradient { get; set; }
+        public double? Gradient { get; set; }
         #endregion Args
 
     }
@@ -502,7 +502,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 引数：勾配 [‰]
         /// </summary>
         [Argument]
-        public double Gradient { get; set; }
+        public double? Gradient { get; set; }
         #endregion Args
 
     }
@@ -572,7 +572,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 引数：勾配 [‰]（省略可能）
         /// </summary>
         [Argument(Optional = true)]
-        public double Gradient { get; set; }
+        public double? Gradient { get; set; }
         #endregion Args
 
     }
@@ -621,13 +621,13 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 引数：自軌道からの x 座標 [m]（省略可能）
         /// </summary>
         [Argument(Optional = true)]
-        public double X { get; set; }
+        public double? X { get; set; }
 
         /// <summary>
         /// 引数：現在の距離程以降の自軌道との平面曲線相対半径 [m] (0: 直線)（省略可能）
         /// </summary>
         [Argument(Optional = true)]
-        public double Radius { get; set; }
+        public double? Radius { get; set; }
         #endregion Args
 
     }
@@ -676,13 +676,13 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 引数：自軌道からの y 座標 [m]（省略可能）
         /// </summary>
         [Argument(Optional = true)]
-        public double Y { get; set; }
+        public double? Y { get; set; }
 
         /// <summary>
         /// 引数：現在の距離程以降の自軌道との縦曲線相対半径 [m] (0: 直線)（省略可能）
         /// </summary>
         [Argument(Optional = true)]
-        public double Radius { get; set; }
+        public double? Radius { get; set; }
         #endregion Args
 
     }
@@ -726,25 +726,25 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 引数：自軌道からの x 座標 [m]
         /// </summary>
         [Argument]
-        public double X { get; set; }
+        public double? X { get; set; }
 
         /// <summary>
         /// 引数：自軌道からの y 座標 [m]
         /// </summary>
         [Argument]
-        public double Y { get; set; }
+        public double? Y { get; set; }
 
         /// <summary>
         /// 引数：現在の距離程以降の自軌道との平面曲線相対半径 [m] (0: 直線)（省略可能）
         /// </summary>
         [Argument(Optional = true)]
-        public double RadiusH { get; set; }
+        public double? RadiusH { get; set; }
 
         /// <summary>
         /// 引数：現在の距離程以降の自軌道との縦曲線相対半径 [m] (0: 直線)（省略可能）
         /// </summary>
         [Argument(Optional = true)]
-        public double RadiusV { get; set; }
+        public double? RadiusV { get; set; }
         #endregion Args
 
     }
@@ -793,7 +793,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 引数：軌間 [m]
         /// </summary>
         [Argument]
-        public double Gauge { get; set; }
+        public double? Gauge { get; set; }
         #endregion Args
 
     }
@@ -837,7 +837,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 引数：軌間 [m]
         /// </summary>
         [Argument]
-        public double Gauge { get; set; }
+        public double? Gauge { get; set; }
         #endregion Args
 
     }
@@ -886,7 +886,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 引数：回転中心の x 座標 [m] (正: 曲線の内側, 負: 曲線の外側)
         /// </summary>
         [Argument]
-        public double X { get; set; }
+        public double? X { get; set; }
         #endregion Args
 
     }
@@ -935,7 +935,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 引数：関数番号 (0: サイン半波長逓減, 1: 直線逓減)
         /// </summary>
         [Argument]
-        public double Id { get; set; }
+        public double? Id { get; set; }
         #endregion Args
 
     }
@@ -1025,7 +1025,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 引数：カント [m] (正: 右に傾ける, 負: 左に傾ける)
         /// </summary>
         [Argument]
-        public double Cant { get; set; }
+        public double? Cant { get; set; }
         #endregion Args
 
     }
@@ -1115,7 +1115,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 引数：カント [m] (正: 右に傾ける, 負: 左に傾ける)（省略可能）
         /// </summary>
         [Argument(Optional = true)]
-        public double Cant { get; set; }
+        public double? Cant { get; set; }
         #endregion Args
 
     }
@@ -1159,7 +1159,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 引数：カント [m] (正: 右に傾ける, 負: 左に傾ける)（省略可能）
         /// </summary>
         [Argument(Optional = true)]
-        public double Cant { get; set; }
+        public double? Cant { get; set; }
         #endregion Args
 
     }
@@ -1248,49 +1248,49 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 引数：軌道からの x 座標 [m]
         /// </summary>
         [Argument]
-        public double X { get; set; }
+        public double? X { get; set; }
 
         /// <summary>
         /// 引数：軌道からの y 座標 [m]
         /// </summary>
         [Argument]
-        public double Y { get; set; }
+        public double? Y { get; set; }
 
         /// <summary>
         /// 引数：軌道からの z 座標 [m]
         /// </summary>
         [Argument]
-        public double Z { get; set; }
+        public double? Z { get; set; }
 
         /// <summary>
         /// 引数：軌道に対する x 軸回りの角 [deg]
         /// </summary>
         [Argument]
-        public double RX { get; set; }
+        public double? RX { get; set; }
 
         /// <summary>
         /// 引数：軌道に対する y 軸回りの角 [deg]
         /// </summary>
         [Argument]
-        public double RY { get; set; }
+        public double? RY { get; set; }
 
         /// <summary>
         /// 引数：軌道に対する z 軸回りの角 [deg]
         /// </summary>
         [Argument]
-        public double RZ { get; set; }
+        public double? RZ { get; set; }
 
         /// <summary>
         /// 引数：傾斜オプション (0: 常に水平, 1: 勾配に連動, 2: カントに連動, 3: 勾配とカントに連動)
         /// </summary>
         [Argument]
-        public double Tilt { get; set; }
+        public double? Tilt { get; set; }
 
         /// <summary>
         /// 引数：曲線における弦の長さ [m]
         /// </summary>
         [Argument]
-        public double Span { get; set; }
+        public double? Span { get; set; }
         #endregion Args
 
     }
@@ -1340,13 +1340,13 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 引数：傾斜オプション (0: 常に水平, 1: 勾配に連動, 2: カントに連動, 3: 勾配とカントに連動)
         /// </summary>
         [Argument]
-        public double Tilt { get; set; }
+        public double? Tilt { get; set; }
 
         /// <summary>
         /// 引数：曲線における弦の長さ [m]
         /// </summary>
         [Argument]
-        public double Span { get; set; }
+        public double? Span { get; set; }
         #endregion Args
 
     }
@@ -1402,7 +1402,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 引数：変形方向 (0: x および y 方向に変形, 1: x 方向のみに変形)（省略可能）
         /// </summary>
         [Argument(Optional = true)]
-        public double Flag { get; set; }
+        public double? Flag { get; set; }
         #endregion Args
 
     }
@@ -1452,55 +1452,55 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 引数：軌道からの x 座標 [m]
         /// </summary>
         [Argument]
-        public double X { get; set; }
+        public double? X { get; set; }
 
         /// <summary>
         /// 引数：軌道からの y 座標 [m]
         /// </summary>
         [Argument]
-        public double Y { get; set; }
+        public double? Y { get; set; }
 
         /// <summary>
         /// 引数：軌道からの z 座標 [m]
         /// </summary>
         [Argument]
-        public double Z { get; set; }
+        public double? Z { get; set; }
 
         /// <summary>
         /// 引数：軌道に対する x 軸回りの角 [deg]
         /// </summary>
         [Argument]
-        public double RX { get; set; }
+        public double? RX { get; set; }
 
         /// <summary>
         /// 引数：軌道に対する y 軸回りの角 [deg]
         /// </summary>
         [Argument]
-        public double RY { get; set; }
+        public double? RY { get; set; }
 
         /// <summary>
         /// 引数：軌道に対する z 軸回りの角 [deg]
         /// </summary>
         [Argument]
-        public double RZ { get; set; }
+        public double? RZ { get; set; }
 
         /// <summary>
         /// 引数：傾斜オプション (0: 常に水平, 1: 勾配に連動, 2: カントに連動, 3: 勾配とカントに連動)
         /// </summary>
         [Argument]
-        public double Tilt { get; set; }
+        public double? Tilt { get; set; }
 
         /// <summary>
         /// 引数：曲線における弦の長さ [m]
         /// </summary>
         [Argument]
-        public double Span { get; set; }
+        public double? Span { get; set; }
 
         /// <summary>
         /// 引数：配置間隔 [m]
         /// </summary>
         [Argument]
-        public double Interval { get; set; }
+        public double? Interval { get; set; }
         #endregion Args
 
     }
@@ -1550,19 +1550,19 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 引数：傾斜オプション (0: 常に水平, 1: 勾配に連動, 2: カントに連動, 3: 勾配とカントに連動)
         /// </summary>
         [Argument]
-        public double Tilt { get; set; }
+        public double? Tilt { get; set; }
 
         /// <summary>
         /// 引数：曲線における弦の長さ [m]
         /// </summary>
         [Argument]
-        public double Span { get; set; }
+        public double? Span { get; set; }
 
         /// <summary>
         /// 引数：配置間隔 [m]
         /// </summary>
         [Argument]
-        public double Interval { get; set; }
+        public double? Interval { get; set; }
         #endregion Args
 
     }
@@ -1720,19 +1720,19 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 引数：開くドアの方向 (-1: 左, 1: 右)
         /// </summary>
         [Argument]
-        public double Door { get; set; }
+        public double? Door { get; set; }
 
         /// <summary>
         /// 引数：停止位置誤差の後方許容範囲 (負の値で設定)
         /// </summary>
         [Argument]
-        public double Margin1 { get; set; }
+        public double? Margin1 { get; set; }
 
         /// <summary>
         /// 引数：停止位置誤差の後方許容範囲
         /// </summary>
         [Argument]
-        public double Margin2 { get; set; }
+        public double? Margin2 { get; set; }
         #endregion Args
 
     }
@@ -1939,7 +1939,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 引数：関連づける閉そくの相対インデックス
         /// </summary>
         [Argument]
-        public double Section { get; set; }
+        public double? Section { get; set; }
 
         /// <summary>
         /// 引数：配置先の軌道名
@@ -1951,49 +1951,49 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 引数：軌道からの x 座標 [m]
         /// </summary>
         [Argument]
-        public double X { get; set; }
+        public double? X { get; set; }
 
         /// <summary>
         /// 引数：軌道からの y 座標 [m]
         /// </summary>
         [Argument]
-        public double Y { get; set; }
+        public double? Y { get; set; }
 
         /// <summary>
         /// 引数：軌道からの z 座標 [m]（省略可能）
         /// </summary>
         [Argument(Optional = true)]
-        public double Z { get; set; }
+        public double? Z { get; set; }
 
         /// <summary>
         /// 引数：軌道に対する x 軸回りの角 [deg]（省略可能）
         /// </summary>
         [Argument(Optional = true)]
-        public double RX { get; set; }
+        public double? RX { get; set; }
 
         /// <summary>
         /// 引数：軌道に対する y 軸回りの角 [deg]（省略可能）
         /// </summary>
         [Argument(Optional = true)]
-        public double RY { get; set; }
+        public double? RY { get; set; }
 
         /// <summary>
         /// 引数：軌道に対する z 軸回りの角 [deg]（省略可能）
         /// </summary>
         [Argument(Optional = true)]
-        public double RZ { get; set; }
+        public double? RZ { get; set; }
 
         /// <summary>
         /// 引数：傾斜オプション (0: 常に水平, 1: 勾配に連動, 2: カントに連動, 3: 勾配とカントに連動)（省略可能）
         /// </summary>
         [Argument(Optional = true)]
-        public double Tilt { get; set; }
+        public double? Tilt { get; set; }
 
         /// <summary>
         /// 引数：曲線における弦の長さ [m]（省略可能）
         /// </summary>
         [Argument(Optional = true)]
-        public double Span { get; set; }
+        public double? Span { get; set; }
         #endregion Args
 
     }
@@ -2032,19 +2032,19 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 引数：保安装置に送る地上子種別 (整数)
         /// </summary>
         [Argument]
-        public double Type { get; set; }
+        public double? Type { get; set; }
 
         /// <summary>
         /// 引数：関連づける閉そくの相対インデックス
         /// </summary>
         [Argument]
-        public double Section { get; set; }
+        public double? Section { get; set; }
 
         /// <summary>
         /// 引数：保安装置に送る値 (整数)
         /// </summary>
         [Argument]
-        public double Senddata { get; set; }
+        public double? Senddata { get; set; }
         #endregion Args
 
     }
@@ -2083,7 +2083,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 引数：走行速度 [km/h]
         /// </summary>
         [Argument]
-        public double V { get; set; }
+        public double? V { get; set; }
         #endregion Args
 
     }
@@ -2159,7 +2159,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 引数：00:00:00 からの経過時間 [sec]（省略可能）
         /// </summary>
         [Argument(Optional = true)]
-        public double Second { get; set; }
+        public double? Second { get; set; }
         #endregion Args
 
     }
@@ -2198,19 +2198,19 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 引数：赤成分 (0 ~ 1)
         /// </summary>
         [Argument]
-        public double Red { get; set; }
+        public double? Red { get; set; }
 
         /// <summary>
         /// 引数：緑成分 (0 ~ 1)
         /// </summary>
         [Argument]
-        public double Green { get; set; }
+        public double? Green { get; set; }
 
         /// <summary>
         /// 引数：青成分 (0 ~ 1)
         /// </summary>
         [Argument]
-        public double Blue { get; set; }
+        public double? Blue { get; set; }
         #endregion Args
 
     }
@@ -2249,19 +2249,19 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 引数：赤成分 (0 ~ 1)
         /// </summary>
         [Argument]
-        public double Red { get; set; }
+        public double? Red { get; set; }
 
         /// <summary>
         /// 引数：緑成分 (0 ~ 1)
         /// </summary>
         [Argument]
-        public double Green { get; set; }
+        public double? Green { get; set; }
 
         /// <summary>
         /// 引数：青成分 (0 ~ 1)
         /// </summary>
         [Argument]
-        public double Blue { get; set; }
+        public double? Blue { get; set; }
         #endregion Args
 
     }
@@ -2300,25 +2300,25 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 引数：濃度（省略可能）
         /// </summary>
         [Argument(Optional = true)]
-        public double Density { get; set; }
+        public double? Density { get; set; }
 
         /// <summary>
         /// 引数：赤成分 (0 ~ 1)（省略可能）
         /// </summary>
         [Argument(Optional = true)]
-        public double Red { get; set; }
+        public double? Red { get; set; }
 
         /// <summary>
         /// 引数：緑成分 (0 ~ 1)（省略可能）
         /// </summary>
         [Argument(Optional = true)]
-        public double Green { get; set; }
+        public double? Green { get; set; }
 
         /// <summary>
         /// 引数：青成分 (0 ~ 1)（省略可能）
         /// </summary>
         [Argument(Optional = true)]
-        public double Blue { get; set; }
+        public double? Blue { get; set; }
         #endregion Args
 
     }
@@ -2357,25 +2357,25 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 引数：濃度（省略可能）
         /// </summary>
         [Argument(Optional = true)]
-        public double Density { get; set; }
+        public double? Density { get; set; }
 
         /// <summary>
         /// 引数：赤成分 (0 ~ 1)（省略可能）
         /// </summary>
         [Argument(Optional = true)]
-        public double Red { get; set; }
+        public double? Red { get; set; }
 
         /// <summary>
         /// 引数：緑成分 (0 ~ 1)（省略可能）
         /// </summary>
         [Argument(Optional = true)]
-        public double Green { get; set; }
+        public double? Green { get; set; }
 
         /// <summary>
         /// 引数：青成分 (0 ~ 1)（省略可能）
         /// </summary>
         [Argument(Optional = true)]
-        public double Blue { get; set; }
+        public double? Blue { get; set; }
         #endregion Args
 
     }
@@ -2414,7 +2414,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 引数：距離 [m] (0: [設定] ウィンドウで設定される描画距離を適用)
         /// </summary>
         [Argument]
-        public double Value { get; set; }
+        public double? Value { get; set; }
         #endregion Args
 
     }
@@ -2453,7 +2453,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 引数：昼間画像と夜間画像の混合比 (0: 夜間画像 ~ 1: 昼間画像)（省略可能）
         /// </summary>
         [Argument(Optional = true)]
-        public double Value { get; set; }
+        public double? Value { get; set; }
         #endregion Args
 
     }
@@ -2492,7 +2492,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 引数：昼間画像と夜間画像の混合比 (0: 夜間画像 ~ 1: 昼間画像)（省略可能）
         /// </summary>
         [Argument(Optional = true)]
-        public double Value { get; set; }
+        public double? Value { get; set; }
         #endregion Args
 
     }
@@ -2531,37 +2531,37 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 引数：左右変位 (左と右のレールの通り変位の平均に相当) の標準偏差 [m]
         /// </summary>
         [Argument]
-        public double X { get; set; }
+        public double? X { get; set; }
 
         /// <summary>
         /// 引数：上下変位 (左と右のレールの高低変位の平均に相当) の標準偏差 [m]
         /// </summary>
         [Argument]
-        public double Y { get; set; }
+        public double? Y { get; set; }
 
         /// <summary>
         /// 引数：ロール変位 (水準変位を軌間で除した値に相当) の標準偏差 [rad]
         /// </summary>
         [Argument]
-        public double R { get; set; }
+        public double? R { get; set; }
 
         /// <summary>
         /// 引数：左右変位の遮断波長 [m]
         /// </summary>
         [Argument]
-        public double LX { get; set; }
+        public double? LX { get; set; }
 
         /// <summary>
         /// 引数：上下変位の遮断波長 [m]
         /// </summary>
         [Argument]
-        public double LY { get; set; }
+        public double? LY { get; set; }
 
         /// <summary>
         /// 引数：ロール変位の遮断波長 [m]
         /// </summary>
         [Argument]
-        public double LR { get; set; }
+        public double? LR { get; set; }
         #endregion Args
 
     }
@@ -2600,19 +2600,19 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 引数：走行速度 0 km/h における粘着係数
         /// </summary>
         [Argument]
-        public double A { get; set; }
+        public double? A { get; set; }
 
         /// <summary>
         /// 引数：粘着係数の走行速度に対する変化を表す係数（省略可能）
         /// </summary>
         [Argument(Optional = true)]
-        public double B { get; set; }
+        public double? B { get; set; }
 
         /// <summary>
         /// 引数：粘着係数の走行速度に対する変化を表す係数（省略可能）
         /// </summary>
         [Argument(Optional = true)]
-        public double C { get; set; }
+        public double? C { get; set; }
         #endregion Args
 
     }
@@ -2770,13 +2770,13 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 引数：軌道からの x 座標 [m]
         /// </summary>
         [Argument]
-        public double X { get; set; }
+        public double? X { get; set; }
 
         /// <summary>
         /// 引数：軌道からの y 座標 [m]
         /// </summary>
         [Argument]
-        public double Y { get; set; }
+        public double? Y { get; set; }
         #endregion Args
 
     }
@@ -2815,7 +2815,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 引数：車両サウンドファイルの [Run] セクションで定義したインデックス
         /// </summary>
         [Argument]
-        public double Index { get; set; }
+        public double? Index { get; set; }
         #endregion Args
 
     }
@@ -2854,7 +2854,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 引数：車両サウンドファイルの [Flange] セクションで定義したインデックス
         /// </summary>
         [Argument]
-        public double Index { get; set; }
+        public double? Index { get; set; }
         #endregion Args
 
     }
@@ -2893,7 +2893,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 引数：車両サウンドファイルの [Joint] セクションで定義したインデックス
         /// </summary>
         [Argument]
-        public double Index { get; set; }
+        public double? Index { get; set; }
         #endregion Args
 
     }
@@ -2950,7 +2950,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 引数：進行方向 (-1: 対向, 1: 並走)
         /// </summary>
         [Argument]
-        public double Direction { get; set; }
+        public double? Direction { get; set; }
         #endregion Args
 
     }
@@ -3006,7 +3006,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 引数：進行方向 (-1: 対向, 1: 並走)
         /// </summary>
         [Argument]
-        public double Direction { get; set; }
+        public double? Direction { get; set; }
         #endregion Args
 
     }
@@ -3056,7 +3056,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 引数：00:00:00 からの経過時間 [sec]（省略可能）
         /// </summary>
         [Argument(Optional = true)]
-        public double Second { get; set; }
+        public double? Second { get; set; }
         #endregion Args
 
     }
@@ -3100,25 +3100,25 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 引数：減速度 [km/h/s]
         /// </summary>
         [Argument]
-        public double Decelerate { get; set; }
+        public double? Decelerate { get; set; }
 
         /// <summary>
         /// 引数：停車時間 [s]
         /// </summary>
         [Argument]
-        public double StopTime { get; set; }
+        public double? StopTime { get; set; }
 
         /// <summary>
         /// 引数：加速度 [km/h/s]
         /// </summary>
         [Argument]
-        public double Accelerate { get; set; }
+        public double? Accelerate { get; set; }
 
         /// <summary>
         /// 引数：加速後の走行速度 [km/h]
         /// </summary>
         [Argument]
-        public double Speed { get; set; }
+        public double? Speed { get; set; }
         #endregion Args
 
     }
@@ -3157,31 +3157,31 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 引数：視界が100%の距離 [m]
         /// </summary>
         [Argument]
-        public double Fogstart { get; set; }
+        public double? Fogstart { get; set; }
 
         /// <summary>
         /// 引数：視界が0%になる距離 [m]
         /// </summary>
         [Argument]
-        public double Fogend { get; set; }
+        public double? Fogend { get; set; }
 
         /// <summary>
         /// 引数：赤成分 (0 ~ 1)
         /// </summary>
         [Argument]
-        public double red { get; set; }
+        public double? red { get; set; }
 
         /// <summary>
         /// 引数：緑成分 (0 ~ 1)
         /// </summary>
         [Argument]
-        public double green { get; set; }
+        public double? green { get; set; }
 
         /// <summary>
         /// 引数：青成分 (0 ~ 1)
         /// </summary>
         [Argument]
-        public double blue { get; set; }
+        public double? blue { get; set; }
         #endregion Args
 
     }
@@ -3220,13 +3220,13 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 引数：曲線半径 [m] (正: 右曲線, 負: 左曲線)
         /// </summary>
         [Argument]
-        public double radius { get; set; }
+        public double? radius { get; set; }
 
         /// <summary>
         /// 引数：カント [m]
         /// </summary>
         [Argument]
-        public double cant { get; set; }
+        public double? cant { get; set; }
         #endregion Args
 
     }
@@ -3265,7 +3265,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 引数：勾配 [‰]
         /// </summary>
         [Argument]
-        public double rate { get; set; }
+        public double? rate { get; set; }
         #endregion Args
 
     }
@@ -3304,7 +3304,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 引数：傾き(+: 右, -: 左)
         /// </summary>
         [Argument]
-        public double slope { get; set; }
+        public double? slope { get; set; }
         #endregion Args
 
     }

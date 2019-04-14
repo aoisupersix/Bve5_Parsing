@@ -252,6 +252,33 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         }
 
         /// <summary>
+        /// Astから引数値を取得し、Statementにセットします。
+        /// 引数のセット処理をカスタマイズする必要がある場合は、各構文のAstからOverrideしてください。
+        /// </summary>
+        /// <param name="evaluator"></param>
+        /// <param name="statement"></param>
+        /// <returns></returns>
+        protected virtual Statement SetArgument(EvaluateMapGrammarVisitor evaluator, Statement statement)
+        {
+            var args = statement.GetAllArguments().Join(
+                GetAllArguments(),
+                state => state.Name,
+                ast => ast.Name,
+                (state, ast) => new { Statement = state, Ast = ast }
+                );
+
+            foreach(var arg in args)
+            {
+                var argValue = evaluator.Visit(arg.Ast.GetValue(this, null) as MapGrammarAstNodes);
+                var argType = Nullable.GetUnderlyingType(arg.Statement.PropertyType) ?? arg.Statement.PropertyType;
+                var convArg = Convert.ChangeType(argValue, argType);
+                arg.Statement.SetValue(statement, convArg, null);
+            }
+
+            return statement;
+        }
+
+        /// <summary>
         /// ASTノードのメタ情報からSyntaxDataを生成して返します。
         /// </summary>
         /// <param name="evaluator"></param>
@@ -298,6 +325,26 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
             }
 
             return syntax;
+        }
+
+        /// <summary>
+        /// ASTノードのメタ情報からStatementを生成して返します。
+        /// </summary>
+        /// <param name="evaluator"></param>
+        /// <returns></returns>
+        public Statement CreateStatement(EvaluateMapGrammarVisitor evaluator)
+        {
+            var typeName = $"{typeof(Statement).Namespace}.{GetType().Name.Replace("Node", "")}Statement";
+            var type = Type.GetType(typeName);
+            var statement = Activator.CreateInstance(type) as Statement;
+            
+            if (HasKey)
+            {
+                var key = GetType().GetProperty("Key").GetValue(this, null) as string;
+                statement.GetType().GetProperty("Key").SetValue(statement, key, null);
+            }
+
+            return SetArgument(evaluator, statement);
         }
     }
 
