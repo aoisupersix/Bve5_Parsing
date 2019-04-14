@@ -49,6 +49,20 @@ function loadJson(jsonPath) {
       state["syntax3"] = true;
     }
 
+    // 引数のテスト値生成
+    linq.from(state.args).forEach((arg) => {
+      switch(arg.type) {
+        case "string":
+          arg["test_value_map_grammar"] = "'string_test_value'";
+          arg["test_value_csharp"] = "\"string_test_value\"";
+          break;
+        case "double?":
+          arg["test_value_map_grammar"] = 1.0;
+          arg["test_value_csharp"] = 1.0;
+          break;
+      }
+    })
+
     // テスト用に構文が取りうる引数の全パターンを作成
     // 引数は必ず指定順に並んでいることとする
     const argPattern = []
@@ -64,9 +78,6 @@ function loadJson(jsonPath) {
       if (val.length <= 0) {
         val["noarg"] = true;
       }else {
-        val.forEach((a) => {
-          a.name = (a.name + '').toLowerCase();
-        });
         val.slice(-1)[0]["last"] = true;
       }
     });

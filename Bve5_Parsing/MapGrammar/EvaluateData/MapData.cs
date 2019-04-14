@@ -10,7 +10,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData
     public class MapData
     {
         #region フィールド
-        private List<SyntaxData> _statements;
+        private List<Statement> _statements;
         #endregion
 
         #region プロパティ
@@ -52,7 +52,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData
         /// <summary>
         /// 構文データ
         /// </summary>
-        public ReadOnlyCollection<SyntaxData> Statements { get; }
+        public ReadOnlyCollection<Statement> Statements { get; }
         #endregion
 
         /// <summary>
@@ -60,7 +60,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData
         /// </summary>
         public MapData()
         {
-            _statements = new List<SyntaxData>();
+            _statements = new List<Statement>();
             Statements = _statements.AsReadOnly();
         }
 
@@ -83,7 +83,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData
             string sigListPath = null,
             string souListPath = null,
             string so3ListPath = null,
-            IEnumerable<SyntaxData> syntaxes = null
+            IEnumerable<Statement> syntaxes = null
             )
         {
             Version = version;
@@ -95,7 +95,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData
             Sound3DListPath = so3ListPath;
 
             if (syntaxes == null)
-                _statements = new List<SyntaxData>();
+                _statements = new List<Statement>();
             else
                 _statements = syntaxes.ToList();
             Statements = _statements.AsReadOnly();
@@ -105,7 +105,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData
         /// 構文データを追加します。
         /// </summary>
         /// <param name="data"></param>
-        public void AddStatement(SyntaxData data)
+        public void AddStatement(Statement data)
         {
             _statements.Add(data);
         }
@@ -114,7 +114,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData
         /// 構文データリストを追加します。
         /// </summary>
         /// <param name="data"></param>
-        public void AddStatements(IEnumerable<SyntaxData> data)
+        public void AddStatements(IEnumerable<Statement> data)
         {
             _statements.AddRange(data);
         }

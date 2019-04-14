@@ -35,6 +35,10 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData
         /// </summary>
         public double Distance { get; set; }
 
+        public Statement() { }
+
+        public Statement(double distance) { Distance = distance; }
+
         /// <summary>
         /// すべての引数を取得します。
         /// </summary>

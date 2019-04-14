@@ -16,7 +16,7 @@
       "elem": "Curve",
       "func": "Gauge",
       "deprecated": "true",
-      "inheritance": "CurveSetgaugeNode",
+      "inheritance": "CurveSetgauge",
       "args": [
         {
           "name": "Value",
@@ -78,7 +78,7 @@
       "elem": "Curve",
       "func": "Begincircular",
       "deprecated": true,
-      "inheritance": "CurveBeginNode",
+      "inheritance": "CurveBegin",
       "args": [
         {
           "name": "Radius",
@@ -152,7 +152,7 @@
       "elem": "Gradient",
       "func": "Beginconst",
       "deprecated": true,
-      "inheritance": "GradientBeginNode",
+      "inheritance": "GradientBegin",
       "args": [
         {
           "name": "Gradient",
@@ -270,7 +270,7 @@
       "key": "TrackKey",
       "func": "Gauge",
       "deprecated": true,
-      "inheritance": "TrackCantSetgaugeNode",
+      "inheritance": "TrackCantSetgauge",
       "args": [
         {
           "name": "Gauge",
@@ -357,7 +357,7 @@
       "key": "TrackKey",
       "func": "Cant",
       "deprecated": true,
-      "inheritance": "TrackCantInterpolateNode",
+      "inheritance": "TrackCantInterpolate",
       "args": [
         {
           "name": "Cant",
@@ -662,7 +662,7 @@
       "func": "Beginnew",
       "skip_test": true,
       "deprecated": true,
-      "inheritance": "SectionBeginNode",
+      "inheritance": "SectionBegin",
       "args": [
       ]
     },
@@ -680,7 +680,7 @@
       "func": "Speedlimit",
       "skip_test": true,
       "deprecated": true,
-      "inheritance": "SectionSetspeedlimitNode",
+      "inheritance": "SectionSetspeedlimit",
       "args": [
       ]
     },
@@ -910,7 +910,7 @@
       "func": "Set",
       "skip_test": true,
       "deprecated": true,
-      "inheritance": "FogInterpolateNode",
+      "inheritance": "FogInterpolate",
       "args": [
         {
           "name": "Density",
@@ -966,7 +966,7 @@
       "elem": "Cabilluminance",
       "func": "Set",
       "deprecated": true,
-      "inheritance": "CabilluminanceInterpolateNode",
+      "inheritance": "CabilluminanceInterpolate",
       "args": [
         {
           "name": "Value",

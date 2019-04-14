@@ -76,7 +76,7 @@ namespace Bve5_Parsing.MapGrammar
             {
                 object childData = Visit(state);
                 if(childData != null)
-                    evaluateData.AddStatement((SyntaxData)childData);
+                    evaluateData.AddStatement((Statement)childData);
             }
 
             return evaluateData;

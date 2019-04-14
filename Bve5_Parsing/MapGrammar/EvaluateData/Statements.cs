@@ -18,6 +18,17 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData
         public ReadOnlyCollection<string> StructureKeys => _structureKeys.AsReadOnly();
 
         /// <summary>
+        /// StructureKeyに値をセットします。
+        /// テスト用
+        /// </summary>
+        /// <param name="keys"></param>
+        public Statement SetStrKey(params string[] keys)
+        {
+            _structureKeys.AddRange(keys);
+            return this;
+        }
+
+        /// <summary>
         /// StatementからSyntaxDataを生成して返します。
         /// 可変長のStructureKeys対応
         /// </summary>
@@ -53,6 +64,17 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData
         public ReadOnlyCollection<string> StructureKeys => _structureKeys.AsReadOnly();
 
         /// <summary>
+        /// StructureKeyに値をセットします。
+        /// テスト用
+        /// </summary>
+        /// <param name="keys"></param>
+        public Statement SetStrKey(params string[] keys)
+        {
+            _structureKeys.AddRange(keys);
+            return this;
+        }
+
+        /// <summary>
         /// StatementからSyntaxDataを生成して返します。
         /// 可変長のStructureKeys対応
         /// </summary>
@@ -81,12 +103,23 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData
     /// </summary>
     public partial class SectionBeginStatement
     {
-        protected List<string> _signalIndexes = new List<string>();
+        protected List<double> _signalIndexes = new List<double>();
 
         /// <summary>
         /// SignalIndexN
         /// </summary>
-        public ReadOnlyCollection<string> SignalIndexes => _signalIndexes.AsReadOnly();
+        public ReadOnlyCollection<double> SignalIndexes => _signalIndexes.AsReadOnly();
+
+        /// <summary>
+        /// SignalIndexesに値をセットします。
+        /// テスト用
+        /// </summary>
+        /// <param name="keys"></param>
+        public Statement SetSigIdx(params double[] idxes)
+        {
+            _signalIndexes.AddRange(idxes);
+            return this;
+        }
 
         /// <summary>
         /// StatementからSyntaxDataを生成して返します。
@@ -105,7 +138,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData
         }
 
 
-        public void AddSignalIndex(string sigIdx)
+        public void AddSignalIndex(double sigIdx)
         {
             _signalIndexes.Add(sigIdx);
         }
@@ -117,12 +150,23 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData
     /// </summary>
     public partial class SectionSetspeedlimitStatement
     {
-        protected List<string> _speedLimits = new List<string>();
+        protected List<double?> _speedLimits = new List<double?>();
 
         /// <summary>
         /// SpeedLimitN(vN)
         /// </summary>
-        public ReadOnlyCollection<string> SpeedLimits => _speedLimits.AsReadOnly();
+        public ReadOnlyCollection<double?> SpeedLimits => _speedLimits.AsReadOnly();
+
+        /// <summary>
+        /// SpeedLimitに値をセットします。
+        /// テスト用
+        /// </summary>
+        /// <param name="keys"></param>
+        public Statement SetSpdLmt(params double?[] lmts)
+        {
+            _speedLimits.AddRange(lmts);
+            return this;
+        }
 
         /// <summary>
         /// StatementからSyntaxDataを生成して返します。
@@ -140,8 +184,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData
             return syntax;
         }
 
-        // TODO: NULLの可能性もある
-        public void AddSpeedLimit(string spdLmt)
+        public void AddSpeedLimit(double? spdLmt)
         {
             _speedLimits.Add(spdLmt);
         }

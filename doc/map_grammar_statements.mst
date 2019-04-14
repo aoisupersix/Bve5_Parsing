@@ -10,7 +10,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
     /// <summary>
     /// {{elem}}{{^syntax1}}[{{key}}]{{/syntax1}}{{#syntax3}}.{{sub_elem}}{{/syntax3}}.{{func}}({{#args}}{{name}}{{#opt}}?{{/opt}}{{^last}}, {{/last}}{{/args}});
     /// </summary>
-    public partial class {{elem}}{{#syntax3}}{{sub_elem}}{{/syntax3}}{{func}}Statement : Statement
+    public partial class {{elem}}{{#syntax3}}{{sub_elem}}{{/syntax3}}{{func}}Statement : {{^inheritance}}Statement{{/inheritance}}{{#inheritance}}{{inheritance}}Statement{{/inheritance}}
     {
         #region SyntaxInfo
 
@@ -61,6 +61,16 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
 {{/args}}
         #endregion Args
 {{/noarg}}
+
+        /// <summary>
+        /// 新しいインスタンスを生成します。
+        /// </summary>
+        public {{elem}}{{#syntax3}}{{sub_elem}}{{/syntax3}}{{func}}Statement() { }
+
+        /// <summary>
+        /// 距離程を指定して新しいインスタンスを生成します。
+        /// </summary>
+        public {{elem}}{{#syntax3}}{{sub_elem}}{{/syntax3}}{{func}}Statement(double distance) : base(distance) { }
 
     }
 {{/states}}

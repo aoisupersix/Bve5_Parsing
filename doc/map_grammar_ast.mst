@@ -14,7 +14,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
 {{#deprecated}}
     [Deprecated]
 {{/deprecated}}
-    public partial class {{elem}}{{#syntax3}}{{sub_elem}}{{/syntax3}}{{func}}Node : {{^inheritance}}SyntaxNode{{/inheritance}}{{#inheritance}}{{inheritance}}{{/inheritance}}
+    public partial class {{elem}}{{#syntax3}}{{sub_elem}}{{/syntax3}}{{func}}Node : {{^inheritance}}SyntaxNode{{/inheritance}}{{#inheritance}}{{inheritance}}Node{{/inheritance}}
     {
         #region SyntaxInfo
 
