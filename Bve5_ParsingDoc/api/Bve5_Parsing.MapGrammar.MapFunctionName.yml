@@ -1,0 +1,1712 @@
+### YamlMime:ManagedReference
+items:
+- uid: Bve5_Parsing.MapGrammar.MapFunctionName
+  commentId: T:Bve5_Parsing.MapGrammar.MapFunctionName
+  id: MapFunctionName
+  parent: Bve5_Parsing.MapGrammar
+  children:
+  - Bve5_Parsing.MapGrammar.MapFunctionName.Add
+  - Bve5_Parsing.MapGrammar.MapFunctionName.Ambient
+  - Bve5_Parsing.MapGrammar.MapFunctionName.Begin
+  - Bve5_Parsing.MapGrammar.MapFunctionName.Begin0
+  - Bve5_Parsing.MapGrammar.MapFunctionName.Begincircular
+  - Bve5_Parsing.MapGrammar.MapFunctionName.Beginconst
+  - Bve5_Parsing.MapGrammar.MapFunctionName.Beginnew
+  - Bve5_Parsing.MapGrammar.MapFunctionName.Begintransition
+  - Bve5_Parsing.MapGrammar.MapFunctionName.Cant
+  - Bve5_Parsing.MapGrammar.MapFunctionName.Change
+  - Bve5_Parsing.MapGrammar.MapFunctionName.Curve
+  - Bve5_Parsing.MapGrammar.MapFunctionName.Diffuse
+  - Bve5_Parsing.MapGrammar.MapFunctionName.Enable
+  - Bve5_Parsing.MapGrammar.MapFunctionName.End
+  - Bve5_Parsing.MapGrammar.MapFunctionName.Fog
+  - Bve5_Parsing.MapGrammar.MapFunctionName.Gauge
+  - Bve5_Parsing.MapGrammar.MapFunctionName.Interpolate
+  - Bve5_Parsing.MapGrammar.MapFunctionName.Load
+  - Bve5_Parsing.MapGrammar.MapFunctionName.Pass
+  - Bve5_Parsing.MapGrammar.MapFunctionName.Pitch
+  - Bve5_Parsing.MapGrammar.MapFunctionName.Play
+  - Bve5_Parsing.MapGrammar.MapFunctionName.Position
+  - Bve5_Parsing.MapGrammar.MapFunctionName.Put
+  - Bve5_Parsing.MapGrammar.MapFunctionName.Put0
+  - Bve5_Parsing.MapGrammar.MapFunctionName.Putbetween
+  - Bve5_Parsing.MapGrammar.MapFunctionName.Set
+  - Bve5_Parsing.MapGrammar.MapFunctionName.Setcenter
+  - Bve5_Parsing.MapGrammar.MapFunctionName.Setfunction
+  - Bve5_Parsing.MapGrammar.MapFunctionName.Setgauge
+  - Bve5_Parsing.MapGrammar.MapFunctionName.Setspeedlimit
+  - Bve5_Parsing.MapGrammar.MapFunctionName.Speedlimit
+  - Bve5_Parsing.MapGrammar.MapFunctionName.Stop
+  - Bve5_Parsing.MapGrammar.MapFunctionName.Turn
+  langs:
+  - csharp
+  - vb
+  name: MapFunctionName
+  nameWithType: MapFunctionName
+  fullName: Bve5_Parsing.MapGrammar.MapFunctionName
+  type: Enum
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: MapFunctionName
+    path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+    startLine: 191
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\nマップ関数名\n"
+  example: []
+  syntax:
+    content: public enum MapFunctionName
+    content.vb: Public Enum MapFunctionName
+  extensionMethods:
+  - System.Enum.Bve5_Parsing.CommonAttribute.GetStringValue
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: Bve5_Parsing.MapGrammar.MapFunctionName.Setgauge
+  commentId: F:Bve5_Parsing.MapGrammar.MapFunctionName.Setgauge
+  id: Setgauge
+  parent: Bve5_Parsing.MapGrammar.MapFunctionName
+  langs:
+  - csharp
+  - vb
+  name: Setgauge
+  nameWithType: MapFunctionName.Setgauge
+  fullName: Bve5_Parsing.MapGrammar.MapFunctionName.Setgauge
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Setgauge
+    path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+    startLine: 196
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\nSetgauge（Setgauge）\n"
+  example: []
+  syntax:
+    content: >-
+      [StringValue("Setgauge")]
+
+      Setgauge = 0
+    return:
+      type: Bve5_Parsing.MapGrammar.MapFunctionName
+    content.vb: >-
+      <StringValue("Setgauge")>
+
+      Setgauge = 0
+  attributes:
+  - type: Bve5_Parsing.StringValueAttribute
+    ctor: Bve5_Parsing.StringValueAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Setgauge
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.MapGrammar.MapFunctionName.Gauge
+  commentId: F:Bve5_Parsing.MapGrammar.MapFunctionName.Gauge
+  id: Gauge
+  parent: Bve5_Parsing.MapGrammar.MapFunctionName
+  langs:
+  - csharp
+  - vb
+  name: Gauge
+  nameWithType: MapFunctionName.Gauge
+  fullName: Bve5_Parsing.MapGrammar.MapFunctionName.Gauge
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Gauge
+    path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+    startLine: 202
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\nGauge（Gauge）\n"
+  example: []
+  syntax:
+    content: >-
+      [StringValue("Gauge")]
+
+      Gauge = 1
+    return:
+      type: Bve5_Parsing.MapGrammar.MapFunctionName
+    content.vb: >-
+      <StringValue("Gauge")>
+
+      Gauge = 1
+  attributes:
+  - type: Bve5_Parsing.StringValueAttribute
+    ctor: Bve5_Parsing.StringValueAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Gauge
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.MapGrammar.MapFunctionName.Setcenter
+  commentId: F:Bve5_Parsing.MapGrammar.MapFunctionName.Setcenter
+  id: Setcenter
+  parent: Bve5_Parsing.MapGrammar.MapFunctionName
+  langs:
+  - csharp
+  - vb
+  name: Setcenter
+  nameWithType: MapFunctionName.Setcenter
+  fullName: Bve5_Parsing.MapGrammar.MapFunctionName.Setcenter
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Setcenter
+    path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+    startLine: 208
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\nSetcenter（Setcenter）\n"
+  example: []
+  syntax:
+    content: >-
+      [StringValue("Setcenter")]
+
+      Setcenter = 2
+    return:
+      type: Bve5_Parsing.MapGrammar.MapFunctionName
+    content.vb: >-
+      <StringValue("Setcenter")>
+
+      Setcenter = 2
+  attributes:
+  - type: Bve5_Parsing.StringValueAttribute
+    ctor: Bve5_Parsing.StringValueAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Setcenter
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.MapGrammar.MapFunctionName.Setfunction
+  commentId: F:Bve5_Parsing.MapGrammar.MapFunctionName.Setfunction
+  id: Setfunction
+  parent: Bve5_Parsing.MapGrammar.MapFunctionName
+  langs:
+  - csharp
+  - vb
+  name: Setfunction
+  nameWithType: MapFunctionName.Setfunction
+  fullName: Bve5_Parsing.MapGrammar.MapFunctionName.Setfunction
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Setfunction
+    path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+    startLine: 214
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\nSetfunction（Setfunction）\n"
+  example: []
+  syntax:
+    content: >-
+      [StringValue("Setfunction")]
+
+      Setfunction = 3
+    return:
+      type: Bve5_Parsing.MapGrammar.MapFunctionName
+    content.vb: >-
+      <StringValue("Setfunction")>
+
+      Setfunction = 3
+  attributes:
+  - type: Bve5_Parsing.StringValueAttribute
+    ctor: Bve5_Parsing.StringValueAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Setfunction
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.MapGrammar.MapFunctionName.Begintransition
+  commentId: F:Bve5_Parsing.MapGrammar.MapFunctionName.Begintransition
+  id: Begintransition
+  parent: Bve5_Parsing.MapGrammar.MapFunctionName
+  langs:
+  - csharp
+  - vb
+  name: Begintransition
+  nameWithType: MapFunctionName.Begintransition
+  fullName: Bve5_Parsing.MapGrammar.MapFunctionName.Begintransition
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Begintransition
+    path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+    startLine: 220
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\nBegintransition（Begintransition）\n"
+  example: []
+  syntax:
+    content: >-
+      [StringValue("Begintransition")]
+
+      Begintransition = 4
+    return:
+      type: Bve5_Parsing.MapGrammar.MapFunctionName
+    content.vb: >-
+      <StringValue("Begintransition")>
+
+      Begintransition = 4
+  attributes:
+  - type: Bve5_Parsing.StringValueAttribute
+    ctor: Bve5_Parsing.StringValueAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Begintransition
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.MapGrammar.MapFunctionName.Begin
+  commentId: F:Bve5_Parsing.MapGrammar.MapFunctionName.Begin
+  id: Begin
+  parent: Bve5_Parsing.MapGrammar.MapFunctionName
+  langs:
+  - csharp
+  - vb
+  name: Begin
+  nameWithType: MapFunctionName.Begin
+  fullName: Bve5_Parsing.MapGrammar.MapFunctionName.Begin
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Begin
+    path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+    startLine: 226
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\nBegin（Begin）\n"
+  example: []
+  syntax:
+    content: >-
+      [StringValue("Begin")]
+
+      Begin = 5
+    return:
+      type: Bve5_Parsing.MapGrammar.MapFunctionName
+    content.vb: >-
+      <StringValue("Begin")>
+
+      Begin = 5
+  attributes:
+  - type: Bve5_Parsing.StringValueAttribute
+    ctor: Bve5_Parsing.StringValueAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Begin
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.MapGrammar.MapFunctionName.Begincircular
+  commentId: F:Bve5_Parsing.MapGrammar.MapFunctionName.Begincircular
+  id: Begincircular
+  parent: Bve5_Parsing.MapGrammar.MapFunctionName
+  langs:
+  - csharp
+  - vb
+  name: Begincircular
+  nameWithType: MapFunctionName.Begincircular
+  fullName: Bve5_Parsing.MapGrammar.MapFunctionName.Begincircular
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Begincircular
+    path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+    startLine: 232
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\nBegincircular（Begincircular）\n"
+  example: []
+  syntax:
+    content: >-
+      [StringValue("Begincircular")]
+
+      Begincircular = 6
+    return:
+      type: Bve5_Parsing.MapGrammar.MapFunctionName
+    content.vb: >-
+      <StringValue("Begincircular")>
+
+      Begincircular = 6
+  attributes:
+  - type: Bve5_Parsing.StringValueAttribute
+    ctor: Bve5_Parsing.StringValueAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Begincircular
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.MapGrammar.MapFunctionName.End
+  commentId: F:Bve5_Parsing.MapGrammar.MapFunctionName.End
+  id: End
+  parent: Bve5_Parsing.MapGrammar.MapFunctionName
+  langs:
+  - csharp
+  - vb
+  name: End
+  nameWithType: MapFunctionName.End
+  fullName: Bve5_Parsing.MapGrammar.MapFunctionName.End
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: End
+    path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+    startLine: 238
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\nEnd（End）\n"
+  example: []
+  syntax:
+    content: >-
+      [StringValue("End")]
+
+      End = 7
+    return:
+      type: Bve5_Parsing.MapGrammar.MapFunctionName
+    content.vb: >-
+      <StringValue("End")>
+
+      End = 7
+  attributes:
+  - type: Bve5_Parsing.StringValueAttribute
+    ctor: Bve5_Parsing.StringValueAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: End
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.MapGrammar.MapFunctionName.Interpolate
+  commentId: F:Bve5_Parsing.MapGrammar.MapFunctionName.Interpolate
+  id: Interpolate
+  parent: Bve5_Parsing.MapGrammar.MapFunctionName
+  langs:
+  - csharp
+  - vb
+  name: Interpolate
+  nameWithType: MapFunctionName.Interpolate
+  fullName: Bve5_Parsing.MapGrammar.MapFunctionName.Interpolate
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Interpolate
+    path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+    startLine: 244
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\nInterpolate（Interpolate）\n"
+  example: []
+  syntax:
+    content: >-
+      [StringValue("Interpolate")]
+
+      Interpolate = 8
+    return:
+      type: Bve5_Parsing.MapGrammar.MapFunctionName
+    content.vb: >-
+      <StringValue("Interpolate")>
+
+      Interpolate = 8
+  attributes:
+  - type: Bve5_Parsing.StringValueAttribute
+    ctor: Bve5_Parsing.StringValueAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Interpolate
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.MapGrammar.MapFunctionName.Change
+  commentId: F:Bve5_Parsing.MapGrammar.MapFunctionName.Change
+  id: Change
+  parent: Bve5_Parsing.MapGrammar.MapFunctionName
+  langs:
+  - csharp
+  - vb
+  name: Change
+  nameWithType: MapFunctionName.Change
+  fullName: Bve5_Parsing.MapGrammar.MapFunctionName.Change
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Change
+    path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+    startLine: 250
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\nChange（Change）\n"
+  example: []
+  syntax:
+    content: >-
+      [StringValue("Change")]
+
+      Change = 9
+    return:
+      type: Bve5_Parsing.MapGrammar.MapFunctionName
+    content.vb: >-
+      <StringValue("Change")>
+
+      Change = 9
+  attributes:
+  - type: Bve5_Parsing.StringValueAttribute
+    ctor: Bve5_Parsing.StringValueAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Change
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.MapGrammar.MapFunctionName.Beginconst
+  commentId: F:Bve5_Parsing.MapGrammar.MapFunctionName.Beginconst
+  id: Beginconst
+  parent: Bve5_Parsing.MapGrammar.MapFunctionName
+  langs:
+  - csharp
+  - vb
+  name: Beginconst
+  nameWithType: MapFunctionName.Beginconst
+  fullName: Bve5_Parsing.MapGrammar.MapFunctionName.Beginconst
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Beginconst
+    path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+    startLine: 256
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\nBeginconst（Beginconst）\n"
+  example: []
+  syntax:
+    content: >-
+      [StringValue("Beginconst")]
+
+      Beginconst = 10
+    return:
+      type: Bve5_Parsing.MapGrammar.MapFunctionName
+    content.vb: >-
+      <StringValue("Beginconst")>
+
+      Beginconst = 10
+  attributes:
+  - type: Bve5_Parsing.StringValueAttribute
+    ctor: Bve5_Parsing.StringValueAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Beginconst
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.MapGrammar.MapFunctionName.Position
+  commentId: F:Bve5_Parsing.MapGrammar.MapFunctionName.Position
+  id: Position
+  parent: Bve5_Parsing.MapGrammar.MapFunctionName
+  langs:
+  - csharp
+  - vb
+  name: Position
+  nameWithType: MapFunctionName.Position
+  fullName: Bve5_Parsing.MapGrammar.MapFunctionName.Position
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Position
+    path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+    startLine: 262
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\nPosition（Position）\n"
+  example: []
+  syntax:
+    content: >-
+      [StringValue("Position")]
+
+      Position = 11
+    return:
+      type: Bve5_Parsing.MapGrammar.MapFunctionName
+    content.vb: >-
+      <StringValue("Position")>
+
+      Position = 11
+  attributes:
+  - type: Bve5_Parsing.StringValueAttribute
+    ctor: Bve5_Parsing.StringValueAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Position
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.MapGrammar.MapFunctionName.Cant
+  commentId: F:Bve5_Parsing.MapGrammar.MapFunctionName.Cant
+  id: Cant
+  parent: Bve5_Parsing.MapGrammar.MapFunctionName
+  langs:
+  - csharp
+  - vb
+  name: Cant
+  nameWithType: MapFunctionName.Cant
+  fullName: Bve5_Parsing.MapGrammar.MapFunctionName.Cant
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Cant
+    path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+    startLine: 268
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\nCant（Cant）\n"
+  example: []
+  syntax:
+    content: >-
+      [StringValue("Cant")]
+
+      Cant = 12
+    return:
+      type: Bve5_Parsing.MapGrammar.MapFunctionName
+    content.vb: >-
+      <StringValue("Cant")>
+
+      Cant = 12
+  attributes:
+  - type: Bve5_Parsing.StringValueAttribute
+    ctor: Bve5_Parsing.StringValueAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Cant
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.MapGrammar.MapFunctionName.Load
+  commentId: F:Bve5_Parsing.MapGrammar.MapFunctionName.Load
+  id: Load
+  parent: Bve5_Parsing.MapGrammar.MapFunctionName
+  langs:
+  - csharp
+  - vb
+  name: Load
+  nameWithType: MapFunctionName.Load
+  fullName: Bve5_Parsing.MapGrammar.MapFunctionName.Load
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Load
+    path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+    startLine: 274
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\nLoad（Load）\n"
+  example: []
+  syntax:
+    content: >-
+      [StringValue("Load")]
+
+      Load = 13
+    return:
+      type: Bve5_Parsing.MapGrammar.MapFunctionName
+    content.vb: >-
+      <StringValue("Load")>
+
+      Load = 13
+  attributes:
+  - type: Bve5_Parsing.StringValueAttribute
+    ctor: Bve5_Parsing.StringValueAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Load
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.MapGrammar.MapFunctionName.Put
+  commentId: F:Bve5_Parsing.MapGrammar.MapFunctionName.Put
+  id: Put
+  parent: Bve5_Parsing.MapGrammar.MapFunctionName
+  langs:
+  - csharp
+  - vb
+  name: Put
+  nameWithType: MapFunctionName.Put
+  fullName: Bve5_Parsing.MapGrammar.MapFunctionName.Put
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Put
+    path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+    startLine: 280
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\nPut（Put）\n"
+  example: []
+  syntax:
+    content: >-
+      [StringValue("Put")]
+
+      Put = 14
+    return:
+      type: Bve5_Parsing.MapGrammar.MapFunctionName
+    content.vb: >-
+      <StringValue("Put")>
+
+      Put = 14
+  attributes:
+  - type: Bve5_Parsing.StringValueAttribute
+    ctor: Bve5_Parsing.StringValueAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Put
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.MapGrammar.MapFunctionName.Put0
+  commentId: F:Bve5_Parsing.MapGrammar.MapFunctionName.Put0
+  id: Put0
+  parent: Bve5_Parsing.MapGrammar.MapFunctionName
+  langs:
+  - csharp
+  - vb
+  name: Put0
+  nameWithType: MapFunctionName.Put0
+  fullName: Bve5_Parsing.MapGrammar.MapFunctionName.Put0
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Put0
+    path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+    startLine: 286
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\nPut0（Put0）\n"
+  example: []
+  syntax:
+    content: >-
+      [StringValue("Put0")]
+
+      Put0 = 15
+    return:
+      type: Bve5_Parsing.MapGrammar.MapFunctionName
+    content.vb: >-
+      <StringValue("Put0")>
+
+      Put0 = 15
+  attributes:
+  - type: Bve5_Parsing.StringValueAttribute
+    ctor: Bve5_Parsing.StringValueAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Put0
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.MapGrammar.MapFunctionName.Putbetween
+  commentId: F:Bve5_Parsing.MapGrammar.MapFunctionName.Putbetween
+  id: Putbetween
+  parent: Bve5_Parsing.MapGrammar.MapFunctionName
+  langs:
+  - csharp
+  - vb
+  name: Putbetween
+  nameWithType: MapFunctionName.Putbetween
+  fullName: Bve5_Parsing.MapGrammar.MapFunctionName.Putbetween
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Putbetween
+    path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+    startLine: 292
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\nPutbetween（Putbetween）\n"
+  example: []
+  syntax:
+    content: >-
+      [StringValue("Putbetween")]
+
+      Putbetween = 16
+    return:
+      type: Bve5_Parsing.MapGrammar.MapFunctionName
+    content.vb: >-
+      <StringValue("Putbetween")>
+
+      Putbetween = 16
+  attributes:
+  - type: Bve5_Parsing.StringValueAttribute
+    ctor: Bve5_Parsing.StringValueAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Putbetween
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.MapGrammar.MapFunctionName.Begin0
+  commentId: F:Bve5_Parsing.MapGrammar.MapFunctionName.Begin0
+  id: Begin0
+  parent: Bve5_Parsing.MapGrammar.MapFunctionName
+  langs:
+  - csharp
+  - vb
+  name: Begin0
+  nameWithType: MapFunctionName.Begin0
+  fullName: Bve5_Parsing.MapGrammar.MapFunctionName.Begin0
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Begin0
+    path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+    startLine: 298
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\nBegin0（Begin0）\n"
+  example: []
+  syntax:
+    content: >-
+      [StringValue("Begin0")]
+
+      Begin0 = 17
+    return:
+      type: Bve5_Parsing.MapGrammar.MapFunctionName
+    content.vb: >-
+      <StringValue("Begin0")>
+
+      Begin0 = 17
+  attributes:
+  - type: Bve5_Parsing.StringValueAttribute
+    ctor: Bve5_Parsing.StringValueAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Begin0
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.MapGrammar.MapFunctionName.Beginnew
+  commentId: F:Bve5_Parsing.MapGrammar.MapFunctionName.Beginnew
+  id: Beginnew
+  parent: Bve5_Parsing.MapGrammar.MapFunctionName
+  langs:
+  - csharp
+  - vb
+  name: Beginnew
+  nameWithType: MapFunctionName.Beginnew
+  fullName: Bve5_Parsing.MapGrammar.MapFunctionName.Beginnew
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Beginnew
+    path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+    startLine: 304
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\nBeginnew（Beginnew）\n"
+  example: []
+  syntax:
+    content: >-
+      [StringValue("Beginnew")]
+
+      Beginnew = 18
+    return:
+      type: Bve5_Parsing.MapGrammar.MapFunctionName
+    content.vb: >-
+      <StringValue("Beginnew")>
+
+      Beginnew = 18
+  attributes:
+  - type: Bve5_Parsing.StringValueAttribute
+    ctor: Bve5_Parsing.StringValueAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Beginnew
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.MapGrammar.MapFunctionName.Setspeedlimit
+  commentId: F:Bve5_Parsing.MapGrammar.MapFunctionName.Setspeedlimit
+  id: Setspeedlimit
+  parent: Bve5_Parsing.MapGrammar.MapFunctionName
+  langs:
+  - csharp
+  - vb
+  name: Setspeedlimit
+  nameWithType: MapFunctionName.Setspeedlimit
+  fullName: Bve5_Parsing.MapGrammar.MapFunctionName.Setspeedlimit
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Setspeedlimit
+    path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+    startLine: 310
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\nSetspeedlimit（Setspeedlimit）\n"
+  example: []
+  syntax:
+    content: >-
+      [StringValue("Setspeedlimit")]
+
+      Setspeedlimit = 19
+    return:
+      type: Bve5_Parsing.MapGrammar.MapFunctionName
+    content.vb: >-
+      <StringValue("Setspeedlimit")>
+
+      Setspeedlimit = 19
+  attributes:
+  - type: Bve5_Parsing.StringValueAttribute
+    ctor: Bve5_Parsing.StringValueAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Setspeedlimit
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.MapGrammar.MapFunctionName.Speedlimit
+  commentId: F:Bve5_Parsing.MapGrammar.MapFunctionName.Speedlimit
+  id: Speedlimit
+  parent: Bve5_Parsing.MapGrammar.MapFunctionName
+  langs:
+  - csharp
+  - vb
+  name: Speedlimit
+  nameWithType: MapFunctionName.Speedlimit
+  fullName: Bve5_Parsing.MapGrammar.MapFunctionName.Speedlimit
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Speedlimit
+    path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+    startLine: 316
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\nSpeedlimit（Speedlimit）\n"
+  example: []
+  syntax:
+    content: >-
+      [StringValue("Speedlimit")]
+
+      Speedlimit = 20
+    return:
+      type: Bve5_Parsing.MapGrammar.MapFunctionName
+    content.vb: >-
+      <StringValue("Speedlimit")>
+
+      Speedlimit = 20
+  attributes:
+  - type: Bve5_Parsing.StringValueAttribute
+    ctor: Bve5_Parsing.StringValueAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Speedlimit
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.MapGrammar.MapFunctionName.Pass
+  commentId: F:Bve5_Parsing.MapGrammar.MapFunctionName.Pass
+  id: Pass
+  parent: Bve5_Parsing.MapGrammar.MapFunctionName
+  langs:
+  - csharp
+  - vb
+  name: Pass
+  nameWithType: MapFunctionName.Pass
+  fullName: Bve5_Parsing.MapGrammar.MapFunctionName.Pass
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Pass
+    path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+    startLine: 322
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\nPass（Pass）\n"
+  example: []
+  syntax:
+    content: >-
+      [StringValue("Pass")]
+
+      Pass = 21
+    return:
+      type: Bve5_Parsing.MapGrammar.MapFunctionName
+    content.vb: >-
+      <StringValue("Pass")>
+
+      Pass = 21
+  attributes:
+  - type: Bve5_Parsing.StringValueAttribute
+    ctor: Bve5_Parsing.StringValueAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Pass
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.MapGrammar.MapFunctionName.Ambient
+  commentId: F:Bve5_Parsing.MapGrammar.MapFunctionName.Ambient
+  id: Ambient
+  parent: Bve5_Parsing.MapGrammar.MapFunctionName
+  langs:
+  - csharp
+  - vb
+  name: Ambient
+  nameWithType: MapFunctionName.Ambient
+  fullName: Bve5_Parsing.MapGrammar.MapFunctionName.Ambient
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Ambient
+    path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+    startLine: 328
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\nAmbient（Ambient）\n"
+  example: []
+  syntax:
+    content: >-
+      [StringValue("Ambient")]
+
+      Ambient = 22
+    return:
+      type: Bve5_Parsing.MapGrammar.MapFunctionName
+    content.vb: >-
+      <StringValue("Ambient")>
+
+      Ambient = 22
+  attributes:
+  - type: Bve5_Parsing.StringValueAttribute
+    ctor: Bve5_Parsing.StringValueAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Ambient
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.MapGrammar.MapFunctionName.Diffuse
+  commentId: F:Bve5_Parsing.MapGrammar.MapFunctionName.Diffuse
+  id: Diffuse
+  parent: Bve5_Parsing.MapGrammar.MapFunctionName
+  langs:
+  - csharp
+  - vb
+  name: Diffuse
+  nameWithType: MapFunctionName.Diffuse
+  fullName: Bve5_Parsing.MapGrammar.MapFunctionName.Diffuse
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Diffuse
+    path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+    startLine: 334
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\nDiffuse（Diffuse）\n"
+  example: []
+  syntax:
+    content: >-
+      [StringValue("Diffuse")]
+
+      Diffuse = 23
+    return:
+      type: Bve5_Parsing.MapGrammar.MapFunctionName
+    content.vb: >-
+      <StringValue("Diffuse")>
+
+      Diffuse = 23
+  attributes:
+  - type: Bve5_Parsing.StringValueAttribute
+    ctor: Bve5_Parsing.StringValueAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Diffuse
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.MapGrammar.MapFunctionName.Set
+  commentId: F:Bve5_Parsing.MapGrammar.MapFunctionName.Set
+  id: Set
+  parent: Bve5_Parsing.MapGrammar.MapFunctionName
+  langs:
+  - csharp
+  - vb
+  name: Set
+  nameWithType: MapFunctionName.Set
+  fullName: Bve5_Parsing.MapGrammar.MapFunctionName.Set
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Set
+    path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+    startLine: 340
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\nSet（Set）\n"
+  example: []
+  syntax:
+    content: >-
+      [StringValue("Set")]
+
+      Set = 24
+    return:
+      type: Bve5_Parsing.MapGrammar.MapFunctionName
+    content.vb: >-
+      <StringValue("Set")>
+
+      Set = 24
+  attributes:
+  - type: Bve5_Parsing.StringValueAttribute
+    ctor: Bve5_Parsing.StringValueAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Set
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.MapGrammar.MapFunctionName.Play
+  commentId: F:Bve5_Parsing.MapGrammar.MapFunctionName.Play
+  id: Play
+  parent: Bve5_Parsing.MapGrammar.MapFunctionName
+  langs:
+  - csharp
+  - vb
+  name: Play
+  nameWithType: MapFunctionName.Play
+  fullName: Bve5_Parsing.MapGrammar.MapFunctionName.Play
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Play
+    path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+    startLine: 346
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\nPlay（Play）\n"
+  example: []
+  syntax:
+    content: >-
+      [StringValue("Play")]
+
+      Play = 25
+    return:
+      type: Bve5_Parsing.MapGrammar.MapFunctionName
+    content.vb: >-
+      <StringValue("Play")>
+
+      Play = 25
+  attributes:
+  - type: Bve5_Parsing.StringValueAttribute
+    ctor: Bve5_Parsing.StringValueAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Play
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.MapGrammar.MapFunctionName.Add
+  commentId: F:Bve5_Parsing.MapGrammar.MapFunctionName.Add
+  id: Add
+  parent: Bve5_Parsing.MapGrammar.MapFunctionName
+  langs:
+  - csharp
+  - vb
+  name: Add
+  nameWithType: MapFunctionName.Add
+  fullName: Bve5_Parsing.MapGrammar.MapFunctionName.Add
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Add
+    path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+    startLine: 352
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\nAdd（Add）\n"
+  example: []
+  syntax:
+    content: >-
+      [StringValue("Add")]
+
+      Add = 26
+    return:
+      type: Bve5_Parsing.MapGrammar.MapFunctionName
+    content.vb: >-
+      <StringValue("Add")>
+
+      Add = 26
+  attributes:
+  - type: Bve5_Parsing.StringValueAttribute
+    ctor: Bve5_Parsing.StringValueAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Add
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.MapGrammar.MapFunctionName.Enable
+  commentId: F:Bve5_Parsing.MapGrammar.MapFunctionName.Enable
+  id: Enable
+  parent: Bve5_Parsing.MapGrammar.MapFunctionName
+  langs:
+  - csharp
+  - vb
+  name: Enable
+  nameWithType: MapFunctionName.Enable
+  fullName: Bve5_Parsing.MapGrammar.MapFunctionName.Enable
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Enable
+    path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+    startLine: 358
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\nEnable（Enable）\n"
+  example: []
+  syntax:
+    content: >-
+      [StringValue("Enable")]
+
+      Enable = 27
+    return:
+      type: Bve5_Parsing.MapGrammar.MapFunctionName
+    content.vb: >-
+      <StringValue("Enable")>
+
+      Enable = 27
+  attributes:
+  - type: Bve5_Parsing.StringValueAttribute
+    ctor: Bve5_Parsing.StringValueAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Enable
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.MapGrammar.MapFunctionName.Stop
+  commentId: F:Bve5_Parsing.MapGrammar.MapFunctionName.Stop
+  id: Stop
+  parent: Bve5_Parsing.MapGrammar.MapFunctionName
+  langs:
+  - csharp
+  - vb
+  name: Stop
+  nameWithType: MapFunctionName.Stop
+  fullName: Bve5_Parsing.MapGrammar.MapFunctionName.Stop
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Stop
+    path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+    startLine: 364
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\nStop（Stop）\n"
+  example: []
+  syntax:
+    content: >-
+      [StringValue("Stop")]
+
+      Stop = 28
+    return:
+      type: Bve5_Parsing.MapGrammar.MapFunctionName
+    content.vb: >-
+      <StringValue("Stop")>
+
+      Stop = 28
+  attributes:
+  - type: Bve5_Parsing.StringValueAttribute
+    ctor: Bve5_Parsing.StringValueAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Stop
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.MapGrammar.MapFunctionName.Fog
+  commentId: F:Bve5_Parsing.MapGrammar.MapFunctionName.Fog
+  id: Fog
+  parent: Bve5_Parsing.MapGrammar.MapFunctionName
+  langs:
+  - csharp
+  - vb
+  name: Fog
+  nameWithType: MapFunctionName.Fog
+  fullName: Bve5_Parsing.MapGrammar.MapFunctionName.Fog
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Fog
+    path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+    startLine: 370
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\nFog（Fog）\n"
+  example: []
+  syntax:
+    content: >-
+      [StringValue("Fog")]
+
+      Fog = 29
+    return:
+      type: Bve5_Parsing.MapGrammar.MapFunctionName
+    content.vb: >-
+      <StringValue("Fog")>
+
+      Fog = 29
+  attributes:
+  - type: Bve5_Parsing.StringValueAttribute
+    ctor: Bve5_Parsing.StringValueAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Fog
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.MapGrammar.MapFunctionName.Curve
+  commentId: F:Bve5_Parsing.MapGrammar.MapFunctionName.Curve
+  id: Curve
+  parent: Bve5_Parsing.MapGrammar.MapFunctionName
+  langs:
+  - csharp
+  - vb
+  name: Curve
+  nameWithType: MapFunctionName.Curve
+  fullName: Bve5_Parsing.MapGrammar.MapFunctionName.Curve
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Curve
+    path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+    startLine: 376
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\nCurve（Curve）\n"
+  example: []
+  syntax:
+    content: >-
+      [StringValue("Curve")]
+
+      Curve = 30
+    return:
+      type: Bve5_Parsing.MapGrammar.MapFunctionName
+    content.vb: >-
+      <StringValue("Curve")>
+
+      Curve = 30
+  attributes:
+  - type: Bve5_Parsing.StringValueAttribute
+    ctor: Bve5_Parsing.StringValueAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Curve
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.MapGrammar.MapFunctionName.Pitch
+  commentId: F:Bve5_Parsing.MapGrammar.MapFunctionName.Pitch
+  id: Pitch
+  parent: Bve5_Parsing.MapGrammar.MapFunctionName
+  langs:
+  - csharp
+  - vb
+  name: Pitch
+  nameWithType: MapFunctionName.Pitch
+  fullName: Bve5_Parsing.MapGrammar.MapFunctionName.Pitch
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Pitch
+    path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+    startLine: 382
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\nPitch（Pitch）\n"
+  example: []
+  syntax:
+    content: >-
+      [StringValue("Pitch")]
+
+      Pitch = 31
+    return:
+      type: Bve5_Parsing.MapGrammar.MapFunctionName
+    content.vb: >-
+      <StringValue("Pitch")>
+
+      Pitch = 31
+  attributes:
+  - type: Bve5_Parsing.StringValueAttribute
+    ctor: Bve5_Parsing.StringValueAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Pitch
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.MapGrammar.MapFunctionName.Turn
+  commentId: F:Bve5_Parsing.MapGrammar.MapFunctionName.Turn
+  id: Turn
+  parent: Bve5_Parsing.MapGrammar.MapFunctionName
+  langs:
+  - csharp
+  - vb
+  name: Turn
+  nameWithType: MapFunctionName.Turn
+  fullName: Bve5_Parsing.MapGrammar.MapFunctionName.Turn
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Turn
+    path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+    startLine: 388
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\nTurn（Turn）\n"
+  example: []
+  syntax:
+    content: >-
+      [StringValue("Turn")]
+
+      Turn = 32
+    return:
+      type: Bve5_Parsing.MapGrammar.MapFunctionName
+    content.vb: >-
+      <StringValue("Turn")>
+
+      Turn = 32
+  attributes:
+  - type: Bve5_Parsing.StringValueAttribute
+    ctor: Bve5_Parsing.StringValueAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Turn
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: Bve5_Parsing.MapGrammar
+  commentId: N:Bve5_Parsing.MapGrammar
+  name: Bve5_Parsing.MapGrammar
+  nameWithType: Bve5_Parsing.MapGrammar
+  fullName: Bve5_Parsing.MapGrammar
+- uid: System.Enum.Bve5_Parsing.CommonAttribute.GetStringValue
+  commentId: M:Bve5_Parsing.CommonAttribute.GetStringValue(System.Enum)
+  parent: Bve5_Parsing.CommonAttribute
+  definition: Bve5_Parsing.CommonAttribute.GetStringValue(System.Enum)
+  name: GetStringValue()
+  nameWithType: CommonAttribute.GetStringValue()
+  fullName: Bve5_Parsing.CommonAttribute.GetStringValue()
+  spec.csharp:
+  - uid: Bve5_Parsing.CommonAttribute.GetStringValue
+    name: GetStringValue
+    nameWithType: CommonAttribute.GetStringValue
+    fullName: Bve5_Parsing.CommonAttribute.GetStringValue
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Bve5_Parsing.CommonAttribute.GetStringValue
+    name: GetStringValue
+    nameWithType: CommonAttribute.GetStringValue
+    fullName: Bve5_Parsing.CommonAttribute.GetStringValue
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Bve5_Parsing.CommonAttribute.GetStringValue(System.Enum)
+  commentId: M:Bve5_Parsing.CommonAttribute.GetStringValue(System.Enum)
+  isExternal: true
+  name: GetStringValue(Enum)
+  nameWithType: CommonAttribute.GetStringValue(Enum)
+  fullName: Bve5_Parsing.CommonAttribute.GetStringValue(System.Enum)
+  spec.csharp:
+  - uid: Bve5_Parsing.CommonAttribute.GetStringValue(System.Enum)
+    name: GetStringValue
+    nameWithType: CommonAttribute.GetStringValue
+    fullName: Bve5_Parsing.CommonAttribute.GetStringValue
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Enum
+    name: Enum
+    nameWithType: Enum
+    fullName: System.Enum
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Bve5_Parsing.CommonAttribute.GetStringValue(System.Enum)
+    name: GetStringValue
+    nameWithType: CommonAttribute.GetStringValue
+    fullName: Bve5_Parsing.CommonAttribute.GetStringValue
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Enum
+    name: Enum
+    nameWithType: Enum
+    fullName: System.Enum
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Bve5_Parsing.CommonAttribute
+  commentId: T:Bve5_Parsing.CommonAttribute
+  parent: Bve5_Parsing
+  name: CommonAttribute
+  nameWithType: CommonAttribute
+  fullName: Bve5_Parsing.CommonAttribute
+- uid: Bve5_Parsing
+  commentId: N:Bve5_Parsing
+  name: Bve5_Parsing
+  nameWithType: Bve5_Parsing
+  fullName: Bve5_Parsing
+- uid: Bve5_Parsing.MapGrammar.MapFunctionName
+  commentId: T:Bve5_Parsing.MapGrammar.MapFunctionName
+  parent: Bve5_Parsing.MapGrammar
+  name: MapFunctionName
+  nameWithType: MapFunctionName
+  fullName: Bve5_Parsing.MapGrammar.MapFunctionName

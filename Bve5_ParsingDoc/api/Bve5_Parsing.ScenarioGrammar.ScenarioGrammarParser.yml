@@ -1,0 +1,531 @@
+### YamlMime:ManagedReference
+items:
+- uid: Bve5_Parsing.ScenarioGrammar.ScenarioGrammarParser
+  commentId: T:Bve5_Parsing.ScenarioGrammar.ScenarioGrammarParser
+  id: ScenarioGrammarParser
+  parent: Bve5_Parsing.ScenarioGrammar
+  children:
+  - Bve5_Parsing.ScenarioGrammar.ScenarioGrammarParser.#ctor
+  - Bve5_Parsing.ScenarioGrammar.ScenarioGrammarParser.#ctor(Bve5_Parsing.ParseErrorListener)
+  - Bve5_Parsing.ScenarioGrammar.ScenarioGrammarParser.ErrorListener
+  - Bve5_Parsing.ScenarioGrammar.ScenarioGrammarParser.Parse(System.String)
+  langs:
+  - csharp
+  - vb
+  name: ScenarioGrammarParser
+  nameWithType: ScenarioGrammarParser
+  fullName: Bve5_Parsing.ScenarioGrammar.ScenarioGrammarParser
+  type: Class
+  source:
+    remote:
+      path: Bve5_Parsing/ScenarioGrammar/ScenarioGrammarParser.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: ScenarioGrammarParser
+    path: ../Bve5_Parsing/ScenarioGrammar/ScenarioGrammarParser.cs
+    startLine: 9
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar
+  summary: "\nScenarioGrammarの解析を行うクラス\n"
+  example: []
+  syntax:
+    content: public class ScenarioGrammarParser
+    content.vb: Public Class ScenarioGrammarParser
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Bve5_Parsing.ScenarioGrammar.ScenarioGrammarParser.ErrorListener
+  commentId: P:Bve5_Parsing.ScenarioGrammar.ScenarioGrammarParser.ErrorListener
+  id: ErrorListener
+  parent: Bve5_Parsing.ScenarioGrammar.ScenarioGrammarParser
+  langs:
+  - csharp
+  - vb
+  name: ErrorListener
+  nameWithType: ScenarioGrammarParser.ErrorListener
+  fullName: Bve5_Parsing.ScenarioGrammar.ScenarioGrammarParser.ErrorListener
+  type: Property
+  source:
+    remote:
+      path: Bve5_Parsing/ScenarioGrammar/ScenarioGrammarParser.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: ErrorListener
+    path: ../Bve5_Parsing/ScenarioGrammar/ScenarioGrammarParser.cs
+    startLine: 15
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar
+  summary: "\n構文解析のエラーを取得するリスナー\n"
+  example: []
+  syntax:
+    content: public ParseErrorListener ErrorListener { get; set; }
+    parameters: []
+    return:
+      type: Bve5_Parsing.ParseErrorListener
+    content.vb: Public Property ErrorListener As ParseErrorListener
+  overload: Bve5_Parsing.ScenarioGrammar.ScenarioGrammarParser.ErrorListener*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Bve5_Parsing.ScenarioGrammar.ScenarioGrammarParser.#ctor
+  commentId: M:Bve5_Parsing.ScenarioGrammar.ScenarioGrammarParser.#ctor
+  id: '#ctor'
+  parent: Bve5_Parsing.ScenarioGrammar.ScenarioGrammarParser
+  langs:
+  - csharp
+  - vb
+  name: ScenarioGrammarParser()
+  nameWithType: ScenarioGrammarParser.ScenarioGrammarParser()
+  fullName: Bve5_Parsing.ScenarioGrammar.ScenarioGrammarParser.ScenarioGrammarParser()
+  type: Constructor
+  source:
+    remote:
+      path: Bve5_Parsing/ScenarioGrammar/ScenarioGrammarParser.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: .ctor
+    path: ../Bve5_Parsing/ScenarioGrammar/ScenarioGrammarParser.cs
+    startLine: 20
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar
+  summary: "\nScenarioGrammarの構文解析器を初期化します。\n"
+  example: []
+  syntax:
+    content: public ScenarioGrammarParser()
+    content.vb: Public Sub New
+  overload: Bve5_Parsing.ScenarioGrammar.ScenarioGrammarParser.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Bve5_Parsing.ScenarioGrammar.ScenarioGrammarParser.#ctor(Bve5_Parsing.ParseErrorListener)
+  commentId: M:Bve5_Parsing.ScenarioGrammar.ScenarioGrammarParser.#ctor(Bve5_Parsing.ParseErrorListener)
+  id: '#ctor(Bve5_Parsing.ParseErrorListener)'
+  parent: Bve5_Parsing.ScenarioGrammar.ScenarioGrammarParser
+  langs:
+  - csharp
+  - vb
+  name: ScenarioGrammarParser(ParseErrorListener)
+  nameWithType: ScenarioGrammarParser.ScenarioGrammarParser(ParseErrorListener)
+  fullName: Bve5_Parsing.ScenarioGrammar.ScenarioGrammarParser.ScenarioGrammarParser(Bve5_Parsing.ParseErrorListener)
+  type: Constructor
+  source:
+    remote:
+      path: Bve5_Parsing/ScenarioGrammar/ScenarioGrammarParser.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: .ctor
+    path: ../Bve5_Parsing/ScenarioGrammar/ScenarioGrammarParser.cs
+    startLine: 29
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar
+  summary: "\n構文解析器をエラーリスナーを指定して初期化します。\n"
+  example: []
+  syntax:
+    content: public ScenarioGrammarParser(ParseErrorListener listener)
+    parameters:
+    - id: listener
+      type: Bve5_Parsing.ParseErrorListener
+      description: エラーリスナークラス
+    content.vb: Public Sub New(listener As ParseErrorListener)
+  overload: Bve5_Parsing.ScenarioGrammar.ScenarioGrammarParser.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Bve5_Parsing.ScenarioGrammar.ScenarioGrammarParser.Parse(System.String)
+  commentId: M:Bve5_Parsing.ScenarioGrammar.ScenarioGrammarParser.Parse(System.String)
+  id: Parse(System.String)
+  parent: Bve5_Parsing.ScenarioGrammar.ScenarioGrammarParser
+  langs:
+  - csharp
+  - vb
+  name: Parse(String)
+  nameWithType: ScenarioGrammarParser.Parse(String)
+  fullName: Bve5_Parsing.ScenarioGrammar.ScenarioGrammarParser.Parse(System.String)
+  type: Method
+  source:
+    remote:
+      path: Bve5_Parsing/ScenarioGrammar/ScenarioGrammarParser.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Parse
+    path: ../Bve5_Parsing/ScenarioGrammar/ScenarioGrammarParser.cs
+    startLine: 39
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar
+  summary: "\n引数に与えられたScenarioGrammarの構文解析を行います。\n"
+  example: []
+  syntax:
+    content: public ScenarioData Parse(string input)
+    parameters:
+    - id: input
+      type: System.String
+      description: 解析する文字列
+    return:
+      type: Bve5_Parsing.ScenarioGrammar.ScenarioData
+      description: 解析結果
+    content.vb: Public Function Parse(input As String) As ScenarioData
+  overload: Bve5_Parsing.ScenarioGrammar.ScenarioGrammarParser.Parse*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Bve5_Parsing.ScenarioGrammar
+  commentId: N:Bve5_Parsing.ScenarioGrammar
+  name: Bve5_Parsing.ScenarioGrammar
+  nameWithType: Bve5_Parsing.ScenarioGrammar
+  fullName: Bve5_Parsing.ScenarioGrammar
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Bve5_Parsing.ScenarioGrammar.ScenarioGrammarParser.ErrorListener*
+  commentId: Overload:Bve5_Parsing.ScenarioGrammar.ScenarioGrammarParser.ErrorListener
+  name: ErrorListener
+  nameWithType: ScenarioGrammarParser.ErrorListener
+  fullName: Bve5_Parsing.ScenarioGrammar.ScenarioGrammarParser.ErrorListener
+- uid: Bve5_Parsing.ParseErrorListener
+  commentId: T:Bve5_Parsing.ParseErrorListener
+  parent: Bve5_Parsing
+  name: ParseErrorListener
+  nameWithType: ParseErrorListener
+  fullName: Bve5_Parsing.ParseErrorListener
+- uid: Bve5_Parsing
+  commentId: N:Bve5_Parsing
+  name: Bve5_Parsing
+  nameWithType: Bve5_Parsing
+  fullName: Bve5_Parsing
+- uid: Bve5_Parsing.ScenarioGrammar.ScenarioGrammarParser.#ctor*
+  commentId: Overload:Bve5_Parsing.ScenarioGrammar.ScenarioGrammarParser.#ctor
+  name: ScenarioGrammarParser
+  nameWithType: ScenarioGrammarParser.ScenarioGrammarParser
+  fullName: Bve5_Parsing.ScenarioGrammar.ScenarioGrammarParser.ScenarioGrammarParser
+- uid: Bve5_Parsing.ScenarioGrammar.ScenarioGrammarParser.Parse*
+  commentId: Overload:Bve5_Parsing.ScenarioGrammar.ScenarioGrammarParser.Parse
+  name: Parse
+  nameWithType: ScenarioGrammarParser.Parse
+  fullName: Bve5_Parsing.ScenarioGrammar.ScenarioGrammarParser.Parse
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Bve5_Parsing.ScenarioGrammar.ScenarioData
+  commentId: T:Bve5_Parsing.ScenarioGrammar.ScenarioData
+  parent: Bve5_Parsing.ScenarioGrammar
+  name: ScenarioData
+  nameWithType: ScenarioData
+  fullName: Bve5_Parsing.ScenarioGrammar.ScenarioData

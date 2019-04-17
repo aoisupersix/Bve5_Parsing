@@ -1,0 +1,3897 @@
+{
+  "homepages": [],
+  "source_base_path": "D:/workspace/vs/Bve5_Parsing/Bve5_ParsingDoc",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.CommonAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.CommonAttribute.html",
+          "hash": "ZdBozNGJNHjFhWrwNkDTMQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.AbsNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.AbsNode.html",
+          "hash": "wE4hn7oPIpt6Xd6fPr4pYA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.AdditionNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.AdditionNode.html",
+          "hash": "FGb/k7Q77DIiPaygJH7hPA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.AdhesionChangeNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.AdhesionChangeNode.html",
+          "hash": "dnxjNAs0AVqx/foYG4zSAA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.Atan2Node.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.Atan2Node.html",
+          "hash": "Gwf3mGaN9uVPHBS0ul0OMw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.BackgroundChangeNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.BackgroundChangeNode.html",
+          "hash": "kwmqmOenBmTNnvFCuto9Lw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.BeaconPutNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.BeaconPutNode.html",
+          "hash": "W8uWkWqur7Fn8i54nwyzvw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.BuildAstVisitor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.BuildAstVisitor.html",
+          "hash": "Dv92hfDgh6+K98fwY0PPLg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.CabilluminanceInterpolateNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.CabilluminanceInterpolateNode.html",
+          "hash": "liZ17KPD5i61XizVtRlvpw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.CabilluminanceSetNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.CabilluminanceSetNode.html",
+          "hash": "krqRh8TvUXheFpBh1vXu/g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.CeilNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.CeilNode.html",
+          "hash": "IB+99uZhfjIk9B1+MUzX1A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.CosNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.CosNode.html",
+          "hash": "yJqV/qfQ9/S1vcH1/qTEtA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.CurveBeginNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.CurveBeginNode.html",
+          "hash": "QENcwLXFzaoD6CnuzuDU6g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.CurveBegincircularNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.CurveBegincircularNode.html",
+          "hash": "dENr6bE49qmYLVnNFnYaBQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.CurveBegintransitionNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.CurveBegintransitionNode.html",
+          "hash": "veLCQ0IvUzXzB4/TAS9X2w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.CurveChangeNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.CurveChangeNode.html",
+          "hash": "MiNlxsLVGXeQDQSzr5oW3Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.CurveEndNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.CurveEndNode.html",
+          "hash": "oadzf3nM9b/d2viPAGbGuQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.CurveGaugeNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.CurveGaugeNode.html",
+          "hash": "nEjMgwf0I5UEEFvUSSA/ag=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.CurveInterpolateNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.CurveInterpolateNode.html",
+          "hash": "Idi4Nq5lvgFzNo3dOTgKVA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.CurveSetcenterNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.CurveSetcenterNode.html",
+          "hash": "cNSavmCTT3LqXtoX8iuFGg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.CurveSetfunctionNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.CurveSetfunctionNode.html",
+          "hash": "4ZXWkatFhXUZKz0pS4jGhg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.CurveSetgaugeNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.CurveSetgaugeNode.html",
+          "hash": "5TOUay5a6/NL49+oJ0LY+Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.DistanceNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.DistanceNode.html",
+          "hash": "Oos7pfZEvwNWfnUXbrp2aw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.DistanceVariableNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.DistanceVariableNode.html",
+          "hash": "4TtdFX9gqD9hO6aqmYQZZA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.DivisionNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.DivisionNode.html",
+          "hash": "L0FklIp30L0Snnh8btuHFA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.DrawdistanceChangeNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.DrawdistanceChangeNode.html",
+          "hash": "awKblYhyGmIG+FVXdSS+vw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.ExpNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.ExpNode.html",
+          "hash": "+VDZxTw22TiMlq45zZ5iTw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.FlangenoiseChangeNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.FlangenoiseChangeNode.html",
+          "hash": "jh4QGN17SHhXxaiB+0/2tw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.FloorNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.FloorNode.html",
+          "hash": "Rda3BsnnynVwkLvHSFVysQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.FogInterpolateNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.FogInterpolateNode.html",
+          "hash": "ZbHE4WMEOcvL07fZkvPgMw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.FogSetNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.FogSetNode.html",
+          "hash": "hEnCADBDwy++lYfHaPElfQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.GradientBeginNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.GradientBeginNode.html",
+          "hash": "RYmyX9dsDgqX09f9c9j1eQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.GradientBeginconstNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.GradientBeginconstNode.html",
+          "hash": "MiJ1CGx7+JBUol0Cmn9Qhg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.GradientBegintransitionNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.GradientBegintransitionNode.html",
+          "hash": "KyUsYYIJ4/2/IfiKi8s50w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.GradientEndNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.GradientEndNode.html",
+          "hash": "yd0wnBptlWg9x9N8ARHf8A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.GradientInterpolateNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.GradientInterpolateNode.html",
+          "hash": "4X9bdP6XafuOB4cOkb6nRg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.IncludeNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.IncludeNode.html",
+          "hash": "u+7FpyqzTDn9lpW5TjjHWw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.InfixExpressionNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.InfixExpressionNode.html",
+          "hash": "yxT1pvNu1hWtneBAP5PnVw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.IrregularityChangeNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.IrregularityChangeNode.html",
+          "hash": "sxIulHM4POQ4e035pNrNiQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.JointnoisePlayNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.JointnoisePlayNode.html",
+          "hash": "SXDCE5i/b2PFtiXXZ9RtCw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.LegacyCurveNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.LegacyCurveNode.html",
+          "hash": "kxYhsSbJr1QCSszrFNwZYg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.LegacyFogNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.LegacyFogNode.html",
+          "hash": "wwhzBQJU36UHZQ5cETlLow=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.LegacyPitchNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.LegacyPitchNode.html",
+          "hash": "wsYNzDeQDMJ8FsMPQb+NxQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.LegacyTurnNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.LegacyTurnNode.html",
+          "hash": "GZ7F5W8Kfj3T+D15SDb2+A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.LightAmbientNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.LightAmbientNode.html",
+          "hash": "5Ug9YsdnpAmmKqvrx27zHQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.LightDiffuseNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.LightDiffuseNode.html",
+          "hash": "AOh67Fn5dBTisYnRhlxyyA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.LoadListNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.LoadListNode.html",
+          "hash": "Kwb5OgHIgzJZibW0tngdgA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.LogNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.LogNode.html",
+          "hash": "rNwG3H45nhEtpMc9rMEqYw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes.html",
+          "hash": "5Rc2r73007C/gqIP/65xDA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.ModuloNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.ModuloNode.html",
+          "hash": "UKvR0OeOO0BoCwVs+jhl4Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.MultiplicationNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.MultiplicationNode.html",
+          "hash": "LRlxmkZxzhlUJ+/O+R9Jnw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.NumberNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.NumberNode.html",
+          "hash": "HCiQ0BqzR9oYrU9jmPdbRw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.PowNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.PowNode.html",
+          "hash": "g9RPoQ+aDBmvIG2MiRcy8g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.PretrainPassNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.PretrainPassNode.html",
+          "hash": "jokCTgiu2jtb7pEqMKZung=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.RandNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.RandNode.html",
+          "hash": "WaBGv4Qrgt9Dz7EEXGUhwg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.RepeaterBegin0Node.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.RepeaterBegin0Node.html",
+          "hash": "4J7RwUIfv0P9OPKhG4QV7Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.RepeaterBeginNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.RepeaterBeginNode.html",
+          "hash": "swtTQG8UebMo9ViYhpOoIQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.RepeaterEndNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.RepeaterEndNode.html",
+          "hash": "xo7s/d/Rz61tlWbjbg8sfQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.RollingnoiseChangeNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.RollingnoiseChangeNode.html",
+          "hash": "rro1mPObTNB0f0Z3V8w7WA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.RootNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.RootNode.html",
+          "hash": "bZqza9QXf3TXsfcaOf1AxQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.SectionBeginNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.SectionBeginNode.html",
+          "hash": "yBWNoNBY9iHYztrnuvHsUA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.SectionBeginnewNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.SectionBeginnewNode.html",
+          "hash": "iI+477mhaQUKRve9dV2LFg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.SectionSetspeedlimitNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.SectionSetspeedlimitNode.html",
+          "hash": "X+ejqta7ODpwuzl7XPmtgg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.SignalLoadNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.SignalLoadNode.html",
+          "hash": "vuIuvhq4Vp9XG9mCB6D4yA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.SignalPutNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.SignalPutNode.html",
+          "hash": "H5bKOEV09y+OoSvNV6FJ9Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.SignalSpeedlimitNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.SignalSpeedlimitNode.html",
+          "hash": "KgB5OZ4DrVGtr+sdw2N4/Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.SinNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.SinNode.html",
+          "hash": "y2E04lHGN6lmzuAsE/dXVw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.SingleArgFunctionNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.SingleArgFunctionNode.html",
+          "hash": "S1KcemcVZXAq/X66UHrojA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.Sound3dLoadNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.Sound3dLoadNode.html",
+          "hash": "BYZ4pRGunvDYrdHBFbqD/w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.Sound3dPutNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.Sound3dPutNode.html",
+          "hash": "3tz+3SvSk9Urby+QFEhdew=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.SoundLoadNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.SoundLoadNode.html",
+          "hash": "+469n36SqEOOMxRh1fGDng=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.SoundPlayNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.SoundPlayNode.html",
+          "hash": "S8eZv93GlsZr8Gs5fl+ZFg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.SpeedlimitBeginNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.SpeedlimitBeginNode.html",
+          "hash": "3/yVMViyPulMQ/5k+DGhAQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.SpeedlimitEndNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.SpeedlimitEndNode.html",
+          "hash": "F1WfZxNwRmem18GLkXIXvw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.SqrtNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.SqrtNode.html",
+          "hash": "yEKgKW1MLZwXC6ybTjumBg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.StationLoadNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.StationLoadNode.html",
+          "hash": "n7b9q25MUgn1f2FeZUnIig=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.StationPutNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.StationPutNode.html",
+          "hash": "V8ydIvjQagTPqZzAtl7fCQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.StringNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.StringNode.html",
+          "hash": "8pIHBvkZh0iOfDtNMf3Opw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.StructureLoadNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.StructureLoadNode.html",
+          "hash": "nwrCYYD/yrUa71qE9F/VVQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.StructurePut0Node.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.StructurePut0Node.html",
+          "hash": "BrAMY2WidnuaY3CW/0RmLg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.StructurePutNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.StructurePutNode.html",
+          "hash": "EEQQTKvGklcyAofJ3RFwKQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.StructurePutbetweenNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.StructurePutbetweenNode.html",
+          "hash": "vtJPDFQyrZNhFAYdI/6cCA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.SubtractionNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.SubtractionNode.html",
+          "hash": "MzKB2PzkdAa1QWCPk1Jm2w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.Syntax1Node.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.Syntax1Node.html",
+          "hash": "lnODzQZdaErLR1ksfh95hw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.Syntax2Node.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.Syntax2Node.html",
+          "hash": "ggF6Ym/zN9vaxdHO5whpPQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.Syntax3Node.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.Syntax3Node.html",
+          "hash": "drdA8ssxto3a0mIMu65M8Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.html",
+          "hash": "6gGT54cRgPlhN8vMmU8A8A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.TrackCantBeginNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.TrackCantBeginNode.html",
+          "hash": "0Ea8J1HTbyjYcfqmGtZfnQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.TrackCantBegintransitionNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.TrackCantBegintransitionNode.html",
+          "hash": "ZWVZFOHMtx6YMYjYKOLReA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.TrackCantEndNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.TrackCantEndNode.html",
+          "hash": "DJa5BFv0b5kssQH2umoLkw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.TrackCantInterpolateNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.TrackCantInterpolateNode.html",
+          "hash": "8IrCQnqkdwanoibh8omwkA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.TrackCantNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.TrackCantNode.html",
+          "hash": "n5OmVkCRYTWUaauEJ/++0Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.TrackCantSetcenterNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.TrackCantSetcenterNode.html",
+          "hash": "iU6GSIWaP8P57kqi64mgOw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.TrackCantSetfunctionNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.TrackCantSetfunctionNode.html",
+          "hash": "TUGAt9PWfwayPfLjdWNHvg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.TrackCantSetgaugeNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.TrackCantSetgaugeNode.html",
+          "hash": "jlm3AYebUu7t2WO7+WpeNQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.TrackGaugeNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.TrackGaugeNode.html",
+          "hash": "1FbSIe1vYmlRDAFWCZyE+g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.TrackPositionNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.TrackPositionNode.html",
+          "hash": "n/8xykabh3dWi0KA7hqs3Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.TrackXInterpolateNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.TrackXInterpolateNode.html",
+          "hash": "pvj/SnHmzApIQPcX9TEg7g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.TrackYInterpolateNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.TrackYInterpolateNode.html",
+          "hash": "Gynnv4NN2JyFqdXWBkaJNg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.TrainAddNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.TrainAddNode.html",
+          "hash": "/m57EXYxbrUx8BX8AxRw/g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.TrainEnableNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.TrainEnableNode.html",
+          "hash": "zO+iZNrreZo5ehOnciRqLg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.TrainLoadNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.TrainLoadNode.html",
+          "hash": "yFhnchefjAzLS/pDQVwcUw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.html",
+          "hash": "1FlIxvNlAWiKopR7P86GtA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.UnaryNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.UnaryNode.html",
+          "hash": "Sgb9ZcHa+Tv+4f6BcUyK8A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.VarAssignNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.VarAssignNode.html",
+          "hash": "wgDqQAkiBU7q29skhp8s3A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.VarNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.VarNode.html",
+          "hash": "e1fMRFF/Cugx8tVV2SxFLA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstNodes.html",
+          "hash": "5deAlUmGUTTwi8N7Yx3HIw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.AstVisitor-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.AstVisitor-1.html",
+          "hash": "gquZ53uVJZg4MQWXy1pNCQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.Attributes.ArgumentAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.Attributes.ArgumentAttribute.html",
+          "hash": "QjN6BCtTk6gd9YV/dZGZuQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.Attributes.DeprecatedAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.Attributes.DeprecatedAttribute.html",
+          "hash": "V+8iOpn1+rFjKeC+K5WtvA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.Attributes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.Attributes.html",
+          "hash": "VJQoHOrQPfKseTErWExR2w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.AdhesionChangeStatement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.AdhesionChangeStatement.html",
+          "hash": "REMCHzK1MjuIq4Q0DLMKew=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.BackgroundChangeStatement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.BackgroundChangeStatement.html",
+          "hash": "J2A5ZxpxQVuC/Ti3ICD9OQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.BeaconPutStatement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.BeaconPutStatement.html",
+          "hash": "8di0XXVnTTt4vOS0NOQwtg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.CabilluminanceInterpolateStatement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.CabilluminanceInterpolateStatement.html",
+          "hash": "oCGeppWkGV4ly46egjv8TA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.CabilluminanceSetStatement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.CabilluminanceSetStatement.html",
+          "hash": "dGEuZ1hvj3bkf7iNjb+D3A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.CurveBeginStatement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.CurveBeginStatement.html",
+          "hash": "MCdHj0tdNuraICOD+AggMQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.CurveBegincircularStatement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.CurveBegincircularStatement.html",
+          "hash": "YhejXyp7CvcI9E7Ay6D2ew=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.CurveBegintransitionStatement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.CurveBegintransitionStatement.html",
+          "hash": "JQSigeLZd/g96avM7N/HOQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.CurveChangeStatement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.CurveChangeStatement.html",
+          "hash": "MfDDuYoQYeP9lU4YQL2keg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.CurveEndStatement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.CurveEndStatement.html",
+          "hash": "dCwdfxHuUVddaVtszgrOIQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.CurveGaugeStatement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.CurveGaugeStatement.html",
+          "hash": "zG+vxV2mrc8NdVlGyWO2cQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.CurveInterpolateStatement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.CurveInterpolateStatement.html",
+          "hash": "VUM68HaG40PZ6nOSUcb7+Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.CurveSetcenterStatement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.CurveSetcenterStatement.html",
+          "hash": "wZFWQCS0w70wnQSR60JQrA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.CurveSetfunctionStatement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.CurveSetfunctionStatement.html",
+          "hash": "C6oS+Bj5h1+A0nBwMXqM3g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.CurveSetgaugeStatement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.CurveSetgaugeStatement.html",
+          "hash": "IyOJRBLWhBvu7eBwcizjbg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.DrawdistanceChangeStatement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.DrawdistanceChangeStatement.html",
+          "hash": "yQD4hYJebzsMP/jcKpm+Nw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.FlangenoiseChangeStatement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.FlangenoiseChangeStatement.html",
+          "hash": "J4FQ9OljiL5pAO6LwEgNZQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.FogInterpolateStatement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.FogInterpolateStatement.html",
+          "hash": "qox+5zU5Ar9pGYWtm1Xucw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.FogSetStatement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.FogSetStatement.html",
+          "hash": "XXYWTVCb1q3vtGRIMdPIPQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.GradientBeginStatement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.GradientBeginStatement.html",
+          "hash": "oAQQeqYTmKctfHhJR5XDsg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.GradientBeginconstStatement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.GradientBeginconstStatement.html",
+          "hash": "dttXEvc35vz5D2hnfbGgbQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.GradientBegintransitionStatement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.GradientBegintransitionStatement.html",
+          "hash": "INEnz3SkkLL1ZiQMpiu/ZA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.GradientEndStatement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.GradientEndStatement.html",
+          "hash": "bDbaTwgPeVfBsCd+79zyCg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.GradientInterpolateStatement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.GradientInterpolateStatement.html",
+          "hash": "xO6mZL7bTnCD5KAW0zwvNg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.IrregularityChangeStatement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.IrregularityChangeStatement.html",
+          "hash": "FbmAyKnJocQC55e+3TPXjQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.JointnoisePlayStatement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.JointnoisePlayStatement.html",
+          "hash": "1y7wmYRosrOi83WKoYD0hw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.LegacyCurveStatement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.LegacyCurveStatement.html",
+          "hash": "YhOaDe4T5NdgvZQT3nTu/w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.LegacyFogStatement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.LegacyFogStatement.html",
+          "hash": "K8G8GKpLcuqYLvPVR7l/iw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.LegacyPitchStatement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.LegacyPitchStatement.html",
+          "hash": "Q0DrU0h2z4TphmwsucoUmg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.LegacyTurnStatement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.LegacyTurnStatement.html",
+          "hash": "ve74FBOVh7QAYAtw3b/sbw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.LightAmbientStatement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.LightAmbientStatement.html",
+          "hash": "zdi51e2pN59p3bZZTZS0aw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.LightDiffuseStatement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.LightDiffuseStatement.html",
+          "hash": "RnEG3ULx+YEsdAbb//lotQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.MapData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.MapData.html",
+          "hash": "JLm+huK5mtC77dd6/rOR2A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.PretrainPassStatement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.PretrainPassStatement.html",
+          "hash": "P019mqLKaQZxcl4gpORO8g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.RepeaterBegin0Statement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.RepeaterBegin0Statement.html",
+          "hash": "+7ZWp2APUkM7x2ulb4X5DQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.RepeaterBeginStatement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.RepeaterBeginStatement.html",
+          "hash": "VDOpkPkvB4bau0OyX1BTTg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.RepeaterEndStatement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.RepeaterEndStatement.html",
+          "hash": "9DTvekorSblAml3uly0jYA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.RollingnoiseChangeStatement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.RollingnoiseChangeStatement.html",
+          "hash": "/B9HkLf9tdsyYYfC7ZDZgg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.SectionBeginStatement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.SectionBeginStatement.html",
+          "hash": "J1X13rBSxBb6+fgJ3znmzA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.SectionBeginnewStatement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.SectionBeginnewStatement.html",
+          "hash": "H/ht+f/L4+aKR6e7zmHI1g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.SectionSetspeedlimitStatement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.SectionSetspeedlimitStatement.html",
+          "hash": "zlSfJwABE0GbP0wzWBWlfA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.SignalLoadStatement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.SignalLoadStatement.html",
+          "hash": "TAphyjTluwQsZaYZGKsvoA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.SignalPutStatement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.SignalPutStatement.html",
+          "hash": "4DU1yI4owNXGT/AvuzJ9OQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.SignalSpeedlimitStatement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.SignalSpeedlimitStatement.html",
+          "hash": "+8fGg+0HWT36rp/RO3nLCg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.Sound3dLoadStatement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.Sound3dLoadStatement.html",
+          "hash": "6xBlYUQQrpFfbePYplVBjw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.Sound3dPutStatement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.Sound3dPutStatement.html",
+          "hash": "uocS1yl1LLvzV4snv0dkWg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.SoundLoadStatement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.SoundLoadStatement.html",
+          "hash": "9wjAyAcuLlwiYrLDAvFSzg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.SoundPlayStatement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.SoundPlayStatement.html",
+          "hash": "JOk/ZQ1frONDVwNerGrbRA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.SpeedlimitBeginStatement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.SpeedlimitBeginStatement.html",
+          "hash": "yjIWlASKf60zQYkuG8ZUBA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.SpeedlimitEndStatement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.SpeedlimitEndStatement.html",
+          "hash": "OkPC2lxjJEvODV+zb9Eluw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.Statement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.Statement.html",
+          "hash": "kZnplPCBJ5fVvQk1806gkw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.StationLoadStatement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.StationLoadStatement.html",
+          "hash": "r+qe4aE2rRnsGrjtpact9w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.StationPutStatement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.StationPutStatement.html",
+          "hash": "7wO7npU6FcoAsLm7bH/9sA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.StructureLoadStatement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.StructureLoadStatement.html",
+          "hash": "mYuPZO+GT1qgB+SNOquPOQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.StructurePut0Statement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.StructurePut0Statement.html",
+          "hash": "tJgApEoQFric21o70v30wQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.StructurePutStatement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.StructurePutStatement.html",
+          "hash": "vmLUuXxGPFVu8VGIIihG3g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.StructurePutbetweenStatement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.StructurePutbetweenStatement.html",
+          "hash": "Rkbo7IAwORZ7+nRUnBzlJg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.SyntaxData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.SyntaxData.html",
+          "hash": "dAZqat2qS8eOLBCbhzk+Eg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.TrackCantBeginStatement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.TrackCantBeginStatement.html",
+          "hash": "AZ44LFQ3KujvoQmoQ+m5ZQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.TrackCantBegintransitionStatement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.TrackCantBegintransitionStatement.html",
+          "hash": "yB0PuirxZT6EO3pVxa1eyQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.TrackCantEndStatement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.TrackCantEndStatement.html",
+          "hash": "IFdJ3hgrPNyVBNxz3BFPuw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.TrackCantInterpolateStatement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.TrackCantInterpolateStatement.html",
+          "hash": "zcmqGDkzZuyl1V8lnZrCdA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.TrackCantSetcenterStatement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.TrackCantSetcenterStatement.html",
+          "hash": "sgMzNOMP/hyFLL+B0Nw7mQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.TrackCantSetfunctionStatement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.TrackCantSetfunctionStatement.html",
+          "hash": "2yFeLzHP11h4gL3O2ra6xQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.TrackCantSetgaugeStatement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.TrackCantSetgaugeStatement.html",
+          "hash": "Jv/7WhH1wtWAmvXcHS4X4Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.TrackCantStatement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.TrackCantStatement.html",
+          "hash": "WmjU2VclRSLTX8yb12pApg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.TrackGaugeStatement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.TrackGaugeStatement.html",
+          "hash": "K00BUwuad96qNCPBK7ovhQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.TrackPositionStatement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.TrackPositionStatement.html",
+          "hash": "LZUOCW3HOnEsHox1VlxtiQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.TrackXInterpolateStatement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.TrackXInterpolateStatement.html",
+          "hash": "I5l5h5g7id1cHwTaSqMeIA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.TrackYInterpolateStatement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.TrackYInterpolateStatement.html",
+          "hash": "Nuo1yYkPF7ZHHj0RJJJO+A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.html",
+          "hash": "H6Y2/ULMDQw7SRzKjTTCJA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.TrainEnableStatement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.TrainEnableStatement.html",
+          "hash": "Cll+0KWCxA6yZnCRH2XwVA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.TrainLoadStatement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.TrainLoadStatement.html",
+          "hash": "k6IwF/AJRK0elSQJHQYVRg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.TrainStopStatement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.TrainStopStatement.html",
+          "hash": "8SxbT+pYZiT+h1vQ3PhYxQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateData.html",
+          "hash": "MTx32dVyqYs0mYqZecGzOA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateMapGrammarVisitor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateMapGrammarVisitor.html",
+          "hash": "rD5bTKW08ZykZnx2mEaTAA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateMapGrammarVisitorWithInclude.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.EvaluateMapGrammarVisitorWithInclude.html",
+          "hash": "ddxMQQvtUyQXujoikzL64g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.MapElementName.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.MapElementName.html",
+          "hash": "lEf98pzXqsgETOltIGvw6w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.MapFunctionName.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.MapFunctionName.html",
+          "hash": "hhkKSBGfOdtMg+1QisYb4A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.MapGrammarParser.MapGrammarParserOption.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.MapGrammarParser.MapGrammarParserOption.html",
+          "hash": "LMvHaY9rjy3r2VZrx4/lmA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.MapGrammarParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.MapGrammarParser.html",
+          "hash": "CT4CWE2a1dzLfJh6fgUq3w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.MapSubElementName.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.MapSubElementName.html",
+          "hash": "/GCwYPoQktYwYJCMw688DA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.IMapGrammarParserListener.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.IMapGrammarParserListener.html",
+          "hash": "1EiHKnDfqPzF9M4BwvJ5wQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.IMapGrammarParserVisitor-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.IMapGrammarParserVisitor-1.html",
+          "hash": "VPZqbod19Zi7+dVzg29mYA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.html",
+          "hash": "FQDEuHPnc45YMa1ru4zF0g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.AbsExprContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.AbsExprContext.html",
+          "hash": "0RYqS1TzdEAQfRRG2rbENg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.AdhesionContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.AdhesionContext.html",
+          "hash": "iC+x2fsmsmVqteZwtFUjXQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.AdhesionStateContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.AdhesionStateContext.html",
+          "hash": "+Geog4tVrydrGwDxR7N0gA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Atan2ExprContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Atan2ExprContext.html",
+          "hash": "t5Je8KIt9/sHlDA+u2zyRQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.BackgroundContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.BackgroundContext.html",
+          "hash": "l0a8OejLWJsxYTJr60m1Ew=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.BackgroundStateContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.BackgroundStateContext.html",
+          "hash": "GiHDl1kC0AIcvkfsfJkj2g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.BeaconContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.BeaconContext.html",
+          "hash": "fSpNakXr4hvErrCUJgI8Mg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.BeaconStateContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.BeaconStateContext.html",
+          "hash": "E+rcuIFFcjImGLpuGYNxFw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CabilluminanceContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CabilluminanceContext.html",
+          "hash": "RhFLY7bWF4Twy87gC65nDQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CabilluminanceStateContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CabilluminanceStateContext.html",
+          "hash": "XWkkmmo18V231fByNFcR0g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CeilExprContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CeilExprContext.html",
+          "hash": "xn+hJKb+HzT6oDSDZb4g1w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext.html",
+          "hash": "1qsaX5HMsjKmxPbv7MGgNw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.html",
+          "hash": "W4TxGPCsMPiuuK9a6reOVA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveStateContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveStateContext.html",
+          "hash": "V9sdaVW5YRe0hKAEd22aAw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DistStateContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DistStateContext.html",
+          "hash": "pOYh/f1/CQ4rU2Htf9waVA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DistanceContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DistanceContext.html",
+          "hash": "ejpvE4KyzB0wvGEMrbJ+6A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DistanceExprContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DistanceExprContext.html",
+          "hash": "m7f0uRO2rMWuwR7iBsrzSw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.html",
+          "hash": "UcAK/m9M5huzvhiA/DtlEQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceStateContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceStateContext.html",
+          "hash": "yi+bJmW9s9j6OtEoULKJpA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Encode_stringContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Encode_stringContext.html",
+          "hash": "sY0T8ZtyRZTRy/U7ObnO0A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.EncodingContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.EncodingContext.html",
+          "hash": "rOGOt+KWM3a6zSO9ngO97w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExpExprContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExpExprContext.html",
+          "hash": "s8beLcjr45QCUVZ7Pg9Ijg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprArgsContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprArgsContext.html",
+          "hash": "2R86WHNcv84e70ynlH/a7Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext.html",
+          "hash": "ln9iUzmnfqq5neruzqknow=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.FlangenoiseContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.FlangenoiseContext.html",
+          "hash": "XZrdSwjL60lxWB0nrS69Fw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.FlangenoiseStateContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.FlangenoiseStateContext.html",
+          "hash": "2Cm0vX4zBCpfAqNg27KUbQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.FloorExprContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.FloorExprContext.html",
+          "hash": "WW0DJDzVZbYTFpS7Lj1dNA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.FogContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.FogContext.html",
+          "hash": "U7LLwvuJ8+n/fgYDevPnLw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.FogStateContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.FogStateContext.html",
+          "hash": "CwJ85Oqw1asykErz8tTFYQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.html",
+          "hash": "4t1dueoshD6GmlSuhszWSw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientStateContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientStateContext.html",
+          "hash": "rpjBKPtD4bOhc3i2fYdtVA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.IncludeContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.IncludeContext.html",
+          "hash": "aKWsTLeruR3lzqrylZ6aeg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.IncludeStateContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.IncludeStateContext.html",
+          "hash": "QSfmQrJEtG1Vx+wJElxGbg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.InfixExprContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.InfixExprContext.html",
+          "hash": "wV8MXJd4tScbHeKxHQhMPg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.IrregularityContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.IrregularityContext.html",
+          "hash": "Xv5k/ef7s0zctG1tZo/SVw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.IrregularityStateContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.IrregularityStateContext.html",
+          "hash": "xNVbl06vqeVSQxw0QxEqbg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.JointnoiseContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.JointnoiseContext.html",
+          "hash": "Isqeg7AQaNoiLSRb+gZvSQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.JointnoiseStateContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.JointnoiseStateContext.html",
+          "hash": "UFqLxcGFIaVavhToO2tPfg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LegacyContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LegacyContext.html",
+          "hash": "jCHgJlJm+pj5BziWJOB49Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LegacyStateContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LegacyStateContext.html",
+          "hash": "x//4dW7DrNGBwM4/kbeG/g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.html",
+          "hash": "aQuYkTznGaDgaKtP8UOWig=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightStateContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightStateContext.html",
+          "hash": "rhRi0OpV2r+5KVJXeOIAhg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LogExprContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LogExprContext.html",
+          "hash": "lLJwMC9rdI85WXZjeVjJzA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.NullableExprContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.NullableExprContext.html",
+          "hash": "6sZOuf2t9o002VoVS9mgEg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.NumberExprContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.NumberExprContext.html",
+          "hash": "EmkmB8KC8T5l9iPJ2KNMjQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ParensExprContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ParensExprContext.html",
+          "hash": "jNrT20XMIMJXXg8kcjKZIQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.PowExprContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.PowExprContext.html",
+          "hash": "nEJDQa3BmqEkmZY11Qti+A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.PretrainContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.PretrainContext.html",
+          "hash": "nVPXJWXDW53j5vARn86hRQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.PretrainStateContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.PretrainStateContext.html",
+          "hash": "iPUXhPKzOPFwH2yuepwrXw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RandExprContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RandExprContext.html",
+          "hash": "pxfd4ZeCKgBu/Z/j6rRrAg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RepeaterContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RepeaterContext.html",
+          "hash": "jhllJC/l/C2dnvglBIq0Sg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RepeaterStateContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RepeaterStateContext.html",
+          "hash": "64R078iQqtqAO/D/1IBACg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.html",
+          "hash": "temM8zb8SUnRBYyX29dRgw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseStateContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseStateContext.html",
+          "hash": "SqfpUTxnHhinN7TfNUk65g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RootContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RootContext.html",
+          "hash": "zwiavhY0L8HM7K29AcsVzA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SectionContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SectionContext.html",
+          "hash": "bdF2cR7cPGYAffp6BUrk9w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SectionStateContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SectionStateContext.html",
+          "hash": "ofhn5urH9Vbbiv5PwMN8rw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SignalContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SignalContext.html",
+          "hash": "WZP2ZoxFdOAaqPjWTYVpBQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SignalStateContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SignalStateContext.html",
+          "hash": "iMQH1ElXkSspeP9tHISWOQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SinExprContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SinExprContext.html",
+          "hash": "kU5rfcqdX8SeP74JM2RzNw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dContext.html",
+          "hash": "z+aoAumSvyOvCOQZM/FjxA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dStateContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dStateContext.html",
+          "hash": "XA2YWs4iDP5eVApN6CeDMw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.html",
+          "hash": "DC7q0HvuueTHg923+sA/Vw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundStateContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundStateContext.html",
+          "hash": "Wnb2EWKneSx/gTx1Il/XAA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SpeedlimitContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SpeedlimitContext.html",
+          "hash": "7ZODnHLZE3JN9VqC/c9Lhg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SpeedlimitStateContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SpeedlimitStateContext.html",
+          "hash": "xvHuF/S/qW+hsPCWRqUUWg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SqrtExprContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SqrtExprContext.html",
+          "hash": "pJTD1qd0ctS+OcHPBUcs8w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StatementContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StatementContext.html",
+          "hash": "xdkE0UfzqwWbasnvrCAwJw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StationContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StationContext.html",
+          "hash": "NKu7u4FdJrfkHK8kYg2VYg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StationStateContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StationStateContext.html",
+          "hash": "RyMgjjlOxQjXgnJVMh/njQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StringContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StringContext.html",
+          "hash": "Y+JhsLlmdFBfjVKcqx0kCw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StringExprContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StringExprContext.html",
+          "hash": "1Ce8Icmbui9Fk3bpAHOmVQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.String_textContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.String_textContext.html",
+          "hash": "AUoOjmyTd2pnYNjaJmBLDQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StrkeyContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StrkeyContext.html",
+          "hash": "dwHaQdZw+nQ+q+HFMTcIqw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StructureContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StructureContext.html",
+          "hash": "CJ6lwKxAUjxOEavA++k/uQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StructureStateContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StructureStateContext.html",
+          "hash": "zFtq3fM2PADUJQj+z/6QcA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.TrackContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.TrackContext.html",
+          "hash": "A5xHLY5l5ZLTWWJ3lKGTwg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.TrackStateContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.TrackStateContext.html",
+          "hash": "OsDf/N3PKG7msYIs0ByfMw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.TrainContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.TrainContext.html",
+          "hash": "nb6pKYK28GqRAgiG/iBM7g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.TrainStateContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.TrainStateContext.html",
+          "hash": "roUcDf+QWdp2CBH2tV7icA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.UnaryExprContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.UnaryExprContext.html",
+          "hash": "N4TDdVFNpHMPNVeiejsm2A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarAssignContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarAssignContext.html",
+          "hash": "qqsA8joOLjEu7KKz+SIyIw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarAssignStateContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarAssignStateContext.html",
+          "hash": "cUs2dypUPx24LFTZqd+vKw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarContext.html",
+          "hash": "Jw9EWZtiQk723JQNLy+rcw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarExprContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarExprContext.html",
+          "hash": "5mGK6I74OIJi0GwVk8d5ZA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.html",
+          "hash": "M+kt2zedYidXwCx25yPbTg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParserBaseListener.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParserBaseListener.html",
+          "hash": "B3BWOezV2PdG79wFH5SrEQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParserBaseVisitor-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParserBaseVisitor-1.html",
+          "hash": "28cKxBuE+ff1ajlELJ7PBQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.SyntaxDefinitions.html",
+          "hash": "6e/GMt4ibXcWmDzqBGXc8Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.VariableStore.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.VariableStore.html",
+          "hash": "RHGwOD3tDxd2BuzST/ckEA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.MapGrammar.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.MapGrammar.html",
+          "hash": "QI6Y8NVdoiP+JlTqbjiJPg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.ParseError.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.ParseError.html",
+          "hash": "WwrtN1dslRuehhCtykOAOg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.ParseErrorLevel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.ParseErrorLevel.html",
+          "hash": "+tp3bV260HMol/sb/ep0NQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.ParseErrorListener.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.ParseErrorListener.html",
+          "hash": "6m7JAuLOejVtq8XnsF97qw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.ScenarioGrammar.FilePath.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.ScenarioGrammar.FilePath.html",
+          "hash": "I5j2UeuaRtRFAd4eGd9RCw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.ScenarioGrammar.ScenarioData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.ScenarioGrammar.ScenarioData.html",
+          "hash": "bDUAs9DOWHhCiaYAovdpSw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.ScenarioGrammar.ScenarioGrammarParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.ScenarioGrammar.ScenarioGrammarParser.html",
+          "hash": "vXwpfjiEr2965tKp1qIpfA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserListener.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserListener.html",
+          "hash": "XQG0znny0j4ShODCPE68Fw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor-1.html",
+          "hash": "x7IzTKI2/El8R1OOP2GFEg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.html",
+          "hash": "i1Ip2DWNrXdMK3B01Cv5SQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.AuthorStateContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.AuthorStateContext.html",
+          "hash": "7qlPBGYjfp9/tHl27zWehQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.CommentStateContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.CommentStateContext.html",
+          "hash": "ydNP/tZUvfUZfSs4vb4E7g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.Encode_stringContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.Encode_stringContext.html",
+          "hash": "VNw+39yKmDLzcugz0fqOgg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.EncodingContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.EncodingContext.html",
+          "hash": "+a3VA5b2PqtGE94P9MWUaQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.ImageStateContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.ImageStateContext.html",
+          "hash": "6Sb3CG73D57xxZPk89lEgw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.RootContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.RootContext.html",
+          "hash": "qDP2SKBIb3a49Yrz9akhEA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.RouteStateContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.RouteStateContext.html",
+          "hash": "6+J/wikBqwvNahBiGdbsZg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.RouteTitleStateContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.RouteTitleStateContext.html",
+          "hash": "RrYvopfpgji46cHiJ8EyyA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.StatementContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.StatementContext.html",
+          "hash": "8xPqujwV6q+bwvNet3a5bQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.StringContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.StringContext.html",
+          "hash": "BDTWA4namJ5IsqXumc7ydQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.TitleStateContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.TitleStateContext.html",
+          "hash": "2iIaDhW7NuFF30oxUXUhaw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.VehicleStateContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.VehicleStateContext.html",
+          "hash": "vKz8wUyh5/00wXsGpnq9qA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.VehicleTitleStateContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.VehicleTitleStateContext.html",
+          "hash": "8+OClhSGFvW/yN/iq1ZtKg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.Weight_pathContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.Weight_pathContext.html",
+          "hash": "BX4igdwhXFhLinJD8OFc5g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.html",
+          "hash": "SvuZFAEGRimCSiNneAjAJQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParserBaseListener.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParserBaseListener.html",
+          "hash": "K7kU+jlzYXu92hNgvA4pTw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParserBaseVisitor-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParserBaseVisitor-1.html",
+          "hash": "YiUIcn+SdG568xMDLJgBJg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.html",
+          "hash": "8+uslfd1g7yFOwiZeTPVxQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.ScenarioGrammar.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.ScenarioGrammar.html",
+          "hash": "JewdB39HtZY1xtoQ4gjKLw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.StringValueAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.StringValueAttribute.html",
+          "hash": "v384nO9iIwZCdYeyOdGDpA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Bve5_Parsing.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bve5_Parsing.html",
+          "hash": "6cKT+GMqpxoAJuxLPmaFMw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "QHBqO/B5V0uEScXU2yxpUw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "vLDmIMucWaUxxDLp3rf5NQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "r+5RmIQz1GnMLHoTjak2iw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": true,
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 1,
+          "skipped_file_count": 1
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 317,
+          "skipped_file_count": 25
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

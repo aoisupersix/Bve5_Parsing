@@ -1,0 +1,272 @@
+### YamlMime:ManagedReference
+items:
+- uid: Bve5_Parsing.MapGrammar.MapSubElementName
+  commentId: T:Bve5_Parsing.MapGrammar.MapSubElementName
+  id: MapSubElementName
+  parent: Bve5_Parsing.MapGrammar
+  children:
+  - Bve5_Parsing.MapGrammar.MapSubElementName.Cant
+  - Bve5_Parsing.MapGrammar.MapSubElementName.X
+  - Bve5_Parsing.MapGrammar.MapSubElementName.Y
+  langs:
+  - csharp
+  - vb
+  name: MapSubElementName
+  nameWithType: MapSubElementName
+  fullName: Bve5_Parsing.MapGrammar.MapSubElementName
+  type: Enum
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: MapSubElementName
+    path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+    startLine: 167
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\nマップ副要素名（一部構文のみに存在します）\n"
+  example: []
+  syntax:
+    content: public enum MapSubElementName
+    content.vb: Public Enum MapSubElementName
+  extensionMethods:
+  - System.Enum.Bve5_Parsing.CommonAttribute.GetStringValue
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: Bve5_Parsing.MapGrammar.MapSubElementName.X
+  commentId: F:Bve5_Parsing.MapGrammar.MapSubElementName.X
+  id: X
+  parent: Bve5_Parsing.MapGrammar.MapSubElementName
+  langs:
+  - csharp
+  - vb
+  name: X
+  nameWithType: MapSubElementName.X
+  fullName: Bve5_Parsing.MapGrammar.MapSubElementName.X
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: X
+    path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+    startLine: 172
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\nX\n"
+  example: []
+  syntax:
+    content: >-
+      [StringValue("X")]
+
+      X = 0
+    return:
+      type: Bve5_Parsing.MapGrammar.MapSubElementName
+    content.vb: >-
+      <StringValue("X")>
+
+      X = 0
+  attributes:
+  - type: Bve5_Parsing.StringValueAttribute
+    ctor: Bve5_Parsing.StringValueAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: X
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.MapGrammar.MapSubElementName.Y
+  commentId: F:Bve5_Parsing.MapGrammar.MapSubElementName.Y
+  id: Y
+  parent: Bve5_Parsing.MapGrammar.MapSubElementName
+  langs:
+  - csharp
+  - vb
+  name: Y
+  nameWithType: MapSubElementName.Y
+  fullName: Bve5_Parsing.MapGrammar.MapSubElementName.Y
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Y
+    path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+    startLine: 178
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\nY\n"
+  example: []
+  syntax:
+    content: >-
+      [StringValue("Y")]
+
+      Y = 1
+    return:
+      type: Bve5_Parsing.MapGrammar.MapSubElementName
+    content.vb: >-
+      <StringValue("Y")>
+
+      Y = 1
+  attributes:
+  - type: Bve5_Parsing.StringValueAttribute
+    ctor: Bve5_Parsing.StringValueAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Y
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.MapGrammar.MapSubElementName.Cant
+  commentId: F:Bve5_Parsing.MapGrammar.MapSubElementName.Cant
+  id: Cant
+  parent: Bve5_Parsing.MapGrammar.MapSubElementName
+  langs:
+  - csharp
+  - vb
+  name: Cant
+  nameWithType: MapSubElementName.Cant
+  fullName: Bve5_Parsing.MapGrammar.MapSubElementName.Cant
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Cant
+    path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+    startLine: 184
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\nCant\n"
+  example: []
+  syntax:
+    content: >-
+      [StringValue("Cant")]
+
+      Cant = 2
+    return:
+      type: Bve5_Parsing.MapGrammar.MapSubElementName
+    content.vb: >-
+      <StringValue("Cant")>
+
+      Cant = 2
+  attributes:
+  - type: Bve5_Parsing.StringValueAttribute
+    ctor: Bve5_Parsing.StringValueAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Cant
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: Bve5_Parsing.MapGrammar
+  commentId: N:Bve5_Parsing.MapGrammar
+  name: Bve5_Parsing.MapGrammar
+  nameWithType: Bve5_Parsing.MapGrammar
+  fullName: Bve5_Parsing.MapGrammar
+- uid: System.Enum.Bve5_Parsing.CommonAttribute.GetStringValue
+  commentId: M:Bve5_Parsing.CommonAttribute.GetStringValue(System.Enum)
+  parent: Bve5_Parsing.CommonAttribute
+  definition: Bve5_Parsing.CommonAttribute.GetStringValue(System.Enum)
+  name: GetStringValue()
+  nameWithType: CommonAttribute.GetStringValue()
+  fullName: Bve5_Parsing.CommonAttribute.GetStringValue()
+  spec.csharp:
+  - uid: Bve5_Parsing.CommonAttribute.GetStringValue
+    name: GetStringValue
+    nameWithType: CommonAttribute.GetStringValue
+    fullName: Bve5_Parsing.CommonAttribute.GetStringValue
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Bve5_Parsing.CommonAttribute.GetStringValue
+    name: GetStringValue
+    nameWithType: CommonAttribute.GetStringValue
+    fullName: Bve5_Parsing.CommonAttribute.GetStringValue
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Bve5_Parsing.CommonAttribute.GetStringValue(System.Enum)
+  commentId: M:Bve5_Parsing.CommonAttribute.GetStringValue(System.Enum)
+  isExternal: true
+  name: GetStringValue(Enum)
+  nameWithType: CommonAttribute.GetStringValue(Enum)
+  fullName: Bve5_Parsing.CommonAttribute.GetStringValue(System.Enum)
+  spec.csharp:
+  - uid: Bve5_Parsing.CommonAttribute.GetStringValue(System.Enum)
+    name: GetStringValue
+    nameWithType: CommonAttribute.GetStringValue
+    fullName: Bve5_Parsing.CommonAttribute.GetStringValue
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Enum
+    name: Enum
+    nameWithType: Enum
+    fullName: System.Enum
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Bve5_Parsing.CommonAttribute.GetStringValue(System.Enum)
+    name: GetStringValue
+    nameWithType: CommonAttribute.GetStringValue
+    fullName: Bve5_Parsing.CommonAttribute.GetStringValue
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Enum
+    name: Enum
+    nameWithType: Enum
+    fullName: System.Enum
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Bve5_Parsing.CommonAttribute
+  commentId: T:Bve5_Parsing.CommonAttribute
+  parent: Bve5_Parsing
+  name: CommonAttribute
+  nameWithType: CommonAttribute
+  fullName: Bve5_Parsing.CommonAttribute
+- uid: Bve5_Parsing
+  commentId: N:Bve5_Parsing
+  name: Bve5_Parsing
+  nameWithType: Bve5_Parsing
+  fullName: Bve5_Parsing
+- uid: Bve5_Parsing.MapGrammar.MapSubElementName
+  commentId: T:Bve5_Parsing.MapGrammar.MapSubElementName
+  parent: Bve5_Parsing.MapGrammar
+  name: MapSubElementName
+  nameWithType: MapSubElementName
+  fullName: Bve5_Parsing.MapGrammar.MapSubElementName

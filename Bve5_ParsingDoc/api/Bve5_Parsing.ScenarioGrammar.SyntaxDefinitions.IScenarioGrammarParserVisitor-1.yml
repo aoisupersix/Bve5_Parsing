@@ -1,0 +1,1278 @@
+### YamlMime:ManagedReference
+items:
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1
+  commentId: T:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1
+  id: IScenarioGrammarParserVisitor`1
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  children:
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitAuthorState(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.AuthorStateContext)
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitCommentState(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.CommentStateContext)
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitEncode_string(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.Encode_stringContext)
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitEncoding(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.EncodingContext)
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitImageState(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.ImageStateContext)
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitRoot(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.RootContext)
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitRouteState(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.RouteStateContext)
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitRouteTitleState(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.RouteTitleStateContext)
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitStatement(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.StatementContext)
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitString(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.StringContext)
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitTitleState(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.TitleStateContext)
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitVehicleState(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.VehicleStateContext)
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitVehicleTitleState(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.VehicleTitleStateContext)
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitWeight_path(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.Weight_pathContext)
+  langs:
+  - csharp
+  - vb
+  name: IScenarioGrammarParserVisitor<Result>
+  nameWithType: IScenarioGrammarParserVisitor<Result>
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor<Result>
+  type: Interface
+  source:
+    remote:
+      path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParserVisitor.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: IScenarioGrammarParserVisitor
+    path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParserVisitor.cs
+    startLine: 31
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  summary: "\nThis interface defines a complete generic visitor for a parse tree produced\nby <xref href=\"Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: >-
+      [CLSCompliant(false)]
+
+      public interface IScenarioGrammarParserVisitor<Result> : IParseTreeVisitor<Result>
+    typeParameters:
+    - id: Result
+      description: The return type of the visit operation.
+    content.vb: >-
+      <CLSCompliant(False)>
+
+      Public Interface IScenarioGrammarParserVisitor(Of Result)
+
+          Inherits IParseTreeVisitor(Of Result)
+  inheritedMembers:
+  - Antlr4.Runtime.Tree.IParseTreeVisitor{{Result}}.Visit(Antlr4.Runtime.Tree.IParseTree)
+  - Antlr4.Runtime.Tree.IParseTreeVisitor{{Result}}.VisitChildren(Antlr4.Runtime.Tree.IRuleNode)
+  - Antlr4.Runtime.Tree.IParseTreeVisitor{{Result}}.VisitTerminal(Antlr4.Runtime.Tree.ITerminalNode)
+  - Antlr4.Runtime.Tree.IParseTreeVisitor{{Result}}.VisitErrorNode(Antlr4.Runtime.Tree.IErrorNode)
+  attributes:
+  - type: System.CLSCompliantAttribute
+    ctor: System.CLSCompliantAttribute.#ctor(System.Boolean)
+    arguments:
+    - type: System.Boolean
+      value: false
+  nameWithType.vb: IScenarioGrammarParserVisitor(Of Result)
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+  fullName.vb: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor(Of Result)
+  name.vb: IScenarioGrammarParserVisitor(Of Result)
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitImageState(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.ImageStateContext)
+  commentId: M:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitImageState(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.ImageStateContext)
+  id: VisitImageState(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.ImageStateContext)
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1
+  langs:
+  - csharp
+  - vb
+  name: VisitImageState(ScenarioGrammarParser.ImageStateContext)
+  nameWithType: IScenarioGrammarParserVisitor<Result>.VisitImageState(ScenarioGrammarParser.ImageStateContext)
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor<Result>.VisitImageState(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.ImageStateContext)
+  type: Method
+  source:
+    remote:
+      path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParserVisitor.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: VisitImageState
+    path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParserVisitor.cs
+    startLine: 40
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  summary: "\nVisit a parse tree produced by the <code>imageState</code>\nlabeled alternative in <xref href=\"Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.statement\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: Result VisitImageState([NotNull] ScenarioGrammarParser.ImageStateContext context)
+    parameters:
+    - id: context
+      type: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.ImageStateContext
+      description: The parse tree.
+      attributes:
+      - type: Antlr4.Runtime.Misc.NotNullAttribute
+        ctor: Antlr4.Runtime.Misc.NotNullAttribute.#ctor
+        arguments: []
+    return:
+      type: '{Result}'
+    content.vb: Function VisitImageState(context As ScenarioGrammarParser.ImageStateContext) As Result
+  overload: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitImageState*
+  nameWithType.vb: IScenarioGrammarParserVisitor(Of Result).VisitImageState(ScenarioGrammarParser.ImageStateContext)
+  fullName.vb: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor(Of Result).VisitImageState(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.ImageStateContext)
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitCommentState(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.CommentStateContext)
+  commentId: M:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitCommentState(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.CommentStateContext)
+  id: VisitCommentState(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.CommentStateContext)
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1
+  langs:
+  - csharp
+  - vb
+  name: VisitCommentState(ScenarioGrammarParser.CommentStateContext)
+  nameWithType: IScenarioGrammarParserVisitor<Result>.VisitCommentState(ScenarioGrammarParser.CommentStateContext)
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor<Result>.VisitCommentState(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.CommentStateContext)
+  type: Method
+  source:
+    remote:
+      path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParserVisitor.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: VisitCommentState
+    path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParserVisitor.cs
+    startLine: 48
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  summary: "\nVisit a parse tree produced by the <code>commentState</code>\nlabeled alternative in <xref href=\"Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.statement\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: Result VisitCommentState([NotNull] ScenarioGrammarParser.CommentStateContext context)
+    parameters:
+    - id: context
+      type: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.CommentStateContext
+      description: The parse tree.
+      attributes:
+      - type: Antlr4.Runtime.Misc.NotNullAttribute
+        ctor: Antlr4.Runtime.Misc.NotNullAttribute.#ctor
+        arguments: []
+    return:
+      type: '{Result}'
+    content.vb: Function VisitCommentState(context As ScenarioGrammarParser.CommentStateContext) As Result
+  overload: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitCommentState*
+  nameWithType.vb: IScenarioGrammarParserVisitor(Of Result).VisitCommentState(ScenarioGrammarParser.CommentStateContext)
+  fullName.vb: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor(Of Result).VisitCommentState(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.CommentStateContext)
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitRouteTitleState(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.RouteTitleStateContext)
+  commentId: M:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitRouteTitleState(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.RouteTitleStateContext)
+  id: VisitRouteTitleState(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.RouteTitleStateContext)
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1
+  langs:
+  - csharp
+  - vb
+  name: VisitRouteTitleState(ScenarioGrammarParser.RouteTitleStateContext)
+  nameWithType: IScenarioGrammarParserVisitor<Result>.VisitRouteTitleState(ScenarioGrammarParser.RouteTitleStateContext)
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor<Result>.VisitRouteTitleState(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.RouteTitleStateContext)
+  type: Method
+  source:
+    remote:
+      path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParserVisitor.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: VisitRouteTitleState
+    path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParserVisitor.cs
+    startLine: 56
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  summary: "\nVisit a parse tree produced by the <code>routeTitleState</code>\nlabeled alternative in <xref href=\"Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.statement\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: Result VisitRouteTitleState([NotNull] ScenarioGrammarParser.RouteTitleStateContext context)
+    parameters:
+    - id: context
+      type: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.RouteTitleStateContext
+      description: The parse tree.
+      attributes:
+      - type: Antlr4.Runtime.Misc.NotNullAttribute
+        ctor: Antlr4.Runtime.Misc.NotNullAttribute.#ctor
+        arguments: []
+    return:
+      type: '{Result}'
+    content.vb: Function VisitRouteTitleState(context As ScenarioGrammarParser.RouteTitleStateContext) As Result
+  overload: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitRouteTitleState*
+  nameWithType.vb: IScenarioGrammarParserVisitor(Of Result).VisitRouteTitleState(ScenarioGrammarParser.RouteTitleStateContext)
+  fullName.vb: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor(Of Result).VisitRouteTitleState(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.RouteTitleStateContext)
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitVehicleTitleState(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.VehicleTitleStateContext)
+  commentId: M:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitVehicleTitleState(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.VehicleTitleStateContext)
+  id: VisitVehicleTitleState(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.VehicleTitleStateContext)
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1
+  langs:
+  - csharp
+  - vb
+  name: VisitVehicleTitleState(ScenarioGrammarParser.VehicleTitleStateContext)
+  nameWithType: IScenarioGrammarParserVisitor<Result>.VisitVehicleTitleState(ScenarioGrammarParser.VehicleTitleStateContext)
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor<Result>.VisitVehicleTitleState(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.VehicleTitleStateContext)
+  type: Method
+  source:
+    remote:
+      path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParserVisitor.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: VisitVehicleTitleState
+    path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParserVisitor.cs
+    startLine: 64
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  summary: "\nVisit a parse tree produced by the <code>vehicleTitleState</code>\nlabeled alternative in <xref href=\"Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.statement\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: Result VisitVehicleTitleState([NotNull] ScenarioGrammarParser.VehicleTitleStateContext context)
+    parameters:
+    - id: context
+      type: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.VehicleTitleStateContext
+      description: The parse tree.
+      attributes:
+      - type: Antlr4.Runtime.Misc.NotNullAttribute
+        ctor: Antlr4.Runtime.Misc.NotNullAttribute.#ctor
+        arguments: []
+    return:
+      type: '{Result}'
+    content.vb: Function VisitVehicleTitleState(context As ScenarioGrammarParser.VehicleTitleStateContext) As Result
+  overload: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitVehicleTitleState*
+  nameWithType.vb: IScenarioGrammarParserVisitor(Of Result).VisitVehicleTitleState(ScenarioGrammarParser.VehicleTitleStateContext)
+  fullName.vb: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor(Of Result).VisitVehicleTitleState(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.VehicleTitleStateContext)
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitRouteState(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.RouteStateContext)
+  commentId: M:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitRouteState(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.RouteStateContext)
+  id: VisitRouteState(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.RouteStateContext)
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1
+  langs:
+  - csharp
+  - vb
+  name: VisitRouteState(ScenarioGrammarParser.RouteStateContext)
+  nameWithType: IScenarioGrammarParserVisitor<Result>.VisitRouteState(ScenarioGrammarParser.RouteStateContext)
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor<Result>.VisitRouteState(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.RouteStateContext)
+  type: Method
+  source:
+    remote:
+      path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParserVisitor.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: VisitRouteState
+    path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParserVisitor.cs
+    startLine: 72
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  summary: "\nVisit a parse tree produced by the <code>routeState</code>\nlabeled alternative in <xref href=\"Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.statement\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: Result VisitRouteState([NotNull] ScenarioGrammarParser.RouteStateContext context)
+    parameters:
+    - id: context
+      type: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.RouteStateContext
+      description: The parse tree.
+      attributes:
+      - type: Antlr4.Runtime.Misc.NotNullAttribute
+        ctor: Antlr4.Runtime.Misc.NotNullAttribute.#ctor
+        arguments: []
+    return:
+      type: '{Result}'
+    content.vb: Function VisitRouteState(context As ScenarioGrammarParser.RouteStateContext) As Result
+  overload: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitRouteState*
+  nameWithType.vb: IScenarioGrammarParserVisitor(Of Result).VisitRouteState(ScenarioGrammarParser.RouteStateContext)
+  fullName.vb: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor(Of Result).VisitRouteState(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.RouteStateContext)
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitTitleState(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.TitleStateContext)
+  commentId: M:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitTitleState(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.TitleStateContext)
+  id: VisitTitleState(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.TitleStateContext)
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1
+  langs:
+  - csharp
+  - vb
+  name: VisitTitleState(ScenarioGrammarParser.TitleStateContext)
+  nameWithType: IScenarioGrammarParserVisitor<Result>.VisitTitleState(ScenarioGrammarParser.TitleStateContext)
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor<Result>.VisitTitleState(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.TitleStateContext)
+  type: Method
+  source:
+    remote:
+      path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParserVisitor.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: VisitTitleState
+    path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParserVisitor.cs
+    startLine: 80
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  summary: "\nVisit a parse tree produced by the <code>titleState</code>\nlabeled alternative in <xref href=\"Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.statement\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: Result VisitTitleState([NotNull] ScenarioGrammarParser.TitleStateContext context)
+    parameters:
+    - id: context
+      type: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.TitleStateContext
+      description: The parse tree.
+      attributes:
+      - type: Antlr4.Runtime.Misc.NotNullAttribute
+        ctor: Antlr4.Runtime.Misc.NotNullAttribute.#ctor
+        arguments: []
+    return:
+      type: '{Result}'
+    content.vb: Function VisitTitleState(context As ScenarioGrammarParser.TitleStateContext) As Result
+  overload: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitTitleState*
+  nameWithType.vb: IScenarioGrammarParserVisitor(Of Result).VisitTitleState(ScenarioGrammarParser.TitleStateContext)
+  fullName.vb: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor(Of Result).VisitTitleState(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.TitleStateContext)
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitAuthorState(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.AuthorStateContext)
+  commentId: M:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitAuthorState(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.AuthorStateContext)
+  id: VisitAuthorState(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.AuthorStateContext)
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1
+  langs:
+  - csharp
+  - vb
+  name: VisitAuthorState(ScenarioGrammarParser.AuthorStateContext)
+  nameWithType: IScenarioGrammarParserVisitor<Result>.VisitAuthorState(ScenarioGrammarParser.AuthorStateContext)
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor<Result>.VisitAuthorState(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.AuthorStateContext)
+  type: Method
+  source:
+    remote:
+      path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParserVisitor.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: VisitAuthorState
+    path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParserVisitor.cs
+    startLine: 88
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  summary: "\nVisit a parse tree produced by the <code>authorState</code>\nlabeled alternative in <xref href=\"Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.statement\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: Result VisitAuthorState([NotNull] ScenarioGrammarParser.AuthorStateContext context)
+    parameters:
+    - id: context
+      type: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.AuthorStateContext
+      description: The parse tree.
+      attributes:
+      - type: Antlr4.Runtime.Misc.NotNullAttribute
+        ctor: Antlr4.Runtime.Misc.NotNullAttribute.#ctor
+        arguments: []
+    return:
+      type: '{Result}'
+    content.vb: Function VisitAuthorState(context As ScenarioGrammarParser.AuthorStateContext) As Result
+  overload: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitAuthorState*
+  nameWithType.vb: IScenarioGrammarParserVisitor(Of Result).VisitAuthorState(ScenarioGrammarParser.AuthorStateContext)
+  fullName.vb: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor(Of Result).VisitAuthorState(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.AuthorStateContext)
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitVehicleState(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.VehicleStateContext)
+  commentId: M:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitVehicleState(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.VehicleStateContext)
+  id: VisitVehicleState(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.VehicleStateContext)
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1
+  langs:
+  - csharp
+  - vb
+  name: VisitVehicleState(ScenarioGrammarParser.VehicleStateContext)
+  nameWithType: IScenarioGrammarParserVisitor<Result>.VisitVehicleState(ScenarioGrammarParser.VehicleStateContext)
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor<Result>.VisitVehicleState(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.VehicleStateContext)
+  type: Method
+  source:
+    remote:
+      path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParserVisitor.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: VisitVehicleState
+    path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParserVisitor.cs
+    startLine: 96
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  summary: "\nVisit a parse tree produced by the <code>vehicleState</code>\nlabeled alternative in <xref href=\"Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.statement\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: Result VisitVehicleState([NotNull] ScenarioGrammarParser.VehicleStateContext context)
+    parameters:
+    - id: context
+      type: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.VehicleStateContext
+      description: The parse tree.
+      attributes:
+      - type: Antlr4.Runtime.Misc.NotNullAttribute
+        ctor: Antlr4.Runtime.Misc.NotNullAttribute.#ctor
+        arguments: []
+    return:
+      type: '{Result}'
+    content.vb: Function VisitVehicleState(context As ScenarioGrammarParser.VehicleStateContext) As Result
+  overload: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitVehicleState*
+  nameWithType.vb: IScenarioGrammarParserVisitor(Of Result).VisitVehicleState(ScenarioGrammarParser.VehicleStateContext)
+  fullName.vb: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor(Of Result).VisitVehicleState(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.VehicleStateContext)
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitRoot(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.RootContext)
+  commentId: M:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitRoot(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.RootContext)
+  id: VisitRoot(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.RootContext)
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1
+  langs:
+  - csharp
+  - vb
+  name: VisitRoot(ScenarioGrammarParser.RootContext)
+  nameWithType: IScenarioGrammarParserVisitor<Result>.VisitRoot(ScenarioGrammarParser.RootContext)
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor<Result>.VisitRoot(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.RootContext)
+  type: Method
+  source:
+    remote:
+      path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParserVisitor.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: VisitRoot
+    path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParserVisitor.cs
+    startLine: 103
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  summary: "\nVisit a parse tree produced by <xref href=\"Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.root\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: Result VisitRoot([NotNull] ScenarioGrammarParser.RootContext context)
+    parameters:
+    - id: context
+      type: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.RootContext
+      description: The parse tree.
+      attributes:
+      - type: Antlr4.Runtime.Misc.NotNullAttribute
+        ctor: Antlr4.Runtime.Misc.NotNullAttribute.#ctor
+        arguments: []
+    return:
+      type: '{Result}'
+    content.vb: Function VisitRoot(context As ScenarioGrammarParser.RootContext) As Result
+  overload: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitRoot*
+  nameWithType.vb: IScenarioGrammarParserVisitor(Of Result).VisitRoot(ScenarioGrammarParser.RootContext)
+  fullName.vb: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor(Of Result).VisitRoot(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.RootContext)
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitStatement(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.StatementContext)
+  commentId: M:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitStatement(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.StatementContext)
+  id: VisitStatement(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.StatementContext)
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1
+  langs:
+  - csharp
+  - vb
+  name: VisitStatement(ScenarioGrammarParser.StatementContext)
+  nameWithType: IScenarioGrammarParserVisitor<Result>.VisitStatement(ScenarioGrammarParser.StatementContext)
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor<Result>.VisitStatement(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.StatementContext)
+  type: Method
+  source:
+    remote:
+      path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParserVisitor.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: VisitStatement
+    path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParserVisitor.cs
+    startLine: 110
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  summary: "\nVisit a parse tree produced by <xref href=\"Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.statement\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: Result VisitStatement([NotNull] ScenarioGrammarParser.StatementContext context)
+    parameters:
+    - id: context
+      type: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.StatementContext
+      description: The parse tree.
+      attributes:
+      - type: Antlr4.Runtime.Misc.NotNullAttribute
+        ctor: Antlr4.Runtime.Misc.NotNullAttribute.#ctor
+        arguments: []
+    return:
+      type: '{Result}'
+    content.vb: Function VisitStatement(context As ScenarioGrammarParser.StatementContext) As Result
+  overload: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitStatement*
+  nameWithType.vb: IScenarioGrammarParserVisitor(Of Result).VisitStatement(ScenarioGrammarParser.StatementContext)
+  fullName.vb: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor(Of Result).VisitStatement(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.StatementContext)
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitEncoding(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.EncodingContext)
+  commentId: M:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitEncoding(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.EncodingContext)
+  id: VisitEncoding(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.EncodingContext)
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1
+  langs:
+  - csharp
+  - vb
+  name: VisitEncoding(ScenarioGrammarParser.EncodingContext)
+  nameWithType: IScenarioGrammarParserVisitor<Result>.VisitEncoding(ScenarioGrammarParser.EncodingContext)
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor<Result>.VisitEncoding(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.EncodingContext)
+  type: Method
+  source:
+    remote:
+      path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParserVisitor.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: VisitEncoding
+    path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParserVisitor.cs
+    startLine: 117
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  summary: "\nVisit a parse tree produced by <xref href=\"Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.encoding\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: Result VisitEncoding([NotNull] ScenarioGrammarParser.EncodingContext context)
+    parameters:
+    - id: context
+      type: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.EncodingContext
+      description: The parse tree.
+      attributes:
+      - type: Antlr4.Runtime.Misc.NotNullAttribute
+        ctor: Antlr4.Runtime.Misc.NotNullAttribute.#ctor
+        arguments: []
+    return:
+      type: '{Result}'
+    content.vb: Function VisitEncoding(context As ScenarioGrammarParser.EncodingContext) As Result
+  overload: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitEncoding*
+  nameWithType.vb: IScenarioGrammarParserVisitor(Of Result).VisitEncoding(ScenarioGrammarParser.EncodingContext)
+  fullName.vb: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor(Of Result).VisitEncoding(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.EncodingContext)
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitEncode_string(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.Encode_stringContext)
+  commentId: M:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitEncode_string(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.Encode_stringContext)
+  id: VisitEncode_string(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.Encode_stringContext)
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1
+  langs:
+  - csharp
+  - vb
+  name: VisitEncode_string(ScenarioGrammarParser.Encode_stringContext)
+  nameWithType: IScenarioGrammarParserVisitor<Result>.VisitEncode_string(ScenarioGrammarParser.Encode_stringContext)
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor<Result>.VisitEncode_string(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.Encode_stringContext)
+  type: Method
+  source:
+    remote:
+      path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParserVisitor.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: VisitEncode_string
+    path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParserVisitor.cs
+    startLine: 124
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  summary: "\nVisit a parse tree produced by <xref href=\"Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.encode_string\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: Result VisitEncode_string([NotNull] ScenarioGrammarParser.Encode_stringContext context)
+    parameters:
+    - id: context
+      type: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.Encode_stringContext
+      description: The parse tree.
+      attributes:
+      - type: Antlr4.Runtime.Misc.NotNullAttribute
+        ctor: Antlr4.Runtime.Misc.NotNullAttribute.#ctor
+        arguments: []
+    return:
+      type: '{Result}'
+    content.vb: Function VisitEncode_string(context As ScenarioGrammarParser.Encode_stringContext) As Result
+  overload: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitEncode_string*
+  nameWithType.vb: IScenarioGrammarParserVisitor(Of Result).VisitEncode_string(ScenarioGrammarParser.Encode_stringContext)
+  fullName.vb: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor(Of Result).VisitEncode_string(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.Encode_stringContext)
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitWeight_path(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.Weight_pathContext)
+  commentId: M:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitWeight_path(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.Weight_pathContext)
+  id: VisitWeight_path(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.Weight_pathContext)
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1
+  langs:
+  - csharp
+  - vb
+  name: VisitWeight_path(ScenarioGrammarParser.Weight_pathContext)
+  nameWithType: IScenarioGrammarParserVisitor<Result>.VisitWeight_path(ScenarioGrammarParser.Weight_pathContext)
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor<Result>.VisitWeight_path(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.Weight_pathContext)
+  type: Method
+  source:
+    remote:
+      path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParserVisitor.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: VisitWeight_path
+    path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParserVisitor.cs
+    startLine: 131
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  summary: "\nVisit a parse tree produced by <xref href=\"Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.weight_path\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: Result VisitWeight_path([NotNull] ScenarioGrammarParser.Weight_pathContext context)
+    parameters:
+    - id: context
+      type: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.Weight_pathContext
+      description: The parse tree.
+      attributes:
+      - type: Antlr4.Runtime.Misc.NotNullAttribute
+        ctor: Antlr4.Runtime.Misc.NotNullAttribute.#ctor
+        arguments: []
+    return:
+      type: '{Result}'
+    content.vb: Function VisitWeight_path(context As ScenarioGrammarParser.Weight_pathContext) As Result
+  overload: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitWeight_path*
+  nameWithType.vb: IScenarioGrammarParserVisitor(Of Result).VisitWeight_path(ScenarioGrammarParser.Weight_pathContext)
+  fullName.vb: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor(Of Result).VisitWeight_path(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.Weight_pathContext)
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitString(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.StringContext)
+  commentId: M:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitString(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.StringContext)
+  id: VisitString(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.StringContext)
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1
+  langs:
+  - csharp
+  - vb
+  name: VisitString(ScenarioGrammarParser.StringContext)
+  nameWithType: IScenarioGrammarParserVisitor<Result>.VisitString(ScenarioGrammarParser.StringContext)
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor<Result>.VisitString(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.StringContext)
+  type: Method
+  source:
+    remote:
+      path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParserVisitor.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: VisitString
+    path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParserVisitor.cs
+    startLine: 138
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  summary: "\nVisit a parse tree produced by <see cref=\"!:ScenarioGrammarParser.string\"></see>.\n"
+  example: []
+  syntax:
+    content: Result VisitString([NotNull] ScenarioGrammarParser.StringContext context)
+    parameters:
+    - id: context
+      type: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.StringContext
+      description: The parse tree.
+      attributes:
+      - type: Antlr4.Runtime.Misc.NotNullAttribute
+        ctor: Antlr4.Runtime.Misc.NotNullAttribute.#ctor
+        arguments: []
+    return:
+      type: '{Result}'
+    content.vb: Function VisitString(context As ScenarioGrammarParser.StringContext) As Result
+  overload: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitString*
+  nameWithType.vb: IScenarioGrammarParserVisitor(Of Result).VisitString(ScenarioGrammarParser.StringContext)
+  fullName.vb: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor(Of Result).VisitString(Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.StringContext)
+references:
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser
+  commentId: T:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser
+  name: ScenarioGrammarParser
+  nameWithType: ScenarioGrammarParser
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  commentId: N:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  name: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  nameWithType: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+- uid: Antlr4.Runtime.Tree.IParseTreeVisitor{{Result}}.Visit(Antlr4.Runtime.Tree.IParseTree)
+  commentId: M:Antlr4.Runtime.Tree.IParseTreeVisitor{`0}.Visit(Antlr4.Runtime.Tree.IParseTree)
+  parent: Antlr4.Runtime.Tree.IParseTreeVisitor{{Result}}
+  definition: Antlr4.Runtime.Tree.IParseTreeVisitor`1.Visit(Antlr4.Runtime.Tree.IParseTree)
+  name: Visit(IParseTree)
+  nameWithType: IParseTreeVisitor<Result>.Visit(IParseTree)
+  fullName: Antlr4.Runtime.Tree.IParseTreeVisitor<Result>.Visit(Antlr4.Runtime.Tree.IParseTree)
+  nameWithType.vb: IParseTreeVisitor(Of Result).Visit(IParseTree)
+  fullName.vb: Antlr4.Runtime.Tree.IParseTreeVisitor(Of Result).Visit(Antlr4.Runtime.Tree.IParseTree)
+  spec.csharp:
+  - uid: Antlr4.Runtime.Tree.IParseTreeVisitor`1.Visit(Antlr4.Runtime.Tree.IParseTree)
+    name: Visit
+    nameWithType: IParseTreeVisitor<Result>.Visit
+    fullName: Antlr4.Runtime.Tree.IParseTreeVisitor<Result>.Visit
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.Tree.IParseTree
+    name: IParseTree
+    nameWithType: IParseTree
+    fullName: Antlr4.Runtime.Tree.IParseTree
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.Tree.IParseTreeVisitor`1.Visit(Antlr4.Runtime.Tree.IParseTree)
+    name: Visit
+    nameWithType: IParseTreeVisitor(Of Result).Visit
+    fullName: Antlr4.Runtime.Tree.IParseTreeVisitor(Of Result).Visit
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.Tree.IParseTree
+    name: IParseTree
+    nameWithType: IParseTree
+    fullName: Antlr4.Runtime.Tree.IParseTree
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.Tree.IParseTreeVisitor{{Result}}.VisitChildren(Antlr4.Runtime.Tree.IRuleNode)
+  commentId: M:Antlr4.Runtime.Tree.IParseTreeVisitor{`0}.VisitChildren(Antlr4.Runtime.Tree.IRuleNode)
+  parent: Antlr4.Runtime.Tree.IParseTreeVisitor{{Result}}
+  definition: Antlr4.Runtime.Tree.IParseTreeVisitor`1.VisitChildren(Antlr4.Runtime.Tree.IRuleNode)
+  name: VisitChildren(IRuleNode)
+  nameWithType: IParseTreeVisitor<Result>.VisitChildren(IRuleNode)
+  fullName: Antlr4.Runtime.Tree.IParseTreeVisitor<Result>.VisitChildren(Antlr4.Runtime.Tree.IRuleNode)
+  nameWithType.vb: IParseTreeVisitor(Of Result).VisitChildren(IRuleNode)
+  fullName.vb: Antlr4.Runtime.Tree.IParseTreeVisitor(Of Result).VisitChildren(Antlr4.Runtime.Tree.IRuleNode)
+  spec.csharp:
+  - uid: Antlr4.Runtime.Tree.IParseTreeVisitor`1.VisitChildren(Antlr4.Runtime.Tree.IRuleNode)
+    name: VisitChildren
+    nameWithType: IParseTreeVisitor<Result>.VisitChildren
+    fullName: Antlr4.Runtime.Tree.IParseTreeVisitor<Result>.VisitChildren
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.Tree.IRuleNode
+    name: IRuleNode
+    nameWithType: IRuleNode
+    fullName: Antlr4.Runtime.Tree.IRuleNode
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.Tree.IParseTreeVisitor`1.VisitChildren(Antlr4.Runtime.Tree.IRuleNode)
+    name: VisitChildren
+    nameWithType: IParseTreeVisitor(Of Result).VisitChildren
+    fullName: Antlr4.Runtime.Tree.IParseTreeVisitor(Of Result).VisitChildren
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.Tree.IRuleNode
+    name: IRuleNode
+    nameWithType: IRuleNode
+    fullName: Antlr4.Runtime.Tree.IRuleNode
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.Tree.IParseTreeVisitor{{Result}}.VisitTerminal(Antlr4.Runtime.Tree.ITerminalNode)
+  commentId: M:Antlr4.Runtime.Tree.IParseTreeVisitor{`0}.VisitTerminal(Antlr4.Runtime.Tree.ITerminalNode)
+  parent: Antlr4.Runtime.Tree.IParseTreeVisitor{{Result}}
+  definition: Antlr4.Runtime.Tree.IParseTreeVisitor`1.VisitTerminal(Antlr4.Runtime.Tree.ITerminalNode)
+  name: VisitTerminal(ITerminalNode)
+  nameWithType: IParseTreeVisitor<Result>.VisitTerminal(ITerminalNode)
+  fullName: Antlr4.Runtime.Tree.IParseTreeVisitor<Result>.VisitTerminal(Antlr4.Runtime.Tree.ITerminalNode)
+  nameWithType.vb: IParseTreeVisitor(Of Result).VisitTerminal(ITerminalNode)
+  fullName.vb: Antlr4.Runtime.Tree.IParseTreeVisitor(Of Result).VisitTerminal(Antlr4.Runtime.Tree.ITerminalNode)
+  spec.csharp:
+  - uid: Antlr4.Runtime.Tree.IParseTreeVisitor`1.VisitTerminal(Antlr4.Runtime.Tree.ITerminalNode)
+    name: VisitTerminal
+    nameWithType: IParseTreeVisitor<Result>.VisitTerminal
+    fullName: Antlr4.Runtime.Tree.IParseTreeVisitor<Result>.VisitTerminal
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.Tree.ITerminalNode
+    name: ITerminalNode
+    nameWithType: ITerminalNode
+    fullName: Antlr4.Runtime.Tree.ITerminalNode
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.Tree.IParseTreeVisitor`1.VisitTerminal(Antlr4.Runtime.Tree.ITerminalNode)
+    name: VisitTerminal
+    nameWithType: IParseTreeVisitor(Of Result).VisitTerminal
+    fullName: Antlr4.Runtime.Tree.IParseTreeVisitor(Of Result).VisitTerminal
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.Tree.ITerminalNode
+    name: ITerminalNode
+    nameWithType: ITerminalNode
+    fullName: Antlr4.Runtime.Tree.ITerminalNode
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.Tree.IParseTreeVisitor{{Result}}.VisitErrorNode(Antlr4.Runtime.Tree.IErrorNode)
+  commentId: M:Antlr4.Runtime.Tree.IParseTreeVisitor{`0}.VisitErrorNode(Antlr4.Runtime.Tree.IErrorNode)
+  parent: Antlr4.Runtime.Tree.IParseTreeVisitor{{Result}}
+  definition: Antlr4.Runtime.Tree.IParseTreeVisitor`1.VisitErrorNode(Antlr4.Runtime.Tree.IErrorNode)
+  name: VisitErrorNode(IErrorNode)
+  nameWithType: IParseTreeVisitor<Result>.VisitErrorNode(IErrorNode)
+  fullName: Antlr4.Runtime.Tree.IParseTreeVisitor<Result>.VisitErrorNode(Antlr4.Runtime.Tree.IErrorNode)
+  nameWithType.vb: IParseTreeVisitor(Of Result).VisitErrorNode(IErrorNode)
+  fullName.vb: Antlr4.Runtime.Tree.IParseTreeVisitor(Of Result).VisitErrorNode(Antlr4.Runtime.Tree.IErrorNode)
+  spec.csharp:
+  - uid: Antlr4.Runtime.Tree.IParseTreeVisitor`1.VisitErrorNode(Antlr4.Runtime.Tree.IErrorNode)
+    name: VisitErrorNode
+    nameWithType: IParseTreeVisitor<Result>.VisitErrorNode
+    fullName: Antlr4.Runtime.Tree.IParseTreeVisitor<Result>.VisitErrorNode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.Tree.IErrorNode
+    name: IErrorNode
+    nameWithType: IErrorNode
+    fullName: Antlr4.Runtime.Tree.IErrorNode
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.Tree.IParseTreeVisitor`1.VisitErrorNode(Antlr4.Runtime.Tree.IErrorNode)
+    name: VisitErrorNode
+    nameWithType: IParseTreeVisitor(Of Result).VisitErrorNode
+    fullName: Antlr4.Runtime.Tree.IParseTreeVisitor(Of Result).VisitErrorNode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.Tree.IErrorNode
+    name: IErrorNode
+    nameWithType: IErrorNode
+    fullName: Antlr4.Runtime.Tree.IErrorNode
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.Tree.IParseTreeVisitor`1.Visit(Antlr4.Runtime.Tree.IParseTree)
+  commentId: M:Antlr4.Runtime.Tree.IParseTreeVisitor`1.Visit(Antlr4.Runtime.Tree.IParseTree)
+  isExternal: true
+  name: Visit(IParseTree)
+  nameWithType: IParseTreeVisitor<Result>.Visit(IParseTree)
+  fullName: Antlr4.Runtime.Tree.IParseTreeVisitor<Result>.Visit(Antlr4.Runtime.Tree.IParseTree)
+  nameWithType.vb: IParseTreeVisitor(Of Result).Visit(IParseTree)
+  fullName.vb: Antlr4.Runtime.Tree.IParseTreeVisitor(Of Result).Visit(Antlr4.Runtime.Tree.IParseTree)
+  spec.csharp:
+  - uid: Antlr4.Runtime.Tree.IParseTreeVisitor`1.Visit(Antlr4.Runtime.Tree.IParseTree)
+    name: Visit
+    nameWithType: IParseTreeVisitor<Result>.Visit
+    fullName: Antlr4.Runtime.Tree.IParseTreeVisitor<Result>.Visit
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.Tree.IParseTree
+    name: IParseTree
+    nameWithType: IParseTree
+    fullName: Antlr4.Runtime.Tree.IParseTree
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.Tree.IParseTreeVisitor`1.Visit(Antlr4.Runtime.Tree.IParseTree)
+    name: Visit
+    nameWithType: IParseTreeVisitor(Of Result).Visit
+    fullName: Antlr4.Runtime.Tree.IParseTreeVisitor(Of Result).Visit
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.Tree.IParseTree
+    name: IParseTree
+    nameWithType: IParseTree
+    fullName: Antlr4.Runtime.Tree.IParseTree
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.Tree.IParseTreeVisitor{{Result}}
+  commentId: T:Antlr4.Runtime.Tree.IParseTreeVisitor{`0}
+  parent: Antlr4.Runtime.Tree
+  definition: Antlr4.Runtime.Tree.IParseTreeVisitor`1
+  name: IParseTreeVisitor<Result>
+  nameWithType: IParseTreeVisitor<Result>
+  fullName: Antlr4.Runtime.Tree.IParseTreeVisitor<Result>
+  nameWithType.vb: IParseTreeVisitor(Of Result)
+  fullName.vb: Antlr4.Runtime.Tree.IParseTreeVisitor(Of Result)
+  name.vb: IParseTreeVisitor(Of Result)
+  spec.csharp:
+  - uid: Antlr4.Runtime.Tree.IParseTreeVisitor`1
+    name: IParseTreeVisitor
+    nameWithType: IParseTreeVisitor
+    fullName: Antlr4.Runtime.Tree.IParseTreeVisitor
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: Result
+    nameWithType: Result
+    fullName: Result
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Antlr4.Runtime.Tree.IParseTreeVisitor`1
+    name: IParseTreeVisitor
+    nameWithType: IParseTreeVisitor
+    fullName: Antlr4.Runtime.Tree.IParseTreeVisitor
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: Result
+    nameWithType: Result
+    fullName: Result
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.Tree.IParseTreeVisitor`1.VisitChildren(Antlr4.Runtime.Tree.IRuleNode)
+  commentId: M:Antlr4.Runtime.Tree.IParseTreeVisitor`1.VisitChildren(Antlr4.Runtime.Tree.IRuleNode)
+  isExternal: true
+  name: VisitChildren(IRuleNode)
+  nameWithType: IParseTreeVisitor<Result>.VisitChildren(IRuleNode)
+  fullName: Antlr4.Runtime.Tree.IParseTreeVisitor<Result>.VisitChildren(Antlr4.Runtime.Tree.IRuleNode)
+  nameWithType.vb: IParseTreeVisitor(Of Result).VisitChildren(IRuleNode)
+  fullName.vb: Antlr4.Runtime.Tree.IParseTreeVisitor(Of Result).VisitChildren(Antlr4.Runtime.Tree.IRuleNode)
+  spec.csharp:
+  - uid: Antlr4.Runtime.Tree.IParseTreeVisitor`1.VisitChildren(Antlr4.Runtime.Tree.IRuleNode)
+    name: VisitChildren
+    nameWithType: IParseTreeVisitor<Result>.VisitChildren
+    fullName: Antlr4.Runtime.Tree.IParseTreeVisitor<Result>.VisitChildren
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.Tree.IRuleNode
+    name: IRuleNode
+    nameWithType: IRuleNode
+    fullName: Antlr4.Runtime.Tree.IRuleNode
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.Tree.IParseTreeVisitor`1.VisitChildren(Antlr4.Runtime.Tree.IRuleNode)
+    name: VisitChildren
+    nameWithType: IParseTreeVisitor(Of Result).VisitChildren
+    fullName: Antlr4.Runtime.Tree.IParseTreeVisitor(Of Result).VisitChildren
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.Tree.IRuleNode
+    name: IRuleNode
+    nameWithType: IRuleNode
+    fullName: Antlr4.Runtime.Tree.IRuleNode
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.Tree.IParseTreeVisitor`1.VisitTerminal(Antlr4.Runtime.Tree.ITerminalNode)
+  commentId: M:Antlr4.Runtime.Tree.IParseTreeVisitor`1.VisitTerminal(Antlr4.Runtime.Tree.ITerminalNode)
+  isExternal: true
+  name: VisitTerminal(ITerminalNode)
+  nameWithType: IParseTreeVisitor<Result>.VisitTerminal(ITerminalNode)
+  fullName: Antlr4.Runtime.Tree.IParseTreeVisitor<Result>.VisitTerminal(Antlr4.Runtime.Tree.ITerminalNode)
+  nameWithType.vb: IParseTreeVisitor(Of Result).VisitTerminal(ITerminalNode)
+  fullName.vb: Antlr4.Runtime.Tree.IParseTreeVisitor(Of Result).VisitTerminal(Antlr4.Runtime.Tree.ITerminalNode)
+  spec.csharp:
+  - uid: Antlr4.Runtime.Tree.IParseTreeVisitor`1.VisitTerminal(Antlr4.Runtime.Tree.ITerminalNode)
+    name: VisitTerminal
+    nameWithType: IParseTreeVisitor<Result>.VisitTerminal
+    fullName: Antlr4.Runtime.Tree.IParseTreeVisitor<Result>.VisitTerminal
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.Tree.ITerminalNode
+    name: ITerminalNode
+    nameWithType: ITerminalNode
+    fullName: Antlr4.Runtime.Tree.ITerminalNode
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.Tree.IParseTreeVisitor`1.VisitTerminal(Antlr4.Runtime.Tree.ITerminalNode)
+    name: VisitTerminal
+    nameWithType: IParseTreeVisitor(Of Result).VisitTerminal
+    fullName: Antlr4.Runtime.Tree.IParseTreeVisitor(Of Result).VisitTerminal
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.Tree.ITerminalNode
+    name: ITerminalNode
+    nameWithType: ITerminalNode
+    fullName: Antlr4.Runtime.Tree.ITerminalNode
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.Tree.IParseTreeVisitor`1.VisitErrorNode(Antlr4.Runtime.Tree.IErrorNode)
+  commentId: M:Antlr4.Runtime.Tree.IParseTreeVisitor`1.VisitErrorNode(Antlr4.Runtime.Tree.IErrorNode)
+  isExternal: true
+  name: VisitErrorNode(IErrorNode)
+  nameWithType: IParseTreeVisitor<Result>.VisitErrorNode(IErrorNode)
+  fullName: Antlr4.Runtime.Tree.IParseTreeVisitor<Result>.VisitErrorNode(Antlr4.Runtime.Tree.IErrorNode)
+  nameWithType.vb: IParseTreeVisitor(Of Result).VisitErrorNode(IErrorNode)
+  fullName.vb: Antlr4.Runtime.Tree.IParseTreeVisitor(Of Result).VisitErrorNode(Antlr4.Runtime.Tree.IErrorNode)
+  spec.csharp:
+  - uid: Antlr4.Runtime.Tree.IParseTreeVisitor`1.VisitErrorNode(Antlr4.Runtime.Tree.IErrorNode)
+    name: VisitErrorNode
+    nameWithType: IParseTreeVisitor<Result>.VisitErrorNode
+    fullName: Antlr4.Runtime.Tree.IParseTreeVisitor<Result>.VisitErrorNode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.Tree.IErrorNode
+    name: IErrorNode
+    nameWithType: IErrorNode
+    fullName: Antlr4.Runtime.Tree.IErrorNode
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.Tree.IParseTreeVisitor`1.VisitErrorNode(Antlr4.Runtime.Tree.IErrorNode)
+    name: VisitErrorNode
+    nameWithType: IParseTreeVisitor(Of Result).VisitErrorNode
+    fullName: Antlr4.Runtime.Tree.IParseTreeVisitor(Of Result).VisitErrorNode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.Tree.IErrorNode
+    name: IErrorNode
+    nameWithType: IErrorNode
+    fullName: Antlr4.Runtime.Tree.IErrorNode
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.Tree.IParseTreeVisitor`1
+  commentId: T:Antlr4.Runtime.Tree.IParseTreeVisitor`1
+  isExternal: true
+  name: IParseTreeVisitor<Result>
+  nameWithType: IParseTreeVisitor<Result>
+  fullName: Antlr4.Runtime.Tree.IParseTreeVisitor<Result>
+  nameWithType.vb: IParseTreeVisitor(Of Result)
+  fullName.vb: Antlr4.Runtime.Tree.IParseTreeVisitor(Of Result)
+  name.vb: IParseTreeVisitor(Of Result)
+  spec.csharp:
+  - uid: Antlr4.Runtime.Tree.IParseTreeVisitor`1
+    name: IParseTreeVisitor
+    nameWithType: IParseTreeVisitor
+    fullName: Antlr4.Runtime.Tree.IParseTreeVisitor
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: Result
+    nameWithType: Result
+    fullName: Result
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Antlr4.Runtime.Tree.IParseTreeVisitor`1
+    name: IParseTreeVisitor
+    nameWithType: IParseTreeVisitor
+    fullName: Antlr4.Runtime.Tree.IParseTreeVisitor
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: Result
+    nameWithType: Result
+    fullName: Result
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.Tree
+  commentId: N:Antlr4.Runtime.Tree
+  isExternal: true
+  name: Antlr4.Runtime.Tree
+  nameWithType: Antlr4.Runtime.Tree
+  fullName: Antlr4.Runtime.Tree
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.statement
+  commentId: M:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.statement
+  isExternal: true
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitImageState*
+  commentId: Overload:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitImageState
+  name: VisitImageState
+  nameWithType: IScenarioGrammarParserVisitor<Result>.VisitImageState
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor<Result>.VisitImageState
+  nameWithType.vb: IScenarioGrammarParserVisitor(Of Result).VisitImageState
+  fullName.vb: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor(Of Result).VisitImageState
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.ImageStateContext
+  commentId: T:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.ImageStateContext
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  name: ScenarioGrammarParser.ImageStateContext
+  nameWithType: ScenarioGrammarParser.ImageStateContext
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.ImageStateContext
+- uid: '{Result}'
+  commentId: '!:Result'
+  definition: Result
+  name: Result
+  nameWithType: Result
+  fullName: Result
+- uid: Result
+  name: Result
+  nameWithType: Result
+  fullName: Result
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitCommentState*
+  commentId: Overload:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitCommentState
+  name: VisitCommentState
+  nameWithType: IScenarioGrammarParserVisitor<Result>.VisitCommentState
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor<Result>.VisitCommentState
+  nameWithType.vb: IScenarioGrammarParserVisitor(Of Result).VisitCommentState
+  fullName.vb: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor(Of Result).VisitCommentState
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.CommentStateContext
+  commentId: T:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.CommentStateContext
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  name: ScenarioGrammarParser.CommentStateContext
+  nameWithType: ScenarioGrammarParser.CommentStateContext
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.CommentStateContext
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitRouteTitleState*
+  commentId: Overload:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitRouteTitleState
+  name: VisitRouteTitleState
+  nameWithType: IScenarioGrammarParserVisitor<Result>.VisitRouteTitleState
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor<Result>.VisitRouteTitleState
+  nameWithType.vb: IScenarioGrammarParserVisitor(Of Result).VisitRouteTitleState
+  fullName.vb: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor(Of Result).VisitRouteTitleState
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.RouteTitleStateContext
+  commentId: T:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.RouteTitleStateContext
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  name: ScenarioGrammarParser.RouteTitleStateContext
+  nameWithType: ScenarioGrammarParser.RouteTitleStateContext
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.RouteTitleStateContext
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitVehicleTitleState*
+  commentId: Overload:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitVehicleTitleState
+  name: VisitVehicleTitleState
+  nameWithType: IScenarioGrammarParserVisitor<Result>.VisitVehicleTitleState
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor<Result>.VisitVehicleTitleState
+  nameWithType.vb: IScenarioGrammarParserVisitor(Of Result).VisitVehicleTitleState
+  fullName.vb: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor(Of Result).VisitVehicleTitleState
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.VehicleTitleStateContext
+  commentId: T:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.VehicleTitleStateContext
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  name: ScenarioGrammarParser.VehicleTitleStateContext
+  nameWithType: ScenarioGrammarParser.VehicleTitleStateContext
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.VehicleTitleStateContext
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitRouteState*
+  commentId: Overload:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitRouteState
+  name: VisitRouteState
+  nameWithType: IScenarioGrammarParserVisitor<Result>.VisitRouteState
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor<Result>.VisitRouteState
+  nameWithType.vb: IScenarioGrammarParserVisitor(Of Result).VisitRouteState
+  fullName.vb: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor(Of Result).VisitRouteState
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.RouteStateContext
+  commentId: T:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.RouteStateContext
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  name: ScenarioGrammarParser.RouteStateContext
+  nameWithType: ScenarioGrammarParser.RouteStateContext
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.RouteStateContext
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitTitleState*
+  commentId: Overload:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitTitleState
+  name: VisitTitleState
+  nameWithType: IScenarioGrammarParserVisitor<Result>.VisitTitleState
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor<Result>.VisitTitleState
+  nameWithType.vb: IScenarioGrammarParserVisitor(Of Result).VisitTitleState
+  fullName.vb: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor(Of Result).VisitTitleState
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.TitleStateContext
+  commentId: T:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.TitleStateContext
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  name: ScenarioGrammarParser.TitleStateContext
+  nameWithType: ScenarioGrammarParser.TitleStateContext
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.TitleStateContext
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitAuthorState*
+  commentId: Overload:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitAuthorState
+  name: VisitAuthorState
+  nameWithType: IScenarioGrammarParserVisitor<Result>.VisitAuthorState
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor<Result>.VisitAuthorState
+  nameWithType.vb: IScenarioGrammarParserVisitor(Of Result).VisitAuthorState
+  fullName.vb: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor(Of Result).VisitAuthorState
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.AuthorStateContext
+  commentId: T:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.AuthorStateContext
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  name: ScenarioGrammarParser.AuthorStateContext
+  nameWithType: ScenarioGrammarParser.AuthorStateContext
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.AuthorStateContext
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitVehicleState*
+  commentId: Overload:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitVehicleState
+  name: VisitVehicleState
+  nameWithType: IScenarioGrammarParserVisitor<Result>.VisitVehicleState
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor<Result>.VisitVehicleState
+  nameWithType.vb: IScenarioGrammarParserVisitor(Of Result).VisitVehicleState
+  fullName.vb: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor(Of Result).VisitVehicleState
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.VehicleStateContext
+  commentId: T:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.VehicleStateContext
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  name: ScenarioGrammarParser.VehicleStateContext
+  nameWithType: ScenarioGrammarParser.VehicleStateContext
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.VehicleStateContext
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.root
+  commentId: M:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.root
+  isExternal: true
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitRoot*
+  commentId: Overload:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitRoot
+  name: VisitRoot
+  nameWithType: IScenarioGrammarParserVisitor<Result>.VisitRoot
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor<Result>.VisitRoot
+  nameWithType.vb: IScenarioGrammarParserVisitor(Of Result).VisitRoot
+  fullName.vb: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor(Of Result).VisitRoot
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.RootContext
+  commentId: T:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.RootContext
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  name: ScenarioGrammarParser.RootContext
+  nameWithType: ScenarioGrammarParser.RootContext
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.RootContext
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitStatement*
+  commentId: Overload:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitStatement
+  name: VisitStatement
+  nameWithType: IScenarioGrammarParserVisitor<Result>.VisitStatement
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor<Result>.VisitStatement
+  nameWithType.vb: IScenarioGrammarParserVisitor(Of Result).VisitStatement
+  fullName.vb: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor(Of Result).VisitStatement
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.StatementContext
+  commentId: T:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.StatementContext
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  name: ScenarioGrammarParser.StatementContext
+  nameWithType: ScenarioGrammarParser.StatementContext
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.StatementContext
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.encoding
+  commentId: M:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.encoding
+  isExternal: true
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitEncoding*
+  commentId: Overload:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitEncoding
+  name: VisitEncoding
+  nameWithType: IScenarioGrammarParserVisitor<Result>.VisitEncoding
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor<Result>.VisitEncoding
+  nameWithType.vb: IScenarioGrammarParserVisitor(Of Result).VisitEncoding
+  fullName.vb: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor(Of Result).VisitEncoding
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.EncodingContext
+  commentId: T:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.EncodingContext
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  name: ScenarioGrammarParser.EncodingContext
+  nameWithType: ScenarioGrammarParser.EncodingContext
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.EncodingContext
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.encode_string
+  commentId: M:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.encode_string
+  isExternal: true
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitEncode_string*
+  commentId: Overload:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitEncode_string
+  name: VisitEncode_string
+  nameWithType: IScenarioGrammarParserVisitor<Result>.VisitEncode_string
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor<Result>.VisitEncode_string
+  nameWithType.vb: IScenarioGrammarParserVisitor(Of Result).VisitEncode_string
+  fullName.vb: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor(Of Result).VisitEncode_string
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.Encode_stringContext
+  commentId: T:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.Encode_stringContext
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  name: ScenarioGrammarParser.Encode_stringContext
+  nameWithType: ScenarioGrammarParser.Encode_stringContext
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.Encode_stringContext
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.weight_path
+  commentId: M:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.weight_path
+  isExternal: true
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitWeight_path*
+  commentId: Overload:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitWeight_path
+  name: VisitWeight_path
+  nameWithType: IScenarioGrammarParserVisitor<Result>.VisitWeight_path
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor<Result>.VisitWeight_path
+  nameWithType.vb: IScenarioGrammarParserVisitor(Of Result).VisitWeight_path
+  fullName.vb: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor(Of Result).VisitWeight_path
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.Weight_pathContext
+  commentId: T:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.Weight_pathContext
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  name: ScenarioGrammarParser.Weight_pathContext
+  nameWithType: ScenarioGrammarParser.Weight_pathContext
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.Weight_pathContext
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitString*
+  commentId: Overload:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1.VisitString
+  name: VisitString
+  nameWithType: IScenarioGrammarParserVisitor<Result>.VisitString
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor<Result>.VisitString
+  nameWithType.vb: IScenarioGrammarParserVisitor(Of Result).VisitString
+  fullName.vb: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor(Of Result).VisitString
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.StringContext
+  commentId: T:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.StringContext
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  name: ScenarioGrammarParser.StringContext
+  nameWithType: ScenarioGrammarParser.StringContext
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.StringContext

@@ -208,8 +208,15 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
 
                 var argValue = evaluator.Visit(argNode);
                 var argType = Nullable.GetUnderlyingType(arg.Statement.PropertyType) ?? arg.Statement.PropertyType;
-                var convArg = Convert.ChangeType(argValue, argType);
-                arg.Statement.SetValue(statement, convArg, null);
+                try
+                {
+                    var convArg = Convert.ChangeType(argValue, argType);
+                    arg.Statement.SetValue(statement, convArg, null);
+                }
+                catch(Exception e) when (e is InvalidCastException || e is FormatException || e is OverflowException || e is ArgumentNullException)
+                {
+                    evaluator.Errors.Add(CreateNewError($"{argValue.ToString()}は無効な引数です。"));
+                }
             }
 
             return statement;

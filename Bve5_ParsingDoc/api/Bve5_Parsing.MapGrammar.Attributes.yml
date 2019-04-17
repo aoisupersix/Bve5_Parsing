@@ -1,0 +1,28 @@
+### YamlMime:ManagedReference
+items:
+- uid: Bve5_Parsing.MapGrammar.Attributes
+  commentId: N:Bve5_Parsing.MapGrammar.Attributes
+  id: Bve5_Parsing.MapGrammar.Attributes
+  children:
+  - Bve5_Parsing.MapGrammar.Attributes.ArgumentAttribute
+  - Bve5_Parsing.MapGrammar.Attributes.DeprecatedAttribute
+  langs:
+  - csharp
+  - vb
+  name: Bve5_Parsing.MapGrammar.Attributes
+  nameWithType: Bve5_Parsing.MapGrammar.Attributes
+  fullName: Bve5_Parsing.MapGrammar.Attributes
+  type: Namespace
+  assemblies:
+  - Bve5_Parsing
+references:
+- uid: Bve5_Parsing.MapGrammar.Attributes.DeprecatedAttribute
+  commentId: T:Bve5_Parsing.MapGrammar.Attributes.DeprecatedAttribute
+  name: DeprecatedAttribute
+  nameWithType: DeprecatedAttribute
+  fullName: Bve5_Parsing.MapGrammar.Attributes.DeprecatedAttribute
+- uid: Bve5_Parsing.MapGrammar.Attributes.ArgumentAttribute
+  commentId: T:Bve5_Parsing.MapGrammar.Attributes.ArgumentAttribute
+  name: ArgumentAttribute
+  nameWithType: ArgumentAttribute
+  fullName: Bve5_Parsing.MapGrammar.Attributes.ArgumentAttribute

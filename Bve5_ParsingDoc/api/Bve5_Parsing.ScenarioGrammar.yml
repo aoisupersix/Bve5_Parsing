@@ -1,0 +1,41 @@
+### YamlMime:ManagedReference
+items:
+- uid: Bve5_Parsing.ScenarioGrammar
+  commentId: N:Bve5_Parsing.ScenarioGrammar
+  id: Bve5_Parsing.ScenarioGrammar
+  children:
+  - Bve5_Parsing.ScenarioGrammar.FilePath
+  - Bve5_Parsing.ScenarioGrammar.ScenarioData
+  - Bve5_Parsing.ScenarioGrammar.ScenarioGrammarParser
+  langs:
+  - csharp
+  - vb
+  name: Bve5_Parsing.ScenarioGrammar
+  nameWithType: Bve5_Parsing.ScenarioGrammar
+  fullName: Bve5_Parsing.ScenarioGrammar
+  type: Namespace
+  assemblies:
+  - Bve5_Parsing
+references:
+- uid: Bve5_Parsing.ScenarioGrammar.ScenarioData
+  commentId: T:Bve5_Parsing.ScenarioGrammar.ScenarioData
+  parent: Bve5_Parsing.ScenarioGrammar
+  name: ScenarioData
+  nameWithType: ScenarioData
+  fullName: Bve5_Parsing.ScenarioGrammar.ScenarioData
+- uid: Bve5_Parsing.ScenarioGrammar.FilePath
+  commentId: T:Bve5_Parsing.ScenarioGrammar.FilePath
+  parent: Bve5_Parsing.ScenarioGrammar
+  name: FilePath
+  nameWithType: FilePath
+  fullName: Bve5_Parsing.ScenarioGrammar.FilePath
+- uid: Bve5_Parsing.ScenarioGrammar.ScenarioGrammarParser
+  commentId: T:Bve5_Parsing.ScenarioGrammar.ScenarioGrammarParser
+  name: ScenarioGrammarParser
+  nameWithType: ScenarioGrammarParser
+  fullName: Bve5_Parsing.ScenarioGrammar.ScenarioGrammarParser
+- uid: Bve5_Parsing.ScenarioGrammar
+  commentId: N:Bve5_Parsing.ScenarioGrammar
+  name: Bve5_Parsing.ScenarioGrammar
+  nameWithType: Bve5_Parsing.ScenarioGrammar
+  fullName: Bve5_Parsing.ScenarioGrammar

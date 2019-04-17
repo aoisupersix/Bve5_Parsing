@@ -1,0 +1,581 @@
+### YamlMime:ManagedReference
+items:
+- uid: Bve5_Parsing.ParseError
+  commentId: T:Bve5_Parsing.ParseError
+  id: ParseError
+  parent: Bve5_Parsing
+  children:
+  - Bve5_Parsing.ParseError.#ctor(Bve5_Parsing.ParseErrorLevel,System.Int32,System.Int32,System.String)
+  - Bve5_Parsing.ParseError.Column
+  - Bve5_Parsing.ParseError.ErrorLevel
+  - Bve5_Parsing.ParseError.Line
+  - Bve5_Parsing.ParseError.Message
+  langs:
+  - csharp
+  - vb
+  name: ParseError
+  nameWithType: ParseError
+  fullName: Bve5_Parsing.ParseError
+  type: Class
+  source:
+    remote:
+      path: Bve5_Parsing/ParseError.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: ParseError
+    path: ../Bve5_Parsing/ParseError.cs
+    startLine: 23
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing
+  summary: "\nパーサのエラー情報を格納するクラスです。\n必要に応じてコンソールに表示するなどして下さい。\n"
+  example: []
+  syntax:
+    content: public class ParseError
+    content.vb: Public Class ParseError
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Bve5_Parsing.ParseError.ErrorLevel
+  commentId: P:Bve5_Parsing.ParseError.ErrorLevel
+  id: ErrorLevel
+  parent: Bve5_Parsing.ParseError
+  langs:
+  - csharp
+  - vb
+  name: ErrorLevel
+  nameWithType: ParseError.ErrorLevel
+  fullName: Bve5_Parsing.ParseError.ErrorLevel
+  type: Property
+  source:
+    remote:
+      path: Bve5_Parsing/ParseError.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: ErrorLevel
+    path: ../Bve5_Parsing/ParseError.cs
+    startLine: 28
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing
+  summary: "\nエラー種別\n"
+  example: []
+  syntax:
+    content: public ParseErrorLevel ErrorLevel { get; }
+    parameters: []
+    return:
+      type: Bve5_Parsing.ParseErrorLevel
+    content.vb: Public ReadOnly Property ErrorLevel As ParseErrorLevel
+  overload: Bve5_Parsing.ParseError.ErrorLevel*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Bve5_Parsing.ParseError.Line
+  commentId: P:Bve5_Parsing.ParseError.Line
+  id: Line
+  parent: Bve5_Parsing.ParseError
+  langs:
+  - csharp
+  - vb
+  name: Line
+  nameWithType: ParseError.Line
+  fullName: Bve5_Parsing.ParseError.Line
+  type: Property
+  source:
+    remote:
+      path: Bve5_Parsing/ParseError.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Line
+    path: ../Bve5_Parsing/ParseError.cs
+    startLine: 33
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing
+  summary: "\nエラー対象構文の開始行\n"
+  example: []
+  syntax:
+    content: public int Line { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property Line As Integer
+  overload: Bve5_Parsing.ParseError.Line*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Bve5_Parsing.ParseError.Column
+  commentId: P:Bve5_Parsing.ParseError.Column
+  id: Column
+  parent: Bve5_Parsing.ParseError
+  langs:
+  - csharp
+  - vb
+  name: Column
+  nameWithType: ParseError.Column
+  fullName: Bve5_Parsing.ParseError.Column
+  type: Property
+  source:
+    remote:
+      path: Bve5_Parsing/ParseError.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Column
+    path: ../Bve5_Parsing/ParseError.cs
+    startLine: 38
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing
+  summary: "\nエラー対象構文の開始列\n"
+  example: []
+  syntax:
+    content: public int Column { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property Column As Integer
+  overload: Bve5_Parsing.ParseError.Column*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Bve5_Parsing.ParseError.Message
+  commentId: P:Bve5_Parsing.ParseError.Message
+  id: Message
+  parent: Bve5_Parsing.ParseError
+  langs:
+  - csharp
+  - vb
+  name: Message
+  nameWithType: ParseError.Message
+  fullName: Bve5_Parsing.ParseError.Message
+  type: Property
+  source:
+    remote:
+      path: Bve5_Parsing/ParseError.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Message
+    path: ../Bve5_Parsing/ParseError.cs
+    startLine: 43
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing
+  summary: "\nエラーメッセージ\n"
+  example: []
+  syntax:
+    content: public string Message { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Message As String
+  overload: Bve5_Parsing.ParseError.Message*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Bve5_Parsing.ParseError.#ctor(Bve5_Parsing.ParseErrorLevel,System.Int32,System.Int32,System.String)
+  commentId: M:Bve5_Parsing.ParseError.#ctor(Bve5_Parsing.ParseErrorLevel,System.Int32,System.Int32,System.String)
+  id: '#ctor(Bve5_Parsing.ParseErrorLevel,System.Int32,System.Int32,System.String)'
+  parent: Bve5_Parsing.ParseError
+  langs:
+  - csharp
+  - vb
+  name: ParseError(ParseErrorLevel, Int32, Int32, String)
+  nameWithType: ParseError.ParseError(ParseErrorLevel, Int32, Int32, String)
+  fullName: Bve5_Parsing.ParseError.ParseError(Bve5_Parsing.ParseErrorLevel, System.Int32, System.Int32, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: Bve5_Parsing/ParseError.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: .ctor
+    path: ../Bve5_Parsing/ParseError.cs
+    startLine: 45
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing
+  syntax:
+    content: public ParseError(ParseErrorLevel errLevel, int line, int column, string msg)
+    parameters:
+    - id: errLevel
+      type: Bve5_Parsing.ParseErrorLevel
+    - id: line
+      type: System.Int32
+    - id: column
+      type: System.Int32
+    - id: msg
+      type: System.String
+    content.vb: Public Sub New(errLevel As ParseErrorLevel, line As Integer, column As Integer, msg As String)
+  overload: Bve5_Parsing.ParseError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Bve5_Parsing
+  commentId: N:Bve5_Parsing
+  name: Bve5_Parsing
+  nameWithType: Bve5_Parsing
+  fullName: Bve5_Parsing
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Bve5_Parsing.ParseError.ErrorLevel*
+  commentId: Overload:Bve5_Parsing.ParseError.ErrorLevel
+  name: ErrorLevel
+  nameWithType: ParseError.ErrorLevel
+  fullName: Bve5_Parsing.ParseError.ErrorLevel
+- uid: Bve5_Parsing.ParseErrorLevel
+  commentId: T:Bve5_Parsing.ParseErrorLevel
+  parent: Bve5_Parsing
+  name: ParseErrorLevel
+  nameWithType: ParseErrorLevel
+  fullName: Bve5_Parsing.ParseErrorLevel
+- uid: Bve5_Parsing.ParseError.Line*
+  commentId: Overload:Bve5_Parsing.ParseError.Line
+  name: Line
+  nameWithType: ParseError.Line
+  fullName: Bve5_Parsing.ParseError.Line
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Bve5_Parsing.ParseError.Column*
+  commentId: Overload:Bve5_Parsing.ParseError.Column
+  name: Column
+  nameWithType: ParseError.Column
+  fullName: Bve5_Parsing.ParseError.Column
+- uid: Bve5_Parsing.ParseError.Message*
+  commentId: Overload:Bve5_Parsing.ParseError.Message
+  name: Message
+  nameWithType: ParseError.Message
+  fullName: Bve5_Parsing.ParseError.Message
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Bve5_Parsing.ParseError.#ctor*
+  commentId: Overload:Bve5_Parsing.ParseError.#ctor
+  name: ParseError
+  nameWithType: ParseError.ParseError
+  fullName: Bve5_Parsing.ParseError.ParseError

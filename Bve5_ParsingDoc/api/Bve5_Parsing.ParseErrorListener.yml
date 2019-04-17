@@ -1,0 +1,1600 @@
+### YamlMime:ManagedReference
+items:
+- uid: Bve5_Parsing.ParseErrorListener
+  commentId: T:Bve5_Parsing.ParseErrorListener
+  id: ParseErrorListener
+  parent: Bve5_Parsing
+  children:
+  - Bve5_Parsing.ParseErrorListener.#ctor
+  - Bve5_Parsing.ParseErrorListener.#ctor(System.Collections.Generic.ICollection{Bve5_Parsing.ParseError})
+  - Bve5_Parsing.ParseErrorListener.ERRMSG_INPUT_MISMATCH
+  - Bve5_Parsing.ParseErrorListener.ERRMSG_NO_VIABLE
+  - Bve5_Parsing.ParseErrorListener.Errors
+  - Bve5_Parsing.ParseErrorListener.EscapeWSAndQuote(System.String)
+  - Bve5_Parsing.ParseErrorListener.GetErrorMessage(Antlr4.Runtime.IRecognizer,Antlr4.Runtime.IToken,Antlr4.Runtime.FailedPredicateException)
+  - Bve5_Parsing.ParseErrorListener.GetErrorMessage(Antlr4.Runtime.IRecognizer,Antlr4.Runtime.IToken,Antlr4.Runtime.InputMismatchException)
+  - Bve5_Parsing.ParseErrorListener.GetErrorMessage(Antlr4.Runtime.IRecognizer,Antlr4.Runtime.IToken,Antlr4.Runtime.LexerNoViableAltException)
+  - Bve5_Parsing.ParseErrorListener.GetErrorMessage(Antlr4.Runtime.IRecognizer,Antlr4.Runtime.IToken,Antlr4.Runtime.NoViableAltException)
+  - Bve5_Parsing.ParseErrorListener.GetTokenDisplayName(Antlr4.Runtime.IToken)
+  - Bve5_Parsing.ParseErrorListener.SyntaxError(Antlr4.Runtime.IRecognizer,Antlr4.Runtime.IToken,System.Int32,System.Int32,System.String,Antlr4.Runtime.RecognitionException)
+  langs:
+  - csharp
+  - vb
+  name: ParseErrorListener
+  nameWithType: ParseErrorListener
+  fullName: Bve5_Parsing.ParseErrorListener
+  type: Class
+  source:
+    remote:
+      path: Bve5_Parsing/ErrorListener.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: ParseErrorListener
+    path: ../Bve5_Parsing/ErrorListener.cs
+    startLine: 13
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing
+  summary: "\nパーサのデフォルトエラー処理クラス\nエラーに対して任意の処理を行ってErrorsに格納します。\nこのクラスを継承し、パーサのErrorListenerに指定することで構文解析のエラーを取得できます。\n"
+  example: []
+  syntax:
+    content: 'public class ParseErrorListener : BaseErrorListener, IParserErrorListener, IAntlrErrorListener<IToken>'
+    content.vb: >-
+      Public Class ParseErrorListener
+
+          Inherits BaseErrorListener
+
+          Implements IParserErrorListener, IAntlrErrorListener(Of IToken)
+  inheritance:
+  - System.Object
+  - Antlr4.Runtime.BaseErrorListener
+  implements:
+  - Antlr4.Runtime.IParserErrorListener
+  - Antlr4.Runtime.IAntlrErrorListener{Antlr4.Runtime.IToken}
+  inheritedMembers:
+  - Antlr4.Runtime.BaseErrorListener.ReportAmbiguity(Antlr4.Runtime.Parser,Antlr4.Runtime.Dfa.DFA,System.Int32,System.Int32,System.Boolean,Antlr4.Runtime.Sharpen.BitSet,Antlr4.Runtime.Atn.ATNConfigSet)
+  - Antlr4.Runtime.BaseErrorListener.ReportAttemptingFullContext(Antlr4.Runtime.Parser,Antlr4.Runtime.Dfa.DFA,System.Int32,System.Int32,Antlr4.Runtime.Sharpen.BitSet,Antlr4.Runtime.Atn.SimulatorState)
+  - Antlr4.Runtime.BaseErrorListener.ReportContextSensitivity(Antlr4.Runtime.Parser,Antlr4.Runtime.Dfa.DFA,System.Int32,System.Int32,System.Int32,Antlr4.Runtime.Atn.SimulatorState)
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Bve5_Parsing.ParseErrorListener.ERRMSG_INPUT_MISMATCH
+  commentId: F:Bve5_Parsing.ParseErrorListener.ERRMSG_INPUT_MISMATCH
+  id: ERRMSG_INPUT_MISMATCH
+  parent: Bve5_Parsing.ParseErrorListener
+  langs:
+  - csharp
+  - vb
+  name: ERRMSG_INPUT_MISMATCH
+  nameWithType: ParseErrorListener.ERRMSG_INPUT_MISMATCH
+  fullName: Bve5_Parsing.ParseErrorListener.ERRMSG_INPUT_MISMATCH
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/ErrorListener.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: ERRMSG_INPUT_MISMATCH
+    path: ../Bve5_Parsing/ErrorListener.cs
+    startLine: 19
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing
+  summary: "\nInputMismatchExceptionのエラーメッセージ\n"
+  example: []
+  syntax:
+    content: public const string ERRMSG_INPUT_MISMATCH = "入力文字列{0}が予期されたマップ構文'{1}'と一致しませんでした。"
+    return:
+      type: System.String
+    content.vb: Public Const ERRMSG_INPUT_MISMATCH As String = "入力文字列{0}が予期されたマップ構文'{1}'と一致しませんでした。"
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.ParseErrorListener.ERRMSG_NO_VIABLE
+  commentId: F:Bve5_Parsing.ParseErrorListener.ERRMSG_NO_VIABLE
+  id: ERRMSG_NO_VIABLE
+  parent: Bve5_Parsing.ParseErrorListener
+  langs:
+  - csharp
+  - vb
+  name: ERRMSG_NO_VIABLE
+  nameWithType: ParseErrorListener.ERRMSG_NO_VIABLE
+  fullName: Bve5_Parsing.ParseErrorListener.ERRMSG_NO_VIABLE
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/ErrorListener.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: ERRMSG_NO_VIABLE
+    path: ../Bve5_Parsing/ErrorListener.cs
+    startLine: 24
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing
+  summary: "\nNoViableExceptionのエラーメッセージ\n"
+  example: []
+  syntax:
+    content: public const string ERRMSG_NO_VIABLE = "入力文字列{0}の構文を特定できませんでした。"
+    return:
+      type: System.String
+    content.vb: Public Const ERRMSG_NO_VIABLE As String = "入力文字列{0}の構文を特定できませんでした。"
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.ParseErrorListener.Errors
+  commentId: P:Bve5_Parsing.ParseErrorListener.Errors
+  id: Errors
+  parent: Bve5_Parsing.ParseErrorListener
+  langs:
+  - csharp
+  - vb
+  name: Errors
+  nameWithType: ParseErrorListener.Errors
+  fullName: Bve5_Parsing.ParseErrorListener.Errors
+  type: Property
+  source:
+    remote:
+      path: Bve5_Parsing/ErrorListener.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Errors
+    path: ../Bve5_Parsing/ErrorListener.cs
+    startLine: 31
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing
+  summary: "\nパースエラーメッセージ\n"
+  example: []
+  syntax:
+    content: public ICollection<ParseError> Errors { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.ICollection{Bve5_Parsing.ParseError}
+    content.vb: Public ReadOnly Property Errors As ICollection(Of ParseError)
+  overload: Bve5_Parsing.ParseErrorListener.Errors*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Bve5_Parsing.ParseErrorListener.GetTokenDisplayName(Antlr4.Runtime.IToken)
+  commentId: M:Bve5_Parsing.ParseErrorListener.GetTokenDisplayName(Antlr4.Runtime.IToken)
+  id: GetTokenDisplayName(Antlr4.Runtime.IToken)
+  parent: Bve5_Parsing.ParseErrorListener
+  langs:
+  - csharp
+  - vb
+  name: GetTokenDisplayName(IToken)
+  nameWithType: ParseErrorListener.GetTokenDisplayName(IToken)
+  fullName: Bve5_Parsing.ParseErrorListener.GetTokenDisplayName(Antlr4.Runtime.IToken)
+  type: Method
+  source:
+    remote:
+      path: Bve5_Parsing/ErrorListener.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: GetTokenDisplayName
+    path: ../Bve5_Parsing/ErrorListener.cs
+    startLine: 34
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing
+  syntax:
+    content: protected string GetTokenDisplayName(IToken t)
+    parameters:
+    - id: t
+      type: Antlr4.Runtime.IToken
+    return:
+      type: System.String
+    content.vb: Protected Function GetTokenDisplayName(t As IToken) As String
+  overload: Bve5_Parsing.ParseErrorListener.GetTokenDisplayName*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: Bve5_Parsing.ParseErrorListener.EscapeWSAndQuote(System.String)
+  commentId: M:Bve5_Parsing.ParseErrorListener.EscapeWSAndQuote(System.String)
+  id: EscapeWSAndQuote(System.String)
+  parent: Bve5_Parsing.ParseErrorListener
+  langs:
+  - csharp
+  - vb
+  name: EscapeWSAndQuote(String)
+  nameWithType: ParseErrorListener.EscapeWSAndQuote(String)
+  fullName: Bve5_Parsing.ParseErrorListener.EscapeWSAndQuote(System.String)
+  type: Method
+  source:
+    remote:
+      path: Bve5_Parsing/ErrorListener.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: EscapeWSAndQuote
+    path: ../Bve5_Parsing/ErrorListener.cs
+    startLine: 55
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing
+  syntax:
+    content: protected string EscapeWSAndQuote([NotNull] string s)
+    parameters:
+    - id: s
+      type: System.String
+      attributes:
+      - type: Antlr4.Runtime.Misc.NotNullAttribute
+        ctor: Antlr4.Runtime.Misc.NotNullAttribute.#ctor
+        arguments: []
+    return:
+      type: System.String
+    content.vb: Protected Function EscapeWSAndQuote(s As String) As String
+  overload: Bve5_Parsing.ParseErrorListener.EscapeWSAndQuote*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: Bve5_Parsing.ParseErrorListener.GetErrorMessage(Antlr4.Runtime.IRecognizer,Antlr4.Runtime.IToken,Antlr4.Runtime.InputMismatchException)
+  commentId: M:Bve5_Parsing.ParseErrorListener.GetErrorMessage(Antlr4.Runtime.IRecognizer,Antlr4.Runtime.IToken,Antlr4.Runtime.InputMismatchException)
+  id: GetErrorMessage(Antlr4.Runtime.IRecognizer,Antlr4.Runtime.IToken,Antlr4.Runtime.InputMismatchException)
+  parent: Bve5_Parsing.ParseErrorListener
+  langs:
+  - csharp
+  - vb
+  name: GetErrorMessage(IRecognizer, IToken, InputMismatchException)
+  nameWithType: ParseErrorListener.GetErrorMessage(IRecognizer, IToken, InputMismatchException)
+  fullName: Bve5_Parsing.ParseErrorListener.GetErrorMessage(Antlr4.Runtime.IRecognizer, Antlr4.Runtime.IToken, Antlr4.Runtime.InputMismatchException)
+  type: Method
+  source:
+    remote:
+      path: Bve5_Parsing/ErrorListener.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: GetErrorMessage
+    path: ../Bve5_Parsing/ErrorListener.cs
+    startLine: 64
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing
+  syntax:
+    content: protected string GetErrorMessage(IRecognizer recognizer, IToken token, InputMismatchException e)
+    parameters:
+    - id: recognizer
+      type: Antlr4.Runtime.IRecognizer
+    - id: token
+      type: Antlr4.Runtime.IToken
+    - id: e
+      type: Antlr4.Runtime.InputMismatchException
+    return:
+      type: System.String
+    content.vb: Protected Function GetErrorMessage(recognizer As IRecognizer, token As IToken, e As InputMismatchException) As String
+  overload: Bve5_Parsing.ParseErrorListener.GetErrorMessage*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: Bve5_Parsing.ParseErrorListener.GetErrorMessage(Antlr4.Runtime.IRecognizer,Antlr4.Runtime.IToken,Antlr4.Runtime.NoViableAltException)
+  commentId: M:Bve5_Parsing.ParseErrorListener.GetErrorMessage(Antlr4.Runtime.IRecognizer,Antlr4.Runtime.IToken,Antlr4.Runtime.NoViableAltException)
+  id: GetErrorMessage(Antlr4.Runtime.IRecognizer,Antlr4.Runtime.IToken,Antlr4.Runtime.NoViableAltException)
+  parent: Bve5_Parsing.ParseErrorListener
+  langs:
+  - csharp
+  - vb
+  name: GetErrorMessage(IRecognizer, IToken, NoViableAltException)
+  nameWithType: ParseErrorListener.GetErrorMessage(IRecognizer, IToken, NoViableAltException)
+  fullName: Bve5_Parsing.ParseErrorListener.GetErrorMessage(Antlr4.Runtime.IRecognizer, Antlr4.Runtime.IToken, Antlr4.Runtime.NoViableAltException)
+  type: Method
+  source:
+    remote:
+      path: Bve5_Parsing/ErrorListener.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: GetErrorMessage
+    path: ../Bve5_Parsing/ErrorListener.cs
+    startLine: 69
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing
+  syntax:
+    content: protected string GetErrorMessage(IRecognizer recognizer, IToken token, NoViableAltException e)
+    parameters:
+    - id: recognizer
+      type: Antlr4.Runtime.IRecognizer
+    - id: token
+      type: Antlr4.Runtime.IToken
+    - id: e
+      type: Antlr4.Runtime.NoViableAltException
+    return:
+      type: System.String
+    content.vb: Protected Function GetErrorMessage(recognizer As IRecognizer, token As IToken, e As NoViableAltException) As String
+  overload: Bve5_Parsing.ParseErrorListener.GetErrorMessage*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: Bve5_Parsing.ParseErrorListener.GetErrorMessage(Antlr4.Runtime.IRecognizer,Antlr4.Runtime.IToken,Antlr4.Runtime.LexerNoViableAltException)
+  commentId: M:Bve5_Parsing.ParseErrorListener.GetErrorMessage(Antlr4.Runtime.IRecognizer,Antlr4.Runtime.IToken,Antlr4.Runtime.LexerNoViableAltException)
+  id: GetErrorMessage(Antlr4.Runtime.IRecognizer,Antlr4.Runtime.IToken,Antlr4.Runtime.LexerNoViableAltException)
+  parent: Bve5_Parsing.ParseErrorListener
+  langs:
+  - csharp
+  - vb
+  name: GetErrorMessage(IRecognizer, IToken, LexerNoViableAltException)
+  nameWithType: ParseErrorListener.GetErrorMessage(IRecognizer, IToken, LexerNoViableAltException)
+  fullName: Bve5_Parsing.ParseErrorListener.GetErrorMessage(Antlr4.Runtime.IRecognizer, Antlr4.Runtime.IToken, Antlr4.Runtime.LexerNoViableAltException)
+  type: Method
+  source:
+    remote:
+      path: Bve5_Parsing/ErrorListener.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: GetErrorMessage
+    path: ../Bve5_Parsing/ErrorListener.cs
+    startLine: 74
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing
+  syntax:
+    content: protected string GetErrorMessage(IRecognizer recognizer, IToken token, LexerNoViableAltException e)
+    parameters:
+    - id: recognizer
+      type: Antlr4.Runtime.IRecognizer
+    - id: token
+      type: Antlr4.Runtime.IToken
+    - id: e
+      type: Antlr4.Runtime.LexerNoViableAltException
+    return:
+      type: System.String
+    content.vb: Protected Function GetErrorMessage(recognizer As IRecognizer, token As IToken, e As LexerNoViableAltException) As String
+  overload: Bve5_Parsing.ParseErrorListener.GetErrorMessage*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: Bve5_Parsing.ParseErrorListener.GetErrorMessage(Antlr4.Runtime.IRecognizer,Antlr4.Runtime.IToken,Antlr4.Runtime.FailedPredicateException)
+  commentId: M:Bve5_Parsing.ParseErrorListener.GetErrorMessage(Antlr4.Runtime.IRecognizer,Antlr4.Runtime.IToken,Antlr4.Runtime.FailedPredicateException)
+  id: GetErrorMessage(Antlr4.Runtime.IRecognizer,Antlr4.Runtime.IToken,Antlr4.Runtime.FailedPredicateException)
+  parent: Bve5_Parsing.ParseErrorListener
+  langs:
+  - csharp
+  - vb
+  name: GetErrorMessage(IRecognizer, IToken, FailedPredicateException)
+  nameWithType: ParseErrorListener.GetErrorMessage(IRecognizer, IToken, FailedPredicateException)
+  fullName: Bve5_Parsing.ParseErrorListener.GetErrorMessage(Antlr4.Runtime.IRecognizer, Antlr4.Runtime.IToken, Antlr4.Runtime.FailedPredicateException)
+  type: Method
+  source:
+    remote:
+      path: Bve5_Parsing/ErrorListener.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: GetErrorMessage
+    path: ../Bve5_Parsing/ErrorListener.cs
+    startLine: 79
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing
+  syntax:
+    content: protected string GetErrorMessage(IRecognizer recognizer, IToken token, FailedPredicateException e)
+    parameters:
+    - id: recognizer
+      type: Antlr4.Runtime.IRecognizer
+    - id: token
+      type: Antlr4.Runtime.IToken
+    - id: e
+      type: Antlr4.Runtime.FailedPredicateException
+    return:
+      type: System.String
+    content.vb: Protected Function GetErrorMessage(recognizer As IRecognizer, token As IToken, e As FailedPredicateException) As String
+  overload: Bve5_Parsing.ParseErrorListener.GetErrorMessage*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: Bve5_Parsing.ParseErrorListener.#ctor
+  commentId: M:Bve5_Parsing.ParseErrorListener.#ctor
+  id: '#ctor'
+  parent: Bve5_Parsing.ParseErrorListener
+  langs:
+  - csharp
+  - vb
+  name: ParseErrorListener()
+  nameWithType: ParseErrorListener.ParseErrorListener()
+  fullName: Bve5_Parsing.ParseErrorListener.ParseErrorListener()
+  type: Constructor
+  source:
+    remote:
+      path: Bve5_Parsing/ErrorListener.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: .ctor
+    path: ../Bve5_Parsing/ErrorListener.cs
+    startLine: 85
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing
+  syntax:
+    content: public ParseErrorListener()
+    content.vb: Public Sub New
+  overload: Bve5_Parsing.ParseErrorListener.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Bve5_Parsing.ParseErrorListener.#ctor(System.Collections.Generic.ICollection{Bve5_Parsing.ParseError})
+  commentId: M:Bve5_Parsing.ParseErrorListener.#ctor(System.Collections.Generic.ICollection{Bve5_Parsing.ParseError})
+  id: '#ctor(System.Collections.Generic.ICollection{Bve5_Parsing.ParseError})'
+  parent: Bve5_Parsing.ParseErrorListener
+  langs:
+  - csharp
+  - vb
+  name: ParseErrorListener(ICollection<ParseError>)
+  nameWithType: ParseErrorListener.ParseErrorListener(ICollection<ParseError>)
+  fullName: Bve5_Parsing.ParseErrorListener.ParseErrorListener(System.Collections.Generic.ICollection<Bve5_Parsing.ParseError>)
+  type: Constructor
+  source:
+    remote:
+      path: Bve5_Parsing/ErrorListener.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: .ctor
+    path: ../Bve5_Parsing/ErrorListener.cs
+    startLine: 90
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing
+  syntax:
+    content: public ParseErrorListener(ICollection<ParseError> errors)
+    parameters:
+    - id: errors
+      type: System.Collections.Generic.ICollection{Bve5_Parsing.ParseError}
+    content.vb: Public Sub New(errors As ICollection(Of ParseError))
+  overload: Bve5_Parsing.ParseErrorListener.#ctor*
+  nameWithType.vb: ParseErrorListener.ParseErrorListener(ICollection(Of ParseError))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Bve5_Parsing.ParseErrorListener.ParseErrorListener(System.Collections.Generic.ICollection(Of Bve5_Parsing.ParseError))
+  name.vb: ParseErrorListener(ICollection(Of ParseError))
+- uid: Bve5_Parsing.ParseErrorListener.SyntaxError(Antlr4.Runtime.IRecognizer,Antlr4.Runtime.IToken,System.Int32,System.Int32,System.String,Antlr4.Runtime.RecognitionException)
+  commentId: M:Bve5_Parsing.ParseErrorListener.SyntaxError(Antlr4.Runtime.IRecognizer,Antlr4.Runtime.IToken,System.Int32,System.Int32,System.String,Antlr4.Runtime.RecognitionException)
+  id: SyntaxError(Antlr4.Runtime.IRecognizer,Antlr4.Runtime.IToken,System.Int32,System.Int32,System.String,Antlr4.Runtime.RecognitionException)
+  parent: Bve5_Parsing.ParseErrorListener
+  langs:
+  - csharp
+  - vb
+  name: SyntaxError(IRecognizer, IToken, Int32, Int32, String, RecognitionException)
+  nameWithType: ParseErrorListener.SyntaxError(IRecognizer, IToken, Int32, Int32, String, RecognitionException)
+  fullName: Bve5_Parsing.ParseErrorListener.SyntaxError(Antlr4.Runtime.IRecognizer, Antlr4.Runtime.IToken, System.Int32, System.Int32, System.String, Antlr4.Runtime.RecognitionException)
+  type: Method
+  source:
+    remote:
+      path: Bve5_Parsing/ErrorListener.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: SyntaxError
+    path: ../Bve5_Parsing/ErrorListener.cs
+    startLine: 95
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing
+  syntax:
+    content: public override void SyntaxError(IRecognizer recognizer, IToken offendingSymbol, int line, int charPositionInLine, string msg, RecognitionException e)
+    parameters:
+    - id: recognizer
+      type: Antlr4.Runtime.IRecognizer
+    - id: offendingSymbol
+      type: Antlr4.Runtime.IToken
+    - id: line
+      type: System.Int32
+    - id: charPositionInLine
+      type: System.Int32
+    - id: msg
+      type: System.String
+    - id: e
+      type: Antlr4.Runtime.RecognitionException
+    content.vb: Public Overrides Sub SyntaxError(recognizer As IRecognizer, offendingSymbol As IToken, line As Integer, charPositionInLine As Integer, msg As String, e As RecognitionException)
+  overridden: Antlr4.Runtime.BaseErrorListener.SyntaxError(Antlr4.Runtime.IRecognizer,Antlr4.Runtime.IToken,System.Int32,System.Int32,System.String,Antlr4.Runtime.RecognitionException)
+  overload: Bve5_Parsing.ParseErrorListener.SyntaxError*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: Bve5_Parsing
+  commentId: N:Bve5_Parsing
+  name: Bve5_Parsing
+  nameWithType: Bve5_Parsing
+  fullName: Bve5_Parsing
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Antlr4.Runtime.BaseErrorListener
+  commentId: T:Antlr4.Runtime.BaseErrorListener
+  parent: Antlr4.Runtime
+  isExternal: true
+  name: BaseErrorListener
+  nameWithType: BaseErrorListener
+  fullName: Antlr4.Runtime.BaseErrorListener
+- uid: Antlr4.Runtime.IParserErrorListener
+  commentId: T:Antlr4.Runtime.IParserErrorListener
+  parent: Antlr4.Runtime
+  isExternal: true
+  name: IParserErrorListener
+  nameWithType: IParserErrorListener
+  fullName: Antlr4.Runtime.IParserErrorListener
+- uid: Antlr4.Runtime.IAntlrErrorListener{Antlr4.Runtime.IToken}
+  commentId: T:Antlr4.Runtime.IAntlrErrorListener{Antlr4.Runtime.IToken}
+  parent: Antlr4.Runtime
+  definition: Antlr4.Runtime.IAntlrErrorListener`1
+  name: IAntlrErrorListener<IToken>
+  nameWithType: IAntlrErrorListener<IToken>
+  fullName: Antlr4.Runtime.IAntlrErrorListener<Antlr4.Runtime.IToken>
+  nameWithType.vb: IAntlrErrorListener(Of IToken)
+  fullName.vb: Antlr4.Runtime.IAntlrErrorListener(Of Antlr4.Runtime.IToken)
+  name.vb: IAntlrErrorListener(Of IToken)
+  spec.csharp:
+  - uid: Antlr4.Runtime.IAntlrErrorListener`1
+    name: IAntlrErrorListener
+    nameWithType: IAntlrErrorListener
+    fullName: Antlr4.Runtime.IAntlrErrorListener
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Antlr4.Runtime.IToken
+    name: IToken
+    nameWithType: IToken
+    fullName: Antlr4.Runtime.IToken
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Antlr4.Runtime.IAntlrErrorListener`1
+    name: IAntlrErrorListener
+    nameWithType: IAntlrErrorListener
+    fullName: Antlr4.Runtime.IAntlrErrorListener
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Antlr4.Runtime.IToken
+    name: IToken
+    nameWithType: IToken
+    fullName: Antlr4.Runtime.IToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.BaseErrorListener.ReportAmbiguity(Antlr4.Runtime.Parser,Antlr4.Runtime.Dfa.DFA,System.Int32,System.Int32,System.Boolean,Antlr4.Runtime.Sharpen.BitSet,Antlr4.Runtime.Atn.ATNConfigSet)
+  commentId: M:Antlr4.Runtime.BaseErrorListener.ReportAmbiguity(Antlr4.Runtime.Parser,Antlr4.Runtime.Dfa.DFA,System.Int32,System.Int32,System.Boolean,Antlr4.Runtime.Sharpen.BitSet,Antlr4.Runtime.Atn.ATNConfigSet)
+  parent: Antlr4.Runtime.BaseErrorListener
+  isExternal: true
+  name: ReportAmbiguity(Parser, DFA, Int32, Int32, Boolean, BitSet, ATNConfigSet)
+  nameWithType: BaseErrorListener.ReportAmbiguity(Parser, DFA, Int32, Int32, Boolean, BitSet, ATNConfigSet)
+  fullName: Antlr4.Runtime.BaseErrorListener.ReportAmbiguity(Antlr4.Runtime.Parser, Antlr4.Runtime.Dfa.DFA, System.Int32, System.Int32, System.Boolean, Antlr4.Runtime.Sharpen.BitSet, Antlr4.Runtime.Atn.ATNConfigSet)
+  spec.csharp:
+  - uid: Antlr4.Runtime.BaseErrorListener.ReportAmbiguity(Antlr4.Runtime.Parser,Antlr4.Runtime.Dfa.DFA,System.Int32,System.Int32,System.Boolean,Antlr4.Runtime.Sharpen.BitSet,Antlr4.Runtime.Atn.ATNConfigSet)
+    name: ReportAmbiguity
+    nameWithType: BaseErrorListener.ReportAmbiguity
+    fullName: Antlr4.Runtime.BaseErrorListener.ReportAmbiguity
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.Parser
+    name: Parser
+    nameWithType: Parser
+    fullName: Antlr4.Runtime.Parser
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Antlr4.Runtime.Dfa.DFA
+    name: DFA
+    nameWithType: DFA
+    fullName: Antlr4.Runtime.Dfa.DFA
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Antlr4.Runtime.Sharpen.BitSet
+    name: BitSet
+    nameWithType: BitSet
+    fullName: Antlr4.Runtime.Sharpen.BitSet
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Antlr4.Runtime.Atn.ATNConfigSet
+    name: ATNConfigSet
+    nameWithType: ATNConfigSet
+    fullName: Antlr4.Runtime.Atn.ATNConfigSet
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.BaseErrorListener.ReportAmbiguity(Antlr4.Runtime.Parser,Antlr4.Runtime.Dfa.DFA,System.Int32,System.Int32,System.Boolean,Antlr4.Runtime.Sharpen.BitSet,Antlr4.Runtime.Atn.ATNConfigSet)
+    name: ReportAmbiguity
+    nameWithType: BaseErrorListener.ReportAmbiguity
+    fullName: Antlr4.Runtime.BaseErrorListener.ReportAmbiguity
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.Parser
+    name: Parser
+    nameWithType: Parser
+    fullName: Antlr4.Runtime.Parser
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Antlr4.Runtime.Dfa.DFA
+    name: DFA
+    nameWithType: DFA
+    fullName: Antlr4.Runtime.Dfa.DFA
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Antlr4.Runtime.Sharpen.BitSet
+    name: BitSet
+    nameWithType: BitSet
+    fullName: Antlr4.Runtime.Sharpen.BitSet
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Antlr4.Runtime.Atn.ATNConfigSet
+    name: ATNConfigSet
+    nameWithType: ATNConfigSet
+    fullName: Antlr4.Runtime.Atn.ATNConfigSet
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.BaseErrorListener.ReportAttemptingFullContext(Antlr4.Runtime.Parser,Antlr4.Runtime.Dfa.DFA,System.Int32,System.Int32,Antlr4.Runtime.Sharpen.BitSet,Antlr4.Runtime.Atn.SimulatorState)
+  commentId: M:Antlr4.Runtime.BaseErrorListener.ReportAttemptingFullContext(Antlr4.Runtime.Parser,Antlr4.Runtime.Dfa.DFA,System.Int32,System.Int32,Antlr4.Runtime.Sharpen.BitSet,Antlr4.Runtime.Atn.SimulatorState)
+  parent: Antlr4.Runtime.BaseErrorListener
+  isExternal: true
+  name: ReportAttemptingFullContext(Parser, DFA, Int32, Int32, BitSet, SimulatorState)
+  nameWithType: BaseErrorListener.ReportAttemptingFullContext(Parser, DFA, Int32, Int32, BitSet, SimulatorState)
+  fullName: Antlr4.Runtime.BaseErrorListener.ReportAttemptingFullContext(Antlr4.Runtime.Parser, Antlr4.Runtime.Dfa.DFA, System.Int32, System.Int32, Antlr4.Runtime.Sharpen.BitSet, Antlr4.Runtime.Atn.SimulatorState)
+  spec.csharp:
+  - uid: Antlr4.Runtime.BaseErrorListener.ReportAttemptingFullContext(Antlr4.Runtime.Parser,Antlr4.Runtime.Dfa.DFA,System.Int32,System.Int32,Antlr4.Runtime.Sharpen.BitSet,Antlr4.Runtime.Atn.SimulatorState)
+    name: ReportAttemptingFullContext
+    nameWithType: BaseErrorListener.ReportAttemptingFullContext
+    fullName: Antlr4.Runtime.BaseErrorListener.ReportAttemptingFullContext
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.Parser
+    name: Parser
+    nameWithType: Parser
+    fullName: Antlr4.Runtime.Parser
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Antlr4.Runtime.Dfa.DFA
+    name: DFA
+    nameWithType: DFA
+    fullName: Antlr4.Runtime.Dfa.DFA
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Antlr4.Runtime.Sharpen.BitSet
+    name: BitSet
+    nameWithType: BitSet
+    fullName: Antlr4.Runtime.Sharpen.BitSet
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Antlr4.Runtime.Atn.SimulatorState
+    name: SimulatorState
+    nameWithType: SimulatorState
+    fullName: Antlr4.Runtime.Atn.SimulatorState
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.BaseErrorListener.ReportAttemptingFullContext(Antlr4.Runtime.Parser,Antlr4.Runtime.Dfa.DFA,System.Int32,System.Int32,Antlr4.Runtime.Sharpen.BitSet,Antlr4.Runtime.Atn.SimulatorState)
+    name: ReportAttemptingFullContext
+    nameWithType: BaseErrorListener.ReportAttemptingFullContext
+    fullName: Antlr4.Runtime.BaseErrorListener.ReportAttemptingFullContext
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.Parser
+    name: Parser
+    nameWithType: Parser
+    fullName: Antlr4.Runtime.Parser
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Antlr4.Runtime.Dfa.DFA
+    name: DFA
+    nameWithType: DFA
+    fullName: Antlr4.Runtime.Dfa.DFA
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Antlr4.Runtime.Sharpen.BitSet
+    name: BitSet
+    nameWithType: BitSet
+    fullName: Antlr4.Runtime.Sharpen.BitSet
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Antlr4.Runtime.Atn.SimulatorState
+    name: SimulatorState
+    nameWithType: SimulatorState
+    fullName: Antlr4.Runtime.Atn.SimulatorState
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.BaseErrorListener.ReportContextSensitivity(Antlr4.Runtime.Parser,Antlr4.Runtime.Dfa.DFA,System.Int32,System.Int32,System.Int32,Antlr4.Runtime.Atn.SimulatorState)
+  commentId: M:Antlr4.Runtime.BaseErrorListener.ReportContextSensitivity(Antlr4.Runtime.Parser,Antlr4.Runtime.Dfa.DFA,System.Int32,System.Int32,System.Int32,Antlr4.Runtime.Atn.SimulatorState)
+  parent: Antlr4.Runtime.BaseErrorListener
+  isExternal: true
+  name: ReportContextSensitivity(Parser, DFA, Int32, Int32, Int32, SimulatorState)
+  nameWithType: BaseErrorListener.ReportContextSensitivity(Parser, DFA, Int32, Int32, Int32, SimulatorState)
+  fullName: Antlr4.Runtime.BaseErrorListener.ReportContextSensitivity(Antlr4.Runtime.Parser, Antlr4.Runtime.Dfa.DFA, System.Int32, System.Int32, System.Int32, Antlr4.Runtime.Atn.SimulatorState)
+  spec.csharp:
+  - uid: Antlr4.Runtime.BaseErrorListener.ReportContextSensitivity(Antlr4.Runtime.Parser,Antlr4.Runtime.Dfa.DFA,System.Int32,System.Int32,System.Int32,Antlr4.Runtime.Atn.SimulatorState)
+    name: ReportContextSensitivity
+    nameWithType: BaseErrorListener.ReportContextSensitivity
+    fullName: Antlr4.Runtime.BaseErrorListener.ReportContextSensitivity
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.Parser
+    name: Parser
+    nameWithType: Parser
+    fullName: Antlr4.Runtime.Parser
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Antlr4.Runtime.Dfa.DFA
+    name: DFA
+    nameWithType: DFA
+    fullName: Antlr4.Runtime.Dfa.DFA
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Antlr4.Runtime.Atn.SimulatorState
+    name: SimulatorState
+    nameWithType: SimulatorState
+    fullName: Antlr4.Runtime.Atn.SimulatorState
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.BaseErrorListener.ReportContextSensitivity(Antlr4.Runtime.Parser,Antlr4.Runtime.Dfa.DFA,System.Int32,System.Int32,System.Int32,Antlr4.Runtime.Atn.SimulatorState)
+    name: ReportContextSensitivity
+    nameWithType: BaseErrorListener.ReportContextSensitivity
+    fullName: Antlr4.Runtime.BaseErrorListener.ReportContextSensitivity
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.Parser
+    name: Parser
+    nameWithType: Parser
+    fullName: Antlr4.Runtime.Parser
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Antlr4.Runtime.Dfa.DFA
+    name: DFA
+    nameWithType: DFA
+    fullName: Antlr4.Runtime.Dfa.DFA
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Antlr4.Runtime.Atn.SimulatorState
+    name: SimulatorState
+    nameWithType: SimulatorState
+    fullName: Antlr4.Runtime.Atn.SimulatorState
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Antlr4.Runtime
+  commentId: N:Antlr4.Runtime
+  isExternal: true
+  name: Antlr4.Runtime
+  nameWithType: Antlr4.Runtime
+  fullName: Antlr4.Runtime
+- uid: Antlr4.Runtime.IAntlrErrorListener`1
+  commentId: T:Antlr4.Runtime.IAntlrErrorListener`1
+  isExternal: true
+  name: IAntlrErrorListener<TSymbol>
+  nameWithType: IAntlrErrorListener<TSymbol>
+  fullName: Antlr4.Runtime.IAntlrErrorListener<TSymbol>
+  nameWithType.vb: IAntlrErrorListener(Of TSymbol)
+  fullName.vb: Antlr4.Runtime.IAntlrErrorListener(Of TSymbol)
+  name.vb: IAntlrErrorListener(Of TSymbol)
+  spec.csharp:
+  - uid: Antlr4.Runtime.IAntlrErrorListener`1
+    name: IAntlrErrorListener
+    nameWithType: IAntlrErrorListener
+    fullName: Antlr4.Runtime.IAntlrErrorListener
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TSymbol
+    nameWithType: TSymbol
+    fullName: TSymbol
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Antlr4.Runtime.IAntlrErrorListener`1
+    name: IAntlrErrorListener
+    nameWithType: IAntlrErrorListener
+    fullName: Antlr4.Runtime.IAntlrErrorListener
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TSymbol
+    nameWithType: TSymbol
+    fullName: TSymbol
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Bve5_Parsing.ParseErrorListener.Errors*
+  commentId: Overload:Bve5_Parsing.ParseErrorListener.Errors
+  name: Errors
+  nameWithType: ParseErrorListener.Errors
+  fullName: Bve5_Parsing.ParseErrorListener.Errors
+- uid: System.Collections.Generic.ICollection{Bve5_Parsing.ParseError}
+  commentId: T:System.Collections.Generic.ICollection{Bve5_Parsing.ParseError}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
+  name: ICollection<ParseError>
+  nameWithType: ICollection<ParseError>
+  fullName: System.Collections.Generic.ICollection<Bve5_Parsing.ParseError>
+  nameWithType.vb: ICollection(Of ParseError)
+  fullName.vb: System.Collections.Generic.ICollection(Of Bve5_Parsing.ParseError)
+  name.vb: ICollection(Of ParseError)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Bve5_Parsing.ParseError
+    name: ParseError
+    nameWithType: ParseError
+    fullName: Bve5_Parsing.ParseError
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Bve5_Parsing.ParseError
+    name: ParseError
+    nameWithType: ParseError
+    fullName: Bve5_Parsing.ParseError
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.ICollection`1
+  commentId: T:System.Collections.Generic.ICollection`1
+  isExternal: true
+  name: ICollection<T>
+  nameWithType: ICollection<T>
+  fullName: System.Collections.Generic.ICollection<T>
+  nameWithType.vb: ICollection(Of T)
+  fullName.vb: System.Collections.Generic.ICollection(Of T)
+  name.vb: ICollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: Bve5_Parsing.ParseErrorListener.GetTokenDisplayName*
+  commentId: Overload:Bve5_Parsing.ParseErrorListener.GetTokenDisplayName
+  name: GetTokenDisplayName
+  nameWithType: ParseErrorListener.GetTokenDisplayName
+  fullName: Bve5_Parsing.ParseErrorListener.GetTokenDisplayName
+- uid: Antlr4.Runtime.IToken
+  commentId: T:Antlr4.Runtime.IToken
+  parent: Antlr4.Runtime
+  isExternal: true
+  name: IToken
+  nameWithType: IToken
+  fullName: Antlr4.Runtime.IToken
+- uid: Bve5_Parsing.ParseErrorListener.EscapeWSAndQuote*
+  commentId: Overload:Bve5_Parsing.ParseErrorListener.EscapeWSAndQuote
+  name: EscapeWSAndQuote
+  nameWithType: ParseErrorListener.EscapeWSAndQuote
+  fullName: Bve5_Parsing.ParseErrorListener.EscapeWSAndQuote
+- uid: Bve5_Parsing.ParseErrorListener.GetErrorMessage*
+  commentId: Overload:Bve5_Parsing.ParseErrorListener.GetErrorMessage
+  name: GetErrorMessage
+  nameWithType: ParseErrorListener.GetErrorMessage
+  fullName: Bve5_Parsing.ParseErrorListener.GetErrorMessage
+- uid: Antlr4.Runtime.IRecognizer
+  commentId: T:Antlr4.Runtime.IRecognizer
+  parent: Antlr4.Runtime
+  isExternal: true
+  name: IRecognizer
+  nameWithType: IRecognizer
+  fullName: Antlr4.Runtime.IRecognizer
+- uid: Antlr4.Runtime.InputMismatchException
+  commentId: T:Antlr4.Runtime.InputMismatchException
+  parent: Antlr4.Runtime
+  isExternal: true
+  name: InputMismatchException
+  nameWithType: InputMismatchException
+  fullName: Antlr4.Runtime.InputMismatchException
+- uid: Antlr4.Runtime.NoViableAltException
+  commentId: T:Antlr4.Runtime.NoViableAltException
+  parent: Antlr4.Runtime
+  isExternal: true
+  name: NoViableAltException
+  nameWithType: NoViableAltException
+  fullName: Antlr4.Runtime.NoViableAltException
+- uid: Antlr4.Runtime.LexerNoViableAltException
+  commentId: T:Antlr4.Runtime.LexerNoViableAltException
+  parent: Antlr4.Runtime
+  isExternal: true
+  name: LexerNoViableAltException
+  nameWithType: LexerNoViableAltException
+  fullName: Antlr4.Runtime.LexerNoViableAltException
+- uid: Antlr4.Runtime.FailedPredicateException
+  commentId: T:Antlr4.Runtime.FailedPredicateException
+  parent: Antlr4.Runtime
+  isExternal: true
+  name: FailedPredicateException
+  nameWithType: FailedPredicateException
+  fullName: Antlr4.Runtime.FailedPredicateException
+- uid: Bve5_Parsing.ParseErrorListener.#ctor*
+  commentId: Overload:Bve5_Parsing.ParseErrorListener.#ctor
+  name: ParseErrorListener
+  nameWithType: ParseErrorListener.ParseErrorListener
+  fullName: Bve5_Parsing.ParseErrorListener.ParseErrorListener
+- uid: Antlr4.Runtime.BaseErrorListener.SyntaxError(Antlr4.Runtime.IRecognizer,Antlr4.Runtime.IToken,System.Int32,System.Int32,System.String,Antlr4.Runtime.RecognitionException)
+  commentId: M:Antlr4.Runtime.BaseErrorListener.SyntaxError(Antlr4.Runtime.IRecognizer,Antlr4.Runtime.IToken,System.Int32,System.Int32,System.String,Antlr4.Runtime.RecognitionException)
+  parent: Antlr4.Runtime.BaseErrorListener
+  isExternal: true
+  name: SyntaxError(IRecognizer, IToken, Int32, Int32, String, RecognitionException)
+  nameWithType: BaseErrorListener.SyntaxError(IRecognizer, IToken, Int32, Int32, String, RecognitionException)
+  fullName: Antlr4.Runtime.BaseErrorListener.SyntaxError(Antlr4.Runtime.IRecognizer, Antlr4.Runtime.IToken, System.Int32, System.Int32, System.String, Antlr4.Runtime.RecognitionException)
+  spec.csharp:
+  - uid: Antlr4.Runtime.BaseErrorListener.SyntaxError(Antlr4.Runtime.IRecognizer,Antlr4.Runtime.IToken,System.Int32,System.Int32,System.String,Antlr4.Runtime.RecognitionException)
+    name: SyntaxError
+    nameWithType: BaseErrorListener.SyntaxError
+    fullName: Antlr4.Runtime.BaseErrorListener.SyntaxError
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.IRecognizer
+    name: IRecognizer
+    nameWithType: IRecognizer
+    fullName: Antlr4.Runtime.IRecognizer
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Antlr4.Runtime.IToken
+    name: IToken
+    nameWithType: IToken
+    fullName: Antlr4.Runtime.IToken
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Antlr4.Runtime.RecognitionException
+    name: RecognitionException
+    nameWithType: RecognitionException
+    fullName: Antlr4.Runtime.RecognitionException
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.BaseErrorListener.SyntaxError(Antlr4.Runtime.IRecognizer,Antlr4.Runtime.IToken,System.Int32,System.Int32,System.String,Antlr4.Runtime.RecognitionException)
+    name: SyntaxError
+    nameWithType: BaseErrorListener.SyntaxError
+    fullName: Antlr4.Runtime.BaseErrorListener.SyntaxError
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.IRecognizer
+    name: IRecognizer
+    nameWithType: IRecognizer
+    fullName: Antlr4.Runtime.IRecognizer
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Antlr4.Runtime.IToken
+    name: IToken
+    nameWithType: IToken
+    fullName: Antlr4.Runtime.IToken
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Antlr4.Runtime.RecognitionException
+    name: RecognitionException
+    nameWithType: RecognitionException
+    fullName: Antlr4.Runtime.RecognitionException
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Bve5_Parsing.ParseErrorListener.SyntaxError*
+  commentId: Overload:Bve5_Parsing.ParseErrorListener.SyntaxError
+  name: SyntaxError
+  nameWithType: ParseErrorListener.SyntaxError
+  fullName: Bve5_Parsing.ParseErrorListener.SyntaxError
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Antlr4.Runtime.RecognitionException
+  commentId: T:Antlr4.Runtime.RecognitionException
+  parent: Antlr4.Runtime
+  isExternal: true
+  name: RecognitionException
+  nameWithType: RecognitionException
+  fullName: Antlr4.Runtime.RecognitionException

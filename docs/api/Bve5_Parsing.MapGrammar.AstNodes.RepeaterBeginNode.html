@@ -1,0 +1,830 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class RepeaterBeginNode
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class RepeaterBeginNode
+   ">
+    <meta name="generator" content="docfx 2.41.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Bve5_Parsing.MapGrammar.AstNodes.RepeaterBeginNode">
+  
+  
+  <h1 id="Bve5_Parsing_MapGrammar_AstNodes_RepeaterBeginNode" data-uid="Bve5_Parsing.MapGrammar.AstNodes.RepeaterBeginNode" class="text-break">Class RepeaterBeginNode
+  </h1>
+  <div class="markdown level0 summary"><p>Repeater.Beginの手動対応
+可変長のstructureKeyへ対応する</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes.html">MapGrammarAstNodes</a></div>
+    <div class="level2"><a class="xref" href="Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.html">SyntaxNode</a></div>
+    <div class="level3"><span class="xref">RepeaterBeginNode</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.html#Bve5_Parsing_MapGrammar_AstNodes_SyntaxNode_GetAllArguments">SyntaxNode.GetAllArguments()</a>
+    </div>
+    <div>
+      <a class="xref" href="Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.html#Bve5_Parsing_MapGrammar_AstNodes_SyntaxNode_GetNonOptionalArguments">SyntaxNode.GetNonOptionalArguments()</a>
+    </div>
+    <div>
+      <a class="xref" href="Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.html#Bve5_Parsing_MapGrammar_AstNodes_SyntaxNode_GetOptionalArguments">SyntaxNode.GetOptionalArguments()</a>
+    </div>
+    <div>
+      <a class="xref" href="Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.html#Bve5_Parsing_MapGrammar_AstNodes_SyntaxNode_CreateSyntaxAstNode_Bve5_Parsing_MapGrammar_AstNodes_BuildAstVisitor_Antlr4_Runtime_ParserRuleContext_Bve5_Parsing_MapGrammar_MapElementName_System_String_System_String_">SyntaxNode.CreateSyntaxAstNode(BuildAstVisitor, ParserRuleContext, MapElementName, String, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.html#Bve5_Parsing_MapGrammar_AstNodes_SyntaxNode_SetArgument_Bve5_Parsing_MapGrammar_EvaluateMapGrammarVisitor_Bve5_Parsing_MapGrammar_EvaluateData_Statement_">SyntaxNode.SetArgument(EvaluateMapGrammarVisitor, Statement)</a>
+    </div>
+    <div>
+      <a class="xref" href="Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.html#Bve5_Parsing_MapGrammar_AstNodes_SyntaxNode_CreateStatement_Bve5_Parsing_MapGrammar_EvaluateMapGrammarVisitor_">SyntaxNode.CreateStatement(EvaluateMapGrammarVisitor)</a>
+    </div>
+    <div>
+      <a class="xref" href="Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes.html#Bve5_Parsing_MapGrammar_AstNodes_MapGrammarAstNodes_Start">MapGrammarAstNodes.Start</a>
+    </div>
+    <div>
+      <a class="xref" href="Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes.html#Bve5_Parsing_MapGrammar_AstNodes_MapGrammarAstNodes_Stop">MapGrammarAstNodes.Stop</a>
+    </div>
+    <div>
+      <a class="xref" href="Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes.html#Bve5_Parsing_MapGrammar_AstNodes_MapGrammarAstNodes_CreateNewWarning_System_String_">MapGrammarAstNodes.CreateNewWarning(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes.html#Bve5_Parsing_MapGrammar_AstNodes_MapGrammarAstNodes_CreateNewError_System_String_">MapGrammarAstNodes.CreateNewError(String)</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Bve5_Parsing.MapGrammar.AstNodes.html">Bve5_Parsing.MapGrammar.AstNodes</a></h6>
+  <h6><strong>Assembly</strong>: Bve5_Parsing.dll</h6>
+  <h5 id="Bve5_Parsing_MapGrammar_AstNodes_RepeaterBeginNode_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class RepeaterBeginNode : SyntaxNode</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aoisupersix/Bve5_Parsing/new/update_doc/apiSpec/new?filename=Bve5_Parsing_MapGrammar_AstNodes_RepeaterBeginNode__ctor_Antlr4_Runtime_IToken_Antlr4_Runtime_IToken_.md&amp;value=---%0Auid%3A%20Bve5_Parsing.MapGrammar.AstNodes.RepeaterBeginNode.%23ctor(Antlr4.Runtime.IToken%2CAntlr4.Runtime.IToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aoisupersix/Bve5_Parsing/blob/update_doc/Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs/#L1642">View Source</a>
+  </span>
+  <a id="Bve5_Parsing_MapGrammar_AstNodes_RepeaterBeginNode__ctor_" data-uid="Bve5_Parsing.MapGrammar.AstNodes.RepeaterBeginNode.#ctor*"></a>
+  <h4 id="Bve5_Parsing_MapGrammar_AstNodes_RepeaterBeginNode__ctor_Antlr4_Runtime_IToken_Antlr4_Runtime_IToken_" data-uid="Bve5_Parsing.MapGrammar.AstNodes.RepeaterBeginNode.#ctor(Antlr4.Runtime.IToken,Antlr4.Runtime.IToken)">RepeaterBeginNode(IToken, IToken)</h4>
+  <div class="markdown level1 summary"><p>新しいインスタンスを生成します。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RepeaterBeginNode(IToken start, IToken stop)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Antlr4.Runtime.IToken</span></td>
+        <td><span class="parametername">start</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Antlr4.Runtime.IToken</span></td>
+        <td><span class="parametername">stop</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aoisupersix/Bve5_Parsing/new/update_doc/apiSpec/new?filename=Bve5_Parsing_MapGrammar_AstNodes_RepeaterBeginNode__structureKeys.md&amp;value=---%0Auid%3A%20Bve5_Parsing.MapGrammar.AstNodes.RepeaterBeginNode._structureKeys%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aoisupersix/Bve5_Parsing/blob/update_doc/Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs/#L52">View Source</a>
+  </span>
+  <h4 id="Bve5_Parsing_MapGrammar_AstNodes_RepeaterBeginNode__structureKeys" data-uid="Bve5_Parsing.MapGrammar.AstNodes.RepeaterBeginNode._structureKeys">_structureKeys</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected List&lt;MapGrammarAstNodes&gt; _structureKeys</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes.html">MapGrammarAstNodes</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aoisupersix/Bve5_Parsing/new/update_doc/apiSpec/new?filename=Bve5_Parsing_MapGrammar_AstNodes_RepeaterBeginNode_ElementName.md&amp;value=---%0Auid%3A%20Bve5_Parsing.MapGrammar.AstNodes.RepeaterBeginNode.ElementName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aoisupersix/Bve5_Parsing/blob/update_doc/Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs/#L1551">View Source</a>
+  </span>
+  <a id="Bve5_Parsing_MapGrammar_AstNodes_RepeaterBeginNode_ElementName_" data-uid="Bve5_Parsing.MapGrammar.AstNodes.RepeaterBeginNode.ElementName*"></a>
+  <h4 id="Bve5_Parsing_MapGrammar_AstNodes_RepeaterBeginNode_ElementName" data-uid="Bve5_Parsing.MapGrammar.AstNodes.RepeaterBeginNode.ElementName">ElementName</h4>
+  <div class="markdown level1 summary"><p>マップ要素名</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override MapElementName ElementName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Bve5_Parsing.MapGrammar.MapElementName.html">MapElementName</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.html#Bve5_Parsing_MapGrammar_AstNodes_SyntaxNode_ElementName">SyntaxNode.ElementName</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aoisupersix/Bve5_Parsing/new/update_doc/apiSpec/new?filename=Bve5_Parsing_MapGrammar_AstNodes_RepeaterBeginNode_FunctionName.md&amp;value=---%0Auid%3A%20Bve5_Parsing.MapGrammar.AstNodes.RepeaterBeginNode.FunctionName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aoisupersix/Bve5_Parsing/blob/update_doc/Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs/#L1556">View Source</a>
+  </span>
+  <a id="Bve5_Parsing_MapGrammar_AstNodes_RepeaterBeginNode_FunctionName_" data-uid="Bve5_Parsing.MapGrammar.AstNodes.RepeaterBeginNode.FunctionName*"></a>
+  <h4 id="Bve5_Parsing_MapGrammar_AstNodes_RepeaterBeginNode_FunctionName" data-uid="Bve5_Parsing.MapGrammar.AstNodes.RepeaterBeginNode.FunctionName">FunctionName</h4>
+  <div class="markdown level1 summary"><p>関数名</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override MapFunctionName FunctionName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Bve5_Parsing.MapGrammar.MapFunctionName.html">MapFunctionName</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.html#Bve5_Parsing_MapGrammar_AstNodes_SyntaxNode_FunctionName">SyntaxNode.FunctionName</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aoisupersix/Bve5_Parsing/new/update_doc/apiSpec/new?filename=Bve5_Parsing_MapGrammar_AstNodes_RepeaterBeginNode_HasKey.md&amp;value=---%0Auid%3A%20Bve5_Parsing.MapGrammar.AstNodes.RepeaterBeginNode.HasKey%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aoisupersix/Bve5_Parsing/blob/update_doc/Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs/#L1561">View Source</a>
+  </span>
+  <a id="Bve5_Parsing_MapGrammar_AstNodes_RepeaterBeginNode_HasKey_" data-uid="Bve5_Parsing.MapGrammar.AstNodes.RepeaterBeginNode.HasKey*"></a>
+  <h4 id="Bve5_Parsing_MapGrammar_AstNodes_RepeaterBeginNode_HasKey" data-uid="Bve5_Parsing.MapGrammar.AstNodes.RepeaterBeginNode.HasKey">HasKey</h4>
+  <div class="markdown level1 summary"><p>キーを指定する構文か？</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool HasKey { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.html#Bve5_Parsing_MapGrammar_AstNodes_SyntaxNode_HasKey">SyntaxNode.HasKey</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aoisupersix/Bve5_Parsing/new/update_doc/apiSpec/new?filename=Bve5_Parsing_MapGrammar_AstNodes_RepeaterBeginNode_HasSubElement.md&amp;value=---%0Auid%3A%20Bve5_Parsing.MapGrammar.AstNodes.RepeaterBeginNode.HasSubElement%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aoisupersix/Bve5_Parsing/blob/update_doc/Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs/#L1566">View Source</a>
+  </span>
+  <a id="Bve5_Parsing_MapGrammar_AstNodes_RepeaterBeginNode_HasSubElement_" data-uid="Bve5_Parsing.MapGrammar.AstNodes.RepeaterBeginNode.HasSubElement*"></a>
+  <h4 id="Bve5_Parsing_MapGrammar_AstNodes_RepeaterBeginNode_HasSubElement" data-uid="Bve5_Parsing.MapGrammar.AstNodes.RepeaterBeginNode.HasSubElement">HasSubElement</h4>
+  <div class="markdown level1 summary"><p>副要素を指定する構文か？</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool HasSubElement { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.html#Bve5_Parsing_MapGrammar_AstNodes_SyntaxNode_HasSubElement">SyntaxNode.HasSubElement</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aoisupersix/Bve5_Parsing/new/update_doc/apiSpec/new?filename=Bve5_Parsing_MapGrammar_AstNodes_RepeaterBeginNode_Interval.md&amp;value=---%0Auid%3A%20Bve5_Parsing.MapGrammar.AstNodes.RepeaterBeginNode.Interval%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aoisupersix/Bve5_Parsing/blob/update_doc/Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs/#L1633">View Source</a>
+  </span>
+  <a id="Bve5_Parsing_MapGrammar_AstNodes_RepeaterBeginNode_Interval_" data-uid="Bve5_Parsing.MapGrammar.AstNodes.RepeaterBeginNode.Interval*"></a>
+  <h4 id="Bve5_Parsing_MapGrammar_AstNodes_RepeaterBeginNode_Interval" data-uid="Bve5_Parsing.MapGrammar.AstNodes.RepeaterBeginNode.Interval">Interval</h4>
+  <div class="markdown level1 summary"><p>引数：配置間隔 [m]</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MapGrammarAstNodes Interval { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes.html">MapGrammarAstNodes</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aoisupersix/Bve5_Parsing/new/update_doc/apiSpec/new?filename=Bve5_Parsing_MapGrammar_AstNodes_RepeaterBeginNode_Key.md&amp;value=---%0Auid%3A%20Bve5_Parsing.MapGrammar.AstNodes.RepeaterBeginNode.Key%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aoisupersix/Bve5_Parsing/blob/update_doc/Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs/#L1572">View Source</a>
+  </span>
+  <a id="Bve5_Parsing_MapGrammar_AstNodes_RepeaterBeginNode_Key_" data-uid="Bve5_Parsing.MapGrammar.AstNodes.RepeaterBeginNode.Key*"></a>
+  <h4 id="Bve5_Parsing_MapGrammar_AstNodes_RepeaterBeginNode_Key" data-uid="Bve5_Parsing.MapGrammar.AstNodes.RepeaterBeginNode.Key">Key</h4>
+  <div class="markdown level1 summary"><p>Key：RepeaterKey</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MapGrammarAstNodes Key { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes.html">MapGrammarAstNodes</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aoisupersix/Bve5_Parsing/new/update_doc/apiSpec/new?filename=Bve5_Parsing_MapGrammar_AstNodes_RepeaterBeginNode_RX.md&amp;value=---%0Auid%3A%20Bve5_Parsing.MapGrammar.AstNodes.RepeaterBeginNode.RX%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aoisupersix/Bve5_Parsing/blob/update_doc/Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs/#L1603">View Source</a>
+  </span>
+  <a id="Bve5_Parsing_MapGrammar_AstNodes_RepeaterBeginNode_RX_" data-uid="Bve5_Parsing.MapGrammar.AstNodes.RepeaterBeginNode.RX*"></a>
+  <h4 id="Bve5_Parsing_MapGrammar_AstNodes_RepeaterBeginNode_RX" data-uid="Bve5_Parsing.MapGrammar.AstNodes.RepeaterBeginNode.RX">RX</h4>
+  <div class="markdown level1 summary"><p>引数：軌道に対する x 軸回りの角 [deg]</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MapGrammarAstNodes RX { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes.html">MapGrammarAstNodes</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aoisupersix/Bve5_Parsing/new/update_doc/apiSpec/new?filename=Bve5_Parsing_MapGrammar_AstNodes_RepeaterBeginNode_RY.md&amp;value=---%0Auid%3A%20Bve5_Parsing.MapGrammar.AstNodes.RepeaterBeginNode.RY%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aoisupersix/Bve5_Parsing/blob/update_doc/Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs/#L1609">View Source</a>
+  </span>
+  <a id="Bve5_Parsing_MapGrammar_AstNodes_RepeaterBeginNode_RY_" data-uid="Bve5_Parsing.MapGrammar.AstNodes.RepeaterBeginNode.RY*"></a>
+  <h4 id="Bve5_Parsing_MapGrammar_AstNodes_RepeaterBeginNode_RY" data-uid="Bve5_Parsing.MapGrammar.AstNodes.RepeaterBeginNode.RY">RY</h4>
+  <div class="markdown level1 summary"><p>引数：軌道に対する y 軸回りの角 [deg]</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MapGrammarAstNodes RY { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes.html">MapGrammarAstNodes</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aoisupersix/Bve5_Parsing/new/update_doc/apiSpec/new?filename=Bve5_Parsing_MapGrammar_AstNodes_RepeaterBeginNode_RZ.md&amp;value=---%0Auid%3A%20Bve5_Parsing.MapGrammar.AstNodes.RepeaterBeginNode.RZ%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aoisupersix/Bve5_Parsing/blob/update_doc/Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs/#L1615">View Source</a>
+  </span>
+  <a id="Bve5_Parsing_MapGrammar_AstNodes_RepeaterBeginNode_RZ_" data-uid="Bve5_Parsing.MapGrammar.AstNodes.RepeaterBeginNode.RZ*"></a>
+  <h4 id="Bve5_Parsing_MapGrammar_AstNodes_RepeaterBeginNode_RZ" data-uid="Bve5_Parsing.MapGrammar.AstNodes.RepeaterBeginNode.RZ">RZ</h4>
+  <div class="markdown level1 summary"><p>引数：軌道に対する z 軸回りの角 [deg]</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MapGrammarAstNodes RZ { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes.html">MapGrammarAstNodes</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aoisupersix/Bve5_Parsing/new/update_doc/apiSpec/new?filename=Bve5_Parsing_MapGrammar_AstNodes_RepeaterBeginNode_Span.md&amp;value=---%0Auid%3A%20Bve5_Parsing.MapGrammar.AstNodes.RepeaterBeginNode.Span%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aoisupersix/Bve5_Parsing/blob/update_doc/Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs/#L1627">View Source</a>
+  </span>
+  <a id="Bve5_Parsing_MapGrammar_AstNodes_RepeaterBeginNode_Span_" data-uid="Bve5_Parsing.MapGrammar.AstNodes.RepeaterBeginNode.Span*"></a>
+  <h4 id="Bve5_Parsing_MapGrammar_AstNodes_RepeaterBeginNode_Span" data-uid="Bve5_Parsing.MapGrammar.AstNodes.RepeaterBeginNode.Span">Span</h4>
+  <div class="markdown level1 summary"><p>引数：曲線における弦の長さ [m]</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MapGrammarAstNodes Span { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes.html">MapGrammarAstNodes</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aoisupersix/Bve5_Parsing/new/update_doc/apiSpec/new?filename=Bve5_Parsing_MapGrammar_AstNodes_RepeaterBeginNode_StructureKeys.md&amp;value=---%0Auid%3A%20Bve5_Parsing.MapGrammar.AstNodes.RepeaterBeginNode.StructureKeys%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aoisupersix/Bve5_Parsing/blob/update_doc/Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs/#L54">View Source</a>
+  </span>
+  <a id="Bve5_Parsing_MapGrammar_AstNodes_RepeaterBeginNode_StructureKeys_" data-uid="Bve5_Parsing.MapGrammar.AstNodes.RepeaterBeginNode.StructureKeys*"></a>
+  <h4 id="Bve5_Parsing_MapGrammar_AstNodes_RepeaterBeginNode_StructureKeys" data-uid="Bve5_Parsing.MapGrammar.AstNodes.RepeaterBeginNode.StructureKeys">StructureKeys</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ReadOnlyCollection&lt;MapGrammarAstNodes&gt; StructureKeys { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.ObjectModel.ReadOnlyCollection</span>&lt;<a class="xref" href="Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes.html">MapGrammarAstNodes</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aoisupersix/Bve5_Parsing/new/update_doc/apiSpec/new?filename=Bve5_Parsing_MapGrammar_AstNodes_RepeaterBeginNode_Tilt.md&amp;value=---%0Auid%3A%20Bve5_Parsing.MapGrammar.AstNodes.RepeaterBeginNode.Tilt%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aoisupersix/Bve5_Parsing/blob/update_doc/Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs/#L1621">View Source</a>
+  </span>
+  <a id="Bve5_Parsing_MapGrammar_AstNodes_RepeaterBeginNode_Tilt_" data-uid="Bve5_Parsing.MapGrammar.AstNodes.RepeaterBeginNode.Tilt*"></a>
+  <h4 id="Bve5_Parsing_MapGrammar_AstNodes_RepeaterBeginNode_Tilt" data-uid="Bve5_Parsing.MapGrammar.AstNodes.RepeaterBeginNode.Tilt">Tilt</h4>
+  <div class="markdown level1 summary"><p>引数：傾斜オプション (0: 常に水平, 1: 勾配に連動, 2: カントに連動, 3: 勾配とカントに連動)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MapGrammarAstNodes Tilt { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes.html">MapGrammarAstNodes</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aoisupersix/Bve5_Parsing/new/update_doc/apiSpec/new?filename=Bve5_Parsing_MapGrammar_AstNodes_RepeaterBeginNode_TrackKey.md&amp;value=---%0Auid%3A%20Bve5_Parsing.MapGrammar.AstNodes.RepeaterBeginNode.TrackKey%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aoisupersix/Bve5_Parsing/blob/update_doc/Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs/#L1579">View Source</a>
+  </span>
+  <a id="Bve5_Parsing_MapGrammar_AstNodes_RepeaterBeginNode_TrackKey_" data-uid="Bve5_Parsing.MapGrammar.AstNodes.RepeaterBeginNode.TrackKey*"></a>
+  <h4 id="Bve5_Parsing_MapGrammar_AstNodes_RepeaterBeginNode_TrackKey" data-uid="Bve5_Parsing.MapGrammar.AstNodes.RepeaterBeginNode.TrackKey">TrackKey</h4>
+  <div class="markdown level1 summary"><p>引数：配置先の軌道名 (0: 自軌道)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MapGrammarAstNodes TrackKey { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes.html">MapGrammarAstNodes</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aoisupersix/Bve5_Parsing/new/update_doc/apiSpec/new?filename=Bve5_Parsing_MapGrammar_AstNodes_RepeaterBeginNode_X.md&amp;value=---%0Auid%3A%20Bve5_Parsing.MapGrammar.AstNodes.RepeaterBeginNode.X%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aoisupersix/Bve5_Parsing/blob/update_doc/Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs/#L1585">View Source</a>
+  </span>
+  <a id="Bve5_Parsing_MapGrammar_AstNodes_RepeaterBeginNode_X_" data-uid="Bve5_Parsing.MapGrammar.AstNodes.RepeaterBeginNode.X*"></a>
+  <h4 id="Bve5_Parsing_MapGrammar_AstNodes_RepeaterBeginNode_X" data-uid="Bve5_Parsing.MapGrammar.AstNodes.RepeaterBeginNode.X">X</h4>
+  <div class="markdown level1 summary"><p>引数：軌道からの x 座標 [m]</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MapGrammarAstNodes X { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes.html">MapGrammarAstNodes</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aoisupersix/Bve5_Parsing/new/update_doc/apiSpec/new?filename=Bve5_Parsing_MapGrammar_AstNodes_RepeaterBeginNode_Y.md&amp;value=---%0Auid%3A%20Bve5_Parsing.MapGrammar.AstNodes.RepeaterBeginNode.Y%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aoisupersix/Bve5_Parsing/blob/update_doc/Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs/#L1591">View Source</a>
+  </span>
+  <a id="Bve5_Parsing_MapGrammar_AstNodes_RepeaterBeginNode_Y_" data-uid="Bve5_Parsing.MapGrammar.AstNodes.RepeaterBeginNode.Y*"></a>
+  <h4 id="Bve5_Parsing_MapGrammar_AstNodes_RepeaterBeginNode_Y" data-uid="Bve5_Parsing.MapGrammar.AstNodes.RepeaterBeginNode.Y">Y</h4>
+  <div class="markdown level1 summary"><p>引数：軌道からの y 座標 [m]</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MapGrammarAstNodes Y { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes.html">MapGrammarAstNodes</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aoisupersix/Bve5_Parsing/new/update_doc/apiSpec/new?filename=Bve5_Parsing_MapGrammar_AstNodes_RepeaterBeginNode_Z.md&amp;value=---%0Auid%3A%20Bve5_Parsing.MapGrammar.AstNodes.RepeaterBeginNode.Z%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aoisupersix/Bve5_Parsing/blob/update_doc/Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs/#L1597">View Source</a>
+  </span>
+  <a id="Bve5_Parsing_MapGrammar_AstNodes_RepeaterBeginNode_Z_" data-uid="Bve5_Parsing.MapGrammar.AstNodes.RepeaterBeginNode.Z*"></a>
+  <h4 id="Bve5_Parsing_MapGrammar_AstNodes_RepeaterBeginNode_Z" data-uid="Bve5_Parsing.MapGrammar.AstNodes.RepeaterBeginNode.Z">Z</h4>
+  <div class="markdown level1 summary"><p>引数：軌道からの z 座標 [m]</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MapGrammarAstNodes Z { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes.html">MapGrammarAstNodes</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aoisupersix/Bve5_Parsing/new/update_doc/apiSpec/new?filename=Bve5_Parsing_MapGrammar_AstNodes_RepeaterBeginNode_AddStructureKey_Bve5_Parsing_MapGrammar_AstNodes_MapGrammarAstNodes_.md&amp;value=---%0Auid%3A%20Bve5_Parsing.MapGrammar.AstNodes.RepeaterBeginNode.AddStructureKey(Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aoisupersix/Bve5_Parsing/blob/update_doc/Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs/#L56">View Source</a>
+  </span>
+  <a id="Bve5_Parsing_MapGrammar_AstNodes_RepeaterBeginNode_AddStructureKey_" data-uid="Bve5_Parsing.MapGrammar.AstNodes.RepeaterBeginNode.AddStructureKey*"></a>
+  <h4 id="Bve5_Parsing_MapGrammar_AstNodes_RepeaterBeginNode_AddStructureKey_Bve5_Parsing_MapGrammar_AstNodes_MapGrammarAstNodes_" data-uid="Bve5_Parsing.MapGrammar.AstNodes.RepeaterBeginNode.AddStructureKey(Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes)">AddStructureKey(MapGrammarAstNodes)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddStructureKey(MapGrammarAstNodes strKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes.html">MapGrammarAstNodes</a></td>
+        <td><span class="parametername">strKey</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/aoisupersix/Bve5_Parsing/new/update_doc/apiSpec/new?filename=Bve5_Parsing_MapGrammar_AstNodes_RepeaterBeginNode_AddStructureKeys_System_Collections_Generic_IEnumerable_Bve5_Parsing_MapGrammar_AstNodes_MapGrammarAstNodes__.md&amp;value=---%0Auid%3A%20Bve5_Parsing.MapGrammar.AstNodes.RepeaterBeginNode.AddStructureKeys(System.Collections.Generic.IEnumerable%7BBve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/aoisupersix/Bve5_Parsing/blob/update_doc/Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs/#L61">View Source</a>
+  </span>
+  <a id="Bve5_Parsing_MapGrammar_AstNodes_RepeaterBeginNode_AddStructureKeys_" data-uid="Bve5_Parsing.MapGrammar.AstNodes.RepeaterBeginNode.AddStructureKeys*"></a>
+  <h4 id="Bve5_Parsing_MapGrammar_AstNodes_RepeaterBeginNode_AddStructureKeys_System_Collections_Generic_IEnumerable_Bve5_Parsing_MapGrammar_AstNodes_MapGrammarAstNodes__" data-uid="Bve5_Parsing.MapGrammar.AstNodes.RepeaterBeginNode.AddStructureKeys(System.Collections.Generic.IEnumerable{Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes})">AddStructureKeys(IEnumerable&lt;MapGrammarAstNodes&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddStructureKeys(IEnumerable&lt;MapGrammarAstNodes&gt; strKeys)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes.html">MapGrammarAstNodes</a>&gt;</td>
+        <td><span class="parametername">strKeys</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/aoisupersix/Bve5_Parsing/new/update_doc/apiSpec/new?filename=Bve5_Parsing_MapGrammar_AstNodes_RepeaterBeginNode.md&amp;value=---%0Auid%3A%20Bve5_Parsing.MapGrammar.AstNodes.RepeaterBeginNode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/aoisupersix/Bve5_Parsing/blob/update_doc/Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs/#L1544" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -24,7 +24,7 @@ namespace Bve5_Parsing.MapGrammar
         /// <summary>
         /// エラー保持
         /// </summary>
-        protected ICollection<ParseError> Errors;
+        protected internal ICollection<ParseError> Errors;
 
         /// <summary>
         /// 評価結果

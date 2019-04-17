@@ -1,0 +1,218 @@
+### YamlMime:ManagedReference
+items:
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  commentId: N:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  id: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  children:
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserListener
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.AuthorStateContext
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.CommentStateContext
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.Encode_stringContext
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.EncodingContext
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.ImageStateContext
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.RootContext
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.RouteStateContext
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.RouteTitleStateContext
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.StatementContext
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.StringContext
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.TitleStateContext
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.VehicleStateContext
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.VehicleTitleStateContext
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.Weight_pathContext
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParserBaseListener
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParserBaseVisitor`1
+  langs:
+  - csharp
+  - vb
+  name: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  nameWithType: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  type: Namespace
+  assemblies:
+  - Bve5_Parsing
+references:
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer
+  commentId: T:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer
+  name: ScenarioGrammarLexer
+  nameWithType: ScenarioGrammarLexer
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser
+  commentId: T:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser
+  name: ScenarioGrammarParser
+  nameWithType: ScenarioGrammarParser
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.RootContext
+  commentId: T:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.RootContext
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  name: ScenarioGrammarParser.RootContext
+  nameWithType: ScenarioGrammarParser.RootContext
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.RootContext
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.StatementContext
+  commentId: T:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.StatementContext
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  name: ScenarioGrammarParser.StatementContext
+  nameWithType: ScenarioGrammarParser.StatementContext
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.StatementContext
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.ImageStateContext
+  commentId: T:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.ImageStateContext
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  name: ScenarioGrammarParser.ImageStateContext
+  nameWithType: ScenarioGrammarParser.ImageStateContext
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.ImageStateContext
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.CommentStateContext
+  commentId: T:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.CommentStateContext
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  name: ScenarioGrammarParser.CommentStateContext
+  nameWithType: ScenarioGrammarParser.CommentStateContext
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.CommentStateContext
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.RouteTitleStateContext
+  commentId: T:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.RouteTitleStateContext
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  name: ScenarioGrammarParser.RouteTitleStateContext
+  nameWithType: ScenarioGrammarParser.RouteTitleStateContext
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.RouteTitleStateContext
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.VehicleTitleStateContext
+  commentId: T:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.VehicleTitleStateContext
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  name: ScenarioGrammarParser.VehicleTitleStateContext
+  nameWithType: ScenarioGrammarParser.VehicleTitleStateContext
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.VehicleTitleStateContext
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.RouteStateContext
+  commentId: T:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.RouteStateContext
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  name: ScenarioGrammarParser.RouteStateContext
+  nameWithType: ScenarioGrammarParser.RouteStateContext
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.RouteStateContext
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.TitleStateContext
+  commentId: T:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.TitleStateContext
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  name: ScenarioGrammarParser.TitleStateContext
+  nameWithType: ScenarioGrammarParser.TitleStateContext
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.TitleStateContext
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.AuthorStateContext
+  commentId: T:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.AuthorStateContext
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  name: ScenarioGrammarParser.AuthorStateContext
+  nameWithType: ScenarioGrammarParser.AuthorStateContext
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.AuthorStateContext
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.VehicleStateContext
+  commentId: T:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.VehicleStateContext
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  name: ScenarioGrammarParser.VehicleStateContext
+  nameWithType: ScenarioGrammarParser.VehicleStateContext
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.VehicleStateContext
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.EncodingContext
+  commentId: T:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.EncodingContext
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  name: ScenarioGrammarParser.EncodingContext
+  nameWithType: ScenarioGrammarParser.EncodingContext
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.EncodingContext
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.Encode_stringContext
+  commentId: T:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.Encode_stringContext
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  name: ScenarioGrammarParser.Encode_stringContext
+  nameWithType: ScenarioGrammarParser.Encode_stringContext
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.Encode_stringContext
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.Weight_pathContext
+  commentId: T:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.Weight_pathContext
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  name: ScenarioGrammarParser.Weight_pathContext
+  nameWithType: ScenarioGrammarParser.Weight_pathContext
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.Weight_pathContext
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.StringContext
+  commentId: T:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.StringContext
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  name: ScenarioGrammarParser.StringContext
+  nameWithType: ScenarioGrammarParser.StringContext
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.StringContext
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserListener
+  commentId: T:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserListener
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  name: IScenarioGrammarParserListener
+  nameWithType: IScenarioGrammarParserListener
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserListener
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParserBaseListener
+  commentId: T:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParserBaseListener
+  name: ScenarioGrammarParserBaseListener
+  nameWithType: ScenarioGrammarParserBaseListener
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParserBaseListener
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1
+  commentId: T:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1
+  name: IScenarioGrammarParserVisitor<Result>
+  nameWithType: IScenarioGrammarParserVisitor<Result>
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor<Result>
+  nameWithType.vb: IScenarioGrammarParserVisitor(Of Result)
+  fullName.vb: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor(Of Result)
+  name.vb: IScenarioGrammarParserVisitor(Of Result)
+  spec.csharp:
+  - uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1
+    name: IScenarioGrammarParserVisitor
+    nameWithType: IScenarioGrammarParserVisitor
+    fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: Result
+    nameWithType: Result
+    fullName: Result
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1
+    name: IScenarioGrammarParserVisitor
+    nameWithType: IScenarioGrammarParserVisitor
+    fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: Result
+    nameWithType: Result
+    fullName: Result
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParserBaseVisitor`1
+  commentId: T:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParserBaseVisitor`1
+  name: ScenarioGrammarParserBaseVisitor<Result>
+  nameWithType: ScenarioGrammarParserBaseVisitor<Result>
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParserBaseVisitor<Result>
+  nameWithType.vb: ScenarioGrammarParserBaseVisitor(Of Result)
+  fullName.vb: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParserBaseVisitor(Of Result)
+  name.vb: ScenarioGrammarParserBaseVisitor(Of Result)
+  spec.csharp:
+  - uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParserBaseVisitor`1
+    name: ScenarioGrammarParserBaseVisitor
+    nameWithType: ScenarioGrammarParserBaseVisitor
+    fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParserBaseVisitor
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: Result
+    nameWithType: Result
+    fullName: Result
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParserBaseVisitor`1
+    name: ScenarioGrammarParserBaseVisitor
+    nameWithType: ScenarioGrammarParserBaseVisitor
+    fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParserBaseVisitor
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: Result
+    nameWithType: Result
+    fullName: Result
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  commentId: N:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  name: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  nameWithType: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions

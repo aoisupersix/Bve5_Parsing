@@ -1,0 +1,1034 @@
+### YamlMime:ManagedReference
+items:
+- uid: Bve5_Parsing.MapGrammar.MapGrammarParser
+  commentId: T:Bve5_Parsing.MapGrammar.MapGrammarParser
+  id: MapGrammarParser
+  parent: Bve5_Parsing.MapGrammar
+  children:
+  - Bve5_Parsing.MapGrammar.MapGrammarParser.#ctor
+  - Bve5_Parsing.MapGrammar.MapGrammarParser._parserError
+  - Bve5_Parsing.MapGrammar.MapGrammarParser.ErrorListener
+  - Bve5_Parsing.MapGrammar.MapGrammarParser.Parse(System.String)
+  - Bve5_Parsing.MapGrammar.MapGrammarParser.Parse(System.String,Bve5_Parsing.MapGrammar.MapGrammarParser.MapGrammarParserOption)
+  - Bve5_Parsing.MapGrammar.MapGrammarParser.Parse(System.String,System.String,Bve5_Parsing.MapGrammar.MapGrammarParser.MapGrammarParserOption)
+  - Bve5_Parsing.MapGrammar.MapGrammarParser.ParseFromFile(System.String)
+  - Bve5_Parsing.MapGrammar.MapGrammarParser.ParseFromFile(System.String,Bve5_Parsing.MapGrammar.MapGrammarParser.MapGrammarParserOption)
+  - Bve5_Parsing.MapGrammar.MapGrammarParser.ParserErrors
+  - Bve5_Parsing.MapGrammar.MapGrammarParser.ParseToAst(System.String)
+  - Bve5_Parsing.MapGrammar.MapGrammarParser.Store
+  langs:
+  - csharp
+  - vb
+  name: MapGrammarParser
+  nameWithType: MapGrammarParser
+  fullName: Bve5_Parsing.MapGrammar.MapGrammarParser
+  type: Class
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/MapGrammarParser.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: MapGrammarParser
+    path: ../Bve5_Parsing/MapGrammar/MapGrammarParser.cs
+    startLine: 15
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\nMapGrammarの解析を行うクラス\n"
+  example: []
+  syntax:
+    content: public class MapGrammarParser
+    content.vb: Public Class MapGrammarParser
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Bve5_Parsing.MapGrammar.MapGrammarParser._parserError
+  commentId: F:Bve5_Parsing.MapGrammar.MapGrammarParser._parserError
+  id: _parserError
+  parent: Bve5_Parsing.MapGrammar.MapGrammarParser
+  langs:
+  - csharp
+  - vb
+  name: _parserError
+  nameWithType: MapGrammarParser._parserError
+  fullName: Bve5_Parsing.MapGrammar.MapGrammarParser._parserError
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/MapGrammarParser.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: _parserError
+    path: ../Bve5_Parsing/MapGrammar/MapGrammarParser.cs
+    startLine: 18
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  syntax:
+    content: protected List<ParseError> _parserError
+    return:
+      type: System.Collections.Generic.List{Bve5_Parsing.ParseError}
+    content.vb: Protected _parserError As List(Of ParseError)
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: Bve5_Parsing.MapGrammar.MapGrammarParser.ParserErrors
+  commentId: P:Bve5_Parsing.MapGrammar.MapGrammarParser.ParserErrors
+  id: ParserErrors
+  parent: Bve5_Parsing.MapGrammar.MapGrammarParser
+  langs:
+  - csharp
+  - vb
+  name: ParserErrors
+  nameWithType: MapGrammarParser.ParserErrors
+  fullName: Bve5_Parsing.MapGrammar.MapGrammarParser.ParserErrors
+  type: Property
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/MapGrammarParser.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: ParserErrors
+    path: ../Bve5_Parsing/MapGrammar/MapGrammarParser.cs
+    startLine: 41
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\n構文解析エラー\n"
+  example: []
+  syntax:
+    content: public ReadOnlyCollection<ParseError> ParserErrors { get; }
+    parameters: []
+    return:
+      type: System.Collections.ObjectModel.ReadOnlyCollection{Bve5_Parsing.ParseError}
+    content.vb: Public ReadOnly Property ParserErrors As ReadOnlyCollection(Of ParseError)
+  overload: Bve5_Parsing.MapGrammar.MapGrammarParser.ParserErrors*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Bve5_Parsing.MapGrammar.MapGrammarParser.ErrorListener
+  commentId: P:Bve5_Parsing.MapGrammar.MapGrammarParser.ErrorListener
+  id: ErrorListener
+  parent: Bve5_Parsing.MapGrammar.MapGrammarParser
+  langs:
+  - csharp
+  - vb
+  name: ErrorListener
+  nameWithType: MapGrammarParser.ErrorListener
+  fullName: Bve5_Parsing.MapGrammar.MapGrammarParser.ErrorListener
+  type: Property
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/MapGrammarParser.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: ErrorListener
+    path: ../Bve5_Parsing/MapGrammar/MapGrammarParser.cs
+    startLine: 46
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\n構文解析のエラーを取得するリスナー\n"
+  example: []
+  syntax:
+    content: public ParseErrorListener ErrorListener { get; set; }
+    parameters: []
+    return:
+      type: Bve5_Parsing.ParseErrorListener
+    content.vb: Public Property ErrorListener As ParseErrorListener
+  overload: Bve5_Parsing.MapGrammar.MapGrammarParser.ErrorListener*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Bve5_Parsing.MapGrammar.MapGrammarParser.Store
+  commentId: P:Bve5_Parsing.MapGrammar.MapGrammarParser.Store
+  id: Store
+  parent: Bve5_Parsing.MapGrammar.MapGrammarParser
+  langs:
+  - csharp
+  - vb
+  name: Store
+  nameWithType: MapGrammarParser.Store
+  fullName: Bve5_Parsing.MapGrammar.MapGrammarParser.Store
+  type: Property
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/MapGrammarParser.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Store
+    path: ../Bve5_Parsing/MapGrammar/MapGrammarParser.cs
+    startLine: 51
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\nマップ構文の変数管理用\n"
+  example: []
+  syntax:
+    content: public VariableStore Store { get; set; }
+    parameters: []
+    return:
+      type: Bve5_Parsing.MapGrammar.VariableStore
+    content.vb: Public Property Store As VariableStore
+  overload: Bve5_Parsing.MapGrammar.MapGrammarParser.Store*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Bve5_Parsing.MapGrammar.MapGrammarParser.#ctor
+  commentId: M:Bve5_Parsing.MapGrammar.MapGrammarParser.#ctor
+  id: '#ctor'
+  parent: Bve5_Parsing.MapGrammar.MapGrammarParser
+  langs:
+  - csharp
+  - vb
+  name: MapGrammarParser()
+  nameWithType: MapGrammarParser.MapGrammarParser()
+  fullName: Bve5_Parsing.MapGrammar.MapGrammarParser.MapGrammarParser()
+  type: Constructor
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/MapGrammarParser.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: .ctor
+    path: ../Bve5_Parsing/MapGrammar/MapGrammarParser.cs
+    startLine: 57
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\n構文解析器を初期化します。\n"
+  example: []
+  syntax:
+    content: public MapGrammarParser()
+    content.vb: Public Sub New
+  overload: Bve5_Parsing.MapGrammar.MapGrammarParser.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Bve5_Parsing.MapGrammar.MapGrammarParser.Parse(System.String)
+  commentId: M:Bve5_Parsing.MapGrammar.MapGrammarParser.Parse(System.String)
+  id: Parse(System.String)
+  parent: Bve5_Parsing.MapGrammar.MapGrammarParser
+  langs:
+  - csharp
+  - vb
+  name: Parse(String)
+  nameWithType: MapGrammarParser.Parse(String)
+  fullName: Bve5_Parsing.MapGrammar.MapGrammarParser.Parse(System.String)
+  type: Method
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/MapGrammarParser.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Parse
+    path: ../Bve5_Parsing/MapGrammar/MapGrammarParser.cs
+    startLine: 69
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\n引数に与えられたマップ構文文字列の構文解析と評価を行い、MapDataを生成します。\n"
+  example: []
+  syntax:
+    content: public MapData Parse(string input)
+    parameters:
+    - id: input
+      type: System.String
+      description: 解析するマップ構文を表す文字列
+    return:
+      type: Bve5_Parsing.MapGrammar.EvaluateData.MapData
+    content.vb: Public Function Parse(input As String) As MapData
+  overload: Bve5_Parsing.MapGrammar.MapGrammarParser.Parse*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Bve5_Parsing.MapGrammar.MapGrammarParser.Parse(System.String,Bve5_Parsing.MapGrammar.MapGrammarParser.MapGrammarParserOption)
+  commentId: M:Bve5_Parsing.MapGrammar.MapGrammarParser.Parse(System.String,Bve5_Parsing.MapGrammar.MapGrammarParser.MapGrammarParserOption)
+  id: Parse(System.String,Bve5_Parsing.MapGrammar.MapGrammarParser.MapGrammarParserOption)
+  parent: Bve5_Parsing.MapGrammar.MapGrammarParser
+  langs:
+  - csharp
+  - vb
+  name: Parse(String, MapGrammarParser.MapGrammarParserOption)
+  nameWithType: MapGrammarParser.Parse(String, MapGrammarParser.MapGrammarParserOption)
+  fullName: Bve5_Parsing.MapGrammar.MapGrammarParser.Parse(System.String, Bve5_Parsing.MapGrammar.MapGrammarParser.MapGrammarParserOption)
+  type: Method
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/MapGrammarParser.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Parse
+    path: ../Bve5_Parsing/MapGrammar/MapGrammarParser.cs
+    startLine: 83
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\n引数に与えられたマップ構文文字列の構文解析と評価を行い、MapDataを生成します。\n"
+  example: []
+  syntax:
+    content: public MapData Parse(string input, MapGrammarParser.MapGrammarParserOption option)
+    parameters:
+    - id: input
+      type: System.String
+      description: 解析するマップ構文を表す文字列
+    - id: option
+      type: Bve5_Parsing.MapGrammar.MapGrammarParser.MapGrammarParserOption
+      description: ''
+    return:
+      type: Bve5_Parsing.MapGrammar.EvaluateData.MapData
+      description: ''
+    content.vb: Public Function Parse(input As String, option As MapGrammarParser.MapGrammarParserOption) As MapData
+  overload: Bve5_Parsing.MapGrammar.MapGrammarParser.Parse*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Bve5_Parsing.MapGrammar.MapGrammarParser.Parse(System.String,System.String,Bve5_Parsing.MapGrammar.MapGrammarParser.MapGrammarParserOption)
+  commentId: M:Bve5_Parsing.MapGrammar.MapGrammarParser.Parse(System.String,System.String,Bve5_Parsing.MapGrammar.MapGrammarParser.MapGrammarParserOption)
+  id: Parse(System.String,System.String,Bve5_Parsing.MapGrammar.MapGrammarParser.MapGrammarParserOption)
+  parent: Bve5_Parsing.MapGrammar.MapGrammarParser
+  langs:
+  - csharp
+  - vb
+  name: Parse(String, String, MapGrammarParser.MapGrammarParserOption)
+  nameWithType: MapGrammarParser.Parse(String, String, MapGrammarParser.MapGrammarParserOption)
+  fullName: Bve5_Parsing.MapGrammar.MapGrammarParser.Parse(System.String, System.String, Bve5_Parsing.MapGrammar.MapGrammarParser.MapGrammarParserOption)
+  type: Method
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/MapGrammarParser.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Parse
+    path: ../Bve5_Parsing/MapGrammar/MapGrammarParser.cs
+    startLine: 96
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\n引数に与えられたマップ構文文字列の構文解析と評価を行い、MapDataを生成します。\n"
+  example: []
+  syntax:
+    content: public MapData Parse(string input, string dirAbsolutePath, MapGrammarParser.MapGrammarParserOption option)
+    parameters:
+    - id: input
+      type: System.String
+      description: ''
+    - id: dirAbsolutePath
+      type: System.String
+      description: ''
+    - id: option
+      type: Bve5_Parsing.MapGrammar.MapGrammarParser.MapGrammarParserOption
+      description: ''
+    return:
+      type: Bve5_Parsing.MapGrammar.EvaluateData.MapData
+      description: ''
+    content.vb: Public Function Parse(input As String, dirAbsolutePath As String, option As MapGrammarParser.MapGrammarParserOption) As MapData
+  overload: Bve5_Parsing.MapGrammar.MapGrammarParser.Parse*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Bve5_Parsing.MapGrammar.MapGrammarParser.ParseFromFile(System.String)
+  commentId: M:Bve5_Parsing.MapGrammar.MapGrammarParser.ParseFromFile(System.String)
+  id: ParseFromFile(System.String)
+  parent: Bve5_Parsing.MapGrammar.MapGrammarParser
+  langs:
+  - csharp
+  - vb
+  name: ParseFromFile(String)
+  nameWithType: MapGrammarParser.ParseFromFile(String)
+  fullName: Bve5_Parsing.MapGrammar.MapGrammarParser.ParseFromFile(System.String)
+  type: Method
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/MapGrammarParser.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: ParseFromFile
+    path: ../Bve5_Parsing/MapGrammar/MapGrammarParser.cs
+    startLine: 116
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\n引数に与えられたマップ構文ファイルの構文解析と評価を行い、MapDataを生成します。\n"
+  example: []
+  syntax:
+    content: public MapData ParseFromFile(string filePath)
+    parameters:
+    - id: filePath
+      type: System.String
+      description: 解析するマップ構文のファイルパス
+    return:
+      type: Bve5_Parsing.MapGrammar.EvaluateData.MapData
+      description: ''
+    content.vb: Public Function ParseFromFile(filePath As String) As MapData
+  overload: Bve5_Parsing.MapGrammar.MapGrammarParser.ParseFromFile*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Bve5_Parsing.MapGrammar.MapGrammarParser.ParseFromFile(System.String,Bve5_Parsing.MapGrammar.MapGrammarParser.MapGrammarParserOption)
+  commentId: M:Bve5_Parsing.MapGrammar.MapGrammarParser.ParseFromFile(System.String,Bve5_Parsing.MapGrammar.MapGrammarParser.MapGrammarParserOption)
+  id: ParseFromFile(System.String,Bve5_Parsing.MapGrammar.MapGrammarParser.MapGrammarParserOption)
+  parent: Bve5_Parsing.MapGrammar.MapGrammarParser
+  langs:
+  - csharp
+  - vb
+  name: ParseFromFile(String, MapGrammarParser.MapGrammarParserOption)
+  nameWithType: MapGrammarParser.ParseFromFile(String, MapGrammarParser.MapGrammarParserOption)
+  fullName: Bve5_Parsing.MapGrammar.MapGrammarParser.ParseFromFile(System.String, Bve5_Parsing.MapGrammar.MapGrammarParser.MapGrammarParserOption)
+  type: Method
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/MapGrammarParser.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: ParseFromFile
+    path: ../Bve5_Parsing/MapGrammar/MapGrammarParser.cs
+    startLine: 138
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\n引数に与えられたマップ構文ファイルの構文解析と評価を行い、MapDataを生成します。\n"
+  example: []
+  syntax:
+    content: public MapData ParseFromFile(string filePath, MapGrammarParser.MapGrammarParserOption option)
+    parameters:
+    - id: filePath
+      type: System.String
+      description: 解析するマップ構文のファイルパス
+    - id: option
+      type: Bve5_Parsing.MapGrammar.MapGrammarParser.MapGrammarParserOption
+      description: ''
+    return:
+      type: Bve5_Parsing.MapGrammar.EvaluateData.MapData
+      description: ''
+    content.vb: Public Function ParseFromFile(filePath As String, option As MapGrammarParser.MapGrammarParserOption) As MapData
+  overload: Bve5_Parsing.MapGrammar.MapGrammarParser.ParseFromFile*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Bve5_Parsing.MapGrammar.MapGrammarParser.ParseToAst(System.String)
+  commentId: M:Bve5_Parsing.MapGrammar.MapGrammarParser.ParseToAst(System.String)
+  id: ParseToAst(System.String)
+  parent: Bve5_Parsing.MapGrammar.MapGrammarParser
+  langs:
+  - csharp
+  - vb
+  name: ParseToAst(String)
+  nameWithType: MapGrammarParser.ParseToAst(String)
+  fullName: Bve5_Parsing.MapGrammar.MapGrammarParser.ParseToAst(System.String)
+  type: Method
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/MapGrammarParser.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: ParseToAst
+    path: ../Bve5_Parsing/MapGrammar/MapGrammarParser.cs
+    startLine: 157
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\n引数に与えられたマップ構文の構文解析を行い、ASTを生成します。\n"
+  example: []
+  syntax:
+    content: public MapGrammarAstNodes ParseToAst(string input)
+    parameters:
+    - id: input
+      type: System.String
+      description: 解析するマップ構文を表す文字列
+    return:
+      type: Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes
+    content.vb: Public Function ParseToAst(input As String) As MapGrammarAstNodes
+  overload: Bve5_Parsing.MapGrammar.MapGrammarParser.ParseToAst*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Bve5_Parsing.MapGrammar
+  commentId: N:Bve5_Parsing.MapGrammar
+  name: Bve5_Parsing.MapGrammar
+  nameWithType: Bve5_Parsing.MapGrammar
+  fullName: Bve5_Parsing.MapGrammar
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Collections.Generic.List{Bve5_Parsing.ParseError}
+  commentId: T:System.Collections.Generic.List{Bve5_Parsing.ParseError}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<ParseError>
+  nameWithType: List<ParseError>
+  fullName: System.Collections.Generic.List<Bve5_Parsing.ParseError>
+  nameWithType.vb: List(Of ParseError)
+  fullName.vb: System.Collections.Generic.List(Of Bve5_Parsing.ParseError)
+  name.vb: List(Of ParseError)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Bve5_Parsing.ParseError
+    name: ParseError
+    nameWithType: ParseError
+    fullName: Bve5_Parsing.ParseError
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Bve5_Parsing.ParseError
+    name: ParseError
+    nameWithType: ParseError
+    fullName: Bve5_Parsing.ParseError
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: Bve5_Parsing.MapGrammar.MapGrammarParser.ParserErrors*
+  commentId: Overload:Bve5_Parsing.MapGrammar.MapGrammarParser.ParserErrors
+  name: ParserErrors
+  nameWithType: MapGrammarParser.ParserErrors
+  fullName: Bve5_Parsing.MapGrammar.MapGrammarParser.ParserErrors
+- uid: System.Collections.ObjectModel.ReadOnlyCollection{Bve5_Parsing.ParseError}
+  commentId: T:System.Collections.ObjectModel.ReadOnlyCollection{Bve5_Parsing.ParseError}
+  parent: System.Collections.ObjectModel
+  definition: System.Collections.ObjectModel.ReadOnlyCollection`1
+  name: ReadOnlyCollection<ParseError>
+  nameWithType: ReadOnlyCollection<ParseError>
+  fullName: System.Collections.ObjectModel.ReadOnlyCollection<Bve5_Parsing.ParseError>
+  nameWithType.vb: ReadOnlyCollection(Of ParseError)
+  fullName.vb: System.Collections.ObjectModel.ReadOnlyCollection(Of Bve5_Parsing.ParseError)
+  name.vb: ReadOnlyCollection(Of ParseError)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.ReadOnlyCollection`1
+    name: ReadOnlyCollection
+    nameWithType: ReadOnlyCollection
+    fullName: System.Collections.ObjectModel.ReadOnlyCollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Bve5_Parsing.ParseError
+    name: ParseError
+    nameWithType: ParseError
+    fullName: Bve5_Parsing.ParseError
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.ObjectModel.ReadOnlyCollection`1
+    name: ReadOnlyCollection
+    nameWithType: ReadOnlyCollection
+    fullName: System.Collections.ObjectModel.ReadOnlyCollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Bve5_Parsing.ParseError
+    name: ParseError
+    nameWithType: ParseError
+    fullName: Bve5_Parsing.ParseError
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.ObjectModel.ReadOnlyCollection`1
+  commentId: T:System.Collections.ObjectModel.ReadOnlyCollection`1
+  isExternal: true
+  name: ReadOnlyCollection<T>
+  nameWithType: ReadOnlyCollection<T>
+  fullName: System.Collections.ObjectModel.ReadOnlyCollection<T>
+  nameWithType.vb: ReadOnlyCollection(Of T)
+  fullName.vb: System.Collections.ObjectModel.ReadOnlyCollection(Of T)
+  name.vb: ReadOnlyCollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.ReadOnlyCollection`1
+    name: ReadOnlyCollection
+    nameWithType: ReadOnlyCollection
+    fullName: System.Collections.ObjectModel.ReadOnlyCollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.ObjectModel.ReadOnlyCollection`1
+    name: ReadOnlyCollection
+    nameWithType: ReadOnlyCollection
+    fullName: System.Collections.ObjectModel.ReadOnlyCollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.ObjectModel
+  commentId: N:System.Collections.ObjectModel
+  isExternal: true
+  name: System.Collections.ObjectModel
+  nameWithType: System.Collections.ObjectModel
+  fullName: System.Collections.ObjectModel
+- uid: Bve5_Parsing.MapGrammar.MapGrammarParser.ErrorListener*
+  commentId: Overload:Bve5_Parsing.MapGrammar.MapGrammarParser.ErrorListener
+  name: ErrorListener
+  nameWithType: MapGrammarParser.ErrorListener
+  fullName: Bve5_Parsing.MapGrammar.MapGrammarParser.ErrorListener
+- uid: Bve5_Parsing.ParseErrorListener
+  commentId: T:Bve5_Parsing.ParseErrorListener
+  parent: Bve5_Parsing
+  name: ParseErrorListener
+  nameWithType: ParseErrorListener
+  fullName: Bve5_Parsing.ParseErrorListener
+- uid: Bve5_Parsing
+  commentId: N:Bve5_Parsing
+  name: Bve5_Parsing
+  nameWithType: Bve5_Parsing
+  fullName: Bve5_Parsing
+- uid: Bve5_Parsing.MapGrammar.MapGrammarParser.Store*
+  commentId: Overload:Bve5_Parsing.MapGrammar.MapGrammarParser.Store
+  name: Store
+  nameWithType: MapGrammarParser.Store
+  fullName: Bve5_Parsing.MapGrammar.MapGrammarParser.Store
+- uid: Bve5_Parsing.MapGrammar.VariableStore
+  commentId: T:Bve5_Parsing.MapGrammar.VariableStore
+  parent: Bve5_Parsing.MapGrammar
+  name: VariableStore
+  nameWithType: VariableStore
+  fullName: Bve5_Parsing.MapGrammar.VariableStore
+- uid: Bve5_Parsing.MapGrammar.MapGrammarParser.#ctor*
+  commentId: Overload:Bve5_Parsing.MapGrammar.MapGrammarParser.#ctor
+  name: MapGrammarParser
+  nameWithType: MapGrammarParser.MapGrammarParser
+  fullName: Bve5_Parsing.MapGrammar.MapGrammarParser.MapGrammarParser
+- uid: Bve5_Parsing.MapGrammar.MapGrammarParser.Parse*
+  commentId: Overload:Bve5_Parsing.MapGrammar.MapGrammarParser.Parse
+  name: Parse
+  nameWithType: MapGrammarParser.Parse
+  fullName: Bve5_Parsing.MapGrammar.MapGrammarParser.Parse
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Bve5_Parsing.MapGrammar.EvaluateData.MapData
+  commentId: T:Bve5_Parsing.MapGrammar.EvaluateData.MapData
+  parent: Bve5_Parsing.MapGrammar.EvaluateData
+  name: MapData
+  nameWithType: MapData
+  fullName: Bve5_Parsing.MapGrammar.EvaluateData.MapData
+- uid: Bve5_Parsing.MapGrammar.EvaluateData
+  commentId: N:Bve5_Parsing.MapGrammar.EvaluateData
+  name: Bve5_Parsing.MapGrammar.EvaluateData
+  nameWithType: Bve5_Parsing.MapGrammar.EvaluateData
+  fullName: Bve5_Parsing.MapGrammar.EvaluateData
+- uid: Bve5_Parsing.MapGrammar.MapGrammarParser.MapGrammarParserOption
+  commentId: T:Bve5_Parsing.MapGrammar.MapGrammarParser.MapGrammarParserOption
+  parent: Bve5_Parsing.MapGrammar
+  name: MapGrammarParser.MapGrammarParserOption
+  nameWithType: MapGrammarParser.MapGrammarParserOption
+  fullName: Bve5_Parsing.MapGrammar.MapGrammarParser.MapGrammarParserOption
+- uid: Bve5_Parsing.MapGrammar.MapGrammarParser.ParseFromFile*
+  commentId: Overload:Bve5_Parsing.MapGrammar.MapGrammarParser.ParseFromFile
+  name: ParseFromFile
+  nameWithType: MapGrammarParser.ParseFromFile
+  fullName: Bve5_Parsing.MapGrammar.MapGrammarParser.ParseFromFile
+- uid: Bve5_Parsing.MapGrammar.MapGrammarParser.ParseToAst*
+  commentId: Overload:Bve5_Parsing.MapGrammar.MapGrammarParser.ParseToAst
+  name: ParseToAst
+  nameWithType: MapGrammarParser.ParseToAst
+  fullName: Bve5_Parsing.MapGrammar.MapGrammarParser.ParseToAst
+- uid: Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes
+  commentId: T:Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes
+  parent: Bve5_Parsing.MapGrammar.AstNodes
+  name: MapGrammarAstNodes
+  nameWithType: MapGrammarAstNodes
+  fullName: Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes
+- uid: Bve5_Parsing.MapGrammar.AstNodes
+  commentId: N:Bve5_Parsing.MapGrammar.AstNodes
+  name: Bve5_Parsing.MapGrammar.AstNodes
+  nameWithType: Bve5_Parsing.MapGrammar.AstNodes
+  fullName: Bve5_Parsing.MapGrammar.AstNodes

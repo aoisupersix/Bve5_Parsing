@@ -1,0 +1,994 @@
+### YamlMime:ManagedReference
+items:
+- uid: Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement
+  commentId: T:Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement
+  id: TrainAddStatement
+  parent: Bve5_Parsing.MapGrammar.EvaluateData
+  children:
+  - Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.#ctor
+  - Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.#ctor(System.Double)
+  - Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.Direction
+  - Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.ElementName
+  - Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.FilePath
+  - Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.FunctionName
+  - Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.HasKey
+  - Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.HasSubElement
+  - Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.TrackKey
+  - Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.TrainKey
+  langs:
+  - csharp
+  - vb
+  name: TrainAddStatement
+  nameWithType: TrainAddStatement
+  fullName: Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement
+  type: Class
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: TrainAddStatement
+    path: ../Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
+    startLine: 3533
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar.EvaluateData
+  summary: "\nTrain.Add(TrainKey, FilePath, TrackKey, Direction);\n"
+  example: []
+  syntax:
+    content: 'public class TrainAddStatement : Statement'
+    content.vb: >-
+      Public Class TrainAddStatement
+
+          Inherits Statement
+  inheritance:
+  - System.Object
+  - Bve5_Parsing.MapGrammar.EvaluateData.Statement
+  inheritedMembers:
+  - Bve5_Parsing.MapGrammar.EvaluateData.Statement.Distance
+  - Bve5_Parsing.MapGrammar.EvaluateData.Statement.GetAllArguments
+  - Bve5_Parsing.MapGrammar.EvaluateData.Statement.ToSyntaxData
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.ElementName
+  commentId: P:Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.ElementName
+  id: ElementName
+  parent: Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement
+  langs:
+  - csharp
+  - vb
+  name: ElementName
+  nameWithType: TrainAddStatement.ElementName
+  fullName: Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.ElementName
+  type: Property
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: ElementName
+    path: ../Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
+    startLine: 3540
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar.EvaluateData
+  summary: "\nマップ要素名\n"
+  example: []
+  syntax:
+    content: public override MapElementName ElementName { get; }
+    parameters: []
+    return:
+      type: Bve5_Parsing.MapGrammar.MapElementName
+    content.vb: Public Overrides ReadOnly Property ElementName As MapElementName
+  overridden: Bve5_Parsing.MapGrammar.EvaluateData.Statement.ElementName
+  overload: Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.ElementName*
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
+- uid: Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.FunctionName
+  commentId: P:Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.FunctionName
+  id: FunctionName
+  parent: Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement
+  langs:
+  - csharp
+  - vb
+  name: FunctionName
+  nameWithType: TrainAddStatement.FunctionName
+  fullName: Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.FunctionName
+  type: Property
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: FunctionName
+    path: ../Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
+    startLine: 3545
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar.EvaluateData
+  summary: "\n関数名\n"
+  example: []
+  syntax:
+    content: public override MapFunctionName FunctionName { get; }
+    parameters: []
+    return:
+      type: Bve5_Parsing.MapGrammar.MapFunctionName
+    content.vb: Public Overrides ReadOnly Property FunctionName As MapFunctionName
+  overridden: Bve5_Parsing.MapGrammar.EvaluateData.Statement.FunctionName
+  overload: Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.FunctionName*
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
+- uid: Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.HasKey
+  commentId: P:Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.HasKey
+  id: HasKey
+  parent: Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement
+  langs:
+  - csharp
+  - vb
+  name: HasKey
+  nameWithType: TrainAddStatement.HasKey
+  fullName: Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.HasKey
+  type: Property
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: HasKey
+    path: ../Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
+    startLine: 3550
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar.EvaluateData
+  summary: "\nキーを指定する構文か？\n"
+  example: []
+  syntax:
+    content: public override bool HasKey { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides ReadOnly Property HasKey As Boolean
+  overridden: Bve5_Parsing.MapGrammar.EvaluateData.Statement.HasKey
+  overload: Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.HasKey*
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
+- uid: Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.HasSubElement
+  commentId: P:Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.HasSubElement
+  id: HasSubElement
+  parent: Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement
+  langs:
+  - csharp
+  - vb
+  name: HasSubElement
+  nameWithType: TrainAddStatement.HasSubElement
+  fullName: Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.HasSubElement
+  type: Property
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: HasSubElement
+    path: ../Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
+    startLine: 3555
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar.EvaluateData
+  summary: "\n副要素を指定する構文か？\n"
+  example: []
+  syntax:
+    content: public override bool HasSubElement { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides ReadOnly Property HasSubElement As Boolean
+  overridden: Bve5_Parsing.MapGrammar.EvaluateData.Statement.HasSubElement
+  overload: Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.HasSubElement*
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
+- uid: Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.TrainKey
+  commentId: P:Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.TrainKey
+  id: TrainKey
+  parent: Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement
+  langs:
+  - csharp
+  - vb
+  name: TrainKey
+  nameWithType: TrainAddStatement.TrainKey
+  fullName: Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.TrainKey
+  type: Property
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: TrainKey
+    path: ../Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
+    startLine: 3563
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar.EvaluateData
+  summary: "\n引数：他列車名 (任意の文字列)\n"
+  example: []
+  syntax:
+    content: public string TrainKey { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property TrainKey As String
+  overload: Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.TrainKey*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.FilePath
+  commentId: P:Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.FilePath
+  id: FilePath
+  parent: Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement
+  langs:
+  - csharp
+  - vb
+  name: FilePath
+  nameWithType: TrainAddStatement.FilePath
+  fullName: Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.FilePath
+  type: Property
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: FilePath
+    path: ../Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
+    startLine: 3569
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar.EvaluateData
+  summary: "\n引数：このファイルから他列車ファイルへの相対パス\n"
+  example: []
+  syntax:
+    content: public string FilePath { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property FilePath As String
+  overload: Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.FilePath*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.TrackKey
+  commentId: P:Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.TrackKey
+  id: TrackKey
+  parent: Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement
+  langs:
+  - csharp
+  - vb
+  name: TrackKey
+  nameWithType: TrainAddStatement.TrackKey
+  fullName: Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.TrackKey
+  type: Property
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: TrackKey
+    path: ../Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
+    startLine: 3575
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar.EvaluateData
+  summary: "\n引数：走行する軌道\n"
+  example: []
+  syntax:
+    content: public string TrackKey { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property TrackKey As String
+  overload: Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.TrackKey*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.Direction
+  commentId: P:Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.Direction
+  id: Direction
+  parent: Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement
+  langs:
+  - csharp
+  - vb
+  name: Direction
+  nameWithType: TrainAddStatement.Direction
+  fullName: Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.Direction
+  type: Property
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Direction
+    path: ../Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
+    startLine: 3581
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar.EvaluateData
+  summary: "\n引数：進行方向 (-1: 対向, 1: 並走)\n"
+  example: []
+  syntax:
+    content: public double? Direction { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Double}
+    content.vb: Public Property Direction As Double?
+  overload: Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.Direction*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.#ctor
+  commentId: M:Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.#ctor
+  id: '#ctor'
+  parent: Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement
+  langs:
+  - csharp
+  - vb
+  name: TrainAddStatement()
+  nameWithType: TrainAddStatement.TrainAddStatement()
+  fullName: Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.TrainAddStatement()
+  type: Constructor
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: .ctor
+    path: ../Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
+    startLine: 3588
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar.EvaluateData
+  summary: "\n新しいインスタンスを生成します。\n"
+  example: []
+  syntax:
+    content: public TrainAddStatement()
+    content.vb: Public Sub New
+  overload: Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.#ctor(System.Double)
+  commentId: M:Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.#ctor(System.Double)
+  id: '#ctor(System.Double)'
+  parent: Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement
+  langs:
+  - csharp
+  - vb
+  name: TrainAddStatement(Double)
+  nameWithType: TrainAddStatement.TrainAddStatement(Double)
+  fullName: Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.TrainAddStatement(System.Double)
+  type: Constructor
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: .ctor
+    path: ../Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
+    startLine: 3593
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar.EvaluateData
+  summary: "\n距離程を指定して新しいインスタンスを生成します。\n"
+  example: []
+  syntax:
+    content: public TrainAddStatement(double distance)
+    parameters:
+    - id: distance
+      type: System.Double
+    content.vb: Public Sub New(distance As Double)
+  overload: Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Bve5_Parsing.MapGrammar.EvaluateData
+  commentId: N:Bve5_Parsing.MapGrammar.EvaluateData
+  name: Bve5_Parsing.MapGrammar.EvaluateData
+  nameWithType: Bve5_Parsing.MapGrammar.EvaluateData
+  fullName: Bve5_Parsing.MapGrammar.EvaluateData
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Bve5_Parsing.MapGrammar.EvaluateData.Statement
+  commentId: T:Bve5_Parsing.MapGrammar.EvaluateData.Statement
+  parent: Bve5_Parsing.MapGrammar.EvaluateData
+  name: Statement
+  nameWithType: Statement
+  fullName: Bve5_Parsing.MapGrammar.EvaluateData.Statement
+- uid: Bve5_Parsing.MapGrammar.EvaluateData.Statement.Distance
+  commentId: P:Bve5_Parsing.MapGrammar.EvaluateData.Statement.Distance
+  parent: Bve5_Parsing.MapGrammar.EvaluateData.Statement
+  name: Distance
+  nameWithType: Statement.Distance
+  fullName: Bve5_Parsing.MapGrammar.EvaluateData.Statement.Distance
+- uid: Bve5_Parsing.MapGrammar.EvaluateData.Statement.GetAllArguments
+  commentId: M:Bve5_Parsing.MapGrammar.EvaluateData.Statement.GetAllArguments
+  parent: Bve5_Parsing.MapGrammar.EvaluateData.Statement
+  name: GetAllArguments()
+  nameWithType: Statement.GetAllArguments()
+  fullName: Bve5_Parsing.MapGrammar.EvaluateData.Statement.GetAllArguments()
+  spec.csharp:
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.Statement.GetAllArguments
+    name: GetAllArguments
+    nameWithType: Statement.GetAllArguments
+    fullName: Bve5_Parsing.MapGrammar.EvaluateData.Statement.GetAllArguments
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.Statement.GetAllArguments
+    name: GetAllArguments
+    nameWithType: Statement.GetAllArguments
+    fullName: Bve5_Parsing.MapGrammar.EvaluateData.Statement.GetAllArguments
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Bve5_Parsing.MapGrammar.EvaluateData.Statement.ToSyntaxData
+  commentId: M:Bve5_Parsing.MapGrammar.EvaluateData.Statement.ToSyntaxData
+  parent: Bve5_Parsing.MapGrammar.EvaluateData.Statement
+  name: ToSyntaxData()
+  nameWithType: Statement.ToSyntaxData()
+  fullName: Bve5_Parsing.MapGrammar.EvaluateData.Statement.ToSyntaxData()
+  spec.csharp:
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.Statement.ToSyntaxData
+    name: ToSyntaxData
+    nameWithType: Statement.ToSyntaxData
+    fullName: Bve5_Parsing.MapGrammar.EvaluateData.Statement.ToSyntaxData
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.Statement.ToSyntaxData
+    name: ToSyntaxData
+    nameWithType: Statement.ToSyntaxData
+    fullName: Bve5_Parsing.MapGrammar.EvaluateData.Statement.ToSyntaxData
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Bve5_Parsing.MapGrammar.EvaluateData.Statement.ElementName
+  commentId: P:Bve5_Parsing.MapGrammar.EvaluateData.Statement.ElementName
+  parent: Bve5_Parsing.MapGrammar.EvaluateData.Statement
+  name: ElementName
+  nameWithType: Statement.ElementName
+  fullName: Bve5_Parsing.MapGrammar.EvaluateData.Statement.ElementName
+- uid: Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.ElementName*
+  commentId: Overload:Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.ElementName
+  name: ElementName
+  nameWithType: TrainAddStatement.ElementName
+  fullName: Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.ElementName
+- uid: Bve5_Parsing.MapGrammar.MapElementName
+  commentId: T:Bve5_Parsing.MapGrammar.MapElementName
+  parent: Bve5_Parsing.MapGrammar
+  name: MapElementName
+  nameWithType: MapElementName
+  fullName: Bve5_Parsing.MapGrammar.MapElementName
+- uid: Bve5_Parsing.MapGrammar
+  commentId: N:Bve5_Parsing.MapGrammar
+  name: Bve5_Parsing.MapGrammar
+  nameWithType: Bve5_Parsing.MapGrammar
+  fullName: Bve5_Parsing.MapGrammar
+- uid: Bve5_Parsing.MapGrammar.EvaluateData.Statement.FunctionName
+  commentId: P:Bve5_Parsing.MapGrammar.EvaluateData.Statement.FunctionName
+  parent: Bve5_Parsing.MapGrammar.EvaluateData.Statement
+  name: FunctionName
+  nameWithType: Statement.FunctionName
+  fullName: Bve5_Parsing.MapGrammar.EvaluateData.Statement.FunctionName
+- uid: Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.FunctionName*
+  commentId: Overload:Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.FunctionName
+  name: FunctionName
+  nameWithType: TrainAddStatement.FunctionName
+  fullName: Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.FunctionName
+- uid: Bve5_Parsing.MapGrammar.MapFunctionName
+  commentId: T:Bve5_Parsing.MapGrammar.MapFunctionName
+  parent: Bve5_Parsing.MapGrammar
+  name: MapFunctionName
+  nameWithType: MapFunctionName
+  fullName: Bve5_Parsing.MapGrammar.MapFunctionName
+- uid: Bve5_Parsing.MapGrammar.EvaluateData.Statement.HasKey
+  commentId: P:Bve5_Parsing.MapGrammar.EvaluateData.Statement.HasKey
+  parent: Bve5_Parsing.MapGrammar.EvaluateData.Statement
+  name: HasKey
+  nameWithType: Statement.HasKey
+  fullName: Bve5_Parsing.MapGrammar.EvaluateData.Statement.HasKey
+- uid: Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.HasKey*
+  commentId: Overload:Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.HasKey
+  name: HasKey
+  nameWithType: TrainAddStatement.HasKey
+  fullName: Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.HasKey
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Bve5_Parsing.MapGrammar.EvaluateData.Statement.HasSubElement
+  commentId: P:Bve5_Parsing.MapGrammar.EvaluateData.Statement.HasSubElement
+  parent: Bve5_Parsing.MapGrammar.EvaluateData.Statement
+  name: HasSubElement
+  nameWithType: Statement.HasSubElement
+  fullName: Bve5_Parsing.MapGrammar.EvaluateData.Statement.HasSubElement
+- uid: Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.HasSubElement*
+  commentId: Overload:Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.HasSubElement
+  name: HasSubElement
+  nameWithType: TrainAddStatement.HasSubElement
+  fullName: Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.HasSubElement
+- uid: Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.TrainKey*
+  commentId: Overload:Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.TrainKey
+  name: TrainKey
+  nameWithType: TrainAddStatement.TrainKey
+  fullName: Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.TrainKey
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.FilePath*
+  commentId: Overload:Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.FilePath
+  name: FilePath
+  nameWithType: TrainAddStatement.FilePath
+  fullName: Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.FilePath
+- uid: Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.TrackKey*
+  commentId: Overload:Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.TrackKey
+  name: TrackKey
+  nameWithType: TrainAddStatement.TrackKey
+  fullName: Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.TrackKey
+- uid: Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.Direction*
+  commentId: Overload:Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.Direction
+  name: Direction
+  nameWithType: TrainAddStatement.Direction
+  fullName: Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.Direction
+- uid: System.Nullable{System.Double}
+  commentId: T:System.Nullable{System.Double}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<Double>
+  nameWithType: Nullable<Double>
+  fullName: System.Nullable<System.Double>
+  nameWithType.vb: Nullable(Of Double)
+  fullName.vb: System.Nullable(Of System.Double)
+  name.vb: Nullable(Of Double)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.#ctor*
+  commentId: Overload:Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.#ctor
+  name: TrainAddStatement
+  nameWithType: TrainAddStatement.TrainAddStatement
+  fullName: Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement.TrainAddStatement
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
