@@ -1,0 +1,1328 @@
+### YamlMime:ManagedReference
+items:
+- uid: Bve5_Parsing.MapGrammar.MapElementName
+  commentId: T:Bve5_Parsing.MapGrammar.MapElementName
+  id: MapElementName
+  parent: Bve5_Parsing.MapGrammar
+  children:
+  - Bve5_Parsing.MapGrammar.MapElementName.Adhesion
+  - Bve5_Parsing.MapGrammar.MapElementName.Background
+  - Bve5_Parsing.MapGrammar.MapElementName.Beacon
+  - Bve5_Parsing.MapGrammar.MapElementName.Cabilluminance
+  - Bve5_Parsing.MapGrammar.MapElementName.Curve
+  - Bve5_Parsing.MapGrammar.MapElementName.Drawdistance
+  - Bve5_Parsing.MapGrammar.MapElementName.Flangenoise
+  - Bve5_Parsing.MapGrammar.MapElementName.Fog
+  - Bve5_Parsing.MapGrammar.MapElementName.Gradient
+  - Bve5_Parsing.MapGrammar.MapElementName.Irregularity
+  - Bve5_Parsing.MapGrammar.MapElementName.Jointnoise
+  - Bve5_Parsing.MapGrammar.MapElementName.Legacy
+  - Bve5_Parsing.MapGrammar.MapElementName.Light
+  - Bve5_Parsing.MapGrammar.MapElementName.Pretrain
+  - Bve5_Parsing.MapGrammar.MapElementName.Repeater
+  - Bve5_Parsing.MapGrammar.MapElementName.Rollingnoise
+  - Bve5_Parsing.MapGrammar.MapElementName.Section
+  - Bve5_Parsing.MapGrammar.MapElementName.Signal
+  - Bve5_Parsing.MapGrammar.MapElementName.Sound
+  - Bve5_Parsing.MapGrammar.MapElementName.Sound3d
+  - Bve5_Parsing.MapGrammar.MapElementName.Speedlimit
+  - Bve5_Parsing.MapGrammar.MapElementName.Station
+  - Bve5_Parsing.MapGrammar.MapElementName.Structure
+  - Bve5_Parsing.MapGrammar.MapElementName.Track
+  - Bve5_Parsing.MapGrammar.MapElementName.Train
+  langs:
+  - csharp
+  - vb
+  name: MapElementName
+  nameWithType: MapElementName
+  fullName: Bve5_Parsing.MapGrammar.MapElementName
+  type: Enum
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: MapElementName
+    path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+    startLine: 10
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\nマップ要素名\n"
+  example: []
+  syntax:
+    content: public enum MapElementName
+    content.vb: Public Enum MapElementName
+  extensionMethods:
+  - System.Enum.Bve5_Parsing.CommonAttribute.GetStringValue
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: Bve5_Parsing.MapGrammar.MapElementName.Curve
+  commentId: F:Bve5_Parsing.MapGrammar.MapElementName.Curve
+  id: Curve
+  parent: Bve5_Parsing.MapGrammar.MapElementName
+  langs:
+  - csharp
+  - vb
+  name: Curve
+  nameWithType: MapElementName.Curve
+  fullName: Bve5_Parsing.MapGrammar.MapElementName.Curve
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Curve
+    path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+    startLine: 16
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\nCurve\n"
+  example: []
+  syntax:
+    content: >-
+      [StringValue("Curve")]
+
+      Curve = 0
+    return:
+      type: Bve5_Parsing.MapGrammar.MapElementName
+    content.vb: >-
+      <StringValue("Curve")>
+
+      Curve = 0
+  attributes:
+  - type: Bve5_Parsing.StringValueAttribute
+    ctor: Bve5_Parsing.StringValueAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Curve
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.MapGrammar.MapElementName.Gradient
+  commentId: F:Bve5_Parsing.MapGrammar.MapElementName.Gradient
+  id: Gradient
+  parent: Bve5_Parsing.MapGrammar.MapElementName
+  langs:
+  - csharp
+  - vb
+  name: Gradient
+  nameWithType: MapElementName.Gradient
+  fullName: Bve5_Parsing.MapGrammar.MapElementName.Gradient
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Gradient
+    path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+    startLine: 22
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\nGradient\n"
+  example: []
+  syntax:
+    content: >-
+      [StringValue("Gradient")]
+
+      Gradient = 1
+    return:
+      type: Bve5_Parsing.MapGrammar.MapElementName
+    content.vb: >-
+      <StringValue("Gradient")>
+
+      Gradient = 1
+  attributes:
+  - type: Bve5_Parsing.StringValueAttribute
+    ctor: Bve5_Parsing.StringValueAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Gradient
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.MapGrammar.MapElementName.Track
+  commentId: F:Bve5_Parsing.MapGrammar.MapElementName.Track
+  id: Track
+  parent: Bve5_Parsing.MapGrammar.MapElementName
+  langs:
+  - csharp
+  - vb
+  name: Track
+  nameWithType: MapElementName.Track
+  fullName: Bve5_Parsing.MapGrammar.MapElementName.Track
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Track
+    path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+    startLine: 28
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\nTrack\n"
+  example: []
+  syntax:
+    content: >-
+      [StringValue("Track")]
+
+      Track = 2
+    return:
+      type: Bve5_Parsing.MapGrammar.MapElementName
+    content.vb: >-
+      <StringValue("Track")>
+
+      Track = 2
+  attributes:
+  - type: Bve5_Parsing.StringValueAttribute
+    ctor: Bve5_Parsing.StringValueAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Track
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.MapGrammar.MapElementName.Structure
+  commentId: F:Bve5_Parsing.MapGrammar.MapElementName.Structure
+  id: Structure
+  parent: Bve5_Parsing.MapGrammar.MapElementName
+  langs:
+  - csharp
+  - vb
+  name: Structure
+  nameWithType: MapElementName.Structure
+  fullName: Bve5_Parsing.MapGrammar.MapElementName.Structure
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Structure
+    path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+    startLine: 34
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\nStructure\n"
+  example: []
+  syntax:
+    content: >-
+      [StringValue("Structure")]
+
+      Structure = 3
+    return:
+      type: Bve5_Parsing.MapGrammar.MapElementName
+    content.vb: >-
+      <StringValue("Structure")>
+
+      Structure = 3
+  attributes:
+  - type: Bve5_Parsing.StringValueAttribute
+    ctor: Bve5_Parsing.StringValueAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Structure
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.MapGrammar.MapElementName.Repeater
+  commentId: F:Bve5_Parsing.MapGrammar.MapElementName.Repeater
+  id: Repeater
+  parent: Bve5_Parsing.MapGrammar.MapElementName
+  langs:
+  - csharp
+  - vb
+  name: Repeater
+  nameWithType: MapElementName.Repeater
+  fullName: Bve5_Parsing.MapGrammar.MapElementName.Repeater
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Repeater
+    path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+    startLine: 40
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\nRepeater\n"
+  example: []
+  syntax:
+    content: >-
+      [StringValue("Repeater")]
+
+      Repeater = 4
+    return:
+      type: Bve5_Parsing.MapGrammar.MapElementName
+    content.vb: >-
+      <StringValue("Repeater")>
+
+      Repeater = 4
+  attributes:
+  - type: Bve5_Parsing.StringValueAttribute
+    ctor: Bve5_Parsing.StringValueAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Repeater
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.MapGrammar.MapElementName.Background
+  commentId: F:Bve5_Parsing.MapGrammar.MapElementName.Background
+  id: Background
+  parent: Bve5_Parsing.MapGrammar.MapElementName
+  langs:
+  - csharp
+  - vb
+  name: Background
+  nameWithType: MapElementName.Background
+  fullName: Bve5_Parsing.MapGrammar.MapElementName.Background
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Background
+    path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+    startLine: 46
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\nBackground\n"
+  example: []
+  syntax:
+    content: >-
+      [StringValue("Background")]
+
+      Background = 5
+    return:
+      type: Bve5_Parsing.MapGrammar.MapElementName
+    content.vb: >-
+      <StringValue("Background")>
+
+      Background = 5
+  attributes:
+  - type: Bve5_Parsing.StringValueAttribute
+    ctor: Bve5_Parsing.StringValueAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Background
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.MapGrammar.MapElementName.Station
+  commentId: F:Bve5_Parsing.MapGrammar.MapElementName.Station
+  id: Station
+  parent: Bve5_Parsing.MapGrammar.MapElementName
+  langs:
+  - csharp
+  - vb
+  name: Station
+  nameWithType: MapElementName.Station
+  fullName: Bve5_Parsing.MapGrammar.MapElementName.Station
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Station
+    path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+    startLine: 52
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\nStation\n"
+  example: []
+  syntax:
+    content: >-
+      [StringValue("Station")]
+
+      Station = 6
+    return:
+      type: Bve5_Parsing.MapGrammar.MapElementName
+    content.vb: >-
+      <StringValue("Station")>
+
+      Station = 6
+  attributes:
+  - type: Bve5_Parsing.StringValueAttribute
+    ctor: Bve5_Parsing.StringValueAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Station
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.MapGrammar.MapElementName.Section
+  commentId: F:Bve5_Parsing.MapGrammar.MapElementName.Section
+  id: Section
+  parent: Bve5_Parsing.MapGrammar.MapElementName
+  langs:
+  - csharp
+  - vb
+  name: Section
+  nameWithType: MapElementName.Section
+  fullName: Bve5_Parsing.MapGrammar.MapElementName.Section
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Section
+    path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+    startLine: 58
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\nSection\n"
+  example: []
+  syntax:
+    content: >-
+      [StringValue("Section")]
+
+      Section = 7
+    return:
+      type: Bve5_Parsing.MapGrammar.MapElementName
+    content.vb: >-
+      <StringValue("Section")>
+
+      Section = 7
+  attributes:
+  - type: Bve5_Parsing.StringValueAttribute
+    ctor: Bve5_Parsing.StringValueAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Section
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.MapGrammar.MapElementName.Signal
+  commentId: F:Bve5_Parsing.MapGrammar.MapElementName.Signal
+  id: Signal
+  parent: Bve5_Parsing.MapGrammar.MapElementName
+  langs:
+  - csharp
+  - vb
+  name: Signal
+  nameWithType: MapElementName.Signal
+  fullName: Bve5_Parsing.MapGrammar.MapElementName.Signal
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Signal
+    path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+    startLine: 64
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\nSignal\n"
+  example: []
+  syntax:
+    content: >-
+      [StringValue("Signal")]
+
+      Signal = 8
+    return:
+      type: Bve5_Parsing.MapGrammar.MapElementName
+    content.vb: >-
+      <StringValue("Signal")>
+
+      Signal = 8
+  attributes:
+  - type: Bve5_Parsing.StringValueAttribute
+    ctor: Bve5_Parsing.StringValueAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Signal
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.MapGrammar.MapElementName.Beacon
+  commentId: F:Bve5_Parsing.MapGrammar.MapElementName.Beacon
+  id: Beacon
+  parent: Bve5_Parsing.MapGrammar.MapElementName
+  langs:
+  - csharp
+  - vb
+  name: Beacon
+  nameWithType: MapElementName.Beacon
+  fullName: Bve5_Parsing.MapGrammar.MapElementName.Beacon
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Beacon
+    path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+    startLine: 70
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\nBeacon\n"
+  example: []
+  syntax:
+    content: >-
+      [StringValue("Beacon")]
+
+      Beacon = 9
+    return:
+      type: Bve5_Parsing.MapGrammar.MapElementName
+    content.vb: >-
+      <StringValue("Beacon")>
+
+      Beacon = 9
+  attributes:
+  - type: Bve5_Parsing.StringValueAttribute
+    ctor: Bve5_Parsing.StringValueAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Beacon
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.MapGrammar.MapElementName.Speedlimit
+  commentId: F:Bve5_Parsing.MapGrammar.MapElementName.Speedlimit
+  id: Speedlimit
+  parent: Bve5_Parsing.MapGrammar.MapElementName
+  langs:
+  - csharp
+  - vb
+  name: Speedlimit
+  nameWithType: MapElementName.Speedlimit
+  fullName: Bve5_Parsing.MapGrammar.MapElementName.Speedlimit
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Speedlimit
+    path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+    startLine: 76
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\nSpeedlimit\n"
+  example: []
+  syntax:
+    content: >-
+      [StringValue("Speedlimit")]
+
+      Speedlimit = 10
+    return:
+      type: Bve5_Parsing.MapGrammar.MapElementName
+    content.vb: >-
+      <StringValue("Speedlimit")>
+
+      Speedlimit = 10
+  attributes:
+  - type: Bve5_Parsing.StringValueAttribute
+    ctor: Bve5_Parsing.StringValueAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Speedlimit
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.MapGrammar.MapElementName.Pretrain
+  commentId: F:Bve5_Parsing.MapGrammar.MapElementName.Pretrain
+  id: Pretrain
+  parent: Bve5_Parsing.MapGrammar.MapElementName
+  langs:
+  - csharp
+  - vb
+  name: Pretrain
+  nameWithType: MapElementName.Pretrain
+  fullName: Bve5_Parsing.MapGrammar.MapElementName.Pretrain
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Pretrain
+    path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+    startLine: 82
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\nPretrain\n"
+  example: []
+  syntax:
+    content: >-
+      [StringValue("Pretrain")]
+
+      Pretrain = 11
+    return:
+      type: Bve5_Parsing.MapGrammar.MapElementName
+    content.vb: >-
+      <StringValue("Pretrain")>
+
+      Pretrain = 11
+  attributes:
+  - type: Bve5_Parsing.StringValueAttribute
+    ctor: Bve5_Parsing.StringValueAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Pretrain
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.MapGrammar.MapElementName.Light
+  commentId: F:Bve5_Parsing.MapGrammar.MapElementName.Light
+  id: Light
+  parent: Bve5_Parsing.MapGrammar.MapElementName
+  langs:
+  - csharp
+  - vb
+  name: Light
+  nameWithType: MapElementName.Light
+  fullName: Bve5_Parsing.MapGrammar.MapElementName.Light
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Light
+    path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+    startLine: 88
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\nLight\n"
+  example: []
+  syntax:
+    content: >-
+      [StringValue("Light")]
+
+      Light = 12
+    return:
+      type: Bve5_Parsing.MapGrammar.MapElementName
+    content.vb: >-
+      <StringValue("Light")>
+
+      Light = 12
+  attributes:
+  - type: Bve5_Parsing.StringValueAttribute
+    ctor: Bve5_Parsing.StringValueAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Light
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.MapGrammar.MapElementName.Fog
+  commentId: F:Bve5_Parsing.MapGrammar.MapElementName.Fog
+  id: Fog
+  parent: Bve5_Parsing.MapGrammar.MapElementName
+  langs:
+  - csharp
+  - vb
+  name: Fog
+  nameWithType: MapElementName.Fog
+  fullName: Bve5_Parsing.MapGrammar.MapElementName.Fog
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Fog
+    path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+    startLine: 94
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\nFog\n"
+  example: []
+  syntax:
+    content: >-
+      [StringValue("Fog")]
+
+      Fog = 13
+    return:
+      type: Bve5_Parsing.MapGrammar.MapElementName
+    content.vb: >-
+      <StringValue("Fog")>
+
+      Fog = 13
+  attributes:
+  - type: Bve5_Parsing.StringValueAttribute
+    ctor: Bve5_Parsing.StringValueAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Fog
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.MapGrammar.MapElementName.Drawdistance
+  commentId: F:Bve5_Parsing.MapGrammar.MapElementName.Drawdistance
+  id: Drawdistance
+  parent: Bve5_Parsing.MapGrammar.MapElementName
+  langs:
+  - csharp
+  - vb
+  name: Drawdistance
+  nameWithType: MapElementName.Drawdistance
+  fullName: Bve5_Parsing.MapGrammar.MapElementName.Drawdistance
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Drawdistance
+    path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+    startLine: 100
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\nDrawdistance\n"
+  example: []
+  syntax:
+    content: >-
+      [StringValue("Drawdistance")]
+
+      Drawdistance = 14
+    return:
+      type: Bve5_Parsing.MapGrammar.MapElementName
+    content.vb: >-
+      <StringValue("Drawdistance")>
+
+      Drawdistance = 14
+  attributes:
+  - type: Bve5_Parsing.StringValueAttribute
+    ctor: Bve5_Parsing.StringValueAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Drawdistance
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.MapGrammar.MapElementName.Cabilluminance
+  commentId: F:Bve5_Parsing.MapGrammar.MapElementName.Cabilluminance
+  id: Cabilluminance
+  parent: Bve5_Parsing.MapGrammar.MapElementName
+  langs:
+  - csharp
+  - vb
+  name: Cabilluminance
+  nameWithType: MapElementName.Cabilluminance
+  fullName: Bve5_Parsing.MapGrammar.MapElementName.Cabilluminance
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Cabilluminance
+    path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+    startLine: 106
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\nCabilluminance\n"
+  example: []
+  syntax:
+    content: >-
+      [StringValue("Cabilluminance")]
+
+      Cabilluminance = 15
+    return:
+      type: Bve5_Parsing.MapGrammar.MapElementName
+    content.vb: >-
+      <StringValue("Cabilluminance")>
+
+      Cabilluminance = 15
+  attributes:
+  - type: Bve5_Parsing.StringValueAttribute
+    ctor: Bve5_Parsing.StringValueAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Cabilluminance
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.MapGrammar.MapElementName.Irregularity
+  commentId: F:Bve5_Parsing.MapGrammar.MapElementName.Irregularity
+  id: Irregularity
+  parent: Bve5_Parsing.MapGrammar.MapElementName
+  langs:
+  - csharp
+  - vb
+  name: Irregularity
+  nameWithType: MapElementName.Irregularity
+  fullName: Bve5_Parsing.MapGrammar.MapElementName.Irregularity
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Irregularity
+    path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+    startLine: 112
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\nIrregularity\n"
+  example: []
+  syntax:
+    content: >-
+      [StringValue("Irregularity")]
+
+      Irregularity = 16
+    return:
+      type: Bve5_Parsing.MapGrammar.MapElementName
+    content.vb: >-
+      <StringValue("Irregularity")>
+
+      Irregularity = 16
+  attributes:
+  - type: Bve5_Parsing.StringValueAttribute
+    ctor: Bve5_Parsing.StringValueAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Irregularity
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.MapGrammar.MapElementName.Adhesion
+  commentId: F:Bve5_Parsing.MapGrammar.MapElementName.Adhesion
+  id: Adhesion
+  parent: Bve5_Parsing.MapGrammar.MapElementName
+  langs:
+  - csharp
+  - vb
+  name: Adhesion
+  nameWithType: MapElementName.Adhesion
+  fullName: Bve5_Parsing.MapGrammar.MapElementName.Adhesion
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Adhesion
+    path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+    startLine: 118
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\nAdhesion\n"
+  example: []
+  syntax:
+    content: >-
+      [StringValue("Adhesion")]
+
+      Adhesion = 17
+    return:
+      type: Bve5_Parsing.MapGrammar.MapElementName
+    content.vb: >-
+      <StringValue("Adhesion")>
+
+      Adhesion = 17
+  attributes:
+  - type: Bve5_Parsing.StringValueAttribute
+    ctor: Bve5_Parsing.StringValueAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Adhesion
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.MapGrammar.MapElementName.Sound
+  commentId: F:Bve5_Parsing.MapGrammar.MapElementName.Sound
+  id: Sound
+  parent: Bve5_Parsing.MapGrammar.MapElementName
+  langs:
+  - csharp
+  - vb
+  name: Sound
+  nameWithType: MapElementName.Sound
+  fullName: Bve5_Parsing.MapGrammar.MapElementName.Sound
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Sound
+    path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+    startLine: 124
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\nSound\n"
+  example: []
+  syntax:
+    content: >-
+      [StringValue("Sound")]
+
+      Sound = 18
+    return:
+      type: Bve5_Parsing.MapGrammar.MapElementName
+    content.vb: >-
+      <StringValue("Sound")>
+
+      Sound = 18
+  attributes:
+  - type: Bve5_Parsing.StringValueAttribute
+    ctor: Bve5_Parsing.StringValueAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Sound
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.MapGrammar.MapElementName.Sound3d
+  commentId: F:Bve5_Parsing.MapGrammar.MapElementName.Sound3d
+  id: Sound3d
+  parent: Bve5_Parsing.MapGrammar.MapElementName
+  langs:
+  - csharp
+  - vb
+  name: Sound3d
+  nameWithType: MapElementName.Sound3d
+  fullName: Bve5_Parsing.MapGrammar.MapElementName.Sound3d
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Sound3d
+    path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+    startLine: 130
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\nSound3d\n"
+  example: []
+  syntax:
+    content: >-
+      [StringValue("Sound3d")]
+
+      Sound3d = 19
+    return:
+      type: Bve5_Parsing.MapGrammar.MapElementName
+    content.vb: >-
+      <StringValue("Sound3d")>
+
+      Sound3d = 19
+  attributes:
+  - type: Bve5_Parsing.StringValueAttribute
+    ctor: Bve5_Parsing.StringValueAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Sound3d
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.MapGrammar.MapElementName.Rollingnoise
+  commentId: F:Bve5_Parsing.MapGrammar.MapElementName.Rollingnoise
+  id: Rollingnoise
+  parent: Bve5_Parsing.MapGrammar.MapElementName
+  langs:
+  - csharp
+  - vb
+  name: Rollingnoise
+  nameWithType: MapElementName.Rollingnoise
+  fullName: Bve5_Parsing.MapGrammar.MapElementName.Rollingnoise
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Rollingnoise
+    path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+    startLine: 136
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\nRollingnoise\n"
+  example: []
+  syntax:
+    content: >-
+      [StringValue("Rollingnoise")]
+
+      Rollingnoise = 20
+    return:
+      type: Bve5_Parsing.MapGrammar.MapElementName
+    content.vb: >-
+      <StringValue("Rollingnoise")>
+
+      Rollingnoise = 20
+  attributes:
+  - type: Bve5_Parsing.StringValueAttribute
+    ctor: Bve5_Parsing.StringValueAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Rollingnoise
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.MapGrammar.MapElementName.Flangenoise
+  commentId: F:Bve5_Parsing.MapGrammar.MapElementName.Flangenoise
+  id: Flangenoise
+  parent: Bve5_Parsing.MapGrammar.MapElementName
+  langs:
+  - csharp
+  - vb
+  name: Flangenoise
+  nameWithType: MapElementName.Flangenoise
+  fullName: Bve5_Parsing.MapGrammar.MapElementName.Flangenoise
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Flangenoise
+    path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+    startLine: 142
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\nFlangenoise\n"
+  example: []
+  syntax:
+    content: >-
+      [StringValue("Flangenoise")]
+
+      Flangenoise = 21
+    return:
+      type: Bve5_Parsing.MapGrammar.MapElementName
+    content.vb: >-
+      <StringValue("Flangenoise")>
+
+      Flangenoise = 21
+  attributes:
+  - type: Bve5_Parsing.StringValueAttribute
+    ctor: Bve5_Parsing.StringValueAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Flangenoise
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.MapGrammar.MapElementName.Jointnoise
+  commentId: F:Bve5_Parsing.MapGrammar.MapElementName.Jointnoise
+  id: Jointnoise
+  parent: Bve5_Parsing.MapGrammar.MapElementName
+  langs:
+  - csharp
+  - vb
+  name: Jointnoise
+  nameWithType: MapElementName.Jointnoise
+  fullName: Bve5_Parsing.MapGrammar.MapElementName.Jointnoise
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Jointnoise
+    path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+    startLine: 148
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\nJointnoise\n"
+  example: []
+  syntax:
+    content: >-
+      [StringValue("Jointnoise")]
+
+      Jointnoise = 22
+    return:
+      type: Bve5_Parsing.MapGrammar.MapElementName
+    content.vb: >-
+      <StringValue("Jointnoise")>
+
+      Jointnoise = 22
+  attributes:
+  - type: Bve5_Parsing.StringValueAttribute
+    ctor: Bve5_Parsing.StringValueAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Jointnoise
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.MapGrammar.MapElementName.Train
+  commentId: F:Bve5_Parsing.MapGrammar.MapElementName.Train
+  id: Train
+  parent: Bve5_Parsing.MapGrammar.MapElementName
+  langs:
+  - csharp
+  - vb
+  name: Train
+  nameWithType: MapElementName.Train
+  fullName: Bve5_Parsing.MapGrammar.MapElementName.Train
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Train
+    path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+    startLine: 154
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\nTrain\n"
+  example: []
+  syntax:
+    content: >-
+      [StringValue("Train")]
+
+      Train = 23
+    return:
+      type: Bve5_Parsing.MapGrammar.MapElementName
+    content.vb: >-
+      <StringValue("Train")>
+
+      Train = 23
+  attributes:
+  - type: Bve5_Parsing.StringValueAttribute
+    ctor: Bve5_Parsing.StringValueAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Train
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.MapGrammar.MapElementName.Legacy
+  commentId: F:Bve5_Parsing.MapGrammar.MapElementName.Legacy
+  id: Legacy
+  parent: Bve5_Parsing.MapGrammar.MapElementName
+  langs:
+  - csharp
+  - vb
+  name: Legacy
+  nameWithType: MapElementName.Legacy
+  fullName: Bve5_Parsing.MapGrammar.MapElementName.Legacy
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Legacy
+    path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+    startLine: 160
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\nLegacy\n"
+  example: []
+  syntax:
+    content: >-
+      [StringValue("Legacy")]
+
+      Legacy = 24
+    return:
+      type: Bve5_Parsing.MapGrammar.MapElementName
+    content.vb: >-
+      <StringValue("Legacy")>
+
+      Legacy = 24
+  attributes:
+  - type: Bve5_Parsing.StringValueAttribute
+    ctor: Bve5_Parsing.StringValueAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Legacy
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: Bve5_Parsing.MapGrammar
+  commentId: N:Bve5_Parsing.MapGrammar
+  name: Bve5_Parsing.MapGrammar
+  nameWithType: Bve5_Parsing.MapGrammar
+  fullName: Bve5_Parsing.MapGrammar
+- uid: System.Enum.Bve5_Parsing.CommonAttribute.GetStringValue
+  commentId: M:Bve5_Parsing.CommonAttribute.GetStringValue(System.Enum)
+  parent: Bve5_Parsing.CommonAttribute
+  definition: Bve5_Parsing.CommonAttribute.GetStringValue(System.Enum)
+  name: GetStringValue()
+  nameWithType: CommonAttribute.GetStringValue()
+  fullName: Bve5_Parsing.CommonAttribute.GetStringValue()
+  spec.csharp:
+  - uid: Bve5_Parsing.CommonAttribute.GetStringValue
+    name: GetStringValue
+    nameWithType: CommonAttribute.GetStringValue
+    fullName: Bve5_Parsing.CommonAttribute.GetStringValue
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Bve5_Parsing.CommonAttribute.GetStringValue
+    name: GetStringValue
+    nameWithType: CommonAttribute.GetStringValue
+    fullName: Bve5_Parsing.CommonAttribute.GetStringValue
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Bve5_Parsing.CommonAttribute.GetStringValue(System.Enum)
+  commentId: M:Bve5_Parsing.CommonAttribute.GetStringValue(System.Enum)
+  isExternal: true
+  name: GetStringValue(Enum)
+  nameWithType: CommonAttribute.GetStringValue(Enum)
+  fullName: Bve5_Parsing.CommonAttribute.GetStringValue(System.Enum)
+  spec.csharp:
+  - uid: Bve5_Parsing.CommonAttribute.GetStringValue(System.Enum)
+    name: GetStringValue
+    nameWithType: CommonAttribute.GetStringValue
+    fullName: Bve5_Parsing.CommonAttribute.GetStringValue
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Enum
+    name: Enum
+    nameWithType: Enum
+    fullName: System.Enum
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Bve5_Parsing.CommonAttribute.GetStringValue(System.Enum)
+    name: GetStringValue
+    nameWithType: CommonAttribute.GetStringValue
+    fullName: Bve5_Parsing.CommonAttribute.GetStringValue
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Enum
+    name: Enum
+    nameWithType: Enum
+    fullName: System.Enum
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Bve5_Parsing.CommonAttribute
+  commentId: T:Bve5_Parsing.CommonAttribute
+  parent: Bve5_Parsing
+  name: CommonAttribute
+  nameWithType: CommonAttribute
+  fullName: Bve5_Parsing.CommonAttribute
+- uid: Bve5_Parsing
+  commentId: N:Bve5_Parsing
+  name: Bve5_Parsing
+  nameWithType: Bve5_Parsing
+  fullName: Bve5_Parsing
+- uid: Bve5_Parsing.MapGrammar.MapElementName
+  commentId: T:Bve5_Parsing.MapGrammar.MapElementName
+  parent: Bve5_Parsing.MapGrammar
+  name: MapElementName
+  nameWithType: MapElementName
+  fullName: Bve5_Parsing.MapGrammar.MapElementName

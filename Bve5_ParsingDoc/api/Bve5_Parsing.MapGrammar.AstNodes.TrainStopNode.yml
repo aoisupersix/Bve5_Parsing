@@ -1,0 +1,1235 @@
+### YamlMime:ManagedReference
+items:
+- uid: Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode
+  commentId: T:Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode
+  id: TrainStopNode
+  parent: Bve5_Parsing.MapGrammar.AstNodes
+  children:
+  - Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.#ctor(Antlr4.Runtime.IToken,Antlr4.Runtime.IToken)
+  - Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.Accelerate
+  - Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.Decelerate
+  - Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.ElementName
+  - Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.FunctionName
+  - Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.HasKey
+  - Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.HasSubElement
+  - Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.Key
+  - Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.Speed
+  - Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.StopTime
+  langs:
+  - csharp
+  - vb
+  name: TrainStopNode
+  nameWithType: TrainStopNode
+  fullName: Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode
+  type: Class
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: TrainStopNode
+    path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
+    startLine: 3373
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar.AstNodes
+  summary: "\nTrain[TrainKey].Stop(Decelerate, StopTime, Accelerate, Speed);\n"
+  example: []
+  syntax:
+    content: 'public class TrainStopNode : SyntaxNode'
+    content.vb: >-
+      Public Class TrainStopNode
+
+          Inherits SyntaxNode
+  inheritance:
+  - System.Object
+  - Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes
+  - Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode
+  inheritedMembers:
+  - Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.GetAllArguments
+  - Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.GetNonOptionalArguments
+  - Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.GetOptionalArguments
+  - Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.CreateSyntaxAstNode(Bve5_Parsing.MapGrammar.AstNodes.BuildAstVisitor,Antlr4.Runtime.ParserRuleContext,Bve5_Parsing.MapGrammar.MapElementName,System.String,System.String)
+  - Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.SetArgument(Bve5_Parsing.MapGrammar.EvaluateMapGrammarVisitor,Bve5_Parsing.MapGrammar.EvaluateData.Statement)
+  - Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.CreateStatement(Bve5_Parsing.MapGrammar.EvaluateMapGrammarVisitor)
+  - Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes.Start
+  - Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes.Stop
+  - Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes.CreateNewWarning(System.String)
+  - Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes.CreateNewError(System.String)
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.ElementName
+  commentId: P:Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.ElementName
+  id: ElementName
+  parent: Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode
+  langs:
+  - csharp
+  - vb
+  name: ElementName
+  nameWithType: TrainStopNode.ElementName
+  fullName: Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.ElementName
+  type: Property
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: ElementName
+    path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
+    startLine: 3380
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar.AstNodes
+  summary: "\nマップ要素名\n"
+  example: []
+  syntax:
+    content: public override MapElementName ElementName { get; }
+    parameters: []
+    return:
+      type: Bve5_Parsing.MapGrammar.MapElementName
+    content.vb: Public Overrides ReadOnly Property ElementName As MapElementName
+  overridden: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.ElementName
+  overload: Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.ElementName*
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
+- uid: Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.FunctionName
+  commentId: P:Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.FunctionName
+  id: FunctionName
+  parent: Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode
+  langs:
+  - csharp
+  - vb
+  name: FunctionName
+  nameWithType: TrainStopNode.FunctionName
+  fullName: Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.FunctionName
+  type: Property
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: FunctionName
+    path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
+    startLine: 3385
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar.AstNodes
+  summary: "\n関数名\n"
+  example: []
+  syntax:
+    content: public override MapFunctionName FunctionName { get; }
+    parameters: []
+    return:
+      type: Bve5_Parsing.MapGrammar.MapFunctionName
+    content.vb: Public Overrides ReadOnly Property FunctionName As MapFunctionName
+  overridden: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.FunctionName
+  overload: Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.FunctionName*
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
+- uid: Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.HasKey
+  commentId: P:Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.HasKey
+  id: HasKey
+  parent: Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode
+  langs:
+  - csharp
+  - vb
+  name: HasKey
+  nameWithType: TrainStopNode.HasKey
+  fullName: Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.HasKey
+  type: Property
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: HasKey
+    path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
+    startLine: 3390
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar.AstNodes
+  summary: "\nキーを指定する構文か？\n"
+  example: []
+  syntax:
+    content: public override bool HasKey { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides ReadOnly Property HasKey As Boolean
+  overridden: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.HasKey
+  overload: Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.HasKey*
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
+- uid: Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.HasSubElement
+  commentId: P:Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.HasSubElement
+  id: HasSubElement
+  parent: Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode
+  langs:
+  - csharp
+  - vb
+  name: HasSubElement
+  nameWithType: TrainStopNode.HasSubElement
+  fullName: Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.HasSubElement
+  type: Property
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: HasSubElement
+    path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
+    startLine: 3395
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar.AstNodes
+  summary: "\n副要素を指定する構文か？\n"
+  example: []
+  syntax:
+    content: public override bool HasSubElement { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides ReadOnly Property HasSubElement As Boolean
+  overridden: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.HasSubElement
+  overload: Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.HasSubElement*
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
+- uid: Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.Key
+  commentId: P:Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.Key
+  id: Key
+  parent: Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode
+  langs:
+  - csharp
+  - vb
+  name: Key
+  nameWithType: TrainStopNode.Key
+  fullName: Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.Key
+  type: Property
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Key
+    path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
+    startLine: 3401
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar.AstNodes
+  summary: "\nKey：TrainKey\n"
+  example: []
+  syntax:
+    content: public MapGrammarAstNodes Key { get; set; }
+    parameters: []
+    return:
+      type: Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes
+    content.vb: Public Property Key As MapGrammarAstNodes
+  overload: Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.Key*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.Decelerate
+  commentId: P:Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.Decelerate
+  id: Decelerate
+  parent: Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode
+  langs:
+  - csharp
+  - vb
+  name: Decelerate
+  nameWithType: TrainStopNode.Decelerate
+  fullName: Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.Decelerate
+  type: Property
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Decelerate
+    path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
+    startLine: 3408
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar.AstNodes
+  summary: "\n引数：減速度 [km/h/s]\n"
+  example: []
+  syntax:
+    content: public MapGrammarAstNodes Decelerate { get; set; }
+    parameters: []
+    return:
+      type: Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes
+    content.vb: Public Property Decelerate As MapGrammarAstNodes
+  overload: Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.Decelerate*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.StopTime
+  commentId: P:Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.StopTime
+  id: StopTime
+  parent: Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode
+  langs:
+  - csharp
+  - vb
+  name: StopTime
+  nameWithType: TrainStopNode.StopTime
+  fullName: Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.StopTime
+  type: Property
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: StopTime
+    path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
+    startLine: 3414
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar.AstNodes
+  summary: "\n引数：停車時間 [s]\n"
+  example: []
+  syntax:
+    content: public MapGrammarAstNodes StopTime { get; set; }
+    parameters: []
+    return:
+      type: Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes
+    content.vb: Public Property StopTime As MapGrammarAstNodes
+  overload: Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.StopTime*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.Accelerate
+  commentId: P:Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.Accelerate
+  id: Accelerate
+  parent: Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode
+  langs:
+  - csharp
+  - vb
+  name: Accelerate
+  nameWithType: TrainStopNode.Accelerate
+  fullName: Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.Accelerate
+  type: Property
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Accelerate
+    path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
+    startLine: 3420
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar.AstNodes
+  summary: "\n引数：加速度 [km/h/s]\n"
+  example: []
+  syntax:
+    content: public MapGrammarAstNodes Accelerate { get; set; }
+    parameters: []
+    return:
+      type: Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes
+    content.vb: Public Property Accelerate As MapGrammarAstNodes
+  overload: Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.Accelerate*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.Speed
+  commentId: P:Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.Speed
+  id: Speed
+  parent: Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode
+  langs:
+  - csharp
+  - vb
+  name: Speed
+  nameWithType: TrainStopNode.Speed
+  fullName: Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.Speed
+  type: Property
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Speed
+    path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
+    startLine: 3426
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar.AstNodes
+  summary: "\n引数：加速後の走行速度 [km/h]\n"
+  example: []
+  syntax:
+    content: public MapGrammarAstNodes Speed { get; set; }
+    parameters: []
+    return:
+      type: Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes
+    content.vb: Public Property Speed As MapGrammarAstNodes
+  overload: Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.Speed*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.#ctor(Antlr4.Runtime.IToken,Antlr4.Runtime.IToken)
+  commentId: M:Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.#ctor(Antlr4.Runtime.IToken,Antlr4.Runtime.IToken)
+  id: '#ctor(Antlr4.Runtime.IToken,Antlr4.Runtime.IToken)'
+  parent: Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode
+  langs:
+  - csharp
+  - vb
+  name: TrainStopNode(IToken, IToken)
+  nameWithType: TrainStopNode.TrainStopNode(IToken, IToken)
+  fullName: Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.TrainStopNode(Antlr4.Runtime.IToken, Antlr4.Runtime.IToken)
+  type: Constructor
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: .ctor
+    path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
+    startLine: 3435
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar.AstNodes
+  summary: "\n新しいインスタンスを生成します。\n"
+  example: []
+  syntax:
+    content: public TrainStopNode(IToken start, IToken stop)
+    parameters:
+    - id: start
+      type: Antlr4.Runtime.IToken
+      description: ''
+    - id: stop
+      type: Antlr4.Runtime.IToken
+      description: ''
+    content.vb: Public Sub New(start As IToken, stop As IToken)
+  overload: Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Bve5_Parsing.MapGrammar.AstNodes
+  commentId: N:Bve5_Parsing.MapGrammar.AstNodes
+  name: Bve5_Parsing.MapGrammar.AstNodes
+  nameWithType: Bve5_Parsing.MapGrammar.AstNodes
+  fullName: Bve5_Parsing.MapGrammar.AstNodes
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes
+  commentId: T:Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes
+  parent: Bve5_Parsing.MapGrammar.AstNodes
+  name: MapGrammarAstNodes
+  nameWithType: MapGrammarAstNodes
+  fullName: Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes
+- uid: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode
+  commentId: T:Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode
+  parent: Bve5_Parsing.MapGrammar.AstNodes
+  name: SyntaxNode
+  nameWithType: SyntaxNode
+  fullName: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode
+- uid: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.GetAllArguments
+  commentId: M:Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.GetAllArguments
+  parent: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode
+  name: GetAllArguments()
+  nameWithType: SyntaxNode.GetAllArguments()
+  fullName: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.GetAllArguments()
+  spec.csharp:
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.GetAllArguments
+    name: GetAllArguments
+    nameWithType: SyntaxNode.GetAllArguments
+    fullName: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.GetAllArguments
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.GetAllArguments
+    name: GetAllArguments
+    nameWithType: SyntaxNode.GetAllArguments
+    fullName: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.GetAllArguments
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.GetNonOptionalArguments
+  commentId: M:Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.GetNonOptionalArguments
+  parent: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode
+  name: GetNonOptionalArguments()
+  nameWithType: SyntaxNode.GetNonOptionalArguments()
+  fullName: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.GetNonOptionalArguments()
+  spec.csharp:
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.GetNonOptionalArguments
+    name: GetNonOptionalArguments
+    nameWithType: SyntaxNode.GetNonOptionalArguments
+    fullName: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.GetNonOptionalArguments
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.GetNonOptionalArguments
+    name: GetNonOptionalArguments
+    nameWithType: SyntaxNode.GetNonOptionalArguments
+    fullName: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.GetNonOptionalArguments
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.GetOptionalArguments
+  commentId: M:Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.GetOptionalArguments
+  parent: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode
+  name: GetOptionalArguments()
+  nameWithType: SyntaxNode.GetOptionalArguments()
+  fullName: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.GetOptionalArguments()
+  spec.csharp:
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.GetOptionalArguments
+    name: GetOptionalArguments
+    nameWithType: SyntaxNode.GetOptionalArguments
+    fullName: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.GetOptionalArguments
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.GetOptionalArguments
+    name: GetOptionalArguments
+    nameWithType: SyntaxNode.GetOptionalArguments
+    fullName: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.GetOptionalArguments
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.CreateSyntaxAstNode(Bve5_Parsing.MapGrammar.AstNodes.BuildAstVisitor,Antlr4.Runtime.ParserRuleContext,Bve5_Parsing.MapGrammar.MapElementName,System.String,System.String)
+  commentId: M:Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.CreateSyntaxAstNode(Bve5_Parsing.MapGrammar.AstNodes.BuildAstVisitor,Antlr4.Runtime.ParserRuleContext,Bve5_Parsing.MapGrammar.MapElementName,System.String,System.String)
+  parent: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode
+  isExternal: true
+  name: CreateSyntaxAstNode(BuildAstVisitor, ParserRuleContext, MapElementName, String, String)
+  nameWithType: SyntaxNode.CreateSyntaxAstNode(BuildAstVisitor, ParserRuleContext, MapElementName, String, String)
+  fullName: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.CreateSyntaxAstNode(Bve5_Parsing.MapGrammar.AstNodes.BuildAstVisitor, Antlr4.Runtime.ParserRuleContext, Bve5_Parsing.MapGrammar.MapElementName, System.String, System.String)
+  spec.csharp:
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.CreateSyntaxAstNode(Bve5_Parsing.MapGrammar.AstNodes.BuildAstVisitor,Antlr4.Runtime.ParserRuleContext,Bve5_Parsing.MapGrammar.MapElementName,System.String,System.String)
+    name: CreateSyntaxAstNode
+    nameWithType: SyntaxNode.CreateSyntaxAstNode
+    fullName: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.CreateSyntaxAstNode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.BuildAstVisitor
+    name: BuildAstVisitor
+    nameWithType: BuildAstVisitor
+    fullName: Bve5_Parsing.MapGrammar.AstNodes.BuildAstVisitor
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Antlr4.Runtime.ParserRuleContext
+    name: ParserRuleContext
+    nameWithType: ParserRuleContext
+    fullName: Antlr4.Runtime.ParserRuleContext
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Bve5_Parsing.MapGrammar.MapElementName
+    name: MapElementName
+    nameWithType: MapElementName
+    fullName: Bve5_Parsing.MapGrammar.MapElementName
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.CreateSyntaxAstNode(Bve5_Parsing.MapGrammar.AstNodes.BuildAstVisitor,Antlr4.Runtime.ParserRuleContext,Bve5_Parsing.MapGrammar.MapElementName,System.String,System.String)
+    name: CreateSyntaxAstNode
+    nameWithType: SyntaxNode.CreateSyntaxAstNode
+    fullName: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.CreateSyntaxAstNode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.BuildAstVisitor
+    name: BuildAstVisitor
+    nameWithType: BuildAstVisitor
+    fullName: Bve5_Parsing.MapGrammar.AstNodes.BuildAstVisitor
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Antlr4.Runtime.ParserRuleContext
+    name: ParserRuleContext
+    nameWithType: ParserRuleContext
+    fullName: Antlr4.Runtime.ParserRuleContext
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Bve5_Parsing.MapGrammar.MapElementName
+    name: MapElementName
+    nameWithType: MapElementName
+    fullName: Bve5_Parsing.MapGrammar.MapElementName
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.SetArgument(Bve5_Parsing.MapGrammar.EvaluateMapGrammarVisitor,Bve5_Parsing.MapGrammar.EvaluateData.Statement)
+  commentId: M:Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.SetArgument(Bve5_Parsing.MapGrammar.EvaluateMapGrammarVisitor,Bve5_Parsing.MapGrammar.EvaluateData.Statement)
+  parent: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode
+  name: SetArgument(EvaluateMapGrammarVisitor, Statement)
+  nameWithType: SyntaxNode.SetArgument(EvaluateMapGrammarVisitor, Statement)
+  fullName: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.SetArgument(Bve5_Parsing.MapGrammar.EvaluateMapGrammarVisitor, Bve5_Parsing.MapGrammar.EvaluateData.Statement)
+  spec.csharp:
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.SetArgument(Bve5_Parsing.MapGrammar.EvaluateMapGrammarVisitor,Bve5_Parsing.MapGrammar.EvaluateData.Statement)
+    name: SetArgument
+    nameWithType: SyntaxNode.SetArgument
+    fullName: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.SetArgument
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Bve5_Parsing.MapGrammar.EvaluateMapGrammarVisitor
+    name: EvaluateMapGrammarVisitor
+    nameWithType: EvaluateMapGrammarVisitor
+    fullName: Bve5_Parsing.MapGrammar.EvaluateMapGrammarVisitor
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.Statement
+    name: Statement
+    nameWithType: Statement
+    fullName: Bve5_Parsing.MapGrammar.EvaluateData.Statement
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.SetArgument(Bve5_Parsing.MapGrammar.EvaluateMapGrammarVisitor,Bve5_Parsing.MapGrammar.EvaluateData.Statement)
+    name: SetArgument
+    nameWithType: SyntaxNode.SetArgument
+    fullName: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.SetArgument
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Bve5_Parsing.MapGrammar.EvaluateMapGrammarVisitor
+    name: EvaluateMapGrammarVisitor
+    nameWithType: EvaluateMapGrammarVisitor
+    fullName: Bve5_Parsing.MapGrammar.EvaluateMapGrammarVisitor
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.Statement
+    name: Statement
+    nameWithType: Statement
+    fullName: Bve5_Parsing.MapGrammar.EvaluateData.Statement
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.CreateStatement(Bve5_Parsing.MapGrammar.EvaluateMapGrammarVisitor)
+  commentId: M:Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.CreateStatement(Bve5_Parsing.MapGrammar.EvaluateMapGrammarVisitor)
+  parent: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode
+  name: CreateStatement(EvaluateMapGrammarVisitor)
+  nameWithType: SyntaxNode.CreateStatement(EvaluateMapGrammarVisitor)
+  fullName: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.CreateStatement(Bve5_Parsing.MapGrammar.EvaluateMapGrammarVisitor)
+  spec.csharp:
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.CreateStatement(Bve5_Parsing.MapGrammar.EvaluateMapGrammarVisitor)
+    name: CreateStatement
+    nameWithType: SyntaxNode.CreateStatement
+    fullName: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.CreateStatement
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Bve5_Parsing.MapGrammar.EvaluateMapGrammarVisitor
+    name: EvaluateMapGrammarVisitor
+    nameWithType: EvaluateMapGrammarVisitor
+    fullName: Bve5_Parsing.MapGrammar.EvaluateMapGrammarVisitor
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.CreateStatement(Bve5_Parsing.MapGrammar.EvaluateMapGrammarVisitor)
+    name: CreateStatement
+    nameWithType: SyntaxNode.CreateStatement
+    fullName: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.CreateStatement
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Bve5_Parsing.MapGrammar.EvaluateMapGrammarVisitor
+    name: EvaluateMapGrammarVisitor
+    nameWithType: EvaluateMapGrammarVisitor
+    fullName: Bve5_Parsing.MapGrammar.EvaluateMapGrammarVisitor
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes.Start
+  commentId: P:Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes.Start
+  parent: Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes
+  name: Start
+  nameWithType: MapGrammarAstNodes.Start
+  fullName: Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes.Start
+- uid: Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes.Stop
+  commentId: P:Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes.Stop
+  parent: Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes
+  name: Stop
+  nameWithType: MapGrammarAstNodes.Stop
+  fullName: Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes.Stop
+- uid: Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes.CreateNewWarning(System.String)
+  commentId: M:Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes.CreateNewWarning(System.String)
+  parent: Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes
+  isExternal: true
+  name: CreateNewWarning(String)
+  nameWithType: MapGrammarAstNodes.CreateNewWarning(String)
+  fullName: Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes.CreateNewWarning(System.String)
+  spec.csharp:
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes.CreateNewWarning(System.String)
+    name: CreateNewWarning
+    nameWithType: MapGrammarAstNodes.CreateNewWarning
+    fullName: Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes.CreateNewWarning
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes.CreateNewWarning(System.String)
+    name: CreateNewWarning
+    nameWithType: MapGrammarAstNodes.CreateNewWarning
+    fullName: Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes.CreateNewWarning
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes.CreateNewError(System.String)
+  commentId: M:Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes.CreateNewError(System.String)
+  parent: Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes
+  isExternal: true
+  name: CreateNewError(String)
+  nameWithType: MapGrammarAstNodes.CreateNewError(String)
+  fullName: Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes.CreateNewError(System.String)
+  spec.csharp:
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes.CreateNewError(System.String)
+    name: CreateNewError
+    nameWithType: MapGrammarAstNodes.CreateNewError
+    fullName: Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes.CreateNewError
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes.CreateNewError(System.String)
+    name: CreateNewError
+    nameWithType: MapGrammarAstNodes.CreateNewError
+    fullName: Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes.CreateNewError
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.ElementName
+  commentId: P:Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.ElementName
+  parent: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode
+  name: ElementName
+  nameWithType: SyntaxNode.ElementName
+  fullName: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.ElementName
+- uid: Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.ElementName*
+  commentId: Overload:Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.ElementName
+  name: ElementName
+  nameWithType: TrainStopNode.ElementName
+  fullName: Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.ElementName
+- uid: Bve5_Parsing.MapGrammar.MapElementName
+  commentId: T:Bve5_Parsing.MapGrammar.MapElementName
+  parent: Bve5_Parsing.MapGrammar
+  name: MapElementName
+  nameWithType: MapElementName
+  fullName: Bve5_Parsing.MapGrammar.MapElementName
+- uid: Bve5_Parsing.MapGrammar
+  commentId: N:Bve5_Parsing.MapGrammar
+  name: Bve5_Parsing.MapGrammar
+  nameWithType: Bve5_Parsing.MapGrammar
+  fullName: Bve5_Parsing.MapGrammar
+- uid: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.FunctionName
+  commentId: P:Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.FunctionName
+  parent: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode
+  name: FunctionName
+  nameWithType: SyntaxNode.FunctionName
+  fullName: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.FunctionName
+- uid: Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.FunctionName*
+  commentId: Overload:Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.FunctionName
+  name: FunctionName
+  nameWithType: TrainStopNode.FunctionName
+  fullName: Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.FunctionName
+- uid: Bve5_Parsing.MapGrammar.MapFunctionName
+  commentId: T:Bve5_Parsing.MapGrammar.MapFunctionName
+  parent: Bve5_Parsing.MapGrammar
+  name: MapFunctionName
+  nameWithType: MapFunctionName
+  fullName: Bve5_Parsing.MapGrammar.MapFunctionName
+- uid: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.HasKey
+  commentId: P:Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.HasKey
+  parent: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode
+  name: HasKey
+  nameWithType: SyntaxNode.HasKey
+  fullName: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.HasKey
+- uid: Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.HasKey*
+  commentId: Overload:Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.HasKey
+  name: HasKey
+  nameWithType: TrainStopNode.HasKey
+  fullName: Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.HasKey
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.HasSubElement
+  commentId: P:Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.HasSubElement
+  parent: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode
+  name: HasSubElement
+  nameWithType: SyntaxNode.HasSubElement
+  fullName: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.HasSubElement
+- uid: Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.HasSubElement*
+  commentId: Overload:Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.HasSubElement
+  name: HasSubElement
+  nameWithType: TrainStopNode.HasSubElement
+  fullName: Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.HasSubElement
+- uid: Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.Key*
+  commentId: Overload:Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.Key
+  name: Key
+  nameWithType: TrainStopNode.Key
+  fullName: Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.Key
+- uid: Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.Decelerate*
+  commentId: Overload:Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.Decelerate
+  name: Decelerate
+  nameWithType: TrainStopNode.Decelerate
+  fullName: Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.Decelerate
+- uid: Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.StopTime*
+  commentId: Overload:Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.StopTime
+  name: StopTime
+  nameWithType: TrainStopNode.StopTime
+  fullName: Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.StopTime
+- uid: Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.Accelerate*
+  commentId: Overload:Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.Accelerate
+  name: Accelerate
+  nameWithType: TrainStopNode.Accelerate
+  fullName: Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.Accelerate
+- uid: Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.Speed*
+  commentId: Overload:Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.Speed
+  name: Speed
+  nameWithType: TrainStopNode.Speed
+  fullName: Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.Speed
+- uid: Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.#ctor*
+  commentId: Overload:Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.#ctor
+  name: TrainStopNode
+  nameWithType: TrainStopNode.TrainStopNode
+  fullName: Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode.TrainStopNode
+- uid: Antlr4.Runtime.IToken
+  commentId: T:Antlr4.Runtime.IToken
+  parent: Antlr4.Runtime
+  isExternal: true
+  name: IToken
+  nameWithType: IToken
+  fullName: Antlr4.Runtime.IToken
+- uid: Antlr4.Runtime
+  commentId: N:Antlr4.Runtime
+  isExternal: true
+  name: Antlr4.Runtime
+  nameWithType: Antlr4.Runtime
+  fullName: Antlr4.Runtime

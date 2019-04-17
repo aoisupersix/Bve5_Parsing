@@ -1,0 +1,206 @@
+### YamlMime:ManagedReference
+items:
+- uid: Bve5_Parsing.MapGrammar.MapGrammarParser.MapGrammarParserOption
+  commentId: T:Bve5_Parsing.MapGrammar.MapGrammarParser.MapGrammarParserOption
+  id: MapGrammarParser.MapGrammarParserOption
+  parent: Bve5_Parsing.MapGrammar
+  children:
+  - Bve5_Parsing.MapGrammar.MapGrammarParser.MapGrammarParserOption.None
+  - Bve5_Parsing.MapGrammar.MapGrammarParser.MapGrammarParserOption.ParseIncludeSyntaxRecursively
+  langs:
+  - csharp
+  - vb
+  name: MapGrammarParser.MapGrammarParserOption
+  nameWithType: MapGrammarParser.MapGrammarParserOption
+  fullName: Bve5_Parsing.MapGrammar.MapGrammarParser.MapGrammarParserOption
+  type: Enum
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/MapGrammarParser.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: MapGrammarParserOption
+    path: ../Bve5_Parsing/MapGrammar/MapGrammarParser.cs
+    startLine: 20
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  syntax:
+    content: >-
+      [Flags]
+
+      public enum MapGrammarParserOption
+    content.vb: >-
+      <Flags>
+
+      Public Enum MapGrammarParserOption
+  extensionMethods:
+  - System.Enum.Bve5_Parsing.CommonAttribute.GetStringValue
+  attributes:
+  - type: System.FlagsAttribute
+    ctor: System.FlagsAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: Bve5_Parsing.MapGrammar.MapGrammarParser.MapGrammarParserOption.None
+  commentId: F:Bve5_Parsing.MapGrammar.MapGrammarParser.MapGrammarParserOption.None
+  id: None
+  parent: Bve5_Parsing.MapGrammar.MapGrammarParser.MapGrammarParserOption
+  langs:
+  - csharp
+  - vb
+  name: None
+  nameWithType: MapGrammarParser.MapGrammarParserOption.None
+  fullName: Bve5_Parsing.MapGrammar.MapGrammarParser.MapGrammarParserOption.None
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/MapGrammarParser.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: None
+    path: ../Bve5_Parsing/MapGrammar/MapGrammarParser.cs
+    startLine: 27
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\nオプション指定なし\n"
+  example: []
+  syntax:
+    content: None = 1
+    return:
+      type: Bve5_Parsing.MapGrammar.MapGrammarParser.MapGrammarParserOption
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.MapGrammar.MapGrammarParser.MapGrammarParserOption.ParseIncludeSyntaxRecursively
+  commentId: F:Bve5_Parsing.MapGrammar.MapGrammarParser.MapGrammarParserOption.ParseIncludeSyntaxRecursively
+  id: ParseIncludeSyntaxRecursively
+  parent: Bve5_Parsing.MapGrammar.MapGrammarParser.MapGrammarParserOption
+  langs:
+  - csharp
+  - vb
+  name: ParseIncludeSyntaxRecursively
+  nameWithType: MapGrammarParser.MapGrammarParserOption.ParseIncludeSyntaxRecursively
+  fullName: Bve5_Parsing.MapGrammar.MapGrammarParser.MapGrammarParserOption.ParseIncludeSyntaxRecursively
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/MapGrammarParser.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: ParseIncludeSyntaxRecursively
+    path: ../Bve5_Parsing/MapGrammar/MapGrammarParser.cs
+    startLine: 33
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\nパース中にInclude構文が出現した場合、指定されたファイルを再帰的にパースします。\nこのフラグはParseメソッドにファイル名を指定した場合のみ有効です。\n"
+  example: []
+  syntax:
+    content: ParseIncludeSyntaxRecursively = 2
+    return:
+      type: Bve5_Parsing.MapGrammar.MapGrammarParser.MapGrammarParserOption
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: Bve5_Parsing.MapGrammar
+  commentId: N:Bve5_Parsing.MapGrammar
+  name: Bve5_Parsing.MapGrammar
+  nameWithType: Bve5_Parsing.MapGrammar
+  fullName: Bve5_Parsing.MapGrammar
+- uid: System.Enum.Bve5_Parsing.CommonAttribute.GetStringValue
+  commentId: M:Bve5_Parsing.CommonAttribute.GetStringValue(System.Enum)
+  parent: Bve5_Parsing.CommonAttribute
+  definition: Bve5_Parsing.CommonAttribute.GetStringValue(System.Enum)
+  name: GetStringValue()
+  nameWithType: CommonAttribute.GetStringValue()
+  fullName: Bve5_Parsing.CommonAttribute.GetStringValue()
+  spec.csharp:
+  - uid: Bve5_Parsing.CommonAttribute.GetStringValue
+    name: GetStringValue
+    nameWithType: CommonAttribute.GetStringValue
+    fullName: Bve5_Parsing.CommonAttribute.GetStringValue
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Bve5_Parsing.CommonAttribute.GetStringValue
+    name: GetStringValue
+    nameWithType: CommonAttribute.GetStringValue
+    fullName: Bve5_Parsing.CommonAttribute.GetStringValue
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Bve5_Parsing.CommonAttribute.GetStringValue(System.Enum)
+  commentId: M:Bve5_Parsing.CommonAttribute.GetStringValue(System.Enum)
+  isExternal: true
+  name: GetStringValue(Enum)
+  nameWithType: CommonAttribute.GetStringValue(Enum)
+  fullName: Bve5_Parsing.CommonAttribute.GetStringValue(System.Enum)
+  spec.csharp:
+  - uid: Bve5_Parsing.CommonAttribute.GetStringValue(System.Enum)
+    name: GetStringValue
+    nameWithType: CommonAttribute.GetStringValue
+    fullName: Bve5_Parsing.CommonAttribute.GetStringValue
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Enum
+    name: Enum
+    nameWithType: Enum
+    fullName: System.Enum
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Bve5_Parsing.CommonAttribute.GetStringValue(System.Enum)
+    name: GetStringValue
+    nameWithType: CommonAttribute.GetStringValue
+    fullName: Bve5_Parsing.CommonAttribute.GetStringValue
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Enum
+    name: Enum
+    nameWithType: Enum
+    fullName: System.Enum
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Bve5_Parsing.CommonAttribute
+  commentId: T:Bve5_Parsing.CommonAttribute
+  parent: Bve5_Parsing
+  name: CommonAttribute
+  nameWithType: CommonAttribute
+  fullName: Bve5_Parsing.CommonAttribute
+- uid: Bve5_Parsing
+  commentId: N:Bve5_Parsing
+  name: Bve5_Parsing
+  nameWithType: Bve5_Parsing
+  fullName: Bve5_Parsing
+- uid: Bve5_Parsing.MapGrammar.MapGrammarParser.MapGrammarParserOption
+  commentId: T:Bve5_Parsing.MapGrammar.MapGrammarParser.MapGrammarParserOption
+  parent: Bve5_Parsing.MapGrammar
+  name: MapGrammarParser.MapGrammarParserOption
+  nameWithType: MapGrammarParser.MapGrammarParserOption
+  fullName: Bve5_Parsing.MapGrammar.MapGrammarParser.MapGrammarParserOption

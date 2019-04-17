@@ -1,0 +1,56 @@
+### YamlMime:ManagedReference
+items:
+- uid: Bve5_Parsing
+  commentId: N:Bve5_Parsing
+  id: Bve5_Parsing
+  children:
+  - Bve5_Parsing.CommonAttribute
+  - Bve5_Parsing.ParseError
+  - Bve5_Parsing.ParseErrorLevel
+  - Bve5_Parsing.ParseErrorListener
+  - Bve5_Parsing.StringValueAttribute
+  langs:
+  - csharp
+  - vb
+  name: Bve5_Parsing
+  nameWithType: Bve5_Parsing
+  fullName: Bve5_Parsing
+  type: Namespace
+  assemblies:
+  - Bve5_Parsing
+references:
+- uid: Bve5_Parsing.StringValueAttribute
+  commentId: T:Bve5_Parsing.StringValueAttribute
+  parent: Bve5_Parsing
+  name: StringValueAttribute
+  nameWithType: StringValueAttribute
+  fullName: Bve5_Parsing.StringValueAttribute
+- uid: Bve5_Parsing.CommonAttribute
+  commentId: T:Bve5_Parsing.CommonAttribute
+  parent: Bve5_Parsing
+  name: CommonAttribute
+  nameWithType: CommonAttribute
+  fullName: Bve5_Parsing.CommonAttribute
+- uid: Bve5_Parsing.ParseErrorListener
+  commentId: T:Bve5_Parsing.ParseErrorListener
+  parent: Bve5_Parsing
+  name: ParseErrorListener
+  nameWithType: ParseErrorListener
+  fullName: Bve5_Parsing.ParseErrorListener
+- uid: Bve5_Parsing.ParseErrorLevel
+  commentId: T:Bve5_Parsing.ParseErrorLevel
+  parent: Bve5_Parsing
+  name: ParseErrorLevel
+  nameWithType: ParseErrorLevel
+  fullName: Bve5_Parsing.ParseErrorLevel
+- uid: Bve5_Parsing.ParseError
+  commentId: T:Bve5_Parsing.ParseError
+  parent: Bve5_Parsing
+  name: ParseError
+  nameWithType: ParseError
+  fullName: Bve5_Parsing.ParseError
+- uid: Bve5_Parsing
+  commentId: N:Bve5_Parsing
+  name: Bve5_Parsing
+  nameWithType: Bve5_Parsing
+  fullName: Bve5_Parsing

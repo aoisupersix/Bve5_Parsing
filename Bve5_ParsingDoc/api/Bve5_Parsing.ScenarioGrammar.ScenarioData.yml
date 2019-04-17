@@ -1,0 +1,1267 @@
+### YamlMime:ManagedReference
+items:
+- uid: Bve5_Parsing.ScenarioGrammar.ScenarioData
+  commentId: T:Bve5_Parsing.ScenarioGrammar.ScenarioData
+  id: ScenarioData
+  parent: Bve5_Parsing.ScenarioGrammar
+  children:
+  - Bve5_Parsing.ScenarioGrammar.ScenarioData.#ctor
+  - Bve5_Parsing.ScenarioGrammar.ScenarioData.#ctor(System.String,System.String,System.Collections.Generic.IEnumerable{Bve5_Parsing.ScenarioGrammar.FilePath},System.Collections.Generic.IEnumerable{Bve5_Parsing.ScenarioGrammar.FilePath},System.String,System.String,System.String,System.String,System.String,System.String)
+  - Bve5_Parsing.ScenarioGrammar.ScenarioData.AddRoute(Bve5_Parsing.ScenarioGrammar.FilePath)
+  - Bve5_Parsing.ScenarioGrammar.ScenarioData.AddVehicle(Bve5_Parsing.ScenarioGrammar.FilePath)
+  - Bve5_Parsing.ScenarioGrammar.ScenarioData.Author
+  - Bve5_Parsing.ScenarioGrammar.ScenarioData.Comment
+  - Bve5_Parsing.ScenarioGrammar.ScenarioData.Encoding
+  - Bve5_Parsing.ScenarioGrammar.ScenarioData.Equals(System.Object)
+  - Bve5_Parsing.ScenarioGrammar.ScenarioData.GetHashCode
+  - Bve5_Parsing.ScenarioGrammar.ScenarioData.Image
+  - Bve5_Parsing.ScenarioGrammar.ScenarioData.Route
+  - Bve5_Parsing.ScenarioGrammar.ScenarioData.RouteTitle
+  - Bve5_Parsing.ScenarioGrammar.ScenarioData.Title
+  - Bve5_Parsing.ScenarioGrammar.ScenarioData.Vehicle
+  - Bve5_Parsing.ScenarioGrammar.ScenarioData.VehicleTitle
+  - Bve5_Parsing.ScenarioGrammar.ScenarioData.Version
+  langs:
+  - csharp
+  - vb
+  name: ScenarioData
+  nameWithType: ScenarioData
+  fullName: Bve5_Parsing.ScenarioGrammar.ScenarioData
+  type: Class
+  source:
+    remote:
+      path: Bve5_Parsing/ScenarioGrammar/ScenarioData.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: ScenarioData
+    path: ../Bve5_Parsing/ScenarioGrammar/ScenarioData.cs
+    startLine: 9
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar
+  summary: "\n構文解析の結果を格納するクラス\n"
+  example: []
+  syntax:
+    content: public class ScenarioData
+    content.vb: Public Class ScenarioData
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Bve5_Parsing.ScenarioGrammar.ScenarioData.Version
+  commentId: P:Bve5_Parsing.ScenarioGrammar.ScenarioData.Version
+  id: Version
+  parent: Bve5_Parsing.ScenarioGrammar.ScenarioData
+  langs:
+  - csharp
+  - vb
+  name: Version
+  nameWithType: ScenarioData.Version
+  fullName: Bve5_Parsing.ScenarioGrammar.ScenarioData.Version
+  type: Property
+  source:
+    remote:
+      path: Bve5_Parsing/ScenarioGrammar/ScenarioData.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Version
+    path: ../Bve5_Parsing/ScenarioGrammar/ScenarioData.cs
+    startLine: 18
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar
+  summary: "\nシナリオファイルのバージョン\n"
+  example: []
+  syntax:
+    content: public string Version { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Version As String
+  overload: Bve5_Parsing.ScenarioGrammar.ScenarioData.Version*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Bve5_Parsing.ScenarioGrammar.ScenarioData.Encoding
+  commentId: P:Bve5_Parsing.ScenarioGrammar.ScenarioData.Encoding
+  id: Encoding
+  parent: Bve5_Parsing.ScenarioGrammar.ScenarioData
+  langs:
+  - csharp
+  - vb
+  name: Encoding
+  nameWithType: ScenarioData.Encoding
+  fullName: Bve5_Parsing.ScenarioGrammar.ScenarioData.Encoding
+  type: Property
+  source:
+    remote:
+      path: Bve5_Parsing/ScenarioGrammar/ScenarioData.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Encoding
+    path: ../Bve5_Parsing/ScenarioGrammar/ScenarioData.cs
+    startLine: 23
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar
+  summary: "\nシナリオファイルのエンコーディング\n"
+  example: []
+  syntax:
+    content: public string Encoding { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Encoding As String
+  overload: Bve5_Parsing.ScenarioGrammar.ScenarioData.Encoding*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Bve5_Parsing.ScenarioGrammar.ScenarioData.Route
+  commentId: P:Bve5_Parsing.ScenarioGrammar.ScenarioData.Route
+  id: Route
+  parent: Bve5_Parsing.ScenarioGrammar.ScenarioData
+  langs:
+  - csharp
+  - vb
+  name: Route
+  nameWithType: ScenarioData.Route
+  fullName: Bve5_Parsing.ScenarioGrammar.ScenarioData.Route
+  type: Property
+  source:
+    remote:
+      path: Bve5_Parsing/ScenarioGrammar/ScenarioData.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Route
+    path: ../Bve5_Parsing/ScenarioGrammar/ScenarioData.cs
+    startLine: 28
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar
+  summary: "\nマップファイルの相対パス\n"
+  example: []
+  syntax:
+    content: public ReadOnlyCollection<FilePath> Route { get; }
+    parameters: []
+    return:
+      type: System.Collections.ObjectModel.ReadOnlyCollection{Bve5_Parsing.ScenarioGrammar.FilePath}
+    content.vb: Public ReadOnly Property Route As ReadOnlyCollection(Of FilePath)
+  overload: Bve5_Parsing.ScenarioGrammar.ScenarioData.Route*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Bve5_Parsing.ScenarioGrammar.ScenarioData.Vehicle
+  commentId: P:Bve5_Parsing.ScenarioGrammar.ScenarioData.Vehicle
+  id: Vehicle
+  parent: Bve5_Parsing.ScenarioGrammar.ScenarioData
+  langs:
+  - csharp
+  - vb
+  name: Vehicle
+  nameWithType: ScenarioData.Vehicle
+  fullName: Bve5_Parsing.ScenarioGrammar.ScenarioData.Vehicle
+  type: Property
+  source:
+    remote:
+      path: Bve5_Parsing/ScenarioGrammar/ScenarioData.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Vehicle
+    path: ../Bve5_Parsing/ScenarioGrammar/ScenarioData.cs
+    startLine: 33
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar
+  summary: "\n車両ファイルの相対パス\n"
+  example: []
+  syntax:
+    content: public ReadOnlyCollection<FilePath> Vehicle { get; }
+    parameters: []
+    return:
+      type: System.Collections.ObjectModel.ReadOnlyCollection{Bve5_Parsing.ScenarioGrammar.FilePath}
+    content.vb: Public ReadOnly Property Vehicle As ReadOnlyCollection(Of FilePath)
+  overload: Bve5_Parsing.ScenarioGrammar.ScenarioData.Vehicle*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Bve5_Parsing.ScenarioGrammar.ScenarioData.Image
+  commentId: P:Bve5_Parsing.ScenarioGrammar.ScenarioData.Image
+  id: Image
+  parent: Bve5_Parsing.ScenarioGrammar.ScenarioData
+  langs:
+  - csharp
+  - vb
+  name: Image
+  nameWithType: ScenarioData.Image
+  fullName: Bve5_Parsing.ScenarioGrammar.ScenarioData.Image
+  type: Property
+  source:
+    remote:
+      path: Bve5_Parsing/ScenarioGrammar/ScenarioData.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Image
+    path: ../Bve5_Parsing/ScenarioGrammar/ScenarioData.cs
+    startLine: 38
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar
+  summary: "\nサムネイル画像の相対パス\n"
+  example: []
+  syntax:
+    content: public string Image { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Image As String
+  overload: Bve5_Parsing.ScenarioGrammar.ScenarioData.Image*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Bve5_Parsing.ScenarioGrammar.ScenarioData.Title
+  commentId: P:Bve5_Parsing.ScenarioGrammar.ScenarioData.Title
+  id: Title
+  parent: Bve5_Parsing.ScenarioGrammar.ScenarioData
+  langs:
+  - csharp
+  - vb
+  name: Title
+  nameWithType: ScenarioData.Title
+  fullName: Bve5_Parsing.ScenarioGrammar.ScenarioData.Title
+  type: Property
+  source:
+    remote:
+      path: Bve5_Parsing/ScenarioGrammar/ScenarioData.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Title
+    path: ../Bve5_Parsing/ScenarioGrammar/ScenarioData.cs
+    startLine: 43
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar
+  summary: "\nシナリオタイトル\n"
+  example: []
+  syntax:
+    content: public string Title { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Title As String
+  overload: Bve5_Parsing.ScenarioGrammar.ScenarioData.Title*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Bve5_Parsing.ScenarioGrammar.ScenarioData.RouteTitle
+  commentId: P:Bve5_Parsing.ScenarioGrammar.ScenarioData.RouteTitle
+  id: RouteTitle
+  parent: Bve5_Parsing.ScenarioGrammar.ScenarioData
+  langs:
+  - csharp
+  - vb
+  name: RouteTitle
+  nameWithType: ScenarioData.RouteTitle
+  fullName: Bve5_Parsing.ScenarioGrammar.ScenarioData.RouteTitle
+  type: Property
+  source:
+    remote:
+      path: Bve5_Parsing/ScenarioGrammar/ScenarioData.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: RouteTitle
+    path: ../Bve5_Parsing/ScenarioGrammar/ScenarioData.cs
+    startLine: 48
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar
+  summary: "\n路線名\n"
+  example: []
+  syntax:
+    content: public string RouteTitle { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property RouteTitle As String
+  overload: Bve5_Parsing.ScenarioGrammar.ScenarioData.RouteTitle*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Bve5_Parsing.ScenarioGrammar.ScenarioData.VehicleTitle
+  commentId: P:Bve5_Parsing.ScenarioGrammar.ScenarioData.VehicleTitle
+  id: VehicleTitle
+  parent: Bve5_Parsing.ScenarioGrammar.ScenarioData
+  langs:
+  - csharp
+  - vb
+  name: VehicleTitle
+  nameWithType: ScenarioData.VehicleTitle
+  fullName: Bve5_Parsing.ScenarioGrammar.ScenarioData.VehicleTitle
+  type: Property
+  source:
+    remote:
+      path: Bve5_Parsing/ScenarioGrammar/ScenarioData.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: VehicleTitle
+    path: ../Bve5_Parsing/ScenarioGrammar/ScenarioData.cs
+    startLine: 53
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar
+  summary: "\n車両名\n"
+  example: []
+  syntax:
+    content: public string VehicleTitle { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property VehicleTitle As String
+  overload: Bve5_Parsing.ScenarioGrammar.ScenarioData.VehicleTitle*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Bve5_Parsing.ScenarioGrammar.ScenarioData.Author
+  commentId: P:Bve5_Parsing.ScenarioGrammar.ScenarioData.Author
+  id: Author
+  parent: Bve5_Parsing.ScenarioGrammar.ScenarioData
+  langs:
+  - csharp
+  - vb
+  name: Author
+  nameWithType: ScenarioData.Author
+  fullName: Bve5_Parsing.ScenarioGrammar.ScenarioData.Author
+  type: Property
+  source:
+    remote:
+      path: Bve5_Parsing/ScenarioGrammar/ScenarioData.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Author
+    path: ../Bve5_Parsing/ScenarioGrammar/ScenarioData.cs
+    startLine: 58
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar
+  summary: "\n路線と車両の作者\n"
+  example: []
+  syntax:
+    content: public string Author { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Author As String
+  overload: Bve5_Parsing.ScenarioGrammar.ScenarioData.Author*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Bve5_Parsing.ScenarioGrammar.ScenarioData.Comment
+  commentId: P:Bve5_Parsing.ScenarioGrammar.ScenarioData.Comment
+  id: Comment
+  parent: Bve5_Parsing.ScenarioGrammar.ScenarioData
+  langs:
+  - csharp
+  - vb
+  name: Comment
+  nameWithType: ScenarioData.Comment
+  fullName: Bve5_Parsing.ScenarioGrammar.ScenarioData.Comment
+  type: Property
+  source:
+    remote:
+      path: Bve5_Parsing/ScenarioGrammar/ScenarioData.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Comment
+    path: ../Bve5_Parsing/ScenarioGrammar/ScenarioData.cs
+    startLine: 63
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar
+  summary: "\nシナリオの説明\n"
+  example: []
+  syntax:
+    content: public string Comment { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Comment As String
+  overload: Bve5_Parsing.ScenarioGrammar.ScenarioData.Comment*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Bve5_Parsing.ScenarioGrammar.ScenarioData.AddRoute(Bve5_Parsing.ScenarioGrammar.FilePath)
+  commentId: M:Bve5_Parsing.ScenarioGrammar.ScenarioData.AddRoute(Bve5_Parsing.ScenarioGrammar.FilePath)
+  id: AddRoute(Bve5_Parsing.ScenarioGrammar.FilePath)
+  parent: Bve5_Parsing.ScenarioGrammar.ScenarioData
+  langs:
+  - csharp
+  - vb
+  name: AddRoute(FilePath)
+  nameWithType: ScenarioData.AddRoute(FilePath)
+  fullName: Bve5_Parsing.ScenarioGrammar.ScenarioData.AddRoute(Bve5_Parsing.ScenarioGrammar.FilePath)
+  type: Method
+  source:
+    remote:
+      path: Bve5_Parsing/ScenarioGrammar/ScenarioData.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: AddRoute
+    path: ../Bve5_Parsing/ScenarioGrammar/ScenarioData.cs
+    startLine: 70
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar
+  summary: "\n路線ファイルのパスを追加します。\n"
+  example: []
+  syntax:
+    content: protected void AddRoute(FilePath filePath)
+    parameters:
+    - id: filePath
+      type: Bve5_Parsing.ScenarioGrammar.FilePath
+      description: ''
+    content.vb: Protected Sub AddRoute(filePath As FilePath)
+  overload: Bve5_Parsing.ScenarioGrammar.ScenarioData.AddRoute*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: Bve5_Parsing.ScenarioGrammar.ScenarioData.AddVehicle(Bve5_Parsing.ScenarioGrammar.FilePath)
+  commentId: M:Bve5_Parsing.ScenarioGrammar.ScenarioData.AddVehicle(Bve5_Parsing.ScenarioGrammar.FilePath)
+  id: AddVehicle(Bve5_Parsing.ScenarioGrammar.FilePath)
+  parent: Bve5_Parsing.ScenarioGrammar.ScenarioData
+  langs:
+  - csharp
+  - vb
+  name: AddVehicle(FilePath)
+  nameWithType: ScenarioData.AddVehicle(FilePath)
+  fullName: Bve5_Parsing.ScenarioGrammar.ScenarioData.AddVehicle(Bve5_Parsing.ScenarioGrammar.FilePath)
+  type: Method
+  source:
+    remote:
+      path: Bve5_Parsing/ScenarioGrammar/ScenarioData.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: AddVehicle
+    path: ../Bve5_Parsing/ScenarioGrammar/ScenarioData.cs
+    startLine: 79
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar
+  summary: "\n車両ファイルのパスを追加します。\n"
+  example: []
+  syntax:
+    content: protected void AddVehicle(FilePath filePath)
+    parameters:
+    - id: filePath
+      type: Bve5_Parsing.ScenarioGrammar.FilePath
+      description: ''
+    content.vb: Protected Sub AddVehicle(filePath As FilePath)
+  overload: Bve5_Parsing.ScenarioGrammar.ScenarioData.AddVehicle*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: Bve5_Parsing.ScenarioGrammar.ScenarioData.#ctor
+  commentId: M:Bve5_Parsing.ScenarioGrammar.ScenarioData.#ctor
+  id: '#ctor'
+  parent: Bve5_Parsing.ScenarioGrammar.ScenarioData
+  langs:
+  - csharp
+  - vb
+  name: ScenarioData()
+  nameWithType: ScenarioData.ScenarioData()
+  fullName: Bve5_Parsing.ScenarioGrammar.ScenarioData.ScenarioData()
+  type: Constructor
+  source:
+    remote:
+      path: Bve5_Parsing/ScenarioGrammar/ScenarioData.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: .ctor
+    path: ../Bve5_Parsing/ScenarioGrammar/ScenarioData.cs
+    startLine: 87
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar
+  summary: "\n新しいインスタンスを生成します。\n"
+  example: []
+  syntax:
+    content: public ScenarioData()
+    content.vb: Public Sub New
+  overload: Bve5_Parsing.ScenarioGrammar.ScenarioData.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Bve5_Parsing.ScenarioGrammar.ScenarioData.#ctor(System.String,System.String,System.Collections.Generic.IEnumerable{Bve5_Parsing.ScenarioGrammar.FilePath},System.Collections.Generic.IEnumerable{Bve5_Parsing.ScenarioGrammar.FilePath},System.String,System.String,System.String,System.String,System.String,System.String)
+  commentId: M:Bve5_Parsing.ScenarioGrammar.ScenarioData.#ctor(System.String,System.String,System.Collections.Generic.IEnumerable{Bve5_Parsing.ScenarioGrammar.FilePath},System.Collections.Generic.IEnumerable{Bve5_Parsing.ScenarioGrammar.FilePath},System.String,System.String,System.String,System.String,System.String,System.String)
+  id: '#ctor(System.String,System.String,System.Collections.Generic.IEnumerable{Bve5_Parsing.ScenarioGrammar.FilePath},System.Collections.Generic.IEnumerable{Bve5_Parsing.ScenarioGrammar.FilePath},System.String,System.String,System.String,System.String,System.String,System.String)'
+  parent: Bve5_Parsing.ScenarioGrammar.ScenarioData
+  langs:
+  - csharp
+  - vb
+  name: ScenarioData(String, String, IEnumerable<FilePath>, IEnumerable<FilePath>, String, String, String, String, String, String)
+  nameWithType: ScenarioData.ScenarioData(String, String, IEnumerable<FilePath>, IEnumerable<FilePath>, String, String, String, String, String, String)
+  fullName: Bve5_Parsing.ScenarioGrammar.ScenarioData.ScenarioData(System.String, System.String, System.Collections.Generic.IEnumerable<Bve5_Parsing.ScenarioGrammar.FilePath>, System.Collections.Generic.IEnumerable<Bve5_Parsing.ScenarioGrammar.FilePath>, System.String, System.String, System.String, System.String, System.String, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: Bve5_Parsing/ScenarioGrammar/ScenarioData.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: .ctor
+    path: ../Bve5_Parsing/ScenarioGrammar/ScenarioData.cs
+    startLine: 108
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar
+  summary: "\n新しいインスタンスを生成します。\n"
+  example: []
+  syntax:
+    content: public ScenarioData(string version = null, string encoding = null, IEnumerable<FilePath> route = null, IEnumerable<FilePath> vehicle = null, string image = null, string title = null, string routeTitle = null, string vehicleTitle = null, string author = null, string comment = null)
+    parameters:
+    - id: version
+      type: System.String
+      description: ''
+    - id: encoding
+      type: System.String
+      description: ''
+    - id: route
+      type: System.Collections.Generic.IEnumerable{Bve5_Parsing.ScenarioGrammar.FilePath}
+      description: ''
+    - id: vehicle
+      type: System.Collections.Generic.IEnumerable{Bve5_Parsing.ScenarioGrammar.FilePath}
+      description: ''
+    - id: image
+      type: System.String
+      description: ''
+    - id: title
+      type: System.String
+      description: ''
+    - id: routeTitle
+      type: System.String
+      description: ''
+    - id: vehicleTitle
+      type: System.String
+      description: ''
+    - id: author
+      type: System.String
+      description: ''
+    - id: comment
+      type: System.String
+      description: ''
+    content.vb: Public Sub New(version As String = Nothing, encoding As String = Nothing, route As IEnumerable(Of FilePath) = Nothing, vehicle As IEnumerable(Of FilePath) = Nothing, image As String = Nothing, title As String = Nothing, routeTitle As String = Nothing, vehicleTitle As String = Nothing, author As String = Nothing, comment As String = Nothing)
+  overload: Bve5_Parsing.ScenarioGrammar.ScenarioData.#ctor*
+  nameWithType.vb: ScenarioData.ScenarioData(String, String, IEnumerable(Of FilePath), IEnumerable(Of FilePath), String, String, String, String, String, String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Bve5_Parsing.ScenarioGrammar.ScenarioData.ScenarioData(System.String, System.String, System.Collections.Generic.IEnumerable(Of Bve5_Parsing.ScenarioGrammar.FilePath), System.Collections.Generic.IEnumerable(Of Bve5_Parsing.ScenarioGrammar.FilePath), System.String, System.String, System.String, System.String, System.String, System.String)
+  name.vb: ScenarioData(String, String, IEnumerable(Of FilePath), IEnumerable(Of FilePath), String, String, String, String, String, String)
+- uid: Bve5_Parsing.ScenarioGrammar.ScenarioData.Equals(System.Object)
+  commentId: M:Bve5_Parsing.ScenarioGrammar.ScenarioData.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: Bve5_Parsing.ScenarioGrammar.ScenarioData
+  langs:
+  - csharp
+  - vb
+  name: Equals(Object)
+  nameWithType: ScenarioData.Equals(Object)
+  fullName: Bve5_Parsing.ScenarioGrammar.ScenarioData.Equals(System.Object)
+  type: Method
+  source:
+    remote:
+      path: Bve5_Parsing/ScenarioGrammar/ScenarioData.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Equals
+    path: ../Bve5_Parsing/ScenarioGrammar/ScenarioData.cs
+    startLine: 149
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar
+  summary: "\n等価チェック\n"
+  example: []
+  syntax:
+    content: public override bool Equals(object obj)
+    parameters:
+    - id: obj
+      type: System.Object
+      description: ''
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: System.Object.Equals(System.Object)
+  overload: Bve5_Parsing.ScenarioGrammar.ScenarioData.Equals*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Bve5_Parsing.ScenarioGrammar.ScenarioData.GetHashCode
+  commentId: M:Bve5_Parsing.ScenarioGrammar.ScenarioData.GetHashCode
+  id: GetHashCode
+  parent: Bve5_Parsing.ScenarioGrammar.ScenarioData
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: ScenarioData.GetHashCode()
+  fullName: Bve5_Parsing.ScenarioGrammar.ScenarioData.GetHashCode()
+  type: Method
+  source:
+    remote:
+      path: Bve5_Parsing/ScenarioGrammar/ScenarioData.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: GetHashCode
+    path: ../Bve5_Parsing/ScenarioGrammar/ScenarioData.cs
+    startLine: 170
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar
+  syntax:
+    content: public override int GetHashCode()
+    return:
+      type: System.Int32
+    content.vb: Public Overrides Function GetHashCode As Integer
+  overridden: System.Object.GetHashCode
+  overload: Bve5_Parsing.ScenarioGrammar.ScenarioData.GetHashCode*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: Bve5_Parsing.ScenarioGrammar
+  commentId: N:Bve5_Parsing.ScenarioGrammar
+  name: Bve5_Parsing.ScenarioGrammar
+  nameWithType: Bve5_Parsing.ScenarioGrammar
+  fullName: Bve5_Parsing.ScenarioGrammar
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Bve5_Parsing.ScenarioGrammar.ScenarioData.Version*
+  commentId: Overload:Bve5_Parsing.ScenarioGrammar.ScenarioData.Version
+  name: Version
+  nameWithType: ScenarioData.Version
+  fullName: Bve5_Parsing.ScenarioGrammar.ScenarioData.Version
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Bve5_Parsing.ScenarioGrammar.ScenarioData.Encoding*
+  commentId: Overload:Bve5_Parsing.ScenarioGrammar.ScenarioData.Encoding
+  name: Encoding
+  nameWithType: ScenarioData.Encoding
+  fullName: Bve5_Parsing.ScenarioGrammar.ScenarioData.Encoding
+- uid: Bve5_Parsing.ScenarioGrammar.ScenarioData.Route*
+  commentId: Overload:Bve5_Parsing.ScenarioGrammar.ScenarioData.Route
+  name: Route
+  nameWithType: ScenarioData.Route
+  fullName: Bve5_Parsing.ScenarioGrammar.ScenarioData.Route
+- uid: System.Collections.ObjectModel.ReadOnlyCollection{Bve5_Parsing.ScenarioGrammar.FilePath}
+  commentId: T:System.Collections.ObjectModel.ReadOnlyCollection{Bve5_Parsing.ScenarioGrammar.FilePath}
+  parent: System.Collections.ObjectModel
+  definition: System.Collections.ObjectModel.ReadOnlyCollection`1
+  name: ReadOnlyCollection<FilePath>
+  nameWithType: ReadOnlyCollection<FilePath>
+  fullName: System.Collections.ObjectModel.ReadOnlyCollection<Bve5_Parsing.ScenarioGrammar.FilePath>
+  nameWithType.vb: ReadOnlyCollection(Of FilePath)
+  fullName.vb: System.Collections.ObjectModel.ReadOnlyCollection(Of Bve5_Parsing.ScenarioGrammar.FilePath)
+  name.vb: ReadOnlyCollection(Of FilePath)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.ReadOnlyCollection`1
+    name: ReadOnlyCollection
+    nameWithType: ReadOnlyCollection
+    fullName: System.Collections.ObjectModel.ReadOnlyCollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Bve5_Parsing.ScenarioGrammar.FilePath
+    name: FilePath
+    nameWithType: FilePath
+    fullName: Bve5_Parsing.ScenarioGrammar.FilePath
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.ObjectModel.ReadOnlyCollection`1
+    name: ReadOnlyCollection
+    nameWithType: ReadOnlyCollection
+    fullName: System.Collections.ObjectModel.ReadOnlyCollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Bve5_Parsing.ScenarioGrammar.FilePath
+    name: FilePath
+    nameWithType: FilePath
+    fullName: Bve5_Parsing.ScenarioGrammar.FilePath
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.ObjectModel.ReadOnlyCollection`1
+  commentId: T:System.Collections.ObjectModel.ReadOnlyCollection`1
+  isExternal: true
+  name: ReadOnlyCollection<T>
+  nameWithType: ReadOnlyCollection<T>
+  fullName: System.Collections.ObjectModel.ReadOnlyCollection<T>
+  nameWithType.vb: ReadOnlyCollection(Of T)
+  fullName.vb: System.Collections.ObjectModel.ReadOnlyCollection(Of T)
+  name.vb: ReadOnlyCollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.ReadOnlyCollection`1
+    name: ReadOnlyCollection
+    nameWithType: ReadOnlyCollection
+    fullName: System.Collections.ObjectModel.ReadOnlyCollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.ObjectModel.ReadOnlyCollection`1
+    name: ReadOnlyCollection
+    nameWithType: ReadOnlyCollection
+    fullName: System.Collections.ObjectModel.ReadOnlyCollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.ObjectModel
+  commentId: N:System.Collections.ObjectModel
+  isExternal: true
+  name: System.Collections.ObjectModel
+  nameWithType: System.Collections.ObjectModel
+  fullName: System.Collections.ObjectModel
+- uid: Bve5_Parsing.ScenarioGrammar.ScenarioData.Vehicle*
+  commentId: Overload:Bve5_Parsing.ScenarioGrammar.ScenarioData.Vehicle
+  name: Vehicle
+  nameWithType: ScenarioData.Vehicle
+  fullName: Bve5_Parsing.ScenarioGrammar.ScenarioData.Vehicle
+- uid: Bve5_Parsing.ScenarioGrammar.ScenarioData.Image*
+  commentId: Overload:Bve5_Parsing.ScenarioGrammar.ScenarioData.Image
+  name: Image
+  nameWithType: ScenarioData.Image
+  fullName: Bve5_Parsing.ScenarioGrammar.ScenarioData.Image
+- uid: Bve5_Parsing.ScenarioGrammar.ScenarioData.Title*
+  commentId: Overload:Bve5_Parsing.ScenarioGrammar.ScenarioData.Title
+  name: Title
+  nameWithType: ScenarioData.Title
+  fullName: Bve5_Parsing.ScenarioGrammar.ScenarioData.Title
+- uid: Bve5_Parsing.ScenarioGrammar.ScenarioData.RouteTitle*
+  commentId: Overload:Bve5_Parsing.ScenarioGrammar.ScenarioData.RouteTitle
+  name: RouteTitle
+  nameWithType: ScenarioData.RouteTitle
+  fullName: Bve5_Parsing.ScenarioGrammar.ScenarioData.RouteTitle
+- uid: Bve5_Parsing.ScenarioGrammar.ScenarioData.VehicleTitle*
+  commentId: Overload:Bve5_Parsing.ScenarioGrammar.ScenarioData.VehicleTitle
+  name: VehicleTitle
+  nameWithType: ScenarioData.VehicleTitle
+  fullName: Bve5_Parsing.ScenarioGrammar.ScenarioData.VehicleTitle
+- uid: Bve5_Parsing.ScenarioGrammar.ScenarioData.Author*
+  commentId: Overload:Bve5_Parsing.ScenarioGrammar.ScenarioData.Author
+  name: Author
+  nameWithType: ScenarioData.Author
+  fullName: Bve5_Parsing.ScenarioGrammar.ScenarioData.Author
+- uid: Bve5_Parsing.ScenarioGrammar.ScenarioData.Comment*
+  commentId: Overload:Bve5_Parsing.ScenarioGrammar.ScenarioData.Comment
+  name: Comment
+  nameWithType: ScenarioData.Comment
+  fullName: Bve5_Parsing.ScenarioGrammar.ScenarioData.Comment
+- uid: Bve5_Parsing.ScenarioGrammar.ScenarioData.AddRoute*
+  commentId: Overload:Bve5_Parsing.ScenarioGrammar.ScenarioData.AddRoute
+  name: AddRoute
+  nameWithType: ScenarioData.AddRoute
+  fullName: Bve5_Parsing.ScenarioGrammar.ScenarioData.AddRoute
+- uid: Bve5_Parsing.ScenarioGrammar.FilePath
+  commentId: T:Bve5_Parsing.ScenarioGrammar.FilePath
+  parent: Bve5_Parsing.ScenarioGrammar
+  name: FilePath
+  nameWithType: FilePath
+  fullName: Bve5_Parsing.ScenarioGrammar.FilePath
+- uid: Bve5_Parsing.ScenarioGrammar.ScenarioData.AddVehicle*
+  commentId: Overload:Bve5_Parsing.ScenarioGrammar.ScenarioData.AddVehicle
+  name: AddVehicle
+  nameWithType: ScenarioData.AddVehicle
+  fullName: Bve5_Parsing.ScenarioGrammar.ScenarioData.AddVehicle
+- uid: Bve5_Parsing.ScenarioGrammar.ScenarioData.#ctor*
+  commentId: Overload:Bve5_Parsing.ScenarioGrammar.ScenarioData.#ctor
+  name: ScenarioData
+  nameWithType: ScenarioData.ScenarioData
+  fullName: Bve5_Parsing.ScenarioGrammar.ScenarioData.ScenarioData
+- uid: System.Collections.Generic.IEnumerable{Bve5_Parsing.ScenarioGrammar.FilePath}
+  commentId: T:System.Collections.Generic.IEnumerable{Bve5_Parsing.ScenarioGrammar.FilePath}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<FilePath>
+  nameWithType: IEnumerable<FilePath>
+  fullName: System.Collections.Generic.IEnumerable<Bve5_Parsing.ScenarioGrammar.FilePath>
+  nameWithType.vb: IEnumerable(Of FilePath)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Bve5_Parsing.ScenarioGrammar.FilePath)
+  name.vb: IEnumerable(Of FilePath)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Bve5_Parsing.ScenarioGrammar.FilePath
+    name: FilePath
+    nameWithType: FilePath
+    fullName: Bve5_Parsing.ScenarioGrammar.FilePath
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Bve5_Parsing.ScenarioGrammar.FilePath
+    name: FilePath
+    nameWithType: FilePath
+    fullName: Bve5_Parsing.ScenarioGrammar.FilePath
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Bve5_Parsing.ScenarioGrammar.ScenarioData.Equals*
+  commentId: Overload:Bve5_Parsing.ScenarioGrammar.ScenarioData.Equals
+  name: Equals
+  nameWithType: ScenarioData.Equals
+  fullName: Bve5_Parsing.ScenarioGrammar.ScenarioData.Equals
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Bve5_Parsing.ScenarioGrammar.ScenarioData.GetHashCode*
+  commentId: Overload:Bve5_Parsing.ScenarioGrammar.ScenarioData.GetHashCode
+  name: GetHashCode
+  nameWithType: ScenarioData.GetHashCode
+  fullName: Bve5_Parsing.ScenarioGrammar.ScenarioData.GetHashCode
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32

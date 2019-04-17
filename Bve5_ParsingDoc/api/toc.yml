@@ -1,0 +1,648 @@
+### YamlMime:TableOfContent
+- uid: Bve5_Parsing
+  name: Bve5_Parsing
+  items:
+  - uid: Bve5_Parsing.CommonAttribute
+    name: CommonAttribute
+  - uid: Bve5_Parsing.ParseError
+    name: ParseError
+  - uid: Bve5_Parsing.ParseErrorLevel
+    name: ParseErrorLevel
+  - uid: Bve5_Parsing.ParseErrorListener
+    name: ParseErrorListener
+  - uid: Bve5_Parsing.StringValueAttribute
+    name: StringValueAttribute
+- uid: Bve5_Parsing.MapGrammar
+  name: Bve5_Parsing.MapGrammar
+  items:
+  - uid: Bve5_Parsing.MapGrammar.AstVisitor`1
+    name: AstVisitor<T>
+    name.vb: AstVisitor(Of T)
+  - uid: Bve5_Parsing.MapGrammar.EvaluateMapGrammarVisitor
+    name: EvaluateMapGrammarVisitor
+  - uid: Bve5_Parsing.MapGrammar.EvaluateMapGrammarVisitorWithInclude
+    name: EvaluateMapGrammarVisitorWithInclude
+  - uid: Bve5_Parsing.MapGrammar.MapElementName
+    name: MapElementName
+  - uid: Bve5_Parsing.MapGrammar.MapFunctionName
+    name: MapFunctionName
+  - uid: Bve5_Parsing.MapGrammar.MapGrammarParser
+    name: MapGrammarParser
+  - uid: Bve5_Parsing.MapGrammar.MapGrammarParser.MapGrammarParserOption
+    name: MapGrammarParser.MapGrammarParserOption
+  - uid: Bve5_Parsing.MapGrammar.MapSubElementName
+    name: MapSubElementName
+  - uid: Bve5_Parsing.MapGrammar.VariableStore
+    name: VariableStore
+- uid: Bve5_Parsing.MapGrammar.AstNodes
+  name: Bve5_Parsing.MapGrammar.AstNodes
+  items:
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.AbsNode
+    name: AbsNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.AdditionNode
+    name: AdditionNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.AdhesionChangeNode
+    name: AdhesionChangeNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.Atan2Node
+    name: Atan2Node
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.BackgroundChangeNode
+    name: BackgroundChangeNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.BeaconPutNode
+    name: BeaconPutNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.BuildAstVisitor
+    name: BuildAstVisitor
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.CabilluminanceInterpolateNode
+    name: CabilluminanceInterpolateNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.CabilluminanceSetNode
+    name: CabilluminanceSetNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.CeilNode
+    name: CeilNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.CosNode
+    name: CosNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.CurveBegincircularNode
+    name: CurveBegincircularNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.CurveBeginNode
+    name: CurveBeginNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.CurveBegintransitionNode
+    name: CurveBegintransitionNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.CurveChangeNode
+    name: CurveChangeNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.CurveEndNode
+    name: CurveEndNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.CurveGaugeNode
+    name: CurveGaugeNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.CurveInterpolateNode
+    name: CurveInterpolateNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.CurveSetcenterNode
+    name: CurveSetcenterNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.CurveSetfunctionNode
+    name: CurveSetfunctionNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.CurveSetgaugeNode
+    name: CurveSetgaugeNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.DistanceNode
+    name: DistanceNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.DistanceVariableNode
+    name: DistanceVariableNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.DivisionNode
+    name: DivisionNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.DrawdistanceChangeNode
+    name: DrawdistanceChangeNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.ExpNode
+    name: ExpNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.FlangenoiseChangeNode
+    name: FlangenoiseChangeNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.FloorNode
+    name: FloorNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.FogInterpolateNode
+    name: FogInterpolateNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.FogSetNode
+    name: FogSetNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.GradientBeginconstNode
+    name: GradientBeginconstNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.GradientBeginNode
+    name: GradientBeginNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.GradientBegintransitionNode
+    name: GradientBegintransitionNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.GradientEndNode
+    name: GradientEndNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.GradientInterpolateNode
+    name: GradientInterpolateNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.IncludeNode
+    name: IncludeNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.InfixExpressionNode
+    name: InfixExpressionNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.IrregularityChangeNode
+    name: IrregularityChangeNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.JointnoisePlayNode
+    name: JointnoisePlayNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.LegacyCurveNode
+    name: LegacyCurveNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.LegacyFogNode
+    name: LegacyFogNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.LegacyPitchNode
+    name: LegacyPitchNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.LegacyTurnNode
+    name: LegacyTurnNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.LightAmbientNode
+    name: LightAmbientNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.LightDiffuseNode
+    name: LightDiffuseNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.LoadListNode
+    name: LoadListNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.LogNode
+    name: LogNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes
+    name: MapGrammarAstNodes
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.ModuloNode
+    name: ModuloNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.MultiplicationNode
+    name: MultiplicationNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.NumberNode
+    name: NumberNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.PowNode
+    name: PowNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.PretrainPassNode
+    name: PretrainPassNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.RandNode
+    name: RandNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.RepeaterBegin0Node
+    name: RepeaterBegin0Node
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.RepeaterBeginNode
+    name: RepeaterBeginNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.RepeaterEndNode
+    name: RepeaterEndNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.RollingnoiseChangeNode
+    name: RollingnoiseChangeNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.RootNode
+    name: RootNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.SectionBeginnewNode
+    name: SectionBeginnewNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.SectionBeginNode
+    name: SectionBeginNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.SectionSetspeedlimitNode
+    name: SectionSetspeedlimitNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.SignalLoadNode
+    name: SignalLoadNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.SignalPutNode
+    name: SignalPutNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.SignalSpeedlimitNode
+    name: SignalSpeedlimitNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.SingleArgFunctionNode
+    name: SingleArgFunctionNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.SinNode
+    name: SinNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.Sound3dLoadNode
+    name: Sound3dLoadNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.Sound3dPutNode
+    name: Sound3dPutNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.SoundLoadNode
+    name: SoundLoadNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.SoundPlayNode
+    name: SoundPlayNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.SpeedlimitBeginNode
+    name: SpeedlimitBeginNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.SpeedlimitEndNode
+    name: SpeedlimitEndNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.SqrtNode
+    name: SqrtNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.StationLoadNode
+    name: StationLoadNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.StationPutNode
+    name: StationPutNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.StringNode
+    name: StringNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.StructureLoadNode
+    name: StructureLoadNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.StructurePut0Node
+    name: StructurePut0Node
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.StructurePutbetweenNode
+    name: StructurePutbetweenNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.StructurePutNode
+    name: StructurePutNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.SubtractionNode
+    name: SubtractionNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.Syntax1Node
+    name: Syntax1Node
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.Syntax2Node
+    name: Syntax2Node
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.Syntax3Node
+    name: Syntax3Node
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode
+    name: SyntaxNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.TrackCantBeginNode
+    name: TrackCantBeginNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.TrackCantBegintransitionNode
+    name: TrackCantBegintransitionNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.TrackCantEndNode
+    name: TrackCantEndNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.TrackCantInterpolateNode
+    name: TrackCantInterpolateNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.TrackCantNode
+    name: TrackCantNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.TrackCantSetcenterNode
+    name: TrackCantSetcenterNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.TrackCantSetfunctionNode
+    name: TrackCantSetfunctionNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.TrackCantSetgaugeNode
+    name: TrackCantSetgaugeNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.TrackGaugeNode
+    name: TrackGaugeNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.TrackPositionNode
+    name: TrackPositionNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.TrackXInterpolateNode
+    name: TrackXInterpolateNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.TrackYInterpolateNode
+    name: TrackYInterpolateNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.TrainAddNode
+    name: TrainAddNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.TrainEnableNode
+    name: TrainEnableNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.TrainLoadNode
+    name: TrainLoadNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.TrainStopNode
+    name: TrainStopNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.UnaryNode
+    name: UnaryNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.VarAssignNode
+    name: VarAssignNode
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.VarNode
+    name: VarNode
+- uid: Bve5_Parsing.MapGrammar.Attributes
+  name: Bve5_Parsing.MapGrammar.Attributes
+  items:
+  - uid: Bve5_Parsing.MapGrammar.Attributes.ArgumentAttribute
+    name: ArgumentAttribute
+  - uid: Bve5_Parsing.MapGrammar.Attributes.DeprecatedAttribute
+    name: DeprecatedAttribute
+- uid: Bve5_Parsing.MapGrammar.EvaluateData
+  name: Bve5_Parsing.MapGrammar.EvaluateData
+  items:
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.AdhesionChangeStatement
+    name: AdhesionChangeStatement
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.BackgroundChangeStatement
+    name: BackgroundChangeStatement
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.BeaconPutStatement
+    name: BeaconPutStatement
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.CabilluminanceInterpolateStatement
+    name: CabilluminanceInterpolateStatement
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.CabilluminanceSetStatement
+    name: CabilluminanceSetStatement
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.CurveBegincircularStatement
+    name: CurveBegincircularStatement
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.CurveBeginStatement
+    name: CurveBeginStatement
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.CurveBegintransitionStatement
+    name: CurveBegintransitionStatement
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.CurveChangeStatement
+    name: CurveChangeStatement
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.CurveEndStatement
+    name: CurveEndStatement
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.CurveGaugeStatement
+    name: CurveGaugeStatement
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.CurveInterpolateStatement
+    name: CurveInterpolateStatement
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.CurveSetcenterStatement
+    name: CurveSetcenterStatement
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.CurveSetfunctionStatement
+    name: CurveSetfunctionStatement
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.CurveSetgaugeStatement
+    name: CurveSetgaugeStatement
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.DrawdistanceChangeStatement
+    name: DrawdistanceChangeStatement
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.FlangenoiseChangeStatement
+    name: FlangenoiseChangeStatement
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.FogInterpolateStatement
+    name: FogInterpolateStatement
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.FogSetStatement
+    name: FogSetStatement
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.GradientBeginconstStatement
+    name: GradientBeginconstStatement
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.GradientBeginStatement
+    name: GradientBeginStatement
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.GradientBegintransitionStatement
+    name: GradientBegintransitionStatement
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.GradientEndStatement
+    name: GradientEndStatement
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.GradientInterpolateStatement
+    name: GradientInterpolateStatement
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.IrregularityChangeStatement
+    name: IrregularityChangeStatement
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.JointnoisePlayStatement
+    name: JointnoisePlayStatement
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.LegacyCurveStatement
+    name: LegacyCurveStatement
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.LegacyFogStatement
+    name: LegacyFogStatement
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.LegacyPitchStatement
+    name: LegacyPitchStatement
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.LegacyTurnStatement
+    name: LegacyTurnStatement
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.LightAmbientStatement
+    name: LightAmbientStatement
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.LightDiffuseStatement
+    name: LightDiffuseStatement
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.MapData
+    name: MapData
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.PretrainPassStatement
+    name: PretrainPassStatement
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.RepeaterBegin0Statement
+    name: RepeaterBegin0Statement
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.RepeaterBeginStatement
+    name: RepeaterBeginStatement
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.RepeaterEndStatement
+    name: RepeaterEndStatement
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.RollingnoiseChangeStatement
+    name: RollingnoiseChangeStatement
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.SectionBeginnewStatement
+    name: SectionBeginnewStatement
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.SectionBeginStatement
+    name: SectionBeginStatement
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.SectionSetspeedlimitStatement
+    name: SectionSetspeedlimitStatement
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.SignalLoadStatement
+    name: SignalLoadStatement
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.SignalPutStatement
+    name: SignalPutStatement
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.SignalSpeedlimitStatement
+    name: SignalSpeedlimitStatement
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.Sound3dLoadStatement
+    name: Sound3dLoadStatement
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.Sound3dPutStatement
+    name: Sound3dPutStatement
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.SoundLoadStatement
+    name: SoundLoadStatement
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.SoundPlayStatement
+    name: SoundPlayStatement
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.SpeedlimitBeginStatement
+    name: SpeedlimitBeginStatement
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.SpeedlimitEndStatement
+    name: SpeedlimitEndStatement
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.Statement
+    name: Statement
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.StationLoadStatement
+    name: StationLoadStatement
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.StationPutStatement
+    name: StationPutStatement
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.StructureLoadStatement
+    name: StructureLoadStatement
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.StructurePut0Statement
+    name: StructurePut0Statement
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.StructurePutbetweenStatement
+    name: StructurePutbetweenStatement
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.StructurePutStatement
+    name: StructurePutStatement
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.SyntaxData
+    name: SyntaxData
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.TrackCantBeginStatement
+    name: TrackCantBeginStatement
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.TrackCantBegintransitionStatement
+    name: TrackCantBegintransitionStatement
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.TrackCantEndStatement
+    name: TrackCantEndStatement
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.TrackCantInterpolateStatement
+    name: TrackCantInterpolateStatement
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.TrackCantSetcenterStatement
+    name: TrackCantSetcenterStatement
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.TrackCantSetfunctionStatement
+    name: TrackCantSetfunctionStatement
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.TrackCantSetgaugeStatement
+    name: TrackCantSetgaugeStatement
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.TrackCantStatement
+    name: TrackCantStatement
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.TrackGaugeStatement
+    name: TrackGaugeStatement
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.TrackPositionStatement
+    name: TrackPositionStatement
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.TrackXInterpolateStatement
+    name: TrackXInterpolateStatement
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.TrackYInterpolateStatement
+    name: TrackYInterpolateStatement
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.TrainAddStatement
+    name: TrainAddStatement
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.TrainEnableStatement
+    name: TrainEnableStatement
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.TrainLoadStatement
+    name: TrainLoadStatement
+  - uid: Bve5_Parsing.MapGrammar.EvaluateData.TrainStopStatement
+    name: TrainStopStatement
+- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  name: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  items:
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.IMapGrammarParserListener
+    name: IMapGrammarParserListener
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.IMapGrammarParserVisitor`1
+    name: IMapGrammarParserVisitor<Result>
+    name.vb: IMapGrammarParserVisitor(Of Result)
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+    name: MapGrammarLexer
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser
+    name: MapGrammarParser
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.AbsExprContext
+    name: MapGrammarParser.AbsExprContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.AdhesionContext
+    name: MapGrammarParser.AdhesionContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.AdhesionStateContext
+    name: MapGrammarParser.AdhesionStateContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Atan2ExprContext
+    name: MapGrammarParser.Atan2ExprContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.BackgroundContext
+    name: MapGrammarParser.BackgroundContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.BackgroundStateContext
+    name: MapGrammarParser.BackgroundStateContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.BeaconContext
+    name: MapGrammarParser.BeaconContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.BeaconStateContext
+    name: MapGrammarParser.BeaconStateContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CabilluminanceContext
+    name: MapGrammarParser.CabilluminanceContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CabilluminanceStateContext
+    name: MapGrammarParser.CabilluminanceStateContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CeilExprContext
+    name: MapGrammarParser.CeilExprContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext
+    name: MapGrammarParser.CosExprContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext
+    name: MapGrammarParser.CurveContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveStateContext
+    name: MapGrammarParser.CurveStateContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DistanceContext
+    name: MapGrammarParser.DistanceContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DistanceExprContext
+    name: MapGrammarParser.DistanceExprContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DistStateContext
+    name: MapGrammarParser.DistStateContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext
+    name: MapGrammarParser.DrawdistanceContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceStateContext
+    name: MapGrammarParser.DrawdistanceStateContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Encode_stringContext
+    name: MapGrammarParser.Encode_stringContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.EncodingContext
+    name: MapGrammarParser.EncodingContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExpExprContext
+    name: MapGrammarParser.ExpExprContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprArgsContext
+    name: MapGrammarParser.ExprArgsContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext
+    name: MapGrammarParser.ExprContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.FlangenoiseContext
+    name: MapGrammarParser.FlangenoiseContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.FlangenoiseStateContext
+    name: MapGrammarParser.FlangenoiseStateContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.FloorExprContext
+    name: MapGrammarParser.FloorExprContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.FogContext
+    name: MapGrammarParser.FogContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.FogStateContext
+    name: MapGrammarParser.FogStateContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext
+    name: MapGrammarParser.GradientContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientStateContext
+    name: MapGrammarParser.GradientStateContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.IncludeContext
+    name: MapGrammarParser.IncludeContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.IncludeStateContext
+    name: MapGrammarParser.IncludeStateContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.InfixExprContext
+    name: MapGrammarParser.InfixExprContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.IrregularityContext
+    name: MapGrammarParser.IrregularityContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.IrregularityStateContext
+    name: MapGrammarParser.IrregularityStateContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.JointnoiseContext
+    name: MapGrammarParser.JointnoiseContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.JointnoiseStateContext
+    name: MapGrammarParser.JointnoiseStateContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LegacyContext
+    name: MapGrammarParser.LegacyContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LegacyStateContext
+    name: MapGrammarParser.LegacyStateContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext
+    name: MapGrammarParser.LightContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightStateContext
+    name: MapGrammarParser.LightStateContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LogExprContext
+    name: MapGrammarParser.LogExprContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.NullableExprContext
+    name: MapGrammarParser.NullableExprContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.NumberExprContext
+    name: MapGrammarParser.NumberExprContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ParensExprContext
+    name: MapGrammarParser.ParensExprContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.PowExprContext
+    name: MapGrammarParser.PowExprContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.PretrainContext
+    name: MapGrammarParser.PretrainContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.PretrainStateContext
+    name: MapGrammarParser.PretrainStateContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RandExprContext
+    name: MapGrammarParser.RandExprContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RepeaterContext
+    name: MapGrammarParser.RepeaterContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RepeaterStateContext
+    name: MapGrammarParser.RepeaterStateContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext
+    name: MapGrammarParser.RollingnoiseContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseStateContext
+    name: MapGrammarParser.RollingnoiseStateContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RootContext
+    name: MapGrammarParser.RootContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SectionContext
+    name: MapGrammarParser.SectionContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SectionStateContext
+    name: MapGrammarParser.SectionStateContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SignalContext
+    name: MapGrammarParser.SignalContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SignalStateContext
+    name: MapGrammarParser.SignalStateContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SinExprContext
+    name: MapGrammarParser.SinExprContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dContext
+    name: MapGrammarParser.Sound3dContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dStateContext
+    name: MapGrammarParser.Sound3dStateContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext
+    name: MapGrammarParser.SoundContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundStateContext
+    name: MapGrammarParser.SoundStateContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SpeedlimitContext
+    name: MapGrammarParser.SpeedlimitContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SpeedlimitStateContext
+    name: MapGrammarParser.SpeedlimitStateContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SqrtExprContext
+    name: MapGrammarParser.SqrtExprContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StatementContext
+    name: MapGrammarParser.StatementContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StationContext
+    name: MapGrammarParser.StationContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StationStateContext
+    name: MapGrammarParser.StationStateContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.String_textContext
+    name: MapGrammarParser.String_textContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StringContext
+    name: MapGrammarParser.StringContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StringExprContext
+    name: MapGrammarParser.StringExprContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StrkeyContext
+    name: MapGrammarParser.StrkeyContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StructureContext
+    name: MapGrammarParser.StructureContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StructureStateContext
+    name: MapGrammarParser.StructureStateContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.TrackContext
+    name: MapGrammarParser.TrackContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.TrackStateContext
+    name: MapGrammarParser.TrackStateContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.TrainContext
+    name: MapGrammarParser.TrainContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.TrainStateContext
+    name: MapGrammarParser.TrainStateContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.UnaryExprContext
+    name: MapGrammarParser.UnaryExprContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarAssignContext
+    name: MapGrammarParser.VarAssignContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarAssignStateContext
+    name: MapGrammarParser.VarAssignStateContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarContext
+    name: MapGrammarParser.VarContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarExprContext
+    name: MapGrammarParser.VarExprContext
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParserBaseListener
+    name: MapGrammarParserBaseListener
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParserBaseVisitor`1
+    name: MapGrammarParserBaseVisitor<Result>
+    name.vb: MapGrammarParserBaseVisitor(Of Result)
+- uid: Bve5_Parsing.ScenarioGrammar
+  name: Bve5_Parsing.ScenarioGrammar
+  items:
+  - uid: Bve5_Parsing.ScenarioGrammar.FilePath
+    name: FilePath
+  - uid: Bve5_Parsing.ScenarioGrammar.ScenarioData
+    name: ScenarioData
+  - uid: Bve5_Parsing.ScenarioGrammar.ScenarioGrammarParser
+    name: ScenarioGrammarParser
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  name: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  items:
+  - uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserListener
+    name: IScenarioGrammarParserListener
+  - uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.IScenarioGrammarParserVisitor`1
+    name: IScenarioGrammarParserVisitor<Result>
+    name.vb: IScenarioGrammarParserVisitor(Of Result)
+  - uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer
+    name: ScenarioGrammarLexer
+  - uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser
+    name: ScenarioGrammarParser
+  - uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.AuthorStateContext
+    name: ScenarioGrammarParser.AuthorStateContext
+  - uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.CommentStateContext
+    name: ScenarioGrammarParser.CommentStateContext
+  - uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.Encode_stringContext
+    name: ScenarioGrammarParser.Encode_stringContext
+  - uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.EncodingContext
+    name: ScenarioGrammarParser.EncodingContext
+  - uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.ImageStateContext
+    name: ScenarioGrammarParser.ImageStateContext
+  - uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.RootContext
+    name: ScenarioGrammarParser.RootContext
+  - uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.RouteStateContext
+    name: ScenarioGrammarParser.RouteStateContext
+  - uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.RouteTitleStateContext
+    name: ScenarioGrammarParser.RouteTitleStateContext
+  - uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.StatementContext
+    name: ScenarioGrammarParser.StatementContext
+  - uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.StringContext
+    name: ScenarioGrammarParser.StringContext
+  - uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.TitleStateContext
+    name: ScenarioGrammarParser.TitleStateContext
+  - uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.VehicleStateContext
+    name: ScenarioGrammarParser.VehicleStateContext
+  - uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.VehicleTitleStateContext
+    name: ScenarioGrammarParser.VehicleTitleStateContext
+  - uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParser.Weight_pathContext
+    name: ScenarioGrammarParser.Weight_pathContext
+  - uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParserBaseListener
+    name: ScenarioGrammarParserBaseListener
+  - uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarParserBaseVisitor`1
+    name: ScenarioGrammarParserBaseVisitor<Result>
+    name.vb: ScenarioGrammarParserBaseVisitor(Of Result)

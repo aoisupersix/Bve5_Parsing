@@ -1,0 +1,193 @@
+### YamlMime:ManagedReference
+items:
+- uid: Bve5_Parsing.ParseErrorLevel
+  commentId: T:Bve5_Parsing.ParseErrorLevel
+  id: ParseErrorLevel
+  parent: Bve5_Parsing
+  children:
+  - Bve5_Parsing.ParseErrorLevel.Error
+  - Bve5_Parsing.ParseErrorLevel.Warning
+  langs:
+  - csharp
+  - vb
+  name: ParseErrorLevel
+  nameWithType: ParseErrorLevel
+  fullName: Bve5_Parsing.ParseErrorLevel
+  type: Enum
+  source:
+    remote:
+      path: Bve5_Parsing/ParseError.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: ParseErrorLevel
+    path: ../Bve5_Parsing/ParseError.cs
+    startLine: 6
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing
+  summary: "\nエラー種別\n"
+  example: []
+  syntax:
+    content: public enum ParseErrorLevel
+    content.vb: Public Enum ParseErrorLevel
+  extensionMethods:
+  - System.Enum.Bve5_Parsing.CommonAttribute.GetStringValue
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: Bve5_Parsing.ParseErrorLevel.Warning
+  commentId: F:Bve5_Parsing.ParseErrorLevel.Warning
+  id: Warning
+  parent: Bve5_Parsing.ParseErrorLevel
+  langs:
+  - csharp
+  - vb
+  name: Warning
+  nameWithType: ParseErrorLevel.Warning
+  fullName: Bve5_Parsing.ParseErrorLevel.Warning
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/ParseError.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Warning
+    path: ../Bve5_Parsing/ParseError.cs
+    startLine: 11
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing
+  summary: "\n警告\n"
+  example: []
+  syntax:
+    content: Warning = 0
+    return:
+      type: Bve5_Parsing.ParseErrorLevel
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.ParseErrorLevel.Error
+  commentId: F:Bve5_Parsing.ParseErrorLevel.Error
+  id: Error
+  parent: Bve5_Parsing.ParseErrorLevel
+  langs:
+  - csharp
+  - vb
+  name: Error
+  nameWithType: ParseErrorLevel.Error
+  fullName: Bve5_Parsing.ParseErrorLevel.Error
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/ParseError.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Error
+    path: ../Bve5_Parsing/ParseError.cs
+    startLine: 16
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing
+  summary: "\nエラー\n"
+  example: []
+  syntax:
+    content: Error = 1
+    return:
+      type: Bve5_Parsing.ParseErrorLevel
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: Bve5_Parsing
+  commentId: N:Bve5_Parsing
+  name: Bve5_Parsing
+  nameWithType: Bve5_Parsing
+  fullName: Bve5_Parsing
+- uid: System.Enum.Bve5_Parsing.CommonAttribute.GetStringValue
+  commentId: M:Bve5_Parsing.CommonAttribute.GetStringValue(System.Enum)
+  parent: Bve5_Parsing.CommonAttribute
+  definition: Bve5_Parsing.CommonAttribute.GetStringValue(System.Enum)
+  name: GetStringValue()
+  nameWithType: CommonAttribute.GetStringValue()
+  fullName: Bve5_Parsing.CommonAttribute.GetStringValue()
+  spec.csharp:
+  - uid: Bve5_Parsing.CommonAttribute.GetStringValue
+    name: GetStringValue
+    nameWithType: CommonAttribute.GetStringValue
+    fullName: Bve5_Parsing.CommonAttribute.GetStringValue
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Bve5_Parsing.CommonAttribute.GetStringValue
+    name: GetStringValue
+    nameWithType: CommonAttribute.GetStringValue
+    fullName: Bve5_Parsing.CommonAttribute.GetStringValue
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Bve5_Parsing.CommonAttribute.GetStringValue(System.Enum)
+  commentId: M:Bve5_Parsing.CommonAttribute.GetStringValue(System.Enum)
+  isExternal: true
+  name: GetStringValue(Enum)
+  nameWithType: CommonAttribute.GetStringValue(Enum)
+  fullName: Bve5_Parsing.CommonAttribute.GetStringValue(System.Enum)
+  spec.csharp:
+  - uid: Bve5_Parsing.CommonAttribute.GetStringValue(System.Enum)
+    name: GetStringValue
+    nameWithType: CommonAttribute.GetStringValue
+    fullName: Bve5_Parsing.CommonAttribute.GetStringValue
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Enum
+    name: Enum
+    nameWithType: Enum
+    fullName: System.Enum
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Bve5_Parsing.CommonAttribute.GetStringValue(System.Enum)
+    name: GetStringValue
+    nameWithType: CommonAttribute.GetStringValue
+    fullName: Bve5_Parsing.CommonAttribute.GetStringValue
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Enum
+    name: Enum
+    nameWithType: Enum
+    fullName: System.Enum
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Bve5_Parsing.CommonAttribute
+  commentId: T:Bve5_Parsing.CommonAttribute
+  parent: Bve5_Parsing
+  name: CommonAttribute
+  nameWithType: CommonAttribute
+  fullName: Bve5_Parsing.CommonAttribute
+- uid: Bve5_Parsing.ParseErrorLevel
+  commentId: T:Bve5_Parsing.ParseErrorLevel
+  parent: Bve5_Parsing
+  name: ParseErrorLevel
+  nameWithType: ParseErrorLevel
+  fullName: Bve5_Parsing.ParseErrorLevel

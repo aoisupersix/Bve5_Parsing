@@ -1,0 +1,543 @@
+### YamlMime:ManagedReference
+items:
+- uid: Bve5_Parsing.MapGrammar.AstNodes.IncludeNode
+  commentId: T:Bve5_Parsing.MapGrammar.AstNodes.IncludeNode
+  id: IncludeNode
+  parent: Bve5_Parsing.MapGrammar.AstNodes
+  children:
+  - Bve5_Parsing.MapGrammar.AstNodes.IncludeNode.#ctor(Antlr4.Runtime.IToken,Antlr4.Runtime.IToken)
+  - Bve5_Parsing.MapGrammar.AstNodes.IncludeNode.FilePath
+  langs:
+  - csharp
+  - vb
+  name: IncludeNode
+  nameWithType: IncludeNode
+  fullName: Bve5_Parsing.MapGrammar.AstNodes.IncludeNode
+  type: Class
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: IncludeNode
+    path: ../Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs
+    startLine: 36
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar.AstNodes
+  summary: "\nIncludeディレクティブノード\n"
+  example: []
+  syntax:
+    content: 'public class IncludeNode : MapGrammarAstNodes'
+    content.vb: >-
+      Public Class IncludeNode
+
+          Inherits MapGrammarAstNodes
+  inheritance:
+  - System.Object
+  - Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes
+  inheritedMembers:
+  - Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes.Start
+  - Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes.Stop
+  - Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes.CreateNewWarning(System.String)
+  - Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes.CreateNewError(System.String)
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Bve5_Parsing.MapGrammar.AstNodes.IncludeNode.FilePath
+  commentId: P:Bve5_Parsing.MapGrammar.AstNodes.IncludeNode.FilePath
+  id: FilePath
+  parent: Bve5_Parsing.MapGrammar.AstNodes.IncludeNode
+  langs:
+  - csharp
+  - vb
+  name: FilePath
+  nameWithType: IncludeNode.FilePath
+  fullName: Bve5_Parsing.MapGrammar.AstNodes.IncludeNode.FilePath
+  type: Property
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: FilePath
+    path: ../Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs
+    startLine: 38
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar.AstNodes
+  syntax:
+    content: public MapGrammarAstNodes FilePath { get; set; }
+    parameters: []
+    return:
+      type: Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes
+    content.vb: Public Property FilePath As MapGrammarAstNodes
+  overload: Bve5_Parsing.MapGrammar.AstNodes.IncludeNode.FilePath*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Bve5_Parsing.MapGrammar.AstNodes.IncludeNode.#ctor(Antlr4.Runtime.IToken,Antlr4.Runtime.IToken)
+  commentId: M:Bve5_Parsing.MapGrammar.AstNodes.IncludeNode.#ctor(Antlr4.Runtime.IToken,Antlr4.Runtime.IToken)
+  id: '#ctor(Antlr4.Runtime.IToken,Antlr4.Runtime.IToken)'
+  parent: Bve5_Parsing.MapGrammar.AstNodes.IncludeNode
+  langs:
+  - csharp
+  - vb
+  name: IncludeNode(IToken, IToken)
+  nameWithType: IncludeNode.IncludeNode(IToken, IToken)
+  fullName: Bve5_Parsing.MapGrammar.AstNodes.IncludeNode.IncludeNode(Antlr4.Runtime.IToken, Antlr4.Runtime.IToken)
+  type: Constructor
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: .ctor
+    path: ../Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs
+    startLine: 40
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar.AstNodes
+  syntax:
+    content: public IncludeNode(IToken start, IToken stop)
+    parameters:
+    - id: start
+      type: Antlr4.Runtime.IToken
+    - id: stop
+      type: Antlr4.Runtime.IToken
+    content.vb: Public Sub New(start As IToken, stop As IToken)
+  overload: Bve5_Parsing.MapGrammar.AstNodes.IncludeNode.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Bve5_Parsing.MapGrammar.AstNodes
+  commentId: N:Bve5_Parsing.MapGrammar.AstNodes
+  name: Bve5_Parsing.MapGrammar.AstNodes
+  nameWithType: Bve5_Parsing.MapGrammar.AstNodes
+  fullName: Bve5_Parsing.MapGrammar.AstNodes
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes
+  commentId: T:Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes
+  parent: Bve5_Parsing.MapGrammar.AstNodes
+  name: MapGrammarAstNodes
+  nameWithType: MapGrammarAstNodes
+  fullName: Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes
+- uid: Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes.Start
+  commentId: P:Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes.Start
+  parent: Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes
+  name: Start
+  nameWithType: MapGrammarAstNodes.Start
+  fullName: Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes.Start
+- uid: Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes.Stop
+  commentId: P:Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes.Stop
+  parent: Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes
+  name: Stop
+  nameWithType: MapGrammarAstNodes.Stop
+  fullName: Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes.Stop
+- uid: Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes.CreateNewWarning(System.String)
+  commentId: M:Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes.CreateNewWarning(System.String)
+  parent: Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes
+  isExternal: true
+  name: CreateNewWarning(String)
+  nameWithType: MapGrammarAstNodes.CreateNewWarning(String)
+  fullName: Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes.CreateNewWarning(System.String)
+  spec.csharp:
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes.CreateNewWarning(System.String)
+    name: CreateNewWarning
+    nameWithType: MapGrammarAstNodes.CreateNewWarning
+    fullName: Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes.CreateNewWarning
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes.CreateNewWarning(System.String)
+    name: CreateNewWarning
+    nameWithType: MapGrammarAstNodes.CreateNewWarning
+    fullName: Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes.CreateNewWarning
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes.CreateNewError(System.String)
+  commentId: M:Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes.CreateNewError(System.String)
+  parent: Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes
+  isExternal: true
+  name: CreateNewError(String)
+  nameWithType: MapGrammarAstNodes.CreateNewError(String)
+  fullName: Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes.CreateNewError(System.String)
+  spec.csharp:
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes.CreateNewError(System.String)
+    name: CreateNewError
+    nameWithType: MapGrammarAstNodes.CreateNewError
+    fullName: Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes.CreateNewError
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes.CreateNewError(System.String)
+    name: CreateNewError
+    nameWithType: MapGrammarAstNodes.CreateNewError
+    fullName: Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes.CreateNewError
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Bve5_Parsing.MapGrammar.AstNodes.IncludeNode.FilePath*
+  commentId: Overload:Bve5_Parsing.MapGrammar.AstNodes.IncludeNode.FilePath
+  name: FilePath
+  nameWithType: IncludeNode.FilePath
+  fullName: Bve5_Parsing.MapGrammar.AstNodes.IncludeNode.FilePath
+- uid: Bve5_Parsing.MapGrammar.AstNodes.IncludeNode.#ctor*
+  commentId: Overload:Bve5_Parsing.MapGrammar.AstNodes.IncludeNode.#ctor
+  name: IncludeNode
+  nameWithType: IncludeNode.IncludeNode
+  fullName: Bve5_Parsing.MapGrammar.AstNodes.IncludeNode.IncludeNode
+- uid: Antlr4.Runtime.IToken
+  commentId: T:Antlr4.Runtime.IToken
+  parent: Antlr4.Runtime
+  isExternal: true
+  name: IToken
+  nameWithType: IToken
+  fullName: Antlr4.Runtime.IToken
+- uid: Antlr4.Runtime
+  commentId: N:Antlr4.Runtime
+  isExternal: true
+  name: Antlr4.Runtime
+  nameWithType: Antlr4.Runtime
+  fullName: Antlr4.Runtime

@@ -1,0 +1,112 @@
+### YamlMime:ManagedReference
+items:
+- uid: Bve5_Parsing.MapGrammar
+  commentId: N:Bve5_Parsing.MapGrammar
+  id: Bve5_Parsing.MapGrammar
+  children:
+  - Bve5_Parsing.MapGrammar.AstVisitor`1
+  - Bve5_Parsing.MapGrammar.EvaluateMapGrammarVisitor
+  - Bve5_Parsing.MapGrammar.EvaluateMapGrammarVisitorWithInclude
+  - Bve5_Parsing.MapGrammar.MapElementName
+  - Bve5_Parsing.MapGrammar.MapFunctionName
+  - Bve5_Parsing.MapGrammar.MapGrammarParser
+  - Bve5_Parsing.MapGrammar.MapGrammarParser.MapGrammarParserOption
+  - Bve5_Parsing.MapGrammar.MapSubElementName
+  - Bve5_Parsing.MapGrammar.VariableStore
+  langs:
+  - csharp
+  - vb
+  name: Bve5_Parsing.MapGrammar
+  nameWithType: Bve5_Parsing.MapGrammar
+  fullName: Bve5_Parsing.MapGrammar
+  type: Namespace
+  assemblies:
+  - Bve5_Parsing
+references:
+- uid: Bve5_Parsing.MapGrammar.EvaluateMapGrammarVisitor
+  commentId: T:Bve5_Parsing.MapGrammar.EvaluateMapGrammarVisitor
+  parent: Bve5_Parsing.MapGrammar
+  name: EvaluateMapGrammarVisitor
+  nameWithType: EvaluateMapGrammarVisitor
+  fullName: Bve5_Parsing.MapGrammar.EvaluateMapGrammarVisitor
+- uid: Bve5_Parsing.MapGrammar.EvaluateMapGrammarVisitorWithInclude
+  commentId: T:Bve5_Parsing.MapGrammar.EvaluateMapGrammarVisitorWithInclude
+  name: EvaluateMapGrammarVisitorWithInclude
+  nameWithType: EvaluateMapGrammarVisitorWithInclude
+  fullName: Bve5_Parsing.MapGrammar.EvaluateMapGrammarVisitorWithInclude
+- uid: Bve5_Parsing.MapGrammar.AstVisitor`1
+  commentId: T:Bve5_Parsing.MapGrammar.AstVisitor`1
+  name: AstVisitor<T>
+  nameWithType: AstVisitor<T>
+  fullName: Bve5_Parsing.MapGrammar.AstVisitor<T>
+  nameWithType.vb: AstVisitor(Of T)
+  fullName.vb: Bve5_Parsing.MapGrammar.AstVisitor(Of T)
+  name.vb: AstVisitor(Of T)
+  spec.csharp:
+  - uid: Bve5_Parsing.MapGrammar.AstVisitor`1
+    name: AstVisitor
+    nameWithType: AstVisitor
+    fullName: Bve5_Parsing.MapGrammar.AstVisitor
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Bve5_Parsing.MapGrammar.AstVisitor`1
+    name: AstVisitor
+    nameWithType: AstVisitor
+    fullName: Bve5_Parsing.MapGrammar.AstVisitor
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Bve5_Parsing.MapGrammar.MapElementName
+  commentId: T:Bve5_Parsing.MapGrammar.MapElementName
+  parent: Bve5_Parsing.MapGrammar
+  name: MapElementName
+  nameWithType: MapElementName
+  fullName: Bve5_Parsing.MapGrammar.MapElementName
+- uid: Bve5_Parsing.MapGrammar.MapSubElementName
+  commentId: T:Bve5_Parsing.MapGrammar.MapSubElementName
+  parent: Bve5_Parsing.MapGrammar
+  name: MapSubElementName
+  nameWithType: MapSubElementName
+  fullName: Bve5_Parsing.MapGrammar.MapSubElementName
+- uid: Bve5_Parsing.MapGrammar.MapFunctionName
+  commentId: T:Bve5_Parsing.MapGrammar.MapFunctionName
+  parent: Bve5_Parsing.MapGrammar
+  name: MapFunctionName
+  nameWithType: MapFunctionName
+  fullName: Bve5_Parsing.MapGrammar.MapFunctionName
+- uid: Bve5_Parsing.MapGrammar.MapGrammarParser
+  commentId: T:Bve5_Parsing.MapGrammar.MapGrammarParser
+  name: MapGrammarParser
+  nameWithType: MapGrammarParser
+  fullName: Bve5_Parsing.MapGrammar.MapGrammarParser
+- uid: Bve5_Parsing.MapGrammar.MapGrammarParser.MapGrammarParserOption
+  commentId: T:Bve5_Parsing.MapGrammar.MapGrammarParser.MapGrammarParserOption
+  parent: Bve5_Parsing.MapGrammar
+  name: MapGrammarParser.MapGrammarParserOption
+  nameWithType: MapGrammarParser.MapGrammarParserOption
+  fullName: Bve5_Parsing.MapGrammar.MapGrammarParser.MapGrammarParserOption
+- uid: Bve5_Parsing.MapGrammar.VariableStore
+  commentId: T:Bve5_Parsing.MapGrammar.VariableStore
+  parent: Bve5_Parsing.MapGrammar
+  name: VariableStore
+  nameWithType: VariableStore
+  fullName: Bve5_Parsing.MapGrammar.VariableStore
+- uid: Bve5_Parsing.MapGrammar
+  commentId: N:Bve5_Parsing.MapGrammar
+  name: Bve5_Parsing.MapGrammar
+  nameWithType: Bve5_Parsing.MapGrammar
+  fullName: Bve5_Parsing.MapGrammar

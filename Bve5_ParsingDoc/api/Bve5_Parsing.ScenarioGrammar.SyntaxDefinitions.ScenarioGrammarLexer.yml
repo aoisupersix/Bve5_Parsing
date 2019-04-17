@@ -1,0 +1,4707 @@
+### YamlMime:ManagedReference
+items:
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer
+  commentId: T:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer
+  id: ScenarioGrammarLexer
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  children:
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.#ctor(Antlr4.Runtime.ICharStream)
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer._ATN
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer._serializedATN
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.ASTERISK
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.AUTHOR
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.BVETS
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.COMMENT
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.DefaultVocabulary
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.E_WS
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.ENCODE_CHAR
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.ENCODE_END
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.ENCODING_MODE
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.EQUAL
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.ESCAPE_COMMENT
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.FILE_PATH
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.GrammarFileName
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.IMAGE
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.INPUT_PATH_END
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.INPUT_PATH_MODE
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.INPUT_TEXT_CHAR
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.INPUT_TEXT_END
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.INPUT_TEXT_MODE
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.IP_COMMENT
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.IP_WS
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.IT_COMMENT
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.IT_WS
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.modeNames
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.ModeNames
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.NUM
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.P_WS
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.PATH_END
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.PATH_EQUAL
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.PATH_MODE
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.ROUTE
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.ROUTETITLE
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.ruleNames
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.RuleNames
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.SCENARIO
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.SECTION
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.SELECT_ENCODE
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.SerializedAtn
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.TITLE
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.tokenNames
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.TokenNames
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.VEHICLE
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.VEHICLETITLE
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.VERSION
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.Vocabulary
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.W_WS
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.WEIGHTING_MODE
+  - Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.WHITESPACE
+  langs:
+  - csharp
+  - vb
+  name: ScenarioGrammarLexer
+  nameWithType: ScenarioGrammarLexer
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer
+  type: Class
+  source:
+    remote:
+      path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: ScenarioGrammarLexer
+    path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+    startLine: 27
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  syntax:
+    content: >-
+      [CLSCompliant(false)]
+
+      public class ScenarioGrammarLexer : Lexer, IRecognizer, ITokenSource
+    content.vb: >-
+      <CLSCompliant(False)>
+
+      Public Class ScenarioGrammarLexer
+
+          Inherits Lexer
+
+          Implements IRecognizer, ITokenSource
+  inheritance:
+  - System.Object
+  - Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}
+  - Antlr4.Runtime.Lexer
+  implements:
+  - Antlr4.Runtime.IRecognizer
+  - Antlr4.Runtime.ITokenSource
+  inheritedMembers:
+  - Antlr4.Runtime.Lexer.DefaultMode
+  - Antlr4.Runtime.Lexer.DefaultTokenChannel
+  - Antlr4.Runtime.Lexer.Hidden
+  - Antlr4.Runtime.Lexer.MinCharValue
+  - Antlr4.Runtime.Lexer.MaxCharValue
+  - Antlr4.Runtime.Lexer._input
+  - Antlr4.Runtime.Lexer._tokenFactorySourcePair
+  - Antlr4.Runtime.Lexer._factory
+  - Antlr4.Runtime.Lexer._token
+  - Antlr4.Runtime.Lexer._tokenStartCharIndex
+  - Antlr4.Runtime.Lexer._tokenStartLine
+  - Antlr4.Runtime.Lexer._tokenStartCharPositionInLine
+  - Antlr4.Runtime.Lexer._hitEOF
+  - Antlr4.Runtime.Lexer._channel
+  - Antlr4.Runtime.Lexer._type
+  - Antlr4.Runtime.Lexer._modeStack
+  - Antlr4.Runtime.Lexer._mode
+  - Antlr4.Runtime.Lexer._text
+  - Antlr4.Runtime.Lexer.Reset
+  - Antlr4.Runtime.Lexer.NextToken
+  - Antlr4.Runtime.Lexer.Skip
+  - Antlr4.Runtime.Lexer.More
+  - Antlr4.Runtime.Lexer.Mode(System.Int32)
+  - Antlr4.Runtime.Lexer.PushMode(System.Int32)
+  - Antlr4.Runtime.Lexer.PopMode
+  - Antlr4.Runtime.Lexer.SetInputStream(Antlr4.Runtime.ICharStream)
+  - Antlr4.Runtime.Lexer.Emit(Antlr4.Runtime.IToken)
+  - Antlr4.Runtime.Lexer.Emit
+  - Antlr4.Runtime.Lexer.EmitEOF
+  - Antlr4.Runtime.Lexer.GetAllTokens
+  - Antlr4.Runtime.Lexer.Recover(Antlr4.Runtime.LexerNoViableAltException)
+  - Antlr4.Runtime.Lexer.NotifyListeners(Antlr4.Runtime.LexerNoViableAltException)
+  - Antlr4.Runtime.Lexer.GetErrorDisplay(System.String)
+  - Antlr4.Runtime.Lexer.GetErrorDisplay(System.Int32)
+  - Antlr4.Runtime.Lexer.GetCharErrorDisplay(System.Int32)
+  - Antlr4.Runtime.Lexer.Recover(Antlr4.Runtime.RecognitionException)
+  - Antlr4.Runtime.Lexer.TokenFactory
+  - Antlr4.Runtime.Lexer.SourceName
+  - Antlr4.Runtime.Lexer.InputStream
+  - Antlr4.Runtime.Lexer.Antlr4#Runtime#ITokenSource#InputStream
+  - Antlr4.Runtime.Lexer.Line
+  - Antlr4.Runtime.Lexer.Column
+  - Antlr4.Runtime.Lexer.CharIndex
+  - Antlr4.Runtime.Lexer.Text
+  - Antlr4.Runtime.Lexer.Token
+  - Antlr4.Runtime.Lexer.Type
+  - Antlr4.Runtime.Lexer.Channel
+  - Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.Eof
+  - Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}._interp
+  - Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.CreateTokenTypeMap(Antlr4.Runtime.IVocabulary)
+  - Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.GetTokenType(System.String)
+  - Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.GetErrorHeader(Antlr4.Runtime.RecognitionException)
+  - Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.GetTokenErrorDisplay(Antlr4.Runtime.IToken)
+  - Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.AddErrorListener(Antlr4.Runtime.IAntlrErrorListener{System.Int32})
+  - Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.RemoveErrorListener(Antlr4.Runtime.IAntlrErrorListener{System.Int32})
+  - Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.RemoveErrorListeners
+  - Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.Sempred(Antlr4.Runtime.RuleContext,System.Int32,System.Int32)
+  - Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.Precpred(Antlr4.Runtime.RuleContext,System.Int32)
+  - Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.Action(Antlr4.Runtime.RuleContext,System.Int32,System.Int32)
+  - Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.TokenNames
+  - Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.RuleNames
+  - Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.Vocabulary
+  - Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.TokenTypeMap
+  - Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.RuleIndexMap
+  - Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.SerializedAtn
+  - Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.GrammarFileName
+  - Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.Atn
+  - Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.Interpreter
+  - Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.ParseInfo
+  - Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.ErrorListeners
+  - Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.ErrorListenerDispatch
+  - Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.State
+  - Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.InputStream
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  attributes:
+  - type: System.CLSCompliantAttribute
+    ctor: System.CLSCompliantAttribute.#ctor(System.Boolean)
+    arguments:
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.BVETS
+  commentId: F:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.BVETS
+  id: BVETS
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer
+  langs:
+  - csharp
+  - vb
+  name: BVETS
+  nameWithType: ScenarioGrammarLexer.BVETS
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.BVETS
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: BVETS
+    path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+    startLine: 31
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  syntax:
+    content: public const int BVETS = 1
+    return:
+      type: System.Int32
+    content.vb: Public Const BVETS As Integer = 1
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.SCENARIO
+  commentId: F:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.SCENARIO
+  id: SCENARIO
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer
+  langs:
+  - csharp
+  - vb
+  name: SCENARIO
+  nameWithType: ScenarioGrammarLexer.SCENARIO
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.SCENARIO
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: SCENARIO
+    path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+    startLine: 31
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  syntax:
+    content: public const int SCENARIO = 2
+    return:
+      type: System.Int32
+    content.vb: Public Const SCENARIO As Integer = 2
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.VERSION
+  commentId: F:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.VERSION
+  id: VERSION
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer
+  langs:
+  - csharp
+  - vb
+  name: VERSION
+  nameWithType: ScenarioGrammarLexer.VERSION
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.VERSION
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: VERSION
+    path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+    startLine: 31
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  syntax:
+    content: public const int VERSION = 3
+    return:
+      type: System.Int32
+    content.vb: Public Const VERSION As Integer = 3
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.SELECT_ENCODE
+  commentId: F:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.SELECT_ENCODE
+  id: SELECT_ENCODE
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer
+  langs:
+  - csharp
+  - vb
+  name: SELECT_ENCODE
+  nameWithType: ScenarioGrammarLexer.SELECT_ENCODE
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.SELECT_ENCODE
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: SELECT_ENCODE
+    path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+    startLine: 31
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  syntax:
+    content: public const int SELECT_ENCODE = 4
+    return:
+      type: System.Int32
+    content.vb: Public Const SELECT_ENCODE As Integer = 4
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.ROUTE
+  commentId: F:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.ROUTE
+  id: ROUTE
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer
+  langs:
+  - csharp
+  - vb
+  name: ROUTE
+  nameWithType: ScenarioGrammarLexer.ROUTE
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.ROUTE
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: ROUTE
+    path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+    startLine: 31
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  syntax:
+    content: public const int ROUTE = 5
+    return:
+      type: System.Int32
+    content.vb: Public Const ROUTE As Integer = 5
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.VEHICLE
+  commentId: F:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.VEHICLE
+  id: VEHICLE
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer
+  langs:
+  - csharp
+  - vb
+  name: VEHICLE
+  nameWithType: ScenarioGrammarLexer.VEHICLE
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.VEHICLE
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: VEHICLE
+    path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+    startLine: 31
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  syntax:
+    content: public const int VEHICLE = 6
+    return:
+      type: System.Int32
+    content.vb: Public Const VEHICLE As Integer = 6
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.TITLE
+  commentId: F:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.TITLE
+  id: TITLE
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer
+  langs:
+  - csharp
+  - vb
+  name: TITLE
+  nameWithType: ScenarioGrammarLexer.TITLE
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.TITLE
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: TITLE
+    path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+    startLine: 31
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  syntax:
+    content: public const int TITLE = 7
+    return:
+      type: System.Int32
+    content.vb: Public Const TITLE As Integer = 7
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.IMAGE
+  commentId: F:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.IMAGE
+  id: IMAGE
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer
+  langs:
+  - csharp
+  - vb
+  name: IMAGE
+  nameWithType: ScenarioGrammarLexer.IMAGE
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.IMAGE
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: IMAGE
+    path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+    startLine: 32
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  syntax:
+    content: public const int IMAGE = 8
+    return:
+      type: System.Int32
+    content.vb: Public Const IMAGE As Integer = 8
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.ROUTETITLE
+  commentId: F:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.ROUTETITLE
+  id: ROUTETITLE
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer
+  langs:
+  - csharp
+  - vb
+  name: ROUTETITLE
+  nameWithType: ScenarioGrammarLexer.ROUTETITLE
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.ROUTETITLE
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: ROUTETITLE
+    path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+    startLine: 32
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  syntax:
+    content: public const int ROUTETITLE = 9
+    return:
+      type: System.Int32
+    content.vb: Public Const ROUTETITLE As Integer = 9
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.VEHICLETITLE
+  commentId: F:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.VEHICLETITLE
+  id: VEHICLETITLE
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer
+  langs:
+  - csharp
+  - vb
+  name: VEHICLETITLE
+  nameWithType: ScenarioGrammarLexer.VEHICLETITLE
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.VEHICLETITLE
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: VEHICLETITLE
+    path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+    startLine: 32
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  syntax:
+    content: public const int VEHICLETITLE = 10
+    return:
+      type: System.Int32
+    content.vb: Public Const VEHICLETITLE As Integer = 10
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.AUTHOR
+  commentId: F:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.AUTHOR
+  id: AUTHOR
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer
+  langs:
+  - csharp
+  - vb
+  name: AUTHOR
+  nameWithType: ScenarioGrammarLexer.AUTHOR
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.AUTHOR
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: AUTHOR
+    path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+    startLine: 32
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  syntax:
+    content: public const int AUTHOR = 11
+    return:
+      type: System.Int32
+    content.vb: Public Const AUTHOR As Integer = 11
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.COMMENT
+  commentId: F:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.COMMENT
+  id: COMMENT
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer
+  langs:
+  - csharp
+  - vb
+  name: COMMENT
+  nameWithType: ScenarioGrammarLexer.COMMENT
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.COMMENT
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: COMMENT
+    path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+    startLine: 32
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  syntax:
+    content: public const int COMMENT = 12
+    return:
+      type: System.Int32
+    content.vb: Public Const COMMENT As Integer = 12
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.EQUAL
+  commentId: F:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.EQUAL
+  id: EQUAL
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer
+  langs:
+  - csharp
+  - vb
+  name: EQUAL
+  nameWithType: ScenarioGrammarLexer.EQUAL
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.EQUAL
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: EQUAL
+    path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+    startLine: 32
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  syntax:
+    content: public const int EQUAL = 13
+    return:
+      type: System.Int32
+    content.vb: Public Const EQUAL As Integer = 13
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.ESCAPE_COMMENT
+  commentId: F:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.ESCAPE_COMMENT
+  id: ESCAPE_COMMENT
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer
+  langs:
+  - csharp
+  - vb
+  name: ESCAPE_COMMENT
+  nameWithType: ScenarioGrammarLexer.ESCAPE_COMMENT
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.ESCAPE_COMMENT
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: ESCAPE_COMMENT
+    path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+    startLine: 33
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  syntax:
+    content: public const int ESCAPE_COMMENT = 14
+    return:
+      type: System.Int32
+    content.vb: Public Const ESCAPE_COMMENT As Integer = 14
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.WHITESPACE
+  commentId: F:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.WHITESPACE
+  id: WHITESPACE
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer
+  langs:
+  - csharp
+  - vb
+  name: WHITESPACE
+  nameWithType: ScenarioGrammarLexer.WHITESPACE
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.WHITESPACE
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: WHITESPACE
+    path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+    startLine: 33
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  syntax:
+    content: public const int WHITESPACE = 15
+    return:
+      type: System.Int32
+    content.vb: Public Const WHITESPACE As Integer = 15
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.E_WS
+  commentId: F:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.E_WS
+  id: E_WS
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer
+  langs:
+  - csharp
+  - vb
+  name: E_WS
+  nameWithType: ScenarioGrammarLexer.E_WS
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.E_WS
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: E_WS
+    path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+    startLine: 33
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  syntax:
+    content: public const int E_WS = 16
+    return:
+      type: System.Int32
+    content.vb: Public Const E_WS As Integer = 16
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.ENCODE_END
+  commentId: F:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.ENCODE_END
+  id: ENCODE_END
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer
+  langs:
+  - csharp
+  - vb
+  name: ENCODE_END
+  nameWithType: ScenarioGrammarLexer.ENCODE_END
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.ENCODE_END
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: ENCODE_END
+    path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+    startLine: 33
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  syntax:
+    content: public const int ENCODE_END = 17
+    return:
+      type: System.Int32
+    content.vb: Public Const ENCODE_END As Integer = 17
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.ENCODE_CHAR
+  commentId: F:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.ENCODE_CHAR
+  id: ENCODE_CHAR
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer
+  langs:
+  - csharp
+  - vb
+  name: ENCODE_CHAR
+  nameWithType: ScenarioGrammarLexer.ENCODE_CHAR
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.ENCODE_CHAR
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: ENCODE_CHAR
+    path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+    startLine: 33
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  syntax:
+    content: public const int ENCODE_CHAR = 18
+    return:
+      type: System.Int32
+    content.vb: Public Const ENCODE_CHAR As Integer = 18
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.P_WS
+  commentId: F:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.P_WS
+  id: P_WS
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer
+  langs:
+  - csharp
+  - vb
+  name: P_WS
+  nameWithType: ScenarioGrammarLexer.P_WS
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.P_WS
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: P_WS
+    path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+    startLine: 34
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  syntax:
+    content: public const int P_WS = 19
+    return:
+      type: System.Int32
+    content.vb: Public Const P_WS As Integer = 19
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.PATH_END
+  commentId: F:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.PATH_END
+  id: PATH_END
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer
+  langs:
+  - csharp
+  - vb
+  name: PATH_END
+  nameWithType: ScenarioGrammarLexer.PATH_END
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.PATH_END
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: PATH_END
+    path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+    startLine: 34
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  syntax:
+    content: public const int PATH_END = 20
+    return:
+      type: System.Int32
+    content.vb: Public Const PATH_END As Integer = 20
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.PATH_EQUAL
+  commentId: F:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.PATH_EQUAL
+  id: PATH_EQUAL
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer
+  langs:
+  - csharp
+  - vb
+  name: PATH_EQUAL
+  nameWithType: ScenarioGrammarLexer.PATH_EQUAL
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.PATH_EQUAL
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: PATH_EQUAL
+    path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+    startLine: 34
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  syntax:
+    content: public const int PATH_EQUAL = 21
+    return:
+      type: System.Int32
+    content.vb: Public Const PATH_EQUAL As Integer = 21
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.IP_WS
+  commentId: F:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.IP_WS
+  id: IP_WS
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer
+  langs:
+  - csharp
+  - vb
+  name: IP_WS
+  nameWithType: ScenarioGrammarLexer.IP_WS
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.IP_WS
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: IP_WS
+    path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+    startLine: 34
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  syntax:
+    content: public const int IP_WS = 22
+    return:
+      type: System.Int32
+    content.vb: Public Const IP_WS As Integer = 22
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.IP_COMMENT
+  commentId: F:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.IP_COMMENT
+  id: IP_COMMENT
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer
+  langs:
+  - csharp
+  - vb
+  name: IP_COMMENT
+  nameWithType: ScenarioGrammarLexer.IP_COMMENT
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.IP_COMMENT
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: IP_COMMENT
+    path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+    startLine: 34
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  syntax:
+    content: public const int IP_COMMENT = 23
+    return:
+      type: System.Int32
+    content.vb: Public Const IP_COMMENT As Integer = 23
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.INPUT_PATH_END
+  commentId: F:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.INPUT_PATH_END
+  id: INPUT_PATH_END
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer
+  langs:
+  - csharp
+  - vb
+  name: INPUT_PATH_END
+  nameWithType: ScenarioGrammarLexer.INPUT_PATH_END
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.INPUT_PATH_END
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: INPUT_PATH_END
+    path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+    startLine: 34
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  syntax:
+    content: public const int INPUT_PATH_END = 24
+    return:
+      type: System.Int32
+    content.vb: Public Const INPUT_PATH_END As Integer = 24
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.ASTERISK
+  commentId: F:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.ASTERISK
+  id: ASTERISK
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer
+  langs:
+  - csharp
+  - vb
+  name: ASTERISK
+  nameWithType: ScenarioGrammarLexer.ASTERISK
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.ASTERISK
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: ASTERISK
+    path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+    startLine: 35
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  syntax:
+    content: public const int ASTERISK = 25
+    return:
+      type: System.Int32
+    content.vb: Public Const ASTERISK As Integer = 25
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.SECTION
+  commentId: F:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.SECTION
+  id: SECTION
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer
+  langs:
+  - csharp
+  - vb
+  name: SECTION
+  nameWithType: ScenarioGrammarLexer.SECTION
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.SECTION
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: SECTION
+    path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+    startLine: 35
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  syntax:
+    content: public const int SECTION = 26
+    return:
+      type: System.Int32
+    content.vb: Public Const SECTION As Integer = 26
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.FILE_PATH
+  commentId: F:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.FILE_PATH
+  id: FILE_PATH
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer
+  langs:
+  - csharp
+  - vb
+  name: FILE_PATH
+  nameWithType: ScenarioGrammarLexer.FILE_PATH
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.FILE_PATH
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: FILE_PATH
+    path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+    startLine: 35
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  syntax:
+    content: public const int FILE_PATH = 27
+    return:
+      type: System.Int32
+    content.vb: Public Const FILE_PATH As Integer = 27
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.W_WS
+  commentId: F:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.W_WS
+  id: W_WS
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer
+  langs:
+  - csharp
+  - vb
+  name: W_WS
+  nameWithType: ScenarioGrammarLexer.W_WS
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.W_WS
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: W_WS
+    path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+    startLine: 35
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  syntax:
+    content: public const int W_WS = 28
+    return:
+      type: System.Int32
+    content.vb: Public Const W_WS As Integer = 28
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.NUM
+  commentId: F:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.NUM
+  id: NUM
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer
+  langs:
+  - csharp
+  - vb
+  name: NUM
+  nameWithType: ScenarioGrammarLexer.NUM
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.NUM
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: NUM
+    path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+    startLine: 35
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  syntax:
+    content: public const int NUM = 29
+    return:
+      type: System.Int32
+    content.vb: Public Const NUM As Integer = 29
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.IT_WS
+  commentId: F:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.IT_WS
+  id: IT_WS
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer
+  langs:
+  - csharp
+  - vb
+  name: IT_WS
+  nameWithType: ScenarioGrammarLexer.IT_WS
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.IT_WS
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: IT_WS
+    path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+    startLine: 35
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  syntax:
+    content: public const int IT_WS = 30
+    return:
+      type: System.Int32
+    content.vb: Public Const IT_WS As Integer = 30
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.IT_COMMENT
+  commentId: F:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.IT_COMMENT
+  id: IT_COMMENT
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer
+  langs:
+  - csharp
+  - vb
+  name: IT_COMMENT
+  nameWithType: ScenarioGrammarLexer.IT_COMMENT
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.IT_COMMENT
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: IT_COMMENT
+    path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+    startLine: 35
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  syntax:
+    content: public const int IT_COMMENT = 31
+    return:
+      type: System.Int32
+    content.vb: Public Const IT_COMMENT As Integer = 31
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.INPUT_TEXT_END
+  commentId: F:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.INPUT_TEXT_END
+  id: INPUT_TEXT_END
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer
+  langs:
+  - csharp
+  - vb
+  name: INPUT_TEXT_END
+  nameWithType: ScenarioGrammarLexer.INPUT_TEXT_END
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.INPUT_TEXT_END
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: INPUT_TEXT_END
+    path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+    startLine: 36
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  syntax:
+    content: public const int INPUT_TEXT_END = 32
+    return:
+      type: System.Int32
+    content.vb: Public Const INPUT_TEXT_END As Integer = 32
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.INPUT_TEXT_CHAR
+  commentId: F:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.INPUT_TEXT_CHAR
+  id: INPUT_TEXT_CHAR
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer
+  langs:
+  - csharp
+  - vb
+  name: INPUT_TEXT_CHAR
+  nameWithType: ScenarioGrammarLexer.INPUT_TEXT_CHAR
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.INPUT_TEXT_CHAR
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: INPUT_TEXT_CHAR
+    path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+    startLine: 36
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  syntax:
+    content: public const int INPUT_TEXT_CHAR = 33
+    return:
+      type: System.Int32
+    content.vb: Public Const INPUT_TEXT_CHAR As Integer = 33
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.ENCODING_MODE
+  commentId: F:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.ENCODING_MODE
+  id: ENCODING_MODE
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer
+  langs:
+  - csharp
+  - vb
+  name: ENCODING_MODE
+  nameWithType: ScenarioGrammarLexer.ENCODING_MODE
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.ENCODING_MODE
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: ENCODING_MODE
+    path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+    startLine: 37
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  syntax:
+    content: public const int ENCODING_MODE = 1
+    return:
+      type: System.Int32
+    content.vb: Public Const ENCODING_MODE As Integer = 1
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.PATH_MODE
+  commentId: F:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.PATH_MODE
+  id: PATH_MODE
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer
+  langs:
+  - csharp
+  - vb
+  name: PATH_MODE
+  nameWithType: ScenarioGrammarLexer.PATH_MODE
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.PATH_MODE
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: PATH_MODE
+    path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+    startLine: 38
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  syntax:
+    content: public const int PATH_MODE = 2
+    return:
+      type: System.Int32
+    content.vb: Public Const PATH_MODE As Integer = 2
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.INPUT_PATH_MODE
+  commentId: F:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.INPUT_PATH_MODE
+  id: INPUT_PATH_MODE
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer
+  langs:
+  - csharp
+  - vb
+  name: INPUT_PATH_MODE
+  nameWithType: ScenarioGrammarLexer.INPUT_PATH_MODE
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.INPUT_PATH_MODE
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: INPUT_PATH_MODE
+    path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+    startLine: 39
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  syntax:
+    content: public const int INPUT_PATH_MODE = 3
+    return:
+      type: System.Int32
+    content.vb: Public Const INPUT_PATH_MODE As Integer = 3
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.WEIGHTING_MODE
+  commentId: F:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.WEIGHTING_MODE
+  id: WEIGHTING_MODE
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer
+  langs:
+  - csharp
+  - vb
+  name: WEIGHTING_MODE
+  nameWithType: ScenarioGrammarLexer.WEIGHTING_MODE
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.WEIGHTING_MODE
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: WEIGHTING_MODE
+    path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+    startLine: 40
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  syntax:
+    content: public const int WEIGHTING_MODE = 4
+    return:
+      type: System.Int32
+    content.vb: Public Const WEIGHTING_MODE As Integer = 4
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.INPUT_TEXT_MODE
+  commentId: F:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.INPUT_TEXT_MODE
+  id: INPUT_TEXT_MODE
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer
+  langs:
+  - csharp
+  - vb
+  name: INPUT_TEXT_MODE
+  nameWithType: ScenarioGrammarLexer.INPUT_TEXT_MODE
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.INPUT_TEXT_MODE
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: INPUT_TEXT_MODE
+    path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+    startLine: 41
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  syntax:
+    content: public const int INPUT_TEXT_MODE = 5
+    return:
+      type: System.Int32
+    content.vb: Public Const INPUT_TEXT_MODE As Integer = 5
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.modeNames
+  commentId: F:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.modeNames
+  id: modeNames
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer
+  langs:
+  - csharp
+  - vb
+  name: modeNames
+  nameWithType: ScenarioGrammarLexer.modeNames
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.modeNames
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: modeNames
+    path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+    startLine: 42
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  syntax:
+    content: public static string[] modeNames
+    return:
+      type: System.String[]
+    content.vb: Public Shared modeNames As String()
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.ruleNames
+  commentId: F:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.ruleNames
+  id: ruleNames
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer
+  langs:
+  - csharp
+  - vb
+  name: ruleNames
+  nameWithType: ScenarioGrammarLexer.ruleNames
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.ruleNames
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: ruleNames
+    path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+    startLine: 47
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  syntax:
+    content: public static readonly string[] ruleNames
+    return:
+      type: System.String[]
+    content.vb: Public Shared ReadOnly ruleNames As String()
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.#ctor(Antlr4.Runtime.ICharStream)
+  commentId: M:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.#ctor(Antlr4.Runtime.ICharStream)
+  id: '#ctor(Antlr4.Runtime.ICharStream)'
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer
+  langs:
+  - csharp
+  - vb
+  name: ScenarioGrammarLexer(ICharStream)
+  nameWithType: ScenarioGrammarLexer.ScenarioGrammarLexer(ICharStream)
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.ScenarioGrammarLexer(Antlr4.Runtime.ICharStream)
+  type: Constructor
+  source:
+    remote:
+      path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: .ctor
+    path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+    startLine: 59
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  syntax:
+    content: public ScenarioGrammarLexer(ICharStream input)
+    parameters:
+    - id: input
+      type: Antlr4.Runtime.ICharStream
+    content.vb: Public Sub New(input As ICharStream)
+  overload: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.DefaultVocabulary
+  commentId: F:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.DefaultVocabulary
+  id: DefaultVocabulary
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer
+  langs:
+  - csharp
+  - vb
+  name: DefaultVocabulary
+  nameWithType: ScenarioGrammarLexer.DefaultVocabulary
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.DefaultVocabulary
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: DefaultVocabulary
+    path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+    startLine: 78
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  syntax:
+    content: public static readonly IVocabulary DefaultVocabulary
+    return:
+      type: Antlr4.Runtime.IVocabulary
+    content.vb: Public Shared ReadOnly DefaultVocabulary As IVocabulary
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.tokenNames
+  commentId: F:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.tokenNames
+  id: tokenNames
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer
+  langs:
+  - csharp
+  - vb
+  name: tokenNames
+  nameWithType: ScenarioGrammarLexer.tokenNames
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.tokenNames
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: tokenNames
+    path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+    startLine: 81
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  syntax:
+    content: >-
+      [Obsolete("Use Vocabulary instead.")]
+
+      public static readonly string[] tokenNames
+    return:
+      type: System.String[]
+    content.vb: >-
+      <Obsolete("Use Vocabulary instead.")>
+
+      Public Shared ReadOnly tokenNames As String()
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Use Vocabulary instead.
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.TokenNames
+  commentId: P:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.TokenNames
+  id: TokenNames
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer
+  langs:
+  - csharp
+  - vb
+  name: TokenNames
+  nameWithType: ScenarioGrammarLexer.TokenNames
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.TokenNames
+  type: Property
+  source:
+    remote:
+      path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: TokenNames
+    path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+    startLine: 99
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  syntax:
+    content: >-
+      [Obsolete("Use IRecognizer.Vocabulary instead.")]
+
+      public override string[] TokenNames { get; }
+    parameters: []
+    return:
+      type: System.String[]
+    content.vb: >-
+      <Obsolete("Use IRecognizer.Vocabulary instead.")>
+
+      Public Overrides ReadOnly Property TokenNames As String()
+  overridden: Antlr4.Runtime.Lexer.TokenNames
+  overload: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.TokenNames*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Use IRecognizer.Vocabulary instead.
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.Vocabulary
+  commentId: P:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.Vocabulary
+  id: Vocabulary
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer
+  langs:
+  - csharp
+  - vb
+  name: Vocabulary
+  nameWithType: ScenarioGrammarLexer.Vocabulary
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.Vocabulary
+  type: Property
+  source:
+    remote:
+      path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Vocabulary
+    path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+    startLine: 108
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  syntax:
+    content: >-
+      [NotNull]
+
+      public override IVocabulary Vocabulary { get; }
+    parameters: []
+    return:
+      type: Antlr4.Runtime.IVocabulary
+    content.vb: >-
+      <NotNull>
+
+      Public Overrides ReadOnly Property Vocabulary As IVocabulary
+  overridden: Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.Vocabulary
+  overload: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.Vocabulary*
+  attributes:
+  - type: Antlr4.Runtime.Misc.NotNullAttribute
+    ctor: Antlr4.Runtime.Misc.NotNullAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.GrammarFileName
+  commentId: P:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.GrammarFileName
+  id: GrammarFileName
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer
+  langs:
+  - csharp
+  - vb
+  name: GrammarFileName
+  nameWithType: ScenarioGrammarLexer.GrammarFileName
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.GrammarFileName
+  type: Property
+  source:
+    remote:
+      path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: GrammarFileName
+    path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+    startLine: 117
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  syntax:
+    content: public override string GrammarFileName { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Overrides ReadOnly Property GrammarFileName As String
+  overridden: Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.GrammarFileName
+  overload: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.GrammarFileName*
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.RuleNames
+  commentId: P:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.RuleNames
+  id: RuleNames
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer
+  langs:
+  - csharp
+  - vb
+  name: RuleNames
+  nameWithType: ScenarioGrammarLexer.RuleNames
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.RuleNames
+  type: Property
+  source:
+    remote:
+      path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: RuleNames
+    path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+    startLine: 119
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  syntax:
+    content: public override string[] RuleNames { get; }
+    parameters: []
+    return:
+      type: System.String[]
+    content.vb: Public Overrides ReadOnly Property RuleNames As String()
+  overridden: Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.RuleNames
+  overload: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.RuleNames*
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.ModeNames
+  commentId: P:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.ModeNames
+  id: ModeNames
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer
+  langs:
+  - csharp
+  - vb
+  name: ModeNames
+  nameWithType: ScenarioGrammarLexer.ModeNames
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.ModeNames
+  type: Property
+  source:
+    remote:
+      path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: ModeNames
+    path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+    startLine: 121
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  syntax:
+    content: public override string[] ModeNames { get; }
+    parameters: []
+    return:
+      type: System.String[]
+    content.vb: Public Overrides ReadOnly Property ModeNames As String()
+  overridden: Antlr4.Runtime.Lexer.ModeNames
+  overload: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.ModeNames*
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.SerializedAtn
+  commentId: P:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.SerializedAtn
+  id: SerializedAtn
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer
+  langs:
+  - csharp
+  - vb
+  name: SerializedAtn
+  nameWithType: ScenarioGrammarLexer.SerializedAtn
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.SerializedAtn
+  type: Property
+  source:
+    remote:
+      path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: SerializedAtn
+    path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+    startLine: 123
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  syntax:
+    content: public override string SerializedAtn { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Overrides ReadOnly Property SerializedAtn As String
+  overridden: Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.SerializedAtn
+  overload: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.SerializedAtn*
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer._serializedATN
+  commentId: F:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer._serializedATN
+  id: _serializedATN
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer
+  langs:
+  - csharp
+  - vb
+  name: _serializedATN
+  nameWithType: ScenarioGrammarLexer._serializedATN
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer._serializedATN
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: _serializedATN
+    path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+    startLine: 125
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  syntax:
+    content: public static readonly string _serializedATN
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly _serializedATN As String
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer._ATN
+  commentId: F:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer._ATN
+  id: _ATN
+  parent: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer
+  langs:
+  - csharp
+  - vb
+  name: _ATN
+  nameWithType: ScenarioGrammarLexer._ATN
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer._ATN
+  type: Field
+  source:
+    remote:
+      path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: _ATN
+    path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarLexer.cs
+    startLine: 276
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  syntax:
+    content: public static readonly ATN _ATN
+    return:
+      type: Antlr4.Runtime.Atn.ATN
+    content.vb: Public Shared ReadOnly _ATN As ATN
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  commentId: N:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  name: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  nameWithType: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}
+  commentId: T:Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}
+  parent: Antlr4.Runtime
+  definition: Antlr4.Runtime.Recognizer`2
+  name: Recognizer<Int32, LexerATNSimulator>
+  nameWithType: Recognizer<Int32, LexerATNSimulator>
+  fullName: Antlr4.Runtime.Recognizer<System.Int32, Antlr4.Runtime.Atn.LexerATNSimulator>
+  nameWithType.vb: Recognizer(Of Int32, LexerATNSimulator)
+  fullName.vb: Antlr4.Runtime.Recognizer(Of System.Int32, Antlr4.Runtime.Atn.LexerATNSimulator)
+  name.vb: Recognizer(Of Int32, LexerATNSimulator)
+  spec.csharp:
+  - uid: Antlr4.Runtime.Recognizer`2
+    name: Recognizer
+    nameWithType: Recognizer
+    fullName: Antlr4.Runtime.Recognizer
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Antlr4.Runtime.Atn.LexerATNSimulator
+    name: LexerATNSimulator
+    nameWithType: LexerATNSimulator
+    fullName: Antlr4.Runtime.Atn.LexerATNSimulator
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Antlr4.Runtime.Recognizer`2
+    name: Recognizer
+    nameWithType: Recognizer
+    fullName: Antlr4.Runtime.Recognizer
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Antlr4.Runtime.Atn.LexerATNSimulator
+    name: LexerATNSimulator
+    nameWithType: LexerATNSimulator
+    fullName: Antlr4.Runtime.Atn.LexerATNSimulator
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.Lexer
+  commentId: T:Antlr4.Runtime.Lexer
+  parent: Antlr4.Runtime
+  isExternal: true
+  name: Lexer
+  nameWithType: Lexer
+  fullName: Antlr4.Runtime.Lexer
+- uid: Antlr4.Runtime.IRecognizer
+  commentId: T:Antlr4.Runtime.IRecognizer
+  parent: Antlr4.Runtime
+  isExternal: true
+  name: IRecognizer
+  nameWithType: IRecognizer
+  fullName: Antlr4.Runtime.IRecognizer
+- uid: Antlr4.Runtime.ITokenSource
+  commentId: T:Antlr4.Runtime.ITokenSource
+  parent: Antlr4.Runtime
+  isExternal: true
+  name: ITokenSource
+  nameWithType: ITokenSource
+  fullName: Antlr4.Runtime.ITokenSource
+- uid: Antlr4.Runtime.Lexer.DefaultMode
+  commentId: F:Antlr4.Runtime.Lexer.DefaultMode
+  parent: Antlr4.Runtime.Lexer
+  isExternal: true
+  name: DefaultMode
+  nameWithType: Lexer.DefaultMode
+  fullName: Antlr4.Runtime.Lexer.DefaultMode
+- uid: Antlr4.Runtime.Lexer.DefaultTokenChannel
+  commentId: F:Antlr4.Runtime.Lexer.DefaultTokenChannel
+  parent: Antlr4.Runtime.Lexer
+  isExternal: true
+  name: DefaultTokenChannel
+  nameWithType: Lexer.DefaultTokenChannel
+  fullName: Antlr4.Runtime.Lexer.DefaultTokenChannel
+- uid: Antlr4.Runtime.Lexer.Hidden
+  commentId: F:Antlr4.Runtime.Lexer.Hidden
+  parent: Antlr4.Runtime.Lexer
+  isExternal: true
+  name: Hidden
+  nameWithType: Lexer.Hidden
+  fullName: Antlr4.Runtime.Lexer.Hidden
+- uid: Antlr4.Runtime.Lexer.MinCharValue
+  commentId: F:Antlr4.Runtime.Lexer.MinCharValue
+  parent: Antlr4.Runtime.Lexer
+  isExternal: true
+  name: MinCharValue
+  nameWithType: Lexer.MinCharValue
+  fullName: Antlr4.Runtime.Lexer.MinCharValue
+- uid: Antlr4.Runtime.Lexer.MaxCharValue
+  commentId: F:Antlr4.Runtime.Lexer.MaxCharValue
+  parent: Antlr4.Runtime.Lexer
+  isExternal: true
+  name: MaxCharValue
+  nameWithType: Lexer.MaxCharValue
+  fullName: Antlr4.Runtime.Lexer.MaxCharValue
+- uid: Antlr4.Runtime.Lexer._input
+  commentId: F:Antlr4.Runtime.Lexer._input
+  parent: Antlr4.Runtime.Lexer
+  isExternal: true
+  name: _input
+  nameWithType: Lexer._input
+  fullName: Antlr4.Runtime.Lexer._input
+- uid: Antlr4.Runtime.Lexer._tokenFactorySourcePair
+  commentId: F:Antlr4.Runtime.Lexer._tokenFactorySourcePair
+  parent: Antlr4.Runtime.Lexer
+  isExternal: true
+  name: _tokenFactorySourcePair
+  nameWithType: Lexer._tokenFactorySourcePair
+  fullName: Antlr4.Runtime.Lexer._tokenFactorySourcePair
+- uid: Antlr4.Runtime.Lexer._factory
+  commentId: F:Antlr4.Runtime.Lexer._factory
+  parent: Antlr4.Runtime.Lexer
+  isExternal: true
+  name: _factory
+  nameWithType: Lexer._factory
+  fullName: Antlr4.Runtime.Lexer._factory
+- uid: Antlr4.Runtime.Lexer._token
+  commentId: F:Antlr4.Runtime.Lexer._token
+  parent: Antlr4.Runtime.Lexer
+  isExternal: true
+  name: _token
+  nameWithType: Lexer._token
+  fullName: Antlr4.Runtime.Lexer._token
+- uid: Antlr4.Runtime.Lexer._tokenStartCharIndex
+  commentId: F:Antlr4.Runtime.Lexer._tokenStartCharIndex
+  parent: Antlr4.Runtime.Lexer
+  isExternal: true
+  name: _tokenStartCharIndex
+  nameWithType: Lexer._tokenStartCharIndex
+  fullName: Antlr4.Runtime.Lexer._tokenStartCharIndex
+- uid: Antlr4.Runtime.Lexer._tokenStartLine
+  commentId: F:Antlr4.Runtime.Lexer._tokenStartLine
+  parent: Antlr4.Runtime.Lexer
+  isExternal: true
+  name: _tokenStartLine
+  nameWithType: Lexer._tokenStartLine
+  fullName: Antlr4.Runtime.Lexer._tokenStartLine
+- uid: Antlr4.Runtime.Lexer._tokenStartCharPositionInLine
+  commentId: F:Antlr4.Runtime.Lexer._tokenStartCharPositionInLine
+  parent: Antlr4.Runtime.Lexer
+  isExternal: true
+  name: _tokenStartCharPositionInLine
+  nameWithType: Lexer._tokenStartCharPositionInLine
+  fullName: Antlr4.Runtime.Lexer._tokenStartCharPositionInLine
+- uid: Antlr4.Runtime.Lexer._hitEOF
+  commentId: F:Antlr4.Runtime.Lexer._hitEOF
+  parent: Antlr4.Runtime.Lexer
+  isExternal: true
+  name: _hitEOF
+  nameWithType: Lexer._hitEOF
+  fullName: Antlr4.Runtime.Lexer._hitEOF
+- uid: Antlr4.Runtime.Lexer._channel
+  commentId: F:Antlr4.Runtime.Lexer._channel
+  parent: Antlr4.Runtime.Lexer
+  isExternal: true
+  name: _channel
+  nameWithType: Lexer._channel
+  fullName: Antlr4.Runtime.Lexer._channel
+- uid: Antlr4.Runtime.Lexer._type
+  commentId: F:Antlr4.Runtime.Lexer._type
+  parent: Antlr4.Runtime.Lexer
+  isExternal: true
+  name: _type
+  nameWithType: Lexer._type
+  fullName: Antlr4.Runtime.Lexer._type
+- uid: Antlr4.Runtime.Lexer._modeStack
+  commentId: F:Antlr4.Runtime.Lexer._modeStack
+  parent: Antlr4.Runtime.Lexer
+  isExternal: true
+  name: _modeStack
+  nameWithType: Lexer._modeStack
+  fullName: Antlr4.Runtime.Lexer._modeStack
+- uid: Antlr4.Runtime.Lexer._mode
+  commentId: F:Antlr4.Runtime.Lexer._mode
+  parent: Antlr4.Runtime.Lexer
+  isExternal: true
+  name: _mode
+  nameWithType: Lexer._mode
+  fullName: Antlr4.Runtime.Lexer._mode
+- uid: Antlr4.Runtime.Lexer._text
+  commentId: F:Antlr4.Runtime.Lexer._text
+  parent: Antlr4.Runtime.Lexer
+  isExternal: true
+  name: _text
+  nameWithType: Lexer._text
+  fullName: Antlr4.Runtime.Lexer._text
+- uid: Antlr4.Runtime.Lexer.Reset
+  commentId: M:Antlr4.Runtime.Lexer.Reset
+  parent: Antlr4.Runtime.Lexer
+  isExternal: true
+  name: Reset()
+  nameWithType: Lexer.Reset()
+  fullName: Antlr4.Runtime.Lexer.Reset()
+  spec.csharp:
+  - uid: Antlr4.Runtime.Lexer.Reset
+    name: Reset
+    nameWithType: Lexer.Reset
+    fullName: Antlr4.Runtime.Lexer.Reset
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.Lexer.Reset
+    name: Reset
+    nameWithType: Lexer.Reset
+    fullName: Antlr4.Runtime.Lexer.Reset
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.Lexer.NextToken
+  commentId: M:Antlr4.Runtime.Lexer.NextToken
+  parent: Antlr4.Runtime.Lexer
+  isExternal: true
+  name: NextToken()
+  nameWithType: Lexer.NextToken()
+  fullName: Antlr4.Runtime.Lexer.NextToken()
+  spec.csharp:
+  - uid: Antlr4.Runtime.Lexer.NextToken
+    name: NextToken
+    nameWithType: Lexer.NextToken
+    fullName: Antlr4.Runtime.Lexer.NextToken
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.Lexer.NextToken
+    name: NextToken
+    nameWithType: Lexer.NextToken
+    fullName: Antlr4.Runtime.Lexer.NextToken
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.Lexer.Skip
+  commentId: M:Antlr4.Runtime.Lexer.Skip
+  parent: Antlr4.Runtime.Lexer
+  isExternal: true
+  name: Skip()
+  nameWithType: Lexer.Skip()
+  fullName: Antlr4.Runtime.Lexer.Skip()
+  spec.csharp:
+  - uid: Antlr4.Runtime.Lexer.Skip
+    name: Skip
+    nameWithType: Lexer.Skip
+    fullName: Antlr4.Runtime.Lexer.Skip
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.Lexer.Skip
+    name: Skip
+    nameWithType: Lexer.Skip
+    fullName: Antlr4.Runtime.Lexer.Skip
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.Lexer.More
+  commentId: M:Antlr4.Runtime.Lexer.More
+  parent: Antlr4.Runtime.Lexer
+  isExternal: true
+  name: More()
+  nameWithType: Lexer.More()
+  fullName: Antlr4.Runtime.Lexer.More()
+  spec.csharp:
+  - uid: Antlr4.Runtime.Lexer.More
+    name: More
+    nameWithType: Lexer.More
+    fullName: Antlr4.Runtime.Lexer.More
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.Lexer.More
+    name: More
+    nameWithType: Lexer.More
+    fullName: Antlr4.Runtime.Lexer.More
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.Lexer.Mode(System.Int32)
+  commentId: M:Antlr4.Runtime.Lexer.Mode(System.Int32)
+  parent: Antlr4.Runtime.Lexer
+  isExternal: true
+  name: Mode(Int32)
+  nameWithType: Lexer.Mode(Int32)
+  fullName: Antlr4.Runtime.Lexer.Mode(System.Int32)
+  spec.csharp:
+  - uid: Antlr4.Runtime.Lexer.Mode(System.Int32)
+    name: Mode
+    nameWithType: Lexer.Mode
+    fullName: Antlr4.Runtime.Lexer.Mode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.Lexer.Mode(System.Int32)
+    name: Mode
+    nameWithType: Lexer.Mode
+    fullName: Antlr4.Runtime.Lexer.Mode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.Lexer.PushMode(System.Int32)
+  commentId: M:Antlr4.Runtime.Lexer.PushMode(System.Int32)
+  parent: Antlr4.Runtime.Lexer
+  isExternal: true
+  name: PushMode(Int32)
+  nameWithType: Lexer.PushMode(Int32)
+  fullName: Antlr4.Runtime.Lexer.PushMode(System.Int32)
+  spec.csharp:
+  - uid: Antlr4.Runtime.Lexer.PushMode(System.Int32)
+    name: PushMode
+    nameWithType: Lexer.PushMode
+    fullName: Antlr4.Runtime.Lexer.PushMode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.Lexer.PushMode(System.Int32)
+    name: PushMode
+    nameWithType: Lexer.PushMode
+    fullName: Antlr4.Runtime.Lexer.PushMode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.Lexer.PopMode
+  commentId: M:Antlr4.Runtime.Lexer.PopMode
+  parent: Antlr4.Runtime.Lexer
+  isExternal: true
+  name: PopMode()
+  nameWithType: Lexer.PopMode()
+  fullName: Antlr4.Runtime.Lexer.PopMode()
+  spec.csharp:
+  - uid: Antlr4.Runtime.Lexer.PopMode
+    name: PopMode
+    nameWithType: Lexer.PopMode
+    fullName: Antlr4.Runtime.Lexer.PopMode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.Lexer.PopMode
+    name: PopMode
+    nameWithType: Lexer.PopMode
+    fullName: Antlr4.Runtime.Lexer.PopMode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.Lexer.SetInputStream(Antlr4.Runtime.ICharStream)
+  commentId: M:Antlr4.Runtime.Lexer.SetInputStream(Antlr4.Runtime.ICharStream)
+  parent: Antlr4.Runtime.Lexer
+  isExternal: true
+  name: SetInputStream(ICharStream)
+  nameWithType: Lexer.SetInputStream(ICharStream)
+  fullName: Antlr4.Runtime.Lexer.SetInputStream(Antlr4.Runtime.ICharStream)
+  spec.csharp:
+  - uid: Antlr4.Runtime.Lexer.SetInputStream(Antlr4.Runtime.ICharStream)
+    name: SetInputStream
+    nameWithType: Lexer.SetInputStream
+    fullName: Antlr4.Runtime.Lexer.SetInputStream
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.ICharStream
+    name: ICharStream
+    nameWithType: ICharStream
+    fullName: Antlr4.Runtime.ICharStream
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.Lexer.SetInputStream(Antlr4.Runtime.ICharStream)
+    name: SetInputStream
+    nameWithType: Lexer.SetInputStream
+    fullName: Antlr4.Runtime.Lexer.SetInputStream
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.ICharStream
+    name: ICharStream
+    nameWithType: ICharStream
+    fullName: Antlr4.Runtime.ICharStream
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.Lexer.Emit(Antlr4.Runtime.IToken)
+  commentId: M:Antlr4.Runtime.Lexer.Emit(Antlr4.Runtime.IToken)
+  parent: Antlr4.Runtime.Lexer
+  isExternal: true
+  name: Emit(IToken)
+  nameWithType: Lexer.Emit(IToken)
+  fullName: Antlr4.Runtime.Lexer.Emit(Antlr4.Runtime.IToken)
+  spec.csharp:
+  - uid: Antlr4.Runtime.Lexer.Emit(Antlr4.Runtime.IToken)
+    name: Emit
+    nameWithType: Lexer.Emit
+    fullName: Antlr4.Runtime.Lexer.Emit
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.IToken
+    name: IToken
+    nameWithType: IToken
+    fullName: Antlr4.Runtime.IToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.Lexer.Emit(Antlr4.Runtime.IToken)
+    name: Emit
+    nameWithType: Lexer.Emit
+    fullName: Antlr4.Runtime.Lexer.Emit
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.IToken
+    name: IToken
+    nameWithType: IToken
+    fullName: Antlr4.Runtime.IToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.Lexer.Emit
+  commentId: M:Antlr4.Runtime.Lexer.Emit
+  parent: Antlr4.Runtime.Lexer
+  isExternal: true
+  name: Emit()
+  nameWithType: Lexer.Emit()
+  fullName: Antlr4.Runtime.Lexer.Emit()
+  spec.csharp:
+  - uid: Antlr4.Runtime.Lexer.Emit
+    name: Emit
+    nameWithType: Lexer.Emit
+    fullName: Antlr4.Runtime.Lexer.Emit
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.Lexer.Emit
+    name: Emit
+    nameWithType: Lexer.Emit
+    fullName: Antlr4.Runtime.Lexer.Emit
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.Lexer.EmitEOF
+  commentId: M:Antlr4.Runtime.Lexer.EmitEOF
+  parent: Antlr4.Runtime.Lexer
+  isExternal: true
+  name: EmitEOF()
+  nameWithType: Lexer.EmitEOF()
+  fullName: Antlr4.Runtime.Lexer.EmitEOF()
+  spec.csharp:
+  - uid: Antlr4.Runtime.Lexer.EmitEOF
+    name: EmitEOF
+    nameWithType: Lexer.EmitEOF
+    fullName: Antlr4.Runtime.Lexer.EmitEOF
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.Lexer.EmitEOF
+    name: EmitEOF
+    nameWithType: Lexer.EmitEOF
+    fullName: Antlr4.Runtime.Lexer.EmitEOF
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.Lexer.GetAllTokens
+  commentId: M:Antlr4.Runtime.Lexer.GetAllTokens
+  parent: Antlr4.Runtime.Lexer
+  isExternal: true
+  name: GetAllTokens()
+  nameWithType: Lexer.GetAllTokens()
+  fullName: Antlr4.Runtime.Lexer.GetAllTokens()
+  spec.csharp:
+  - uid: Antlr4.Runtime.Lexer.GetAllTokens
+    name: GetAllTokens
+    nameWithType: Lexer.GetAllTokens
+    fullName: Antlr4.Runtime.Lexer.GetAllTokens
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.Lexer.GetAllTokens
+    name: GetAllTokens
+    nameWithType: Lexer.GetAllTokens
+    fullName: Antlr4.Runtime.Lexer.GetAllTokens
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.Lexer.Recover(Antlr4.Runtime.LexerNoViableAltException)
+  commentId: M:Antlr4.Runtime.Lexer.Recover(Antlr4.Runtime.LexerNoViableAltException)
+  parent: Antlr4.Runtime.Lexer
+  isExternal: true
+  name: Recover(LexerNoViableAltException)
+  nameWithType: Lexer.Recover(LexerNoViableAltException)
+  fullName: Antlr4.Runtime.Lexer.Recover(Antlr4.Runtime.LexerNoViableAltException)
+  spec.csharp:
+  - uid: Antlr4.Runtime.Lexer.Recover(Antlr4.Runtime.LexerNoViableAltException)
+    name: Recover
+    nameWithType: Lexer.Recover
+    fullName: Antlr4.Runtime.Lexer.Recover
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.LexerNoViableAltException
+    name: LexerNoViableAltException
+    nameWithType: LexerNoViableAltException
+    fullName: Antlr4.Runtime.LexerNoViableAltException
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.Lexer.Recover(Antlr4.Runtime.LexerNoViableAltException)
+    name: Recover
+    nameWithType: Lexer.Recover
+    fullName: Antlr4.Runtime.Lexer.Recover
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.LexerNoViableAltException
+    name: LexerNoViableAltException
+    nameWithType: LexerNoViableAltException
+    fullName: Antlr4.Runtime.LexerNoViableAltException
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.Lexer.NotifyListeners(Antlr4.Runtime.LexerNoViableAltException)
+  commentId: M:Antlr4.Runtime.Lexer.NotifyListeners(Antlr4.Runtime.LexerNoViableAltException)
+  parent: Antlr4.Runtime.Lexer
+  isExternal: true
+  name: NotifyListeners(LexerNoViableAltException)
+  nameWithType: Lexer.NotifyListeners(LexerNoViableAltException)
+  fullName: Antlr4.Runtime.Lexer.NotifyListeners(Antlr4.Runtime.LexerNoViableAltException)
+  spec.csharp:
+  - uid: Antlr4.Runtime.Lexer.NotifyListeners(Antlr4.Runtime.LexerNoViableAltException)
+    name: NotifyListeners
+    nameWithType: Lexer.NotifyListeners
+    fullName: Antlr4.Runtime.Lexer.NotifyListeners
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.LexerNoViableAltException
+    name: LexerNoViableAltException
+    nameWithType: LexerNoViableAltException
+    fullName: Antlr4.Runtime.LexerNoViableAltException
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.Lexer.NotifyListeners(Antlr4.Runtime.LexerNoViableAltException)
+    name: NotifyListeners
+    nameWithType: Lexer.NotifyListeners
+    fullName: Antlr4.Runtime.Lexer.NotifyListeners
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.LexerNoViableAltException
+    name: LexerNoViableAltException
+    nameWithType: LexerNoViableAltException
+    fullName: Antlr4.Runtime.LexerNoViableAltException
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.Lexer.GetErrorDisplay(System.String)
+  commentId: M:Antlr4.Runtime.Lexer.GetErrorDisplay(System.String)
+  parent: Antlr4.Runtime.Lexer
+  isExternal: true
+  name: GetErrorDisplay(String)
+  nameWithType: Lexer.GetErrorDisplay(String)
+  fullName: Antlr4.Runtime.Lexer.GetErrorDisplay(System.String)
+  spec.csharp:
+  - uid: Antlr4.Runtime.Lexer.GetErrorDisplay(System.String)
+    name: GetErrorDisplay
+    nameWithType: Lexer.GetErrorDisplay
+    fullName: Antlr4.Runtime.Lexer.GetErrorDisplay
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.Lexer.GetErrorDisplay(System.String)
+    name: GetErrorDisplay
+    nameWithType: Lexer.GetErrorDisplay
+    fullName: Antlr4.Runtime.Lexer.GetErrorDisplay
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.Lexer.GetErrorDisplay(System.Int32)
+  commentId: M:Antlr4.Runtime.Lexer.GetErrorDisplay(System.Int32)
+  parent: Antlr4.Runtime.Lexer
+  isExternal: true
+  name: GetErrorDisplay(Int32)
+  nameWithType: Lexer.GetErrorDisplay(Int32)
+  fullName: Antlr4.Runtime.Lexer.GetErrorDisplay(System.Int32)
+  spec.csharp:
+  - uid: Antlr4.Runtime.Lexer.GetErrorDisplay(System.Int32)
+    name: GetErrorDisplay
+    nameWithType: Lexer.GetErrorDisplay
+    fullName: Antlr4.Runtime.Lexer.GetErrorDisplay
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.Lexer.GetErrorDisplay(System.Int32)
+    name: GetErrorDisplay
+    nameWithType: Lexer.GetErrorDisplay
+    fullName: Antlr4.Runtime.Lexer.GetErrorDisplay
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.Lexer.GetCharErrorDisplay(System.Int32)
+  commentId: M:Antlr4.Runtime.Lexer.GetCharErrorDisplay(System.Int32)
+  parent: Antlr4.Runtime.Lexer
+  isExternal: true
+  name: GetCharErrorDisplay(Int32)
+  nameWithType: Lexer.GetCharErrorDisplay(Int32)
+  fullName: Antlr4.Runtime.Lexer.GetCharErrorDisplay(System.Int32)
+  spec.csharp:
+  - uid: Antlr4.Runtime.Lexer.GetCharErrorDisplay(System.Int32)
+    name: GetCharErrorDisplay
+    nameWithType: Lexer.GetCharErrorDisplay
+    fullName: Antlr4.Runtime.Lexer.GetCharErrorDisplay
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.Lexer.GetCharErrorDisplay(System.Int32)
+    name: GetCharErrorDisplay
+    nameWithType: Lexer.GetCharErrorDisplay
+    fullName: Antlr4.Runtime.Lexer.GetCharErrorDisplay
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.Lexer.Recover(Antlr4.Runtime.RecognitionException)
+  commentId: M:Antlr4.Runtime.Lexer.Recover(Antlr4.Runtime.RecognitionException)
+  parent: Antlr4.Runtime.Lexer
+  isExternal: true
+  name: Recover(RecognitionException)
+  nameWithType: Lexer.Recover(RecognitionException)
+  fullName: Antlr4.Runtime.Lexer.Recover(Antlr4.Runtime.RecognitionException)
+  spec.csharp:
+  - uid: Antlr4.Runtime.Lexer.Recover(Antlr4.Runtime.RecognitionException)
+    name: Recover
+    nameWithType: Lexer.Recover
+    fullName: Antlr4.Runtime.Lexer.Recover
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.RecognitionException
+    name: RecognitionException
+    nameWithType: RecognitionException
+    fullName: Antlr4.Runtime.RecognitionException
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.Lexer.Recover(Antlr4.Runtime.RecognitionException)
+    name: Recover
+    nameWithType: Lexer.Recover
+    fullName: Antlr4.Runtime.Lexer.Recover
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.RecognitionException
+    name: RecognitionException
+    nameWithType: RecognitionException
+    fullName: Antlr4.Runtime.RecognitionException
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.Lexer.TokenFactory
+  commentId: P:Antlr4.Runtime.Lexer.TokenFactory
+  parent: Antlr4.Runtime.Lexer
+  isExternal: true
+  name: TokenFactory
+  nameWithType: Lexer.TokenFactory
+  fullName: Antlr4.Runtime.Lexer.TokenFactory
+- uid: Antlr4.Runtime.Lexer.SourceName
+  commentId: P:Antlr4.Runtime.Lexer.SourceName
+  parent: Antlr4.Runtime.Lexer
+  isExternal: true
+  name: SourceName
+  nameWithType: Lexer.SourceName
+  fullName: Antlr4.Runtime.Lexer.SourceName
+- uid: Antlr4.Runtime.Lexer.InputStream
+  commentId: P:Antlr4.Runtime.Lexer.InputStream
+  parent: Antlr4.Runtime.Lexer
+  isExternal: true
+  name: InputStream
+  nameWithType: Lexer.InputStream
+  fullName: Antlr4.Runtime.Lexer.InputStream
+- uid: Antlr4.Runtime.Lexer.Antlr4#Runtime#ITokenSource#InputStream
+  commentId: P:Antlr4.Runtime.Lexer.Antlr4#Runtime#ITokenSource#InputStream
+  parent: Antlr4.Runtime.Lexer
+  isExternal: true
+  name: ITokenSource.InputStream
+  nameWithType: Lexer.ITokenSource.InputStream
+  fullName: Antlr4.Runtime.Lexer.Antlr4.Runtime.ITokenSource.InputStream
+  nameWithType.vb: Lexer.Antlr4.Runtime.ITokenSource.InputStream
+  name.vb: Antlr4.Runtime.ITokenSource.InputStream
+- uid: Antlr4.Runtime.Lexer.Line
+  commentId: P:Antlr4.Runtime.Lexer.Line
+  parent: Antlr4.Runtime.Lexer
+  isExternal: true
+  name: Line
+  nameWithType: Lexer.Line
+  fullName: Antlr4.Runtime.Lexer.Line
+- uid: Antlr4.Runtime.Lexer.Column
+  commentId: P:Antlr4.Runtime.Lexer.Column
+  parent: Antlr4.Runtime.Lexer
+  isExternal: true
+  name: Column
+  nameWithType: Lexer.Column
+  fullName: Antlr4.Runtime.Lexer.Column
+- uid: Antlr4.Runtime.Lexer.CharIndex
+  commentId: P:Antlr4.Runtime.Lexer.CharIndex
+  parent: Antlr4.Runtime.Lexer
+  isExternal: true
+  name: CharIndex
+  nameWithType: Lexer.CharIndex
+  fullName: Antlr4.Runtime.Lexer.CharIndex
+- uid: Antlr4.Runtime.Lexer.Text
+  commentId: P:Antlr4.Runtime.Lexer.Text
+  parent: Antlr4.Runtime.Lexer
+  isExternal: true
+  name: Text
+  nameWithType: Lexer.Text
+  fullName: Antlr4.Runtime.Lexer.Text
+- uid: Antlr4.Runtime.Lexer.Token
+  commentId: P:Antlr4.Runtime.Lexer.Token
+  parent: Antlr4.Runtime.Lexer
+  isExternal: true
+  name: Token
+  nameWithType: Lexer.Token
+  fullName: Antlr4.Runtime.Lexer.Token
+- uid: Antlr4.Runtime.Lexer.Type
+  commentId: P:Antlr4.Runtime.Lexer.Type
+  parent: Antlr4.Runtime.Lexer
+  isExternal: true
+  name: Type
+  nameWithType: Lexer.Type
+  fullName: Antlr4.Runtime.Lexer.Type
+- uid: Antlr4.Runtime.Lexer.Channel
+  commentId: P:Antlr4.Runtime.Lexer.Channel
+  parent: Antlr4.Runtime.Lexer
+  isExternal: true
+  name: Channel
+  nameWithType: Lexer.Channel
+  fullName: Antlr4.Runtime.Lexer.Channel
+- uid: Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.Eof
+  commentId: F:Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.Eof
+  parent: Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}
+  definition: Antlr4.Runtime.Recognizer`2.Eof
+  name: Eof
+  nameWithType: Recognizer<Int32, LexerATNSimulator>.Eof
+  fullName: Antlr4.Runtime.Recognizer<System.Int32, Antlr4.Runtime.Atn.LexerATNSimulator>.Eof
+  nameWithType.vb: Recognizer(Of Int32, LexerATNSimulator).Eof
+  fullName.vb: Antlr4.Runtime.Recognizer(Of System.Int32, Antlr4.Runtime.Atn.LexerATNSimulator).Eof
+- uid: Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}._interp
+  commentId: F:Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}._interp
+  parent: Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}
+  definition: Antlr4.Runtime.Recognizer`2._interp
+  name: _interp
+  nameWithType: Recognizer<Int32, LexerATNSimulator>._interp
+  fullName: Antlr4.Runtime.Recognizer<System.Int32, Antlr4.Runtime.Atn.LexerATNSimulator>._interp
+  nameWithType.vb: Recognizer(Of Int32, LexerATNSimulator)._interp
+  fullName.vb: Antlr4.Runtime.Recognizer(Of System.Int32, Antlr4.Runtime.Atn.LexerATNSimulator)._interp
+- uid: Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.CreateTokenTypeMap(Antlr4.Runtime.IVocabulary)
+  commentId: M:Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.CreateTokenTypeMap(Antlr4.Runtime.IVocabulary)
+  parent: Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}
+  definition: Antlr4.Runtime.Recognizer`2.CreateTokenTypeMap(Antlr4.Runtime.IVocabulary)
+  name: CreateTokenTypeMap(IVocabulary)
+  nameWithType: Recognizer<Int32, LexerATNSimulator>.CreateTokenTypeMap(IVocabulary)
+  fullName: Antlr4.Runtime.Recognizer<System.Int32, Antlr4.Runtime.Atn.LexerATNSimulator>.CreateTokenTypeMap(Antlr4.Runtime.IVocabulary)
+  nameWithType.vb: Recognizer(Of Int32, LexerATNSimulator).CreateTokenTypeMap(IVocabulary)
+  fullName.vb: Antlr4.Runtime.Recognizer(Of System.Int32, Antlr4.Runtime.Atn.LexerATNSimulator).CreateTokenTypeMap(Antlr4.Runtime.IVocabulary)
+  spec.csharp:
+  - uid: Antlr4.Runtime.Recognizer`2.CreateTokenTypeMap(Antlr4.Runtime.IVocabulary)
+    name: CreateTokenTypeMap
+    nameWithType: Recognizer<Int32, LexerATNSimulator>.CreateTokenTypeMap
+    fullName: Antlr4.Runtime.Recognizer<System.Int32, Antlr4.Runtime.Atn.LexerATNSimulator>.CreateTokenTypeMap
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.IVocabulary
+    name: IVocabulary
+    nameWithType: IVocabulary
+    fullName: Antlr4.Runtime.IVocabulary
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.Recognizer`2.CreateTokenTypeMap(Antlr4.Runtime.IVocabulary)
+    name: CreateTokenTypeMap
+    nameWithType: Recognizer(Of Int32, LexerATNSimulator).CreateTokenTypeMap
+    fullName: Antlr4.Runtime.Recognizer(Of System.Int32, Antlr4.Runtime.Atn.LexerATNSimulator).CreateTokenTypeMap
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.IVocabulary
+    name: IVocabulary
+    nameWithType: IVocabulary
+    fullName: Antlr4.Runtime.IVocabulary
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.GetTokenType(System.String)
+  commentId: M:Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.GetTokenType(System.String)
+  parent: Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}
+  definition: Antlr4.Runtime.Recognizer`2.GetTokenType(System.String)
+  name: GetTokenType(String)
+  nameWithType: Recognizer<Int32, LexerATNSimulator>.GetTokenType(String)
+  fullName: Antlr4.Runtime.Recognizer<System.Int32, Antlr4.Runtime.Atn.LexerATNSimulator>.GetTokenType(System.String)
+  nameWithType.vb: Recognizer(Of Int32, LexerATNSimulator).GetTokenType(String)
+  fullName.vb: Antlr4.Runtime.Recognizer(Of System.Int32, Antlr4.Runtime.Atn.LexerATNSimulator).GetTokenType(System.String)
+  spec.csharp:
+  - uid: Antlr4.Runtime.Recognizer`2.GetTokenType(System.String)
+    name: GetTokenType
+    nameWithType: Recognizer<Int32, LexerATNSimulator>.GetTokenType
+    fullName: Antlr4.Runtime.Recognizer<System.Int32, Antlr4.Runtime.Atn.LexerATNSimulator>.GetTokenType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.Recognizer`2.GetTokenType(System.String)
+    name: GetTokenType
+    nameWithType: Recognizer(Of Int32, LexerATNSimulator).GetTokenType
+    fullName: Antlr4.Runtime.Recognizer(Of System.Int32, Antlr4.Runtime.Atn.LexerATNSimulator).GetTokenType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.GetErrorHeader(Antlr4.Runtime.RecognitionException)
+  commentId: M:Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.GetErrorHeader(Antlr4.Runtime.RecognitionException)
+  parent: Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}
+  definition: Antlr4.Runtime.Recognizer`2.GetErrorHeader(Antlr4.Runtime.RecognitionException)
+  name: GetErrorHeader(RecognitionException)
+  nameWithType: Recognizer<Int32, LexerATNSimulator>.GetErrorHeader(RecognitionException)
+  fullName: Antlr4.Runtime.Recognizer<System.Int32, Antlr4.Runtime.Atn.LexerATNSimulator>.GetErrorHeader(Antlr4.Runtime.RecognitionException)
+  nameWithType.vb: Recognizer(Of Int32, LexerATNSimulator).GetErrorHeader(RecognitionException)
+  fullName.vb: Antlr4.Runtime.Recognizer(Of System.Int32, Antlr4.Runtime.Atn.LexerATNSimulator).GetErrorHeader(Antlr4.Runtime.RecognitionException)
+  spec.csharp:
+  - uid: Antlr4.Runtime.Recognizer`2.GetErrorHeader(Antlr4.Runtime.RecognitionException)
+    name: GetErrorHeader
+    nameWithType: Recognizer<Int32, LexerATNSimulator>.GetErrorHeader
+    fullName: Antlr4.Runtime.Recognizer<System.Int32, Antlr4.Runtime.Atn.LexerATNSimulator>.GetErrorHeader
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.RecognitionException
+    name: RecognitionException
+    nameWithType: RecognitionException
+    fullName: Antlr4.Runtime.RecognitionException
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.Recognizer`2.GetErrorHeader(Antlr4.Runtime.RecognitionException)
+    name: GetErrorHeader
+    nameWithType: Recognizer(Of Int32, LexerATNSimulator).GetErrorHeader
+    fullName: Antlr4.Runtime.Recognizer(Of System.Int32, Antlr4.Runtime.Atn.LexerATNSimulator).GetErrorHeader
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.RecognitionException
+    name: RecognitionException
+    nameWithType: RecognitionException
+    fullName: Antlr4.Runtime.RecognitionException
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.GetTokenErrorDisplay(Antlr4.Runtime.IToken)
+  commentId: M:Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.GetTokenErrorDisplay(Antlr4.Runtime.IToken)
+  parent: Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}
+  definition: Antlr4.Runtime.Recognizer`2.GetTokenErrorDisplay(Antlr4.Runtime.IToken)
+  name: GetTokenErrorDisplay(IToken)
+  nameWithType: Recognizer<Int32, LexerATNSimulator>.GetTokenErrorDisplay(IToken)
+  fullName: Antlr4.Runtime.Recognizer<System.Int32, Antlr4.Runtime.Atn.LexerATNSimulator>.GetTokenErrorDisplay(Antlr4.Runtime.IToken)
+  nameWithType.vb: Recognizer(Of Int32, LexerATNSimulator).GetTokenErrorDisplay(IToken)
+  fullName.vb: Antlr4.Runtime.Recognizer(Of System.Int32, Antlr4.Runtime.Atn.LexerATNSimulator).GetTokenErrorDisplay(Antlr4.Runtime.IToken)
+  spec.csharp:
+  - uid: Antlr4.Runtime.Recognizer`2.GetTokenErrorDisplay(Antlr4.Runtime.IToken)
+    name: GetTokenErrorDisplay
+    nameWithType: Recognizer<Int32, LexerATNSimulator>.GetTokenErrorDisplay
+    fullName: Antlr4.Runtime.Recognizer<System.Int32, Antlr4.Runtime.Atn.LexerATNSimulator>.GetTokenErrorDisplay
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.IToken
+    name: IToken
+    nameWithType: IToken
+    fullName: Antlr4.Runtime.IToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.Recognizer`2.GetTokenErrorDisplay(Antlr4.Runtime.IToken)
+    name: GetTokenErrorDisplay
+    nameWithType: Recognizer(Of Int32, LexerATNSimulator).GetTokenErrorDisplay
+    fullName: Antlr4.Runtime.Recognizer(Of System.Int32, Antlr4.Runtime.Atn.LexerATNSimulator).GetTokenErrorDisplay
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.IToken
+    name: IToken
+    nameWithType: IToken
+    fullName: Antlr4.Runtime.IToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.AddErrorListener(Antlr4.Runtime.IAntlrErrorListener{System.Int32})
+  commentId: M:Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.AddErrorListener(Antlr4.Runtime.IAntlrErrorListener{System.Int32})
+  parent: Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}
+  definition: Antlr4.Runtime.Recognizer`2.AddErrorListener(Antlr4.Runtime.IAntlrErrorListener{`0})
+  name: AddErrorListener(IAntlrErrorListener<Int32>)
+  nameWithType: Recognizer<Int32, LexerATNSimulator>.AddErrorListener(IAntlrErrorListener<Int32>)
+  fullName: Antlr4.Runtime.Recognizer<System.Int32, Antlr4.Runtime.Atn.LexerATNSimulator>.AddErrorListener(Antlr4.Runtime.IAntlrErrorListener<System.Int32>)
+  nameWithType.vb: Recognizer(Of Int32, LexerATNSimulator).AddErrorListener(IAntlrErrorListener(Of Int32))
+  fullName.vb: Antlr4.Runtime.Recognizer(Of System.Int32, Antlr4.Runtime.Atn.LexerATNSimulator).AddErrorListener(Antlr4.Runtime.IAntlrErrorListener(Of System.Int32))
+  name.vb: AddErrorListener(IAntlrErrorListener(Of Int32))
+  spec.csharp:
+  - uid: Antlr4.Runtime.Recognizer`2.AddErrorListener(Antlr4.Runtime.IAntlrErrorListener{`0})
+    name: AddErrorListener
+    nameWithType: Recognizer<Int32, LexerATNSimulator>.AddErrorListener
+    fullName: Antlr4.Runtime.Recognizer<System.Int32, Antlr4.Runtime.Atn.LexerATNSimulator>.AddErrorListener
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.IAntlrErrorListener`1
+    name: IAntlrErrorListener
+    nameWithType: IAntlrErrorListener
+    fullName: Antlr4.Runtime.IAntlrErrorListener
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.Recognizer`2.AddErrorListener(Antlr4.Runtime.IAntlrErrorListener{`0})
+    name: AddErrorListener
+    nameWithType: Recognizer(Of Int32, LexerATNSimulator).AddErrorListener
+    fullName: Antlr4.Runtime.Recognizer(Of System.Int32, Antlr4.Runtime.Atn.LexerATNSimulator).AddErrorListener
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.IAntlrErrorListener`1
+    name: IAntlrErrorListener
+    nameWithType: IAntlrErrorListener
+    fullName: Antlr4.Runtime.IAntlrErrorListener
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.RemoveErrorListener(Antlr4.Runtime.IAntlrErrorListener{System.Int32})
+  commentId: M:Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.RemoveErrorListener(Antlr4.Runtime.IAntlrErrorListener{System.Int32})
+  parent: Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}
+  definition: Antlr4.Runtime.Recognizer`2.RemoveErrorListener(Antlr4.Runtime.IAntlrErrorListener{`0})
+  name: RemoveErrorListener(IAntlrErrorListener<Int32>)
+  nameWithType: Recognizer<Int32, LexerATNSimulator>.RemoveErrorListener(IAntlrErrorListener<Int32>)
+  fullName: Antlr4.Runtime.Recognizer<System.Int32, Antlr4.Runtime.Atn.LexerATNSimulator>.RemoveErrorListener(Antlr4.Runtime.IAntlrErrorListener<System.Int32>)
+  nameWithType.vb: Recognizer(Of Int32, LexerATNSimulator).RemoveErrorListener(IAntlrErrorListener(Of Int32))
+  fullName.vb: Antlr4.Runtime.Recognizer(Of System.Int32, Antlr4.Runtime.Atn.LexerATNSimulator).RemoveErrorListener(Antlr4.Runtime.IAntlrErrorListener(Of System.Int32))
+  name.vb: RemoveErrorListener(IAntlrErrorListener(Of Int32))
+  spec.csharp:
+  - uid: Antlr4.Runtime.Recognizer`2.RemoveErrorListener(Antlr4.Runtime.IAntlrErrorListener{`0})
+    name: RemoveErrorListener
+    nameWithType: Recognizer<Int32, LexerATNSimulator>.RemoveErrorListener
+    fullName: Antlr4.Runtime.Recognizer<System.Int32, Antlr4.Runtime.Atn.LexerATNSimulator>.RemoveErrorListener
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.IAntlrErrorListener`1
+    name: IAntlrErrorListener
+    nameWithType: IAntlrErrorListener
+    fullName: Antlr4.Runtime.IAntlrErrorListener
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.Recognizer`2.RemoveErrorListener(Antlr4.Runtime.IAntlrErrorListener{`0})
+    name: RemoveErrorListener
+    nameWithType: Recognizer(Of Int32, LexerATNSimulator).RemoveErrorListener
+    fullName: Antlr4.Runtime.Recognizer(Of System.Int32, Antlr4.Runtime.Atn.LexerATNSimulator).RemoveErrorListener
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.IAntlrErrorListener`1
+    name: IAntlrErrorListener
+    nameWithType: IAntlrErrorListener
+    fullName: Antlr4.Runtime.IAntlrErrorListener
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.RemoveErrorListeners
+  commentId: M:Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.RemoveErrorListeners
+  parent: Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}
+  definition: Antlr4.Runtime.Recognizer`2.RemoveErrorListeners
+  name: RemoveErrorListeners()
+  nameWithType: Recognizer<Int32, LexerATNSimulator>.RemoveErrorListeners()
+  fullName: Antlr4.Runtime.Recognizer<System.Int32, Antlr4.Runtime.Atn.LexerATNSimulator>.RemoveErrorListeners()
+  nameWithType.vb: Recognizer(Of Int32, LexerATNSimulator).RemoveErrorListeners()
+  fullName.vb: Antlr4.Runtime.Recognizer(Of System.Int32, Antlr4.Runtime.Atn.LexerATNSimulator).RemoveErrorListeners()
+  spec.csharp:
+  - uid: Antlr4.Runtime.Recognizer`2.RemoveErrorListeners
+    name: RemoveErrorListeners
+    nameWithType: Recognizer<Int32, LexerATNSimulator>.RemoveErrorListeners
+    fullName: Antlr4.Runtime.Recognizer<System.Int32, Antlr4.Runtime.Atn.LexerATNSimulator>.RemoveErrorListeners
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.Recognizer`2.RemoveErrorListeners
+    name: RemoveErrorListeners
+    nameWithType: Recognizer(Of Int32, LexerATNSimulator).RemoveErrorListeners
+    fullName: Antlr4.Runtime.Recognizer(Of System.Int32, Antlr4.Runtime.Atn.LexerATNSimulator).RemoveErrorListeners
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.Sempred(Antlr4.Runtime.RuleContext,System.Int32,System.Int32)
+  commentId: M:Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.Sempred(Antlr4.Runtime.RuleContext,System.Int32,System.Int32)
+  parent: Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}
+  definition: Antlr4.Runtime.Recognizer`2.Sempred(Antlr4.Runtime.RuleContext,System.Int32,System.Int32)
+  name: Sempred(RuleContext, Int32, Int32)
+  nameWithType: Recognizer<Int32, LexerATNSimulator>.Sempred(RuleContext, Int32, Int32)
+  fullName: Antlr4.Runtime.Recognizer<System.Int32, Antlr4.Runtime.Atn.LexerATNSimulator>.Sempred(Antlr4.Runtime.RuleContext, System.Int32, System.Int32)
+  nameWithType.vb: Recognizer(Of Int32, LexerATNSimulator).Sempred(RuleContext, Int32, Int32)
+  fullName.vb: Antlr4.Runtime.Recognizer(Of System.Int32, Antlr4.Runtime.Atn.LexerATNSimulator).Sempred(Antlr4.Runtime.RuleContext, System.Int32, System.Int32)
+  spec.csharp:
+  - uid: Antlr4.Runtime.Recognizer`2.Sempred(Antlr4.Runtime.RuleContext,System.Int32,System.Int32)
+    name: Sempred
+    nameWithType: Recognizer<Int32, LexerATNSimulator>.Sempred
+    fullName: Antlr4.Runtime.Recognizer<System.Int32, Antlr4.Runtime.Atn.LexerATNSimulator>.Sempred
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.RuleContext
+    name: RuleContext
+    nameWithType: RuleContext
+    fullName: Antlr4.Runtime.RuleContext
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.Recognizer`2.Sempred(Antlr4.Runtime.RuleContext,System.Int32,System.Int32)
+    name: Sempred
+    nameWithType: Recognizer(Of Int32, LexerATNSimulator).Sempred
+    fullName: Antlr4.Runtime.Recognizer(Of System.Int32, Antlr4.Runtime.Atn.LexerATNSimulator).Sempred
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.RuleContext
+    name: RuleContext
+    nameWithType: RuleContext
+    fullName: Antlr4.Runtime.RuleContext
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.Precpred(Antlr4.Runtime.RuleContext,System.Int32)
+  commentId: M:Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.Precpred(Antlr4.Runtime.RuleContext,System.Int32)
+  parent: Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}
+  definition: Antlr4.Runtime.Recognizer`2.Precpred(Antlr4.Runtime.RuleContext,System.Int32)
+  name: Precpred(RuleContext, Int32)
+  nameWithType: Recognizer<Int32, LexerATNSimulator>.Precpred(RuleContext, Int32)
+  fullName: Antlr4.Runtime.Recognizer<System.Int32, Antlr4.Runtime.Atn.LexerATNSimulator>.Precpred(Antlr4.Runtime.RuleContext, System.Int32)
+  nameWithType.vb: Recognizer(Of Int32, LexerATNSimulator).Precpred(RuleContext, Int32)
+  fullName.vb: Antlr4.Runtime.Recognizer(Of System.Int32, Antlr4.Runtime.Atn.LexerATNSimulator).Precpred(Antlr4.Runtime.RuleContext, System.Int32)
+  spec.csharp:
+  - uid: Antlr4.Runtime.Recognizer`2.Precpred(Antlr4.Runtime.RuleContext,System.Int32)
+    name: Precpred
+    nameWithType: Recognizer<Int32, LexerATNSimulator>.Precpred
+    fullName: Antlr4.Runtime.Recognizer<System.Int32, Antlr4.Runtime.Atn.LexerATNSimulator>.Precpred
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.RuleContext
+    name: RuleContext
+    nameWithType: RuleContext
+    fullName: Antlr4.Runtime.RuleContext
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.Recognizer`2.Precpred(Antlr4.Runtime.RuleContext,System.Int32)
+    name: Precpred
+    nameWithType: Recognizer(Of Int32, LexerATNSimulator).Precpred
+    fullName: Antlr4.Runtime.Recognizer(Of System.Int32, Antlr4.Runtime.Atn.LexerATNSimulator).Precpred
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.RuleContext
+    name: RuleContext
+    nameWithType: RuleContext
+    fullName: Antlr4.Runtime.RuleContext
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.Action(Antlr4.Runtime.RuleContext,System.Int32,System.Int32)
+  commentId: M:Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.Action(Antlr4.Runtime.RuleContext,System.Int32,System.Int32)
+  parent: Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}
+  definition: Antlr4.Runtime.Recognizer`2.Action(Antlr4.Runtime.RuleContext,System.Int32,System.Int32)
+  name: Action(RuleContext, Int32, Int32)
+  nameWithType: Recognizer<Int32, LexerATNSimulator>.Action(RuleContext, Int32, Int32)
+  fullName: Antlr4.Runtime.Recognizer<System.Int32, Antlr4.Runtime.Atn.LexerATNSimulator>.Action(Antlr4.Runtime.RuleContext, System.Int32, System.Int32)
+  nameWithType.vb: Recognizer(Of Int32, LexerATNSimulator).Action(RuleContext, Int32, Int32)
+  fullName.vb: Antlr4.Runtime.Recognizer(Of System.Int32, Antlr4.Runtime.Atn.LexerATNSimulator).Action(Antlr4.Runtime.RuleContext, System.Int32, System.Int32)
+  spec.csharp:
+  - uid: Antlr4.Runtime.Recognizer`2.Action(Antlr4.Runtime.RuleContext,System.Int32,System.Int32)
+    name: Action
+    nameWithType: Recognizer<Int32, LexerATNSimulator>.Action
+    fullName: Antlr4.Runtime.Recognizer<System.Int32, Antlr4.Runtime.Atn.LexerATNSimulator>.Action
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.RuleContext
+    name: RuleContext
+    nameWithType: RuleContext
+    fullName: Antlr4.Runtime.RuleContext
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.Recognizer`2.Action(Antlr4.Runtime.RuleContext,System.Int32,System.Int32)
+    name: Action
+    nameWithType: Recognizer(Of Int32, LexerATNSimulator).Action
+    fullName: Antlr4.Runtime.Recognizer(Of System.Int32, Antlr4.Runtime.Atn.LexerATNSimulator).Action
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.RuleContext
+    name: RuleContext
+    nameWithType: RuleContext
+    fullName: Antlr4.Runtime.RuleContext
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.TokenNames
+  commentId: P:Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.TokenNames
+  parent: Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}
+  definition: Antlr4.Runtime.Recognizer`2.TokenNames
+  name: TokenNames
+  nameWithType: Recognizer<Int32, LexerATNSimulator>.TokenNames
+  fullName: Antlr4.Runtime.Recognizer<System.Int32, Antlr4.Runtime.Atn.LexerATNSimulator>.TokenNames
+  nameWithType.vb: Recognizer(Of Int32, LexerATNSimulator).TokenNames
+  fullName.vb: Antlr4.Runtime.Recognizer(Of System.Int32, Antlr4.Runtime.Atn.LexerATNSimulator).TokenNames
+- uid: Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.RuleNames
+  commentId: P:Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.RuleNames
+  parent: Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}
+  definition: Antlr4.Runtime.Recognizer`2.RuleNames
+  name: RuleNames
+  nameWithType: Recognizer<Int32, LexerATNSimulator>.RuleNames
+  fullName: Antlr4.Runtime.Recognizer<System.Int32, Antlr4.Runtime.Atn.LexerATNSimulator>.RuleNames
+  nameWithType.vb: Recognizer(Of Int32, LexerATNSimulator).RuleNames
+  fullName.vb: Antlr4.Runtime.Recognizer(Of System.Int32, Antlr4.Runtime.Atn.LexerATNSimulator).RuleNames
+- uid: Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.Vocabulary
+  commentId: P:Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.Vocabulary
+  parent: Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}
+  definition: Antlr4.Runtime.Recognizer`2.Vocabulary
+  name: Vocabulary
+  nameWithType: Recognizer<Int32, LexerATNSimulator>.Vocabulary
+  fullName: Antlr4.Runtime.Recognizer<System.Int32, Antlr4.Runtime.Atn.LexerATNSimulator>.Vocabulary
+  nameWithType.vb: Recognizer(Of Int32, LexerATNSimulator).Vocabulary
+  fullName.vb: Antlr4.Runtime.Recognizer(Of System.Int32, Antlr4.Runtime.Atn.LexerATNSimulator).Vocabulary
+- uid: Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.TokenTypeMap
+  commentId: P:Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.TokenTypeMap
+  parent: Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}
+  definition: Antlr4.Runtime.Recognizer`2.TokenTypeMap
+  name: TokenTypeMap
+  nameWithType: Recognizer<Int32, LexerATNSimulator>.TokenTypeMap
+  fullName: Antlr4.Runtime.Recognizer<System.Int32, Antlr4.Runtime.Atn.LexerATNSimulator>.TokenTypeMap
+  nameWithType.vb: Recognizer(Of Int32, LexerATNSimulator).TokenTypeMap
+  fullName.vb: Antlr4.Runtime.Recognizer(Of System.Int32, Antlr4.Runtime.Atn.LexerATNSimulator).TokenTypeMap
+- uid: Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.RuleIndexMap
+  commentId: P:Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.RuleIndexMap
+  parent: Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}
+  definition: Antlr4.Runtime.Recognizer`2.RuleIndexMap
+  name: RuleIndexMap
+  nameWithType: Recognizer<Int32, LexerATNSimulator>.RuleIndexMap
+  fullName: Antlr4.Runtime.Recognizer<System.Int32, Antlr4.Runtime.Atn.LexerATNSimulator>.RuleIndexMap
+  nameWithType.vb: Recognizer(Of Int32, LexerATNSimulator).RuleIndexMap
+  fullName.vb: Antlr4.Runtime.Recognizer(Of System.Int32, Antlr4.Runtime.Atn.LexerATNSimulator).RuleIndexMap
+- uid: Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.SerializedAtn
+  commentId: P:Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.SerializedAtn
+  parent: Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}
+  definition: Antlr4.Runtime.Recognizer`2.SerializedAtn
+  name: SerializedAtn
+  nameWithType: Recognizer<Int32, LexerATNSimulator>.SerializedAtn
+  fullName: Antlr4.Runtime.Recognizer<System.Int32, Antlr4.Runtime.Atn.LexerATNSimulator>.SerializedAtn
+  nameWithType.vb: Recognizer(Of Int32, LexerATNSimulator).SerializedAtn
+  fullName.vb: Antlr4.Runtime.Recognizer(Of System.Int32, Antlr4.Runtime.Atn.LexerATNSimulator).SerializedAtn
+- uid: Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.GrammarFileName
+  commentId: P:Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.GrammarFileName
+  parent: Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}
+  definition: Antlr4.Runtime.Recognizer`2.GrammarFileName
+  name: GrammarFileName
+  nameWithType: Recognizer<Int32, LexerATNSimulator>.GrammarFileName
+  fullName: Antlr4.Runtime.Recognizer<System.Int32, Antlr4.Runtime.Atn.LexerATNSimulator>.GrammarFileName
+  nameWithType.vb: Recognizer(Of Int32, LexerATNSimulator).GrammarFileName
+  fullName.vb: Antlr4.Runtime.Recognizer(Of System.Int32, Antlr4.Runtime.Atn.LexerATNSimulator).GrammarFileName
+- uid: Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.Atn
+  commentId: P:Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.Atn
+  parent: Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}
+  definition: Antlr4.Runtime.Recognizer`2.Atn
+  name: Atn
+  nameWithType: Recognizer<Int32, LexerATNSimulator>.Atn
+  fullName: Antlr4.Runtime.Recognizer<System.Int32, Antlr4.Runtime.Atn.LexerATNSimulator>.Atn
+  nameWithType.vb: Recognizer(Of Int32, LexerATNSimulator).Atn
+  fullName.vb: Antlr4.Runtime.Recognizer(Of System.Int32, Antlr4.Runtime.Atn.LexerATNSimulator).Atn
+- uid: Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.Interpreter
+  commentId: P:Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.Interpreter
+  parent: Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}
+  definition: Antlr4.Runtime.Recognizer`2.Interpreter
+  name: Interpreter
+  nameWithType: Recognizer<Int32, LexerATNSimulator>.Interpreter
+  fullName: Antlr4.Runtime.Recognizer<System.Int32, Antlr4.Runtime.Atn.LexerATNSimulator>.Interpreter
+  nameWithType.vb: Recognizer(Of Int32, LexerATNSimulator).Interpreter
+  fullName.vb: Antlr4.Runtime.Recognizer(Of System.Int32, Antlr4.Runtime.Atn.LexerATNSimulator).Interpreter
+- uid: Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.ParseInfo
+  commentId: P:Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.ParseInfo
+  parent: Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}
+  definition: Antlr4.Runtime.Recognizer`2.ParseInfo
+  name: ParseInfo
+  nameWithType: Recognizer<Int32, LexerATNSimulator>.ParseInfo
+  fullName: Antlr4.Runtime.Recognizer<System.Int32, Antlr4.Runtime.Atn.LexerATNSimulator>.ParseInfo
+  nameWithType.vb: Recognizer(Of Int32, LexerATNSimulator).ParseInfo
+  fullName.vb: Antlr4.Runtime.Recognizer(Of System.Int32, Antlr4.Runtime.Atn.LexerATNSimulator).ParseInfo
+- uid: Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.ErrorListeners
+  commentId: P:Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.ErrorListeners
+  parent: Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}
+  definition: Antlr4.Runtime.Recognizer`2.ErrorListeners
+  name: ErrorListeners
+  nameWithType: Recognizer<Int32, LexerATNSimulator>.ErrorListeners
+  fullName: Antlr4.Runtime.Recognizer<System.Int32, Antlr4.Runtime.Atn.LexerATNSimulator>.ErrorListeners
+  nameWithType.vb: Recognizer(Of Int32, LexerATNSimulator).ErrorListeners
+  fullName.vb: Antlr4.Runtime.Recognizer(Of System.Int32, Antlr4.Runtime.Atn.LexerATNSimulator).ErrorListeners
+- uid: Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.ErrorListenerDispatch
+  commentId: P:Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.ErrorListenerDispatch
+  parent: Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}
+  definition: Antlr4.Runtime.Recognizer`2.ErrorListenerDispatch
+  name: ErrorListenerDispatch
+  nameWithType: Recognizer<Int32, LexerATNSimulator>.ErrorListenerDispatch
+  fullName: Antlr4.Runtime.Recognizer<System.Int32, Antlr4.Runtime.Atn.LexerATNSimulator>.ErrorListenerDispatch
+  nameWithType.vb: Recognizer(Of Int32, LexerATNSimulator).ErrorListenerDispatch
+  fullName.vb: Antlr4.Runtime.Recognizer(Of System.Int32, Antlr4.Runtime.Atn.LexerATNSimulator).ErrorListenerDispatch
+- uid: Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.State
+  commentId: P:Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.State
+  parent: Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}
+  definition: Antlr4.Runtime.Recognizer`2.State
+  name: State
+  nameWithType: Recognizer<Int32, LexerATNSimulator>.State
+  fullName: Antlr4.Runtime.Recognizer<System.Int32, Antlr4.Runtime.Atn.LexerATNSimulator>.State
+  nameWithType.vb: Recognizer(Of Int32, LexerATNSimulator).State
+  fullName.vb: Antlr4.Runtime.Recognizer(Of System.Int32, Antlr4.Runtime.Atn.LexerATNSimulator).State
+- uid: Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.InputStream
+  commentId: P:Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.InputStream
+  parent: Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}
+  definition: Antlr4.Runtime.Recognizer`2.InputStream
+  name: InputStream
+  nameWithType: Recognizer<Int32, LexerATNSimulator>.InputStream
+  fullName: Antlr4.Runtime.Recognizer<System.Int32, Antlr4.Runtime.Atn.LexerATNSimulator>.InputStream
+  nameWithType.vb: Recognizer(Of Int32, LexerATNSimulator).InputStream
+  fullName.vb: Antlr4.Runtime.Recognizer(Of System.Int32, Antlr4.Runtime.Atn.LexerATNSimulator).InputStream
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Antlr4.Runtime.Recognizer`2
+  commentId: T:Antlr4.Runtime.Recognizer`2
+  isExternal: true
+  name: Recognizer<Symbol, ATNInterpreter>
+  nameWithType: Recognizer<Symbol, ATNInterpreter>
+  fullName: Antlr4.Runtime.Recognizer<Symbol, ATNInterpreter>
+  nameWithType.vb: Recognizer(Of Symbol, ATNInterpreter)
+  fullName.vb: Antlr4.Runtime.Recognizer(Of Symbol, ATNInterpreter)
+  name.vb: Recognizer(Of Symbol, ATNInterpreter)
+  spec.csharp:
+  - uid: Antlr4.Runtime.Recognizer`2
+    name: Recognizer
+    nameWithType: Recognizer
+    fullName: Antlr4.Runtime.Recognizer
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: Symbol
+    nameWithType: Symbol
+    fullName: Symbol
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ATNInterpreter
+    nameWithType: ATNInterpreter
+    fullName: ATNInterpreter
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Antlr4.Runtime.Recognizer`2
+    name: Recognizer
+    nameWithType: Recognizer
+    fullName: Antlr4.Runtime.Recognizer
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: Symbol
+    nameWithType: Symbol
+    fullName: Symbol
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ATNInterpreter
+    nameWithType: ATNInterpreter
+    fullName: ATNInterpreter
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime
+  commentId: N:Antlr4.Runtime
+  isExternal: true
+  name: Antlr4.Runtime
+  nameWithType: Antlr4.Runtime
+  fullName: Antlr4.Runtime
+- uid: Antlr4.Runtime.Recognizer`2.Eof
+  commentId: F:Antlr4.Runtime.Recognizer`2.Eof
+  isExternal: true
+  name: Eof
+  nameWithType: Recognizer<Symbol, ATNInterpreter>.Eof
+  fullName: Antlr4.Runtime.Recognizer<Symbol, ATNInterpreter>.Eof
+  nameWithType.vb: Recognizer(Of Symbol, ATNInterpreter).Eof
+  fullName.vb: Antlr4.Runtime.Recognizer(Of Symbol, ATNInterpreter).Eof
+- uid: Antlr4.Runtime.Recognizer`2._interp
+  commentId: F:Antlr4.Runtime.Recognizer`2._interp
+  isExternal: true
+  name: _interp
+  nameWithType: Recognizer<Symbol, ATNInterpreter>._interp
+  fullName: Antlr4.Runtime.Recognizer<Symbol, ATNInterpreter>._interp
+  nameWithType.vb: Recognizer(Of Symbol, ATNInterpreter)._interp
+  fullName.vb: Antlr4.Runtime.Recognizer(Of Symbol, ATNInterpreter)._interp
+- uid: Antlr4.Runtime.Recognizer`2.CreateTokenTypeMap(Antlr4.Runtime.IVocabulary)
+  commentId: M:Antlr4.Runtime.Recognizer`2.CreateTokenTypeMap(Antlr4.Runtime.IVocabulary)
+  isExternal: true
+  name: CreateTokenTypeMap(IVocabulary)
+  nameWithType: Recognizer<Symbol, ATNInterpreter>.CreateTokenTypeMap(IVocabulary)
+  fullName: Antlr4.Runtime.Recognizer<Symbol, ATNInterpreter>.CreateTokenTypeMap(Antlr4.Runtime.IVocabulary)
+  nameWithType.vb: Recognizer(Of Symbol, ATNInterpreter).CreateTokenTypeMap(IVocabulary)
+  fullName.vb: Antlr4.Runtime.Recognizer(Of Symbol, ATNInterpreter).CreateTokenTypeMap(Antlr4.Runtime.IVocabulary)
+  spec.csharp:
+  - uid: Antlr4.Runtime.Recognizer`2.CreateTokenTypeMap(Antlr4.Runtime.IVocabulary)
+    name: CreateTokenTypeMap
+    nameWithType: Recognizer<Symbol, ATNInterpreter>.CreateTokenTypeMap
+    fullName: Antlr4.Runtime.Recognizer<Symbol, ATNInterpreter>.CreateTokenTypeMap
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.IVocabulary
+    name: IVocabulary
+    nameWithType: IVocabulary
+    fullName: Antlr4.Runtime.IVocabulary
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.Recognizer`2.CreateTokenTypeMap(Antlr4.Runtime.IVocabulary)
+    name: CreateTokenTypeMap
+    nameWithType: Recognizer(Of Symbol, ATNInterpreter).CreateTokenTypeMap
+    fullName: Antlr4.Runtime.Recognizer(Of Symbol, ATNInterpreter).CreateTokenTypeMap
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.IVocabulary
+    name: IVocabulary
+    nameWithType: IVocabulary
+    fullName: Antlr4.Runtime.IVocabulary
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.Recognizer`2.GetTokenType(System.String)
+  commentId: M:Antlr4.Runtime.Recognizer`2.GetTokenType(System.String)
+  isExternal: true
+  name: GetTokenType(String)
+  nameWithType: Recognizer<Symbol, ATNInterpreter>.GetTokenType(String)
+  fullName: Antlr4.Runtime.Recognizer<Symbol, ATNInterpreter>.GetTokenType(System.String)
+  nameWithType.vb: Recognizer(Of Symbol, ATNInterpreter).GetTokenType(String)
+  fullName.vb: Antlr4.Runtime.Recognizer(Of Symbol, ATNInterpreter).GetTokenType(System.String)
+  spec.csharp:
+  - uid: Antlr4.Runtime.Recognizer`2.GetTokenType(System.String)
+    name: GetTokenType
+    nameWithType: Recognizer<Symbol, ATNInterpreter>.GetTokenType
+    fullName: Antlr4.Runtime.Recognizer<Symbol, ATNInterpreter>.GetTokenType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.Recognizer`2.GetTokenType(System.String)
+    name: GetTokenType
+    nameWithType: Recognizer(Of Symbol, ATNInterpreter).GetTokenType
+    fullName: Antlr4.Runtime.Recognizer(Of Symbol, ATNInterpreter).GetTokenType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.Recognizer`2.GetErrorHeader(Antlr4.Runtime.RecognitionException)
+  commentId: M:Antlr4.Runtime.Recognizer`2.GetErrorHeader(Antlr4.Runtime.RecognitionException)
+  isExternal: true
+  name: GetErrorHeader(RecognitionException)
+  nameWithType: Recognizer<Symbol, ATNInterpreter>.GetErrorHeader(RecognitionException)
+  fullName: Antlr4.Runtime.Recognizer<Symbol, ATNInterpreter>.GetErrorHeader(Antlr4.Runtime.RecognitionException)
+  nameWithType.vb: Recognizer(Of Symbol, ATNInterpreter).GetErrorHeader(RecognitionException)
+  fullName.vb: Antlr4.Runtime.Recognizer(Of Symbol, ATNInterpreter).GetErrorHeader(Antlr4.Runtime.RecognitionException)
+  spec.csharp:
+  - uid: Antlr4.Runtime.Recognizer`2.GetErrorHeader(Antlr4.Runtime.RecognitionException)
+    name: GetErrorHeader
+    nameWithType: Recognizer<Symbol, ATNInterpreter>.GetErrorHeader
+    fullName: Antlr4.Runtime.Recognizer<Symbol, ATNInterpreter>.GetErrorHeader
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.RecognitionException
+    name: RecognitionException
+    nameWithType: RecognitionException
+    fullName: Antlr4.Runtime.RecognitionException
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.Recognizer`2.GetErrorHeader(Antlr4.Runtime.RecognitionException)
+    name: GetErrorHeader
+    nameWithType: Recognizer(Of Symbol, ATNInterpreter).GetErrorHeader
+    fullName: Antlr4.Runtime.Recognizer(Of Symbol, ATNInterpreter).GetErrorHeader
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.RecognitionException
+    name: RecognitionException
+    nameWithType: RecognitionException
+    fullName: Antlr4.Runtime.RecognitionException
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.Recognizer`2.GetTokenErrorDisplay(Antlr4.Runtime.IToken)
+  commentId: M:Antlr4.Runtime.Recognizer`2.GetTokenErrorDisplay(Antlr4.Runtime.IToken)
+  isExternal: true
+  name: GetTokenErrorDisplay(IToken)
+  nameWithType: Recognizer<Symbol, ATNInterpreter>.GetTokenErrorDisplay(IToken)
+  fullName: Antlr4.Runtime.Recognizer<Symbol, ATNInterpreter>.GetTokenErrorDisplay(Antlr4.Runtime.IToken)
+  nameWithType.vb: Recognizer(Of Symbol, ATNInterpreter).GetTokenErrorDisplay(IToken)
+  fullName.vb: Antlr4.Runtime.Recognizer(Of Symbol, ATNInterpreter).GetTokenErrorDisplay(Antlr4.Runtime.IToken)
+  spec.csharp:
+  - uid: Antlr4.Runtime.Recognizer`2.GetTokenErrorDisplay(Antlr4.Runtime.IToken)
+    name: GetTokenErrorDisplay
+    nameWithType: Recognizer<Symbol, ATNInterpreter>.GetTokenErrorDisplay
+    fullName: Antlr4.Runtime.Recognizer<Symbol, ATNInterpreter>.GetTokenErrorDisplay
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.IToken
+    name: IToken
+    nameWithType: IToken
+    fullName: Antlr4.Runtime.IToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.Recognizer`2.GetTokenErrorDisplay(Antlr4.Runtime.IToken)
+    name: GetTokenErrorDisplay
+    nameWithType: Recognizer(Of Symbol, ATNInterpreter).GetTokenErrorDisplay
+    fullName: Antlr4.Runtime.Recognizer(Of Symbol, ATNInterpreter).GetTokenErrorDisplay
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.IToken
+    name: IToken
+    nameWithType: IToken
+    fullName: Antlr4.Runtime.IToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.Recognizer`2.AddErrorListener(Antlr4.Runtime.IAntlrErrorListener{`0})
+  commentId: M:Antlr4.Runtime.Recognizer`2.AddErrorListener(Antlr4.Runtime.IAntlrErrorListener{`0})
+  isExternal: true
+  name: AddErrorListener(IAntlrErrorListener<Symbol>)
+  nameWithType: Recognizer<Symbol, ATNInterpreter>.AddErrorListener(IAntlrErrorListener<Symbol>)
+  fullName: Antlr4.Runtime.Recognizer<Symbol, ATNInterpreter>.AddErrorListener(Antlr4.Runtime.IAntlrErrorListener<Symbol>)
+  nameWithType.vb: Recognizer(Of Symbol, ATNInterpreter).AddErrorListener(IAntlrErrorListener(Of Symbol))
+  fullName.vb: Antlr4.Runtime.Recognizer(Of Symbol, ATNInterpreter).AddErrorListener(Antlr4.Runtime.IAntlrErrorListener(Of Symbol))
+  name.vb: AddErrorListener(IAntlrErrorListener(Of Symbol))
+  spec.csharp:
+  - uid: Antlr4.Runtime.Recognizer`2.AddErrorListener(Antlr4.Runtime.IAntlrErrorListener{`0})
+    name: AddErrorListener
+    nameWithType: Recognizer<Symbol, ATNInterpreter>.AddErrorListener
+    fullName: Antlr4.Runtime.Recognizer<Symbol, ATNInterpreter>.AddErrorListener
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.IAntlrErrorListener`1
+    name: IAntlrErrorListener
+    nameWithType: IAntlrErrorListener
+    fullName: Antlr4.Runtime.IAntlrErrorListener
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: Symbol
+    nameWithType: Symbol
+    fullName: Symbol
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.Recognizer`2.AddErrorListener(Antlr4.Runtime.IAntlrErrorListener{`0})
+    name: AddErrorListener
+    nameWithType: Recognizer(Of Symbol, ATNInterpreter).AddErrorListener
+    fullName: Antlr4.Runtime.Recognizer(Of Symbol, ATNInterpreter).AddErrorListener
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.IAntlrErrorListener`1
+    name: IAntlrErrorListener
+    nameWithType: IAntlrErrorListener
+    fullName: Antlr4.Runtime.IAntlrErrorListener
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: Symbol
+    nameWithType: Symbol
+    fullName: Symbol
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.Recognizer`2.RemoveErrorListener(Antlr4.Runtime.IAntlrErrorListener{`0})
+  commentId: M:Antlr4.Runtime.Recognizer`2.RemoveErrorListener(Antlr4.Runtime.IAntlrErrorListener{`0})
+  isExternal: true
+  name: RemoveErrorListener(IAntlrErrorListener<Symbol>)
+  nameWithType: Recognizer<Symbol, ATNInterpreter>.RemoveErrorListener(IAntlrErrorListener<Symbol>)
+  fullName: Antlr4.Runtime.Recognizer<Symbol, ATNInterpreter>.RemoveErrorListener(Antlr4.Runtime.IAntlrErrorListener<Symbol>)
+  nameWithType.vb: Recognizer(Of Symbol, ATNInterpreter).RemoveErrorListener(IAntlrErrorListener(Of Symbol))
+  fullName.vb: Antlr4.Runtime.Recognizer(Of Symbol, ATNInterpreter).RemoveErrorListener(Antlr4.Runtime.IAntlrErrorListener(Of Symbol))
+  name.vb: RemoveErrorListener(IAntlrErrorListener(Of Symbol))
+  spec.csharp:
+  - uid: Antlr4.Runtime.Recognizer`2.RemoveErrorListener(Antlr4.Runtime.IAntlrErrorListener{`0})
+    name: RemoveErrorListener
+    nameWithType: Recognizer<Symbol, ATNInterpreter>.RemoveErrorListener
+    fullName: Antlr4.Runtime.Recognizer<Symbol, ATNInterpreter>.RemoveErrorListener
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.IAntlrErrorListener`1
+    name: IAntlrErrorListener
+    nameWithType: IAntlrErrorListener
+    fullName: Antlr4.Runtime.IAntlrErrorListener
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: Symbol
+    nameWithType: Symbol
+    fullName: Symbol
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.Recognizer`2.RemoveErrorListener(Antlr4.Runtime.IAntlrErrorListener{`0})
+    name: RemoveErrorListener
+    nameWithType: Recognizer(Of Symbol, ATNInterpreter).RemoveErrorListener
+    fullName: Antlr4.Runtime.Recognizer(Of Symbol, ATNInterpreter).RemoveErrorListener
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.IAntlrErrorListener`1
+    name: IAntlrErrorListener
+    nameWithType: IAntlrErrorListener
+    fullName: Antlr4.Runtime.IAntlrErrorListener
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: Symbol
+    nameWithType: Symbol
+    fullName: Symbol
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.Recognizer`2.RemoveErrorListeners
+  commentId: M:Antlr4.Runtime.Recognizer`2.RemoveErrorListeners
+  isExternal: true
+  name: RemoveErrorListeners()
+  nameWithType: Recognizer<Symbol, ATNInterpreter>.RemoveErrorListeners()
+  fullName: Antlr4.Runtime.Recognizer<Symbol, ATNInterpreter>.RemoveErrorListeners()
+  nameWithType.vb: Recognizer(Of Symbol, ATNInterpreter).RemoveErrorListeners()
+  fullName.vb: Antlr4.Runtime.Recognizer(Of Symbol, ATNInterpreter).RemoveErrorListeners()
+  spec.csharp:
+  - uid: Antlr4.Runtime.Recognizer`2.RemoveErrorListeners
+    name: RemoveErrorListeners
+    nameWithType: Recognizer<Symbol, ATNInterpreter>.RemoveErrorListeners
+    fullName: Antlr4.Runtime.Recognizer<Symbol, ATNInterpreter>.RemoveErrorListeners
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.Recognizer`2.RemoveErrorListeners
+    name: RemoveErrorListeners
+    nameWithType: Recognizer(Of Symbol, ATNInterpreter).RemoveErrorListeners
+    fullName: Antlr4.Runtime.Recognizer(Of Symbol, ATNInterpreter).RemoveErrorListeners
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.Recognizer`2.Sempred(Antlr4.Runtime.RuleContext,System.Int32,System.Int32)
+  commentId: M:Antlr4.Runtime.Recognizer`2.Sempred(Antlr4.Runtime.RuleContext,System.Int32,System.Int32)
+  isExternal: true
+  name: Sempred(RuleContext, Int32, Int32)
+  nameWithType: Recognizer<Symbol, ATNInterpreter>.Sempred(RuleContext, Int32, Int32)
+  fullName: Antlr4.Runtime.Recognizer<Symbol, ATNInterpreter>.Sempred(Antlr4.Runtime.RuleContext, System.Int32, System.Int32)
+  nameWithType.vb: Recognizer(Of Symbol, ATNInterpreter).Sempred(RuleContext, Int32, Int32)
+  fullName.vb: Antlr4.Runtime.Recognizer(Of Symbol, ATNInterpreter).Sempred(Antlr4.Runtime.RuleContext, System.Int32, System.Int32)
+  spec.csharp:
+  - uid: Antlr4.Runtime.Recognizer`2.Sempred(Antlr4.Runtime.RuleContext,System.Int32,System.Int32)
+    name: Sempred
+    nameWithType: Recognizer<Symbol, ATNInterpreter>.Sempred
+    fullName: Antlr4.Runtime.Recognizer<Symbol, ATNInterpreter>.Sempred
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.RuleContext
+    name: RuleContext
+    nameWithType: RuleContext
+    fullName: Antlr4.Runtime.RuleContext
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.Recognizer`2.Sempred(Antlr4.Runtime.RuleContext,System.Int32,System.Int32)
+    name: Sempred
+    nameWithType: Recognizer(Of Symbol, ATNInterpreter).Sempred
+    fullName: Antlr4.Runtime.Recognizer(Of Symbol, ATNInterpreter).Sempred
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.RuleContext
+    name: RuleContext
+    nameWithType: RuleContext
+    fullName: Antlr4.Runtime.RuleContext
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.Recognizer`2.Precpred(Antlr4.Runtime.RuleContext,System.Int32)
+  commentId: M:Antlr4.Runtime.Recognizer`2.Precpred(Antlr4.Runtime.RuleContext,System.Int32)
+  isExternal: true
+  name: Precpred(RuleContext, Int32)
+  nameWithType: Recognizer<Symbol, ATNInterpreter>.Precpred(RuleContext, Int32)
+  fullName: Antlr4.Runtime.Recognizer<Symbol, ATNInterpreter>.Precpred(Antlr4.Runtime.RuleContext, System.Int32)
+  nameWithType.vb: Recognizer(Of Symbol, ATNInterpreter).Precpred(RuleContext, Int32)
+  fullName.vb: Antlr4.Runtime.Recognizer(Of Symbol, ATNInterpreter).Precpred(Antlr4.Runtime.RuleContext, System.Int32)
+  spec.csharp:
+  - uid: Antlr4.Runtime.Recognizer`2.Precpred(Antlr4.Runtime.RuleContext,System.Int32)
+    name: Precpred
+    nameWithType: Recognizer<Symbol, ATNInterpreter>.Precpred
+    fullName: Antlr4.Runtime.Recognizer<Symbol, ATNInterpreter>.Precpred
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.RuleContext
+    name: RuleContext
+    nameWithType: RuleContext
+    fullName: Antlr4.Runtime.RuleContext
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.Recognizer`2.Precpred(Antlr4.Runtime.RuleContext,System.Int32)
+    name: Precpred
+    nameWithType: Recognizer(Of Symbol, ATNInterpreter).Precpred
+    fullName: Antlr4.Runtime.Recognizer(Of Symbol, ATNInterpreter).Precpred
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.RuleContext
+    name: RuleContext
+    nameWithType: RuleContext
+    fullName: Antlr4.Runtime.RuleContext
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.Recognizer`2.Action(Antlr4.Runtime.RuleContext,System.Int32,System.Int32)
+  commentId: M:Antlr4.Runtime.Recognizer`2.Action(Antlr4.Runtime.RuleContext,System.Int32,System.Int32)
+  isExternal: true
+  name: Action(RuleContext, Int32, Int32)
+  nameWithType: Recognizer<Symbol, ATNInterpreter>.Action(RuleContext, Int32, Int32)
+  fullName: Antlr4.Runtime.Recognizer<Symbol, ATNInterpreter>.Action(Antlr4.Runtime.RuleContext, System.Int32, System.Int32)
+  nameWithType.vb: Recognizer(Of Symbol, ATNInterpreter).Action(RuleContext, Int32, Int32)
+  fullName.vb: Antlr4.Runtime.Recognizer(Of Symbol, ATNInterpreter).Action(Antlr4.Runtime.RuleContext, System.Int32, System.Int32)
+  spec.csharp:
+  - uid: Antlr4.Runtime.Recognizer`2.Action(Antlr4.Runtime.RuleContext,System.Int32,System.Int32)
+    name: Action
+    nameWithType: Recognizer<Symbol, ATNInterpreter>.Action
+    fullName: Antlr4.Runtime.Recognizer<Symbol, ATNInterpreter>.Action
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.RuleContext
+    name: RuleContext
+    nameWithType: RuleContext
+    fullName: Antlr4.Runtime.RuleContext
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.Recognizer`2.Action(Antlr4.Runtime.RuleContext,System.Int32,System.Int32)
+    name: Action
+    nameWithType: Recognizer(Of Symbol, ATNInterpreter).Action
+    fullName: Antlr4.Runtime.Recognizer(Of Symbol, ATNInterpreter).Action
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.RuleContext
+    name: RuleContext
+    nameWithType: RuleContext
+    fullName: Antlr4.Runtime.RuleContext
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.Recognizer`2.TokenNames
+  commentId: P:Antlr4.Runtime.Recognizer`2.TokenNames
+  isExternal: true
+  name: TokenNames
+  nameWithType: Recognizer<Symbol, ATNInterpreter>.TokenNames
+  fullName: Antlr4.Runtime.Recognizer<Symbol, ATNInterpreter>.TokenNames
+  nameWithType.vb: Recognizer(Of Symbol, ATNInterpreter).TokenNames
+  fullName.vb: Antlr4.Runtime.Recognizer(Of Symbol, ATNInterpreter).TokenNames
+- uid: Antlr4.Runtime.Recognizer`2.RuleNames
+  commentId: P:Antlr4.Runtime.Recognizer`2.RuleNames
+  isExternal: true
+  name: RuleNames
+  nameWithType: Recognizer<Symbol, ATNInterpreter>.RuleNames
+  fullName: Antlr4.Runtime.Recognizer<Symbol, ATNInterpreter>.RuleNames
+  nameWithType.vb: Recognizer(Of Symbol, ATNInterpreter).RuleNames
+  fullName.vb: Antlr4.Runtime.Recognizer(Of Symbol, ATNInterpreter).RuleNames
+- uid: Antlr4.Runtime.Recognizer`2.Vocabulary
+  commentId: P:Antlr4.Runtime.Recognizer`2.Vocabulary
+  isExternal: true
+  name: Vocabulary
+  nameWithType: Recognizer<Symbol, ATNInterpreter>.Vocabulary
+  fullName: Antlr4.Runtime.Recognizer<Symbol, ATNInterpreter>.Vocabulary
+  nameWithType.vb: Recognizer(Of Symbol, ATNInterpreter).Vocabulary
+  fullName.vb: Antlr4.Runtime.Recognizer(Of Symbol, ATNInterpreter).Vocabulary
+- uid: Antlr4.Runtime.Recognizer`2.TokenTypeMap
+  commentId: P:Antlr4.Runtime.Recognizer`2.TokenTypeMap
+  isExternal: true
+  name: TokenTypeMap
+  nameWithType: Recognizer<Symbol, ATNInterpreter>.TokenTypeMap
+  fullName: Antlr4.Runtime.Recognizer<Symbol, ATNInterpreter>.TokenTypeMap
+  nameWithType.vb: Recognizer(Of Symbol, ATNInterpreter).TokenTypeMap
+  fullName.vb: Antlr4.Runtime.Recognizer(Of Symbol, ATNInterpreter).TokenTypeMap
+- uid: Antlr4.Runtime.Recognizer`2.RuleIndexMap
+  commentId: P:Antlr4.Runtime.Recognizer`2.RuleIndexMap
+  isExternal: true
+  name: RuleIndexMap
+  nameWithType: Recognizer<Symbol, ATNInterpreter>.RuleIndexMap
+  fullName: Antlr4.Runtime.Recognizer<Symbol, ATNInterpreter>.RuleIndexMap
+  nameWithType.vb: Recognizer(Of Symbol, ATNInterpreter).RuleIndexMap
+  fullName.vb: Antlr4.Runtime.Recognizer(Of Symbol, ATNInterpreter).RuleIndexMap
+- uid: Antlr4.Runtime.Recognizer`2.SerializedAtn
+  commentId: P:Antlr4.Runtime.Recognizer`2.SerializedAtn
+  isExternal: true
+  name: SerializedAtn
+  nameWithType: Recognizer<Symbol, ATNInterpreter>.SerializedAtn
+  fullName: Antlr4.Runtime.Recognizer<Symbol, ATNInterpreter>.SerializedAtn
+  nameWithType.vb: Recognizer(Of Symbol, ATNInterpreter).SerializedAtn
+  fullName.vb: Antlr4.Runtime.Recognizer(Of Symbol, ATNInterpreter).SerializedAtn
+- uid: Antlr4.Runtime.Recognizer`2.GrammarFileName
+  commentId: P:Antlr4.Runtime.Recognizer`2.GrammarFileName
+  isExternal: true
+  name: GrammarFileName
+  nameWithType: Recognizer<Symbol, ATNInterpreter>.GrammarFileName
+  fullName: Antlr4.Runtime.Recognizer<Symbol, ATNInterpreter>.GrammarFileName
+  nameWithType.vb: Recognizer(Of Symbol, ATNInterpreter).GrammarFileName
+  fullName.vb: Antlr4.Runtime.Recognizer(Of Symbol, ATNInterpreter).GrammarFileName
+- uid: Antlr4.Runtime.Recognizer`2.Atn
+  commentId: P:Antlr4.Runtime.Recognizer`2.Atn
+  isExternal: true
+  name: Atn
+  nameWithType: Recognizer<Symbol, ATNInterpreter>.Atn
+  fullName: Antlr4.Runtime.Recognizer<Symbol, ATNInterpreter>.Atn
+  nameWithType.vb: Recognizer(Of Symbol, ATNInterpreter).Atn
+  fullName.vb: Antlr4.Runtime.Recognizer(Of Symbol, ATNInterpreter).Atn
+- uid: Antlr4.Runtime.Recognizer`2.Interpreter
+  commentId: P:Antlr4.Runtime.Recognizer`2.Interpreter
+  isExternal: true
+  name: Interpreter
+  nameWithType: Recognizer<Symbol, ATNInterpreter>.Interpreter
+  fullName: Antlr4.Runtime.Recognizer<Symbol, ATNInterpreter>.Interpreter
+  nameWithType.vb: Recognizer(Of Symbol, ATNInterpreter).Interpreter
+  fullName.vb: Antlr4.Runtime.Recognizer(Of Symbol, ATNInterpreter).Interpreter
+- uid: Antlr4.Runtime.Recognizer`2.ParseInfo
+  commentId: P:Antlr4.Runtime.Recognizer`2.ParseInfo
+  isExternal: true
+  name: ParseInfo
+  nameWithType: Recognizer<Symbol, ATNInterpreter>.ParseInfo
+  fullName: Antlr4.Runtime.Recognizer<Symbol, ATNInterpreter>.ParseInfo
+  nameWithType.vb: Recognizer(Of Symbol, ATNInterpreter).ParseInfo
+  fullName.vb: Antlr4.Runtime.Recognizer(Of Symbol, ATNInterpreter).ParseInfo
+- uid: Antlr4.Runtime.Recognizer`2.ErrorListeners
+  commentId: P:Antlr4.Runtime.Recognizer`2.ErrorListeners
+  isExternal: true
+  name: ErrorListeners
+  nameWithType: Recognizer<Symbol, ATNInterpreter>.ErrorListeners
+  fullName: Antlr4.Runtime.Recognizer<Symbol, ATNInterpreter>.ErrorListeners
+  nameWithType.vb: Recognizer(Of Symbol, ATNInterpreter).ErrorListeners
+  fullName.vb: Antlr4.Runtime.Recognizer(Of Symbol, ATNInterpreter).ErrorListeners
+- uid: Antlr4.Runtime.Recognizer`2.ErrorListenerDispatch
+  commentId: P:Antlr4.Runtime.Recognizer`2.ErrorListenerDispatch
+  isExternal: true
+  name: ErrorListenerDispatch
+  nameWithType: Recognizer<Symbol, ATNInterpreter>.ErrorListenerDispatch
+  fullName: Antlr4.Runtime.Recognizer<Symbol, ATNInterpreter>.ErrorListenerDispatch
+  nameWithType.vb: Recognizer(Of Symbol, ATNInterpreter).ErrorListenerDispatch
+  fullName.vb: Antlr4.Runtime.Recognizer(Of Symbol, ATNInterpreter).ErrorListenerDispatch
+- uid: Antlr4.Runtime.Recognizer`2.State
+  commentId: P:Antlr4.Runtime.Recognizer`2.State
+  isExternal: true
+  name: State
+  nameWithType: Recognizer<Symbol, ATNInterpreter>.State
+  fullName: Antlr4.Runtime.Recognizer<Symbol, ATNInterpreter>.State
+  nameWithType.vb: Recognizer(Of Symbol, ATNInterpreter).State
+  fullName.vb: Antlr4.Runtime.Recognizer(Of Symbol, ATNInterpreter).State
+- uid: Antlr4.Runtime.Recognizer`2.InputStream
+  commentId: P:Antlr4.Runtime.Recognizer`2.InputStream
+  isExternal: true
+  name: InputStream
+  nameWithType: Recognizer<Symbol, ATNInterpreter>.InputStream
+  fullName: Antlr4.Runtime.Recognizer<Symbol, ATNInterpreter>.InputStream
+  nameWithType.vb: Recognizer(Of Symbol, ATNInterpreter).InputStream
+  fullName.vb: Antlr4.Runtime.Recognizer(Of Symbol, ATNInterpreter).InputStream
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.String[]
+  isExternal: true
+  name: String[]
+  nameWithType: String[]
+  fullName: System.String[]
+  nameWithType.vb: String()
+  fullName.vb: System.String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.#ctor*
+  commentId: Overload:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.#ctor
+  name: ScenarioGrammarLexer
+  nameWithType: ScenarioGrammarLexer.ScenarioGrammarLexer
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.ScenarioGrammarLexer
+- uid: Antlr4.Runtime.ICharStream
+  commentId: T:Antlr4.Runtime.ICharStream
+  parent: Antlr4.Runtime
+  isExternal: true
+  name: ICharStream
+  nameWithType: ICharStream
+  fullName: Antlr4.Runtime.ICharStream
+- uid: Antlr4.Runtime.IVocabulary
+  commentId: T:Antlr4.Runtime.IVocabulary
+  parent: Antlr4.Runtime
+  isExternal: true
+  name: IVocabulary
+  nameWithType: IVocabulary
+  fullName: Antlr4.Runtime.IVocabulary
+- uid: Antlr4.Runtime.Lexer.TokenNames
+  commentId: P:Antlr4.Runtime.Lexer.TokenNames
+  parent: Antlr4.Runtime.Lexer
+  isExternal: true
+  name: TokenNames
+  nameWithType: Lexer.TokenNames
+  fullName: Antlr4.Runtime.Lexer.TokenNames
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.TokenNames*
+  commentId: Overload:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.TokenNames
+  name: TokenNames
+  nameWithType: ScenarioGrammarLexer.TokenNames
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.TokenNames
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.Vocabulary*
+  commentId: Overload:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.Vocabulary
+  name: Vocabulary
+  nameWithType: ScenarioGrammarLexer.Vocabulary
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.Vocabulary
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.GrammarFileName*
+  commentId: Overload:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.GrammarFileName
+  name: GrammarFileName
+  nameWithType: ScenarioGrammarLexer.GrammarFileName
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.GrammarFileName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.RuleNames*
+  commentId: Overload:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.RuleNames
+  name: RuleNames
+  nameWithType: ScenarioGrammarLexer.RuleNames
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.RuleNames
+- uid: Antlr4.Runtime.Lexer.ModeNames
+  commentId: P:Antlr4.Runtime.Lexer.ModeNames
+  parent: Antlr4.Runtime.Lexer
+  isExternal: true
+  name: ModeNames
+  nameWithType: Lexer.ModeNames
+  fullName: Antlr4.Runtime.Lexer.ModeNames
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.ModeNames*
+  commentId: Overload:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.ModeNames
+  name: ModeNames
+  nameWithType: ScenarioGrammarLexer.ModeNames
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.ModeNames
+- uid: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.SerializedAtn*
+  commentId: Overload:Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.SerializedAtn
+  name: SerializedAtn
+  nameWithType: ScenarioGrammarLexer.SerializedAtn
+  fullName: Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions.ScenarioGrammarLexer.SerializedAtn
+- uid: Antlr4.Runtime.Atn.ATN
+  commentId: T:Antlr4.Runtime.Atn.ATN
+  parent: Antlr4.Runtime.Atn
+  isExternal: true
+  name: ATN
+  nameWithType: ATN
+  fullName: Antlr4.Runtime.Atn.ATN
+- uid: Antlr4.Runtime.Atn
+  commentId: N:Antlr4.Runtime.Atn
+  isExternal: true
+  name: Antlr4.Runtime.Atn
+  nameWithType: Antlr4.Runtime.Atn
+  fullName: Antlr4.Runtime.Atn

@@ -1,0 +1,2362 @@
+### YamlMime:ManagedReference
+items:
+- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dStateContext
+  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dStateContext
+  id: MapGrammarParser.Sound3dStateContext
+  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  children:
+  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dStateContext.#ctor(Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StatementContext)
+  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dStateContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
+  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dStateContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
+  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dStateContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
+  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dStateContext.sound3d
+  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dStateContext.SOUND3D
+  langs:
+  - csharp
+  - vb
+  name: MapGrammarParser.Sound3dStateContext
+  nameWithType: MapGrammarParser.Sound3dStateContext
+  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dStateContext
+  type: Class
+  source:
+    remote:
+      path: Bve5_Parsing/obj/Release/netstandard2.0/MapGrammarParser.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Sound3dStateContext
+    path: ../Bve5_Parsing/obj/Release/netstandard2.0/MapGrammarParser.cs
+    startLine: 783
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  syntax:
+    content: 'public class Sound3dStateContext : MapGrammarParser.StatementContext, IRuleNode, IParseTree, ISyntaxTree, ITree'
+    content.vb: >-
+      Public Class Sound3dStateContext
+
+          Inherits MapGrammarParser.StatementContext
+
+          Implements IRuleNode, IParseTree, ISyntaxTree, ITree
+  inheritance:
+  - System.Object
+  - Antlr4.Runtime.RuleContext
+  - Antlr4.Runtime.ParserRuleContext
+  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StatementContext
+  implements:
+  - Antlr4.Runtime.Tree.IRuleNode
+  - Antlr4.Runtime.Tree.IParseTree
+  - Antlr4.Runtime.Tree.ISyntaxTree
+  - Antlr4.Runtime.Tree.ITree
+  inheritedMembers:
+  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StatementContext.RuleIndex
+  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StatementContext.CopyFrom(Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StatementContext)
+  - Antlr4.Runtime.ParserRuleContext.children
+  - Antlr4.Runtime.ParserRuleContext.start
+  - Antlr4.Runtime.ParserRuleContext.stop
+  - Antlr4.Runtime.ParserRuleContext.exception
+  - Antlr4.Runtime.ParserRuleContext.CopyFrom(Antlr4.Runtime.ParserRuleContext)
+  - Antlr4.Runtime.ParserRuleContext.AddChild(Antlr4.Runtime.Tree.ITerminalNode)
+  - Antlr4.Runtime.ParserRuleContext.AddChild(Antlr4.Runtime.RuleContext)
+  - Antlr4.Runtime.ParserRuleContext.RemoveLastChild
+  - Antlr4.Runtime.ParserRuleContext.AddChild(Antlr4.Runtime.IToken)
+  - Antlr4.Runtime.ParserRuleContext.AddErrorNode(Antlr4.Runtime.IToken)
+  - Antlr4.Runtime.ParserRuleContext.GetChild(System.Int32)
+  - Antlr4.Runtime.ParserRuleContext.GetChild``1(System.Int32)
+  - Antlr4.Runtime.ParserRuleContext.GetToken(System.Int32,System.Int32)
+  - Antlr4.Runtime.ParserRuleContext.GetTokens(System.Int32)
+  - Antlr4.Runtime.ParserRuleContext.GetRuleContext``1(System.Int32)
+  - Antlr4.Runtime.ParserRuleContext.GetRuleContexts``1
+  - Antlr4.Runtime.ParserRuleContext.ToInfoString(Antlr4.Runtime.Parser)
+  - Antlr4.Runtime.ParserRuleContext.EmptyContext
+  - Antlr4.Runtime.ParserRuleContext.Parent
+  - Antlr4.Runtime.ParserRuleContext.ChildCount
+  - Antlr4.Runtime.ParserRuleContext.SourceInterval
+  - Antlr4.Runtime.ParserRuleContext.Start
+  - Antlr4.Runtime.ParserRuleContext.Stop
+  - Antlr4.Runtime.RuleContext.parent
+  - Antlr4.Runtime.RuleContext.invokingState
+  - Antlr4.Runtime.RuleContext.GetChildContext(Antlr4.Runtime.RuleContext,System.Int32)
+  - Antlr4.Runtime.RuleContext.Depth
+  - Antlr4.Runtime.RuleContext.GetText
+  - Antlr4.Runtime.RuleContext.Antlr4#Runtime#Tree#ITree#GetChild(System.Int32)
+  - Antlr4.Runtime.RuleContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{{T}})
+  - Antlr4.Runtime.RuleContext.ToStringTree(Antlr4.Runtime.Parser)
+  - Antlr4.Runtime.RuleContext.ToStringTree(System.Collections.Generic.IList{System.String})
+  - Antlr4.Runtime.RuleContext.ToStringTree
+  - Antlr4.Runtime.RuleContext.ToString
+  - Antlr4.Runtime.RuleContext.ToString(Antlr4.Runtime.IRecognizer)
+  - Antlr4.Runtime.RuleContext.ToString(System.Collections.Generic.IList{System.String})
+  - Antlr4.Runtime.RuleContext.ToString(Antlr4.Runtime.IRecognizer,Antlr4.Runtime.RuleContext)
+  - Antlr4.Runtime.RuleContext.ToString(System.Collections.Generic.IList{System.String},Antlr4.Runtime.RuleContext)
+  - Antlr4.Runtime.RuleContext.IsEmpty
+  - Antlr4.Runtime.RuleContext.Antlr4#Runtime#Tree#IRuleNode#RuleContext
+  - Antlr4.Runtime.RuleContext.Antlr4#Runtime#Tree#IRuleNode#Parent
+  - Antlr4.Runtime.RuleContext.Antlr4#Runtime#Tree#IParseTree#Parent
+  - Antlr4.Runtime.RuleContext.Antlr4#Runtime#Tree#ITree#Parent
+  - Antlr4.Runtime.RuleContext.Payload
+  - Antlr4.Runtime.RuleContext.Antlr4#Runtime#Tree#ITree#Payload
+  - Antlr4.Runtime.RuleContext.OuterAlternative
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dStateContext.SOUND3D
+  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dStateContext.SOUND3D
+  id: SOUND3D
+  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dStateContext
+  langs:
+  - csharp
+  - vb
+  name: SOUND3D()
+  nameWithType: MapGrammarParser.Sound3dStateContext.SOUND3D()
+  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dStateContext.SOUND3D()
+  type: Method
+  source:
+    remote:
+      path: Bve5_Parsing/obj/Release/netstandard2.0/MapGrammarParser.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: SOUND3D
+    path: ../Bve5_Parsing/obj/Release/netstandard2.0/MapGrammarParser.cs
+    startLine: 784
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  syntax:
+    content: public ITerminalNode SOUND3D()
+    return:
+      type: Antlr4.Runtime.Tree.ITerminalNode
+    content.vb: Public Function SOUND3D As ITerminalNode
+  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dStateContext.SOUND3D*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dStateContext.sound3d
+  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dStateContext.sound3d
+  id: sound3d
+  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dStateContext
+  langs:
+  - csharp
+  - vb
+  name: sound3d()
+  nameWithType: MapGrammarParser.Sound3dStateContext.sound3d()
+  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dStateContext.sound3d()
+  type: Method
+  source:
+    remote:
+      path: Bve5_Parsing/obj/Release/netstandard2.0/MapGrammarParser.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: sound3d
+    path: ../Bve5_Parsing/obj/Release/netstandard2.0/MapGrammarParser.cs
+    startLine: 785
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  syntax:
+    content: public MapGrammarParser.Sound3dContext sound3d()
+    return:
+      type: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dContext
+    content.vb: Public Function sound3d As MapGrammarParser.Sound3dContext
+  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dStateContext.sound3d*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dStateContext.#ctor(Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StatementContext)
+  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dStateContext.#ctor(Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StatementContext)
+  id: '#ctor(Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StatementContext)'
+  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dStateContext
+  langs:
+  - csharp
+  - vb
+  name: Sound3dStateContext(MapGrammarParser.StatementContext)
+  nameWithType: MapGrammarParser.Sound3dStateContext.Sound3dStateContext(MapGrammarParser.StatementContext)
+  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dStateContext.Sound3dStateContext(Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StatementContext)
+  type: Constructor
+  source:
+    remote:
+      path: Bve5_Parsing/obj/Release/netstandard2.0/MapGrammarParser.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: .ctor
+    path: ../Bve5_Parsing/obj/Release/netstandard2.0/MapGrammarParser.cs
+    startLine: 788
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  syntax:
+    content: public Sound3dStateContext(MapGrammarParser.StatementContext context)
+    parameters:
+    - id: context
+      type: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StatementContext
+    content.vb: Public Sub New(context As MapGrammarParser.StatementContext)
+  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dStateContext.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dStateContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
+  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dStateContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
+  id: EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
+  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dStateContext
+  langs:
+  - csharp
+  - vb
+  name: EnterRule(IParseTreeListener)
+  nameWithType: MapGrammarParser.Sound3dStateContext.EnterRule(IParseTreeListener)
+  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dStateContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
+  type: Method
+  source:
+    remote:
+      path: Bve5_Parsing/obj/Release/netstandard2.0/MapGrammarParser.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: EnterRule
+    path: ../Bve5_Parsing/obj/Release/netstandard2.0/MapGrammarParser.cs
+    startLine: 789
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  syntax:
+    content: public override void EnterRule(IParseTreeListener listener)
+    parameters:
+    - id: listener
+      type: Antlr4.Runtime.Tree.IParseTreeListener
+    content.vb: Public Overrides Sub EnterRule(listener As IParseTreeListener)
+  overridden: Antlr4.Runtime.ParserRuleContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
+  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dStateContext.EnterRule*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dStateContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
+  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dStateContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
+  id: ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
+  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dStateContext
+  langs:
+  - csharp
+  - vb
+  name: ExitRule(IParseTreeListener)
+  nameWithType: MapGrammarParser.Sound3dStateContext.ExitRule(IParseTreeListener)
+  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dStateContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
+  type: Method
+  source:
+    remote:
+      path: Bve5_Parsing/obj/Release/netstandard2.0/MapGrammarParser.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: ExitRule
+    path: ../Bve5_Parsing/obj/Release/netstandard2.0/MapGrammarParser.cs
+    startLine: 793
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  syntax:
+    content: public override void ExitRule(IParseTreeListener listener)
+    parameters:
+    - id: listener
+      type: Antlr4.Runtime.Tree.IParseTreeListener
+    content.vb: Public Overrides Sub ExitRule(listener As IParseTreeListener)
+  overridden: Antlr4.Runtime.ParserRuleContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
+  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dStateContext.ExitRule*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dStateContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
+  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dStateContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
+  id: Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
+  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dStateContext
+  langs:
+  - csharp
+  - vb
+  name: Accept<TResult>(IParseTreeVisitor<TResult>)
+  nameWithType: MapGrammarParser.Sound3dStateContext.Accept<TResult>(IParseTreeVisitor<TResult>)
+  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dStateContext.Accept<TResult>(Antlr4.Runtime.Tree.IParseTreeVisitor<TResult>)
+  type: Method
+  source:
+    remote:
+      path: Bve5_Parsing/obj/Release/netstandard2.0/MapGrammarParser.cs
+      branch: update_doc
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Accept
+    path: ../Bve5_Parsing/obj/Release/netstandard2.0/MapGrammarParser.cs
+    startLine: 797
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  syntax:
+    content: public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor)
+    parameters:
+    - id: visitor
+      type: Antlr4.Runtime.Tree.IParseTreeVisitor{{TResult}}
+    typeParameters:
+    - id: TResult
+    return:
+      type: '{TResult}'
+    content.vb: Public Overrides Function Accept(Of TResult)(visitor As IParseTreeVisitor(Of TResult)) As TResult
+  overridden: Antlr4.Runtime.RuleContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{{TResult}})
+  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dStateContext.Accept*
+  nameWithType.vb: MapGrammarParser.Sound3dStateContext.Accept(Of TResult)(IParseTreeVisitor(Of TResult))
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+  fullName.vb: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dStateContext.Accept(Of TResult)(Antlr4.Runtime.Tree.IParseTreeVisitor(Of TResult))
+  name.vb: Accept(Of TResult)(IParseTreeVisitor(Of TResult))
+references:
+- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  commentId: N:Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  name: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  nameWithType: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Antlr4.Runtime.RuleContext
+  commentId: T:Antlr4.Runtime.RuleContext
+  parent: Antlr4.Runtime
+  isExternal: true
+  name: RuleContext
+  nameWithType: RuleContext
+  fullName: Antlr4.Runtime.RuleContext
+- uid: Antlr4.Runtime.ParserRuleContext
+  commentId: T:Antlr4.Runtime.ParserRuleContext
+  parent: Antlr4.Runtime
+  isExternal: true
+  name: ParserRuleContext
+  nameWithType: ParserRuleContext
+  fullName: Antlr4.Runtime.ParserRuleContext
+- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StatementContext
+  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StatementContext
+  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  name: MapGrammarParser.StatementContext
+  nameWithType: MapGrammarParser.StatementContext
+  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StatementContext
+- uid: Antlr4.Runtime.Tree.IRuleNode
+  commentId: T:Antlr4.Runtime.Tree.IRuleNode
+  parent: Antlr4.Runtime.Tree
+  isExternal: true
+  name: IRuleNode
+  nameWithType: IRuleNode
+  fullName: Antlr4.Runtime.Tree.IRuleNode
+- uid: Antlr4.Runtime.Tree.IParseTree
+  commentId: T:Antlr4.Runtime.Tree.IParseTree
+  parent: Antlr4.Runtime.Tree
+  isExternal: true
+  name: IParseTree
+  nameWithType: IParseTree
+  fullName: Antlr4.Runtime.Tree.IParseTree
+- uid: Antlr4.Runtime.Tree.ISyntaxTree
+  commentId: T:Antlr4.Runtime.Tree.ISyntaxTree
+  parent: Antlr4.Runtime.Tree
+  isExternal: true
+  name: ISyntaxTree
+  nameWithType: ISyntaxTree
+  fullName: Antlr4.Runtime.Tree.ISyntaxTree
+- uid: Antlr4.Runtime.Tree.ITree
+  commentId: T:Antlr4.Runtime.Tree.ITree
+  parent: Antlr4.Runtime.Tree
+  isExternal: true
+  name: ITree
+  nameWithType: ITree
+  fullName: Antlr4.Runtime.Tree.ITree
+- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StatementContext.RuleIndex
+  commentId: P:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StatementContext.RuleIndex
+  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StatementContext
+  name: RuleIndex
+  nameWithType: MapGrammarParser.StatementContext.RuleIndex
+  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StatementContext.RuleIndex
+- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StatementContext.CopyFrom(Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StatementContext)
+  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StatementContext.CopyFrom(Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StatementContext)
+  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StatementContext
+  name: CopyFrom(MapGrammarParser.StatementContext)
+  nameWithType: MapGrammarParser.StatementContext.CopyFrom(MapGrammarParser.StatementContext)
+  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StatementContext.CopyFrom(Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StatementContext)
+  spec.csharp:
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StatementContext.CopyFrom(Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StatementContext)
+    name: CopyFrom
+    nameWithType: MapGrammarParser.StatementContext.CopyFrom
+    fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StatementContext.CopyFrom
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StatementContext
+    name: MapGrammarParser.StatementContext
+    nameWithType: MapGrammarParser.StatementContext
+    fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StatementContext
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StatementContext.CopyFrom(Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StatementContext)
+    name: CopyFrom
+    nameWithType: MapGrammarParser.StatementContext.CopyFrom
+    fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StatementContext.CopyFrom
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StatementContext
+    name: MapGrammarParser.StatementContext
+    nameWithType: MapGrammarParser.StatementContext
+    fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StatementContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.ParserRuleContext.children
+  commentId: F:Antlr4.Runtime.ParserRuleContext.children
+  parent: Antlr4.Runtime.ParserRuleContext
+  isExternal: true
+  name: children
+  nameWithType: ParserRuleContext.children
+  fullName: Antlr4.Runtime.ParserRuleContext.children
+- uid: Antlr4.Runtime.ParserRuleContext.start
+  commentId: F:Antlr4.Runtime.ParserRuleContext.start
+  parent: Antlr4.Runtime.ParserRuleContext
+  isExternal: true
+  name: start
+  nameWithType: ParserRuleContext.start
+  fullName: Antlr4.Runtime.ParserRuleContext.start
+- uid: Antlr4.Runtime.ParserRuleContext.stop
+  commentId: F:Antlr4.Runtime.ParserRuleContext.stop
+  parent: Antlr4.Runtime.ParserRuleContext
+  isExternal: true
+  name: stop
+  nameWithType: ParserRuleContext.stop
+  fullName: Antlr4.Runtime.ParserRuleContext.stop
+- uid: Antlr4.Runtime.ParserRuleContext.exception
+  commentId: F:Antlr4.Runtime.ParserRuleContext.exception
+  parent: Antlr4.Runtime.ParserRuleContext
+  isExternal: true
+  name: exception
+  nameWithType: ParserRuleContext.exception
+  fullName: Antlr4.Runtime.ParserRuleContext.exception
+- uid: Antlr4.Runtime.ParserRuleContext.CopyFrom(Antlr4.Runtime.ParserRuleContext)
+  commentId: M:Antlr4.Runtime.ParserRuleContext.CopyFrom(Antlr4.Runtime.ParserRuleContext)
+  parent: Antlr4.Runtime.ParserRuleContext
+  isExternal: true
+  name: CopyFrom(ParserRuleContext)
+  nameWithType: ParserRuleContext.CopyFrom(ParserRuleContext)
+  fullName: Antlr4.Runtime.ParserRuleContext.CopyFrom(Antlr4.Runtime.ParserRuleContext)
+  spec.csharp:
+  - uid: Antlr4.Runtime.ParserRuleContext.CopyFrom(Antlr4.Runtime.ParserRuleContext)
+    name: CopyFrom
+    nameWithType: ParserRuleContext.CopyFrom
+    fullName: Antlr4.Runtime.ParserRuleContext.CopyFrom
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.ParserRuleContext
+    name: ParserRuleContext
+    nameWithType: ParserRuleContext
+    fullName: Antlr4.Runtime.ParserRuleContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.ParserRuleContext.CopyFrom(Antlr4.Runtime.ParserRuleContext)
+    name: CopyFrom
+    nameWithType: ParserRuleContext.CopyFrom
+    fullName: Antlr4.Runtime.ParserRuleContext.CopyFrom
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.ParserRuleContext
+    name: ParserRuleContext
+    nameWithType: ParserRuleContext
+    fullName: Antlr4.Runtime.ParserRuleContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.ParserRuleContext.AddChild(Antlr4.Runtime.Tree.ITerminalNode)
+  commentId: M:Antlr4.Runtime.ParserRuleContext.AddChild(Antlr4.Runtime.Tree.ITerminalNode)
+  parent: Antlr4.Runtime.ParserRuleContext
+  isExternal: true
+  name: AddChild(ITerminalNode)
+  nameWithType: ParserRuleContext.AddChild(ITerminalNode)
+  fullName: Antlr4.Runtime.ParserRuleContext.AddChild(Antlr4.Runtime.Tree.ITerminalNode)
+  spec.csharp:
+  - uid: Antlr4.Runtime.ParserRuleContext.AddChild(Antlr4.Runtime.Tree.ITerminalNode)
+    name: AddChild
+    nameWithType: ParserRuleContext.AddChild
+    fullName: Antlr4.Runtime.ParserRuleContext.AddChild
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.Tree.ITerminalNode
+    name: ITerminalNode
+    nameWithType: ITerminalNode
+    fullName: Antlr4.Runtime.Tree.ITerminalNode
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.ParserRuleContext.AddChild(Antlr4.Runtime.Tree.ITerminalNode)
+    name: AddChild
+    nameWithType: ParserRuleContext.AddChild
+    fullName: Antlr4.Runtime.ParserRuleContext.AddChild
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.Tree.ITerminalNode
+    name: ITerminalNode
+    nameWithType: ITerminalNode
+    fullName: Antlr4.Runtime.Tree.ITerminalNode
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.ParserRuleContext.AddChild(Antlr4.Runtime.RuleContext)
+  commentId: M:Antlr4.Runtime.ParserRuleContext.AddChild(Antlr4.Runtime.RuleContext)
+  parent: Antlr4.Runtime.ParserRuleContext
+  isExternal: true
+  name: AddChild(RuleContext)
+  nameWithType: ParserRuleContext.AddChild(RuleContext)
+  fullName: Antlr4.Runtime.ParserRuleContext.AddChild(Antlr4.Runtime.RuleContext)
+  spec.csharp:
+  - uid: Antlr4.Runtime.ParserRuleContext.AddChild(Antlr4.Runtime.RuleContext)
+    name: AddChild
+    nameWithType: ParserRuleContext.AddChild
+    fullName: Antlr4.Runtime.ParserRuleContext.AddChild
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.RuleContext
+    name: RuleContext
+    nameWithType: RuleContext
+    fullName: Antlr4.Runtime.RuleContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.ParserRuleContext.AddChild(Antlr4.Runtime.RuleContext)
+    name: AddChild
+    nameWithType: ParserRuleContext.AddChild
+    fullName: Antlr4.Runtime.ParserRuleContext.AddChild
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.RuleContext
+    name: RuleContext
+    nameWithType: RuleContext
+    fullName: Antlr4.Runtime.RuleContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.ParserRuleContext.RemoveLastChild
+  commentId: M:Antlr4.Runtime.ParserRuleContext.RemoveLastChild
+  parent: Antlr4.Runtime.ParserRuleContext
+  isExternal: true
+  name: RemoveLastChild()
+  nameWithType: ParserRuleContext.RemoveLastChild()
+  fullName: Antlr4.Runtime.ParserRuleContext.RemoveLastChild()
+  spec.csharp:
+  - uid: Antlr4.Runtime.ParserRuleContext.RemoveLastChild
+    name: RemoveLastChild
+    nameWithType: ParserRuleContext.RemoveLastChild
+    fullName: Antlr4.Runtime.ParserRuleContext.RemoveLastChild
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.ParserRuleContext.RemoveLastChild
+    name: RemoveLastChild
+    nameWithType: ParserRuleContext.RemoveLastChild
+    fullName: Antlr4.Runtime.ParserRuleContext.RemoveLastChild
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.ParserRuleContext.AddChild(Antlr4.Runtime.IToken)
+  commentId: M:Antlr4.Runtime.ParserRuleContext.AddChild(Antlr4.Runtime.IToken)
+  parent: Antlr4.Runtime.ParserRuleContext
+  isExternal: true
+  name: AddChild(IToken)
+  nameWithType: ParserRuleContext.AddChild(IToken)
+  fullName: Antlr4.Runtime.ParserRuleContext.AddChild(Antlr4.Runtime.IToken)
+  spec.csharp:
+  - uid: Antlr4.Runtime.ParserRuleContext.AddChild(Antlr4.Runtime.IToken)
+    name: AddChild
+    nameWithType: ParserRuleContext.AddChild
+    fullName: Antlr4.Runtime.ParserRuleContext.AddChild
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.IToken
+    name: IToken
+    nameWithType: IToken
+    fullName: Antlr4.Runtime.IToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.ParserRuleContext.AddChild(Antlr4.Runtime.IToken)
+    name: AddChild
+    nameWithType: ParserRuleContext.AddChild
+    fullName: Antlr4.Runtime.ParserRuleContext.AddChild
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.IToken
+    name: IToken
+    nameWithType: IToken
+    fullName: Antlr4.Runtime.IToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.ParserRuleContext.AddErrorNode(Antlr4.Runtime.IToken)
+  commentId: M:Antlr4.Runtime.ParserRuleContext.AddErrorNode(Antlr4.Runtime.IToken)
+  parent: Antlr4.Runtime.ParserRuleContext
+  isExternal: true
+  name: AddErrorNode(IToken)
+  nameWithType: ParserRuleContext.AddErrorNode(IToken)
+  fullName: Antlr4.Runtime.ParserRuleContext.AddErrorNode(Antlr4.Runtime.IToken)
+  spec.csharp:
+  - uid: Antlr4.Runtime.ParserRuleContext.AddErrorNode(Antlr4.Runtime.IToken)
+    name: AddErrorNode
+    nameWithType: ParserRuleContext.AddErrorNode
+    fullName: Antlr4.Runtime.ParserRuleContext.AddErrorNode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.IToken
+    name: IToken
+    nameWithType: IToken
+    fullName: Antlr4.Runtime.IToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.ParserRuleContext.AddErrorNode(Antlr4.Runtime.IToken)
+    name: AddErrorNode
+    nameWithType: ParserRuleContext.AddErrorNode
+    fullName: Antlr4.Runtime.ParserRuleContext.AddErrorNode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.IToken
+    name: IToken
+    nameWithType: IToken
+    fullName: Antlr4.Runtime.IToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.ParserRuleContext.GetChild(System.Int32)
+  commentId: M:Antlr4.Runtime.ParserRuleContext.GetChild(System.Int32)
+  parent: Antlr4.Runtime.ParserRuleContext
+  isExternal: true
+  name: GetChild(Int32)
+  nameWithType: ParserRuleContext.GetChild(Int32)
+  fullName: Antlr4.Runtime.ParserRuleContext.GetChild(System.Int32)
+  spec.csharp:
+  - uid: Antlr4.Runtime.ParserRuleContext.GetChild(System.Int32)
+    name: GetChild
+    nameWithType: ParserRuleContext.GetChild
+    fullName: Antlr4.Runtime.ParserRuleContext.GetChild
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.ParserRuleContext.GetChild(System.Int32)
+    name: GetChild
+    nameWithType: ParserRuleContext.GetChild
+    fullName: Antlr4.Runtime.ParserRuleContext.GetChild
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.ParserRuleContext.GetChild``1(System.Int32)
+  commentId: M:Antlr4.Runtime.ParserRuleContext.GetChild``1(System.Int32)
+  parent: Antlr4.Runtime.ParserRuleContext
+  isExternal: true
+  name: GetChild<T>(Int32)
+  nameWithType: ParserRuleContext.GetChild<T>(Int32)
+  fullName: Antlr4.Runtime.ParserRuleContext.GetChild<T>(System.Int32)
+  nameWithType.vb: ParserRuleContext.GetChild(Of T)(Int32)
+  fullName.vb: Antlr4.Runtime.ParserRuleContext.GetChild(Of T)(System.Int32)
+  name.vb: GetChild(Of T)(Int32)
+  spec.csharp:
+  - uid: Antlr4.Runtime.ParserRuleContext.GetChild``1(System.Int32)
+    name: GetChild<T>
+    nameWithType: ParserRuleContext.GetChild<T>
+    fullName: Antlr4.Runtime.ParserRuleContext.GetChild<T>
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.ParserRuleContext.GetChild``1(System.Int32)
+    name: GetChild(Of T)
+    nameWithType: ParserRuleContext.GetChild(Of T)
+    fullName: Antlr4.Runtime.ParserRuleContext.GetChild(Of T)
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.ParserRuleContext.GetToken(System.Int32,System.Int32)
+  commentId: M:Antlr4.Runtime.ParserRuleContext.GetToken(System.Int32,System.Int32)
+  parent: Antlr4.Runtime.ParserRuleContext
+  isExternal: true
+  name: GetToken(Int32, Int32)
+  nameWithType: ParserRuleContext.GetToken(Int32, Int32)
+  fullName: Antlr4.Runtime.ParserRuleContext.GetToken(System.Int32, System.Int32)
+  spec.csharp:
+  - uid: Antlr4.Runtime.ParserRuleContext.GetToken(System.Int32,System.Int32)
+    name: GetToken
+    nameWithType: ParserRuleContext.GetToken
+    fullName: Antlr4.Runtime.ParserRuleContext.GetToken
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.ParserRuleContext.GetToken(System.Int32,System.Int32)
+    name: GetToken
+    nameWithType: ParserRuleContext.GetToken
+    fullName: Antlr4.Runtime.ParserRuleContext.GetToken
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.ParserRuleContext.GetTokens(System.Int32)
+  commentId: M:Antlr4.Runtime.ParserRuleContext.GetTokens(System.Int32)
+  parent: Antlr4.Runtime.ParserRuleContext
+  isExternal: true
+  name: GetTokens(Int32)
+  nameWithType: ParserRuleContext.GetTokens(Int32)
+  fullName: Antlr4.Runtime.ParserRuleContext.GetTokens(System.Int32)
+  spec.csharp:
+  - uid: Antlr4.Runtime.ParserRuleContext.GetTokens(System.Int32)
+    name: GetTokens
+    nameWithType: ParserRuleContext.GetTokens
+    fullName: Antlr4.Runtime.ParserRuleContext.GetTokens
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.ParserRuleContext.GetTokens(System.Int32)
+    name: GetTokens
+    nameWithType: ParserRuleContext.GetTokens
+    fullName: Antlr4.Runtime.ParserRuleContext.GetTokens
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.ParserRuleContext.GetRuleContext``1(System.Int32)
+  commentId: M:Antlr4.Runtime.ParserRuleContext.GetRuleContext``1(System.Int32)
+  parent: Antlr4.Runtime.ParserRuleContext
+  isExternal: true
+  name: GetRuleContext<T>(Int32)
+  nameWithType: ParserRuleContext.GetRuleContext<T>(Int32)
+  fullName: Antlr4.Runtime.ParserRuleContext.GetRuleContext<T>(System.Int32)
+  nameWithType.vb: ParserRuleContext.GetRuleContext(Of T)(Int32)
+  fullName.vb: Antlr4.Runtime.ParserRuleContext.GetRuleContext(Of T)(System.Int32)
+  name.vb: GetRuleContext(Of T)(Int32)
+  spec.csharp:
+  - uid: Antlr4.Runtime.ParserRuleContext.GetRuleContext``1(System.Int32)
+    name: GetRuleContext<T>
+    nameWithType: ParserRuleContext.GetRuleContext<T>
+    fullName: Antlr4.Runtime.ParserRuleContext.GetRuleContext<T>
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.ParserRuleContext.GetRuleContext``1(System.Int32)
+    name: GetRuleContext(Of T)
+    nameWithType: ParserRuleContext.GetRuleContext(Of T)
+    fullName: Antlr4.Runtime.ParserRuleContext.GetRuleContext(Of T)
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.ParserRuleContext.GetRuleContexts``1
+  commentId: M:Antlr4.Runtime.ParserRuleContext.GetRuleContexts``1
+  parent: Antlr4.Runtime.ParserRuleContext
+  isExternal: true
+  name: GetRuleContexts<T>()
+  nameWithType: ParserRuleContext.GetRuleContexts<T>()
+  fullName: Antlr4.Runtime.ParserRuleContext.GetRuleContexts<T>()
+  nameWithType.vb: ParserRuleContext.GetRuleContexts(Of T)()
+  fullName.vb: Antlr4.Runtime.ParserRuleContext.GetRuleContexts(Of T)()
+  name.vb: GetRuleContexts(Of T)()
+  spec.csharp:
+  - uid: Antlr4.Runtime.ParserRuleContext.GetRuleContexts``1
+    name: GetRuleContexts<T>
+    nameWithType: ParserRuleContext.GetRuleContexts<T>
+    fullName: Antlr4.Runtime.ParserRuleContext.GetRuleContexts<T>
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.ParserRuleContext.GetRuleContexts``1
+    name: GetRuleContexts(Of T)
+    nameWithType: ParserRuleContext.GetRuleContexts(Of T)
+    fullName: Antlr4.Runtime.ParserRuleContext.GetRuleContexts(Of T)
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.ParserRuleContext.ToInfoString(Antlr4.Runtime.Parser)
+  commentId: M:Antlr4.Runtime.ParserRuleContext.ToInfoString(Antlr4.Runtime.Parser)
+  parent: Antlr4.Runtime.ParserRuleContext
+  isExternal: true
+  name: ToInfoString(Parser)
+  nameWithType: ParserRuleContext.ToInfoString(Parser)
+  fullName: Antlr4.Runtime.ParserRuleContext.ToInfoString(Antlr4.Runtime.Parser)
+  spec.csharp:
+  - uid: Antlr4.Runtime.ParserRuleContext.ToInfoString(Antlr4.Runtime.Parser)
+    name: ToInfoString
+    nameWithType: ParserRuleContext.ToInfoString
+    fullName: Antlr4.Runtime.ParserRuleContext.ToInfoString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.Parser
+    name: Parser
+    nameWithType: Parser
+    fullName: Antlr4.Runtime.Parser
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.ParserRuleContext.ToInfoString(Antlr4.Runtime.Parser)
+    name: ToInfoString
+    nameWithType: ParserRuleContext.ToInfoString
+    fullName: Antlr4.Runtime.ParserRuleContext.ToInfoString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.Parser
+    name: Parser
+    nameWithType: Parser
+    fullName: Antlr4.Runtime.Parser
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.ParserRuleContext.EmptyContext
+  commentId: P:Antlr4.Runtime.ParserRuleContext.EmptyContext
+  parent: Antlr4.Runtime.ParserRuleContext
+  isExternal: true
+  name: EmptyContext
+  nameWithType: ParserRuleContext.EmptyContext
+  fullName: Antlr4.Runtime.ParserRuleContext.EmptyContext
+- uid: Antlr4.Runtime.ParserRuleContext.Parent
+  commentId: P:Antlr4.Runtime.ParserRuleContext.Parent
+  parent: Antlr4.Runtime.ParserRuleContext
+  isExternal: true
+  name: Parent
+  nameWithType: ParserRuleContext.Parent
+  fullName: Antlr4.Runtime.ParserRuleContext.Parent
+- uid: Antlr4.Runtime.ParserRuleContext.ChildCount
+  commentId: P:Antlr4.Runtime.ParserRuleContext.ChildCount
+  parent: Antlr4.Runtime.ParserRuleContext
+  isExternal: true
+  name: ChildCount
+  nameWithType: ParserRuleContext.ChildCount
+  fullName: Antlr4.Runtime.ParserRuleContext.ChildCount
+- uid: Antlr4.Runtime.ParserRuleContext.SourceInterval
+  commentId: P:Antlr4.Runtime.ParserRuleContext.SourceInterval
+  parent: Antlr4.Runtime.ParserRuleContext
+  isExternal: true
+  name: SourceInterval
+  nameWithType: ParserRuleContext.SourceInterval
+  fullName: Antlr4.Runtime.ParserRuleContext.SourceInterval
+- uid: Antlr4.Runtime.ParserRuleContext.Start
+  commentId: P:Antlr4.Runtime.ParserRuleContext.Start
+  parent: Antlr4.Runtime.ParserRuleContext
+  isExternal: true
+  name: Start
+  nameWithType: ParserRuleContext.Start
+  fullName: Antlr4.Runtime.ParserRuleContext.Start
+- uid: Antlr4.Runtime.ParserRuleContext.Stop
+  commentId: P:Antlr4.Runtime.ParserRuleContext.Stop
+  parent: Antlr4.Runtime.ParserRuleContext
+  isExternal: true
+  name: Stop
+  nameWithType: ParserRuleContext.Stop
+  fullName: Antlr4.Runtime.ParserRuleContext.Stop
+- uid: Antlr4.Runtime.RuleContext.parent
+  commentId: F:Antlr4.Runtime.RuleContext.parent
+  parent: Antlr4.Runtime.RuleContext
+  isExternal: true
+  name: parent
+  nameWithType: RuleContext.parent
+  fullName: Antlr4.Runtime.RuleContext.parent
+- uid: Antlr4.Runtime.RuleContext.invokingState
+  commentId: F:Antlr4.Runtime.RuleContext.invokingState
+  parent: Antlr4.Runtime.RuleContext
+  isExternal: true
+  name: invokingState
+  nameWithType: RuleContext.invokingState
+  fullName: Antlr4.Runtime.RuleContext.invokingState
+- uid: Antlr4.Runtime.RuleContext.GetChildContext(Antlr4.Runtime.RuleContext,System.Int32)
+  commentId: M:Antlr4.Runtime.RuleContext.GetChildContext(Antlr4.Runtime.RuleContext,System.Int32)
+  parent: Antlr4.Runtime.RuleContext
+  isExternal: true
+  name: GetChildContext(RuleContext, Int32)
+  nameWithType: RuleContext.GetChildContext(RuleContext, Int32)
+  fullName: Antlr4.Runtime.RuleContext.GetChildContext(Antlr4.Runtime.RuleContext, System.Int32)
+  spec.csharp:
+  - uid: Antlr4.Runtime.RuleContext.GetChildContext(Antlr4.Runtime.RuleContext,System.Int32)
+    name: GetChildContext
+    nameWithType: RuleContext.GetChildContext
+    fullName: Antlr4.Runtime.RuleContext.GetChildContext
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.RuleContext
+    name: RuleContext
+    nameWithType: RuleContext
+    fullName: Antlr4.Runtime.RuleContext
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.RuleContext.GetChildContext(Antlr4.Runtime.RuleContext,System.Int32)
+    name: GetChildContext
+    nameWithType: RuleContext.GetChildContext
+    fullName: Antlr4.Runtime.RuleContext.GetChildContext
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.RuleContext
+    name: RuleContext
+    nameWithType: RuleContext
+    fullName: Antlr4.Runtime.RuleContext
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.RuleContext.Depth
+  commentId: M:Antlr4.Runtime.RuleContext.Depth
+  parent: Antlr4.Runtime.RuleContext
+  isExternal: true
+  name: Depth()
+  nameWithType: RuleContext.Depth()
+  fullName: Antlr4.Runtime.RuleContext.Depth()
+  spec.csharp:
+  - uid: Antlr4.Runtime.RuleContext.Depth
+    name: Depth
+    nameWithType: RuleContext.Depth
+    fullName: Antlr4.Runtime.RuleContext.Depth
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.RuleContext.Depth
+    name: Depth
+    nameWithType: RuleContext.Depth
+    fullName: Antlr4.Runtime.RuleContext.Depth
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.RuleContext.GetText
+  commentId: M:Antlr4.Runtime.RuleContext.GetText
+  parent: Antlr4.Runtime.RuleContext
+  isExternal: true
+  name: GetText()
+  nameWithType: RuleContext.GetText()
+  fullName: Antlr4.Runtime.RuleContext.GetText()
+  spec.csharp:
+  - uid: Antlr4.Runtime.RuleContext.GetText
+    name: GetText
+    nameWithType: RuleContext.GetText
+    fullName: Antlr4.Runtime.RuleContext.GetText
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.RuleContext.GetText
+    name: GetText
+    nameWithType: RuleContext.GetText
+    fullName: Antlr4.Runtime.RuleContext.GetText
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.RuleContext.Antlr4#Runtime#Tree#ITree#GetChild(System.Int32)
+  commentId: M:Antlr4.Runtime.RuleContext.Antlr4#Runtime#Tree#ITree#GetChild(System.Int32)
+  parent: Antlr4.Runtime.RuleContext
+  isExternal: true
+  name: ITree.GetChild(Int32)
+  nameWithType: RuleContext.ITree.GetChild(Int32)
+  fullName: Antlr4.Runtime.RuleContext.Antlr4.Runtime.Tree.ITree.GetChild(System.Int32)
+  nameWithType.vb: RuleContext.Antlr4.Runtime.Tree.ITree.GetChild(Int32)
+  name.vb: Antlr4.Runtime.Tree.ITree.GetChild(Int32)
+  spec.csharp:
+  - uid: Antlr4.Runtime.RuleContext.Antlr4#Runtime#Tree#ITree#GetChild(System.Int32)
+    name: ITree.GetChild
+    nameWithType: RuleContext.ITree.GetChild
+    fullName: Antlr4.Runtime.RuleContext.Antlr4.Runtime.Tree.ITree.GetChild
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.RuleContext.Antlr4#Runtime#Tree#ITree#GetChild(System.Int32)
+    name: Antlr4.Runtime.Tree.ITree.GetChild
+    nameWithType: RuleContext.Antlr4.Runtime.Tree.ITree.GetChild
+    fullName: Antlr4.Runtime.RuleContext.Antlr4.Runtime.Tree.ITree.GetChild
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.RuleContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{{T}})
+  commentId: M:Antlr4.Runtime.RuleContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
+  parent: Antlr4.Runtime.RuleContext
+  definition: Antlr4.Runtime.RuleContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
+  name: Accept<T>(IParseTreeVisitor<T>)
+  nameWithType: RuleContext.Accept<T>(IParseTreeVisitor<T>)
+  fullName: Antlr4.Runtime.RuleContext.Accept<T>(Antlr4.Runtime.Tree.IParseTreeVisitor<T>)
+  nameWithType.vb: RuleContext.Accept(Of T)(IParseTreeVisitor(Of T))
+  fullName.vb: Antlr4.Runtime.RuleContext.Accept(Of T)(Antlr4.Runtime.Tree.IParseTreeVisitor(Of T))
+  name.vb: Accept(Of T)(IParseTreeVisitor(Of T))
+  spec.csharp:
+  - uid: Antlr4.Runtime.RuleContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
+    name: Accept<T>
+    nameWithType: RuleContext.Accept<T>
+    fullName: Antlr4.Runtime.RuleContext.Accept<T>
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.Tree.IParseTreeVisitor`1
+    name: IParseTreeVisitor
+    nameWithType: IParseTreeVisitor
+    fullName: Antlr4.Runtime.Tree.IParseTreeVisitor
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.RuleContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
+    name: Accept(Of T)
+    nameWithType: RuleContext.Accept(Of T)
+    fullName: Antlr4.Runtime.RuleContext.Accept(Of T)
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.Tree.IParseTreeVisitor`1
+    name: IParseTreeVisitor
+    nameWithType: IParseTreeVisitor
+    fullName: Antlr4.Runtime.Tree.IParseTreeVisitor
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.RuleContext.ToStringTree(Antlr4.Runtime.Parser)
+  commentId: M:Antlr4.Runtime.RuleContext.ToStringTree(Antlr4.Runtime.Parser)
+  parent: Antlr4.Runtime.RuleContext
+  isExternal: true
+  name: ToStringTree(Parser)
+  nameWithType: RuleContext.ToStringTree(Parser)
+  fullName: Antlr4.Runtime.RuleContext.ToStringTree(Antlr4.Runtime.Parser)
+  spec.csharp:
+  - uid: Antlr4.Runtime.RuleContext.ToStringTree(Antlr4.Runtime.Parser)
+    name: ToStringTree
+    nameWithType: RuleContext.ToStringTree
+    fullName: Antlr4.Runtime.RuleContext.ToStringTree
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.Parser
+    name: Parser
+    nameWithType: Parser
+    fullName: Antlr4.Runtime.Parser
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.RuleContext.ToStringTree(Antlr4.Runtime.Parser)
+    name: ToStringTree
+    nameWithType: RuleContext.ToStringTree
+    fullName: Antlr4.Runtime.RuleContext.ToStringTree
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.Parser
+    name: Parser
+    nameWithType: Parser
+    fullName: Antlr4.Runtime.Parser
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.RuleContext.ToStringTree(System.Collections.Generic.IList{System.String})
+  commentId: M:Antlr4.Runtime.RuleContext.ToStringTree(System.Collections.Generic.IList{System.String})
+  parent: Antlr4.Runtime.RuleContext
+  isExternal: true
+  name: ToStringTree(IList<String>)
+  nameWithType: RuleContext.ToStringTree(IList<String>)
+  fullName: Antlr4.Runtime.RuleContext.ToStringTree(System.Collections.Generic.IList<System.String>)
+  nameWithType.vb: RuleContext.ToStringTree(IList(Of String))
+  fullName.vb: Antlr4.Runtime.RuleContext.ToStringTree(System.Collections.Generic.IList(Of System.String))
+  name.vb: ToStringTree(IList(Of String))
+  spec.csharp:
+  - uid: Antlr4.Runtime.RuleContext.ToStringTree(System.Collections.Generic.IList{System.String})
+    name: ToStringTree
+    nameWithType: RuleContext.ToStringTree
+    fullName: Antlr4.Runtime.RuleContext.ToStringTree
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.RuleContext.ToStringTree(System.Collections.Generic.IList{System.String})
+    name: ToStringTree
+    nameWithType: RuleContext.ToStringTree
+    fullName: Antlr4.Runtime.RuleContext.ToStringTree
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.RuleContext.ToStringTree
+  commentId: M:Antlr4.Runtime.RuleContext.ToStringTree
+  parent: Antlr4.Runtime.RuleContext
+  isExternal: true
+  name: ToStringTree()
+  nameWithType: RuleContext.ToStringTree()
+  fullName: Antlr4.Runtime.RuleContext.ToStringTree()
+  spec.csharp:
+  - uid: Antlr4.Runtime.RuleContext.ToStringTree
+    name: ToStringTree
+    nameWithType: RuleContext.ToStringTree
+    fullName: Antlr4.Runtime.RuleContext.ToStringTree
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.RuleContext.ToStringTree
+    name: ToStringTree
+    nameWithType: RuleContext.ToStringTree
+    fullName: Antlr4.Runtime.RuleContext.ToStringTree
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.RuleContext.ToString
+  commentId: M:Antlr4.Runtime.RuleContext.ToString
+  parent: Antlr4.Runtime.RuleContext
+  isExternal: true
+  name: ToString()
+  nameWithType: RuleContext.ToString()
+  fullName: Antlr4.Runtime.RuleContext.ToString()
+  spec.csharp:
+  - uid: Antlr4.Runtime.RuleContext.ToString
+    name: ToString
+    nameWithType: RuleContext.ToString
+    fullName: Antlr4.Runtime.RuleContext.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.RuleContext.ToString
+    name: ToString
+    nameWithType: RuleContext.ToString
+    fullName: Antlr4.Runtime.RuleContext.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.RuleContext.ToString(Antlr4.Runtime.IRecognizer)
+  commentId: M:Antlr4.Runtime.RuleContext.ToString(Antlr4.Runtime.IRecognizer)
+  parent: Antlr4.Runtime.RuleContext
+  isExternal: true
+  name: ToString(IRecognizer)
+  nameWithType: RuleContext.ToString(IRecognizer)
+  fullName: Antlr4.Runtime.RuleContext.ToString(Antlr4.Runtime.IRecognizer)
+  spec.csharp:
+  - uid: Antlr4.Runtime.RuleContext.ToString(Antlr4.Runtime.IRecognizer)
+    name: ToString
+    nameWithType: RuleContext.ToString
+    fullName: Antlr4.Runtime.RuleContext.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.IRecognizer
+    name: IRecognizer
+    nameWithType: IRecognizer
+    fullName: Antlr4.Runtime.IRecognizer
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.RuleContext.ToString(Antlr4.Runtime.IRecognizer)
+    name: ToString
+    nameWithType: RuleContext.ToString
+    fullName: Antlr4.Runtime.RuleContext.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.IRecognizer
+    name: IRecognizer
+    nameWithType: IRecognizer
+    fullName: Antlr4.Runtime.IRecognizer
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.RuleContext.ToString(System.Collections.Generic.IList{System.String})
+  commentId: M:Antlr4.Runtime.RuleContext.ToString(System.Collections.Generic.IList{System.String})
+  parent: Antlr4.Runtime.RuleContext
+  isExternal: true
+  name: ToString(IList<String>)
+  nameWithType: RuleContext.ToString(IList<String>)
+  fullName: Antlr4.Runtime.RuleContext.ToString(System.Collections.Generic.IList<System.String>)
+  nameWithType.vb: RuleContext.ToString(IList(Of String))
+  fullName.vb: Antlr4.Runtime.RuleContext.ToString(System.Collections.Generic.IList(Of System.String))
+  name.vb: ToString(IList(Of String))
+  spec.csharp:
+  - uid: Antlr4.Runtime.RuleContext.ToString(System.Collections.Generic.IList{System.String})
+    name: ToString
+    nameWithType: RuleContext.ToString
+    fullName: Antlr4.Runtime.RuleContext.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.RuleContext.ToString(System.Collections.Generic.IList{System.String})
+    name: ToString
+    nameWithType: RuleContext.ToString
+    fullName: Antlr4.Runtime.RuleContext.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.RuleContext.ToString(Antlr4.Runtime.IRecognizer,Antlr4.Runtime.RuleContext)
+  commentId: M:Antlr4.Runtime.RuleContext.ToString(Antlr4.Runtime.IRecognizer,Antlr4.Runtime.RuleContext)
+  parent: Antlr4.Runtime.RuleContext
+  isExternal: true
+  name: ToString(IRecognizer, RuleContext)
+  nameWithType: RuleContext.ToString(IRecognizer, RuleContext)
+  fullName: Antlr4.Runtime.RuleContext.ToString(Antlr4.Runtime.IRecognizer, Antlr4.Runtime.RuleContext)
+  spec.csharp:
+  - uid: Antlr4.Runtime.RuleContext.ToString(Antlr4.Runtime.IRecognizer,Antlr4.Runtime.RuleContext)
+    name: ToString
+    nameWithType: RuleContext.ToString
+    fullName: Antlr4.Runtime.RuleContext.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.IRecognizer
+    name: IRecognizer
+    nameWithType: IRecognizer
+    fullName: Antlr4.Runtime.IRecognizer
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Antlr4.Runtime.RuleContext
+    name: RuleContext
+    nameWithType: RuleContext
+    fullName: Antlr4.Runtime.RuleContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.RuleContext.ToString(Antlr4.Runtime.IRecognizer,Antlr4.Runtime.RuleContext)
+    name: ToString
+    nameWithType: RuleContext.ToString
+    fullName: Antlr4.Runtime.RuleContext.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.IRecognizer
+    name: IRecognizer
+    nameWithType: IRecognizer
+    fullName: Antlr4.Runtime.IRecognizer
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Antlr4.Runtime.RuleContext
+    name: RuleContext
+    nameWithType: RuleContext
+    fullName: Antlr4.Runtime.RuleContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.RuleContext.ToString(System.Collections.Generic.IList{System.String},Antlr4.Runtime.RuleContext)
+  commentId: M:Antlr4.Runtime.RuleContext.ToString(System.Collections.Generic.IList{System.String},Antlr4.Runtime.RuleContext)
+  parent: Antlr4.Runtime.RuleContext
+  isExternal: true
+  name: ToString(IList<String>, RuleContext)
+  nameWithType: RuleContext.ToString(IList<String>, RuleContext)
+  fullName: Antlr4.Runtime.RuleContext.ToString(System.Collections.Generic.IList<System.String>, Antlr4.Runtime.RuleContext)
+  nameWithType.vb: RuleContext.ToString(IList(Of String), RuleContext)
+  fullName.vb: Antlr4.Runtime.RuleContext.ToString(System.Collections.Generic.IList(Of System.String), Antlr4.Runtime.RuleContext)
+  name.vb: ToString(IList(Of String), RuleContext)
+  spec.csharp:
+  - uid: Antlr4.Runtime.RuleContext.ToString(System.Collections.Generic.IList{System.String},Antlr4.Runtime.RuleContext)
+    name: ToString
+    nameWithType: RuleContext.ToString
+    fullName: Antlr4.Runtime.RuleContext.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Antlr4.Runtime.RuleContext
+    name: RuleContext
+    nameWithType: RuleContext
+    fullName: Antlr4.Runtime.RuleContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.RuleContext.ToString(System.Collections.Generic.IList{System.String},Antlr4.Runtime.RuleContext)
+    name: ToString
+    nameWithType: RuleContext.ToString
+    fullName: Antlr4.Runtime.RuleContext.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Antlr4.Runtime.RuleContext
+    name: RuleContext
+    nameWithType: RuleContext
+    fullName: Antlr4.Runtime.RuleContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Antlr4.Runtime.RuleContext.IsEmpty
+  commentId: P:Antlr4.Runtime.RuleContext.IsEmpty
+  parent: Antlr4.Runtime.RuleContext
+  isExternal: true
+  name: IsEmpty
+  nameWithType: RuleContext.IsEmpty
+  fullName: Antlr4.Runtime.RuleContext.IsEmpty
+- uid: Antlr4.Runtime.RuleContext.Antlr4#Runtime#Tree#IRuleNode#RuleContext
+  commentId: P:Antlr4.Runtime.RuleContext.Antlr4#Runtime#Tree#IRuleNode#RuleContext
+  parent: Antlr4.Runtime.RuleContext
+  isExternal: true
+  name: IRuleNode.RuleContext
+  nameWithType: RuleContext.IRuleNode.RuleContext
+  fullName: Antlr4.Runtime.RuleContext.Antlr4.Runtime.Tree.IRuleNode.RuleContext
+  nameWithType.vb: RuleContext.Antlr4.Runtime.Tree.IRuleNode.RuleContext
+  name.vb: Antlr4.Runtime.Tree.IRuleNode.RuleContext
+- uid: Antlr4.Runtime.RuleContext.Antlr4#Runtime#Tree#IRuleNode#Parent
+  commentId: P:Antlr4.Runtime.RuleContext.Antlr4#Runtime#Tree#IRuleNode#Parent
+  parent: Antlr4.Runtime.RuleContext
+  isExternal: true
+  name: IRuleNode.Parent
+  nameWithType: RuleContext.IRuleNode.Parent
+  fullName: Antlr4.Runtime.RuleContext.Antlr4.Runtime.Tree.IRuleNode.Parent
+  nameWithType.vb: RuleContext.Antlr4.Runtime.Tree.IRuleNode.Parent
+  name.vb: Antlr4.Runtime.Tree.IRuleNode.Parent
+- uid: Antlr4.Runtime.RuleContext.Antlr4#Runtime#Tree#IParseTree#Parent
+  commentId: P:Antlr4.Runtime.RuleContext.Antlr4#Runtime#Tree#IParseTree#Parent
+  parent: Antlr4.Runtime.RuleContext
+  isExternal: true
+  name: IParseTree.Parent
+  nameWithType: RuleContext.IParseTree.Parent
+  fullName: Antlr4.Runtime.RuleContext.Antlr4.Runtime.Tree.IParseTree.Parent
+  nameWithType.vb: RuleContext.Antlr4.Runtime.Tree.IParseTree.Parent
+  name.vb: Antlr4.Runtime.Tree.IParseTree.Parent
+- uid: Antlr4.Runtime.RuleContext.Antlr4#Runtime#Tree#ITree#Parent
+  commentId: P:Antlr4.Runtime.RuleContext.Antlr4#Runtime#Tree#ITree#Parent
+  parent: Antlr4.Runtime.RuleContext
+  isExternal: true
+  name: ITree.Parent
+  nameWithType: RuleContext.ITree.Parent
+  fullName: Antlr4.Runtime.RuleContext.Antlr4.Runtime.Tree.ITree.Parent
+  nameWithType.vb: RuleContext.Antlr4.Runtime.Tree.ITree.Parent
+  name.vb: Antlr4.Runtime.Tree.ITree.Parent
+- uid: Antlr4.Runtime.RuleContext.Payload
+  commentId: P:Antlr4.Runtime.RuleContext.Payload
+  parent: Antlr4.Runtime.RuleContext
+  isExternal: true
+  name: Payload
+  nameWithType: RuleContext.Payload
+  fullName: Antlr4.Runtime.RuleContext.Payload
+- uid: Antlr4.Runtime.RuleContext.Antlr4#Runtime#Tree#ITree#Payload
+  commentId: P:Antlr4.Runtime.RuleContext.Antlr4#Runtime#Tree#ITree#Payload
+  parent: Antlr4.Runtime.RuleContext
+  isExternal: true
+  name: ITree.Payload
+  nameWithType: RuleContext.ITree.Payload
+  fullName: Antlr4.Runtime.RuleContext.Antlr4.Runtime.Tree.ITree.Payload
+  nameWithType.vb: RuleContext.Antlr4.Runtime.Tree.ITree.Payload
+  name.vb: Antlr4.Runtime.Tree.ITree.Payload
+- uid: Antlr4.Runtime.RuleContext.OuterAlternative
+  commentId: P:Antlr4.Runtime.RuleContext.OuterAlternative
+  parent: Antlr4.Runtime.RuleContext
+  isExternal: true
+  name: OuterAlternative
+  nameWithType: RuleContext.OuterAlternative
+  fullName: Antlr4.Runtime.RuleContext.OuterAlternative
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Antlr4.Runtime
+  commentId: N:Antlr4.Runtime
+  isExternal: true
+  name: Antlr4.Runtime
+  nameWithType: Antlr4.Runtime
+  fullName: Antlr4.Runtime
+- uid: Antlr4.Runtime.Tree
+  commentId: N:Antlr4.Runtime.Tree
+  isExternal: true
+  name: Antlr4.Runtime.Tree
+  nameWithType: Antlr4.Runtime.Tree
+  fullName: Antlr4.Runtime.Tree
+- uid: Antlr4.Runtime.RuleContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
+  commentId: M:Antlr4.Runtime.RuleContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
+  isExternal: true
+  name: Accept<T>(IParseTreeVisitor<T>)
+  nameWithType: RuleContext.Accept<T>(IParseTreeVisitor<T>)
+  fullName: Antlr4.Runtime.RuleContext.Accept<T>(Antlr4.Runtime.Tree.IParseTreeVisitor<T>)
+  nameWithType.vb: RuleContext.Accept(Of T)(IParseTreeVisitor(Of T))
+  fullName.vb: Antlr4.Runtime.RuleContext.Accept(Of T)(Antlr4.Runtime.Tree.IParseTreeVisitor(Of T))
+  name.vb: Accept(Of T)(IParseTreeVisitor(Of T))
+  spec.csharp:
+  - uid: Antlr4.Runtime.RuleContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
+    name: Accept<T>
+    nameWithType: RuleContext.Accept<T>
+    fullName: Antlr4.Runtime.RuleContext.Accept<T>
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.Tree.IParseTreeVisitor`1
+    name: IParseTreeVisitor
+    nameWithType: IParseTreeVisitor
+    fullName: Antlr4.Runtime.Tree.IParseTreeVisitor
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.RuleContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
+    name: Accept(Of T)
+    nameWithType: RuleContext.Accept(Of T)
+    fullName: Antlr4.Runtime.RuleContext.Accept(Of T)
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.Tree.IParseTreeVisitor`1
+    name: IParseTreeVisitor
+    nameWithType: IParseTreeVisitor
+    fullName: Antlr4.Runtime.Tree.IParseTreeVisitor
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dStateContext.SOUND3D*
+  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dStateContext.SOUND3D
+  name: SOUND3D
+  nameWithType: MapGrammarParser.Sound3dStateContext.SOUND3D
+  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dStateContext.SOUND3D
+- uid: Antlr4.Runtime.Tree.ITerminalNode
+  commentId: T:Antlr4.Runtime.Tree.ITerminalNode
+  parent: Antlr4.Runtime.Tree
+  isExternal: true
+  name: ITerminalNode
+  nameWithType: ITerminalNode
+  fullName: Antlr4.Runtime.Tree.ITerminalNode
+- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dStateContext.sound3d*
+  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dStateContext.sound3d
+  name: sound3d
+  nameWithType: MapGrammarParser.Sound3dStateContext.sound3d
+  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dStateContext.sound3d
+- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dContext
+  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dContext
+  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  name: MapGrammarParser.Sound3dContext
+  nameWithType: MapGrammarParser.Sound3dContext
+  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dContext
+- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dStateContext.#ctor*
+  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dStateContext.#ctor
+  name: Sound3dStateContext
+  nameWithType: MapGrammarParser.Sound3dStateContext.Sound3dStateContext
+  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dStateContext.Sound3dStateContext
+- uid: Antlr4.Runtime.ParserRuleContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
+  commentId: M:Antlr4.Runtime.ParserRuleContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
+  parent: Antlr4.Runtime.ParserRuleContext
+  isExternal: true
+  name: EnterRule(IParseTreeListener)
+  nameWithType: ParserRuleContext.EnterRule(IParseTreeListener)
+  fullName: Antlr4.Runtime.ParserRuleContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
+  spec.csharp:
+  - uid: Antlr4.Runtime.ParserRuleContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
+    name: EnterRule
+    nameWithType: ParserRuleContext.EnterRule
+    fullName: Antlr4.Runtime.ParserRuleContext.EnterRule
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.Tree.IParseTreeListener
+    name: IParseTreeListener
+    nameWithType: IParseTreeListener
+    fullName: Antlr4.Runtime.Tree.IParseTreeListener
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.ParserRuleContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
+    name: EnterRule
+    nameWithType: ParserRuleContext.EnterRule
+    fullName: Antlr4.Runtime.ParserRuleContext.EnterRule
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.Tree.IParseTreeListener
+    name: IParseTreeListener
+    nameWithType: IParseTreeListener
+    fullName: Antlr4.Runtime.Tree.IParseTreeListener
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dStateContext.EnterRule*
+  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dStateContext.EnterRule
+  name: EnterRule
+  nameWithType: MapGrammarParser.Sound3dStateContext.EnterRule
+  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dStateContext.EnterRule
+- uid: Antlr4.Runtime.Tree.IParseTreeListener
+  commentId: T:Antlr4.Runtime.Tree.IParseTreeListener
+  parent: Antlr4.Runtime.Tree
+  isExternal: true
+  name: IParseTreeListener
+  nameWithType: IParseTreeListener
+  fullName: Antlr4.Runtime.Tree.IParseTreeListener
+- uid: Antlr4.Runtime.ParserRuleContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
+  commentId: M:Antlr4.Runtime.ParserRuleContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
+  parent: Antlr4.Runtime.ParserRuleContext
+  isExternal: true
+  name: ExitRule(IParseTreeListener)
+  nameWithType: ParserRuleContext.ExitRule(IParseTreeListener)
+  fullName: Antlr4.Runtime.ParserRuleContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
+  spec.csharp:
+  - uid: Antlr4.Runtime.ParserRuleContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
+    name: ExitRule
+    nameWithType: ParserRuleContext.ExitRule
+    fullName: Antlr4.Runtime.ParserRuleContext.ExitRule
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.Tree.IParseTreeListener
+    name: IParseTreeListener
+    nameWithType: IParseTreeListener
+    fullName: Antlr4.Runtime.Tree.IParseTreeListener
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.ParserRuleContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
+    name: ExitRule
+    nameWithType: ParserRuleContext.ExitRule
+    fullName: Antlr4.Runtime.ParserRuleContext.ExitRule
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.Tree.IParseTreeListener
+    name: IParseTreeListener
+    nameWithType: IParseTreeListener
+    fullName: Antlr4.Runtime.Tree.IParseTreeListener
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dStateContext.ExitRule*
+  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dStateContext.ExitRule
+  name: ExitRule
+  nameWithType: MapGrammarParser.Sound3dStateContext.ExitRule
+  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dStateContext.ExitRule
+- uid: Antlr4.Runtime.RuleContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{{TResult}})
+  commentId: M:Antlr4.Runtime.RuleContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
+  parent: Antlr4.Runtime.RuleContext
+  definition: Antlr4.Runtime.RuleContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
+  name: Accept<T>(IParseTreeVisitor<T>)
+  nameWithType: RuleContext.Accept<T>(IParseTreeVisitor<T>)
+  fullName: Antlr4.Runtime.RuleContext.Accept<T>(Antlr4.Runtime.Tree.IParseTreeVisitor<T>)
+  nameWithType.vb: RuleContext.Accept(Of T)(IParseTreeVisitor(Of T))
+  fullName.vb: Antlr4.Runtime.RuleContext.Accept(Of T)(Antlr4.Runtime.Tree.IParseTreeVisitor(Of T))
+  name.vb: Accept(Of T)(IParseTreeVisitor(Of T))
+  spec.csharp:
+  - uid: Antlr4.Runtime.RuleContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
+    name: Accept<T>
+    nameWithType: RuleContext.Accept<T>
+    fullName: Antlr4.Runtime.RuleContext.Accept<T>
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.Tree.IParseTreeVisitor`1
+    name: IParseTreeVisitor
+    nameWithType: IParseTreeVisitor
+    fullName: Antlr4.Runtime.Tree.IParseTreeVisitor
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Antlr4.Runtime.RuleContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
+    name: Accept(Of T)
+    nameWithType: RuleContext.Accept(Of T)
+    fullName: Antlr4.Runtime.RuleContext.Accept(Of T)
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Antlr4.Runtime.Tree.IParseTreeVisitor`1
+    name: IParseTreeVisitor
+    nameWithType: IParseTreeVisitor
+    fullName: Antlr4.Runtime.Tree.IParseTreeVisitor
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dStateContext.Accept*
+  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dStateContext.Accept
+  name: Accept
+  nameWithType: MapGrammarParser.Sound3dStateContext.Accept
+  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dStateContext.Accept
+- uid: Antlr4.Runtime.Tree.IParseTreeVisitor{{TResult}}
+  commentId: T:Antlr4.Runtime.Tree.IParseTreeVisitor{``0}
+  parent: Antlr4.Runtime.Tree
+  definition: Antlr4.Runtime.Tree.IParseTreeVisitor`1
+  name: IParseTreeVisitor<TResult>
+  nameWithType: IParseTreeVisitor<TResult>
+  fullName: Antlr4.Runtime.Tree.IParseTreeVisitor<TResult>
+  nameWithType.vb: IParseTreeVisitor(Of TResult)
+  fullName.vb: Antlr4.Runtime.Tree.IParseTreeVisitor(Of TResult)
+  name.vb: IParseTreeVisitor(Of TResult)
+  spec.csharp:
+  - uid: Antlr4.Runtime.Tree.IParseTreeVisitor`1
+    name: IParseTreeVisitor
+    nameWithType: IParseTreeVisitor
+    fullName: Antlr4.Runtime.Tree.IParseTreeVisitor
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Antlr4.Runtime.Tree.IParseTreeVisitor`1
+    name: IParseTreeVisitor
+    nameWithType: IParseTreeVisitor
+    fullName: Antlr4.Runtime.Tree.IParseTreeVisitor
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: '{TResult}'
+  commentId: '!:TResult'
+  definition: TResult
+  name: TResult
+  nameWithType: TResult
+  fullName: TResult
+- uid: Antlr4.Runtime.Tree.IParseTreeVisitor`1
+  commentId: T:Antlr4.Runtime.Tree.IParseTreeVisitor`1
+  isExternal: true
+  name: IParseTreeVisitor<Result>
+  nameWithType: IParseTreeVisitor<Result>
+  fullName: Antlr4.Runtime.Tree.IParseTreeVisitor<Result>
+  nameWithType.vb: IParseTreeVisitor(Of Result)
+  fullName.vb: Antlr4.Runtime.Tree.IParseTreeVisitor(Of Result)
+  name.vb: IParseTreeVisitor(Of Result)
+  spec.csharp:
+  - uid: Antlr4.Runtime.Tree.IParseTreeVisitor`1
+    name: IParseTreeVisitor
+    nameWithType: IParseTreeVisitor
+    fullName: Antlr4.Runtime.Tree.IParseTreeVisitor
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: Result
+    nameWithType: Result
+    fullName: Result
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Antlr4.Runtime.Tree.IParseTreeVisitor`1
+    name: IParseTreeVisitor
+    nameWithType: IParseTreeVisitor
+    fullName: Antlr4.Runtime.Tree.IParseTreeVisitor
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: Result
+    nameWithType: Result
+    fullName: Result
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TResult
+  name: TResult
+  nameWithType: TResult
+  fullName: TResult
