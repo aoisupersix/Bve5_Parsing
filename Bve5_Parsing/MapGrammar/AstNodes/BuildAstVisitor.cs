@@ -20,11 +20,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// <returns>ルートASTノード</returns>
         public override MapGrammarAstNodes VisitRoot([NotNull] SyntaxDefinitions.MapGrammarParser.RootContext context)
         {
-            var node = new RootNode(context.Start, context.Stop)
-            {
-                Version = context.version,
-                Encoding = context.encoding()
-            };
+            var node = new RootNode(context.Start, context.Stop);
 
             foreach (var state in context.statement())
             {

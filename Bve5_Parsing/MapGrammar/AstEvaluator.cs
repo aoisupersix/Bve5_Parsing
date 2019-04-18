@@ -58,20 +58,6 @@ namespace Bve5_Parsing.MapGrammar
         {
             evaluateData = new MapData();
 
-            if (node.Version == null)
-            {
-
-            }
-            else
-            {
-                evaluateData.Version = node.Version.Text;
-                if (node.Version.Text != "2.02")
-                    Errors.Add(node.CreateNewWarning($"バージョン：\"{node.Version.Text}\"はBve5_Parsingではサポートしていないバージョンです。"));
-            }
-
-            if (node.Encoding != null)
-                evaluateData.Encoding = node.Encoding.text;
-
             foreach(var state in node.StatementList)
             {
                 object childData = Visit(state);

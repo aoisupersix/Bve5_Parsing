@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
 using System.Text;
+using System.Linq;
 
 namespace Bve5_Parsing.MapGrammar
 {
@@ -69,10 +70,7 @@ namespace Bve5_Parsing.MapGrammar
         /// <param name="input">解析するマップ構文を表す文字列</param>
         public MapData Parse(string input)
         {
-            var ast = ParseToAst(input);
-            MapData value = (MapData)new EvaluateMapGrammarVisitor(Store, _parserError).Visit(ast);
-
-            return value;
+            return Parse(input, MapGrammarParserOption.None);
         }
 
         /// <summary>
@@ -83,8 +81,20 @@ namespace Bve5_Parsing.MapGrammar
         /// <returns></returns>
         public MapData Parse(string input, MapGrammarParserOption option)
         {
-            // TODO: 現在は特にオプション無し
-            return Parse(input);
+            var headerInfo = GetHeaderInfo(input);
+            if (headerInfo.Item1 == null)
+            {
+                _parserError.Add(new ParseError(ParseErrorLevel.Error, 0, 0, "有効なマップファイルではありません。"));
+                return null;
+            }
+            var ast = ParseToAst(input.Substring(headerInfo.Item3));
+            var value = (MapData)new EvaluateMapGrammarVisitor(Store, _parserError).Visit(ast);
+
+            value.Version = headerInfo.Item1;
+            if (headerInfo.Item2 != null)
+                value.Encoding = headerInfo.Item2;
+
+            return value;
         }
 
         /// <summary>
@@ -96,17 +106,27 @@ namespace Bve5_Parsing.MapGrammar
         /// <returns></returns>
         public MapData Parse(string input, string dirAbsolutePath, MapGrammarParserOption option)
         {
+            var headerInfo = GetHeaderInfo(input);
+            if (headerInfo.Item1 == null)
+            {
+                _parserError.Add(new ParseError(ParseErrorLevel.Error, 0, 0, "有効なマップファイルではありません。"));
+                return null;
+            }
+
             // Includeを再帰的にパースするか？
             if (option.HasFlag(MapGrammarParserOption.ParseIncludeSyntaxRecursively))
             {
-                var ast = ParseToAst(input);
+                var ast = ParseToAst(input.Substring(headerInfo.Item3));
                 var value = (MapData)new EvaluateMapGrammarVisitorWithInclude(Store, dirAbsolutePath, _parserError).Visit(ast);
+
+                value.Version = headerInfo.Item1;
+                if (headerInfo.Item2 != null)
+                    value.Encoding = headerInfo.Item2;
+
                 return value;
             }
             else
-            {
                 return Parse(input, option);
-            }
         }
 
         /// <summary>
@@ -116,18 +136,7 @@ namespace Bve5_Parsing.MapGrammar
         /// <returns></returns>
         public MapData ParseFromFile(string filePath)
         {
-            var fileInfo = new FileInfo(filePath);
-#if NETSTANDARD2_0
-            Encoding.RegisterProvider(CodePagesEncodingProvider.Instance); // Shift-Jisを扱うために必要
-#endif
-            using (var reader = new Hnx8.ReadJEnc.FileReader(fileInfo))
-            {
-                reader.Read(fileInfo);
-                if (reader.Text == null)
-                    throw new IOException(); // TODO
-                var ast = ParseToAst(reader.Text);
-                return Parse(reader.Text);
-            }
+            return ParseFromFile(filePath, MapGrammarParserOption.None);
         }
 
         /// <summary>
@@ -154,7 +163,7 @@ namespace Bve5_Parsing.MapGrammar
         /// <summary>
         /// 引数に与えられたマップ構文の構文解析を行い、ASTを生成します。
         /// </summary>
-        /// <param name="input">解析するマップ構文を表す文字列</param>
+        /// <param name="statementsStr">解析するマップ構文のステートメントを表す文字列</param>
         public MapGrammarAstNodes ParseToAst(string input)
         {
             AntlrInputStream inputStream = new AntlrInputStream(input);
@@ -170,6 +179,28 @@ namespace Bve5_Parsing.MapGrammar
             var ast = new BuildAstVisitor().VisitRoot(cst);
 
             return ast;
+        }
+
+        /// <summary>
+        /// 引数に与えられたマップファイルのヘッダ情報を取得します。
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns>
+        /// バージョン、エンコーディング、ステートメントの開始インデックスのタプルにまとめたもの。
+        /// Item1にバージョン情報、Item2にエンコーディング、Item3にステートメント開始インデックスを返します。
+        /// 引数に与えられた文字列が有効なマップファイルでない場合はバージョン情報がnullのタプルを返します。
+        /// </returns>
+        protected Tuple<string, string, int> GetHeaderInfo(string input)
+        {
+            var header = input.Replace("\r\n", "\n").Replace("\r", "\n").Split('\n').FirstOrDefault();
+            if (string.IsNullOrEmpty(header) || header.Length < 14 || header.Substring(0, 9).ToLower() != "bvets map")
+                return new Tuple<string, string, int>(null, null, 0); // 有効なマップファイルではない
+
+            var version = header.Substring(10, 4);
+            if (header.Length >= 15 && header[14] == ':')
+                return new Tuple<string, string, int>(version, header.Substring(15).Trim(), header.Length); // エンコーディング指定あり
+
+            return new Tuple<string, string, int>(version, null, header.Length); // エンコーディング指定なし
         }
     }
 }

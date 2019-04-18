@@ -7,11 +7,12 @@ options{
 }
 
 root :
-	BVETS MAP version=NUM encoding? (statement STATE_END)* EOF
+	(statement STATE_END)* EOF
 	;
 
 statement :
 	  distance							#distState
+	| varAssign 						#varAssignState
 	| INCLUDE include					#includeState
 	| CURVE curve 						#curveState
 	| GRADIENT gradient 				#gradientState
@@ -37,7 +38,6 @@ statement :
 	| FLANGENOISE flangenoise 			#flangenoiseState
 	| JOINTNOISE jointnoise 			#jointnoiseState
 	| TRAIN train 						#trainState
-	| varAssign 						#varAssignState
 	| LEGACY legacy						#legacyState
 	;
 
@@ -45,6 +45,10 @@ statement :
 distance :
 	expr
 	;
+
+//変数/数式
+varAssign :
+	v=var EQUAL expr;
 
 //インクルード構文
 include :
@@ -221,18 +225,6 @@ train :
 	| OPN_BRA key=expr CLS_BRA DOT func=STOP OPN_PAR decelerate=nullableExpr COMMA stoptime=nullableExpr COMMA accelerate=nullableExpr COMMA speed=nullableExpr CLS_PAR
 	;
 
-//連続ストラクチャリスト引数
-strkey :
-	COMMA key=string;
-
-//連続数式引数
-exprArgs :
-	COMMA arg=nullableExpr;
-
-//変数/数式
-varAssign :
-	v=var EQUAL expr;
-
 //レガシー関数
 legacy :
 	  DOT func=FOG OPN_PAR fogstart=nullableExpr COMMA fogend=nullableExpr COMMA red=nullableExpr COMMA green=nullableExpr COMMA blue=nullableExpr CLS_PAR
@@ -240,6 +232,14 @@ legacy :
 	| DOT func=PITCH OPN_PAR rate=nullableExpr CLS_PAR
 	| DOT func=TURN OPN_PAR slope=nullableExpr CLS_PAR
 	;
+
+//連続ストラクチャリスト引数
+strkey :
+	COMMA key=string;
+
+//連続数式引数
+exprArgs :
+	COMMA arg=nullableExpr;
 
 nullableExpr :
 	  expr
@@ -279,12 +279,4 @@ string returns [string text]:
 
 string_text :
 	CHAR*
-	;
-
-encoding returns [string text]:
-	SELECT_ENCODE v=encode_string ENCODE_END? {$text = $v.text; }
-	;
-
-encode_string :
-	ENCODE_CHAR*
 	;

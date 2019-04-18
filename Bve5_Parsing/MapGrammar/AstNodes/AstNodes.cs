@@ -13,8 +13,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     {
 
         public List<MapGrammarAstNodes> StatementList { get; set; }
-        public IToken Version { get; set; }
-        public EncodingContext Encoding { get; set; }
+
         public RootNode(IToken start, IToken stop) : base(start, stop)
         {
             StatementList = new List<MapGrammarAstNodes>();
