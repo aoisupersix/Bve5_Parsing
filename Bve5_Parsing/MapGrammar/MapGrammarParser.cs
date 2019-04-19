@@ -90,6 +90,37 @@ namespace Bve5_Parsing.MapGrammar
         }
 
         /// <summary>
+        /// 引数に与えられたマップ構文ファイルの構文解析と評価を行い、MapDataを生成します。
+        /// </summary>
+        /// <param name="filePath">解析するマップ構文のファイルパス</param>
+        /// <returns></returns>
+        public MapData ParseFromFile(string filePath)
+        {
+            return ParseFromFile(filePath, MapGrammarParserOption.None);
+        }
+
+        /// <summary>
+        /// 引数に与えられたマップ構文ファイルの構文解析と評価を行い、MapDataを生成します。
+        /// </summary>
+        /// <param name="filePath">解析するマップ構文のファイルパス</param>
+        /// <param name="option"></param>
+        /// <returns></returns>
+        public MapData ParseFromFile(string filePath, MapGrammarParserOption option)
+        {
+            var fileInfo = new FileInfo(filePath);
+#if NETSTANDARD2_0
+            Encoding.RegisterProvider(CodePagesEncodingProvider.Instance); // Shift-Jisを扱うために必要
+#endif
+            using (var reader = new Hnx8.ReadJEnc.FileReader(fileInfo))
+            {
+                reader.Read(fileInfo);
+                if (reader.Text == null)
+                    throw new IOException(); // TODO
+                return Parse(reader.Text, fileInfo.Directory.FullName, option);
+            }
+        }
+
+        /// <summary>
         /// 引数に与えられたマップ構文文字列の構文解析と評価を行い、MapDataを生成します。
         /// </summary>
         /// <param name="input"></param>
@@ -122,52 +153,34 @@ namespace Bve5_Parsing.MapGrammar
         }
 
         /// <summary>
-        /// 引数に与えられたマップ構文ファイルの構文解析と評価を行い、MapDataを生成します。
-        /// </summary>
-        /// <param name="filePath">解析するマップ構文のファイルパス</param>
-        /// <returns></returns>
-        public MapData ParseFromFile(string filePath)
-        {
-            return ParseFromFile(filePath, MapGrammarParserOption.None);
-        }
-
-        /// <summary>
-        /// 引数に与えられたマップ構文ファイルの構文解析と評価を行い、MapDataを生成します。
-        /// </summary>
-        /// <param name="filePath">解析するマップ構文のファイルパス</param>
-        /// <param name="option"></param>
-        /// <returns></returns>
-        public MapData ParseFromFile(string filePath, MapGrammarParserOption option)
-        {
-            var fileInfo = new FileInfo(filePath);
-#if NETSTANDARD2_0
-            Encoding.RegisterProvider(CodePagesEncodingProvider.Instance); // Shift-Jisを扱うために必要
-#endif
-            using (var reader = new Hnx8.ReadJEnc.FileReader(fileInfo))
-            {
-                reader.Read(fileInfo);
-                if (reader.Text == null)
-                    throw new IOException(); // TODO
-                return Parse(reader.Text, fileInfo.Directory.FullName, option);
-            }
-        }
-
-        /// <summary>
         /// 引数に与えられたマップ構文の構文解析を行い、ASTを生成します。
         /// </summary>
-        /// <param name="statementsStr">解析するマップ構文のステートメントを表す文字列</param>
-        public MapGrammarAstNodes ParseToAst(string input)
+        /// <param name="input">解析するマップ構文のステートメントを表す文字列</param>
+        /// <param name="versionString">パーサを指定するためのバージョン文字列（省略した場合はV2Parserを利用します）</param>
+        /// <returns></returns>
+        public MapGrammarAstNodes ParseToAst(string input, string versionString = null)
         {
             var inputStream = new AntlrInputStream(input);
             var lexer = new MapGrammarLexer(inputStream);
             var commonTokneStream = new CommonTokenStream(lexer);
-            var parser = new V2Parser.SyntaxDefinitions.MapGrammarParser(commonTokneStream);
 
-            parser.AddErrorListener(ErrorListener);
             ErrorListener.Errors.Clear();
-            parser.ErrorHandler = new MapGrammarErrorStrategy();
+            RootContext cst = null;
+            if (versionString != null && ( versionString[0] == '1' || versionString[1] == '0'))
+            {
+                // TODO: V1Parser
+            }else
+            {
+                // V2Parser
+                var parser = new V2Parser.SyntaxDefinitions.MapGrammarParser(commonTokneStream);
+                parser.AddErrorListener(ErrorListener);
+                parser.ErrorHandler = new MapGrammarErrorStrategy();
+                cst = parser.root();
+            }
 
-            RootContext cst = parser.root();
+            if (cst == null)
+                return null;
+
             MapGrammarAstNodes ast = new BuildAstVisitor().VisitRoot(cst);
 
             return ast;
