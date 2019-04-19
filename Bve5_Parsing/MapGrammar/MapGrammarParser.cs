@@ -8,6 +8,7 @@ using System.Collections.ObjectModel;
 using System.IO;
 using System.Text;
 using System.Linq;
+using static Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser;
 
 namespace Bve5_Parsing.MapGrammar
 {
@@ -81,20 +82,10 @@ namespace Bve5_Parsing.MapGrammar
         /// <returns></returns>
         public MapData Parse(string input, MapGrammarParserOption option)
         {
-            var headerInfo = GetHeaderInfo(input);
-            if (headerInfo.Item1 == null)
-            {
-                _parserError.Add(new ParseError(ParseErrorLevel.Error, 0, 0, "有効なマップファイルではありません。"));
-                return null;
-            }
-            var ast = ParseToAst(input.Substring(headerInfo.Item3));
-            var value = (MapData)new EvaluateMapGrammarVisitor(Store, _parserError).Visit(ast);
+            if (option.HasFlag(MapGrammarParserOption.ParseIncludeSyntaxRecursively))
+                option = option & MapGrammarParserOption.ParseIncludeSyntaxRecursively; // Include対応はできないのでOptionを削除する
 
-            value.Version = headerInfo.Item1;
-            if (headerInfo.Item2 != null)
-                value.Encoding = headerInfo.Item2;
-
-            return value;
+            return Parse(input, null, option);
         }
 
         /// <summary>
@@ -106,27 +97,27 @@ namespace Bve5_Parsing.MapGrammar
         /// <returns></returns>
         public MapData Parse(string input, string dirAbsolutePath, MapGrammarParserOption option)
         {
-            var headerInfo = GetHeaderInfo(input);
+            Tuple<string, string, int> headerInfo = GetHeaderInfo(input);
             if (headerInfo.Item1 == null)
             {
                 _parserError.Add(new ParseError(ParseErrorLevel.Error, 0, 0, "有効なマップファイルではありません。"));
                 return null;
             }
 
-            // Includeを再帰的にパースするか？
-            if (option.HasFlag(MapGrammarParserOption.ParseIncludeSyntaxRecursively))
-            {
-                var ast = ParseToAst(input.Substring(headerInfo.Item3));
-                var value = (MapData)new EvaluateMapGrammarVisitorWithInclude(Store, dirAbsolutePath, _parserError).Visit(ast);
+            MapGrammarAstNodes ast = ParseToAst(input.Substring(headerInfo.Item3));
+            MapData value = option.HasFlag(MapGrammarParserOption.ParseIncludeSyntaxRecursively) ?
+                (MapData)new EvaluateMapGrammarVisitorWithInclude(Store, dirAbsolutePath, _parserError).Visit(ast) : // Includeを再帰的にパースする
+                (MapData)new EvaluateMapGrammarVisitor(Store, _parserError).Visit(ast)
+                ;
 
-                value.Version = headerInfo.Item1;
-                if (headerInfo.Item2 != null)
-                    value.Encoding = headerInfo.Item2;
+            if (value == null)
+                return null;
 
-                return value;
-            }
-            else
-                return Parse(input, option);
+            value.Version = headerInfo.Item1;
+            if (headerInfo.Item2 != null)
+                value.Encoding = headerInfo.Item2;
+
+            return value;
         }
 
         /// <summary>
@@ -166,17 +157,17 @@ namespace Bve5_Parsing.MapGrammar
         /// <param name="statementsStr">解析するマップ構文のステートメントを表す文字列</param>
         public MapGrammarAstNodes ParseToAst(string input)
         {
-            AntlrInputStream inputStream = new AntlrInputStream(input);
-            MapGrammarLexer lexer = new MapGrammarLexer(inputStream);
-            CommonTokenStream commonTokneStream = new CommonTokenStream(lexer);
-            SyntaxDefinitions.MapGrammarParser parser = new SyntaxDefinitions.MapGrammarParser(commonTokneStream);
+            var inputStream = new AntlrInputStream(input);
+            var lexer = new MapGrammarLexer(inputStream);
+            var commonTokneStream = new CommonTokenStream(lexer);
+            var parser = new SyntaxDefinitions.MapGrammarParser(commonTokneStream);
 
             parser.AddErrorListener(ErrorListener);
             ErrorListener.Errors.Clear();
             parser.ErrorHandler = new MapGrammarErrorStrategy();
 
-            var cst = parser.root();
-            var ast = new BuildAstVisitor().VisitRoot(cst);
+            RootContext cst = parser.root();
+            MapGrammarAstNodes ast = new BuildAstVisitor().VisitRoot(cst);
 
             return ast;
         }
@@ -192,11 +183,11 @@ namespace Bve5_Parsing.MapGrammar
         /// </returns>
         protected Tuple<string, string, int> GetHeaderInfo(string input)
         {
-            var header = input.Replace("\r\n", "\n").Replace("\r", "\n").Split('\n').FirstOrDefault();
+            string header = input.Replace("\r\n", "\n").Replace("\r", "\n").Split('\n').FirstOrDefault();
             if (string.IsNullOrEmpty(header) || header.Length < 14 || header.Substring(0, 9).ToLower() != "bvets map")
                 return new Tuple<string, string, int>(null, null, 0); // 有効なマップファイルではない
 
-            var version = header.Substring(10, 4);
+            string version = header.Substring(10, 4);
             if (header.Length >= 15 && header[14] == ':')
                 return new Tuple<string, string, int>(version, header.Substring(15).Trim(), header.Length); // エンコーディング指定あり
 
