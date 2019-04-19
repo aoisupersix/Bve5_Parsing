@@ -1,45 +1,45 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CurveContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.CurveContext
   id: MapGrammarParser.CurveContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   children:
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.#ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.BEGIN
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.BEGIN_CIRCULAR
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.BEGIN_TRANSITION
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.cant
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.CHANGE
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.CLS_PAR
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.COMMA
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.DOT
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.END
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.expr
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.func
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.GAUGE
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.id
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.INTERPOLATE
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.nullableExpr
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.nullableExpr(System.Int32)
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.OPN_PAR
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.radius
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.radiusE
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.RuleIndex
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.SET_CENTER
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.SET_FUNCTION
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.SET_GAUGE
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.value
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.x
+  - Bve5_Parsing.MapGrammar.V2Parser.CurveContext.#ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)
+  - Bve5_Parsing.MapGrammar.V2Parser.CurveContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
+  - Bve5_Parsing.MapGrammar.V2Parser.CurveContext.BEGIN
+  - Bve5_Parsing.MapGrammar.V2Parser.CurveContext.BEGIN_CIRCULAR
+  - Bve5_Parsing.MapGrammar.V2Parser.CurveContext.BEGIN_TRANSITION
+  - Bve5_Parsing.MapGrammar.V2Parser.CurveContext.cant
+  - Bve5_Parsing.MapGrammar.V2Parser.CurveContext.CHANGE
+  - Bve5_Parsing.MapGrammar.V2Parser.CurveContext.CLS_PAR
+  - Bve5_Parsing.MapGrammar.V2Parser.CurveContext.COMMA
+  - Bve5_Parsing.MapGrammar.V2Parser.CurveContext.DOT
+  - Bve5_Parsing.MapGrammar.V2Parser.CurveContext.END
+  - Bve5_Parsing.MapGrammar.V2Parser.CurveContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
+  - Bve5_Parsing.MapGrammar.V2Parser.CurveContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
+  - Bve5_Parsing.MapGrammar.V2Parser.CurveContext.expr
+  - Bve5_Parsing.MapGrammar.V2Parser.CurveContext.func
+  - Bve5_Parsing.MapGrammar.V2Parser.CurveContext.GAUGE
+  - Bve5_Parsing.MapGrammar.V2Parser.CurveContext.id
+  - Bve5_Parsing.MapGrammar.V2Parser.CurveContext.INTERPOLATE
+  - Bve5_Parsing.MapGrammar.V2Parser.CurveContext.nullableExpr
+  - Bve5_Parsing.MapGrammar.V2Parser.CurveContext.nullableExpr(System.Int32)
+  - Bve5_Parsing.MapGrammar.V2Parser.CurveContext.OPN_PAR
+  - Bve5_Parsing.MapGrammar.V2Parser.CurveContext.radius
+  - Bve5_Parsing.MapGrammar.V2Parser.CurveContext.radiusE
+  - Bve5_Parsing.MapGrammar.V2Parser.CurveContext.RuleIndex
+  - Bve5_Parsing.MapGrammar.V2Parser.CurveContext.SET_CENTER
+  - Bve5_Parsing.MapGrammar.V2Parser.CurveContext.SET_FUNCTION
+  - Bve5_Parsing.MapGrammar.V2Parser.CurveContext.SET_GAUGE
+  - Bve5_Parsing.MapGrammar.V2Parser.CurveContext.value
+  - Bve5_Parsing.MapGrammar.V2Parser.CurveContext.x
   langs:
   - csharp
   - vb
   name: MapGrammarParser.CurveContext
   nameWithType: MapGrammarParser.CurveContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CurveContext
   type: Class
   source:
     remote:
@@ -51,7 +51,7 @@ items:
     startLine: 1165
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: 'public class CurveContext : ParserRuleContext, IRuleNode, IParseTree, ISyntaxTree, ITree'
     content.vb: >-
@@ -128,16 +128,16 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.func
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.func
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.func
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.CurveContext.func
   id: func
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.CurveContext
   langs:
   - csharp
   - vb
   name: func
   nameWithType: MapGrammarParser.CurveContext.func
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.func
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.func
   type: Field
   source:
     remote:
@@ -149,7 +149,7 @@ items:
     startLine: 1166
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public IToken func
     return:
@@ -159,16 +159,16 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.value
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.value
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.value
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.CurveContext.value
   id: value
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.CurveContext
   langs:
   - csharp
   - vb
   name: value
   nameWithType: MapGrammarParser.CurveContext.value
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.value
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.value
   type: Field
   source:
     remote:
@@ -180,26 +180,26 @@ items:
     startLine: 1167
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public MapGrammarParser.NullableExprContext value
     return:
-      type: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.NullableExprContext
+      type: Bve5_Parsing.MapGrammar.V2Parser.NullableExprContext
     content.vb: Public value As MapGrammarParser.NullableExprContext
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.x
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.x
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.x
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.CurveContext.x
   id: x
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.CurveContext
   langs:
   - csharp
   - vb
   name: x
   nameWithType: MapGrammarParser.CurveContext.x
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.x
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.x
   type: Field
   source:
     remote:
@@ -211,26 +211,26 @@ items:
     startLine: 1168
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public MapGrammarParser.NullableExprContext x
     return:
-      type: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.NullableExprContext
+      type: Bve5_Parsing.MapGrammar.V2Parser.NullableExprContext
     content.vb: Public x As MapGrammarParser.NullableExprContext
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.id
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.id
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.id
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.CurveContext.id
   id: id
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.CurveContext
   langs:
   - csharp
   - vb
   name: id
   nameWithType: MapGrammarParser.CurveContext.id
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.id
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.id
   type: Field
   source:
     remote:
@@ -242,26 +242,26 @@ items:
     startLine: 1169
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public MapGrammarParser.NullableExprContext id
     return:
-      type: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.NullableExprContext
+      type: Bve5_Parsing.MapGrammar.V2Parser.NullableExprContext
     content.vb: Public id As MapGrammarParser.NullableExprContext
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.radius
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.radius
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.radius
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.CurveContext.radius
   id: radius
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.CurveContext
   langs:
   - csharp
   - vb
   name: radius
   nameWithType: MapGrammarParser.CurveContext.radius
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.radius
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.radius
   type: Field
   source:
     remote:
@@ -273,26 +273,26 @@ items:
     startLine: 1170
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public MapGrammarParser.NullableExprContext radius
     return:
-      type: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.NullableExprContext
+      type: Bve5_Parsing.MapGrammar.V2Parser.NullableExprContext
     content.vb: Public radius As MapGrammarParser.NullableExprContext
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.cant
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.cant
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.cant
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.CurveContext.cant
   id: cant
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.CurveContext
   langs:
   - csharp
   - vb
   name: cant
   nameWithType: MapGrammarParser.CurveContext.cant
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.cant
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.cant
   type: Field
   source:
     remote:
@@ -304,26 +304,26 @@ items:
     startLine: 1171
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public MapGrammarParser.NullableExprContext cant
     return:
-      type: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.NullableExprContext
+      type: Bve5_Parsing.MapGrammar.V2Parser.NullableExprContext
     content.vb: Public cant As MapGrammarParser.NullableExprContext
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.radiusE
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.radiusE
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.radiusE
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.CurveContext.radiusE
   id: radiusE
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.CurveContext
   langs:
   - csharp
   - vb
   name: radiusE
   nameWithType: MapGrammarParser.CurveContext.radiusE
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.radiusE
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.radiusE
   type: Field
   source:
     remote:
@@ -335,26 +335,26 @@ items:
     startLine: 1172
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public MapGrammarParser.ExprContext radiusE
     return:
-      type: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext
+      type: Bve5_Parsing.MapGrammar.V2Parser.ExprContext
     content.vb: Public radiusE As MapGrammarParser.ExprContext
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.DOT
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.DOT
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.DOT
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.CurveContext.DOT
   id: DOT
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.CurveContext
   langs:
   - csharp
   - vb
   name: DOT()
   nameWithType: MapGrammarParser.CurveContext.DOT()
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.DOT()
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.DOT()
   type: Method
   source:
     remote:
@@ -366,27 +366,27 @@ items:
     startLine: 1173
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public ITerminalNode DOT()
     return:
       type: Antlr4.Runtime.Tree.ITerminalNode
     content.vb: Public Function DOT As ITerminalNode
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.DOT*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.DOT*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.OPN_PAR
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.OPN_PAR
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.OPN_PAR
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.CurveContext.OPN_PAR
   id: OPN_PAR
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.CurveContext
   langs:
   - csharp
   - vb
   name: OPN_PAR()
   nameWithType: MapGrammarParser.CurveContext.OPN_PAR()
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.OPN_PAR()
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.OPN_PAR()
   type: Method
   source:
     remote:
@@ -398,27 +398,27 @@ items:
     startLine: 1174
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public ITerminalNode OPN_PAR()
     return:
       type: Antlr4.Runtime.Tree.ITerminalNode
     content.vb: Public Function OPN_PAR As ITerminalNode
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.OPN_PAR*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.OPN_PAR*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.CLS_PAR
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.CLS_PAR
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.CLS_PAR
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.CurveContext.CLS_PAR
   id: CLS_PAR
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.CurveContext
   langs:
   - csharp
   - vb
   name: CLS_PAR()
   nameWithType: MapGrammarParser.CurveContext.CLS_PAR()
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.CLS_PAR()
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.CLS_PAR()
   type: Method
   source:
     remote:
@@ -430,27 +430,27 @@ items:
     startLine: 1175
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public ITerminalNode CLS_PAR()
     return:
       type: Antlr4.Runtime.Tree.ITerminalNode
     content.vb: Public Function CLS_PAR As ITerminalNode
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.CLS_PAR*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.CLS_PAR*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.nullableExpr
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.nullableExpr
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.nullableExpr
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.CurveContext.nullableExpr
   id: nullableExpr
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.CurveContext
   langs:
   - csharp
   - vb
   name: nullableExpr()
   nameWithType: MapGrammarParser.CurveContext.nullableExpr()
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.nullableExpr()
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.nullableExpr()
   type: Method
   source:
     remote:
@@ -462,27 +462,27 @@ items:
     startLine: 1176
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public MapGrammarParser.NullableExprContext[] nullableExpr()
     return:
-      type: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.NullableExprContext[]
+      type: Bve5_Parsing.MapGrammar.V2Parser.NullableExprContext[]
     content.vb: Public Function nullableExpr As MapGrammarParser.NullableExprContext()
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.nullableExpr*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.nullableExpr*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.nullableExpr(System.Int32)
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.nullableExpr(System.Int32)
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.nullableExpr(System.Int32)
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.CurveContext.nullableExpr(System.Int32)
   id: nullableExpr(System.Int32)
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.CurveContext
   langs:
   - csharp
   - vb
   name: nullableExpr(Int32)
   nameWithType: MapGrammarParser.CurveContext.nullableExpr(Int32)
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.nullableExpr(System.Int32)
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.nullableExpr(System.Int32)
   type: Method
   source:
     remote:
@@ -494,30 +494,30 @@ items:
     startLine: 1179
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public MapGrammarParser.NullableExprContext nullableExpr(int i)
     parameters:
     - id: i
       type: System.Int32
     return:
-      type: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.NullableExprContext
+      type: Bve5_Parsing.MapGrammar.V2Parser.NullableExprContext
     content.vb: Public Function nullableExpr(i As Integer) As MapGrammarParser.NullableExprContext
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.nullableExpr*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.nullableExpr*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.SET_GAUGE
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.SET_GAUGE
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.SET_GAUGE
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.CurveContext.SET_GAUGE
   id: SET_GAUGE
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.CurveContext
   langs:
   - csharp
   - vb
   name: SET_GAUGE()
   nameWithType: MapGrammarParser.CurveContext.SET_GAUGE()
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.SET_GAUGE()
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.SET_GAUGE()
   type: Method
   source:
     remote:
@@ -529,27 +529,27 @@ items:
     startLine: 1182
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public ITerminalNode SET_GAUGE()
     return:
       type: Antlr4.Runtime.Tree.ITerminalNode
     content.vb: Public Function SET_GAUGE As ITerminalNode
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.SET_GAUGE*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.SET_GAUGE*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.GAUGE
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.GAUGE
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.GAUGE
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.CurveContext.GAUGE
   id: GAUGE
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.CurveContext
   langs:
   - csharp
   - vb
   name: GAUGE()
   nameWithType: MapGrammarParser.CurveContext.GAUGE()
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.GAUGE()
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.GAUGE()
   type: Method
   source:
     remote:
@@ -561,27 +561,27 @@ items:
     startLine: 1183
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public ITerminalNode GAUGE()
     return:
       type: Antlr4.Runtime.Tree.ITerminalNode
     content.vb: Public Function GAUGE As ITerminalNode
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.GAUGE*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.GAUGE*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.SET_CENTER
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.SET_CENTER
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.SET_CENTER
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.CurveContext.SET_CENTER
   id: SET_CENTER
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.CurveContext
   langs:
   - csharp
   - vb
   name: SET_CENTER()
   nameWithType: MapGrammarParser.CurveContext.SET_CENTER()
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.SET_CENTER()
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.SET_CENTER()
   type: Method
   source:
     remote:
@@ -593,27 +593,27 @@ items:
     startLine: 1184
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public ITerminalNode SET_CENTER()
     return:
       type: Antlr4.Runtime.Tree.ITerminalNode
     content.vb: Public Function SET_CENTER As ITerminalNode
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.SET_CENTER*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.SET_CENTER*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.SET_FUNCTION
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.SET_FUNCTION
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.SET_FUNCTION
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.CurveContext.SET_FUNCTION
   id: SET_FUNCTION
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.CurveContext
   langs:
   - csharp
   - vb
   name: SET_FUNCTION()
   nameWithType: MapGrammarParser.CurveContext.SET_FUNCTION()
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.SET_FUNCTION()
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.SET_FUNCTION()
   type: Method
   source:
     remote:
@@ -625,27 +625,27 @@ items:
     startLine: 1185
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public ITerminalNode SET_FUNCTION()
     return:
       type: Antlr4.Runtime.Tree.ITerminalNode
     content.vb: Public Function SET_FUNCTION As ITerminalNode
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.SET_FUNCTION*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.SET_FUNCTION*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.BEGIN_TRANSITION
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.BEGIN_TRANSITION
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.BEGIN_TRANSITION
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.CurveContext.BEGIN_TRANSITION
   id: BEGIN_TRANSITION
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.CurveContext
   langs:
   - csharp
   - vb
   name: BEGIN_TRANSITION()
   nameWithType: MapGrammarParser.CurveContext.BEGIN_TRANSITION()
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.BEGIN_TRANSITION()
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.BEGIN_TRANSITION()
   type: Method
   source:
     remote:
@@ -657,27 +657,27 @@ items:
     startLine: 1186
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public ITerminalNode BEGIN_TRANSITION()
     return:
       type: Antlr4.Runtime.Tree.ITerminalNode
     content.vb: Public Function BEGIN_TRANSITION As ITerminalNode
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.BEGIN_TRANSITION*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.BEGIN_TRANSITION*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.BEGIN
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.BEGIN
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.BEGIN
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.CurveContext.BEGIN
   id: BEGIN
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.CurveContext
   langs:
   - csharp
   - vb
   name: BEGIN()
   nameWithType: MapGrammarParser.CurveContext.BEGIN()
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.BEGIN()
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.BEGIN()
   type: Method
   source:
     remote:
@@ -689,27 +689,27 @@ items:
     startLine: 1187
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public ITerminalNode BEGIN()
     return:
       type: Antlr4.Runtime.Tree.ITerminalNode
     content.vb: Public Function BEGIN As ITerminalNode
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.BEGIN*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.BEGIN*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.BEGIN_CIRCULAR
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.BEGIN_CIRCULAR
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.BEGIN_CIRCULAR
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.CurveContext.BEGIN_CIRCULAR
   id: BEGIN_CIRCULAR
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.CurveContext
   langs:
   - csharp
   - vb
   name: BEGIN_CIRCULAR()
   nameWithType: MapGrammarParser.CurveContext.BEGIN_CIRCULAR()
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.BEGIN_CIRCULAR()
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.BEGIN_CIRCULAR()
   type: Method
   source:
     remote:
@@ -721,27 +721,27 @@ items:
     startLine: 1188
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public ITerminalNode BEGIN_CIRCULAR()
     return:
       type: Antlr4.Runtime.Tree.ITerminalNode
     content.vb: Public Function BEGIN_CIRCULAR As ITerminalNode
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.BEGIN_CIRCULAR*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.BEGIN_CIRCULAR*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.COMMA
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.COMMA
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.COMMA
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.CurveContext.COMMA
   id: COMMA
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.CurveContext
   langs:
   - csharp
   - vb
   name: COMMA()
   nameWithType: MapGrammarParser.CurveContext.COMMA()
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.COMMA()
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.COMMA()
   type: Method
   source:
     remote:
@@ -753,27 +753,27 @@ items:
     startLine: 1189
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public ITerminalNode COMMA()
     return:
       type: Antlr4.Runtime.Tree.ITerminalNode
     content.vb: Public Function COMMA As ITerminalNode
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.COMMA*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.COMMA*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.END
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.END
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.END
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.CurveContext.END
   id: END
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.CurveContext
   langs:
   - csharp
   - vb
   name: END()
   nameWithType: MapGrammarParser.CurveContext.END()
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.END()
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.END()
   type: Method
   source:
     remote:
@@ -785,27 +785,27 @@ items:
     startLine: 1190
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public ITerminalNode END()
     return:
       type: Antlr4.Runtime.Tree.ITerminalNode
     content.vb: Public Function END As ITerminalNode
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.END*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.END*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.INTERPOLATE
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.INTERPOLATE
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.INTERPOLATE
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.CurveContext.INTERPOLATE
   id: INTERPOLATE
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.CurveContext
   langs:
   - csharp
   - vb
   name: INTERPOLATE()
   nameWithType: MapGrammarParser.CurveContext.INTERPOLATE()
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.INTERPOLATE()
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.INTERPOLATE()
   type: Method
   source:
     remote:
@@ -817,27 +817,27 @@ items:
     startLine: 1191
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public ITerminalNode INTERPOLATE()
     return:
       type: Antlr4.Runtime.Tree.ITerminalNode
     content.vb: Public Function INTERPOLATE As ITerminalNode
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.INTERPOLATE*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.INTERPOLATE*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.expr
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.expr
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.expr
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.CurveContext.expr
   id: expr
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.CurveContext
   langs:
   - csharp
   - vb
   name: expr()
   nameWithType: MapGrammarParser.CurveContext.expr()
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.expr()
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.expr()
   type: Method
   source:
     remote:
@@ -849,27 +849,27 @@ items:
     startLine: 1192
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public MapGrammarParser.ExprContext expr()
     return:
-      type: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext
+      type: Bve5_Parsing.MapGrammar.V2Parser.ExprContext
     content.vb: Public Function expr As MapGrammarParser.ExprContext
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.expr*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.expr*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.CHANGE
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.CHANGE
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.CHANGE
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.CurveContext.CHANGE
   id: CHANGE
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.CurveContext
   langs:
   - csharp
   - vb
   name: CHANGE()
   nameWithType: MapGrammarParser.CurveContext.CHANGE()
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.CHANGE()
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.CHANGE()
   type: Method
   source:
     remote:
@@ -881,27 +881,27 @@ items:
     startLine: 1195
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public ITerminalNode CHANGE()
     return:
       type: Antlr4.Runtime.Tree.ITerminalNode
     content.vb: Public Function CHANGE As ITerminalNode
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.CHANGE*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.CHANGE*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.#ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.#ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.#ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.CurveContext.#ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)
   id: '#ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)'
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.CurveContext
   langs:
   - csharp
   - vb
   name: CurveContext(ParserRuleContext, Int32)
   nameWithType: MapGrammarParser.CurveContext.CurveContext(ParserRuleContext, Int32)
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.CurveContext(Antlr4.Runtime.ParserRuleContext, System.Int32)
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.CurveContext(Antlr4.Runtime.ParserRuleContext, System.Int32)
   type: Constructor
   source:
     remote:
@@ -913,7 +913,7 @@ items:
     startLine: 1196
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public CurveContext(ParserRuleContext parent, int invokingState)
     parameters:
@@ -922,21 +922,21 @@ items:
     - id: invokingState
       type: System.Int32
     content.vb: Public Sub New(parent As ParserRuleContext, invokingState As Integer)
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.#ctor*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.RuleIndex
-  commentId: P:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.RuleIndex
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.RuleIndex
+  commentId: P:Bve5_Parsing.MapGrammar.V2Parser.CurveContext.RuleIndex
   id: RuleIndex
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.CurveContext
   langs:
   - csharp
   - vb
   name: RuleIndex
   nameWithType: MapGrammarParser.CurveContext.RuleIndex
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.RuleIndex
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.RuleIndex
   type: Property
   source:
     remote:
@@ -948,7 +948,7 @@ items:
     startLine: 1200
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public override int RuleIndex { get; }
     parameters: []
@@ -956,7 +956,7 @@ items:
       type: System.Int32
     content.vb: Public Overrides ReadOnly Property RuleIndex As Integer
   overridden: Antlr4.Runtime.RuleContext.RuleIndex
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.RuleIndex*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.RuleIndex*
   modifiers.csharp:
   - public
   - override
@@ -965,16 +965,16 @@ items:
   - Public
   - Overrides
   - ReadOnly
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.CurveContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
   id: EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.CurveContext
   langs:
   - csharp
   - vb
   name: EnterRule(IParseTreeListener)
   nameWithType: MapGrammarParser.CurveContext.EnterRule(IParseTreeListener)
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
   type: Method
   source:
     remote:
@@ -986,7 +986,7 @@ items:
     startLine: 1201
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public override void EnterRule(IParseTreeListener listener)
     parameters:
@@ -994,23 +994,23 @@ items:
       type: Antlr4.Runtime.Tree.IParseTreeListener
     content.vb: Public Overrides Sub EnterRule(listener As IParseTreeListener)
   overridden: Antlr4.Runtime.ParserRuleContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.EnterRule*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.EnterRule*
   modifiers.csharp:
   - public
   - override
   modifiers.vb:
   - Public
   - Overrides
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.CurveContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
   id: ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.CurveContext
   langs:
   - csharp
   - vb
   name: ExitRule(IParseTreeListener)
   nameWithType: MapGrammarParser.CurveContext.ExitRule(IParseTreeListener)
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
   type: Method
   source:
     remote:
@@ -1022,7 +1022,7 @@ items:
     startLine: 1205
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public override void ExitRule(IParseTreeListener listener)
     parameters:
@@ -1030,23 +1030,23 @@ items:
       type: Antlr4.Runtime.Tree.IParseTreeListener
     content.vb: Public Overrides Sub ExitRule(listener As IParseTreeListener)
   overridden: Antlr4.Runtime.ParserRuleContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.ExitRule*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.ExitRule*
   modifiers.csharp:
   - public
   - override
   modifiers.vb:
   - Public
   - Overrides
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.CurveContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
   id: Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.CurveContext
   langs:
   - csharp
   - vb
   name: Accept<TResult>(IParseTreeVisitor<TResult>)
   nameWithType: MapGrammarParser.CurveContext.Accept<TResult>(IParseTreeVisitor<TResult>)
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.Accept<TResult>(Antlr4.Runtime.Tree.IParseTreeVisitor<TResult>)
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.Accept<TResult>(Antlr4.Runtime.Tree.IParseTreeVisitor<TResult>)
   type: Method
   source:
     remote:
@@ -1058,7 +1058,7 @@ items:
     startLine: 1209
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor)
     parameters:
@@ -1070,7 +1070,7 @@ items:
       type: '{TResult}'
     content.vb: Public Overrides Function Accept(Of TResult)(visitor As IParseTreeVisitor(Of TResult)) As TResult
   overridden: Antlr4.Runtime.RuleContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{{TResult}})
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.Accept*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.Accept*
   nameWithType.vb: MapGrammarParser.CurveContext.Accept(Of TResult)(IParseTreeVisitor(Of TResult))
   modifiers.csharp:
   - public
@@ -1078,14 +1078,14 @@ items:
   modifiers.vb:
   - Public
   - Overrides
-  fullName.vb: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.Accept(Of TResult)(Antlr4.Runtime.Tree.IParseTreeVisitor(Of TResult))
+  fullName.vb: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.Accept(Of TResult)(Antlr4.Runtime.Tree.IParseTreeVisitor(Of TResult))
   name.vb: Accept(Of TResult)(IParseTreeVisitor(Of TResult))
 references:
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions
-  commentId: N:Bve5_Parsing.MapGrammar.SyntaxDefinitions
-  name: Bve5_Parsing.MapGrammar.SyntaxDefinitions
-  nameWithType: Bve5_Parsing.MapGrammar.SyntaxDefinitions
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
+  commentId: N:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
+  name: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
+  nameWithType: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -2796,23 +2796,23 @@ references:
   name: IToken
   nameWithType: IToken
   fullName: Antlr4.Runtime.IToken
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.NullableExprContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.NullableExprContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+- uid: Bve5_Parsing.MapGrammar.V2Parser.NullableExprContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.NullableExprContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.NullableExprContext
   nameWithType: MapGrammarParser.NullableExprContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.NullableExprContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.NullableExprContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.ExprContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.ExprContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.ExprContext
   nameWithType: MapGrammarParser.ExprContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.DOT*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.DOT
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.ExprContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.DOT*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.CurveContext.DOT
   name: DOT
   nameWithType: MapGrammarParser.CurveContext.DOT
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.DOT
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.DOT
 - uid: Antlr4.Runtime.Tree.ITerminalNode
   commentId: T:Antlr4.Runtime.Tree.ITerminalNode
   parent: Antlr4.Runtime.Tree
@@ -2820,42 +2820,42 @@ references:
   name: ITerminalNode
   nameWithType: ITerminalNode
   fullName: Antlr4.Runtime.Tree.ITerminalNode
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.OPN_PAR*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.OPN_PAR
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.OPN_PAR*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.CurveContext.OPN_PAR
   name: OPN_PAR
   nameWithType: MapGrammarParser.CurveContext.OPN_PAR
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.OPN_PAR
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.CLS_PAR*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.CLS_PAR
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.OPN_PAR
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.CLS_PAR*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.CurveContext.CLS_PAR
   name: CLS_PAR
   nameWithType: MapGrammarParser.CurveContext.CLS_PAR
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.CLS_PAR
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.nullableExpr*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.nullableExpr
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.CLS_PAR
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.nullableExpr*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.CurveContext.nullableExpr
   name: nullableExpr
   nameWithType: MapGrammarParser.CurveContext.nullableExpr
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.nullableExpr
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.NullableExprContext[]
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.nullableExpr
+- uid: Bve5_Parsing.MapGrammar.V2Parser.NullableExprContext[]
   isExternal: true
   name: MapGrammarParser.NullableExprContext[]
   nameWithType: MapGrammarParser.NullableExprContext[]
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.NullableExprContext[]
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.NullableExprContext[]
   nameWithType.vb: MapGrammarParser.NullableExprContext()
-  fullName.vb: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.NullableExprContext()
+  fullName.vb: Bve5_Parsing.MapGrammar.V2Parser.NullableExprContext()
   name.vb: MapGrammarParser.NullableExprContext()
   spec.csharp:
-  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.NullableExprContext
+  - uid: Bve5_Parsing.MapGrammar.V2Parser.NullableExprContext
     name: MapGrammarParser.NullableExprContext
     nameWithType: MapGrammarParser.NullableExprContext
-    fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.NullableExprContext
+    fullName: Bve5_Parsing.MapGrammar.V2Parser.NullableExprContext
   - name: '[]'
     nameWithType: '[]'
     fullName: '[]'
   spec.vb:
-  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.NullableExprContext
+  - uid: Bve5_Parsing.MapGrammar.V2Parser.NullableExprContext
     name: MapGrammarParser.NullableExprContext
     nameWithType: MapGrammarParser.NullableExprContext
-    fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.NullableExprContext
+    fullName: Bve5_Parsing.MapGrammar.V2Parser.NullableExprContext
   - name: ()
     nameWithType: ()
     fullName: ()
@@ -2866,71 +2866,71 @@ references:
   name: Int32
   nameWithType: Int32
   fullName: System.Int32
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.SET_GAUGE*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.SET_GAUGE
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.SET_GAUGE*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.CurveContext.SET_GAUGE
   name: SET_GAUGE
   nameWithType: MapGrammarParser.CurveContext.SET_GAUGE
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.SET_GAUGE
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.GAUGE*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.GAUGE
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.SET_GAUGE
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.GAUGE*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.CurveContext.GAUGE
   name: GAUGE
   nameWithType: MapGrammarParser.CurveContext.GAUGE
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.GAUGE
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.SET_CENTER*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.SET_CENTER
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.GAUGE
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.SET_CENTER*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.CurveContext.SET_CENTER
   name: SET_CENTER
   nameWithType: MapGrammarParser.CurveContext.SET_CENTER
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.SET_CENTER
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.SET_FUNCTION*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.SET_FUNCTION
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.SET_CENTER
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.SET_FUNCTION*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.CurveContext.SET_FUNCTION
   name: SET_FUNCTION
   nameWithType: MapGrammarParser.CurveContext.SET_FUNCTION
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.SET_FUNCTION
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.BEGIN_TRANSITION*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.BEGIN_TRANSITION
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.SET_FUNCTION
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.BEGIN_TRANSITION*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.CurveContext.BEGIN_TRANSITION
   name: BEGIN_TRANSITION
   nameWithType: MapGrammarParser.CurveContext.BEGIN_TRANSITION
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.BEGIN_TRANSITION
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.BEGIN*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.BEGIN
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.BEGIN_TRANSITION
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.BEGIN*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.CurveContext.BEGIN
   name: BEGIN
   nameWithType: MapGrammarParser.CurveContext.BEGIN
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.BEGIN
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.BEGIN_CIRCULAR*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.BEGIN_CIRCULAR
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.BEGIN
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.BEGIN_CIRCULAR*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.CurveContext.BEGIN_CIRCULAR
   name: BEGIN_CIRCULAR
   nameWithType: MapGrammarParser.CurveContext.BEGIN_CIRCULAR
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.BEGIN_CIRCULAR
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.COMMA*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.COMMA
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.BEGIN_CIRCULAR
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.COMMA*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.CurveContext.COMMA
   name: COMMA
   nameWithType: MapGrammarParser.CurveContext.COMMA
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.COMMA
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.END*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.END
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.COMMA
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.END*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.CurveContext.END
   name: END
   nameWithType: MapGrammarParser.CurveContext.END
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.END
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.INTERPOLATE*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.INTERPOLATE
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.END
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.INTERPOLATE*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.CurveContext.INTERPOLATE
   name: INTERPOLATE
   nameWithType: MapGrammarParser.CurveContext.INTERPOLATE
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.INTERPOLATE
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.expr*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.expr
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.INTERPOLATE
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.expr*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.CurveContext.expr
   name: expr
   nameWithType: MapGrammarParser.CurveContext.expr
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.expr
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.CHANGE*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.CHANGE
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.expr
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.CHANGE*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.CurveContext.CHANGE
   name: CHANGE
   nameWithType: MapGrammarParser.CurveContext.CHANGE
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.CHANGE
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.#ctor*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.#ctor
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.CHANGE
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.#ctor*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.CurveContext.#ctor
   name: CurveContext
   nameWithType: MapGrammarParser.CurveContext.CurveContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.CurveContext
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.CurveContext
 - uid: Antlr4.Runtime.RuleContext.RuleIndex
   commentId: P:Antlr4.Runtime.RuleContext.RuleIndex
   parent: Antlr4.Runtime.RuleContext
@@ -2938,11 +2938,11 @@ references:
   name: RuleIndex
   nameWithType: RuleContext.RuleIndex
   fullName: Antlr4.Runtime.RuleContext.RuleIndex
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.RuleIndex*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.RuleIndex
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.RuleIndex*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.CurveContext.RuleIndex
   name: RuleIndex
   nameWithType: MapGrammarParser.CurveContext.RuleIndex
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.RuleIndex
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.RuleIndex
 - uid: Antlr4.Runtime.ParserRuleContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
   commentId: M:Antlr4.Runtime.ParserRuleContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
   parent: Antlr4.Runtime.ParserRuleContext
@@ -2984,11 +2984,11 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.EnterRule*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.EnterRule
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.EnterRule*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.CurveContext.EnterRule
   name: EnterRule
   nameWithType: MapGrammarParser.CurveContext.EnterRule
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.EnterRule
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.EnterRule
 - uid: Antlr4.Runtime.Tree.IParseTreeListener
   commentId: T:Antlr4.Runtime.Tree.IParseTreeListener
   parent: Antlr4.Runtime.Tree
@@ -3037,11 +3037,11 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.ExitRule*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.ExitRule
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.ExitRule*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.CurveContext.ExitRule
   name: ExitRule
   nameWithType: MapGrammarParser.CurveContext.ExitRule
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.ExitRule
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.ExitRule
 - uid: Antlr4.Runtime.RuleContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{{TResult}})
   commentId: M:Antlr4.Runtime.RuleContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
   parent: Antlr4.Runtime.RuleContext
@@ -3104,11 +3104,11 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.Accept*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.Accept
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.Accept*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.CurveContext.Accept
   name: Accept
   nameWithType: MapGrammarParser.CurveContext.Accept
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext.Accept
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CurveContext.Accept
 - uid: Antlr4.Runtime.Tree.IParseTreeVisitor{{TResult}}
   commentId: T:Antlr4.Runtime.Tree.IParseTreeVisitor{``0}
   parent: Antlr4.Runtime.Tree

@@ -1,132 +1,132 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   id: MapGrammarLexer
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   children:
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.#ctor(Antlr4.Runtime.ICharStream)
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer._ATN
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer._serializedATN
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.ABS
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.ADD
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.ADHESION
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.AMBIENT
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.ATAN2
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.BACKGROUND
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.BEACON
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.BEGIN
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.BEGIN_CIRCULAR
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.BEGIN_CONST
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.BEGIN_NEW
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.BEGIN_TRANSITION
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.BEGIN0
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.BVETS
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.CABILLUMINANCE
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.CANT_ELEMENT
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.CEIL
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.CHANGE
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.CHAR
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.CLS_BRA
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.CLS_PAR
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.COMMA
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.COMMENT
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.COS
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.CURVE
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.DefaultVocabulary
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.DIFFUSE
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.DIRECTION
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.DISTANCE
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.DIV
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.DOT
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.DRAWDISTANCE
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.E_WS
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.ENABLE
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.ENCODE_CHAR
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.ENCODE_END
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.ENCODING_MODE
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.END
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.EQUAL
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.ERROR_CHAR
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.EXP
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.FLANGENOISE
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.FLOOR
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.FOG
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.GAUGE
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.GRADIENT
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.GrammarFileName
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.INCLUDE
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.INTERPOLATE
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.IRREGULARITY
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.JOINTNOISE
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.LEGACY
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.LIGHT
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.LOAD
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.LOG
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.MAP
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.MINUS
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.MOD
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.modeNames
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.ModeNames
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.MULT
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.NULL
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.NUM
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.OPN_BRA
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.OPN_PAR
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.PASS
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.PITCH
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.PLAY
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.PLUS
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.POSITION
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.POW
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.PRETRAIN
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.PUT
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.PUT0
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.PUTBETWEEN
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.QUOTE
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.RAND
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.REPEATER
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.ROLLINGNOISE
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.RQUOTE
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.ruleNames
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.RuleNames
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.SECTION
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.SELECT_ENCODE
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.SerializedAtn
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.SET
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.SET_CENTER
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.SET_FUNCTION
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.SET_GAUGE
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.SET_SPEEDLIMIT
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.SIGNAL
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.SIN
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.SOUND
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.SOUND3D
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.SPEEDLIMIT
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.SQRT
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.STATE_END
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.STATION
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.STOP
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.STRING_MODE
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.STRUCTURE
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.tokenNames
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.TokenNames
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.TRACK
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.TRAIN
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.TURN
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.VAR
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.VAR_MODE
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.VAR_START
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.Vocabulary
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.WHITESPACE
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.X_ELEMENT
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.Y_ELEMENT
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.#ctor(Antlr4.Runtime.ICharStream)
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer._ATN
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer._serializedATN
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.ABS
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.ADD
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.ADHESION
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.AMBIENT
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.ATAN2
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.BACKGROUND
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.BEACON
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.BEGIN
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.BEGIN_CIRCULAR
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.BEGIN_CONST
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.BEGIN_NEW
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.BEGIN_TRANSITION
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.BEGIN0
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.BVETS
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.CABILLUMINANCE
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.CANT_ELEMENT
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.CEIL
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.CHANGE
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.CHAR
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.CLS_BRA
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.CLS_PAR
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.COMMA
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.COMMENT
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.COS
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.CURVE
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.DefaultVocabulary
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.DIFFUSE
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.DIRECTION
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.DISTANCE
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.DIV
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.DOT
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.DRAWDISTANCE
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.E_WS
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.ENABLE
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.ENCODE_CHAR
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.ENCODE_END
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.ENCODING_MODE
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.END
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.EQUAL
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.ERROR_CHAR
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.EXP
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.FLANGENOISE
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.FLOOR
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.FOG
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.GAUGE
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.GRADIENT
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.GrammarFileName
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.INCLUDE
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.INTERPOLATE
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.IRREGULARITY
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.JOINTNOISE
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.LEGACY
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.LIGHT
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.LOAD
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.LOG
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.MAP
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.MINUS
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.MOD
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.modeNames
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.ModeNames
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.MULT
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.NULL
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.NUM
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.OPN_BRA
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.OPN_PAR
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.PASS
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.PITCH
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.PLAY
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.PLUS
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.POSITION
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.POW
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.PRETRAIN
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.PUT
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.PUT0
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.PUTBETWEEN
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.QUOTE
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.RAND
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.REPEATER
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.ROLLINGNOISE
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.RQUOTE
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.ruleNames
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.RuleNames
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.SECTION
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.SELECT_ENCODE
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.SerializedAtn
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.SET
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.SET_CENTER
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.SET_FUNCTION
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.SET_GAUGE
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.SET_SPEEDLIMIT
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.SIGNAL
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.SIN
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.SOUND
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.SOUND3D
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.SPEEDLIMIT
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.SQRT
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.STATE_END
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.STATION
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.STOP
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.STRING_MODE
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.STRUCTURE
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.tokenNames
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.TokenNames
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.TRACK
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.TRAIN
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.TURN
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.VAR
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.VAR_MODE
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.VAR_START
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.Vocabulary
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.WHITESPACE
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.X_ELEMENT
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.Y_ELEMENT
   langs:
   - csharp
   - vb
   name: MapGrammarLexer
   nameWithType: MapGrammarLexer
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   type: Class
   source:
     remote:
@@ -138,7 +138,7 @@ items:
     startLine: 27
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: >-
       [CLSCompliant(false)]
@@ -252,16 +252,16 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.BVETS
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.BVETS
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.BVETS
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.BVETS
   id: BVETS
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: BVETS
   nameWithType: MapGrammarLexer.BVETS
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.BVETS
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.BVETS
   type: Field
   source:
     remote:
@@ -273,7 +273,7 @@ items:
     startLine: 31
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int BVETS = 1
     return:
@@ -285,16 +285,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.MAP
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.MAP
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.MAP
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.MAP
   id: MAP
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: MAP
   nameWithType: MapGrammarLexer.MAP
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.MAP
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.MAP
   type: Field
   source:
     remote:
@@ -306,7 +306,7 @@ items:
     startLine: 31
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int MAP = 2
     return:
@@ -318,16 +318,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.SELECT_ENCODE
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.SELECT_ENCODE
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.SELECT_ENCODE
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.SELECT_ENCODE
   id: SELECT_ENCODE
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: SELECT_ENCODE
   nameWithType: MapGrammarLexer.SELECT_ENCODE
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.SELECT_ENCODE
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.SELECT_ENCODE
   type: Field
   source:
     remote:
@@ -339,7 +339,7 @@ items:
     startLine: 31
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int SELECT_ENCODE = 3
     return:
@@ -351,16 +351,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.INCLUDE
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.INCLUDE
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.INCLUDE
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.INCLUDE
   id: INCLUDE
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: INCLUDE
   nameWithType: MapGrammarLexer.INCLUDE
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.INCLUDE
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.INCLUDE
   type: Field
   source:
     remote:
@@ -372,7 +372,7 @@ items:
     startLine: 31
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int INCLUDE = 4
     return:
@@ -384,16 +384,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.CURVE
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.CURVE
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.CURVE
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.CURVE
   id: CURVE
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: CURVE
   nameWithType: MapGrammarLexer.CURVE
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.CURVE
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.CURVE
   type: Field
   source:
     remote:
@@ -405,7 +405,7 @@ items:
     startLine: 31
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int CURVE = 5
     return:
@@ -417,16 +417,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.GRADIENT
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.GRADIENT
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.GRADIENT
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.GRADIENT
   id: GRADIENT
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: GRADIENT
   nameWithType: MapGrammarLexer.GRADIENT
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.GRADIENT
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.GRADIENT
   type: Field
   source:
     remote:
@@ -438,7 +438,7 @@ items:
     startLine: 31
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int GRADIENT = 6
     return:
@@ -450,16 +450,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.TRACK
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.TRACK
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.TRACK
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.TRACK
   id: TRACK
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: TRACK
   nameWithType: MapGrammarLexer.TRACK
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.TRACK
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.TRACK
   type: Field
   source:
     remote:
@@ -471,7 +471,7 @@ items:
     startLine: 31
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int TRACK = 7
     return:
@@ -483,16 +483,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.STRUCTURE
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.STRUCTURE
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.STRUCTURE
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.STRUCTURE
   id: STRUCTURE
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: STRUCTURE
   nameWithType: MapGrammarLexer.STRUCTURE
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.STRUCTURE
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.STRUCTURE
   type: Field
   source:
     remote:
@@ -504,7 +504,7 @@ items:
     startLine: 32
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int STRUCTURE = 8
     return:
@@ -516,16 +516,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.REPEATER
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.REPEATER
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.REPEATER
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.REPEATER
   id: REPEATER
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: REPEATER
   nameWithType: MapGrammarLexer.REPEATER
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.REPEATER
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.REPEATER
   type: Field
   source:
     remote:
@@ -537,7 +537,7 @@ items:
     startLine: 32
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int REPEATER = 9
     return:
@@ -549,16 +549,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.BACKGROUND
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.BACKGROUND
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.BACKGROUND
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.BACKGROUND
   id: BACKGROUND
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: BACKGROUND
   nameWithType: MapGrammarLexer.BACKGROUND
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.BACKGROUND
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.BACKGROUND
   type: Field
   source:
     remote:
@@ -570,7 +570,7 @@ items:
     startLine: 32
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int BACKGROUND = 10
     return:
@@ -582,16 +582,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.STATION
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.STATION
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.STATION
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.STATION
   id: STATION
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: STATION
   nameWithType: MapGrammarLexer.STATION
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.STATION
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.STATION
   type: Field
   source:
     remote:
@@ -603,7 +603,7 @@ items:
     startLine: 32
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int STATION = 11
     return:
@@ -615,16 +615,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.SECTION
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.SECTION
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.SECTION
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.SECTION
   id: SECTION
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: SECTION
   nameWithType: MapGrammarLexer.SECTION
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.SECTION
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.SECTION
   type: Field
   source:
     remote:
@@ -636,7 +636,7 @@ items:
     startLine: 32
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int SECTION = 12
     return:
@@ -648,16 +648,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.SIGNAL
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.SIGNAL
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.SIGNAL
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.SIGNAL
   id: SIGNAL
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: SIGNAL
   nameWithType: MapGrammarLexer.SIGNAL
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.SIGNAL
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.SIGNAL
   type: Field
   source:
     remote:
@@ -669,7 +669,7 @@ items:
     startLine: 32
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int SIGNAL = 13
     return:
@@ -681,16 +681,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.BEACON
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.BEACON
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.BEACON
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.BEACON
   id: BEACON
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: BEACON
   nameWithType: MapGrammarLexer.BEACON
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.BEACON
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.BEACON
   type: Field
   source:
     remote:
@@ -702,7 +702,7 @@ items:
     startLine: 33
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int BEACON = 14
     return:
@@ -714,16 +714,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.SPEEDLIMIT
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.SPEEDLIMIT
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.SPEEDLIMIT
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.SPEEDLIMIT
   id: SPEEDLIMIT
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: SPEEDLIMIT
   nameWithType: MapGrammarLexer.SPEEDLIMIT
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.SPEEDLIMIT
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.SPEEDLIMIT
   type: Field
   source:
     remote:
@@ -735,7 +735,7 @@ items:
     startLine: 33
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int SPEEDLIMIT = 15
     return:
@@ -747,16 +747,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.PRETRAIN
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.PRETRAIN
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.PRETRAIN
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.PRETRAIN
   id: PRETRAIN
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: PRETRAIN
   nameWithType: MapGrammarLexer.PRETRAIN
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.PRETRAIN
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.PRETRAIN
   type: Field
   source:
     remote:
@@ -768,7 +768,7 @@ items:
     startLine: 33
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int PRETRAIN = 16
     return:
@@ -780,16 +780,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.LIGHT
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.LIGHT
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.LIGHT
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.LIGHT
   id: LIGHT
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: LIGHT
   nameWithType: MapGrammarLexer.LIGHT
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.LIGHT
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.LIGHT
   type: Field
   source:
     remote:
@@ -801,7 +801,7 @@ items:
     startLine: 33
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int LIGHT = 17
     return:
@@ -813,16 +813,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.FOG
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.FOG
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.FOG
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.FOG
   id: FOG
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: FOG
   nameWithType: MapGrammarLexer.FOG
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.FOG
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.FOG
   type: Field
   source:
     remote:
@@ -834,7 +834,7 @@ items:
     startLine: 33
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int FOG = 18
     return:
@@ -846,16 +846,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.DRAWDISTANCE
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.DRAWDISTANCE
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.DRAWDISTANCE
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.DRAWDISTANCE
   id: DRAWDISTANCE
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: DRAWDISTANCE
   nameWithType: MapGrammarLexer.DRAWDISTANCE
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.DRAWDISTANCE
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.DRAWDISTANCE
   type: Field
   source:
     remote:
@@ -867,7 +867,7 @@ items:
     startLine: 33
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int DRAWDISTANCE = 19
     return:
@@ -879,16 +879,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.CABILLUMINANCE
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.CABILLUMINANCE
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.CABILLUMINANCE
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.CABILLUMINANCE
   id: CABILLUMINANCE
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: CABILLUMINANCE
   nameWithType: MapGrammarLexer.CABILLUMINANCE
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.CABILLUMINANCE
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.CABILLUMINANCE
   type: Field
   source:
     remote:
@@ -900,7 +900,7 @@ items:
     startLine: 34
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int CABILLUMINANCE = 20
     return:
@@ -912,16 +912,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.IRREGULARITY
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.IRREGULARITY
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.IRREGULARITY
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.IRREGULARITY
   id: IRREGULARITY
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: IRREGULARITY
   nameWithType: MapGrammarLexer.IRREGULARITY
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.IRREGULARITY
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.IRREGULARITY
   type: Field
   source:
     remote:
@@ -933,7 +933,7 @@ items:
     startLine: 34
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int IRREGULARITY = 21
     return:
@@ -945,16 +945,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.ADHESION
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.ADHESION
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.ADHESION
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.ADHESION
   id: ADHESION
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: ADHESION
   nameWithType: MapGrammarLexer.ADHESION
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.ADHESION
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.ADHESION
   type: Field
   source:
     remote:
@@ -966,7 +966,7 @@ items:
     startLine: 34
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int ADHESION = 22
     return:
@@ -978,16 +978,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.SOUND
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.SOUND
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.SOUND
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.SOUND
   id: SOUND
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: SOUND
   nameWithType: MapGrammarLexer.SOUND
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.SOUND
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.SOUND
   type: Field
   source:
     remote:
@@ -999,7 +999,7 @@ items:
     startLine: 34
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int SOUND = 23
     return:
@@ -1011,16 +1011,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.SOUND3D
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.SOUND3D
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.SOUND3D
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.SOUND3D
   id: SOUND3D
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: SOUND3D
   nameWithType: MapGrammarLexer.SOUND3D
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.SOUND3D
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.SOUND3D
   type: Field
   source:
     remote:
@@ -1032,7 +1032,7 @@ items:
     startLine: 34
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int SOUND3D = 24
     return:
@@ -1044,16 +1044,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.ROLLINGNOISE
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.ROLLINGNOISE
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.ROLLINGNOISE
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.ROLLINGNOISE
   id: ROLLINGNOISE
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: ROLLINGNOISE
   nameWithType: MapGrammarLexer.ROLLINGNOISE
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.ROLLINGNOISE
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.ROLLINGNOISE
   type: Field
   source:
     remote:
@@ -1065,7 +1065,7 @@ items:
     startLine: 35
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int ROLLINGNOISE = 25
     return:
@@ -1077,16 +1077,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.FLANGENOISE
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.FLANGENOISE
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.FLANGENOISE
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.FLANGENOISE
   id: FLANGENOISE
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: FLANGENOISE
   nameWithType: MapGrammarLexer.FLANGENOISE
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.FLANGENOISE
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.FLANGENOISE
   type: Field
   source:
     remote:
@@ -1098,7 +1098,7 @@ items:
     startLine: 35
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int FLANGENOISE = 26
     return:
@@ -1110,16 +1110,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.JOINTNOISE
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.JOINTNOISE
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.JOINTNOISE
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.JOINTNOISE
   id: JOINTNOISE
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: JOINTNOISE
   nameWithType: MapGrammarLexer.JOINTNOISE
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.JOINTNOISE
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.JOINTNOISE
   type: Field
   source:
     remote:
@@ -1131,7 +1131,7 @@ items:
     startLine: 35
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int JOINTNOISE = 27
     return:
@@ -1143,16 +1143,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.TRAIN
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.TRAIN
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.TRAIN
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.TRAIN
   id: TRAIN
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: TRAIN
   nameWithType: MapGrammarLexer.TRAIN
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.TRAIN
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.TRAIN
   type: Field
   source:
     remote:
@@ -1164,7 +1164,7 @@ items:
     startLine: 35
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int TRAIN = 28
     return:
@@ -1176,16 +1176,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.LEGACY
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.LEGACY
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.LEGACY
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.LEGACY
   id: LEGACY
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: LEGACY
   nameWithType: MapGrammarLexer.LEGACY
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.LEGACY
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.LEGACY
   type: Field
   source:
     remote:
@@ -1197,7 +1197,7 @@ items:
     startLine: 35
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int LEGACY = 29
     return:
@@ -1209,16 +1209,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.X_ELEMENT
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.X_ELEMENT
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.X_ELEMENT
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.X_ELEMENT
   id: X_ELEMENT
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: X_ELEMENT
   nameWithType: MapGrammarLexer.X_ELEMENT
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.X_ELEMENT
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.X_ELEMENT
   type: Field
   source:
     remote:
@@ -1230,7 +1230,7 @@ items:
     startLine: 35
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int X_ELEMENT = 30
     return:
@@ -1242,16 +1242,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.Y_ELEMENT
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.Y_ELEMENT
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.Y_ELEMENT
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.Y_ELEMENT
   id: Y_ELEMENT
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: Y_ELEMENT
   nameWithType: MapGrammarLexer.Y_ELEMENT
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.Y_ELEMENT
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.Y_ELEMENT
   type: Field
   source:
     remote:
@@ -1263,7 +1263,7 @@ items:
     startLine: 36
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int Y_ELEMENT = 31
     return:
@@ -1275,16 +1275,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.CANT_ELEMENT
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.CANT_ELEMENT
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.CANT_ELEMENT
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.CANT_ELEMENT
   id: CANT_ELEMENT
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: CANT_ELEMENT
   nameWithType: MapGrammarLexer.CANT_ELEMENT
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.CANT_ELEMENT
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.CANT_ELEMENT
   type: Field
   source:
     remote:
@@ -1296,7 +1296,7 @@ items:
     startLine: 36
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int CANT_ELEMENT = 32
     return:
@@ -1308,16 +1308,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.SET_GAUGE
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.SET_GAUGE
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.SET_GAUGE
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.SET_GAUGE
   id: SET_GAUGE
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: SET_GAUGE
   nameWithType: MapGrammarLexer.SET_GAUGE
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.SET_GAUGE
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.SET_GAUGE
   type: Field
   source:
     remote:
@@ -1329,7 +1329,7 @@ items:
     startLine: 36
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int SET_GAUGE = 33
     return:
@@ -1341,16 +1341,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.GAUGE
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.GAUGE
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.GAUGE
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.GAUGE
   id: GAUGE
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: GAUGE
   nameWithType: MapGrammarLexer.GAUGE
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.GAUGE
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.GAUGE
   type: Field
   source:
     remote:
@@ -1362,7 +1362,7 @@ items:
     startLine: 36
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int GAUGE = 34
     return:
@@ -1374,16 +1374,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.SET_CENTER
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.SET_CENTER
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.SET_CENTER
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.SET_CENTER
   id: SET_CENTER
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: SET_CENTER
   nameWithType: MapGrammarLexer.SET_CENTER
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.SET_CENTER
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.SET_CENTER
   type: Field
   source:
     remote:
@@ -1395,7 +1395,7 @@ items:
     startLine: 36
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int SET_CENTER = 35
     return:
@@ -1407,16 +1407,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.SET_FUNCTION
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.SET_FUNCTION
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.SET_FUNCTION
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.SET_FUNCTION
   id: SET_FUNCTION
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: SET_FUNCTION
   nameWithType: MapGrammarLexer.SET_FUNCTION
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.SET_FUNCTION
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.SET_FUNCTION
   type: Field
   source:
     remote:
@@ -1428,7 +1428,7 @@ items:
     startLine: 37
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int SET_FUNCTION = 36
     return:
@@ -1440,16 +1440,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.SET
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.SET
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.SET
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.SET
   id: SET
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: SET
   nameWithType: MapGrammarLexer.SET
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.SET
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.SET
   type: Field
   source:
     remote:
@@ -1461,7 +1461,7 @@ items:
     startLine: 37
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int SET = 37
     return:
@@ -1473,16 +1473,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.BEGIN_TRANSITION
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.BEGIN_TRANSITION
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.BEGIN_TRANSITION
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.BEGIN_TRANSITION
   id: BEGIN_TRANSITION
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: BEGIN_TRANSITION
   nameWithType: MapGrammarLexer.BEGIN_TRANSITION
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.BEGIN_TRANSITION
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.BEGIN_TRANSITION
   type: Field
   source:
     remote:
@@ -1494,7 +1494,7 @@ items:
     startLine: 37
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int BEGIN_TRANSITION = 38
     return:
@@ -1506,16 +1506,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.BEGIN
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.BEGIN
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.BEGIN
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.BEGIN
   id: BEGIN
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: BEGIN
   nameWithType: MapGrammarLexer.BEGIN
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.BEGIN
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.BEGIN
   type: Field
   source:
     remote:
@@ -1527,7 +1527,7 @@ items:
     startLine: 37
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int BEGIN = 39
     return:
@@ -1539,16 +1539,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.BEGIN0
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.BEGIN0
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.BEGIN0
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.BEGIN0
   id: BEGIN0
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: BEGIN0
   nameWithType: MapGrammarLexer.BEGIN0
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.BEGIN0
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.BEGIN0
   type: Field
   source:
     remote:
@@ -1560,7 +1560,7 @@ items:
     startLine: 37
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int BEGIN0 = 40
     return:
@@ -1572,16 +1572,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.BEGIN_CIRCULAR
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.BEGIN_CIRCULAR
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.BEGIN_CIRCULAR
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.BEGIN_CIRCULAR
   id: BEGIN_CIRCULAR
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: BEGIN_CIRCULAR
   nameWithType: MapGrammarLexer.BEGIN_CIRCULAR
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.BEGIN_CIRCULAR
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.BEGIN_CIRCULAR
   type: Field
   source:
     remote:
@@ -1593,7 +1593,7 @@ items:
     startLine: 37
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int BEGIN_CIRCULAR = 41
     return:
@@ -1605,16 +1605,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.BEGIN_CONST
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.BEGIN_CONST
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.BEGIN_CONST
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.BEGIN_CONST
   id: BEGIN_CONST
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: BEGIN_CONST
   nameWithType: MapGrammarLexer.BEGIN_CONST
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.BEGIN_CONST
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.BEGIN_CONST
   type: Field
   source:
     remote:
@@ -1626,7 +1626,7 @@ items:
     startLine: 38
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int BEGIN_CONST = 42
     return:
@@ -1638,16 +1638,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.BEGIN_NEW
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.BEGIN_NEW
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.BEGIN_NEW
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.BEGIN_NEW
   id: BEGIN_NEW
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: BEGIN_NEW
   nameWithType: MapGrammarLexer.BEGIN_NEW
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.BEGIN_NEW
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.BEGIN_NEW
   type: Field
   source:
     remote:
@@ -1659,7 +1659,7 @@ items:
     startLine: 38
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int BEGIN_NEW = 43
     return:
@@ -1671,16 +1671,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.END
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.END
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.END
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.END
   id: END
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: END
   nameWithType: MapGrammarLexer.END
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.END
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.END
   type: Field
   source:
     remote:
@@ -1692,7 +1692,7 @@ items:
     startLine: 38
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int END = 44
     return:
@@ -1704,16 +1704,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.INTERPOLATE
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.INTERPOLATE
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.INTERPOLATE
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.INTERPOLATE
   id: INTERPOLATE
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: INTERPOLATE
   nameWithType: MapGrammarLexer.INTERPOLATE
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.INTERPOLATE
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.INTERPOLATE
   type: Field
   source:
     remote:
@@ -1725,7 +1725,7 @@ items:
     startLine: 38
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int INTERPOLATE = 45
     return:
@@ -1737,16 +1737,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.CHANGE
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.CHANGE
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.CHANGE
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.CHANGE
   id: CHANGE
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: CHANGE
   nameWithType: MapGrammarLexer.CHANGE
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.CHANGE
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.CHANGE
   type: Field
   source:
     remote:
@@ -1758,7 +1758,7 @@ items:
     startLine: 38
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int CHANGE = 46
     return:
@@ -1770,16 +1770,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.POSITION
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.POSITION
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.POSITION
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.POSITION
   id: POSITION
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: POSITION
   nameWithType: MapGrammarLexer.POSITION
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.POSITION
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.POSITION
   type: Field
   source:
     remote:
@@ -1791,7 +1791,7 @@ items:
     startLine: 38
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int POSITION = 47
     return:
@@ -1803,16 +1803,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.LOAD
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.LOAD
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.LOAD
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.LOAD
   id: LOAD
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: LOAD
   nameWithType: MapGrammarLexer.LOAD
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.LOAD
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.LOAD
   type: Field
   source:
     remote:
@@ -1824,7 +1824,7 @@ items:
     startLine: 39
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int LOAD = 48
     return:
@@ -1836,16 +1836,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.PUT
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.PUT
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.PUT
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.PUT
   id: PUT
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: PUT
   nameWithType: MapGrammarLexer.PUT
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.PUT
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.PUT
   type: Field
   source:
     remote:
@@ -1857,7 +1857,7 @@ items:
     startLine: 39
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int PUT = 49
     return:
@@ -1869,16 +1869,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.PUT0
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.PUT0
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.PUT0
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.PUT0
   id: PUT0
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: PUT0
   nameWithType: MapGrammarLexer.PUT0
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.PUT0
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.PUT0
   type: Field
   source:
     remote:
@@ -1890,7 +1890,7 @@ items:
     startLine: 39
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int PUT0 = 50
     return:
@@ -1902,16 +1902,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.PUTBETWEEN
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.PUTBETWEEN
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.PUTBETWEEN
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.PUTBETWEEN
   id: PUTBETWEEN
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: PUTBETWEEN
   nameWithType: MapGrammarLexer.PUTBETWEEN
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.PUTBETWEEN
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.PUTBETWEEN
   type: Field
   source:
     remote:
@@ -1923,7 +1923,7 @@ items:
     startLine: 39
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int PUTBETWEEN = 51
     return:
@@ -1935,16 +1935,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.SET_SPEEDLIMIT
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.SET_SPEEDLIMIT
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.SET_SPEEDLIMIT
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.SET_SPEEDLIMIT
   id: SET_SPEEDLIMIT
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: SET_SPEEDLIMIT
   nameWithType: MapGrammarLexer.SET_SPEEDLIMIT
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.SET_SPEEDLIMIT
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.SET_SPEEDLIMIT
   type: Field
   source:
     remote:
@@ -1956,7 +1956,7 @@ items:
     startLine: 39
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int SET_SPEEDLIMIT = 52
     return:
@@ -1968,16 +1968,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.PASS
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.PASS
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.PASS
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.PASS
   id: PASS
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: PASS
   nameWithType: MapGrammarLexer.PASS
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.PASS
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.PASS
   type: Field
   source:
     remote:
@@ -1989,7 +1989,7 @@ items:
     startLine: 39
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int PASS = 53
     return:
@@ -2001,16 +2001,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.AMBIENT
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.AMBIENT
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.AMBIENT
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.AMBIENT
   id: AMBIENT
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: AMBIENT
   nameWithType: MapGrammarLexer.AMBIENT
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.AMBIENT
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.AMBIENT
   type: Field
   source:
     remote:
@@ -2022,7 +2022,7 @@ items:
     startLine: 39
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int AMBIENT = 54
     return:
@@ -2034,16 +2034,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.DIFFUSE
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.DIFFUSE
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.DIFFUSE
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.DIFFUSE
   id: DIFFUSE
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: DIFFUSE
   nameWithType: MapGrammarLexer.DIFFUSE
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.DIFFUSE
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.DIFFUSE
   type: Field
   source:
     remote:
@@ -2055,7 +2055,7 @@ items:
     startLine: 40
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int DIFFUSE = 55
     return:
@@ -2067,16 +2067,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.DIRECTION
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.DIRECTION
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.DIRECTION
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.DIRECTION
   id: DIRECTION
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: DIRECTION
   nameWithType: MapGrammarLexer.DIRECTION
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.DIRECTION
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.DIRECTION
   type: Field
   source:
     remote:
@@ -2088,7 +2088,7 @@ items:
     startLine: 40
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int DIRECTION = 56
     return:
@@ -2100,16 +2100,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.PLAY
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.PLAY
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.PLAY
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.PLAY
   id: PLAY
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: PLAY
   nameWithType: MapGrammarLexer.PLAY
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.PLAY
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.PLAY
   type: Field
   source:
     remote:
@@ -2121,7 +2121,7 @@ items:
     startLine: 40
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int PLAY = 57
     return:
@@ -2133,16 +2133,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.ADD
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.ADD
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.ADD
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.ADD
   id: ADD
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: ADD
   nameWithType: MapGrammarLexer.ADD
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.ADD
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.ADD
   type: Field
   source:
     remote:
@@ -2154,7 +2154,7 @@ items:
     startLine: 40
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int ADD = 58
     return:
@@ -2166,16 +2166,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.ENABLE
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.ENABLE
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.ENABLE
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.ENABLE
   id: ENABLE
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: ENABLE
   nameWithType: MapGrammarLexer.ENABLE
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.ENABLE
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.ENABLE
   type: Field
   source:
     remote:
@@ -2187,7 +2187,7 @@ items:
     startLine: 40
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int ENABLE = 59
     return:
@@ -2199,16 +2199,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.STOP
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.STOP
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.STOP
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.STOP
   id: STOP
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: STOP
   nameWithType: MapGrammarLexer.STOP
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.STOP
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.STOP
   type: Field
   source:
     remote:
@@ -2220,7 +2220,7 @@ items:
     startLine: 40
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int STOP = 60
     return:
@@ -2232,16 +2232,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.PITCH
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.PITCH
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.PITCH
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.PITCH
   id: PITCH
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: PITCH
   nameWithType: MapGrammarLexer.PITCH
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.PITCH
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.PITCH
   type: Field
   source:
     remote:
@@ -2253,7 +2253,7 @@ items:
     startLine: 40
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int PITCH = 61
     return:
@@ -2265,16 +2265,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.TURN
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.TURN
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.TURN
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.TURN
   id: TURN
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: TURN
   nameWithType: MapGrammarLexer.TURN
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.TURN
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.TURN
   type: Field
   source:
     remote:
@@ -2286,7 +2286,7 @@ items:
     startLine: 41
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int TURN = 62
     return:
@@ -2298,16 +2298,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.STATE_END
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.STATE_END
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.STATE_END
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.STATE_END
   id: STATE_END
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: STATE_END
   nameWithType: MapGrammarLexer.STATE_END
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.STATE_END
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.STATE_END
   type: Field
   source:
     remote:
@@ -2319,7 +2319,7 @@ items:
     startLine: 41
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int STATE_END = 63
     return:
@@ -2331,16 +2331,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.DOT
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.DOT
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.DOT
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.DOT
   id: DOT
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: DOT
   nameWithType: MapGrammarLexer.DOT
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.DOT
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.DOT
   type: Field
   source:
     remote:
@@ -2352,7 +2352,7 @@ items:
     startLine: 41
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int DOT = 64
     return:
@@ -2364,16 +2364,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.COMMA
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.COMMA
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.COMMA
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.COMMA
   id: COMMA
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: COMMA
   nameWithType: MapGrammarLexer.COMMA
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.COMMA
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.COMMA
   type: Field
   source:
     remote:
@@ -2385,7 +2385,7 @@ items:
     startLine: 41
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int COMMA = 65
     return:
@@ -2397,16 +2397,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.NUM
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.NUM
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.NUM
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.NUM
   id: NUM
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: NUM
   nameWithType: MapGrammarLexer.NUM
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.NUM
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.NUM
   type: Field
   source:
     remote:
@@ -2418,7 +2418,7 @@ items:
     startLine: 41
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int NUM = 66
     return:
@@ -2430,16 +2430,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.NULL
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.NULL
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.NULL
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.NULL
   id: "NULL"
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: "NULL"
   nameWithType: MapGrammarLexer.NULL
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.NULL
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.NULL
   type: Field
   source:
     remote:
@@ -2451,7 +2451,7 @@ items:
     startLine: 41
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int NULL = 67
     return:
@@ -2463,16 +2463,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.DISTANCE
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.DISTANCE
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.DISTANCE
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.DISTANCE
   id: DISTANCE
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: DISTANCE
   nameWithType: MapGrammarLexer.DISTANCE
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.DISTANCE
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.DISTANCE
   type: Field
   source:
     remote:
@@ -2484,7 +2484,7 @@ items:
     startLine: 41
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int DISTANCE = 68
     return:
@@ -2496,16 +2496,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.EQUAL
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.EQUAL
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.EQUAL
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.EQUAL
   id: EQUAL
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: EQUAL
   nameWithType: MapGrammarLexer.EQUAL
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.EQUAL
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.EQUAL
   type: Field
   source:
     remote:
@@ -2517,7 +2517,7 @@ items:
     startLine: 42
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int EQUAL = 69
     return:
@@ -2529,16 +2529,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.PLUS
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.PLUS
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.PLUS
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.PLUS
   id: PLUS
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: PLUS
   nameWithType: MapGrammarLexer.PLUS
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.PLUS
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.PLUS
   type: Field
   source:
     remote:
@@ -2550,7 +2550,7 @@ items:
     startLine: 42
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int PLUS = 70
     return:
@@ -2562,16 +2562,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.MINUS
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.MINUS
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.MINUS
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.MINUS
   id: MINUS
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: MINUS
   nameWithType: MapGrammarLexer.MINUS
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.MINUS
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.MINUS
   type: Field
   source:
     remote:
@@ -2583,7 +2583,7 @@ items:
     startLine: 42
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int MINUS = 71
     return:
@@ -2595,16 +2595,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.MULT
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.MULT
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.MULT
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.MULT
   id: MULT
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: MULT
   nameWithType: MapGrammarLexer.MULT
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.MULT
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.MULT
   type: Field
   source:
     remote:
@@ -2616,7 +2616,7 @@ items:
     startLine: 42
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int MULT = 72
     return:
@@ -2628,16 +2628,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.DIV
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.DIV
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.DIV
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.DIV
   id: DIV
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: DIV
   nameWithType: MapGrammarLexer.DIV
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.DIV
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.DIV
   type: Field
   source:
     remote:
@@ -2649,7 +2649,7 @@ items:
     startLine: 42
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int DIV = 73
     return:
@@ -2661,16 +2661,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.MOD
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.MOD
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.MOD
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.MOD
   id: MOD
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: MOD
   nameWithType: MapGrammarLexer.MOD
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.MOD
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.MOD
   type: Field
   source:
     remote:
@@ -2682,7 +2682,7 @@ items:
     startLine: 42
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int MOD = 74
     return:
@@ -2694,16 +2694,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.ABS
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.ABS
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.ABS
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.ABS
   id: ABS
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: ABS
   nameWithType: MapGrammarLexer.ABS
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.ABS
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.ABS
   type: Field
   source:
     remote:
@@ -2715,7 +2715,7 @@ items:
     startLine: 42
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int ABS = 75
     return:
@@ -2727,16 +2727,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.ATAN2
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.ATAN2
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.ATAN2
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.ATAN2
   id: ATAN2
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: ATAN2
   nameWithType: MapGrammarLexer.ATAN2
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.ATAN2
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.ATAN2
   type: Field
   source:
     remote:
@@ -2748,7 +2748,7 @@ items:
     startLine: 42
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int ATAN2 = 76
     return:
@@ -2760,16 +2760,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.CEIL
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.CEIL
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.CEIL
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.CEIL
   id: CEIL
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: CEIL
   nameWithType: MapGrammarLexer.CEIL
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.CEIL
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.CEIL
   type: Field
   source:
     remote:
@@ -2781,7 +2781,7 @@ items:
     startLine: 43
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int CEIL = 77
     return:
@@ -2793,16 +2793,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.COS
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.COS
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.COS
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.COS
   id: COS
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: COS
   nameWithType: MapGrammarLexer.COS
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.COS
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.COS
   type: Field
   source:
     remote:
@@ -2814,7 +2814,7 @@ items:
     startLine: 43
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int COS = 78
     return:
@@ -2826,16 +2826,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.EXP
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.EXP
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.EXP
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.EXP
   id: EXP
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: EXP
   nameWithType: MapGrammarLexer.EXP
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.EXP
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.EXP
   type: Field
   source:
     remote:
@@ -2847,7 +2847,7 @@ items:
     startLine: 43
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int EXP = 79
     return:
@@ -2859,16 +2859,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.FLOOR
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.FLOOR
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.FLOOR
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.FLOOR
   id: FLOOR
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: FLOOR
   nameWithType: MapGrammarLexer.FLOOR
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.FLOOR
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.FLOOR
   type: Field
   source:
     remote:
@@ -2880,7 +2880,7 @@ items:
     startLine: 43
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int FLOOR = 80
     return:
@@ -2892,16 +2892,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.LOG
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.LOG
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.LOG
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.LOG
   id: LOG
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: LOG
   nameWithType: MapGrammarLexer.LOG
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.LOG
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.LOG
   type: Field
   source:
     remote:
@@ -2913,7 +2913,7 @@ items:
     startLine: 43
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int LOG = 81
     return:
@@ -2925,16 +2925,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.POW
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.POW
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.POW
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.POW
   id: POW
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: POW
   nameWithType: MapGrammarLexer.POW
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.POW
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.POW
   type: Field
   source:
     remote:
@@ -2946,7 +2946,7 @@ items:
     startLine: 43
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int POW = 82
     return:
@@ -2958,16 +2958,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.RAND
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.RAND
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.RAND
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.RAND
   id: RAND
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: RAND
   nameWithType: MapGrammarLexer.RAND
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.RAND
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.RAND
   type: Field
   source:
     remote:
@@ -2979,7 +2979,7 @@ items:
     startLine: 43
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int RAND = 83
     return:
@@ -2991,16 +2991,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.SIN
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.SIN
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.SIN
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.SIN
   id: SIN
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: SIN
   nameWithType: MapGrammarLexer.SIN
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.SIN
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.SIN
   type: Field
   source:
     remote:
@@ -3012,7 +3012,7 @@ items:
     startLine: 43
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int SIN = 84
     return:
@@ -3024,16 +3024,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.SQRT
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.SQRT
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.SQRT
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.SQRT
   id: SQRT
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: SQRT
   nameWithType: MapGrammarLexer.SQRT
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.SQRT
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.SQRT
   type: Field
   source:
     remote:
@@ -3045,7 +3045,7 @@ items:
     startLine: 43
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int SQRT = 85
     return:
@@ -3057,16 +3057,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.OPN_PAR
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.OPN_PAR
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.OPN_PAR
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.OPN_PAR
   id: OPN_PAR
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: OPN_PAR
   nameWithType: MapGrammarLexer.OPN_PAR
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.OPN_PAR
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.OPN_PAR
   type: Field
   source:
     remote:
@@ -3078,7 +3078,7 @@ items:
     startLine: 44
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int OPN_PAR = 86
     return:
@@ -3090,16 +3090,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.CLS_PAR
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.CLS_PAR
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.CLS_PAR
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.CLS_PAR
   id: CLS_PAR
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: CLS_PAR
   nameWithType: MapGrammarLexer.CLS_PAR
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.CLS_PAR
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.CLS_PAR
   type: Field
   source:
     remote:
@@ -3111,7 +3111,7 @@ items:
     startLine: 44
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int CLS_PAR = 87
     return:
@@ -3123,16 +3123,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.OPN_BRA
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.OPN_BRA
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.OPN_BRA
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.OPN_BRA
   id: OPN_BRA
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: OPN_BRA
   nameWithType: MapGrammarLexer.OPN_BRA
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.OPN_BRA
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.OPN_BRA
   type: Field
   source:
     remote:
@@ -3144,7 +3144,7 @@ items:
     startLine: 44
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int OPN_BRA = 88
     return:
@@ -3156,16 +3156,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.CLS_BRA
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.CLS_BRA
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.CLS_BRA
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.CLS_BRA
   id: CLS_BRA
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: CLS_BRA
   nameWithType: MapGrammarLexer.CLS_BRA
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.CLS_BRA
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.CLS_BRA
   type: Field
   source:
     remote:
@@ -3177,7 +3177,7 @@ items:
     startLine: 44
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int CLS_BRA = 89
     return:
@@ -3189,16 +3189,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.WHITESPACE
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.WHITESPACE
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.WHITESPACE
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.WHITESPACE
   id: WHITESPACE
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: WHITESPACE
   nameWithType: MapGrammarLexer.WHITESPACE
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.WHITESPACE
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.WHITESPACE
   type: Field
   source:
     remote:
@@ -3210,7 +3210,7 @@ items:
     startLine: 44
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int WHITESPACE = 90
     return:
@@ -3222,16 +3222,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.COMMENT
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.COMMENT
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.COMMENT
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.COMMENT
   id: COMMENT
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: COMMENT
   nameWithType: MapGrammarLexer.COMMENT
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.COMMENT
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.COMMENT
   type: Field
   source:
     remote:
@@ -3243,7 +3243,7 @@ items:
     startLine: 44
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int COMMENT = 91
     return:
@@ -3255,16 +3255,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.VAR_START
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.VAR_START
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.VAR_START
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.VAR_START
   id: VAR_START
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: VAR_START
   nameWithType: MapGrammarLexer.VAR_START
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.VAR_START
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.VAR_START
   type: Field
   source:
     remote:
@@ -3276,7 +3276,7 @@ items:
     startLine: 45
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int VAR_START = 92
     return:
@@ -3288,16 +3288,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.QUOTE
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.QUOTE
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.QUOTE
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.QUOTE
   id: QUOTE
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: QUOTE
   nameWithType: MapGrammarLexer.QUOTE
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.QUOTE
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.QUOTE
   type: Field
   source:
     remote:
@@ -3309,7 +3309,7 @@ items:
     startLine: 45
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int QUOTE = 93
     return:
@@ -3321,16 +3321,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.ERROR_CHAR
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.ERROR_CHAR
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.ERROR_CHAR
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.ERROR_CHAR
   id: ERROR_CHAR
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: ERROR_CHAR
   nameWithType: MapGrammarLexer.ERROR_CHAR
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.ERROR_CHAR
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.ERROR_CHAR
   type: Field
   source:
     remote:
@@ -3342,7 +3342,7 @@ items:
     startLine: 45
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int ERROR_CHAR = 94
     return:
@@ -3354,16 +3354,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.VAR
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.VAR
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.VAR
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.VAR
   id: VAR
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: VAR
   nameWithType: MapGrammarLexer.VAR
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.VAR
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.VAR
   type: Field
   source:
     remote:
@@ -3375,7 +3375,7 @@ items:
     startLine: 45
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int VAR = 95
     return:
@@ -3387,16 +3387,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.RQUOTE
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.RQUOTE
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.RQUOTE
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.RQUOTE
   id: RQUOTE
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: RQUOTE
   nameWithType: MapGrammarLexer.RQUOTE
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.RQUOTE
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.RQUOTE
   type: Field
   source:
     remote:
@@ -3408,7 +3408,7 @@ items:
     startLine: 45
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int RQUOTE = 96
     return:
@@ -3420,16 +3420,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.CHAR
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.CHAR
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.CHAR
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.CHAR
   id: CHAR
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: CHAR
   nameWithType: MapGrammarLexer.CHAR
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.CHAR
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.CHAR
   type: Field
   source:
     remote:
@@ -3441,7 +3441,7 @@ items:
     startLine: 45
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int CHAR = 97
     return:
@@ -3453,16 +3453,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.E_WS
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.E_WS
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.E_WS
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.E_WS
   id: E_WS
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: E_WS
   nameWithType: MapGrammarLexer.E_WS
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.E_WS
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.E_WS
   type: Field
   source:
     remote:
@@ -3474,7 +3474,7 @@ items:
     startLine: 45
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int E_WS = 98
     return:
@@ -3486,16 +3486,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.ENCODE_END
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.ENCODE_END
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.ENCODE_END
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.ENCODE_END
   id: ENCODE_END
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: ENCODE_END
   nameWithType: MapGrammarLexer.ENCODE_END
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.ENCODE_END
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.ENCODE_END
   type: Field
   source:
     remote:
@@ -3507,7 +3507,7 @@ items:
     startLine: 46
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int ENCODE_END = 99
     return:
@@ -3519,16 +3519,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.ENCODE_CHAR
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.ENCODE_CHAR
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.ENCODE_CHAR
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.ENCODE_CHAR
   id: ENCODE_CHAR
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: ENCODE_CHAR
   nameWithType: MapGrammarLexer.ENCODE_CHAR
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.ENCODE_CHAR
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.ENCODE_CHAR
   type: Field
   source:
     remote:
@@ -3540,7 +3540,7 @@ items:
     startLine: 46
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int ENCODE_CHAR = 100
     return:
@@ -3552,16 +3552,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.VAR_MODE
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.VAR_MODE
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.VAR_MODE
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.VAR_MODE
   id: VAR_MODE
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: VAR_MODE
   nameWithType: MapGrammarLexer.VAR_MODE
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.VAR_MODE
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.VAR_MODE
   type: Field
   source:
     remote:
@@ -3573,7 +3573,7 @@ items:
     startLine: 47
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int VAR_MODE = 1
     return:
@@ -3585,16 +3585,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.STRING_MODE
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.STRING_MODE
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.STRING_MODE
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.STRING_MODE
   id: STRING_MODE
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: STRING_MODE
   nameWithType: MapGrammarLexer.STRING_MODE
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.STRING_MODE
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.STRING_MODE
   type: Field
   source:
     remote:
@@ -3606,7 +3606,7 @@ items:
     startLine: 48
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int STRING_MODE = 2
     return:
@@ -3618,16 +3618,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.ENCODING_MODE
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.ENCODING_MODE
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.ENCODING_MODE
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.ENCODING_MODE
   id: ENCODING_MODE
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: ENCODING_MODE
   nameWithType: MapGrammarLexer.ENCODING_MODE
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.ENCODING_MODE
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.ENCODING_MODE
   type: Field
   source:
     remote:
@@ -3639,7 +3639,7 @@ items:
     startLine: 49
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public const int ENCODING_MODE = 3
     return:
@@ -3651,16 +3651,16 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.modeNames
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.modeNames
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.modeNames
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.modeNames
   id: modeNames
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: modeNames
   nameWithType: MapGrammarLexer.modeNames
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.modeNames
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.modeNames
   type: Field
   source:
     remote:
@@ -3672,7 +3672,7 @@ items:
     startLine: 50
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public static string[] modeNames
     return:
@@ -3684,16 +3684,16 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.ruleNames
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.ruleNames
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.ruleNames
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.ruleNames
   id: ruleNames
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: ruleNames
   nameWithType: MapGrammarLexer.ruleNames
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.ruleNames
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.ruleNames
   type: Field
   source:
     remote:
@@ -3705,7 +3705,7 @@ items:
     startLine: 54
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public static readonly string[] ruleNames
     return:
@@ -3719,16 +3719,16 @@ items:
   - Public
   - Shared
   - ReadOnly
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.#ctor(Antlr4.Runtime.ICharStream)
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.#ctor(Antlr4.Runtime.ICharStream)
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.#ctor(Antlr4.Runtime.ICharStream)
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.#ctor(Antlr4.Runtime.ICharStream)
   id: '#ctor(Antlr4.Runtime.ICharStream)'
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: MapGrammarLexer(ICharStream)
   nameWithType: MapGrammarLexer.MapGrammarLexer(ICharStream)
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.MapGrammarLexer(Antlr4.Runtime.ICharStream)
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.MapGrammarLexer(Antlr4.Runtime.ICharStream)
   type: Constructor
   source:
     remote:
@@ -3740,28 +3740,28 @@ items:
     startLine: 74
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public MapGrammarLexer(ICharStream input)
     parameters:
     - id: input
       type: Antlr4.Runtime.ICharStream
     content.vb: Public Sub New(input As ICharStream)
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.#ctor*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.DefaultVocabulary
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.DefaultVocabulary
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.DefaultVocabulary
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.DefaultVocabulary
   id: DefaultVocabulary
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: DefaultVocabulary
   nameWithType: MapGrammarLexer.DefaultVocabulary
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.DefaultVocabulary
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.DefaultVocabulary
   type: Field
   source:
     remote:
@@ -3773,7 +3773,7 @@ items:
     startLine: 107
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public static readonly IVocabulary DefaultVocabulary
     return:
@@ -3787,16 +3787,16 @@ items:
   - Public
   - Shared
   - ReadOnly
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.tokenNames
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.tokenNames
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.tokenNames
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.tokenNames
   id: tokenNames
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: tokenNames
   nameWithType: MapGrammarLexer.tokenNames
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.tokenNames
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.tokenNames
   type: Field
   source:
     remote:
@@ -3808,7 +3808,7 @@ items:
     startLine: 110
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: >-
       [Obsolete("Use Vocabulary instead.")]
@@ -3834,16 +3834,16 @@ items:
   - Public
   - Shared
   - ReadOnly
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.TokenNames
-  commentId: P:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.TokenNames
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.TokenNames
+  commentId: P:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.TokenNames
   id: TokenNames
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: TokenNames
   nameWithType: MapGrammarLexer.TokenNames
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.TokenNames
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.TokenNames
   type: Property
   source:
     remote:
@@ -3855,7 +3855,7 @@ items:
     startLine: 128
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: >-
       [Obsolete("Use IRecognizer.Vocabulary instead.")]
@@ -3869,7 +3869,7 @@ items:
 
       Public Overrides ReadOnly Property TokenNames As String()
   overridden: Antlr4.Runtime.Lexer.TokenNames
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.TokenNames*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.TokenNames*
   attributes:
   - type: System.ObsoleteAttribute
     ctor: System.ObsoleteAttribute.#ctor(System.String)
@@ -3884,16 +3884,16 @@ items:
   - Public
   - Overrides
   - ReadOnly
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.Vocabulary
-  commentId: P:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.Vocabulary
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.Vocabulary
+  commentId: P:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.Vocabulary
   id: Vocabulary
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: Vocabulary
   nameWithType: MapGrammarLexer.Vocabulary
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.Vocabulary
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.Vocabulary
   type: Property
   source:
     remote:
@@ -3905,7 +3905,7 @@ items:
     startLine: 137
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: >-
       [NotNull]
@@ -3919,7 +3919,7 @@ items:
 
       Public Overrides ReadOnly Property Vocabulary As IVocabulary
   overridden: Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.Vocabulary
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.Vocabulary*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.Vocabulary*
   attributes:
   - type: Antlr4.Runtime.Misc.NotNullAttribute
     ctor: Antlr4.Runtime.Misc.NotNullAttribute.#ctor
@@ -3932,16 +3932,16 @@ items:
   - Public
   - Overrides
   - ReadOnly
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.GrammarFileName
-  commentId: P:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.GrammarFileName
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.GrammarFileName
+  commentId: P:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.GrammarFileName
   id: GrammarFileName
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: GrammarFileName
   nameWithType: MapGrammarLexer.GrammarFileName
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.GrammarFileName
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.GrammarFileName
   type: Property
   source:
     remote:
@@ -3953,7 +3953,7 @@ items:
     startLine: 146
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public override string GrammarFileName { get; }
     parameters: []
@@ -3961,7 +3961,7 @@ items:
       type: System.String
     content.vb: Public Overrides ReadOnly Property GrammarFileName As String
   overridden: Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.GrammarFileName
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.GrammarFileName*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.GrammarFileName*
   modifiers.csharp:
   - public
   - override
@@ -3970,16 +3970,16 @@ items:
   - Public
   - Overrides
   - ReadOnly
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.RuleNames
-  commentId: P:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.RuleNames
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.RuleNames
+  commentId: P:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.RuleNames
   id: RuleNames
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: RuleNames
   nameWithType: MapGrammarLexer.RuleNames
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.RuleNames
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.RuleNames
   type: Property
   source:
     remote:
@@ -3991,7 +3991,7 @@ items:
     startLine: 148
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public override string[] RuleNames { get; }
     parameters: []
@@ -3999,7 +3999,7 @@ items:
       type: System.String[]
     content.vb: Public Overrides ReadOnly Property RuleNames As String()
   overridden: Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.RuleNames
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.RuleNames*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.RuleNames*
   modifiers.csharp:
   - public
   - override
@@ -4008,16 +4008,16 @@ items:
   - Public
   - Overrides
   - ReadOnly
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.ModeNames
-  commentId: P:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.ModeNames
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.ModeNames
+  commentId: P:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.ModeNames
   id: ModeNames
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: ModeNames
   nameWithType: MapGrammarLexer.ModeNames
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.ModeNames
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.ModeNames
   type: Property
   source:
     remote:
@@ -4029,7 +4029,7 @@ items:
     startLine: 150
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public override string[] ModeNames { get; }
     parameters: []
@@ -4037,7 +4037,7 @@ items:
       type: System.String[]
     content.vb: Public Overrides ReadOnly Property ModeNames As String()
   overridden: Antlr4.Runtime.Lexer.ModeNames
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.ModeNames*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.ModeNames*
   modifiers.csharp:
   - public
   - override
@@ -4046,16 +4046,16 @@ items:
   - Public
   - Overrides
   - ReadOnly
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.SerializedAtn
-  commentId: P:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.SerializedAtn
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.SerializedAtn
+  commentId: P:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.SerializedAtn
   id: SerializedAtn
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: SerializedAtn
   nameWithType: MapGrammarLexer.SerializedAtn
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.SerializedAtn
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.SerializedAtn
   type: Property
   source:
     remote:
@@ -4067,7 +4067,7 @@ items:
     startLine: 152
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public override string SerializedAtn { get; }
     parameters: []
@@ -4075,7 +4075,7 @@ items:
       type: System.String
     content.vb: Public Overrides ReadOnly Property SerializedAtn As String
   overridden: Antlr4.Runtime.Recognizer{System.Int32,Antlr4.Runtime.Atn.LexerATNSimulator}.SerializedAtn
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.SerializedAtn*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.SerializedAtn*
   modifiers.csharp:
   - public
   - override
@@ -4084,16 +4084,16 @@ items:
   - Public
   - Overrides
   - ReadOnly
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer._serializedATN
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer._serializedATN
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer._serializedATN
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer._serializedATN
   id: _serializedATN
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: _serializedATN
   nameWithType: MapGrammarLexer._serializedATN
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer._serializedATN
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer._serializedATN
   type: Field
   source:
     remote:
@@ -4105,7 +4105,7 @@ items:
     startLine: 154
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public static readonly string _serializedATN
     return:
@@ -4119,16 +4119,16 @@ items:
   - Public
   - Shared
   - ReadOnly
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer._ATN
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer._ATN
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer._ATN
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer._ATN
   id: _ATN
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   langs:
   - csharp
   - vb
   name: _ATN
   nameWithType: MapGrammarLexer._ATN
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer._ATN
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer._ATN
   type: Field
   source:
     remote:
@@ -4140,7 +4140,7 @@ items:
     startLine: 531
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public static readonly ATN _ATN
     return:
@@ -4155,11 +4155,11 @@ items:
   - Shared
   - ReadOnly
 references:
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions
-  commentId: N:Bve5_Parsing.MapGrammar.SyntaxDefinitions
-  name: Bve5_Parsing.MapGrammar.SyntaxDefinitions
-  nameWithType: Bve5_Parsing.MapGrammar.SyntaxDefinitions
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
+  commentId: N:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
+  name: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
+  nameWithType: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -6832,11 +6832,11 @@ references:
   - name: ()
     nameWithType: ()
     fullName: ()
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.#ctor*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.#ctor
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.#ctor*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.#ctor
   name: MapGrammarLexer
   nameWithType: MapGrammarLexer.MapGrammarLexer
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.MapGrammarLexer
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.MapGrammarLexer
 - uid: Antlr4.Runtime.ICharStream
   commentId: T:Antlr4.Runtime.ICharStream
   parent: Antlr4.Runtime
@@ -6858,21 +6858,21 @@ references:
   name: TokenNames
   nameWithType: Lexer.TokenNames
   fullName: Antlr4.Runtime.Lexer.TokenNames
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.TokenNames*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.TokenNames
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.TokenNames*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.TokenNames
   name: TokenNames
   nameWithType: MapGrammarLexer.TokenNames
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.TokenNames
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.Vocabulary*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.Vocabulary
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.TokenNames
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.Vocabulary*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.Vocabulary
   name: Vocabulary
   nameWithType: MapGrammarLexer.Vocabulary
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.Vocabulary
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.GrammarFileName*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.GrammarFileName
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.Vocabulary
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.GrammarFileName*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.GrammarFileName
   name: GrammarFileName
   nameWithType: MapGrammarLexer.GrammarFileName
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.GrammarFileName
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.GrammarFileName
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -6880,11 +6880,11 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.RuleNames*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.RuleNames
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.RuleNames*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.RuleNames
   name: RuleNames
   nameWithType: MapGrammarLexer.RuleNames
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.RuleNames
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.RuleNames
 - uid: Antlr4.Runtime.Lexer.ModeNames
   commentId: P:Antlr4.Runtime.Lexer.ModeNames
   parent: Antlr4.Runtime.Lexer
@@ -6892,16 +6892,16 @@ references:
   name: ModeNames
   nameWithType: Lexer.ModeNames
   fullName: Antlr4.Runtime.Lexer.ModeNames
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.ModeNames*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.ModeNames
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.ModeNames*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.ModeNames
   name: ModeNames
   nameWithType: MapGrammarLexer.ModeNames
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.ModeNames
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.SerializedAtn*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.SerializedAtn
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.ModeNames
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.SerializedAtn*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.SerializedAtn
   name: SerializedAtn
   nameWithType: MapGrammarLexer.SerializedAtn
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer.SerializedAtn
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer.SerializedAtn
 - uid: Antlr4.Runtime.Atn.ATN
   commentId: T:Antlr4.Runtime.Atn.ATN
   parent: Antlr4.Runtime.Atn

@@ -2,7 +2,7 @@
 using Bve5_Parsing.MapGrammar.EvaluateData;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using static Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser;
+using static Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarParser;
 
 namespace Bve5_Parsing.MapGrammar.AstNodes
 {

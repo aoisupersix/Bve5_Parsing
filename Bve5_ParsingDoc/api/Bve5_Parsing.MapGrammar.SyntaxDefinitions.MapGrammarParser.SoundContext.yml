@@ -1,33 +1,33 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SoundContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.SoundContext
   id: MapGrammarParser.SoundContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   children:
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.#ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.CLS_BRA
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.CLS_PAR
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.DOT
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.expr
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.filepath
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.func
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.key
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.LOAD
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.OPN_BRA
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.OPN_PAR
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.PLAY
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.RuleIndex
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.string
+  - Bve5_Parsing.MapGrammar.V2Parser.SoundContext.#ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)
+  - Bve5_Parsing.MapGrammar.V2Parser.SoundContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
+  - Bve5_Parsing.MapGrammar.V2Parser.SoundContext.CLS_BRA
+  - Bve5_Parsing.MapGrammar.V2Parser.SoundContext.CLS_PAR
+  - Bve5_Parsing.MapGrammar.V2Parser.SoundContext.DOT
+  - Bve5_Parsing.MapGrammar.V2Parser.SoundContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
+  - Bve5_Parsing.MapGrammar.V2Parser.SoundContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
+  - Bve5_Parsing.MapGrammar.V2Parser.SoundContext.expr
+  - Bve5_Parsing.MapGrammar.V2Parser.SoundContext.filepath
+  - Bve5_Parsing.MapGrammar.V2Parser.SoundContext.func
+  - Bve5_Parsing.MapGrammar.V2Parser.SoundContext.key
+  - Bve5_Parsing.MapGrammar.V2Parser.SoundContext.LOAD
+  - Bve5_Parsing.MapGrammar.V2Parser.SoundContext.OPN_BRA
+  - Bve5_Parsing.MapGrammar.V2Parser.SoundContext.OPN_PAR
+  - Bve5_Parsing.MapGrammar.V2Parser.SoundContext.PLAY
+  - Bve5_Parsing.MapGrammar.V2Parser.SoundContext.RuleIndex
+  - Bve5_Parsing.MapGrammar.V2Parser.SoundContext.string
   langs:
   - csharp
   - vb
   name: MapGrammarParser.SoundContext
   nameWithType: MapGrammarParser.SoundContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SoundContext
   type: Class
   source:
     remote:
@@ -39,7 +39,7 @@ items:
     startLine: 3377
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: 'public class SoundContext : ParserRuleContext, IRuleNode, IParseTree, ISyntaxTree, ITree'
     content.vb: >-
@@ -116,16 +116,16 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.func
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.func
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.func
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SoundContext.func
   id: func
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SoundContext
   langs:
   - csharp
   - vb
   name: func
   nameWithType: MapGrammarParser.SoundContext.func
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.func
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.func
   type: Field
   source:
     remote:
@@ -137,7 +137,7 @@ items:
     startLine: 3378
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public IToken func
     return:
@@ -147,16 +147,16 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.filepath
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.filepath
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.filepath
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SoundContext.filepath
   id: filepath
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SoundContext
   langs:
   - csharp
   - vb
   name: filepath
   nameWithType: MapGrammarParser.SoundContext.filepath
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.filepath
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.filepath
   type: Field
   source:
     remote:
@@ -168,26 +168,26 @@ items:
     startLine: 3379
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public MapGrammarParser.StringContext filepath
     return:
-      type: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StringContext
+      type: Bve5_Parsing.MapGrammar.V2Parser.StringContext
     content.vb: Public filepath As MapGrammarParser.StringContext
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.key
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.key
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.key
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.SoundContext.key
   id: key
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SoundContext
   langs:
   - csharp
   - vb
   name: key
   nameWithType: MapGrammarParser.SoundContext.key
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.key
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.key
   type: Field
   source:
     remote:
@@ -199,26 +199,26 @@ items:
     startLine: 3380
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public MapGrammarParser.ExprContext key
     return:
-      type: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext
+      type: Bve5_Parsing.MapGrammar.V2Parser.ExprContext
     content.vb: Public key As MapGrammarParser.ExprContext
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.DOT
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.DOT
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.DOT
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.SoundContext.DOT
   id: DOT
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SoundContext
   langs:
   - csharp
   - vb
   name: DOT()
   nameWithType: MapGrammarParser.SoundContext.DOT()
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.DOT()
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.DOT()
   type: Method
   source:
     remote:
@@ -230,27 +230,27 @@ items:
     startLine: 3381
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public ITerminalNode DOT()
     return:
       type: Antlr4.Runtime.Tree.ITerminalNode
     content.vb: Public Function DOT As ITerminalNode
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.DOT*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.DOT*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.OPN_PAR
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.OPN_PAR
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.OPN_PAR
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.SoundContext.OPN_PAR
   id: OPN_PAR
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SoundContext
   langs:
   - csharp
   - vb
   name: OPN_PAR()
   nameWithType: MapGrammarParser.SoundContext.OPN_PAR()
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.OPN_PAR()
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.OPN_PAR()
   type: Method
   source:
     remote:
@@ -262,27 +262,27 @@ items:
     startLine: 3382
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public ITerminalNode OPN_PAR()
     return:
       type: Antlr4.Runtime.Tree.ITerminalNode
     content.vb: Public Function OPN_PAR As ITerminalNode
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.OPN_PAR*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.OPN_PAR*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.CLS_PAR
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.CLS_PAR
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.CLS_PAR
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.SoundContext.CLS_PAR
   id: CLS_PAR
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SoundContext
   langs:
   - csharp
   - vb
   name: CLS_PAR()
   nameWithType: MapGrammarParser.SoundContext.CLS_PAR()
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.CLS_PAR()
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.CLS_PAR()
   type: Method
   source:
     remote:
@@ -294,27 +294,27 @@ items:
     startLine: 3383
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public ITerminalNode CLS_PAR()
     return:
       type: Antlr4.Runtime.Tree.ITerminalNode
     content.vb: Public Function CLS_PAR As ITerminalNode
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.CLS_PAR*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.CLS_PAR*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.LOAD
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.LOAD
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.LOAD
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.SoundContext.LOAD
   id: LOAD
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SoundContext
   langs:
   - csharp
   - vb
   name: LOAD()
   nameWithType: MapGrammarParser.SoundContext.LOAD()
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.LOAD()
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.LOAD()
   type: Method
   source:
     remote:
@@ -326,27 +326,27 @@ items:
     startLine: 3384
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public ITerminalNode LOAD()
     return:
       type: Antlr4.Runtime.Tree.ITerminalNode
     content.vb: Public Function LOAD As ITerminalNode
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.LOAD*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.LOAD*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.string
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.string
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.string
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.SoundContext.string
   id: string
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SoundContext
   langs:
   - csharp
   - vb
   name: string()
   nameWithType: MapGrammarParser.SoundContext.string()
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.string()
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.string()
   type: Method
   source:
     remote:
@@ -358,27 +358,27 @@ items:
     startLine: 3385
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public MapGrammarParser.StringContext string()
     return:
-      type: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StringContext
+      type: Bve5_Parsing.MapGrammar.V2Parser.StringContext
     content.vb: Public Function string As MapGrammarParser.StringContext
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.string*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.string*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.OPN_BRA
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.OPN_BRA
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.OPN_BRA
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.SoundContext.OPN_BRA
   id: OPN_BRA
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SoundContext
   langs:
   - csharp
   - vb
   name: OPN_BRA()
   nameWithType: MapGrammarParser.SoundContext.OPN_BRA()
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.OPN_BRA()
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.OPN_BRA()
   type: Method
   source:
     remote:
@@ -390,27 +390,27 @@ items:
     startLine: 3388
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public ITerminalNode OPN_BRA()
     return:
       type: Antlr4.Runtime.Tree.ITerminalNode
     content.vb: Public Function OPN_BRA As ITerminalNode
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.OPN_BRA*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.OPN_BRA*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.CLS_BRA
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.CLS_BRA
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.CLS_BRA
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.SoundContext.CLS_BRA
   id: CLS_BRA
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SoundContext
   langs:
   - csharp
   - vb
   name: CLS_BRA()
   nameWithType: MapGrammarParser.SoundContext.CLS_BRA()
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.CLS_BRA()
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.CLS_BRA()
   type: Method
   source:
     remote:
@@ -422,27 +422,27 @@ items:
     startLine: 3389
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public ITerminalNode CLS_BRA()
     return:
       type: Antlr4.Runtime.Tree.ITerminalNode
     content.vb: Public Function CLS_BRA As ITerminalNode
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.CLS_BRA*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.CLS_BRA*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.expr
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.expr
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.expr
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.SoundContext.expr
   id: expr
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SoundContext
   langs:
   - csharp
   - vb
   name: expr()
   nameWithType: MapGrammarParser.SoundContext.expr()
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.expr()
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.expr()
   type: Method
   source:
     remote:
@@ -454,27 +454,27 @@ items:
     startLine: 3390
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public MapGrammarParser.ExprContext expr()
     return:
-      type: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext
+      type: Bve5_Parsing.MapGrammar.V2Parser.ExprContext
     content.vb: Public Function expr As MapGrammarParser.ExprContext
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.expr*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.expr*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.PLAY
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.PLAY
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.PLAY
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.SoundContext.PLAY
   id: PLAY
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SoundContext
   langs:
   - csharp
   - vb
   name: PLAY()
   nameWithType: MapGrammarParser.SoundContext.PLAY()
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.PLAY()
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.PLAY()
   type: Method
   source:
     remote:
@@ -486,27 +486,27 @@ items:
     startLine: 3393
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public ITerminalNode PLAY()
     return:
       type: Antlr4.Runtime.Tree.ITerminalNode
     content.vb: Public Function PLAY As ITerminalNode
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.PLAY*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.PLAY*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.#ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.#ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.#ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.SoundContext.#ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)
   id: '#ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)'
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SoundContext
   langs:
   - csharp
   - vb
   name: SoundContext(ParserRuleContext, Int32)
   nameWithType: MapGrammarParser.SoundContext.SoundContext(ParserRuleContext, Int32)
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.SoundContext(Antlr4.Runtime.ParserRuleContext, System.Int32)
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.SoundContext(Antlr4.Runtime.ParserRuleContext, System.Int32)
   type: Constructor
   source:
     remote:
@@ -518,7 +518,7 @@ items:
     startLine: 3394
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public SoundContext(ParserRuleContext parent, int invokingState)
     parameters:
@@ -527,21 +527,21 @@ items:
     - id: invokingState
       type: System.Int32
     content.vb: Public Sub New(parent As ParserRuleContext, invokingState As Integer)
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.#ctor*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.RuleIndex
-  commentId: P:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.RuleIndex
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.RuleIndex
+  commentId: P:Bve5_Parsing.MapGrammar.V2Parser.SoundContext.RuleIndex
   id: RuleIndex
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SoundContext
   langs:
   - csharp
   - vb
   name: RuleIndex
   nameWithType: MapGrammarParser.SoundContext.RuleIndex
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.RuleIndex
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.RuleIndex
   type: Property
   source:
     remote:
@@ -553,7 +553,7 @@ items:
     startLine: 3398
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public override int RuleIndex { get; }
     parameters: []
@@ -561,7 +561,7 @@ items:
       type: System.Int32
     content.vb: Public Overrides ReadOnly Property RuleIndex As Integer
   overridden: Antlr4.Runtime.RuleContext.RuleIndex
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.RuleIndex*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.RuleIndex*
   modifiers.csharp:
   - public
   - override
@@ -570,16 +570,16 @@ items:
   - Public
   - Overrides
   - ReadOnly
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.SoundContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
   id: EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SoundContext
   langs:
   - csharp
   - vb
   name: EnterRule(IParseTreeListener)
   nameWithType: MapGrammarParser.SoundContext.EnterRule(IParseTreeListener)
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
   type: Method
   source:
     remote:
@@ -591,7 +591,7 @@ items:
     startLine: 3399
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public override void EnterRule(IParseTreeListener listener)
     parameters:
@@ -599,23 +599,23 @@ items:
       type: Antlr4.Runtime.Tree.IParseTreeListener
     content.vb: Public Overrides Sub EnterRule(listener As IParseTreeListener)
   overridden: Antlr4.Runtime.ParserRuleContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.EnterRule*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.EnterRule*
   modifiers.csharp:
   - public
   - override
   modifiers.vb:
   - Public
   - Overrides
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.SoundContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
   id: ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SoundContext
   langs:
   - csharp
   - vb
   name: ExitRule(IParseTreeListener)
   nameWithType: MapGrammarParser.SoundContext.ExitRule(IParseTreeListener)
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
   type: Method
   source:
     remote:
@@ -627,7 +627,7 @@ items:
     startLine: 3403
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public override void ExitRule(IParseTreeListener listener)
     parameters:
@@ -635,23 +635,23 @@ items:
       type: Antlr4.Runtime.Tree.IParseTreeListener
     content.vb: Public Overrides Sub ExitRule(listener As IParseTreeListener)
   overridden: Antlr4.Runtime.ParserRuleContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.ExitRule*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.ExitRule*
   modifiers.csharp:
   - public
   - override
   modifiers.vb:
   - Public
   - Overrides
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.SoundContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
   id: Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SoundContext
   langs:
   - csharp
   - vb
   name: Accept<TResult>(IParseTreeVisitor<TResult>)
   nameWithType: MapGrammarParser.SoundContext.Accept<TResult>(IParseTreeVisitor<TResult>)
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.Accept<TResult>(Antlr4.Runtime.Tree.IParseTreeVisitor<TResult>)
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.Accept<TResult>(Antlr4.Runtime.Tree.IParseTreeVisitor<TResult>)
   type: Method
   source:
     remote:
@@ -663,7 +663,7 @@ items:
     startLine: 3407
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor)
     parameters:
@@ -675,7 +675,7 @@ items:
       type: '{TResult}'
     content.vb: Public Overrides Function Accept(Of TResult)(visitor As IParseTreeVisitor(Of TResult)) As TResult
   overridden: Antlr4.Runtime.RuleContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{{TResult}})
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.Accept*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.Accept*
   nameWithType.vb: MapGrammarParser.SoundContext.Accept(Of TResult)(IParseTreeVisitor(Of TResult))
   modifiers.csharp:
   - public
@@ -683,14 +683,14 @@ items:
   modifiers.vb:
   - Public
   - Overrides
-  fullName.vb: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.Accept(Of TResult)(Antlr4.Runtime.Tree.IParseTreeVisitor(Of TResult))
+  fullName.vb: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.Accept(Of TResult)(Antlr4.Runtime.Tree.IParseTreeVisitor(Of TResult))
   name.vb: Accept(Of TResult)(IParseTreeVisitor(Of TResult))
 references:
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions
-  commentId: N:Bve5_Parsing.MapGrammar.SyntaxDefinitions
-  name: Bve5_Parsing.MapGrammar.SyntaxDefinitions
-  nameWithType: Bve5_Parsing.MapGrammar.SyntaxDefinitions
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
+  commentId: N:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
+  name: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
+  nameWithType: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -2401,23 +2401,23 @@ references:
   name: IToken
   nameWithType: IToken
   fullName: Antlr4.Runtime.IToken
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StringContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StringContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+- uid: Bve5_Parsing.MapGrammar.V2Parser.StringContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.StringContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.StringContext
   nameWithType: MapGrammarParser.StringContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StringContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.StringContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.ExprContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.ExprContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.ExprContext
   nameWithType: MapGrammarParser.ExprContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.DOT*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.DOT
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.ExprContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.DOT*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.SoundContext.DOT
   name: DOT
   nameWithType: MapGrammarParser.SoundContext.DOT
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.DOT
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.DOT
 - uid: Antlr4.Runtime.Tree.ITerminalNode
   commentId: T:Antlr4.Runtime.Tree.ITerminalNode
   parent: Antlr4.Runtime.Tree
@@ -2425,51 +2425,51 @@ references:
   name: ITerminalNode
   nameWithType: ITerminalNode
   fullName: Antlr4.Runtime.Tree.ITerminalNode
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.OPN_PAR*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.OPN_PAR
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.OPN_PAR*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.SoundContext.OPN_PAR
   name: OPN_PAR
   nameWithType: MapGrammarParser.SoundContext.OPN_PAR
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.OPN_PAR
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.CLS_PAR*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.CLS_PAR
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.OPN_PAR
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.CLS_PAR*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.SoundContext.CLS_PAR
   name: CLS_PAR
   nameWithType: MapGrammarParser.SoundContext.CLS_PAR
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.CLS_PAR
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.LOAD*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.LOAD
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.CLS_PAR
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.LOAD*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.SoundContext.LOAD
   name: LOAD
   nameWithType: MapGrammarParser.SoundContext.LOAD
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.LOAD
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.string*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.string
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.LOAD
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.string*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.SoundContext.string
   name: string
   nameWithType: MapGrammarParser.SoundContext.string
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.string
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.OPN_BRA*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.OPN_BRA
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.string
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.OPN_BRA*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.SoundContext.OPN_BRA
   name: OPN_BRA
   nameWithType: MapGrammarParser.SoundContext.OPN_BRA
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.OPN_BRA
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.CLS_BRA*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.CLS_BRA
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.OPN_BRA
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.CLS_BRA*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.SoundContext.CLS_BRA
   name: CLS_BRA
   nameWithType: MapGrammarParser.SoundContext.CLS_BRA
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.CLS_BRA
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.expr*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.expr
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.CLS_BRA
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.expr*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.SoundContext.expr
   name: expr
   nameWithType: MapGrammarParser.SoundContext.expr
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.expr
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.PLAY*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.PLAY
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.expr
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.PLAY*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.SoundContext.PLAY
   name: PLAY
   nameWithType: MapGrammarParser.SoundContext.PLAY
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.PLAY
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.#ctor*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.#ctor
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.PLAY
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.#ctor*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.SoundContext.#ctor
   name: SoundContext
   nameWithType: MapGrammarParser.SoundContext.SoundContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.SoundContext
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.SoundContext
 - uid: System.Int32
   commentId: T:System.Int32
   parent: System
@@ -2484,11 +2484,11 @@ references:
   name: RuleIndex
   nameWithType: RuleContext.RuleIndex
   fullName: Antlr4.Runtime.RuleContext.RuleIndex
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.RuleIndex*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.RuleIndex
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.RuleIndex*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.SoundContext.RuleIndex
   name: RuleIndex
   nameWithType: MapGrammarParser.SoundContext.RuleIndex
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.RuleIndex
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.RuleIndex
 - uid: Antlr4.Runtime.ParserRuleContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
   commentId: M:Antlr4.Runtime.ParserRuleContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
   parent: Antlr4.Runtime.ParserRuleContext
@@ -2530,11 +2530,11 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.EnterRule*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.EnterRule
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.EnterRule*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.SoundContext.EnterRule
   name: EnterRule
   nameWithType: MapGrammarParser.SoundContext.EnterRule
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.EnterRule
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.EnterRule
 - uid: Antlr4.Runtime.Tree.IParseTreeListener
   commentId: T:Antlr4.Runtime.Tree.IParseTreeListener
   parent: Antlr4.Runtime.Tree
@@ -2583,11 +2583,11 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.ExitRule*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.ExitRule
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.ExitRule*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.SoundContext.ExitRule
   name: ExitRule
   nameWithType: MapGrammarParser.SoundContext.ExitRule
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.ExitRule
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.ExitRule
 - uid: Antlr4.Runtime.RuleContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{{TResult}})
   commentId: M:Antlr4.Runtime.RuleContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
   parent: Antlr4.Runtime.RuleContext
@@ -2650,11 +2650,11 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.Accept*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.Accept
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.Accept*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.SoundContext.Accept
   name: Accept
   nameWithType: MapGrammarParser.SoundContext.Accept
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext.Accept
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SoundContext.Accept
 - uid: Antlr4.Runtime.Tree.IParseTreeVisitor{{TResult}}
   commentId: T:Antlr4.Runtime.Tree.IParseTreeVisitor{``0}
   parent: Antlr4.Runtime.Tree

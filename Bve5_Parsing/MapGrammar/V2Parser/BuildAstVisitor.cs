@@ -1,9 +1,10 @@
 ﻿using System;
-using System.Text.RegularExpressions;
 using Antlr4.Runtime.Misc;
-using Bve5_Parsing.MapGrammar.SyntaxDefinitions;
+using Bve5_Parsing.MapGrammar.AstNodes;
+using Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions;
+using static Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarParser;
 
-namespace Bve5_Parsing.MapGrammar.AstNodes
+namespace Bve5_Parsing.MapGrammar.V2Parser
 {
 
     /// <summary>
@@ -18,7 +19,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns>ルートASTノード</returns>
-        public override MapGrammarAstNodes VisitRoot([NotNull] SyntaxDefinitions.MapGrammarParser.RootContext context)
+        public override MapGrammarAstNodes VisitRoot([NotNull] RootContext context)
         {
             var node = new RootNode(context.Start, context.Stop);
 
@@ -38,7 +39,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns>距離程ASTノード</returns>
-        public override MapGrammarAstNodes VisitDistState([NotNull] SyntaxDefinitions.MapGrammarParser.DistStateContext context)
+        public override MapGrammarAstNodes VisitDistState([NotNull] DistStateContext context)
         {
             return Visit(context.distance());
         }
@@ -48,7 +49,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns>構文ASTノード</returns>
-        public override MapGrammarAstNodes VisitIncludeState([NotNull] SyntaxDefinitions.MapGrammarParser.IncludeStateContext context)
+        public override MapGrammarAstNodes VisitIncludeState([NotNull] IncludeStateContext context)
         {
             MapGrammarAstNodes node;
             try
@@ -68,7 +69,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns>構文ASTノード</returns>
-        public override MapGrammarAstNodes VisitCurveState([NotNull] SyntaxDefinitions.MapGrammarParser.CurveStateContext context)
+        public override MapGrammarAstNodes VisitCurveState([NotNull] CurveStateContext context)
         {
             MapGrammarAstNodes node;
             try
@@ -88,7 +89,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns>構文ASTノード</returns>
-        public override MapGrammarAstNodes VisitGradientState([NotNull] SyntaxDefinitions.MapGrammarParser.GradientStateContext context)
+        public override MapGrammarAstNodes VisitGradientState([NotNull] GradientStateContext context)
         {
             MapGrammarAstNodes node;
             try
@@ -108,7 +109,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns>構文ASTノード</returns>
-        public override MapGrammarAstNodes VisitTrackState([NotNull] SyntaxDefinitions.MapGrammarParser.TrackStateContext context)
+        public override MapGrammarAstNodes VisitTrackState([NotNull] TrackStateContext context)
         {
             MapGrammarAstNodes node;
             try
@@ -128,7 +129,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns>構文ASTノード</returns>
-        public override MapGrammarAstNodes VisitStructureState([NotNull] SyntaxDefinitions.MapGrammarParser.StructureStateContext context)
+        public override MapGrammarAstNodes VisitStructureState([NotNull] StructureStateContext context)
         {
             MapGrammarAstNodes node;
             try
@@ -148,7 +149,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns>構文ASTノード</returns>
-        public override MapGrammarAstNodes VisitRepeaterState([NotNull] SyntaxDefinitions.MapGrammarParser.RepeaterStateContext context)
+        public override MapGrammarAstNodes VisitRepeaterState([NotNull] RepeaterStateContext context)
         {
             MapGrammarAstNodes node;
             try
@@ -168,7 +169,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns>構文ASTノード</returns>
-        public override MapGrammarAstNodes VisitBackgroundState([NotNull] SyntaxDefinitions.MapGrammarParser.BackgroundStateContext context)
+        public override MapGrammarAstNodes VisitBackgroundState([NotNull] BackgroundStateContext context)
         {
             MapGrammarAstNodes node;
             try
@@ -188,7 +189,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns>構文ASTノード</returns>
-        public override MapGrammarAstNodes VisitStationState([NotNull] SyntaxDefinitions.MapGrammarParser.StationStateContext context)
+        public override MapGrammarAstNodes VisitStationState([NotNull] StationStateContext context)
         {
             MapGrammarAstNodes node;
             try
@@ -208,7 +209,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns>構文ASTノード</returns>
-        public override MapGrammarAstNodes VisitSectionState([NotNull] SyntaxDefinitions.MapGrammarParser.SectionStateContext context)
+        public override MapGrammarAstNodes VisitSectionState([NotNull] SectionStateContext context)
         {
             MapGrammarAstNodes node;
             try
@@ -228,7 +229,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns>構文ASTノード</returns>
-        public override MapGrammarAstNodes VisitSignalState([NotNull] SyntaxDefinitions.MapGrammarParser.SignalStateContext context)
+        public override MapGrammarAstNodes VisitSignalState([NotNull] SignalStateContext context)
         {
             MapGrammarAstNodes node;
             try
@@ -248,7 +249,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns>構文ASTノード</returns>
-        public override MapGrammarAstNodes VisitBeaconState([NotNull] SyntaxDefinitions.MapGrammarParser.BeaconStateContext context)
+        public override MapGrammarAstNodes VisitBeaconState([NotNull] BeaconStateContext context)
         {
             MapGrammarAstNodes node;
             try
@@ -268,7 +269,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns>構文ASTノード</returns>
-        public override MapGrammarAstNodes VisitSpeedlimitState([NotNull] SyntaxDefinitions.MapGrammarParser.SpeedlimitStateContext context)
+        public override MapGrammarAstNodes VisitSpeedlimitState([NotNull] SpeedlimitStateContext context)
         {
             MapGrammarAstNodes node;
             try
@@ -288,7 +289,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns>構文ASTノード</returns>
-        public override MapGrammarAstNodes VisitPretrainState([NotNull] SyntaxDefinitions.MapGrammarParser.PretrainStateContext context)
+        public override MapGrammarAstNodes VisitPretrainState([NotNull] PretrainStateContext context)
         {
             MapGrammarAstNodes node;
             try
@@ -308,7 +309,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns>構文ASTノード</returns>
-        public override MapGrammarAstNodes VisitLightState([NotNull] SyntaxDefinitions.MapGrammarParser.LightStateContext context)
+        public override MapGrammarAstNodes VisitLightState([NotNull] LightStateContext context)
         {
             MapGrammarAstNodes node;
             try
@@ -328,7 +329,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns>構文ASTノード</returns>
-        public override MapGrammarAstNodes VisitFogState([NotNull] SyntaxDefinitions.MapGrammarParser.FogStateContext context)
+        public override MapGrammarAstNodes VisitFogState([NotNull] FogStateContext context)
         {
             MapGrammarAstNodes node;
             try
@@ -348,7 +349,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns>構文ASTノード</returns>
-        public override MapGrammarAstNodes VisitDrawdistanceState([NotNull] SyntaxDefinitions.MapGrammarParser.DrawdistanceStateContext context)
+        public override MapGrammarAstNodes VisitDrawdistanceState([NotNull] DrawdistanceStateContext context)
         {
             MapGrammarAstNodes node;
             try
@@ -368,7 +369,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns>構文ASTノード</returns>
-        public override MapGrammarAstNodes VisitCabilluminanceState([NotNull] SyntaxDefinitions.MapGrammarParser.CabilluminanceStateContext context)
+        public override MapGrammarAstNodes VisitCabilluminanceState([NotNull] CabilluminanceStateContext context)
         {
             MapGrammarAstNodes node;
             try
@@ -388,7 +389,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns>構文ASTノード</returns>
-        public override MapGrammarAstNodes VisitIrregularityState([NotNull] SyntaxDefinitions.MapGrammarParser.IrregularityStateContext context)
+        public override MapGrammarAstNodes VisitIrregularityState([NotNull] IrregularityStateContext context)
         {
             MapGrammarAstNodes node;
             try
@@ -408,7 +409,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns>構文ASTノード</returns>
-        public override MapGrammarAstNodes VisitAdhesionState([NotNull] SyntaxDefinitions.MapGrammarParser.AdhesionStateContext context)
+        public override MapGrammarAstNodes VisitAdhesionState([NotNull] AdhesionStateContext context)
         {
             MapGrammarAstNodes node;
             try
@@ -428,7 +429,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns>構文ASTノード</returns>
-        public override MapGrammarAstNodes VisitSoundState([NotNull] SyntaxDefinitions.MapGrammarParser.SoundStateContext context)
+        public override MapGrammarAstNodes VisitSoundState([NotNull] SoundStateContext context)
         {
             MapGrammarAstNodes node;
             try
@@ -448,7 +449,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns>構文ASTノード</returns>
-        public override MapGrammarAstNodes VisitSound3dState([NotNull] SyntaxDefinitions.MapGrammarParser.Sound3dStateContext context)
+        public override MapGrammarAstNodes VisitSound3dState([NotNull] Sound3dStateContext context)
         {
             MapGrammarAstNodes node;
             try
@@ -468,7 +469,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns>構文ASTノード</returns>
-        public override MapGrammarAstNodes VisitRollingnoiseState([NotNull] SyntaxDefinitions.MapGrammarParser.RollingnoiseStateContext context)
+        public override MapGrammarAstNodes VisitRollingnoiseState([NotNull] RollingnoiseStateContext context)
         {
             MapGrammarAstNodes node;
             try
@@ -488,7 +489,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns>構文ASTノード</returns>
-        public override MapGrammarAstNodes VisitFlangenoiseState([NotNull] SyntaxDefinitions.MapGrammarParser.FlangenoiseStateContext context)
+        public override MapGrammarAstNodes VisitFlangenoiseState([NotNull] FlangenoiseStateContext context)
         {
             MapGrammarAstNodes node;
             try
@@ -508,7 +509,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns>構文ASTノード</returns>
-        public override MapGrammarAstNodes VisitJointnoiseState([NotNull] SyntaxDefinitions.MapGrammarParser.JointnoiseStateContext context)
+        public override MapGrammarAstNodes VisitJointnoiseState([NotNull] JointnoiseStateContext context)
         {
             MapGrammarAstNodes node;
             try
@@ -528,7 +529,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns>構文ASTノード</returns>
-        public override MapGrammarAstNodes VisitTrainState([NotNull] SyntaxDefinitions.MapGrammarParser.TrainStateContext context)
+        public override MapGrammarAstNodes VisitTrainState([NotNull] TrainStateContext context)
         {
             MapGrammarAstNodes node;
             try
@@ -548,7 +549,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns>変数宣言ASTノード</returns>
-        public override MapGrammarAstNodes VisitVarAssignState([NotNull] SyntaxDefinitions.MapGrammarParser.VarAssignStateContext context)
+        public override MapGrammarAstNodes VisitVarAssignState([NotNull] VarAssignStateContext context)
         {
             return base.Visit(context.varAssign());
         }
@@ -558,7 +559,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns>構文ASTノード</returns>
-        public override MapGrammarAstNodes VisitLegacyState([NotNull] SyntaxDefinitions.MapGrammarParser.LegacyStateContext context)
+        public override MapGrammarAstNodes VisitLegacyState([NotNull] LegacyStateContext context)
         {
             MapGrammarAstNodes node;
             try
@@ -581,7 +582,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns>距離程ASTノード</returns>
-        public override MapGrammarAstNodes VisitDistance([NotNull] SyntaxDefinitions.MapGrammarParser.DistanceContext context)
+        public override MapGrammarAstNodes VisitDistance([NotNull] DistanceContext context)
         {
             DistanceNode node = new DistanceNode(context.Start, context.Stop)
             {
@@ -590,7 +591,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
             return node;
         }
 
-        public override MapGrammarAstNodes VisitInclude([NotNull] SyntaxDefinitions.MapGrammarParser.IncludeContext context)
+        public override MapGrammarAstNodes VisitInclude([NotNull] IncludeContext context)
         {
             return new IncludeNode(context.Start, context.Stop)
             {
@@ -603,7 +604,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns>構文ASTノード</returns>
-        public override MapGrammarAstNodes VisitCurve([NotNull] SyntaxDefinitions.MapGrammarParser.CurveContext context)
+        public override MapGrammarAstNodes VisitCurve([NotNull] CurveContext context)
         {
             return SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Curve, context.func.Text);
         }
@@ -613,7 +614,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns>構文ASTノード</returns>
-        public override MapGrammarAstNodes VisitGradient([NotNull] SyntaxDefinitions.MapGrammarParser.GradientContext context)
+        public override MapGrammarAstNodes VisitGradient([NotNull] GradientContext context)
         {
             return SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Gradient, context.func.Text);
         }
@@ -623,7 +624,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns>構文ASTノード</returns>
-        public override MapGrammarAstNodes VisitTrack([NotNull] SyntaxDefinitions.MapGrammarParser.TrackContext context)
+        public override MapGrammarAstNodes VisitTrack([NotNull] TrackContext context)
         {
             return SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Track, context.func.Text, context.element?.Text);
         }
@@ -633,7 +634,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns>構文ASTノード</returns>
-        public override MapGrammarAstNodes VisitStructure([NotNull] SyntaxDefinitions.MapGrammarParser.StructureContext context)
+        public override MapGrammarAstNodes VisitStructure([NotNull] StructureContext context)
         {
             return SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Structure, context.func.Text);
         }
@@ -643,7 +644,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns>構文ASTノード</returns>
-        public override MapGrammarAstNodes VisitRepeater([NotNull] SyntaxDefinitions.MapGrammarParser.RepeaterContext context)
+        public override MapGrammarAstNodes VisitRepeater([NotNull] RepeaterContext context)
         {
             var node = SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Repeater, context.func.Text);
 
@@ -676,7 +677,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns>構文ASTノード</returns>
-        public override MapGrammarAstNodes VisitBackground([NotNull] SyntaxDefinitions.MapGrammarParser.BackgroundContext context)
+        public override MapGrammarAstNodes VisitBackground([NotNull] BackgroundContext context)
         {
             return SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Background, context.func.Text);
         }
@@ -686,7 +687,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns>構文ASTノード</returns>
-        public override MapGrammarAstNodes VisitStation([NotNull] SyntaxDefinitions.MapGrammarParser.StationContext context)
+        public override MapGrammarAstNodes VisitStation([NotNull] StationContext context)
         {
             return SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Station, context.func.Text);
         }
@@ -696,7 +697,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns>構文ASTノード</returns>
-        public override MapGrammarAstNodes VisitSection([NotNull] SyntaxDefinitions.MapGrammarParser.SectionContext context)
+        public override MapGrammarAstNodes VisitSection([NotNull] SectionContext context)
         {
             var node = SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Section, context.func.Text);
 
@@ -731,7 +732,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns>構文ASTノード</returns>
-        public override MapGrammarAstNodes VisitSignal([NotNull] SyntaxDefinitions.MapGrammarParser.SignalContext context)
+        public override MapGrammarAstNodes VisitSignal([NotNull] SignalContext context)
         {
             var node = SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Signal, context.func.Text);
 
@@ -755,7 +756,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns>構文ASTノード</returns>
-        public override MapGrammarAstNodes VisitBeacon([NotNull] SyntaxDefinitions.MapGrammarParser.BeaconContext context)
+        public override MapGrammarAstNodes VisitBeacon([NotNull] BeaconContext context)
         {
             return SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Beacon, context.func.Text);
         }
@@ -765,7 +766,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns>構文ASTノード</returns>
-        public override MapGrammarAstNodes VisitSpeedlimit([NotNull] SyntaxDefinitions.MapGrammarParser.SpeedlimitContext context)
+        public override MapGrammarAstNodes VisitSpeedlimit([NotNull] SpeedlimitContext context)
         {
             return SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Speedlimit, context.func.Text);
         }
@@ -775,7 +776,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns>構文ASTノード</returns>
-        public override MapGrammarAstNodes VisitPretrain([NotNull] SyntaxDefinitions.MapGrammarParser.PretrainContext context)
+        public override MapGrammarAstNodes VisitPretrain([NotNull] PretrainContext context)
         {
             var node = new PretrainPassNode(context.start, context.stop);
             // Pretrain.Pass構文の引数がTimeかSecondかの判定は評価時に行う
@@ -790,7 +791,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns>構文ASTノード</returns>
-        public override MapGrammarAstNodes VisitLight([NotNull] SyntaxDefinitions.MapGrammarParser.LightContext context)
+        public override MapGrammarAstNodes VisitLight([NotNull] LightContext context)
         {
             return SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Light, context.func.Text);
         }
@@ -800,7 +801,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns>構文ASTノード</returns>
-        public override MapGrammarAstNodes VisitFog([NotNull] SyntaxDefinitions.MapGrammarParser.FogContext context)
+        public override MapGrammarAstNodes VisitFog([NotNull] FogContext context)
         {
             return SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Fog, context.func.Text);
         }
@@ -810,7 +811,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns>構文ASTノード</returns>
-        public override MapGrammarAstNodes VisitDrawdistance([NotNull] SyntaxDefinitions.MapGrammarParser.DrawdistanceContext context)
+        public override MapGrammarAstNodes VisitDrawdistance([NotNull] DrawdistanceContext context)
         {
             return SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Drawdistance, context.func.Text);
         }
@@ -820,7 +821,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns>構文ASTノード</returns>
-        public override MapGrammarAstNodes VisitCabilluminance([NotNull] SyntaxDefinitions.MapGrammarParser.CabilluminanceContext context)
+        public override MapGrammarAstNodes VisitCabilluminance([NotNull] CabilluminanceContext context)
         {
             return SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Cabilluminance, context.func.Text);
         }
@@ -830,7 +831,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns>構文ASTノード</returns>
-        public override MapGrammarAstNodes VisitIrregularity([NotNull] SyntaxDefinitions.MapGrammarParser.IrregularityContext context)
+        public override MapGrammarAstNodes VisitIrregularity([NotNull] IrregularityContext context)
         {
             return SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Irregularity, context.func.Text);
         }
@@ -840,7 +841,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns>構文ASTノード</returns>
-        public override MapGrammarAstNodes VisitAdhesion([NotNull] SyntaxDefinitions.MapGrammarParser.AdhesionContext context)
+        public override MapGrammarAstNodes VisitAdhesion([NotNull] AdhesionContext context)
         {
             return SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Adhesion, context.func.Text);
         }
@@ -850,7 +851,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns>構文ASTノード</returns>
-        public override MapGrammarAstNodes VisitSound([NotNull] SyntaxDefinitions.MapGrammarParser.SoundContext context)
+        public override MapGrammarAstNodes VisitSound([NotNull] SoundContext context)
         {
             return SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Sound, context.func.Text);
         }
@@ -860,7 +861,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns>構文ASTノード</returns>
-        public override MapGrammarAstNodes VisitSound3d([NotNull] SyntaxDefinitions.MapGrammarParser.Sound3dContext context)
+        public override MapGrammarAstNodes VisitSound3d([NotNull] Sound3dContext context)
         {
             return SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Sound3d, context.func.Text);
         }
@@ -870,7 +871,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns>構文ASTノード</returns>
-        public override MapGrammarAstNodes VisitRollingnoise([NotNull] SyntaxDefinitions.MapGrammarParser.RollingnoiseContext context)
+        public override MapGrammarAstNodes VisitRollingnoise([NotNull] RollingnoiseContext context)
         {
             return SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Rollingnoise, context.func.Text);
         }
@@ -880,7 +881,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns>構文ASTノード</returns>
-        public override MapGrammarAstNodes VisitFlangenoise([NotNull] SyntaxDefinitions.MapGrammarParser.FlangenoiseContext context)
+        public override MapGrammarAstNodes VisitFlangenoise([NotNull] FlangenoiseContext context)
         {
             return SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Flangenoise, context.func.Text);
         }
@@ -890,7 +891,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns>構文ASTノード</returns>
-        public override MapGrammarAstNodes VisitJointnoise([NotNull] SyntaxDefinitions.MapGrammarParser.JointnoiseContext context)
+        public override MapGrammarAstNodes VisitJointnoise([NotNull] JointnoiseContext context)
         {
             return SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Jointnoise, context.func.Text);
         }
@@ -900,7 +901,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context"></param>
         /// <returns>構文ASTノード</returns>
-        public override MapGrammarAstNodes VisitTrain([NotNull] SyntaxDefinitions.MapGrammarParser.TrainContext context)
+        public override MapGrammarAstNodes VisitTrain([NotNull] TrainContext context)
         {
             var funcName = context.func.Text;
             if (funcName.ToLower() == MapFunctionName.Enable.GetStringValue().ToLower())
@@ -922,7 +923,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns>構文ASTノード</returns>
-        public override MapGrammarAstNodes VisitLegacy([NotNull] SyntaxDefinitions.MapGrammarParser.LegacyContext context)
+        public override MapGrammarAstNodes VisitLegacy([NotNull] LegacyContext context)
         {
             return SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Legacy, context.func.Text);
         }
@@ -933,7 +934,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns></returns>
-        public override MapGrammarAstNodes VisitStrkey([NotNull] SyntaxDefinitions.MapGrammarParser.StrkeyContext context)
+        public override MapGrammarAstNodes VisitStrkey([NotNull] StrkeyContext context)
         {
             return Visit(context.key);
         }
@@ -945,7 +946,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns></returns>
-        public override MapGrammarAstNodes VisitVarAssign([NotNull] SyntaxDefinitions.MapGrammarParser.VarAssignContext context)
+        public override MapGrammarAstNodes VisitVarAssign([NotNull] VarAssignContext context)
         {
 
             return new VarAssignNode(context.Start, context.Stop)
@@ -960,7 +961,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns></returns>
-        public override MapGrammarAstNodes VisitExprArgs([NotNull] SyntaxDefinitions.MapGrammarParser.ExprArgsContext context)
+        public override MapGrammarAstNodes VisitExprArgs([NotNull] ExprArgsContext context)
         {
             return Visit(context.nullableExpr());
         }
@@ -970,7 +971,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns></returns>
-        public override MapGrammarAstNodes VisitNullableExpr([NotNull] SyntaxDefinitions.MapGrammarParser.NullableExprContext context)
+        public override MapGrammarAstNodes VisitNullableExpr([NotNull] NullableExprContext context)
         {
             if (context.ChildCount == 0 || context.nullSyntax != null)                       /* null */
                 //return new NumberNode { Value = 0 };
@@ -984,7 +985,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns></returns>
-        public override MapGrammarAstNodes VisitParensExpr([NotNull] SyntaxDefinitions.MapGrammarParser.ParensExprContext context)
+        public override MapGrammarAstNodes VisitParensExpr([NotNull] ParensExprContext context)
         {
             return base.Visit(context.expr());
         }
@@ -994,7 +995,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns></returns>
-        public override MapGrammarAstNodes VisitUnaryExpr([NotNull] SyntaxDefinitions.MapGrammarParser.UnaryExprContext context)
+        public override MapGrammarAstNodes VisitUnaryExpr([NotNull] UnaryExprContext context)
         {
             switch (context.op.Type)
             {
@@ -1012,7 +1013,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns></returns>
-        public override MapGrammarAstNodes VisitInfixExpr([NotNull] SyntaxDefinitions.MapGrammarParser.InfixExprContext context)
+        public override MapGrammarAstNodes VisitInfixExpr([NotNull] InfixExprContext context)
         {
             InfixExpressionNode node;
 
@@ -1048,7 +1049,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns></returns>
-        public override MapGrammarAstNodes VisitAbsExpr([NotNull] SyntaxDefinitions.MapGrammarParser.AbsExprContext context)
+        public override MapGrammarAstNodes VisitAbsExpr([NotNull] AbsExprContext context)
         {
             return new AbsNode(context.Start, context.Stop) { Value = Visit(context.value) };
         }
@@ -1058,7 +1059,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns></returns>
-        public override MapGrammarAstNodes VisitAtan2Expr([NotNull] SyntaxDefinitions.MapGrammarParser.Atan2ExprContext context)
+        public override MapGrammarAstNodes VisitAtan2Expr([NotNull] Atan2ExprContext context)
         {
             return new Atan2Node(context.Start, context.Stop) { Y = Visit(context.y), X = Visit(context.x) };
         }
@@ -1068,7 +1069,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns></returns>
-        public override MapGrammarAstNodes VisitCeilExpr([NotNull] SyntaxDefinitions.MapGrammarParser.CeilExprContext context)
+        public override MapGrammarAstNodes VisitCeilExpr([NotNull] CeilExprContext context)
         {
             return new CeilNode(context.Start, context.Stop) { Value = Visit(context.value) };
         }
@@ -1078,7 +1079,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns></returns>
-        public override MapGrammarAstNodes VisitCosExpr([NotNull] SyntaxDefinitions.MapGrammarParser.CosExprContext context)
+        public override MapGrammarAstNodes VisitCosExpr([NotNull] CosExprContext context)
         {
             return new CosNode(context.Start, context.Stop) { Value = Visit(context.value) };
         }
@@ -1088,7 +1089,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns></returns>
-        public override MapGrammarAstNodes VisitExpExpr([NotNull] SyntaxDefinitions.MapGrammarParser.ExpExprContext context)
+        public override MapGrammarAstNodes VisitExpExpr([NotNull] ExpExprContext context)
         {
             return new ExpNode(context.Start, context.Stop) { Value = Visit(context.value) };
         }
@@ -1098,7 +1099,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns></returns>
-        public override MapGrammarAstNodes VisitFloorExpr([NotNull] SyntaxDefinitions.MapGrammarParser.FloorExprContext context)
+        public override MapGrammarAstNodes VisitFloorExpr([NotNull] FloorExprContext context)
         {
             return new FloorNode(context.Start, context.Stop) { Value = Visit(context.value) };
         }
@@ -1108,7 +1109,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns></returns>
-        public override MapGrammarAstNodes VisitLogExpr([NotNull] SyntaxDefinitions.MapGrammarParser.LogExprContext context)
+        public override MapGrammarAstNodes VisitLogExpr([NotNull] LogExprContext context)
         {
             return new LogNode(context.Start, context.Stop) { Value = Visit(context.value) };
         }
@@ -1118,7 +1119,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns></returns>
-        public override MapGrammarAstNodes VisitPowExpr([NotNull] SyntaxDefinitions.MapGrammarParser.PowExprContext context)
+        public override MapGrammarAstNodes VisitPowExpr([NotNull] PowExprContext context)
         {
             return new Atan2Node(context.Start, context.Stop) { X = Visit(context.x), Y = Visit(context.y) };
         }
@@ -1128,7 +1129,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns></returns>
-        public override MapGrammarAstNodes VisitRandExpr([NotNull] SyntaxDefinitions.MapGrammarParser.RandExprContext context)
+        public override MapGrammarAstNodes VisitRandExpr([NotNull] RandExprContext context)
         {
             RandNode node = new RandNode(context.Start, context.Stop);
             if (context.value != null)
@@ -1142,7 +1143,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns></returns>
-        public override MapGrammarAstNodes VisitSinExpr([NotNull] SyntaxDefinitions.MapGrammarParser.SinExprContext context)
+        public override MapGrammarAstNodes VisitSinExpr([NotNull] SinExprContext context)
         {
             return new SinNode(context.Start, context.Stop) { Value = Visit(context.value) };
         }
@@ -1152,7 +1153,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns></returns>
-        public override MapGrammarAstNodes VisitSqrtExpr([NotNull] SyntaxDefinitions.MapGrammarParser.SqrtExprContext context)
+        public override MapGrammarAstNodes VisitSqrtExpr([NotNull] SqrtExprContext context)
         {
             return new SqrtNode(context.Start, context.Stop) { Value = Visit(context.value) };
         }
@@ -1162,7 +1163,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns></returns>
-        public override MapGrammarAstNodes VisitNumberExpr([NotNull] SyntaxDefinitions.MapGrammarParser.NumberExprContext context)
+        public override MapGrammarAstNodes VisitNumberExpr([NotNull] NumberExprContext context)
         {
             return new NumberNode(context.Start, context.Stop) { Value = context.num };
         }
@@ -1172,7 +1173,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns></returns>
-        public override MapGrammarAstNodes VisitDistanceExpr([NotNull] SyntaxDefinitions.MapGrammarParser.DistanceExprContext context)
+        public override MapGrammarAstNodes VisitDistanceExpr([NotNull] DistanceExprContext context)
         {
             return new DistanceVariableNode(context.Start, context.Stop);
         }
@@ -1182,7 +1183,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns></returns>
-        public override MapGrammarAstNodes VisitStringExpr([NotNull] SyntaxDefinitions.MapGrammarParser.StringExprContext context)
+        public override MapGrammarAstNodes VisitStringExpr([NotNull] StringExprContext context)
         {
             return new StringNode(context.Start, context.Stop) { Value = context.str };
         }
@@ -1192,14 +1193,14 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns></returns>
-        public override MapGrammarAstNodes VisitVarExpr([NotNull] SyntaxDefinitions.MapGrammarParser.VarExprContext context)
+        public override MapGrammarAstNodes VisitVarExpr([NotNull] VarExprContext context)
         {
             return new VarNode(context.Start, context.Stop) { Key = context.v.varName };
         }
 
         #endregion 数式と変数Visitors
 
-        public override MapGrammarAstNodes VisitString([NotNull] SyntaxDefinitions.MapGrammarParser.StringContext context)
+        public override MapGrammarAstNodes VisitString([NotNull] StringContext context)
         {
             return new StringNode(context.Start, context.Stop) { Value = context };
         }

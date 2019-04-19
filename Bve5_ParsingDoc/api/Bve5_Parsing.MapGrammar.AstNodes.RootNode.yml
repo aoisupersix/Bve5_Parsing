@@ -152,7 +152,7 @@ items:
     content: public MapGrammarParser.EncodingContext Encoding { get; set; }
     parameters: []
     return:
-      type: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.EncodingContext
+      type: Bve5_Parsing.MapGrammar.V2Parser.EncodingContext
     content.vb: Public Property Encoding As MapGrammarParser.EncodingContext
   overload: Bve5_Parsing.MapGrammar.AstNodes.RootNode.Encoding*
   modifiers.csharp:
@@ -705,17 +705,17 @@ references:
   name: Encoding
   nameWithType: RootNode.Encoding
   fullName: Bve5_Parsing.MapGrammar.AstNodes.RootNode.Encoding
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.EncodingContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.EncodingContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+- uid: Bve5_Parsing.MapGrammar.V2Parser.EncodingContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.EncodingContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.EncodingContext
   nameWithType: MapGrammarParser.EncodingContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.EncodingContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions
-  commentId: N:Bve5_Parsing.MapGrammar.SyntaxDefinitions
-  name: Bve5_Parsing.MapGrammar.SyntaxDefinitions
-  nameWithType: Bve5_Parsing.MapGrammar.SyntaxDefinitions
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.EncodingContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
+  commentId: N:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
+  name: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
+  nameWithType: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
 - uid: Bve5_Parsing.MapGrammar.AstNodes.RootNode.#ctor*
   commentId: Overload:Bve5_Parsing.MapGrammar.AstNodes.RootNode.#ctor
   name: RootNode

@@ -31,11 +31,11 @@ Bve5.7構文のパーサライブラリです。</Description>
   </ItemGroup>
 
   <ItemGroup>
-    <Antlr4 Update="MapGrammar\ANTLR_SyntaxDefinitions\MapGrammarLexer.g4">
-      <CustomToolNamespace>Bve5_Parsing.MapGrammar.SyntaxDefinitions</CustomToolNamespace>
+    <Antlr4 Update="MapGrammar\V2Parser\ANTLR_SyntaxDefinitions\MapGrammarLexer.g4">
+      <CustomToolNamespace>Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions</CustomToolNamespace>
     </Antlr4>
-    <Antlr4 Update="MapGrammar\ANTLR_SyntaxDefinitions\MapGrammarParser.g4">
-      <CustomToolNamespace>Bve5_Parsing.MapGrammar.SyntaxDefinitions</CustomToolNamespace>
+    <Antlr4 Update="MapGrammar\V2Parser\ANTLR_SyntaxDefinitions\MapGrammarParser.g4">
+      <CustomToolNamespace>Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions</CustomToolNamespace>
     </Antlr4>
     <Antlr4 Update="ScenarioGrammar\ANTLR_SyntaxDefinitions\ScenarioGrammarLexer.g4">
       <CustomToolNamespace>Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions</CustomToolNamespace>

@@ -1,6 +1,6 @@
 ﻿using Antlr4.Runtime;
 using Antlr4.Runtime.Misc;
-using Bve5_Parsing.MapGrammar.SyntaxDefinitions;
+using Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions;
 
 namespace Bve5_Parsing.MapGrammar
 {

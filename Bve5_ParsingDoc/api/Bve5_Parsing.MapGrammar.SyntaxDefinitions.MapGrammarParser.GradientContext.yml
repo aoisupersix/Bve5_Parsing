@@ -1,34 +1,34 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.GradientContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.GradientContext
   id: MapGrammarParser.GradientContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   children:
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.#ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.BEGIN
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.BEGIN_CONST
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.BEGIN_TRANSITION
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.CLS_PAR
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.DOT
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.END
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.expr
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.func
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.gradientArgs
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.gradientArgsE
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.INTERPOLATE
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.nullableExpr
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.OPN_PAR
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.RuleIndex
+  - Bve5_Parsing.MapGrammar.V2Parser.GradientContext.#ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)
+  - Bve5_Parsing.MapGrammar.V2Parser.GradientContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
+  - Bve5_Parsing.MapGrammar.V2Parser.GradientContext.BEGIN
+  - Bve5_Parsing.MapGrammar.V2Parser.GradientContext.BEGIN_CONST
+  - Bve5_Parsing.MapGrammar.V2Parser.GradientContext.BEGIN_TRANSITION
+  - Bve5_Parsing.MapGrammar.V2Parser.GradientContext.CLS_PAR
+  - Bve5_Parsing.MapGrammar.V2Parser.GradientContext.DOT
+  - Bve5_Parsing.MapGrammar.V2Parser.GradientContext.END
+  - Bve5_Parsing.MapGrammar.V2Parser.GradientContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
+  - Bve5_Parsing.MapGrammar.V2Parser.GradientContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
+  - Bve5_Parsing.MapGrammar.V2Parser.GradientContext.expr
+  - Bve5_Parsing.MapGrammar.V2Parser.GradientContext.func
+  - Bve5_Parsing.MapGrammar.V2Parser.GradientContext.gradientArgs
+  - Bve5_Parsing.MapGrammar.V2Parser.GradientContext.gradientArgsE
+  - Bve5_Parsing.MapGrammar.V2Parser.GradientContext.INTERPOLATE
+  - Bve5_Parsing.MapGrammar.V2Parser.GradientContext.nullableExpr
+  - Bve5_Parsing.MapGrammar.V2Parser.GradientContext.OPN_PAR
+  - Bve5_Parsing.MapGrammar.V2Parser.GradientContext.RuleIndex
   langs:
   - csharp
   - vb
   name: MapGrammarParser.GradientContext
   nameWithType: MapGrammarParser.GradientContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.GradientContext
   type: Class
   source:
     remote:
@@ -40,7 +40,7 @@ items:
     startLine: 1380
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: 'public class GradientContext : ParserRuleContext, IRuleNode, IParseTree, ISyntaxTree, ITree'
     content.vb: >-
@@ -117,16 +117,16 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.func
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.func
+- uid: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.func
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.GradientContext.func
   id: func
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.GradientContext
   langs:
   - csharp
   - vb
   name: func
   nameWithType: MapGrammarParser.GradientContext.func
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.func
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.func
   type: Field
   source:
     remote:
@@ -138,7 +138,7 @@ items:
     startLine: 1381
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public IToken func
     return:
@@ -148,16 +148,16 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.gradientArgs
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.gradientArgs
+- uid: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.gradientArgs
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.GradientContext.gradientArgs
   id: gradientArgs
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.GradientContext
   langs:
   - csharp
   - vb
   name: gradientArgs
   nameWithType: MapGrammarParser.GradientContext.gradientArgs
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.gradientArgs
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.gradientArgs
   type: Field
   source:
     remote:
@@ -169,26 +169,26 @@ items:
     startLine: 1382
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public MapGrammarParser.NullableExprContext gradientArgs
     return:
-      type: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.NullableExprContext
+      type: Bve5_Parsing.MapGrammar.V2Parser.NullableExprContext
     content.vb: Public gradientArgs As MapGrammarParser.NullableExprContext
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.gradientArgsE
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.gradientArgsE
+- uid: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.gradientArgsE
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.GradientContext.gradientArgsE
   id: gradientArgsE
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.GradientContext
   langs:
   - csharp
   - vb
   name: gradientArgsE
   nameWithType: MapGrammarParser.GradientContext.gradientArgsE
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.gradientArgsE
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.gradientArgsE
   type: Field
   source:
     remote:
@@ -200,26 +200,26 @@ items:
     startLine: 1383
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public MapGrammarParser.ExprContext gradientArgsE
     return:
-      type: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext
+      type: Bve5_Parsing.MapGrammar.V2Parser.ExprContext
     content.vb: Public gradientArgsE As MapGrammarParser.ExprContext
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.DOT
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.DOT
+- uid: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.DOT
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.GradientContext.DOT
   id: DOT
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.GradientContext
   langs:
   - csharp
   - vb
   name: DOT()
   nameWithType: MapGrammarParser.GradientContext.DOT()
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.DOT()
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.DOT()
   type: Method
   source:
     remote:
@@ -231,27 +231,27 @@ items:
     startLine: 1384
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public ITerminalNode DOT()
     return:
       type: Antlr4.Runtime.Tree.ITerminalNode
     content.vb: Public Function DOT As ITerminalNode
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.DOT*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.DOT*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.OPN_PAR
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.OPN_PAR
+- uid: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.OPN_PAR
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.GradientContext.OPN_PAR
   id: OPN_PAR
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.GradientContext
   langs:
   - csharp
   - vb
   name: OPN_PAR()
   nameWithType: MapGrammarParser.GradientContext.OPN_PAR()
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.OPN_PAR()
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.OPN_PAR()
   type: Method
   source:
     remote:
@@ -263,27 +263,27 @@ items:
     startLine: 1385
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public ITerminalNode OPN_PAR()
     return:
       type: Antlr4.Runtime.Tree.ITerminalNode
     content.vb: Public Function OPN_PAR As ITerminalNode
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.OPN_PAR*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.OPN_PAR*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.CLS_PAR
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.CLS_PAR
+- uid: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.CLS_PAR
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.GradientContext.CLS_PAR
   id: CLS_PAR
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.GradientContext
   langs:
   - csharp
   - vb
   name: CLS_PAR()
   nameWithType: MapGrammarParser.GradientContext.CLS_PAR()
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.CLS_PAR()
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.CLS_PAR()
   type: Method
   source:
     remote:
@@ -295,27 +295,27 @@ items:
     startLine: 1386
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public ITerminalNode CLS_PAR()
     return:
       type: Antlr4.Runtime.Tree.ITerminalNode
     content.vb: Public Function CLS_PAR As ITerminalNode
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.CLS_PAR*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.CLS_PAR*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.BEGIN_TRANSITION
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.BEGIN_TRANSITION
+- uid: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.BEGIN_TRANSITION
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.GradientContext.BEGIN_TRANSITION
   id: BEGIN_TRANSITION
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.GradientContext
   langs:
   - csharp
   - vb
   name: BEGIN_TRANSITION()
   nameWithType: MapGrammarParser.GradientContext.BEGIN_TRANSITION()
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.BEGIN_TRANSITION()
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.BEGIN_TRANSITION()
   type: Method
   source:
     remote:
@@ -327,27 +327,27 @@ items:
     startLine: 1387
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public ITerminalNode BEGIN_TRANSITION()
     return:
       type: Antlr4.Runtime.Tree.ITerminalNode
     content.vb: Public Function BEGIN_TRANSITION As ITerminalNode
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.BEGIN_TRANSITION*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.BEGIN_TRANSITION*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.nullableExpr
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.nullableExpr
+- uid: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.nullableExpr
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.GradientContext.nullableExpr
   id: nullableExpr
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.GradientContext
   langs:
   - csharp
   - vb
   name: nullableExpr()
   nameWithType: MapGrammarParser.GradientContext.nullableExpr()
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.nullableExpr()
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.nullableExpr()
   type: Method
   source:
     remote:
@@ -359,27 +359,27 @@ items:
     startLine: 1388
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public MapGrammarParser.NullableExprContext nullableExpr()
     return:
-      type: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.NullableExprContext
+      type: Bve5_Parsing.MapGrammar.V2Parser.NullableExprContext
     content.vb: Public Function nullableExpr As MapGrammarParser.NullableExprContext
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.nullableExpr*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.nullableExpr*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.BEGIN
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.BEGIN
+- uid: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.BEGIN
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.GradientContext.BEGIN
   id: BEGIN
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.GradientContext
   langs:
   - csharp
   - vb
   name: BEGIN()
   nameWithType: MapGrammarParser.GradientContext.BEGIN()
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.BEGIN()
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.BEGIN()
   type: Method
   source:
     remote:
@@ -391,27 +391,27 @@ items:
     startLine: 1391
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public ITerminalNode BEGIN()
     return:
       type: Antlr4.Runtime.Tree.ITerminalNode
     content.vb: Public Function BEGIN As ITerminalNode
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.BEGIN*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.BEGIN*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.BEGIN_CONST
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.BEGIN_CONST
+- uid: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.BEGIN_CONST
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.GradientContext.BEGIN_CONST
   id: BEGIN_CONST
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.GradientContext
   langs:
   - csharp
   - vb
   name: BEGIN_CONST()
   nameWithType: MapGrammarParser.GradientContext.BEGIN_CONST()
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.BEGIN_CONST()
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.BEGIN_CONST()
   type: Method
   source:
     remote:
@@ -423,27 +423,27 @@ items:
     startLine: 1392
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public ITerminalNode BEGIN_CONST()
     return:
       type: Antlr4.Runtime.Tree.ITerminalNode
     content.vb: Public Function BEGIN_CONST As ITerminalNode
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.BEGIN_CONST*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.BEGIN_CONST*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.END
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.END
+- uid: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.END
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.GradientContext.END
   id: END
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.GradientContext
   langs:
   - csharp
   - vb
   name: END()
   nameWithType: MapGrammarParser.GradientContext.END()
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.END()
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.END()
   type: Method
   source:
     remote:
@@ -455,27 +455,27 @@ items:
     startLine: 1393
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public ITerminalNode END()
     return:
       type: Antlr4.Runtime.Tree.ITerminalNode
     content.vb: Public Function END As ITerminalNode
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.END*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.END*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.INTERPOLATE
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.INTERPOLATE
+- uid: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.INTERPOLATE
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.GradientContext.INTERPOLATE
   id: INTERPOLATE
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.GradientContext
   langs:
   - csharp
   - vb
   name: INTERPOLATE()
   nameWithType: MapGrammarParser.GradientContext.INTERPOLATE()
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.INTERPOLATE()
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.INTERPOLATE()
   type: Method
   source:
     remote:
@@ -487,27 +487,27 @@ items:
     startLine: 1394
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public ITerminalNode INTERPOLATE()
     return:
       type: Antlr4.Runtime.Tree.ITerminalNode
     content.vb: Public Function INTERPOLATE As ITerminalNode
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.INTERPOLATE*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.INTERPOLATE*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.expr
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.expr
+- uid: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.expr
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.GradientContext.expr
   id: expr
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.GradientContext
   langs:
   - csharp
   - vb
   name: expr()
   nameWithType: MapGrammarParser.GradientContext.expr()
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.expr()
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.expr()
   type: Method
   source:
     remote:
@@ -519,27 +519,27 @@ items:
     startLine: 1395
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public MapGrammarParser.ExprContext expr()
     return:
-      type: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext
+      type: Bve5_Parsing.MapGrammar.V2Parser.ExprContext
     content.vb: Public Function expr As MapGrammarParser.ExprContext
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.expr*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.expr*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.#ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.#ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)
+- uid: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.#ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.GradientContext.#ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)
   id: '#ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)'
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.GradientContext
   langs:
   - csharp
   - vb
   name: GradientContext(ParserRuleContext, Int32)
   nameWithType: MapGrammarParser.GradientContext.GradientContext(ParserRuleContext, Int32)
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.GradientContext(Antlr4.Runtime.ParserRuleContext, System.Int32)
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.GradientContext(Antlr4.Runtime.ParserRuleContext, System.Int32)
   type: Constructor
   source:
     remote:
@@ -551,7 +551,7 @@ items:
     startLine: 1398
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public GradientContext(ParserRuleContext parent, int invokingState)
     parameters:
@@ -560,21 +560,21 @@ items:
     - id: invokingState
       type: System.Int32
     content.vb: Public Sub New(parent As ParserRuleContext, invokingState As Integer)
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.#ctor*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.RuleIndex
-  commentId: P:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.RuleIndex
+- uid: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.RuleIndex
+  commentId: P:Bve5_Parsing.MapGrammar.V2Parser.GradientContext.RuleIndex
   id: RuleIndex
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.GradientContext
   langs:
   - csharp
   - vb
   name: RuleIndex
   nameWithType: MapGrammarParser.GradientContext.RuleIndex
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.RuleIndex
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.RuleIndex
   type: Property
   source:
     remote:
@@ -586,7 +586,7 @@ items:
     startLine: 1402
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public override int RuleIndex { get; }
     parameters: []
@@ -594,7 +594,7 @@ items:
       type: System.Int32
     content.vb: Public Overrides ReadOnly Property RuleIndex As Integer
   overridden: Antlr4.Runtime.RuleContext.RuleIndex
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.RuleIndex*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.RuleIndex*
   modifiers.csharp:
   - public
   - override
@@ -603,16 +603,16 @@ items:
   - Public
   - Overrides
   - ReadOnly
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
+- uid: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.GradientContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
   id: EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.GradientContext
   langs:
   - csharp
   - vb
   name: EnterRule(IParseTreeListener)
   nameWithType: MapGrammarParser.GradientContext.EnterRule(IParseTreeListener)
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
   type: Method
   source:
     remote:
@@ -624,7 +624,7 @@ items:
     startLine: 1403
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public override void EnterRule(IParseTreeListener listener)
     parameters:
@@ -632,23 +632,23 @@ items:
       type: Antlr4.Runtime.Tree.IParseTreeListener
     content.vb: Public Overrides Sub EnterRule(listener As IParseTreeListener)
   overridden: Antlr4.Runtime.ParserRuleContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.EnterRule*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.EnterRule*
   modifiers.csharp:
   - public
   - override
   modifiers.vb:
   - Public
   - Overrides
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
+- uid: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.GradientContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
   id: ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.GradientContext
   langs:
   - csharp
   - vb
   name: ExitRule(IParseTreeListener)
   nameWithType: MapGrammarParser.GradientContext.ExitRule(IParseTreeListener)
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
   type: Method
   source:
     remote:
@@ -660,7 +660,7 @@ items:
     startLine: 1407
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public override void ExitRule(IParseTreeListener listener)
     parameters:
@@ -668,23 +668,23 @@ items:
       type: Antlr4.Runtime.Tree.IParseTreeListener
     content.vb: Public Overrides Sub ExitRule(listener As IParseTreeListener)
   overridden: Antlr4.Runtime.ParserRuleContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.ExitRule*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.ExitRule*
   modifiers.csharp:
   - public
   - override
   modifiers.vb:
   - Public
   - Overrides
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
+- uid: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.GradientContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
   id: Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.GradientContext
   langs:
   - csharp
   - vb
   name: Accept<TResult>(IParseTreeVisitor<TResult>)
   nameWithType: MapGrammarParser.GradientContext.Accept<TResult>(IParseTreeVisitor<TResult>)
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.Accept<TResult>(Antlr4.Runtime.Tree.IParseTreeVisitor<TResult>)
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.Accept<TResult>(Antlr4.Runtime.Tree.IParseTreeVisitor<TResult>)
   type: Method
   source:
     remote:
@@ -696,7 +696,7 @@ items:
     startLine: 1411
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor)
     parameters:
@@ -708,7 +708,7 @@ items:
       type: '{TResult}'
     content.vb: Public Overrides Function Accept(Of TResult)(visitor As IParseTreeVisitor(Of TResult)) As TResult
   overridden: Antlr4.Runtime.RuleContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{{TResult}})
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.Accept*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.Accept*
   nameWithType.vb: MapGrammarParser.GradientContext.Accept(Of TResult)(IParseTreeVisitor(Of TResult))
   modifiers.csharp:
   - public
@@ -716,14 +716,14 @@ items:
   modifiers.vb:
   - Public
   - Overrides
-  fullName.vb: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.Accept(Of TResult)(Antlr4.Runtime.Tree.IParseTreeVisitor(Of TResult))
+  fullName.vb: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.Accept(Of TResult)(Antlr4.Runtime.Tree.IParseTreeVisitor(Of TResult))
   name.vb: Accept(Of TResult)(IParseTreeVisitor(Of TResult))
 references:
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions
-  commentId: N:Bve5_Parsing.MapGrammar.SyntaxDefinitions
-  name: Bve5_Parsing.MapGrammar.SyntaxDefinitions
-  nameWithType: Bve5_Parsing.MapGrammar.SyntaxDefinitions
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
+  commentId: N:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
+  name: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
+  nameWithType: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -2434,23 +2434,23 @@ references:
   name: IToken
   nameWithType: IToken
   fullName: Antlr4.Runtime.IToken
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.NullableExprContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.NullableExprContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+- uid: Bve5_Parsing.MapGrammar.V2Parser.NullableExprContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.NullableExprContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.NullableExprContext
   nameWithType: MapGrammarParser.NullableExprContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.NullableExprContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.NullableExprContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.ExprContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.ExprContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.ExprContext
   nameWithType: MapGrammarParser.ExprContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.DOT*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.DOT
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.ExprContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.DOT*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.GradientContext.DOT
   name: DOT
   nameWithType: MapGrammarParser.GradientContext.DOT
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.DOT
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.DOT
 - uid: Antlr4.Runtime.Tree.ITerminalNode
   commentId: T:Antlr4.Runtime.Tree.ITerminalNode
   parent: Antlr4.Runtime.Tree
@@ -2458,56 +2458,56 @@ references:
   name: ITerminalNode
   nameWithType: ITerminalNode
   fullName: Antlr4.Runtime.Tree.ITerminalNode
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.OPN_PAR*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.OPN_PAR
+- uid: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.OPN_PAR*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.GradientContext.OPN_PAR
   name: OPN_PAR
   nameWithType: MapGrammarParser.GradientContext.OPN_PAR
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.OPN_PAR
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.CLS_PAR*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.CLS_PAR
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.OPN_PAR
+- uid: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.CLS_PAR*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.GradientContext.CLS_PAR
   name: CLS_PAR
   nameWithType: MapGrammarParser.GradientContext.CLS_PAR
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.CLS_PAR
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.BEGIN_TRANSITION*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.BEGIN_TRANSITION
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.CLS_PAR
+- uid: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.BEGIN_TRANSITION*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.GradientContext.BEGIN_TRANSITION
   name: BEGIN_TRANSITION
   nameWithType: MapGrammarParser.GradientContext.BEGIN_TRANSITION
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.BEGIN_TRANSITION
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.nullableExpr*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.nullableExpr
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.BEGIN_TRANSITION
+- uid: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.nullableExpr*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.GradientContext.nullableExpr
   name: nullableExpr
   nameWithType: MapGrammarParser.GradientContext.nullableExpr
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.nullableExpr
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.BEGIN*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.BEGIN
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.nullableExpr
+- uid: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.BEGIN*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.GradientContext.BEGIN
   name: BEGIN
   nameWithType: MapGrammarParser.GradientContext.BEGIN
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.BEGIN
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.BEGIN_CONST*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.BEGIN_CONST
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.BEGIN
+- uid: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.BEGIN_CONST*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.GradientContext.BEGIN_CONST
   name: BEGIN_CONST
   nameWithType: MapGrammarParser.GradientContext.BEGIN_CONST
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.BEGIN_CONST
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.END*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.END
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.BEGIN_CONST
+- uid: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.END*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.GradientContext.END
   name: END
   nameWithType: MapGrammarParser.GradientContext.END
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.END
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.INTERPOLATE*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.INTERPOLATE
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.END
+- uid: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.INTERPOLATE*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.GradientContext.INTERPOLATE
   name: INTERPOLATE
   nameWithType: MapGrammarParser.GradientContext.INTERPOLATE
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.INTERPOLATE
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.expr*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.expr
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.INTERPOLATE
+- uid: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.expr*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.GradientContext.expr
   name: expr
   nameWithType: MapGrammarParser.GradientContext.expr
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.expr
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.#ctor*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.#ctor
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.expr
+- uid: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.#ctor*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.GradientContext.#ctor
   name: GradientContext
   nameWithType: MapGrammarParser.GradientContext.GradientContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.GradientContext
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.GradientContext
 - uid: System.Int32
   commentId: T:System.Int32
   parent: System
@@ -2522,11 +2522,11 @@ references:
   name: RuleIndex
   nameWithType: RuleContext.RuleIndex
   fullName: Antlr4.Runtime.RuleContext.RuleIndex
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.RuleIndex*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.RuleIndex
+- uid: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.RuleIndex*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.GradientContext.RuleIndex
   name: RuleIndex
   nameWithType: MapGrammarParser.GradientContext.RuleIndex
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.RuleIndex
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.RuleIndex
 - uid: Antlr4.Runtime.ParserRuleContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
   commentId: M:Antlr4.Runtime.ParserRuleContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
   parent: Antlr4.Runtime.ParserRuleContext
@@ -2568,11 +2568,11 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.EnterRule*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.EnterRule
+- uid: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.EnterRule*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.GradientContext.EnterRule
   name: EnterRule
   nameWithType: MapGrammarParser.GradientContext.EnterRule
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.EnterRule
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.EnterRule
 - uid: Antlr4.Runtime.Tree.IParseTreeListener
   commentId: T:Antlr4.Runtime.Tree.IParseTreeListener
   parent: Antlr4.Runtime.Tree
@@ -2621,11 +2621,11 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.ExitRule*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.ExitRule
+- uid: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.ExitRule*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.GradientContext.ExitRule
   name: ExitRule
   nameWithType: MapGrammarParser.GradientContext.ExitRule
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.ExitRule
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.ExitRule
 - uid: Antlr4.Runtime.RuleContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{{TResult}})
   commentId: M:Antlr4.Runtime.RuleContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
   parent: Antlr4.Runtime.RuleContext
@@ -2688,11 +2688,11 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.Accept*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.Accept
+- uid: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.Accept*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.GradientContext.Accept
   name: Accept
   nameWithType: MapGrammarParser.GradientContext.Accept
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext.Accept
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.GradientContext.Accept
 - uid: Antlr4.Runtime.Tree.IParseTreeVisitor{{TResult}}
   commentId: T:Antlr4.Runtime.Tree.IParseTreeVisitor{``0}
   parent: Antlr4.Runtime.Tree

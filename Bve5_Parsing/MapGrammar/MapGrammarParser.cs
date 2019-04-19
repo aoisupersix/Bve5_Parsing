@@ -1,6 +1,6 @@
 ﻿using Antlr4.Runtime;
 using Bve5_Parsing.MapGrammar.AstNodes;
-using Bve5_Parsing.MapGrammar.SyntaxDefinitions;
+using Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions;
 using Bve5_Parsing.MapGrammar.EvaluateData;
 using System;
 using System.Collections.Generic;
@@ -8,7 +8,8 @@ using System.Collections.ObjectModel;
 using System.IO;
 using System.Text;
 using System.Linq;
-using static Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser;
+using static Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarParser;
+using Bve5_Parsing.MapGrammar.V2Parser;
 
 namespace Bve5_Parsing.MapGrammar
 {
@@ -160,7 +161,7 @@ namespace Bve5_Parsing.MapGrammar
             var inputStream = new AntlrInputStream(input);
             var lexer = new MapGrammarLexer(inputStream);
             var commonTokneStream = new CommonTokenStream(lexer);
-            var parser = new SyntaxDefinitions.MapGrammarParser(commonTokneStream);
+            var parser = new V2Parser.SyntaxDefinitions.MapGrammarParser(commonTokneStream);
 
             parser.AddErrorListener(ErrorListener);
             ErrorListener.Errors.Clear();

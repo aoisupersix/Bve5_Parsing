@@ -1,28 +1,28 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext
   id: MapGrammarParser.RollingnoiseContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   children:
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.#ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.CHANGE
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.CLS_PAR
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.DOT
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.func
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.index
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.nullableExpr
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.OPN_PAR
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.RuleIndex
+  - Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.#ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)
+  - Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
+  - Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.CHANGE
+  - Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.CLS_PAR
+  - Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.DOT
+  - Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
+  - Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
+  - Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.func
+  - Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.index
+  - Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.nullableExpr
+  - Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.OPN_PAR
+  - Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.RuleIndex
   langs:
   - csharp
   - vb
   name: MapGrammarParser.RollingnoiseContext
   nameWithType: MapGrammarParser.RollingnoiseContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext
   type: Class
   source:
     remote:
@@ -34,7 +34,7 @@ items:
     startLine: 3553
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: 'public class RollingnoiseContext : ParserRuleContext, IRuleNode, IParseTree, ISyntaxTree, ITree'
     content.vb: >-
@@ -111,16 +111,16 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.func
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.func
+- uid: Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.func
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.func
   id: func
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext
   langs:
   - csharp
   - vb
   name: func
   nameWithType: MapGrammarParser.RollingnoiseContext.func
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.func
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.func
   type: Field
   source:
     remote:
@@ -132,7 +132,7 @@ items:
     startLine: 3554
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public IToken func
     return:
@@ -142,16 +142,16 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.index
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.index
+- uid: Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.index
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.index
   id: index
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext
   langs:
   - csharp
   - vb
   name: index
   nameWithType: MapGrammarParser.RollingnoiseContext.index
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.index
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.index
   type: Field
   source:
     remote:
@@ -163,26 +163,26 @@ items:
     startLine: 3555
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public MapGrammarParser.NullableExprContext index
     return:
-      type: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.NullableExprContext
+      type: Bve5_Parsing.MapGrammar.V2Parser.NullableExprContext
     content.vb: Public index As MapGrammarParser.NullableExprContext
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.DOT
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.DOT
+- uid: Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.DOT
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.DOT
   id: DOT
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext
   langs:
   - csharp
   - vb
   name: DOT()
   nameWithType: MapGrammarParser.RollingnoiseContext.DOT()
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.DOT()
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.DOT()
   type: Method
   source:
     remote:
@@ -194,27 +194,27 @@ items:
     startLine: 3556
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public ITerminalNode DOT()
     return:
       type: Antlr4.Runtime.Tree.ITerminalNode
     content.vb: Public Function DOT As ITerminalNode
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.DOT*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.DOT*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.OPN_PAR
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.OPN_PAR
+- uid: Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.OPN_PAR
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.OPN_PAR
   id: OPN_PAR
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext
   langs:
   - csharp
   - vb
   name: OPN_PAR()
   nameWithType: MapGrammarParser.RollingnoiseContext.OPN_PAR()
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.OPN_PAR()
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.OPN_PAR()
   type: Method
   source:
     remote:
@@ -226,27 +226,27 @@ items:
     startLine: 3557
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public ITerminalNode OPN_PAR()
     return:
       type: Antlr4.Runtime.Tree.ITerminalNode
     content.vb: Public Function OPN_PAR As ITerminalNode
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.OPN_PAR*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.OPN_PAR*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.CLS_PAR
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.CLS_PAR
+- uid: Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.CLS_PAR
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.CLS_PAR
   id: CLS_PAR
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext
   langs:
   - csharp
   - vb
   name: CLS_PAR()
   nameWithType: MapGrammarParser.RollingnoiseContext.CLS_PAR()
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.CLS_PAR()
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.CLS_PAR()
   type: Method
   source:
     remote:
@@ -258,27 +258,27 @@ items:
     startLine: 3558
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public ITerminalNode CLS_PAR()
     return:
       type: Antlr4.Runtime.Tree.ITerminalNode
     content.vb: Public Function CLS_PAR As ITerminalNode
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.CLS_PAR*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.CLS_PAR*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.CHANGE
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.CHANGE
+- uid: Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.CHANGE
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.CHANGE
   id: CHANGE
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext
   langs:
   - csharp
   - vb
   name: CHANGE()
   nameWithType: MapGrammarParser.RollingnoiseContext.CHANGE()
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.CHANGE()
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.CHANGE()
   type: Method
   source:
     remote:
@@ -290,27 +290,27 @@ items:
     startLine: 3559
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public ITerminalNode CHANGE()
     return:
       type: Antlr4.Runtime.Tree.ITerminalNode
     content.vb: Public Function CHANGE As ITerminalNode
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.CHANGE*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.CHANGE*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.nullableExpr
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.nullableExpr
+- uid: Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.nullableExpr
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.nullableExpr
   id: nullableExpr
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext
   langs:
   - csharp
   - vb
   name: nullableExpr()
   nameWithType: MapGrammarParser.RollingnoiseContext.nullableExpr()
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.nullableExpr()
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.nullableExpr()
   type: Method
   source:
     remote:
@@ -322,27 +322,27 @@ items:
     startLine: 3560
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public MapGrammarParser.NullableExprContext nullableExpr()
     return:
-      type: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.NullableExprContext
+      type: Bve5_Parsing.MapGrammar.V2Parser.NullableExprContext
     content.vb: Public Function nullableExpr As MapGrammarParser.NullableExprContext
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.nullableExpr*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.nullableExpr*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.#ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.#ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)
+- uid: Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.#ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.#ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)
   id: '#ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)'
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext
   langs:
   - csharp
   - vb
   name: RollingnoiseContext(ParserRuleContext, Int32)
   nameWithType: MapGrammarParser.RollingnoiseContext.RollingnoiseContext(ParserRuleContext, Int32)
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.RollingnoiseContext(Antlr4.Runtime.ParserRuleContext, System.Int32)
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.RollingnoiseContext(Antlr4.Runtime.ParserRuleContext, System.Int32)
   type: Constructor
   source:
     remote:
@@ -354,7 +354,7 @@ items:
     startLine: 3563
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public RollingnoiseContext(ParserRuleContext parent, int invokingState)
     parameters:
@@ -363,21 +363,21 @@ items:
     - id: invokingState
       type: System.Int32
     content.vb: Public Sub New(parent As ParserRuleContext, invokingState As Integer)
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.#ctor*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.RuleIndex
-  commentId: P:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.RuleIndex
+- uid: Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.RuleIndex
+  commentId: P:Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.RuleIndex
   id: RuleIndex
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext
   langs:
   - csharp
   - vb
   name: RuleIndex
   nameWithType: MapGrammarParser.RollingnoiseContext.RuleIndex
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.RuleIndex
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.RuleIndex
   type: Property
   source:
     remote:
@@ -389,7 +389,7 @@ items:
     startLine: 3567
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public override int RuleIndex { get; }
     parameters: []
@@ -397,7 +397,7 @@ items:
       type: System.Int32
     content.vb: Public Overrides ReadOnly Property RuleIndex As Integer
   overridden: Antlr4.Runtime.RuleContext.RuleIndex
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.RuleIndex*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.RuleIndex*
   modifiers.csharp:
   - public
   - override
@@ -406,16 +406,16 @@ items:
   - Public
   - Overrides
   - ReadOnly
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
+- uid: Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
   id: EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext
   langs:
   - csharp
   - vb
   name: EnterRule(IParseTreeListener)
   nameWithType: MapGrammarParser.RollingnoiseContext.EnterRule(IParseTreeListener)
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
   type: Method
   source:
     remote:
@@ -427,7 +427,7 @@ items:
     startLine: 3568
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public override void EnterRule(IParseTreeListener listener)
     parameters:
@@ -435,23 +435,23 @@ items:
       type: Antlr4.Runtime.Tree.IParseTreeListener
     content.vb: Public Overrides Sub EnterRule(listener As IParseTreeListener)
   overridden: Antlr4.Runtime.ParserRuleContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.EnterRule*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.EnterRule*
   modifiers.csharp:
   - public
   - override
   modifiers.vb:
   - Public
   - Overrides
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
+- uid: Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
   id: ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext
   langs:
   - csharp
   - vb
   name: ExitRule(IParseTreeListener)
   nameWithType: MapGrammarParser.RollingnoiseContext.ExitRule(IParseTreeListener)
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
   type: Method
   source:
     remote:
@@ -463,7 +463,7 @@ items:
     startLine: 3572
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public override void ExitRule(IParseTreeListener listener)
     parameters:
@@ -471,23 +471,23 @@ items:
       type: Antlr4.Runtime.Tree.IParseTreeListener
     content.vb: Public Overrides Sub ExitRule(listener As IParseTreeListener)
   overridden: Antlr4.Runtime.ParserRuleContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.ExitRule*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.ExitRule*
   modifiers.csharp:
   - public
   - override
   modifiers.vb:
   - Public
   - Overrides
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
+- uid: Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
   id: Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext
   langs:
   - csharp
   - vb
   name: Accept<TResult>(IParseTreeVisitor<TResult>)
   nameWithType: MapGrammarParser.RollingnoiseContext.Accept<TResult>(IParseTreeVisitor<TResult>)
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.Accept<TResult>(Antlr4.Runtime.Tree.IParseTreeVisitor<TResult>)
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.Accept<TResult>(Antlr4.Runtime.Tree.IParseTreeVisitor<TResult>)
   type: Method
   source:
     remote:
@@ -499,7 +499,7 @@ items:
     startLine: 3576
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor)
     parameters:
@@ -511,7 +511,7 @@ items:
       type: '{TResult}'
     content.vb: Public Overrides Function Accept(Of TResult)(visitor As IParseTreeVisitor(Of TResult)) As TResult
   overridden: Antlr4.Runtime.RuleContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{{TResult}})
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.Accept*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.Accept*
   nameWithType.vb: MapGrammarParser.RollingnoiseContext.Accept(Of TResult)(IParseTreeVisitor(Of TResult))
   modifiers.csharp:
   - public
@@ -519,14 +519,14 @@ items:
   modifiers.vb:
   - Public
   - Overrides
-  fullName.vb: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.Accept(Of TResult)(Antlr4.Runtime.Tree.IParseTreeVisitor(Of TResult))
+  fullName.vb: Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.Accept(Of TResult)(Antlr4.Runtime.Tree.IParseTreeVisitor(Of TResult))
   name.vb: Accept(Of TResult)(IParseTreeVisitor(Of TResult))
 references:
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions
-  commentId: N:Bve5_Parsing.MapGrammar.SyntaxDefinitions
-  name: Bve5_Parsing.MapGrammar.SyntaxDefinitions
-  nameWithType: Bve5_Parsing.MapGrammar.SyntaxDefinitions
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
+  commentId: N:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
+  name: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
+  nameWithType: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -2237,17 +2237,17 @@ references:
   name: IToken
   nameWithType: IToken
   fullName: Antlr4.Runtime.IToken
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.NullableExprContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.NullableExprContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+- uid: Bve5_Parsing.MapGrammar.V2Parser.NullableExprContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.NullableExprContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.NullableExprContext
   nameWithType: MapGrammarParser.NullableExprContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.NullableExprContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.DOT*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.DOT
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.NullableExprContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.DOT*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.DOT
   name: DOT
   nameWithType: MapGrammarParser.RollingnoiseContext.DOT
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.DOT
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.DOT
 - uid: Antlr4.Runtime.Tree.ITerminalNode
   commentId: T:Antlr4.Runtime.Tree.ITerminalNode
   parent: Antlr4.Runtime.Tree
@@ -2255,31 +2255,31 @@ references:
   name: ITerminalNode
   nameWithType: ITerminalNode
   fullName: Antlr4.Runtime.Tree.ITerminalNode
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.OPN_PAR*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.OPN_PAR
+- uid: Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.OPN_PAR*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.OPN_PAR
   name: OPN_PAR
   nameWithType: MapGrammarParser.RollingnoiseContext.OPN_PAR
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.OPN_PAR
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.CLS_PAR*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.CLS_PAR
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.OPN_PAR
+- uid: Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.CLS_PAR*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.CLS_PAR
   name: CLS_PAR
   nameWithType: MapGrammarParser.RollingnoiseContext.CLS_PAR
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.CLS_PAR
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.CHANGE*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.CHANGE
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.CLS_PAR
+- uid: Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.CHANGE*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.CHANGE
   name: CHANGE
   nameWithType: MapGrammarParser.RollingnoiseContext.CHANGE
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.CHANGE
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.nullableExpr*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.nullableExpr
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.CHANGE
+- uid: Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.nullableExpr*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.nullableExpr
   name: nullableExpr
   nameWithType: MapGrammarParser.RollingnoiseContext.nullableExpr
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.nullableExpr
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.#ctor*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.#ctor
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.nullableExpr
+- uid: Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.#ctor*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.#ctor
   name: RollingnoiseContext
   nameWithType: MapGrammarParser.RollingnoiseContext.RollingnoiseContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.RollingnoiseContext
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.RollingnoiseContext
 - uid: System.Int32
   commentId: T:System.Int32
   parent: System
@@ -2294,11 +2294,11 @@ references:
   name: RuleIndex
   nameWithType: RuleContext.RuleIndex
   fullName: Antlr4.Runtime.RuleContext.RuleIndex
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.RuleIndex*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.RuleIndex
+- uid: Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.RuleIndex*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.RuleIndex
   name: RuleIndex
   nameWithType: MapGrammarParser.RollingnoiseContext.RuleIndex
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.RuleIndex
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.RuleIndex
 - uid: Antlr4.Runtime.ParserRuleContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
   commentId: M:Antlr4.Runtime.ParserRuleContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
   parent: Antlr4.Runtime.ParserRuleContext
@@ -2340,11 +2340,11 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.EnterRule*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.EnterRule
+- uid: Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.EnterRule*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.EnterRule
   name: EnterRule
   nameWithType: MapGrammarParser.RollingnoiseContext.EnterRule
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.EnterRule
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.EnterRule
 - uid: Antlr4.Runtime.Tree.IParseTreeListener
   commentId: T:Antlr4.Runtime.Tree.IParseTreeListener
   parent: Antlr4.Runtime.Tree
@@ -2393,11 +2393,11 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.ExitRule*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.ExitRule
+- uid: Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.ExitRule*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.ExitRule
   name: ExitRule
   nameWithType: MapGrammarParser.RollingnoiseContext.ExitRule
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.ExitRule
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.ExitRule
 - uid: Antlr4.Runtime.RuleContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{{TResult}})
   commentId: M:Antlr4.Runtime.RuleContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
   parent: Antlr4.Runtime.RuleContext
@@ -2460,11 +2460,11 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.Accept*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.Accept
+- uid: Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.Accept*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.Accept
   name: Accept
   nameWithType: MapGrammarParser.RollingnoiseContext.Accept
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext.Accept
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext.Accept
 - uid: Antlr4.Runtime.Tree.IParseTreeVisitor{{TResult}}
   commentId: T:Antlr4.Runtime.Tree.IParseTreeVisitor{``0}
   parent: Antlr4.Runtime.Tree

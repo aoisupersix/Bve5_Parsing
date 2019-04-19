@@ -141,7 +141,7 @@ namespace Bve5_Parsing
             Console.WriteLine($"SignalListPath: {data.SignalListPath}");
             Console.WriteLine($"SoundListPath: {data.SoundListPath}");
             Console.WriteLine($"Sound3DListPath: {data.Sound3DListPath}");
-            foreach(var statement in data.Statements)
+            foreach(var statement in data.Statements.Select(s => s.ToSyntaxData()))
             {
                 Console.WriteLine("---------------SyntaxData----------------");
                 Console.WriteLine($"Distance: {statement.Distance}");
