@@ -10,7 +10,6 @@ items:
   - Bve5_Parsing.MapGrammar.AstNodes.Atan2Node
   - Bve5_Parsing.MapGrammar.AstNodes.BackgroundChangeNode
   - Bve5_Parsing.MapGrammar.AstNodes.BeaconPutNode
-  - Bve5_Parsing.MapGrammar.AstNodes.BuildAstVisitor
   - Bve5_Parsing.MapGrammar.AstNodes.CabilluminanceInterpolateNode
   - Bve5_Parsing.MapGrammar.AstNodes.CabilluminanceSetNode
   - Bve5_Parsing.MapGrammar.AstNodes.CeilNode
@@ -731,12 +730,6 @@ references:
   name: LegacyTurnNode
   nameWithType: LegacyTurnNode
   fullName: Bve5_Parsing.MapGrammar.AstNodes.LegacyTurnNode
-- uid: Bve5_Parsing.MapGrammar.AstNodes.BuildAstVisitor
-  commentId: T:Bve5_Parsing.MapGrammar.AstNodes.BuildAstVisitor
-  parent: Bve5_Parsing.MapGrammar.AstNodes
-  name: BuildAstVisitor
-  nameWithType: BuildAstVisitor
-  fullName: Bve5_Parsing.MapGrammar.AstNodes.BuildAstVisitor
 - uid: Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes
   commentId: T:Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes
   parent: Bve5_Parsing.MapGrammar.AstNodes

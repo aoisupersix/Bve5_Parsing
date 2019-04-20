@@ -18,11 +18,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: LoadListNode
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs
-    startLine: 465
+    startLine: 463
   assemblies:
   - Bve5_Parsing
   namespace: Bve5_Parsing.MapGrammar.AstNodes
@@ -32,7 +32,6 @@ items:
     content: 'public class LoadListNode : MapGrammarAstNodes'
     content.vb: >-
       Public Class LoadListNode
-
           Inherits MapGrammarAstNodes
   inheritance:
   - System.Object
@@ -69,11 +68,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: MapElementName
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs
-    startLine: 467
+    startLine: 465
   assemblies:
   - Bve5_Parsing
   namespace: Bve5_Parsing.MapGrammar.AstNodes
@@ -104,20 +103,20 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Path
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs
-    startLine: 468
+    startLine: 466
   assemblies:
   - Bve5_Parsing
   namespace: Bve5_Parsing.MapGrammar.AstNodes
   syntax:
-    content: public MapGrammarParser.StringContext Path { get; set; }
+    content: public string Path { get; set; }
     parameters: []
     return:
-      type: Bve5_Parsing.MapGrammar.V2Parser.StringContext
-    content.vb: Public Property Path As MapGrammarParser.StringContext
+      type: System.String
+    content.vb: Public Property Path As String
   overload: Bve5_Parsing.MapGrammar.AstNodes.LoadListNode.Path*
   modifiers.csharp:
   - public
@@ -139,11 +138,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: .ctor
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs
-    startLine: 470
+    startLine: 468
   assemblies:
   - Bve5_Parsing
   namespace: Bve5_Parsing.MapGrammar.AstNodes
@@ -571,17 +570,6 @@ references:
   name: Path
   nameWithType: LoadListNode.Path
   fullName: Bve5_Parsing.MapGrammar.AstNodes.LoadListNode.Path
-- uid: Bve5_Parsing.MapGrammar.V2Parser.StringContext
-  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.StringContext
-  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
-  name: MapGrammarParser.StringContext
-  nameWithType: MapGrammarParser.StringContext
-  fullName: Bve5_Parsing.MapGrammar.V2Parser.StringContext
-- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
-  commentId: N:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
-  name: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
-  nameWithType: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
-  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
 - uid: Bve5_Parsing.MapGrammar.AstNodes.LoadListNode.#ctor*
   commentId: Overload:Bve5_Parsing.MapGrammar.AstNodes.LoadListNode.#ctor
   name: LoadListNode

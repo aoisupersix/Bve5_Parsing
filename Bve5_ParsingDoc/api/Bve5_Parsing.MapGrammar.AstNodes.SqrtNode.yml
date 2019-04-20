@@ -16,11 +16,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: SqrtNode
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs
-    startLine: 365
+    startLine: 363
   assemblies:
   - Bve5_Parsing
   namespace: Bve5_Parsing.MapGrammar.AstNodes
@@ -30,7 +30,6 @@ items:
     content: 'public class SqrtNode : SingleArgFunctionNode'
     content.vb: >-
       Public Class SqrtNode
-
           Inherits SingleArgFunctionNode
   inheritance:
   - System.Object
@@ -69,11 +68,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: .ctor
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs
-    startLine: 367
+    startLine: 365
   assemblies:
   - Bve5_Parsing
   namespace: Bve5_Parsing.MapGrammar.AstNodes

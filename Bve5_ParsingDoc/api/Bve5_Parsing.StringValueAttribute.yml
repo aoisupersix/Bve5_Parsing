@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/Attributes/EnumNameAttribute.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: StringValueAttribute
     path: ../Bve5_Parsing/Attributes/EnumNameAttribute.cs
@@ -31,7 +31,6 @@ items:
     content: 'public class StringValueAttribute : Attribute'
     content.vb: >-
       Public Class StringValueAttribute
-
           Inherits Attribute
   inheritance:
   - System.Object
@@ -99,7 +98,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/Attributes/EnumNameAttribute.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: StringValue
     path: ../Bve5_Parsing/Attributes/EnumNameAttribute.cs
@@ -138,7 +137,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/Attributes/EnumNameAttribute.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: .ctor
     path: ../Bve5_Parsing/Attributes/EnumNameAttribute.cs

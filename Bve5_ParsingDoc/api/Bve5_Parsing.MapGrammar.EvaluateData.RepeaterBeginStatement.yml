@@ -37,7 +37,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/Statements.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: RepeaterBeginStatement
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/Statements.cs
@@ -51,7 +51,6 @@ items:
     content: 'public class RepeaterBeginStatement : Statement'
     content.vb: >-
       Public Class RepeaterBeginStatement
-
           Inherits Statement
   inheritance:
   - System.Object
@@ -86,7 +85,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: ElementName
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
@@ -126,7 +125,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: FunctionName
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
@@ -166,7 +165,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: HasKey
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
@@ -206,7 +205,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: HasSubElement
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
@@ -246,7 +245,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Key
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
@@ -283,7 +282,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: TrackKey
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
@@ -320,7 +319,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: X
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
@@ -357,7 +356,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Y
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
@@ -394,7 +393,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Z
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
@@ -431,7 +430,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: RX
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
@@ -468,7 +467,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: RY
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
@@ -505,7 +504,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: RZ
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
@@ -542,7 +541,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Tilt
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
@@ -579,7 +578,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Span
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
@@ -616,7 +615,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Interval
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
@@ -653,7 +652,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: .ctor
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
@@ -685,7 +684,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: .ctor
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
@@ -720,7 +719,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/Statements.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: _structureKeys
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/Statements.cs
@@ -751,7 +750,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/Statements.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: StructureKeys
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/Statements.cs
@@ -788,7 +787,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/Statements.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: SetStrKey
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/Statements.cs
@@ -829,7 +828,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/Statements.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: ToSyntaxData
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/Statements.cs
@@ -867,7 +866,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/Statements.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: AddStructureKey
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/Statements.cs

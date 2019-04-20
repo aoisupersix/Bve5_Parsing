@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/MapGrammarParser.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: MapGrammarParserOption
     path: ../Bve5_Parsing/MapGrammar/MapGrammarParser.cs
@@ -60,7 +60,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/MapGrammarParser.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: None
     path: ../Bve5_Parsing/MapGrammar/MapGrammarParser.cs
@@ -94,7 +94,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/MapGrammarParser.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: ParseIncludeSyntaxRecursively
     path: ../Bve5_Parsing/MapGrammar/MapGrammarParser.cs

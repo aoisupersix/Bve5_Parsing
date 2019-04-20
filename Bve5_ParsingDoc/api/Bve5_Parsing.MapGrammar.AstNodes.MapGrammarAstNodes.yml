@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/MapGrammarAstNode.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: MapGrammarAstNodes
     path: ../Bve5_Parsing/MapGrammar/AstNodes/MapGrammarAstNode.cs
@@ -84,7 +84,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/MapGrammarAstNode.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Start
     path: ../Bve5_Parsing/MapGrammar/AstNodes/MapGrammarAstNode.cs
@@ -119,7 +119,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/MapGrammarAstNode.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Stop
     path: ../Bve5_Parsing/MapGrammar/AstNodes/MapGrammarAstNode.cs
@@ -154,7 +154,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/MapGrammarAstNode.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: .ctor
     path: ../Bve5_Parsing/MapGrammar/AstNodes/MapGrammarAstNode.cs
@@ -189,7 +189,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/MapGrammarAstNode.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: CreateNewWarning
     path: ../Bve5_Parsing/MapGrammar/AstNodes/MapGrammarAstNode.cs
@@ -224,7 +224,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/MapGrammarAstNode.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: CreateNewError
     path: ../Bve5_Parsing/MapGrammar/AstNodes/MapGrammarAstNode.cs

@@ -23,7 +23,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Sound3dPutNode
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
@@ -37,7 +37,6 @@ items:
     content: 'public class Sound3dPutNode : SyntaxNode'
     content.vb: >-
       Public Class Sound3dPutNode
-
           Inherits SyntaxNode
   inheritance:
   - System.Object
@@ -47,7 +46,7 @@ items:
   - Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.GetAllArguments
   - Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.GetNonOptionalArguments
   - Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.GetOptionalArguments
-  - Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.CreateSyntaxAstNode(Bve5_Parsing.MapGrammar.AstNodes.BuildAstVisitor,Antlr4.Runtime.ParserRuleContext,Bve5_Parsing.MapGrammar.MapElementName,System.String,System.String)
+  - Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.CreateSyntaxAstNode(Antlr4.Runtime.Tree.AbstractParseTreeVisitor{Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes},Antlr4.Runtime.ParserRuleContext,Bve5_Parsing.MapGrammar.MapElementName,System.String,System.String)
   - Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.SetArgument(Bve5_Parsing.MapGrammar.EvaluateMapGrammarVisitor,Bve5_Parsing.MapGrammar.EvaluateData.Statement)
   - Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.CreateStatement(Bve5_Parsing.MapGrammar.EvaluateMapGrammarVisitor)
   - Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes.Start
@@ -81,7 +80,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: ElementName
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
@@ -121,7 +120,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: FunctionName
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
@@ -161,7 +160,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: HasKey
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
@@ -201,7 +200,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: HasSubElement
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
@@ -241,7 +240,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Key
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
@@ -278,7 +277,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: X
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
@@ -315,7 +314,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Y
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
@@ -352,7 +351,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: .ctor
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
@@ -486,25 +485,39 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.CreateSyntaxAstNode(Bve5_Parsing.MapGrammar.AstNodes.BuildAstVisitor,Antlr4.Runtime.ParserRuleContext,Bve5_Parsing.MapGrammar.MapElementName,System.String,System.String)
-  commentId: M:Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.CreateSyntaxAstNode(Bve5_Parsing.MapGrammar.AstNodes.BuildAstVisitor,Antlr4.Runtime.ParserRuleContext,Bve5_Parsing.MapGrammar.MapElementName,System.String,System.String)
+- uid: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.CreateSyntaxAstNode(Antlr4.Runtime.Tree.AbstractParseTreeVisitor{Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes},Antlr4.Runtime.ParserRuleContext,Bve5_Parsing.MapGrammar.MapElementName,System.String,System.String)
+  commentId: M:Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.CreateSyntaxAstNode(Antlr4.Runtime.Tree.AbstractParseTreeVisitor{Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes},Antlr4.Runtime.ParserRuleContext,Bve5_Parsing.MapGrammar.MapElementName,System.String,System.String)
   parent: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode
   isExternal: true
-  name: CreateSyntaxAstNode(BuildAstVisitor, ParserRuleContext, MapElementName, String, String)
-  nameWithType: SyntaxNode.CreateSyntaxAstNode(BuildAstVisitor, ParserRuleContext, MapElementName, String, String)
-  fullName: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.CreateSyntaxAstNode(Bve5_Parsing.MapGrammar.AstNodes.BuildAstVisitor, Antlr4.Runtime.ParserRuleContext, Bve5_Parsing.MapGrammar.MapElementName, System.String, System.String)
+  name: CreateSyntaxAstNode(AbstractParseTreeVisitor<MapGrammarAstNodes>, ParserRuleContext, MapElementName, String, String)
+  nameWithType: SyntaxNode.CreateSyntaxAstNode(AbstractParseTreeVisitor<MapGrammarAstNodes>, ParserRuleContext, MapElementName, String, String)
+  fullName: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.CreateSyntaxAstNode(Antlr4.Runtime.Tree.AbstractParseTreeVisitor<Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes>, Antlr4.Runtime.ParserRuleContext, Bve5_Parsing.MapGrammar.MapElementName, System.String, System.String)
+  nameWithType.vb: SyntaxNode.CreateSyntaxAstNode(AbstractParseTreeVisitor(Of MapGrammarAstNodes), ParserRuleContext, MapElementName, String, String)
+  fullName.vb: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.CreateSyntaxAstNode(Antlr4.Runtime.Tree.AbstractParseTreeVisitor(Of Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes), Antlr4.Runtime.ParserRuleContext, Bve5_Parsing.MapGrammar.MapElementName, System.String, System.String)
+  name.vb: CreateSyntaxAstNode(AbstractParseTreeVisitor(Of MapGrammarAstNodes), ParserRuleContext, MapElementName, String, String)
   spec.csharp:
-  - uid: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.CreateSyntaxAstNode(Bve5_Parsing.MapGrammar.AstNodes.BuildAstVisitor,Antlr4.Runtime.ParserRuleContext,Bve5_Parsing.MapGrammar.MapElementName,System.String,System.String)
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.CreateSyntaxAstNode(Antlr4.Runtime.Tree.AbstractParseTreeVisitor{Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes},Antlr4.Runtime.ParserRuleContext,Bve5_Parsing.MapGrammar.MapElementName,System.String,System.String)
     name: CreateSyntaxAstNode
     nameWithType: SyntaxNode.CreateSyntaxAstNode
     fullName: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.CreateSyntaxAstNode
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Bve5_Parsing.MapGrammar.AstNodes.BuildAstVisitor
-    name: BuildAstVisitor
-    nameWithType: BuildAstVisitor
-    fullName: Bve5_Parsing.MapGrammar.AstNodes.BuildAstVisitor
+  - uid: Antlr4.Runtime.Tree.AbstractParseTreeVisitor`1
+    name: AbstractParseTreeVisitor
+    nameWithType: AbstractParseTreeVisitor
+    fullName: Antlr4.Runtime.Tree.AbstractParseTreeVisitor
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes
+    name: MapGrammarAstNodes
+    nameWithType: MapGrammarAstNodes
+    fullName: Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -540,17 +553,28 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.CreateSyntaxAstNode(Bve5_Parsing.MapGrammar.AstNodes.BuildAstVisitor,Antlr4.Runtime.ParserRuleContext,Bve5_Parsing.MapGrammar.MapElementName,System.String,System.String)
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.CreateSyntaxAstNode(Antlr4.Runtime.Tree.AbstractParseTreeVisitor{Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes},Antlr4.Runtime.ParserRuleContext,Bve5_Parsing.MapGrammar.MapElementName,System.String,System.String)
     name: CreateSyntaxAstNode
     nameWithType: SyntaxNode.CreateSyntaxAstNode
     fullName: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.CreateSyntaxAstNode
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Bve5_Parsing.MapGrammar.AstNodes.BuildAstVisitor
-    name: BuildAstVisitor
-    nameWithType: BuildAstVisitor
-    fullName: Bve5_Parsing.MapGrammar.AstNodes.BuildAstVisitor
+  - uid: Antlr4.Runtime.Tree.AbstractParseTreeVisitor`1
+    name: AbstractParseTreeVisitor
+    nameWithType: AbstractParseTreeVisitor
+    fullName: Antlr4.Runtime.Tree.AbstractParseTreeVisitor
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes
+    name: MapGrammarAstNodes
+    nameWithType: MapGrammarAstNodes
+    fullName: Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes
+  - name: )
+    nameWithType: )
+    fullName: )
   - name: ', '
     nameWithType: ', '
     fullName: ', '

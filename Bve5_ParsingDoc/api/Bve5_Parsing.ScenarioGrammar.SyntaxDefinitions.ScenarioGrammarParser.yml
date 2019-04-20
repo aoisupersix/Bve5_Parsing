@@ -71,7 +71,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: ScenarioGrammarParser
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
@@ -88,9 +88,7 @@ items:
       <CLSCompliant(False)>
 
       Public Class ScenarioGrammarParser
-
           Inherits Parser
-
           Implements IRecognizer
   inheritance:
   - System.Object
@@ -216,7 +214,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: BVETS
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
@@ -249,7 +247,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: SCENARIO
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
@@ -282,7 +280,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: VERSION
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
@@ -315,7 +313,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: SELECT_ENCODE
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
@@ -348,7 +346,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: ROUTE
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
@@ -381,7 +379,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: VEHICLE
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
@@ -414,7 +412,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: TITLE
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
@@ -447,7 +445,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: IMAGE
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
@@ -480,7 +478,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: ROUTETITLE
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
@@ -513,7 +511,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: VEHICLETITLE
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
@@ -546,7 +544,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: AUTHOR
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
@@ -579,7 +577,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: COMMENT
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
@@ -612,7 +610,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: EQUAL
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
@@ -645,7 +643,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: ESCAPE_COMMENT
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
@@ -678,7 +676,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: WHITESPACE
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
@@ -711,7 +709,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: E_WS
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
@@ -744,7 +742,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: ENCODE_END
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
@@ -777,7 +775,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: ENCODE_CHAR
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
@@ -810,7 +808,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: P_WS
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
@@ -843,7 +841,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: PATH_END
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
@@ -876,7 +874,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: PATH_EQUAL
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
@@ -909,7 +907,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: IP_WS
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
@@ -942,7 +940,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: IP_COMMENT
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
@@ -975,7 +973,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: INPUT_PATH_END
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
@@ -1008,7 +1006,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: ASTERISK
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
@@ -1041,7 +1039,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: SECTION
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
@@ -1074,7 +1072,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: FILE_PATH
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
@@ -1107,7 +1105,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: W_WS
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
@@ -1140,7 +1138,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: NUM
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
@@ -1173,7 +1171,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: IT_WS
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
@@ -1206,7 +1204,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: IT_COMMENT
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
@@ -1239,7 +1237,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: INPUT_TEXT_END
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
@@ -1272,7 +1270,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: INPUT_TEXT_CHAR
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
@@ -1305,7 +1303,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: RULE_root
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
@@ -1338,7 +1336,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: RULE_statement
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
@@ -1371,7 +1369,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: RULE_encoding
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
@@ -1404,7 +1402,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: RULE_encode_string
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
@@ -1437,7 +1435,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: RULE_weight_path
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
@@ -1470,7 +1468,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: RULE_string
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
@@ -1503,7 +1501,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: ruleNames
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
@@ -1538,7 +1536,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: DefaultVocabulary
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
@@ -1573,7 +1571,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: tokenNames
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
@@ -1620,7 +1618,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: TokenNames
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
@@ -1670,7 +1668,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Vocabulary
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
@@ -1718,7 +1716,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: GrammarFileName
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
@@ -1756,7 +1754,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: RuleNames
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
@@ -1794,7 +1792,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: SerializedAtn
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
@@ -1832,7 +1830,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: .ctor
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
@@ -1865,7 +1863,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: root
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
@@ -1909,7 +1907,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: statement
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
@@ -1953,7 +1951,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: encoding
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
@@ -1997,7 +1995,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: encode_string
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
@@ -2041,7 +2039,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: weight_path
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
@@ -2085,7 +2083,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: string
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
@@ -2129,7 +2127,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: _serializedATN
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
@@ -2164,7 +2162,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: _ATN
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs

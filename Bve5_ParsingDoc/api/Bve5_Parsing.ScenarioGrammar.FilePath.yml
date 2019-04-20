@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/ScenarioGrammar/ScenarioData.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: FilePath
     path: ../Bve5_Parsing/ScenarioGrammar/ScenarioData.cs
@@ -57,7 +57,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/ScenarioGrammar/ScenarioData.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Value
     path: ../Bve5_Parsing/ScenarioGrammar/ScenarioData.cs
@@ -92,7 +92,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/ScenarioGrammar/ScenarioData.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Weight
     path: ../Bve5_Parsing/ScenarioGrammar/ScenarioData.cs

@@ -166,7 +166,7 @@ namespace Bve5_Parsing.MapGrammar
             if (node.Path == null)
                 Errors.Add(node.CreateNewError("ファイルパスが指定されていません。"));
             else
-                evaluateData.SetListPathToString(node.MapElementName, node.Path.text);
+                evaluateData.SetListPathToString(node.MapElementName, node.Path);
 
             return null;
         }
@@ -908,7 +908,7 @@ namespace Bve5_Parsing.MapGrammar
         /// <returns>文字列(String)</returns>
         public override object Visit(StringNode node)
         {
-            return node.Value.text;
+            return node.Value;
         }
 
         /// <summary>

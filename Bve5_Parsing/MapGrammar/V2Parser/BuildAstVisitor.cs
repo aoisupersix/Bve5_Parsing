@@ -2,7 +2,7 @@
 using Antlr4.Runtime.Misc;
 using Bve5_Parsing.MapGrammar.AstNodes;
 using Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions;
-using static Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarParser;
+using static Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarV2Parser;
 
 namespace Bve5_Parsing.MapGrammar.V2Parser
 {
@@ -10,7 +10,7 @@ namespace Bve5_Parsing.MapGrammar.V2Parser
     /// <summary>
     /// CSTを巡回してASTを作成するVisitorクラス
     /// </summary>
-    public class BuildAstVisitor : MapGrammarParserBaseVisitor<MapGrammarAstNodes>
+    public class BuildAstVisitor : MapGrammarV2ParserBaseVisitor<MapGrammarAstNodes>
     {
 
         /// <summary>
@@ -999,9 +999,9 @@ namespace Bve5_Parsing.MapGrammar.V2Parser
         {
             switch (context.op.Type)
             {
-                case MapGrammarLexer.PLUS:
+                case MapGrammarV2Lexer.PLUS:
                     return Visit(context.expr());
-                case MapGrammarLexer.MINUS:
+                case MapGrammarV2Lexer.MINUS:
                     return new UnaryNode(context.Start, context.Stop) { InnerNode = Visit(context.expr()) };
                 default:
                     throw new NotSupportedException();
@@ -1019,19 +1019,19 @@ namespace Bve5_Parsing.MapGrammar.V2Parser
 
             switch (context.op.Type)
             {
-                case MapGrammarLexer.PLUS:
+                case MapGrammarV2Lexer.PLUS:
                     node = new AdditionNode(context.Start, context.Stop);
                     break;
-                case MapGrammarLexer.MINUS:
+                case MapGrammarV2Lexer.MINUS:
                     node = new SubtractionNode(context.Start, context.Stop);
                     break;
-                case MapGrammarLexer.MULT:
+                case MapGrammarV2Lexer.MULT:
                     node = new MultiplicationNode(context.Start, context.Stop);
                     break;
-                case MapGrammarLexer.DIV:
+                case MapGrammarV2Lexer.DIV:
                     node = new DivisionNode(context.Start, context.Stop);
                     break;
-                case MapGrammarLexer.MOD:
+                case MapGrammarV2Lexer.MOD:
                     node = new ModuloNode(context.Start, context.Stop);
                     break;
                 default:
@@ -1185,7 +1185,7 @@ namespace Bve5_Parsing.MapGrammar.V2Parser
         /// <returns></returns>
         public override MapGrammarAstNodes VisitStringExpr([NotNull] StringExprContext context)
         {
-            return new StringNode(context.Start, context.Stop) { Value = context.str };
+            return new StringNode(context.Start, context.Stop) { Value = context.str.text };
         }
 
         /// <summary>
@@ -1202,7 +1202,7 @@ namespace Bve5_Parsing.MapGrammar.V2Parser
 
         public override MapGrammarAstNodes VisitString([NotNull] StringContext context)
         {
-            return new StringNode(context.Start, context.Stop) { Value = context };
+            return new StringNode(context.Start, context.Stop) { Value = context.text };
         }
     }
 }

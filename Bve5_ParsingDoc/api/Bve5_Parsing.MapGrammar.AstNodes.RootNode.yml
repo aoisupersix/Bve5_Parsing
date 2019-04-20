@@ -6,9 +6,7 @@ items:
   parent: Bve5_Parsing.MapGrammar.AstNodes
   children:
   - Bve5_Parsing.MapGrammar.AstNodes.RootNode.#ctor(Antlr4.Runtime.IToken,Antlr4.Runtime.IToken)
-  - Bve5_Parsing.MapGrammar.AstNodes.RootNode.Encoding
   - Bve5_Parsing.MapGrammar.AstNodes.RootNode.StatementList
-  - Bve5_Parsing.MapGrammar.AstNodes.RootNode.Version
   langs:
   - csharp
   - vb
@@ -19,11 +17,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: RootNode
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs
-    startLine: 11
+    startLine: 10
   assemblies:
   - Bve5_Parsing
   namespace: Bve5_Parsing.MapGrammar.AstNodes
@@ -33,7 +31,6 @@ items:
     content: 'public class RootNode : MapGrammarAstNodes'
     content.vb: >-
       Public Class RootNode
-
           Inherits MapGrammarAstNodes
   inheritance:
   - System.Object
@@ -70,11 +67,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: StatementList
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs
-    startLine: 14
+    startLine: 13
   assemblies:
   - Bve5_Parsing
   namespace: Bve5_Parsing.MapGrammar.AstNodes
@@ -85,76 +82,6 @@ items:
       type: System.Collections.Generic.List{Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes}
     content.vb: Public Property StatementList As List(Of MapGrammarAstNodes)
   overload: Bve5_Parsing.MapGrammar.AstNodes.RootNode.StatementList*
-  modifiers.csharp:
-  - public
-  - get
-  - set
-  modifiers.vb:
-  - Public
-- uid: Bve5_Parsing.MapGrammar.AstNodes.RootNode.Version
-  commentId: P:Bve5_Parsing.MapGrammar.AstNodes.RootNode.Version
-  id: Version
-  parent: Bve5_Parsing.MapGrammar.AstNodes.RootNode
-  langs:
-  - csharp
-  - vb
-  name: Version
-  nameWithType: RootNode.Version
-  fullName: Bve5_Parsing.MapGrammar.AstNodes.RootNode.Version
-  type: Property
-  source:
-    remote:
-      path: Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs
-      branch: update_doc
-      repo: https://github.com/aoisupersix/Bve5_Parsing
-    id: Version
-    path: ../Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs
-    startLine: 15
-  assemblies:
-  - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.AstNodes
-  syntax:
-    content: public IToken Version { get; set; }
-    parameters: []
-    return:
-      type: Antlr4.Runtime.IToken
-    content.vb: Public Property Version As IToken
-  overload: Bve5_Parsing.MapGrammar.AstNodes.RootNode.Version*
-  modifiers.csharp:
-  - public
-  - get
-  - set
-  modifiers.vb:
-  - Public
-- uid: Bve5_Parsing.MapGrammar.AstNodes.RootNode.Encoding
-  commentId: P:Bve5_Parsing.MapGrammar.AstNodes.RootNode.Encoding
-  id: Encoding
-  parent: Bve5_Parsing.MapGrammar.AstNodes.RootNode
-  langs:
-  - csharp
-  - vb
-  name: Encoding
-  nameWithType: RootNode.Encoding
-  fullName: Bve5_Parsing.MapGrammar.AstNodes.RootNode.Encoding
-  type: Property
-  source:
-    remote:
-      path: Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs
-      branch: update_doc
-      repo: https://github.com/aoisupersix/Bve5_Parsing
-    id: Encoding
-    path: ../Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs
-    startLine: 16
-  assemblies:
-  - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.AstNodes
-  syntax:
-    content: public MapGrammarParser.EncodingContext Encoding { get; set; }
-    parameters: []
-    return:
-      type: Bve5_Parsing.MapGrammar.V2Parser.EncodingContext
-    content.vb: Public Property Encoding As MapGrammarParser.EncodingContext
-  overload: Bve5_Parsing.MapGrammar.AstNodes.RootNode.Encoding*
   modifiers.csharp:
   - public
   - get
@@ -175,11 +102,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: .ctor
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs
-    startLine: 17
+    startLine: 15
   assemblies:
   - Bve5_Parsing
   namespace: Bve5_Parsing.MapGrammar.AstNodes
@@ -682,11 +609,11 @@ references:
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
-- uid: Bve5_Parsing.MapGrammar.AstNodes.RootNode.Version*
-  commentId: Overload:Bve5_Parsing.MapGrammar.AstNodes.RootNode.Version
-  name: Version
-  nameWithType: RootNode.Version
-  fullName: Bve5_Parsing.MapGrammar.AstNodes.RootNode.Version
+- uid: Bve5_Parsing.MapGrammar.AstNodes.RootNode.#ctor*
+  commentId: Overload:Bve5_Parsing.MapGrammar.AstNodes.RootNode.#ctor
+  name: RootNode
+  nameWithType: RootNode.RootNode
+  fullName: Bve5_Parsing.MapGrammar.AstNodes.RootNode.RootNode
 - uid: Antlr4.Runtime.IToken
   commentId: T:Antlr4.Runtime.IToken
   parent: Antlr4.Runtime
@@ -700,24 +627,3 @@ references:
   name: Antlr4.Runtime
   nameWithType: Antlr4.Runtime
   fullName: Antlr4.Runtime
-- uid: Bve5_Parsing.MapGrammar.AstNodes.RootNode.Encoding*
-  commentId: Overload:Bve5_Parsing.MapGrammar.AstNodes.RootNode.Encoding
-  name: Encoding
-  nameWithType: RootNode.Encoding
-  fullName: Bve5_Parsing.MapGrammar.AstNodes.RootNode.Encoding
-- uid: Bve5_Parsing.MapGrammar.V2Parser.EncodingContext
-  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.EncodingContext
-  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
-  name: MapGrammarParser.EncodingContext
-  nameWithType: MapGrammarParser.EncodingContext
-  fullName: Bve5_Parsing.MapGrammar.V2Parser.EncodingContext
-- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
-  commentId: N:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
-  name: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
-  nameWithType: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
-  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
-- uid: Bve5_Parsing.MapGrammar.AstNodes.RootNode.#ctor*
-  commentId: Overload:Bve5_Parsing.MapGrammar.AstNodes.RootNode.#ctor
-  name: RootNode
-  nameWithType: RootNode.RootNode
-  fullName: Bve5_Parsing.MapGrammar.AstNodes.RootNode.RootNode

@@ -15,7 +15,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/Attributes/SyntaxAttributes.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: DeprecatedAttribute
     path: ../Bve5_Parsing/MapGrammar/Attributes/SyntaxAttributes.cs
@@ -34,7 +34,6 @@ items:
       <AttributeUsage(AttributeTargets.Class)>
 
       Public Class DeprecatedAttribute
-
           Inherits Attribute
   inheritance:
   - System.Object

@@ -1,6 +1,5 @@
 ﻿using Antlr4.Runtime;
 using Bve5_Parsing.MapGrammar.AstNodes;
-using Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions;
 using Bve5_Parsing.MapGrammar.EvaluateData;
 using System;
 using System.Collections.Generic;
@@ -8,8 +7,6 @@ using System.Collections.ObjectModel;
 using System.IO;
 using System.Text;
 using System.Linq;
-using static Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarParser;
-using Bve5_Parsing.MapGrammar.V2Parser;
 
 namespace Bve5_Parsing.MapGrammar
 {
@@ -161,18 +158,18 @@ namespace Bve5_Parsing.MapGrammar
         public MapGrammarAstNodes ParseToAst(string input, string versionString = null)
         {
             var inputStream = new AntlrInputStream(input);
-            var lexer = new MapGrammarLexer(inputStream);
+            var lexer = new V2Parser.SyntaxDefinitions.MapGrammarV2Lexer(inputStream);
             var commonTokneStream = new CommonTokenStream(lexer);
 
             ErrorListener.Errors.Clear();
-            RootContext cst = null;
+            V2Parser.SyntaxDefinitions.MapGrammarV2Parser.RootContext cst = null;
             if (versionString != null && ( versionString[0] == '1' || versionString[1] == '0'))
             {
                 // TODO: V1Parser
             }else
             {
                 // V2Parser
-                var parser = new V2Parser.SyntaxDefinitions.MapGrammarParser(commonTokneStream);
+                var parser = new V2Parser.SyntaxDefinitions.MapGrammarV2Parser(commonTokneStream);
                 parser.AddErrorListener(ErrorListener);
                 parser.ErrorHandler = new MapGrammarErrorStrategy();
                 cst = parser.root();
@@ -181,7 +178,7 @@ namespace Bve5_Parsing.MapGrammar
             if (cst == null)
                 return null;
 
-            MapGrammarAstNodes ast = new BuildAstVisitor().VisitRoot(cst);
+            MapGrammarAstNodes ast = new V2Parser.BuildAstVisitor().VisitRoot(cst);
 
             return ast;
         }

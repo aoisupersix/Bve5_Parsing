@@ -31,10 +31,18 @@ Bve5.7構文のパーサライブラリです。</Description>
   </ItemGroup>
 
   <ItemGroup>
-    <Antlr4 Update="MapGrammar\V2Parser\ANTLR_SyntaxDefinitions\MapGrammarLexer.g4">
+    <Antlr4 Update="MapGrammar\V1Parser\ANTLR_SyntaxDefinitions\MapGrammarV1Lexer.g4">
+      <DefaultCustomToolNamespace>$([MSBuild]::ValueOrDefault('$(RootNamespace).%(DefaultCustomToolNamespace)', '').TrimEnd('.'))</DefaultCustomToolNamespace>
+      <CustomToolNamespace>Bve5_Parsing.MapGrammar.V1Parser.SyntaxDefinitions</CustomToolNamespace>
+    </Antlr4>
+    <Antlr4 Update="MapGrammar\V1Parser\ANTLR_SyntaxDefinitions\MapGrammarV1Parser.g4">
+      <DefaultCustomToolNamespace>$([MSBuild]::ValueOrDefault('$(RootNamespace).%(DefaultCustomToolNamespace)', '').TrimEnd('.'))</DefaultCustomToolNamespace>
+      <CustomToolNamespace>Bve5_Parsing.MapGrammar.V1Parser.SyntaxDefinitions</CustomToolNamespace>
+    </Antlr4>
+    <Antlr4 Update="MapGrammar\V2Parser\ANTLR_SyntaxDefinitions\MapGrammarV2Lexer.g4">
       <CustomToolNamespace>Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions</CustomToolNamespace>
     </Antlr4>
-    <Antlr4 Update="MapGrammar\V2Parser\ANTLR_SyntaxDefinitions\MapGrammarParser.g4">
+    <Antlr4 Update="MapGrammar\V2Parser\ANTLR_SyntaxDefinitions\MapGrammarV2Parser.g4">
       <CustomToolNamespace>Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions</CustomToolNamespace>
     </Antlr4>
     <Antlr4 Update="ScenarioGrammar\ANTLR_SyntaxDefinitions\ScenarioGrammarLexer.g4">

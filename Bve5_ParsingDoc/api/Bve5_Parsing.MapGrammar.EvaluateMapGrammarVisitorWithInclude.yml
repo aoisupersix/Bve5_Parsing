@@ -18,11 +18,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstEvaluator.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: EvaluateMapGrammarVisitorWithInclude
     path: ../Bve5_Parsing/MapGrammar/AstEvaluator.cs
-    startLine: 943
+    startLine: 929
   assemblies:
   - Bve5_Parsing
   namespace: Bve5_Parsing.MapGrammar
@@ -32,7 +32,6 @@ items:
     content: 'public class EvaluateMapGrammarVisitorWithInclude : EvaluateMapGrammarVisitor'
     content.vb: >-
       Public Class EvaluateMapGrammarVisitorWithInclude
-
           Inherits EvaluateMapGrammarVisitor
   inheritance:
   - System.Object
@@ -170,11 +169,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstEvaluator.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: .ctor
     path: ../Bve5_Parsing/MapGrammar/AstEvaluator.cs
-    startLine: 1003
+    startLine: 989
   assemblies:
   - Bve5_Parsing
   namespace: Bve5_Parsing.MapGrammar
@@ -215,11 +214,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstEvaluator.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: .ctor
     path: ../Bve5_Parsing/MapGrammar/AstEvaluator.cs
-    startLine: 1015
+    startLine: 1001
   assemblies:
   - Bve5_Parsing
   namespace: Bve5_Parsing.MapGrammar
@@ -263,11 +262,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstEvaluator.cs
-      branch: update_doc
+      branch: support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstEvaluator.cs
-    startLine: 1020
+    startLine: 1006
   assemblies:
   - Bve5_Parsing
   namespace: Bve5_Parsing.MapGrammar
