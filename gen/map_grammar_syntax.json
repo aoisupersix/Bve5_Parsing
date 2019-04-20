@@ -585,6 +585,7 @@
       "elem": "Structure",
       "key": "StructureKey",
       "func": "Putbetween",
+      "skip_test": true,
       "versions": [
         "2.02",
         "2.00",
@@ -1220,7 +1221,7 @@
           "name": "Value",
           "type": "double?",
           "desc": "昼間画像と夜間画像の混合比 (0: 夜間画像 ~ 1: 昼間画像)",
-          "opt": true
+          "opt": false
         }
       ]
     },

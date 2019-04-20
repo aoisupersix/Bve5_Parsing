@@ -1133,99 +1133,11 @@ namespace Bve5_ParsingTests
         [Fact]
         public void StructurePutbetweenTest()
         {
-
-            // Structure[StructureKey].Putbetween(TrackKey1, TrackKey2);
-            Check(
-                ExecParse("BveTs Map 2.02\n0;Structure['StructureKey'].Putbetween('string_test_value', 'string_test_value');"),
-                new MapData(
-                    version: "2.02",
-                    syntaxes: new List<Statement>()
-                    {
-                        new StructurePutbetweenStatement(0)
-                        {
-                            Key = "StructureKey",
-                            TrackKey1 = "string_test_value",
-                            TrackKey2 = "string_test_value"
-                        }
-                    }));
-
-            // Structure[StructureKey].Putbetween(TrackKey1, TrackKey2, Flag);
-            Check(
-                ExecParse("BveTs Map 2.02\n0;Structure['StructureKey'].Putbetween('string_test_value', 'string_test_value', 1);"),
-                new MapData(
-                    version: "2.02",
-                    syntaxes: new List<Statement>()
-                    {
-                        new StructurePutbetweenStatement(0)
-                        {
-                            Key = "StructureKey",
-                            TrackKey1 = "string_test_value",
-                            TrackKey2 = "string_test_value",
-                            Flag = 1
-                        }
-                    }));
-
-            // Structure[StructureKey].Putbetween(TrackKey1, TrackKey2);
-            Check(
-                ExecParse("BveTs Map 2.00\n0;Structure['StructureKey'].Putbetween('string_test_value', 'string_test_value');"),
-                new MapData(
-                    version: "2.00",
-                    syntaxes: new List<Statement>()
-                    {
-                        new StructurePutbetweenStatement(0)
-                        {
-                            Key = "StructureKey",
-                            TrackKey1 = "string_test_value",
-                            TrackKey2 = "string_test_value"
-                        }
-                    }));
-
-            // Structure[StructureKey].Putbetween(TrackKey1, TrackKey2, Flag);
-            Check(
-                ExecParse("BveTs Map 2.00\n0;Structure['StructureKey'].Putbetween('string_test_value', 'string_test_value', 1);"),
-                new MapData(
-                    version: "2.00",
-                    syntaxes: new List<Statement>()
-                    {
-                        new StructurePutbetweenStatement(0)
-                        {
-                            Key = "StructureKey",
-                            TrackKey1 = "string_test_value",
-                            TrackKey2 = "string_test_value",
-                            Flag = 1
-                        }
-                    }));
-
-            // Structure[StructureKey].Putbetween(TrackKey1, TrackKey2);
-            Check(
-                ExecParse("BveTs Map 1.00\n0;Structure[StructureKey].Putbetween(string_test_value, string_test_value);"),
-                new MapData(
-                    version: "1.00",
-                    syntaxes: new List<Statement>()
-                    {
-                        new StructurePutbetweenStatement(0)
-                        {
-                            Key = "StructureKey",
-                            TrackKey1 = "string_test_value",
-                            TrackKey2 = "string_test_value"
-                        }
-                    }));
-
-            // Structure[StructureKey].Putbetween(TrackKey1, TrackKey2, Flag);
-            Check(
-                ExecParse("BveTs Map 1.00\n0;Structure[StructureKey].Putbetween(string_test_value, string_test_value, 1);"),
-                new MapData(
-                    version: "1.00",
-                    syntaxes: new List<Statement>()
-                    {
-                        new StructurePutbetweenStatement(0)
-                        {
-                            Key = "StructureKey",
-                            TrackKey1 = "string_test_value",
-                            TrackKey2 = "string_test_value",
-                            Flag = 1
-                        }
-                    }));
+            /*
+             * THIS TEST IS SKIPPED.
+             * この構文のテストは諸事情によりテストの自動生成から外されました。
+             * Structure[StructureKey].Putbetween(TrackKey1, TrackKey2, Flag?)構文のテストは手動で作成してください。
+             */
         }
 
         /// <summary>
@@ -1999,23 +1911,11 @@ namespace Bve5_ParsingTests
         }
 
         /// <summary>
-        /// Cabilluminance.Set(Value?);
+        /// Cabilluminance.Set(Value);
         /// </summary>
         [Fact]
         public void CabilluminanceSetTest()
         {
-
-            // Cabilluminance.Set();
-            Check(
-                ExecParse("BveTs Map 2.02\n0;Cabilluminance.Set();"),
-                new MapData(
-                    version: "2.02",
-                    syntaxes: new List<Statement>()
-                    {
-                        new CabilluminanceSetStatement(0)
-                        {
-                        }
-                    }));
 
             // Cabilluminance.Set(Value);
             Check(
@@ -2030,18 +1930,6 @@ namespace Bve5_ParsingTests
                         }
                     }));
 
-            // Cabilluminance.Set();
-            Check(
-                ExecParse("BveTs Map 2.00\n0;Cabilluminance.Set();"),
-                new MapData(
-                    version: "2.00",
-                    syntaxes: new List<Statement>()
-                    {
-                        new CabilluminanceSetStatement(0)
-                        {
-                        }
-                    }));
-
             // Cabilluminance.Set(Value);
             Check(
                 ExecParse("BveTs Map 2.00\n0;Cabilluminance.Set(1);"),
@@ -2052,18 +1940,6 @@ namespace Bve5_ParsingTests
                         new CabilluminanceSetStatement(0)
                         {
                             Value = 1
-                        }
-                    }));
-
-            // Cabilluminance.Set();
-            Check(
-                ExecParse("BveTs Map 1.00\n0;Cabilluminance.Set();"),
-                new MapData(
-                    version: "1.00",
-                    syntaxes: new List<Statement>()
-                    {
-                        new CabilluminanceSetStatement(0)
-                        {
                         }
                     }));
 

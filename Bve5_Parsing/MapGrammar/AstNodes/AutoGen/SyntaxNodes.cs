@@ -2747,7 +2747,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     }
 
     /// <summary>
-    /// Cabilluminance.Set(Value?);
+    /// Cabilluminance.Set(Value);
     /// </summary>
     [Deprecated]
     public partial class CabilluminanceSetNode : CabilluminanceInterpolateNode

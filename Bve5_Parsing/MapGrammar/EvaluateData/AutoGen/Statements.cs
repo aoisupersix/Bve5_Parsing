@@ -3044,7 +3044,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
     }
 
     /// <summary>
-    /// Cabilluminance.Set(Value?);
+    /// Cabilluminance.Set(Value);
     /// </summary>
     public partial class CabilluminanceSetStatement : CabilluminanceInterpolateStatement
     {
@@ -3074,9 +3074,9 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         #region Args
 
         /// <summary>
-        /// 引数：昼間画像と夜間画像の混合比 (0: 夜間画像 ~ 1: 昼間画像)（省略可能）
+        /// 引数：昼間画像と夜間画像の混合比 (0: 夜間画像 ~ 1: 昼間画像)
         /// </summary>
-        [Argument(Optional = true)]
+        [Argument]
         public double? Value { get; set; }
         #endregion Args
 
