@@ -3,7 +3,7 @@ using Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions;
 
 namespace Bve5_Parsing.MapGrammar.V2Parser
 {
-    internal class V1ParserErrorStrategy : MapGrammarErrorStrategy
+    internal class V2ParserErrorStrategy : MapGrammarErrorStrategy
     {
         /// <summary>
         /// エラーの復帰処理を行います。

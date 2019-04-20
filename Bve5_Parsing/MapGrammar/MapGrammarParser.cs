@@ -162,23 +162,27 @@ namespace Bve5_Parsing.MapGrammar
             var commonTokneStream = new CommonTokenStream(lexer);
 
             ErrorListener.Errors.Clear();
-            V2Parser.SyntaxDefinitions.MapGrammarV2Parser.RootContext cst = null;
+            MapGrammarAstNodes ast = null;
             if (versionString != null && ( versionString[0] == '1' || versionString[1] == '0'))
             {
-                // TODO: V1Parser
-            }else
+                // V1Parser
+                var parser = new V1Parser.SyntaxDefinitions.MapGrammarV1Parser(commonTokneStream);
+                parser.AddErrorListener(ErrorListener);
+                parser.ErrorHandler = new V1Parser.V1ParserErrorStrategy();
+                var cst = parser.root();
+                if (cst == null) { return null; }
+                ast = new V1Parser.BuildAstVisitor().VisitRoot(cst);
+            }
+            else
             {
                 // V2Parser
                 var parser = new V2Parser.SyntaxDefinitions.MapGrammarV2Parser(commonTokneStream);
                 parser.AddErrorListener(ErrorListener);
-                parser.ErrorHandler = new MapGrammarErrorStrategy();
-                cst = parser.root();
+                parser.ErrorHandler = new V2Parser.V2ParserErrorStrategy();
+                var cst = parser.root();
+                if (cst == null) { return null; }
+                ast = new V2Parser.BuildAstVisitor().VisitRoot(cst);
             }
-
-            if (cst == null)
-                return null;
-
-            MapGrammarAstNodes ast = new V2Parser.BuildAstVisitor().VisitRoot(cst);
 
             return ast;
         }
