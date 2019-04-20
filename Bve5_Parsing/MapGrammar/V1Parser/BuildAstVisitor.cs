@@ -494,8 +494,8 @@ namespace Bve5_Parsing.MapGrammar.V1Parser
             {
                 //Section.BeginとSection.Beginnewは手動対応
                 var beginNode = node as SectionBeginNode;
-                beginNode.AddSignalIndex(Visit(context.nullableExpr()));
-                foreach (var sigIdx in context.exprArgs())
+                beginNode.AddSignalIndex(Visit(context.arg()));
+                foreach (var sigIdx in context.args())
                 {
                     beginNode.AddSignalIndex(Visit(sigIdx));
                 }
@@ -505,8 +505,8 @@ namespace Bve5_Parsing.MapGrammar.V1Parser
             {
                 //Section.Setspeedlimitは手動対応
                 var speedlimitNode = node as SectionSetspeedlimitNode;
-                speedlimitNode.AddSpeedLimit(Visit(context.nullableExpr()));
-                foreach (var spdLmt in context.exprArgs())
+                speedlimitNode.AddSpeedLimit(Visit(context.arg()));
+                foreach (var spdLmt in context.args())
                 {
                     speedlimitNode.AddSpeedLimit(Visit(spdLmt));
                 }
@@ -529,8 +529,8 @@ namespace Bve5_Parsing.MapGrammar.V1Parser
             {
                 //Signal.Speedlimitは手動対応
                 var speedlimitNode = node as SignalSpeedlimitNode;
-                speedlimitNode.AddSpeedLimit(Visit(context.nullableExpr()[0]));
-                foreach (var spdLmt in context.exprArgs())
+                speedlimitNode.AddSpeedLimit(Visit(context.arg()[0]));
+                foreach (var spdLmt in context.args())
                 {
                     speedlimitNode.AddSpeedLimit(Visit(spdLmt));
                 }
@@ -625,7 +625,7 @@ namespace Bve5_Parsing.MapGrammar.V1Parser
 
                 // Train.Enable構文の引数がTimeかSecondかの判定は評価時に行う
                 // 現時点ではTimeに代入しておく。
-                node.Time = Visit(context.nullableExpr()[0]);
+                node.Time = Visit(context.arg()[0]);
 
                 return node;
             }
@@ -650,9 +650,9 @@ namespace Bve5_Parsing.MapGrammar.V1Parser
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns></returns>
-        public override MapGrammarAstNodes VisitExprArgs([NotNull] ExprArgsContext context)
+        public override MapGrammarAstNodes VisitArgs([NotNull] ArgsContext context)
         {
-            return Visit(context.nullableExpr());
+            return Visit(context.arg());
         }
 
         /// <summary>
@@ -660,36 +660,15 @@ namespace Bve5_Parsing.MapGrammar.V1Parser
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns></returns>
-        public override MapGrammarAstNodes VisitNullableExpr([NotNull] NullableExprContext context)
+        public override MapGrammarAstNodes VisitArg([NotNull] ArgContext context)
         {
             if (context.ChildCount == 0 || context.nullSyntax != null)                       /* null */
-                //return new NumberNode { Value = 0 };
                 return null;
 
-            return Visit(context.expr());
+            return Visit(context.str);
         }
 
-        /// <summary>
-        /// 数字項Visitor
-        /// </summary>
-        /// <param name="context">構文解析の文脈データ</param>
-        /// <returns></returns>
-        public override MapGrammarAstNodes VisitNumberExpr([NotNull] NumberExprContext context)
-        {
-            return new NumberNode(context.Start, context.Stop) { Value = context.num };
-        }
-
-        /// <summary>
-        /// 文字列Visitor
-        /// </summary>
-        /// <param name="context">構文解析の文脈データ</param>
-        /// <returns></returns>
-        public override MapGrammarAstNodes VisitStringExpr([NotNull] StringExprContext context)
-        {
-            return new StringNode(context.Start, context.Stop) { Value = context.str.text };
-        }
-
-        #endregion 数式と変数Visitors
+        #endregion
 
         public override MapGrammarAstNodes VisitString([NotNull] StringContext context)
         {
