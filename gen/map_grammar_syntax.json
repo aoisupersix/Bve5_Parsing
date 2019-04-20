@@ -3,6 +3,9 @@
     {
       "elem": "Curve",
       "func": "Setgauge",
+      "versions": [
+        "2.02"
+      ],
       "args": [
         {
           "name": "Value",
@@ -17,6 +20,11 @@
       "func": "Gauge",
       "deprecated": "true",
       "inheritance": "CurveSetgauge",
+      "versions": [
+        "2.02",
+        "2.00",
+        "1.00"
+      ],
       "args": [
         {
           "name": "Value",
@@ -29,6 +37,9 @@
     {
       "elem": "Curve",
       "func": "Setcenter",
+      "versions": [
+        "2.02"
+      ],
       "args": [
         {
           "name": "X",
@@ -41,6 +52,9 @@
     {
       "elem": "Curve",
       "func": "Setfunction",
+      "versions": [
+        "2.02"
+      ],
       "args": [
         {
           "name": "Id",
@@ -53,12 +67,20 @@
     {
       "elem": "Curve",
       "func": "Begintransition",
+      "versions": [
+        "2.02",
+        "2.00",
+        "1.00"
+      ],
       "args": [
       ]
     },
     {
       "elem": "Curve",
       "func": "Begin",
+      "versions": [
+        "2.02"
+      ],
       "args": [
         {
           "name": "Radius",
@@ -79,6 +101,11 @@
       "func": "Begincircular",
       "deprecated": true,
       "inheritance": "CurveBegin",
+      "versions": [
+        "2.02",
+        "2.00",
+        "1.00"
+      ],
       "args": [
         {
           "name": "Radius",
@@ -97,12 +124,20 @@
     {
       "elem": "Curve",
       "func": "End",
+      "versions": [
+        "2.02",
+        "2.00",
+        "1.00"
+      ],
       "args": [
       ]
     },
     {
       "elem": "Curve",
       "func": "Interpolate",
+      "versions": [
+        "2.02"
+      ],
       "args": [
         {
           "name": "Radius",
@@ -121,6 +156,9 @@
     {
       "elem": "Curve",
       "func": "Change",
+      "versions": [
+        "2.02"
+      ],
       "args": [
         {
           "name": "Radius",
@@ -133,12 +171,20 @@
     {
       "elem": "Gradient",
       "func": "Begintransition",
+      "versions": [
+        "2.02",
+        "2.00",
+        "1.00"
+      ],
       "args": [
       ]
     },
     {
       "elem": "Gradient",
       "func": "Begin",
+      "versions": [
+        "2.02"
+      ],
       "args": [
         {
           "name": "Gradient",
@@ -153,6 +199,11 @@
       "func": "Beginconst",
       "deprecated": true,
       "inheritance": "GradientBegin",
+      "versions": [
+        "2.02",
+        "2.00",
+        "1.00"
+      ],
       "args": [
         {
           "name": "Gradient",
@@ -165,12 +216,20 @@
     {
       "elem": "Gradient",
       "func": "End",
+      "versions": [
+        "2.02",
+        "2.00",
+        "1.00"
+      ],
       "args": [
       ]
     },
     {
       "elem": "Gradient",
       "func": "Interpolate",
+      "versions": [
+        "2.02"
+      ],
       "args": [
         {
           "name": "Gradient",
@@ -185,6 +244,9 @@
       "sub_elem": "X",
       "key": "TrackKey",
       "func": "Interpolate",
+      "versions": [
+        "2.02"
+      ],
       "args": [
         {
           "name": "X",
@@ -205,6 +267,9 @@
       "sub_elem": "Y",
       "key": "TrackKey",
       "func": "Interpolate",
+      "versions": [
+        "2.02"
+      ],
       "args": [
         {
           "name": "Y",
@@ -224,6 +289,12 @@
       "elem": "Track",
       "key": "TrackKey",
       "func": "Position",
+      "skip_test": true,
+      "versions": [
+        "2.02",
+        "2.00",
+        "1.00"
+      ],
       "args": [
         {
           "name": "X",
@@ -256,6 +327,9 @@
       "sub_elem": "Cant",
       "key": "TrackKey",
       "func": "Setgauge",
+      "versions": [
+        "2.02"
+      ],
       "args": [
         {
           "name": "Gauge",
@@ -271,6 +345,9 @@
       "func": "Gauge",
       "deprecated": true,
       "inheritance": "TrackCantSetgauge",
+      "versions": [
+        "2.02"
+      ],
       "args": [
         {
           "name": "Gauge",
@@ -285,6 +362,9 @@
       "sub_elem": "Cant",
       "key": "TrackKey",
       "func": "Setcenter",
+      "versions": [
+        "2.02"
+      ],
       "args": [
         {
           "name": "X",
@@ -299,6 +379,9 @@
       "sub_elem": "Cant",
       "key": "TrackKey",
       "func": "Setfunction",
+      "versions": [
+        "2.02"
+      ],
       "args": [
         {
           "name": "Id",
@@ -313,6 +396,9 @@
       "sub_elem": "Cant",
       "key": "TrackKey",
       "func": "Begintransition",
+      "versions": [
+        "2.02"
+      ],
       "args": [
       ]
     },
@@ -321,6 +407,9 @@
       "sub_elem": "Cant",
       "key": "TrackKey",
       "func": "Begin",
+      "versions": [
+        "2.02"
+      ],
       "args": [
         {
           "name": "Cant",
@@ -335,6 +424,9 @@
       "sub_elem": "Cant",
       "key": "TrackKey",
       "func": "End",
+      "versions": [
+        "2.02"
+      ],
       "args": [
       ]
     },
@@ -343,6 +435,9 @@
       "sub_elem": "Cant",
       "key": "TrackKey",
       "func": "Interpolate",
+      "versions": [
+        "2.02"
+      ],
       "args": [
         {
           "name": "Cant",
@@ -358,6 +453,11 @@
       "func": "Cant",
       "deprecated": true,
       "inheritance": "TrackCantInterpolate",
+      "versions": [
+        "2.02",
+        "2.00",
+        "1.00"
+      ],
       "args": [
         {
           "name": "Cant",
@@ -371,6 +471,11 @@
       "elem": "Structure",
       "func": "Load",
       "skip_test": true,
+      "versions": [
+        "2.02",
+        "2.00",
+        "1.00"
+      ],
       "args": [
         {
           "name": "FilePath",
@@ -384,6 +489,11 @@
       "elem": "Structure",
       "key": "StructureKey",
       "func": "Put",
+      "versions": [
+        "2.02",
+        "2.00",
+        "1.00"
+      ],
       "args": [
         {
           "name": "TrackKey",
@@ -445,6 +555,11 @@
       "elem": "Structure",
       "key": "StructureKey",
       "func": "Put0",
+      "versions": [
+        "2.02",
+        "2.00",
+        "1.00"
+      ],
       "args": [
         {
           "name": "TrackKey",
@@ -470,6 +585,11 @@
       "elem": "Structure",
       "key": "StructureKey",
       "func": "Putbetween",
+      "versions": [
+        "2.02",
+        "2.00",
+        "1.00"
+      ],
       "args": [
         {
           "name": "TrackKey1",
@@ -496,6 +616,11 @@
       "elem": "Repeater",
       "key": "RepeaterKey",
       "func": "Begin",
+      "versions": [
+        "2.02",
+        "2.00",
+        "1.00"
+      ],
       "args": [
         {
           "name": "TrackKey",
@@ -564,6 +689,11 @@
       "elem": "Repeater",
       "key": "RepeaterKey",
       "func": "Begin0",
+      "versions": [
+        "2.02",
+        "2.00",
+        "1.00"
+      ],
       "args": [
         {
           "name": "TrackKey",
@@ -595,12 +725,22 @@
       "elem": "Repeater",
       "key": "RepeaterKey",
       "func": "End",
+      "versions": [
+        "2.02",
+        "2.00",
+        "1.00"
+      ],
       "args": [
       ]
     },
     {
       "elem": "Background",
       "func": "Change",
+      "versions": [
+        "2.02",
+        "2.00",
+        "1.00"
+      ],
       "args": [
         {
           "name": "StructureKey",
@@ -614,6 +754,11 @@
       "elem": "Station",
       "func": "Load",
       "skip_test": true,
+      "versions": [
+        "2.02",
+        "2.00",
+        "1.00"
+      ],
       "args": [
         {
           "name": "FilePath",
@@ -627,6 +772,11 @@
       "elem": "Station",
       "key": "StationKey",
       "func": "Put",
+      "versions": [
+        "2.02",
+        "2.00",
+        "1.00"
+      ],
       "args": [
         {
           "name": "Door",
@@ -653,6 +803,9 @@
       "elem": "Section",
       "func": "Begin",
       "skip_test": true,
+      "versions": [
+        "2.02"
+      ],
       "args": [
       ]
     },
@@ -663,6 +816,11 @@
       "skip_test": true,
       "deprecated": true,
       "inheritance": "SectionBegin",
+      "versions": [
+        "2.02",
+        "2.00",
+        "1.00"
+      ],
       "args": [
       ]
     },
@@ -671,6 +829,9 @@
       "elem": "Section",
       "func": "Setspeedlimit",
       "skip_test": true,
+      "versions": [
+        "2.02"
+      ],
       "args": [
       ]
     },
@@ -681,6 +842,11 @@
       "skip_test": true,
       "deprecated": true,
       "inheritance": "SectionSetspeedlimit",
+      "versions": [
+        "2.02",
+        "2.00",
+        "1.00"
+      ],
       "args": [
       ]
     },
@@ -688,6 +854,11 @@
       "elem": "Signal",
       "func": "Load",
       "skip_test": true,
+      "versions": [
+        "2.02",
+        "2.00",
+        "1.00"
+      ],
       "args": [
         {
           "name": "FilePath",
@@ -702,6 +873,11 @@
       "key": "SignalAspectKey",
       "func": "Put",
       "skip_test": true,
+      "versions": [
+        "2.02",
+        "2.00",
+        "1.00"
+      ],
       "args": [
         {
           "name": "Section",
@@ -768,6 +944,11 @@
     {
       "elem": "Beacon",
       "func": "Put",
+      "versions": [
+        "2.02",
+        "2.00",
+        "1.00"
+      ],
       "args": [
         {
           "name": "Type",
@@ -792,6 +973,11 @@
     {
       "elem": "Speedlimit",
       "func": "Begin",
+      "versions": [
+        "2.02",
+        "2.00",
+        "1.00"
+      ],
       "args": [
         {
           "name": "V",
@@ -804,6 +990,11 @@
     {
       "elem": "Speedlimit",
       "func": "End",
+      "versions": [
+        "2.02",
+        "2.00",
+        "1.00"
+      ],
       "args": [
       ]
     },
@@ -811,6 +1002,11 @@
       "elem": "Pretrain",
       "func": "Pass",
       "skip_test": true,
+      "versions": [
+        "2.02",
+        "2.00",
+        "1.00"
+      ],
       "args": [
         {
           "name": "Time",
@@ -829,6 +1025,11 @@
     {
       "elem": "Light",
       "func": "Ambient",
+      "versions": [
+        "2.02",
+        "2.00",
+        "1.00"
+      ],
       "args": [
         {
           "name": "Red",
@@ -853,6 +1054,11 @@
     {
       "elem": "Light",
       "func": "Diffuse",
+      "versions": [
+        "2.02",
+        "2.00",
+        "1.00"
+      ],
       "args": [
         {
           "name": "Red",
@@ -875,9 +1081,35 @@
       ]
     },
     {
+      "elem": "Light",
+      "func": "Direction",
+      "versions": [
+        "2.02",
+        "2.00",
+        "1.00"
+      ],
+      "args": [
+        {
+          "name": "Pitch",
+          "type": "double?",
+          "desc": "角度",
+          "opt": false
+        },
+        {
+          "name": "Yaw",
+          "type": "double?",
+          "desc": "回転角",
+          "opt": false
+        }
+      ]
+    },
+    {
       "elem": "Fog",
       "func": "Interpolate",
       "skip_test": true,
+      "versions": [
+        "2.02"
+      ],
       "args": [
         {
           "name": "Density",
@@ -911,6 +1143,11 @@
       "skip_test": true,
       "deprecated": true,
       "inheritance": "FogInterpolate",
+      "versions": [
+        "2.02",
+        "2.00",
+        "1.00"
+      ],
       "args": [
         {
           "name": "Density",
@@ -941,6 +1178,9 @@
     {
       "elem": "Drawdistance",
       "func": "Change",
+      "versions": [
+        "2.02"
+      ],
       "args": [
         {
           "name": "Value",
@@ -953,6 +1193,9 @@
     {
       "elem": "Cabilluminance",
       "func": "Interpolate",
+      "versions": [
+        "2.02"
+      ],
       "args": [
         {
           "name": "Value",
@@ -967,6 +1210,11 @@
       "func": "Set",
       "deprecated": true,
       "inheritance": "CabilluminanceInterpolate",
+      "versions": [
+        "2.02",
+        "2.00",
+        "1.00"
+      ],
       "args": [
         {
           "name": "Value",
@@ -979,6 +1227,11 @@
     {
       "elem": "Irregularity",
       "func": "Change",
+      "versions": [
+        "2.02",
+        "2.00",
+        "1.00"
+      ],
       "args": [
         {
           "name": "X",
@@ -1021,6 +1274,11 @@
     {
       "elem": "Adhesion",
       "func": "Change",
+      "versions": [
+        "2.02",
+        "2.00",
+        "1.00"
+      ],
       "args": [
         {
           "name": "A",
@@ -1046,6 +1304,11 @@
       "elem": "Sound",
       "func": "Load",
       "skip_test": true,
+      "versions": [
+        "2.02",
+        "2.00",
+        "1.00"
+      ],
       "args": [
         {
           "name": "FilePath",
@@ -1059,6 +1322,11 @@
       "elem": "Sound",
       "key": "SoundKey",
       "func": "Play",
+      "versions": [
+        "2.02",
+        "2.00",
+        "1.00"
+      ],
       "args": [
       ]
     },
@@ -1066,6 +1334,11 @@
       "elem": "Sound3d",
       "func": "Load",
       "skip_test": true,
+      "versions": [
+        "2.02",
+        "2.00",
+        "1.00"
+      ],
       "args": [
         {
           "name": "FilePath",
@@ -1079,6 +1352,12 @@
       "elem": "Sound3d",
       "key": "SoundKey",
       "func": "Put",
+      "skip_test": true,
+      "versions": [
+        "2.02",
+        "2.00",
+        "1.00"
+      ],
       "args": [
         {
           "name": "X",
@@ -1097,6 +1376,11 @@
     {
       "elem": "Rollingnoise",
       "func": "Change",
+      "versions": [
+        "2.02",
+        "2.00",
+        "1.00"
+      ],
       "args": [
         {
           "name": "Index",
@@ -1109,6 +1393,11 @@
     {
       "elem": "Flangenoise",
       "func": "Change",
+      "versions": [
+        "2.02",
+        "2.00",
+        "1.00"
+      ],
       "args": [
         {
           "name": "Index",
@@ -1121,6 +1410,11 @@
     {
       "elem": "Jointnoise",
       "func": "Play",
+      "versions": [
+        "2.02",
+        "2.00",
+        "1.00"
+      ],
       "args": [
         {
           "name": "Index",
@@ -1133,6 +1427,11 @@
     {
       "elem": "Train",
       "func": "Add",
+      "versions": [
+        "2.02",
+        "2.00",
+        "1.00"
+      ],
       "args": [
         {
           "name": "TrainKey",
@@ -1165,6 +1464,9 @@
       "key": "TrainKey",
       "func": "Load",
       "skip_test": true,
+      "versions": [
+        "2.02"
+      ],
       "args": [
         {
           "name": "FilePath",
@@ -1191,6 +1493,11 @@
       "key": "TrainKey",
       "func": "Enable",
       "skip_test": true,
+      "versions": [
+        "2.02",
+        "2.00",
+        "1.00"
+      ],
       "args": [
         {
           "name": "Time",
@@ -1210,6 +1517,11 @@
       "elem": "Train",
       "key": "TrainKey",
       "func": "Stop",
+      "versions": [
+        "2.02",
+        "2.00",
+        "1.00"
+      ],
       "args": [
         {
           "name": "Decelerate",
@@ -1241,6 +1553,11 @@
       "elem": "Legacy",
       "func": "Fog",
       "deprecated": true,
+      "versions": [
+        "2.02",
+        "2.00",
+        "1.00"
+      ],
       "args": [
         {
           "name": "Fogstart",
@@ -1278,6 +1595,11 @@
       "elem": "Legacy",
       "func": "Curve",
       "deprecated": true,
+      "versions": [
+        "2.02",
+        "2.00",
+        "1.00"
+      ],
       "args": [
         {
           "name": "radius",
@@ -1296,6 +1618,11 @@
     {
       "elem": "Legacy",
       "func": "Pitch",
+      "versions": [
+        "2.02",
+        "2.00",
+        "1.00"
+      ],
       "deprecated": true,
       "args": [
         {
@@ -1310,6 +1637,11 @@
       "elem": "Legacy",
       "func": "Turn",
       "deprecated": true,
+      "versions": [
+        "2.02",
+        "2.00",
+        "1.00"
+      ],
       "args": [
         {
           "name": "slope",

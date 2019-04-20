@@ -336,6 +336,12 @@ namespace Bve5_Parsing.MapGrammar {
         Diffuse,
 
         /// <summary>
+        /// Direction（Direction）
+        /// </summary>
+        [StringValue("Direction")]
+        Direction,
+
+        /// <summary>
         /// Set（Set）
         /// </summary>
         [StringValue("Set")]

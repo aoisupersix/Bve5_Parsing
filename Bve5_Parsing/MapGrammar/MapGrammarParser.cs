@@ -81,7 +81,7 @@ namespace Bve5_Parsing.MapGrammar
         public MapData Parse(string input, MapGrammarParserOption option)
         {
             if (option.HasFlag(MapGrammarParserOption.ParseIncludeSyntaxRecursively))
-                option = option & MapGrammarParserOption.ParseIncludeSyntaxRecursively; // Include対応はできないのでOptionを削除する
+                option &= MapGrammarParserOption.ParseIncludeSyntaxRecursively; // Include対応はできないのでOptionを削除する
 
             return Parse(input, null, option);
         }
@@ -159,7 +159,6 @@ namespace Bve5_Parsing.MapGrammar
         {
             var inputStream = new AntlrInputStream(input);
             
-
             ErrorListener.Errors.Clear();
             MapGrammarAstNodes ast = null;
             if (versionString != null && ( versionString[0] == '1' || versionString[0] == '0'))

@@ -54,10 +54,12 @@ function loadJson(jsonPath) {
       switch(arg.type) {
         case "string":
           arg["test_value_map_grammar"] = "'string_test_value'";
+          arg["test_value_map_grammar_non_quote"] = "string_test_value";
           arg["test_value_csharp"] = "\"string_test_value\"";
           break;
         case "double?":
           arg["test_value_map_grammar"] = 1.0;
+          arg["test_value_map_grammar_non_quote"] = 1.0;
           arg["test_value_csharp"] = 1.0;
           break;
       }
@@ -66,21 +68,42 @@ function loadJson(jsonPath) {
     // テスト用に構文が取りうる引数の全パターンを作成
     // 引数は必ず指定順に並んでいることとする
     const argPattern = []
-    const nonOptArgs = linq.from(state.args).where(a => !a.opt).toArray();
-    const optArgs = linq.from(state.args).where(a => a.opt).toArray();
-    argPattern.push(deepCopy(nonOptArgs));
-
-    while(optArgs.length > 0) {
-      nonOptArgs.push(optArgs.shift());
-      argPattern.push(deepCopy(nonOptArgs));
-    }
-    argPattern.forEach((val) => {
-      if (val.length <= 0) {
-        val["noarg"] = true;
-      }else {
-        val.slice(-1)[0]["last"] = true;
+    linq.from(state.versions).forEach((version) => {
+      const nonOptArgs = linq.from(state.args).where(a => !a.opt).toArray();
+      const optArgs = linq.from(state.args).where(a => a.opt).toArray();
+      const tmpArgPattern = [];
+      tmpArgPattern.push(deepCopy(nonOptArgs));
+  
+      while(optArgs.length > 0) {
+        nonOptArgs.push(optArgs.shift());
+        tmpArgPattern.push(deepCopy(nonOptArgs));
       }
+
+      tmpArgPattern.forEach((val) => {
+        if (val.length <= 0) {
+          val["noarg"] = true;
+        }else {
+          val.slice(-1)[0]["last"] = true;
+        }
+        
+        const arg = { args: val};
+        arg["version"] = version;
+
+        switch(version.charAt(0)) {
+          case '1':
+            arg["useV1Parser"] = true;
+            arg["useV2Parser"] = false;
+            break;
+          case '2':
+            arg["useV1Parser"] = false;
+            arg["useV2Parser"] = true;
+            break;
+        }
+
+        argPattern.push(deepCopy(arg));
+      });
     });
+
     state["argPattern"] = argPattern;
 
     // 引数があるか
