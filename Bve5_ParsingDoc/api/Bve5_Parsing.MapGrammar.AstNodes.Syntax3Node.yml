@@ -20,11 +20,15 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Syntax3Node
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs
-    startLine: 447
+    startLine: 445
   assemblies:
   - Bve5_Parsing
   namespace: Bve5_Parsing.MapGrammar.AstNodes
@@ -70,11 +74,15 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: MapElementNames
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs
-    startLine: 450
+    startLine: 448
   assemblies:
   - Bve5_Parsing
   namespace: Bve5_Parsing.MapGrammar.AstNodes
@@ -105,11 +113,15 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Key
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs
-    startLine: 451
+    startLine: 449
   assemblies:
   - Bve5_Parsing
   namespace: Bve5_Parsing.MapGrammar.AstNodes
@@ -140,11 +152,15 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: FunctionName
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs
-    startLine: 452
+    startLine: 450
   assemblies:
   - Bve5_Parsing
   namespace: Bve5_Parsing.MapGrammar.AstNodes
@@ -175,11 +191,15 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Arguments
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs
-    startLine: 453
+    startLine: 451
   assemblies:
   - Bve5_Parsing
   namespace: Bve5_Parsing.MapGrammar.AstNodes
@@ -210,11 +230,15 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: .ctor
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs
-    startLine: 455
+    startLine: 453
   assemblies:
   - Bve5_Parsing
   namespace: Bve5_Parsing.MapGrammar.AstNodes

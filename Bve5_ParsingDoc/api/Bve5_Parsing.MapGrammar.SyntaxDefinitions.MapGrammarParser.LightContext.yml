@@ -1,37 +1,37 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.LightContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.LightContext
   id: MapGrammarParser.LightContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   children:
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.#ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.AMBIENT
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.blue
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.CLS_PAR
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.COMMA
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.COMMA(System.Int32)
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.DIFFUSE
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.DIRECTION
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.DOT
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.func
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.green
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.nullableExpr
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.nullableExpr(System.Int32)
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.OPN_PAR
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.pitch
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.red
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.RuleIndex
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.yaw
+  - Bve5_Parsing.MapGrammar.V2Parser.LightContext.#ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)
+  - Bve5_Parsing.MapGrammar.V2Parser.LightContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
+  - Bve5_Parsing.MapGrammar.V2Parser.LightContext.AMBIENT
+  - Bve5_Parsing.MapGrammar.V2Parser.LightContext.blue
+  - Bve5_Parsing.MapGrammar.V2Parser.LightContext.CLS_PAR
+  - Bve5_Parsing.MapGrammar.V2Parser.LightContext.COMMA
+  - Bve5_Parsing.MapGrammar.V2Parser.LightContext.COMMA(System.Int32)
+  - Bve5_Parsing.MapGrammar.V2Parser.LightContext.DIFFUSE
+  - Bve5_Parsing.MapGrammar.V2Parser.LightContext.DIRECTION
+  - Bve5_Parsing.MapGrammar.V2Parser.LightContext.DOT
+  - Bve5_Parsing.MapGrammar.V2Parser.LightContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
+  - Bve5_Parsing.MapGrammar.V2Parser.LightContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
+  - Bve5_Parsing.MapGrammar.V2Parser.LightContext.func
+  - Bve5_Parsing.MapGrammar.V2Parser.LightContext.green
+  - Bve5_Parsing.MapGrammar.V2Parser.LightContext.nullableExpr
+  - Bve5_Parsing.MapGrammar.V2Parser.LightContext.nullableExpr(System.Int32)
+  - Bve5_Parsing.MapGrammar.V2Parser.LightContext.OPN_PAR
+  - Bve5_Parsing.MapGrammar.V2Parser.LightContext.pitch
+  - Bve5_Parsing.MapGrammar.V2Parser.LightContext.red
+  - Bve5_Parsing.MapGrammar.V2Parser.LightContext.RuleIndex
+  - Bve5_Parsing.MapGrammar.V2Parser.LightContext.yaw
   langs:
   - csharp
   - vb
   name: MapGrammarParser.LightContext
   nameWithType: MapGrammarParser.LightContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.LightContext
   type: Class
   source:
     remote:
@@ -43,7 +43,7 @@ items:
     startLine: 2861
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: 'public class LightContext : ParserRuleContext, IRuleNode, IParseTree, ISyntaxTree, ITree'
     content.vb: >-
@@ -118,16 +118,16 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.func
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.func
+- uid: Bve5_Parsing.MapGrammar.V2Parser.LightContext.func
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.LightContext.func
   id: func
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.LightContext
   langs:
   - csharp
   - vb
   name: func
   nameWithType: MapGrammarParser.LightContext.func
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.func
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.LightContext.func
   type: Field
   source:
     remote:
@@ -139,7 +139,7 @@ items:
     startLine: 2862
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public IToken func
     return:
@@ -149,16 +149,16 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.red
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.red
+- uid: Bve5_Parsing.MapGrammar.V2Parser.LightContext.red
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.LightContext.red
   id: red
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.LightContext
   langs:
   - csharp
   - vb
   name: red
   nameWithType: MapGrammarParser.LightContext.red
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.red
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.LightContext.red
   type: Field
   source:
     remote:
@@ -170,26 +170,26 @@ items:
     startLine: 2863
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public MapGrammarParser.NullableExprContext red
     return:
-      type: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.NullableExprContext
+      type: Bve5_Parsing.MapGrammar.V2Parser.NullableExprContext
     content.vb: Public red As MapGrammarParser.NullableExprContext
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.green
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.green
+- uid: Bve5_Parsing.MapGrammar.V2Parser.LightContext.green
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.LightContext.green
   id: green
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.LightContext
   langs:
   - csharp
   - vb
   name: green
   nameWithType: MapGrammarParser.LightContext.green
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.green
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.LightContext.green
   type: Field
   source:
     remote:
@@ -201,26 +201,26 @@ items:
     startLine: 2864
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public MapGrammarParser.NullableExprContext green
     return:
-      type: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.NullableExprContext
+      type: Bve5_Parsing.MapGrammar.V2Parser.NullableExprContext
     content.vb: Public green As MapGrammarParser.NullableExprContext
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.blue
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.blue
+- uid: Bve5_Parsing.MapGrammar.V2Parser.LightContext.blue
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.LightContext.blue
   id: blue
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.LightContext
   langs:
   - csharp
   - vb
   name: blue
   nameWithType: MapGrammarParser.LightContext.blue
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.blue
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.LightContext.blue
   type: Field
   source:
     remote:
@@ -232,26 +232,26 @@ items:
     startLine: 2865
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public MapGrammarParser.NullableExprContext blue
     return:
-      type: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.NullableExprContext
+      type: Bve5_Parsing.MapGrammar.V2Parser.NullableExprContext
     content.vb: Public blue As MapGrammarParser.NullableExprContext
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.pitch
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.pitch
+- uid: Bve5_Parsing.MapGrammar.V2Parser.LightContext.pitch
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.LightContext.pitch
   id: pitch
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.LightContext
   langs:
   - csharp
   - vb
   name: pitch
   nameWithType: MapGrammarParser.LightContext.pitch
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.pitch
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.LightContext.pitch
   type: Field
   source:
     remote:
@@ -263,26 +263,26 @@ items:
     startLine: 2866
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public MapGrammarParser.NullableExprContext pitch
     return:
-      type: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.NullableExprContext
+      type: Bve5_Parsing.MapGrammar.V2Parser.NullableExprContext
     content.vb: Public pitch As MapGrammarParser.NullableExprContext
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.yaw
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.yaw
+- uid: Bve5_Parsing.MapGrammar.V2Parser.LightContext.yaw
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.LightContext.yaw
   id: yaw
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.LightContext
   langs:
   - csharp
   - vb
   name: yaw
   nameWithType: MapGrammarParser.LightContext.yaw
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.yaw
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.LightContext.yaw
   type: Field
   source:
     remote:
@@ -294,26 +294,26 @@ items:
     startLine: 2867
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public MapGrammarParser.NullableExprContext yaw
     return:
-      type: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.NullableExprContext
+      type: Bve5_Parsing.MapGrammar.V2Parser.NullableExprContext
     content.vb: Public yaw As MapGrammarParser.NullableExprContext
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.DOT
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.DOT
+- uid: Bve5_Parsing.MapGrammar.V2Parser.LightContext.DOT
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.LightContext.DOT
   id: DOT
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.LightContext
   langs:
   - csharp
   - vb
   name: DOT()
   nameWithType: MapGrammarParser.LightContext.DOT()
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.DOT()
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.LightContext.DOT()
   type: Method
   source:
     remote:
@@ -325,27 +325,27 @@ items:
     startLine: 2868
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public ITerminalNode DOT()
     return:
       type: Antlr4.Runtime.Tree.ITerminalNode
     content.vb: Public Function DOT As ITerminalNode
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.DOT*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.LightContext.DOT*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.OPN_PAR
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.OPN_PAR
+- uid: Bve5_Parsing.MapGrammar.V2Parser.LightContext.OPN_PAR
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.LightContext.OPN_PAR
   id: OPN_PAR
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.LightContext
   langs:
   - csharp
   - vb
   name: OPN_PAR()
   nameWithType: MapGrammarParser.LightContext.OPN_PAR()
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.OPN_PAR()
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.LightContext.OPN_PAR()
   type: Method
   source:
     remote:
@@ -357,27 +357,27 @@ items:
     startLine: 2869
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public ITerminalNode OPN_PAR()
     return:
       type: Antlr4.Runtime.Tree.ITerminalNode
     content.vb: Public Function OPN_PAR As ITerminalNode
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.OPN_PAR*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.LightContext.OPN_PAR*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.COMMA
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.COMMA
+- uid: Bve5_Parsing.MapGrammar.V2Parser.LightContext.COMMA
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.LightContext.COMMA
   id: COMMA
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.LightContext
   langs:
   - csharp
   - vb
   name: COMMA()
   nameWithType: MapGrammarParser.LightContext.COMMA()
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.COMMA()
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.LightContext.COMMA()
   type: Method
   source:
     remote:
@@ -389,27 +389,27 @@ items:
     startLine: 2870
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public ITerminalNode[] COMMA()
     return:
       type: Antlr4.Runtime.Tree.ITerminalNode[]
     content.vb: Public Function COMMA As ITerminalNode()
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.COMMA*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.LightContext.COMMA*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.COMMA(System.Int32)
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.COMMA(System.Int32)
+- uid: Bve5_Parsing.MapGrammar.V2Parser.LightContext.COMMA(System.Int32)
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.LightContext.COMMA(System.Int32)
   id: COMMA(System.Int32)
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.LightContext
   langs:
   - csharp
   - vb
   name: COMMA(Int32)
   nameWithType: MapGrammarParser.LightContext.COMMA(Int32)
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.COMMA(System.Int32)
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.LightContext.COMMA(System.Int32)
   type: Method
   source:
     remote:
@@ -421,7 +421,7 @@ items:
     startLine: 2871
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public ITerminalNode COMMA(int i)
     parameters:
@@ -430,21 +430,21 @@ items:
     return:
       type: Antlr4.Runtime.Tree.ITerminalNode
     content.vb: Public Function COMMA(i As Integer) As ITerminalNode
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.COMMA*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.LightContext.COMMA*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.CLS_PAR
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.CLS_PAR
+- uid: Bve5_Parsing.MapGrammar.V2Parser.LightContext.CLS_PAR
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.LightContext.CLS_PAR
   id: CLS_PAR
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.LightContext
   langs:
   - csharp
   - vb
   name: CLS_PAR()
   nameWithType: MapGrammarParser.LightContext.CLS_PAR()
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.CLS_PAR()
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.LightContext.CLS_PAR()
   type: Method
   source:
     remote:
@@ -456,27 +456,27 @@ items:
     startLine: 2874
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public ITerminalNode CLS_PAR()
     return:
       type: Antlr4.Runtime.Tree.ITerminalNode
     content.vb: Public Function CLS_PAR As ITerminalNode
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.CLS_PAR*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.LightContext.CLS_PAR*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.AMBIENT
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.AMBIENT
+- uid: Bve5_Parsing.MapGrammar.V2Parser.LightContext.AMBIENT
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.LightContext.AMBIENT
   id: AMBIENT
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.LightContext
   langs:
   - csharp
   - vb
   name: AMBIENT()
   nameWithType: MapGrammarParser.LightContext.AMBIENT()
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.AMBIENT()
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.LightContext.AMBIENT()
   type: Method
   source:
     remote:
@@ -488,27 +488,27 @@ items:
     startLine: 2875
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public ITerminalNode AMBIENT()
     return:
       type: Antlr4.Runtime.Tree.ITerminalNode
     content.vb: Public Function AMBIENT As ITerminalNode
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.AMBIENT*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.LightContext.AMBIENT*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.nullableExpr
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.nullableExpr
+- uid: Bve5_Parsing.MapGrammar.V2Parser.LightContext.nullableExpr
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.LightContext.nullableExpr
   id: nullableExpr
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.LightContext
   langs:
   - csharp
   - vb
   name: nullableExpr()
   nameWithType: MapGrammarParser.LightContext.nullableExpr()
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.nullableExpr()
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.LightContext.nullableExpr()
   type: Method
   source:
     remote:
@@ -520,27 +520,27 @@ items:
     startLine: 2876
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public MapGrammarParser.NullableExprContext[] nullableExpr()
     return:
-      type: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.NullableExprContext[]
+      type: Bve5_Parsing.MapGrammar.V2Parser.NullableExprContext[]
     content.vb: Public Function nullableExpr As MapGrammarParser.NullableExprContext()
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.nullableExpr*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.LightContext.nullableExpr*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.nullableExpr(System.Int32)
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.nullableExpr(System.Int32)
+- uid: Bve5_Parsing.MapGrammar.V2Parser.LightContext.nullableExpr(System.Int32)
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.LightContext.nullableExpr(System.Int32)
   id: nullableExpr(System.Int32)
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.LightContext
   langs:
   - csharp
   - vb
   name: nullableExpr(Int32)
   nameWithType: MapGrammarParser.LightContext.nullableExpr(Int32)
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.nullableExpr(System.Int32)
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.LightContext.nullableExpr(System.Int32)
   type: Method
   source:
     remote:
@@ -552,30 +552,30 @@ items:
     startLine: 2879
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public MapGrammarParser.NullableExprContext nullableExpr(int i)
     parameters:
     - id: i
       type: System.Int32
     return:
-      type: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.NullableExprContext
+      type: Bve5_Parsing.MapGrammar.V2Parser.NullableExprContext
     content.vb: Public Function nullableExpr(i As Integer) As MapGrammarParser.NullableExprContext
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.nullableExpr*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.LightContext.nullableExpr*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.DIFFUSE
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.DIFFUSE
+- uid: Bve5_Parsing.MapGrammar.V2Parser.LightContext.DIFFUSE
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.LightContext.DIFFUSE
   id: DIFFUSE
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.LightContext
   langs:
   - csharp
   - vb
   name: DIFFUSE()
   nameWithType: MapGrammarParser.LightContext.DIFFUSE()
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.DIFFUSE()
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.LightContext.DIFFUSE()
   type: Method
   source:
     remote:
@@ -587,27 +587,27 @@ items:
     startLine: 2882
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public ITerminalNode DIFFUSE()
     return:
       type: Antlr4.Runtime.Tree.ITerminalNode
     content.vb: Public Function DIFFUSE As ITerminalNode
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.DIFFUSE*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.LightContext.DIFFUSE*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.DIRECTION
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.DIRECTION
+- uid: Bve5_Parsing.MapGrammar.V2Parser.LightContext.DIRECTION
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.LightContext.DIRECTION
   id: DIRECTION
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.LightContext
   langs:
   - csharp
   - vb
   name: DIRECTION()
   nameWithType: MapGrammarParser.LightContext.DIRECTION()
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.DIRECTION()
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.LightContext.DIRECTION()
   type: Method
   source:
     remote:
@@ -619,27 +619,27 @@ items:
     startLine: 2883
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public ITerminalNode DIRECTION()
     return:
       type: Antlr4.Runtime.Tree.ITerminalNode
     content.vb: Public Function DIRECTION As ITerminalNode
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.DIRECTION*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.LightContext.DIRECTION*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.#ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.#ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)
+- uid: Bve5_Parsing.MapGrammar.V2Parser.LightContext.#ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.LightContext.#ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)
   id: '#ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)'
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.LightContext
   langs:
   - csharp
   - vb
   name: LightContext(ParserRuleContext, Int32)
   nameWithType: MapGrammarParser.LightContext.LightContext(ParserRuleContext, Int32)
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.LightContext(Antlr4.Runtime.ParserRuleContext, System.Int32)
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.LightContext.LightContext(Antlr4.Runtime.ParserRuleContext, System.Int32)
   type: Constructor
   source:
     remote:
@@ -651,7 +651,7 @@ items:
     startLine: 2884
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public LightContext(ParserRuleContext parent, int invokingState)
     parameters:
@@ -660,21 +660,21 @@ items:
     - id: invokingState
       type: System.Int32
     content.vb: Public Sub New(parent As ParserRuleContext, invokingState As Integer)
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.#ctor*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.LightContext.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.RuleIndex
-  commentId: P:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.RuleIndex
+- uid: Bve5_Parsing.MapGrammar.V2Parser.LightContext.RuleIndex
+  commentId: P:Bve5_Parsing.MapGrammar.V2Parser.LightContext.RuleIndex
   id: RuleIndex
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.LightContext
   langs:
   - csharp
   - vb
   name: RuleIndex
   nameWithType: MapGrammarParser.LightContext.RuleIndex
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.RuleIndex
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.LightContext.RuleIndex
   type: Property
   source:
     remote:
@@ -686,7 +686,7 @@ items:
     startLine: 2888
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public override int RuleIndex { get; }
     parameters: []
@@ -694,7 +694,7 @@ items:
       type: System.Int32
     content.vb: Public Overrides ReadOnly Property RuleIndex As Integer
   overridden: Antlr4.Runtime.RuleContext.RuleIndex
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.RuleIndex*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.LightContext.RuleIndex*
   modifiers.csharp:
   - public
   - override
@@ -703,16 +703,16 @@ items:
   - Public
   - Overrides
   - ReadOnly
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
+- uid: Bve5_Parsing.MapGrammar.V2Parser.LightContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.LightContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
   id: EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.LightContext
   langs:
   - csharp
   - vb
   name: EnterRule(IParseTreeListener)
   nameWithType: MapGrammarParser.LightContext.EnterRule(IParseTreeListener)
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.LightContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
   type: Method
   source:
     remote:
@@ -724,7 +724,7 @@ items:
     startLine: 2889
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public override void EnterRule(IParseTreeListener listener)
     parameters:
@@ -732,23 +732,23 @@ items:
       type: Antlr4.Runtime.Tree.IParseTreeListener
     content.vb: Public Overrides Sub EnterRule(listener As IParseTreeListener)
   overridden: Antlr4.Runtime.ParserRuleContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.EnterRule*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.LightContext.EnterRule*
   modifiers.csharp:
   - public
   - override
   modifiers.vb:
   - Public
   - Overrides
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
+- uid: Bve5_Parsing.MapGrammar.V2Parser.LightContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.LightContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
   id: ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.LightContext
   langs:
   - csharp
   - vb
   name: ExitRule(IParseTreeListener)
   nameWithType: MapGrammarParser.LightContext.ExitRule(IParseTreeListener)
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.LightContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
   type: Method
   source:
     remote:
@@ -760,7 +760,7 @@ items:
     startLine: 2893
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public override void ExitRule(IParseTreeListener listener)
     parameters:
@@ -768,23 +768,23 @@ items:
       type: Antlr4.Runtime.Tree.IParseTreeListener
     content.vb: Public Overrides Sub ExitRule(listener As IParseTreeListener)
   overridden: Antlr4.Runtime.ParserRuleContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.ExitRule*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.LightContext.ExitRule*
   modifiers.csharp:
   - public
   - override
   modifiers.vb:
   - Public
   - Overrides
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
+- uid: Bve5_Parsing.MapGrammar.V2Parser.LightContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.LightContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
   id: Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.LightContext
   langs:
   - csharp
   - vb
   name: Accept<TResult>(IParseTreeVisitor<TResult>)
   nameWithType: MapGrammarParser.LightContext.Accept<TResult>(IParseTreeVisitor<TResult>)
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.Accept<TResult>(Antlr4.Runtime.Tree.IParseTreeVisitor<TResult>)
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.LightContext.Accept<TResult>(Antlr4.Runtime.Tree.IParseTreeVisitor<TResult>)
   type: Method
   source:
     remote:
@@ -796,7 +796,7 @@ items:
     startLine: 2897
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor)
     parameters:
@@ -808,7 +808,7 @@ items:
       type: '{TResult}'
     content.vb: Public Overrides Function Accept(Of TResult)(visitor As IParseTreeVisitor(Of TResult)) As TResult
   overridden: Antlr4.Runtime.RuleContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{{TResult}})
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.Accept*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.LightContext.Accept*
   nameWithType.vb: MapGrammarParser.LightContext.Accept(Of TResult)(IParseTreeVisitor(Of TResult))
   modifiers.csharp:
   - public
@@ -816,14 +816,14 @@ items:
   modifiers.vb:
   - Public
   - Overrides
-  fullName.vb: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.Accept(Of TResult)(Antlr4.Runtime.Tree.IParseTreeVisitor(Of TResult))
+  fullName.vb: Bve5_Parsing.MapGrammar.V2Parser.LightContext.Accept(Of TResult)(Antlr4.Runtime.Tree.IParseTreeVisitor(Of TResult))
   name.vb: Accept(Of TResult)(IParseTreeVisitor(Of TResult))
 references:
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions
-  commentId: N:Bve5_Parsing.MapGrammar.SyntaxDefinitions
-  name: Bve5_Parsing.MapGrammar.SyntaxDefinitions
-  nameWithType: Bve5_Parsing.MapGrammar.SyntaxDefinitions
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
+  commentId: N:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
+  name: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
+  nameWithType: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -2534,17 +2534,17 @@ references:
   name: IToken
   nameWithType: IToken
   fullName: Antlr4.Runtime.IToken
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.NullableExprContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.NullableExprContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+- uid: Bve5_Parsing.MapGrammar.V2Parser.NullableExprContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.NullableExprContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.NullableExprContext
   nameWithType: MapGrammarParser.NullableExprContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.NullableExprContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.DOT*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.DOT
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.NullableExprContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.LightContext.DOT*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.LightContext.DOT
   name: DOT
   nameWithType: MapGrammarParser.LightContext.DOT
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.DOT
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.LightContext.DOT
 - uid: Antlr4.Runtime.Tree.ITerminalNode
   commentId: T:Antlr4.Runtime.Tree.ITerminalNode
   parent: Antlr4.Runtime.Tree
@@ -2552,16 +2552,16 @@ references:
   name: ITerminalNode
   nameWithType: ITerminalNode
   fullName: Antlr4.Runtime.Tree.ITerminalNode
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.OPN_PAR*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.OPN_PAR
+- uid: Bve5_Parsing.MapGrammar.V2Parser.LightContext.OPN_PAR*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.LightContext.OPN_PAR
   name: OPN_PAR
   nameWithType: MapGrammarParser.LightContext.OPN_PAR
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.OPN_PAR
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.COMMA*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.COMMA
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.LightContext.OPN_PAR
+- uid: Bve5_Parsing.MapGrammar.V2Parser.LightContext.COMMA*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.LightContext.COMMA
   name: COMMA
   nameWithType: MapGrammarParser.LightContext.COMMA
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.COMMA
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.LightContext.COMMA
 - uid: Antlr4.Runtime.Tree.ITerminalNode[]
   isExternal: true
   name: ITerminalNode[]
@@ -2595,60 +2595,60 @@ references:
   name: Int32
   nameWithType: Int32
   fullName: System.Int32
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.CLS_PAR*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.CLS_PAR
+- uid: Bve5_Parsing.MapGrammar.V2Parser.LightContext.CLS_PAR*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.LightContext.CLS_PAR
   name: CLS_PAR
   nameWithType: MapGrammarParser.LightContext.CLS_PAR
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.CLS_PAR
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.AMBIENT*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.AMBIENT
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.LightContext.CLS_PAR
+- uid: Bve5_Parsing.MapGrammar.V2Parser.LightContext.AMBIENT*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.LightContext.AMBIENT
   name: AMBIENT
   nameWithType: MapGrammarParser.LightContext.AMBIENT
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.AMBIENT
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.nullableExpr*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.nullableExpr
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.LightContext.AMBIENT
+- uid: Bve5_Parsing.MapGrammar.V2Parser.LightContext.nullableExpr*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.LightContext.nullableExpr
   name: nullableExpr
   nameWithType: MapGrammarParser.LightContext.nullableExpr
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.nullableExpr
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.NullableExprContext[]
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.LightContext.nullableExpr
+- uid: Bve5_Parsing.MapGrammar.V2Parser.NullableExprContext[]
   isExternal: true
   name: MapGrammarParser.NullableExprContext[]
   nameWithType: MapGrammarParser.NullableExprContext[]
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.NullableExprContext[]
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.NullableExprContext[]
   nameWithType.vb: MapGrammarParser.NullableExprContext()
-  fullName.vb: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.NullableExprContext()
+  fullName.vb: Bve5_Parsing.MapGrammar.V2Parser.NullableExprContext()
   name.vb: MapGrammarParser.NullableExprContext()
   spec.csharp:
-  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.NullableExprContext
+  - uid: Bve5_Parsing.MapGrammar.V2Parser.NullableExprContext
     name: MapGrammarParser.NullableExprContext
     nameWithType: MapGrammarParser.NullableExprContext
-    fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.NullableExprContext
+    fullName: Bve5_Parsing.MapGrammar.V2Parser.NullableExprContext
   - name: '[]'
     nameWithType: '[]'
     fullName: '[]'
   spec.vb:
-  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.NullableExprContext
+  - uid: Bve5_Parsing.MapGrammar.V2Parser.NullableExprContext
     name: MapGrammarParser.NullableExprContext
     nameWithType: MapGrammarParser.NullableExprContext
-    fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.NullableExprContext
+    fullName: Bve5_Parsing.MapGrammar.V2Parser.NullableExprContext
   - name: ()
     nameWithType: ()
     fullName: ()
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.DIFFUSE*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.DIFFUSE
+- uid: Bve5_Parsing.MapGrammar.V2Parser.LightContext.DIFFUSE*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.LightContext.DIFFUSE
   name: DIFFUSE
   nameWithType: MapGrammarParser.LightContext.DIFFUSE
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.DIFFUSE
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.DIRECTION*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.DIRECTION
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.LightContext.DIFFUSE
+- uid: Bve5_Parsing.MapGrammar.V2Parser.LightContext.DIRECTION*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.LightContext.DIRECTION
   name: DIRECTION
   nameWithType: MapGrammarParser.LightContext.DIRECTION
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.DIRECTION
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.#ctor*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.#ctor
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.LightContext.DIRECTION
+- uid: Bve5_Parsing.MapGrammar.V2Parser.LightContext.#ctor*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.LightContext.#ctor
   name: LightContext
   nameWithType: MapGrammarParser.LightContext.LightContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.LightContext
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.LightContext.LightContext
 - uid: Antlr4.Runtime.RuleContext.RuleIndex
   commentId: P:Antlr4.Runtime.RuleContext.RuleIndex
   parent: Antlr4.Runtime.RuleContext
@@ -2656,11 +2656,11 @@ references:
   name: RuleIndex
   nameWithType: RuleContext.RuleIndex
   fullName: Antlr4.Runtime.RuleContext.RuleIndex
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.RuleIndex*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.RuleIndex
+- uid: Bve5_Parsing.MapGrammar.V2Parser.LightContext.RuleIndex*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.LightContext.RuleIndex
   name: RuleIndex
   nameWithType: MapGrammarParser.LightContext.RuleIndex
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.RuleIndex
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.LightContext.RuleIndex
 - uid: Antlr4.Runtime.ParserRuleContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
   commentId: M:Antlr4.Runtime.ParserRuleContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
   parent: Antlr4.Runtime.ParserRuleContext
@@ -2702,11 +2702,11 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.EnterRule*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.EnterRule
+- uid: Bve5_Parsing.MapGrammar.V2Parser.LightContext.EnterRule*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.LightContext.EnterRule
   name: EnterRule
   nameWithType: MapGrammarParser.LightContext.EnterRule
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.EnterRule
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.LightContext.EnterRule
 - uid: Antlr4.Runtime.Tree.IParseTreeListener
   commentId: T:Antlr4.Runtime.Tree.IParseTreeListener
   parent: Antlr4.Runtime.Tree
@@ -2755,11 +2755,11 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.ExitRule*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.ExitRule
+- uid: Bve5_Parsing.MapGrammar.V2Parser.LightContext.ExitRule*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.LightContext.ExitRule
   name: ExitRule
   nameWithType: MapGrammarParser.LightContext.ExitRule
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.ExitRule
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.LightContext.ExitRule
 - uid: Antlr4.Runtime.RuleContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{{TResult}})
   commentId: M:Antlr4.Runtime.RuleContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
   parent: Antlr4.Runtime.RuleContext
@@ -2822,11 +2822,11 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.Accept*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.Accept
+- uid: Bve5_Parsing.MapGrammar.V2Parser.LightContext.Accept*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.LightContext.Accept
   name: Accept
   nameWithType: MapGrammarParser.LightContext.Accept
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext.Accept
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.LightContext.Accept
 - uid: Antlr4.Runtime.Tree.IParseTreeVisitor{{TResult}}
   commentId: T:Antlr4.Runtime.Tree.IParseTreeVisitor{``0}
   parent: Antlr4.Runtime.Tree

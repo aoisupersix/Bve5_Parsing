@@ -1,654 +1,654 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions
-  commentId: N:Bve5_Parsing.MapGrammar.SyntaxDefinitions
-  id: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
+  commentId: N:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
+  id: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   children:
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.IMapGrammarParserListener
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.IMapGrammarParserVisitor`1
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.AbsExprContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.AdhesionContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.AdhesionStateContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Atan2ExprContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.BackgroundContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.BackgroundStateContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.BeaconContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.BeaconStateContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CabilluminanceContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CabilluminanceStateContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CeilExprContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveStateContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DistanceContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DistanceExprContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DistStateContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceStateContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Encode_stringContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.EncodingContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExpExprContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprArgsContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.FlangenoiseContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.FlangenoiseStateContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.FloorExprContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.FogContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.FogStateContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientStateContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.IncludeContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.IncludeStateContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.InfixExprContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.IrregularityContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.IrregularityStateContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.JointnoiseContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.JointnoiseStateContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LegacyContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LegacyStateContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightStateContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LogExprContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.NullableExprContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.NumberExprContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ParensExprContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.PowExprContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.PretrainContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.PretrainStateContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RandExprContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RepeaterContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RepeaterStateContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseStateContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RootContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SectionContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SectionStateContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SignalContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SignalStateContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SinExprContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dStateContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundStateContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SpeedlimitContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SpeedlimitStateContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SqrtExprContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StatementContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StationContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StationStateContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.String_textContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StringContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StringExprContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StrkeyContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StructureContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StructureStateContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.TrackContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.TrackStateContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.TrainContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.TrainStateContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.UnaryExprContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarAssignContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarAssignStateContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarExprContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParserBaseListener
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParserBaseVisitor`1
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.IMapGrammarParserListener
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.IMapGrammarParserVisitor`1
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarParser
+  - Bve5_Parsing.MapGrammar.V2Parser.AbsExprContext
+  - Bve5_Parsing.MapGrammar.V2Parser.AdhesionContext
+  - Bve5_Parsing.MapGrammar.V2Parser.AdhesionStateContext
+  - Bve5_Parsing.MapGrammar.V2Parser.Atan2ExprContext
+  - Bve5_Parsing.MapGrammar.V2Parser.BackgroundContext
+  - Bve5_Parsing.MapGrammar.V2Parser.BackgroundStateContext
+  - Bve5_Parsing.MapGrammar.V2Parser.BeaconContext
+  - Bve5_Parsing.MapGrammar.V2Parser.BeaconStateContext
+  - Bve5_Parsing.MapGrammar.V2Parser.CabilluminanceContext
+  - Bve5_Parsing.MapGrammar.V2Parser.CabilluminanceStateContext
+  - Bve5_Parsing.MapGrammar.V2Parser.CeilExprContext
+  - Bve5_Parsing.MapGrammar.V2Parser.CosExprContext
+  - Bve5_Parsing.MapGrammar.V2Parser.CurveContext
+  - Bve5_Parsing.MapGrammar.V2Parser.CurveStateContext
+  - Bve5_Parsing.MapGrammar.V2Parser.DistanceContext
+  - Bve5_Parsing.MapGrammar.V2Parser.DistanceExprContext
+  - Bve5_Parsing.MapGrammar.V2Parser.DistStateContext
+  - Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext
+  - Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceStateContext
+  - Bve5_Parsing.MapGrammar.V2Parser.Encode_stringContext
+  - Bve5_Parsing.MapGrammar.V2Parser.EncodingContext
+  - Bve5_Parsing.MapGrammar.V2Parser.ExpExprContext
+  - Bve5_Parsing.MapGrammar.V2Parser.ExprArgsContext
+  - Bve5_Parsing.MapGrammar.V2Parser.ExprContext
+  - Bve5_Parsing.MapGrammar.V2Parser.FlangenoiseContext
+  - Bve5_Parsing.MapGrammar.V2Parser.FlangenoiseStateContext
+  - Bve5_Parsing.MapGrammar.V2Parser.FloorExprContext
+  - Bve5_Parsing.MapGrammar.V2Parser.FogContext
+  - Bve5_Parsing.MapGrammar.V2Parser.FogStateContext
+  - Bve5_Parsing.MapGrammar.V2Parser.GradientContext
+  - Bve5_Parsing.MapGrammar.V2Parser.GradientStateContext
+  - Bve5_Parsing.MapGrammar.V2Parser.IncludeContext
+  - Bve5_Parsing.MapGrammar.V2Parser.IncludeStateContext
+  - Bve5_Parsing.MapGrammar.V2Parser.InfixExprContext
+  - Bve5_Parsing.MapGrammar.V2Parser.IrregularityContext
+  - Bve5_Parsing.MapGrammar.V2Parser.IrregularityStateContext
+  - Bve5_Parsing.MapGrammar.V2Parser.JointnoiseContext
+  - Bve5_Parsing.MapGrammar.V2Parser.JointnoiseStateContext
+  - Bve5_Parsing.MapGrammar.V2Parser.LegacyContext
+  - Bve5_Parsing.MapGrammar.V2Parser.LegacyStateContext
+  - Bve5_Parsing.MapGrammar.V2Parser.LightContext
+  - Bve5_Parsing.MapGrammar.V2Parser.LightStateContext
+  - Bve5_Parsing.MapGrammar.V2Parser.LogExprContext
+  - Bve5_Parsing.MapGrammar.V2Parser.NullableExprContext
+  - Bve5_Parsing.MapGrammar.V2Parser.NumberExprContext
+  - Bve5_Parsing.MapGrammar.V2Parser.ParensExprContext
+  - Bve5_Parsing.MapGrammar.V2Parser.PowExprContext
+  - Bve5_Parsing.MapGrammar.V2Parser.PretrainContext
+  - Bve5_Parsing.MapGrammar.V2Parser.PretrainStateContext
+  - Bve5_Parsing.MapGrammar.V2Parser.RandExprContext
+  - Bve5_Parsing.MapGrammar.V2Parser.RepeaterContext
+  - Bve5_Parsing.MapGrammar.V2Parser.RepeaterStateContext
+  - Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext
+  - Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseStateContext
+  - Bve5_Parsing.MapGrammar.V2Parser.RootContext
+  - Bve5_Parsing.MapGrammar.V2Parser.SectionContext
+  - Bve5_Parsing.MapGrammar.V2Parser.SectionStateContext
+  - Bve5_Parsing.MapGrammar.V2Parser.SignalContext
+  - Bve5_Parsing.MapGrammar.V2Parser.SignalStateContext
+  - Bve5_Parsing.MapGrammar.V2Parser.SinExprContext
+  - Bve5_Parsing.MapGrammar.V2Parser.Sound3dContext
+  - Bve5_Parsing.MapGrammar.V2Parser.Sound3dStateContext
+  - Bve5_Parsing.MapGrammar.V2Parser.SoundContext
+  - Bve5_Parsing.MapGrammar.V2Parser.SoundStateContext
+  - Bve5_Parsing.MapGrammar.V2Parser.SpeedlimitContext
+  - Bve5_Parsing.MapGrammar.V2Parser.SpeedlimitStateContext
+  - Bve5_Parsing.MapGrammar.V2Parser.SqrtExprContext
+  - Bve5_Parsing.MapGrammar.V2Parser.StatementContext
+  - Bve5_Parsing.MapGrammar.V2Parser.StationContext
+  - Bve5_Parsing.MapGrammar.V2Parser.StationStateContext
+  - Bve5_Parsing.MapGrammar.V2Parser.String_textContext
+  - Bve5_Parsing.MapGrammar.V2Parser.StringContext
+  - Bve5_Parsing.MapGrammar.V2Parser.StringExprContext
+  - Bve5_Parsing.MapGrammar.V2Parser.StrkeyContext
+  - Bve5_Parsing.MapGrammar.V2Parser.StructureContext
+  - Bve5_Parsing.MapGrammar.V2Parser.StructureStateContext
+  - Bve5_Parsing.MapGrammar.V2Parser.TrackContext
+  - Bve5_Parsing.MapGrammar.V2Parser.TrackStateContext
+  - Bve5_Parsing.MapGrammar.V2Parser.TrainContext
+  - Bve5_Parsing.MapGrammar.V2Parser.TrainStateContext
+  - Bve5_Parsing.MapGrammar.V2Parser.UnaryExprContext
+  - Bve5_Parsing.MapGrammar.V2Parser.VarAssignContext
+  - Bve5_Parsing.MapGrammar.V2Parser.VarAssignStateContext
+  - Bve5_Parsing.MapGrammar.V2Parser.VarContext
+  - Bve5_Parsing.MapGrammar.V2Parser.VarExprContext
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarParserBaseListener
+  - Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarParserBaseVisitor`1
   langs:
   - csharp
   - vb
-  name: Bve5_Parsing.MapGrammar.SyntaxDefinitions
-  nameWithType: Bve5_Parsing.MapGrammar.SyntaxDefinitions
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  name: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
+  nameWithType: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   type: Namespace
   assemblies:
   - Bve5_Parsing
 references:
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
   name: MapGrammarLexer
   nameWithType: MapGrammarLexer
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarLexer
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarLexer
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarParser
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarParser
   name: MapGrammarParser
   nameWithType: MapGrammarParser
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RootContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RootContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarParser
+- uid: Bve5_Parsing.MapGrammar.V2Parser.RootContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.RootContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.RootContext
   nameWithType: MapGrammarParser.RootContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RootContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StatementContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StatementContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.RootContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.StatementContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.StatementContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.StatementContext
   nameWithType: MapGrammarParser.StatementContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StatementContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StructureStateContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StructureStateContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.StatementContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.StructureStateContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.StructureStateContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.StructureStateContext
   nameWithType: MapGrammarParser.StructureStateContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StructureStateContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CabilluminanceStateContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CabilluminanceStateContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.StructureStateContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CabilluminanceStateContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.CabilluminanceStateContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.CabilluminanceStateContext
   nameWithType: MapGrammarParser.CabilluminanceStateContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CabilluminanceStateContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StationStateContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StationStateContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CabilluminanceStateContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.StationStateContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.StationStateContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.StationStateContext
   nameWithType: MapGrammarParser.StationStateContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StationStateContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SpeedlimitStateContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SpeedlimitStateContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.StationStateContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SpeedlimitStateContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.SpeedlimitStateContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.SpeedlimitStateContext
   nameWithType: MapGrammarParser.SpeedlimitStateContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SpeedlimitStateContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LegacyStateContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LegacyStateContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SpeedlimitStateContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.LegacyStateContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.LegacyStateContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.LegacyStateContext
   nameWithType: MapGrammarParser.LegacyStateContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LegacyStateContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.TrainStateContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.TrainStateContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.LegacyStateContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.TrainStateContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.TrainStateContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.TrainStateContext
   nameWithType: MapGrammarParser.TrainStateContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.TrainStateContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveStateContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveStateContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.TrainStateContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CurveStateContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.CurveStateContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.CurveStateContext
   nameWithType: MapGrammarParser.CurveStateContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveStateContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.BackgroundStateContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.BackgroundStateContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CurveStateContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.BackgroundStateContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.BackgroundStateContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.BackgroundStateContext
   nameWithType: MapGrammarParser.BackgroundStateContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.BackgroundStateContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseStateContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseStateContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.BackgroundStateContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseStateContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseStateContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.RollingnoiseStateContext
   nameWithType: MapGrammarParser.RollingnoiseStateContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseStateContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.FogStateContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.FogStateContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseStateContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.FogStateContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.FogStateContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.FogStateContext
   nameWithType: MapGrammarParser.FogStateContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.FogStateContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.IncludeStateContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.IncludeStateContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.FogStateContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.IncludeStateContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.IncludeStateContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.IncludeStateContext
   nameWithType: MapGrammarParser.IncludeStateContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.IncludeStateContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.PretrainStateContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.PretrainStateContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.IncludeStateContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.PretrainStateContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.PretrainStateContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.PretrainStateContext
   nameWithType: MapGrammarParser.PretrainStateContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.PretrainStateContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.AdhesionStateContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.AdhesionStateContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.PretrainStateContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.AdhesionStateContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.AdhesionStateContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.AdhesionStateContext
   nameWithType: MapGrammarParser.AdhesionStateContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.AdhesionStateContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceStateContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceStateContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.AdhesionStateContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceStateContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceStateContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.DrawdistanceStateContext
   nameWithType: MapGrammarParser.DrawdistanceStateContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceStateContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.IrregularityStateContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.IrregularityStateContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceStateContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.IrregularityStateContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.IrregularityStateContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.IrregularityStateContext
   nameWithType: MapGrammarParser.IrregularityStateContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.IrregularityStateContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundStateContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundStateContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.IrregularityStateContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SoundStateContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.SoundStateContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.SoundStateContext
   nameWithType: MapGrammarParser.SoundStateContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundStateContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SectionStateContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SectionStateContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SoundStateContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SectionStateContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.SectionStateContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.SectionStateContext
   nameWithType: MapGrammarParser.SectionStateContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SectionStateContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightStateContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightStateContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SectionStateContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.LightStateContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.LightStateContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.LightStateContext
   nameWithType: MapGrammarParser.LightStateContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightStateContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.BeaconStateContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.BeaconStateContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.LightStateContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.BeaconStateContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.BeaconStateContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.BeaconStateContext
   nameWithType: MapGrammarParser.BeaconStateContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.BeaconStateContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.FlangenoiseStateContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.FlangenoiseStateContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.BeaconStateContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.FlangenoiseStateContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.FlangenoiseStateContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.FlangenoiseStateContext
   nameWithType: MapGrammarParser.FlangenoiseStateContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.FlangenoiseStateContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DistStateContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DistStateContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.FlangenoiseStateContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.DistStateContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.DistStateContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.DistStateContext
   nameWithType: MapGrammarParser.DistStateContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DistStateContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarAssignStateContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarAssignStateContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.DistStateContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.VarAssignStateContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.VarAssignStateContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.VarAssignStateContext
   nameWithType: MapGrammarParser.VarAssignStateContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarAssignStateContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RepeaterStateContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RepeaterStateContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.VarAssignStateContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.RepeaterStateContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.RepeaterStateContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.RepeaterStateContext
   nameWithType: MapGrammarParser.RepeaterStateContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RepeaterStateContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientStateContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientStateContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.RepeaterStateContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.GradientStateContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.GradientStateContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.GradientStateContext
   nameWithType: MapGrammarParser.GradientStateContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientStateContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SignalStateContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SignalStateContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.GradientStateContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SignalStateContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.SignalStateContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.SignalStateContext
   nameWithType: MapGrammarParser.SignalStateContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SignalStateContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.JointnoiseStateContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.JointnoiseStateContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SignalStateContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.JointnoiseStateContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.JointnoiseStateContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.JointnoiseStateContext
   nameWithType: MapGrammarParser.JointnoiseStateContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.JointnoiseStateContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.TrackStateContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.TrackStateContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.JointnoiseStateContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.TrackStateContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.TrackStateContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.TrackStateContext
   nameWithType: MapGrammarParser.TrackStateContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.TrackStateContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dStateContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dStateContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.TrackStateContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.Sound3dStateContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.Sound3dStateContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.Sound3dStateContext
   nameWithType: MapGrammarParser.Sound3dStateContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dStateContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DistanceContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DistanceContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.Sound3dStateContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.DistanceContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.DistanceContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.DistanceContext
   nameWithType: MapGrammarParser.DistanceContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DistanceContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.IncludeContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.IncludeContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.DistanceContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.IncludeContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.IncludeContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.IncludeContext
   nameWithType: MapGrammarParser.IncludeContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.IncludeContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.IncludeContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CurveContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.CurveContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.CurveContext
   nameWithType: MapGrammarParser.CurveContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CurveContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CurveContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.GradientContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.GradientContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.GradientContext
   nameWithType: MapGrammarParser.GradientContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.GradientContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.TrackContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.TrackContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.GradientContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.TrackContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.TrackContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.TrackContext
   nameWithType: MapGrammarParser.TrackContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.TrackContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StructureContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StructureContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.TrackContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.StructureContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.StructureContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.StructureContext
   nameWithType: MapGrammarParser.StructureContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StructureContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RepeaterContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RepeaterContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.StructureContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.RepeaterContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.RepeaterContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.RepeaterContext
   nameWithType: MapGrammarParser.RepeaterContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RepeaterContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.BackgroundContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.BackgroundContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.RepeaterContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.BackgroundContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.BackgroundContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.BackgroundContext
   nameWithType: MapGrammarParser.BackgroundContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.BackgroundContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StationContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StationContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.BackgroundContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.StationContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.StationContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.StationContext
   nameWithType: MapGrammarParser.StationContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StationContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SectionContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SectionContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.StationContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SectionContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.SectionContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.SectionContext
   nameWithType: MapGrammarParser.SectionContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SectionContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SignalContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SignalContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SectionContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SignalContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.SignalContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.SignalContext
   nameWithType: MapGrammarParser.SignalContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SignalContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.BeaconContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.BeaconContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SignalContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.BeaconContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.BeaconContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.BeaconContext
   nameWithType: MapGrammarParser.BeaconContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.BeaconContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SpeedlimitContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SpeedlimitContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.BeaconContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SpeedlimitContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.SpeedlimitContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.SpeedlimitContext
   nameWithType: MapGrammarParser.SpeedlimitContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SpeedlimitContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.PretrainContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.PretrainContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SpeedlimitContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.PretrainContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.PretrainContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.PretrainContext
   nameWithType: MapGrammarParser.PretrainContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.PretrainContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.PretrainContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.LightContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.LightContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.LightContext
   nameWithType: MapGrammarParser.LightContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LightContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.FogContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.FogContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.LightContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.FogContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.FogContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.FogContext
   nameWithType: MapGrammarParser.FogContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.FogContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.FogContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.DrawdistanceContext
   nameWithType: MapGrammarParser.DrawdistanceContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CabilluminanceContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CabilluminanceContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CabilluminanceContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.CabilluminanceContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.CabilluminanceContext
   nameWithType: MapGrammarParser.CabilluminanceContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CabilluminanceContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.IrregularityContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.IrregularityContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CabilluminanceContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.IrregularityContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.IrregularityContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.IrregularityContext
   nameWithType: MapGrammarParser.IrregularityContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.IrregularityContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.AdhesionContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.AdhesionContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.IrregularityContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.AdhesionContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.AdhesionContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.AdhesionContext
   nameWithType: MapGrammarParser.AdhesionContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.AdhesionContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.AdhesionContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SoundContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.SoundContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.SoundContext
   nameWithType: MapGrammarParser.SoundContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SoundContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SoundContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.Sound3dContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.Sound3dContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.Sound3dContext
   nameWithType: MapGrammarParser.Sound3dContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Sound3dContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.Sound3dContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.RollingnoiseContext
   nameWithType: MapGrammarParser.RollingnoiseContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RollingnoiseContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.FlangenoiseContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.FlangenoiseContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.RollingnoiseContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.FlangenoiseContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.FlangenoiseContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.FlangenoiseContext
   nameWithType: MapGrammarParser.FlangenoiseContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.FlangenoiseContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.JointnoiseContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.JointnoiseContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.FlangenoiseContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.JointnoiseContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.JointnoiseContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.JointnoiseContext
   nameWithType: MapGrammarParser.JointnoiseContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.JointnoiseContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.TrainContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.TrainContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.JointnoiseContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.TrainContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.TrainContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.TrainContext
   nameWithType: MapGrammarParser.TrainContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.TrainContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StrkeyContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StrkeyContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.TrainContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.StrkeyContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.StrkeyContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.StrkeyContext
   nameWithType: MapGrammarParser.StrkeyContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StrkeyContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprArgsContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprArgsContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.StrkeyContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.ExprArgsContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.ExprArgsContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.ExprArgsContext
   nameWithType: MapGrammarParser.ExprArgsContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprArgsContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarAssignContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarAssignContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.ExprArgsContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.VarAssignContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.VarAssignContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.VarAssignContext
   nameWithType: MapGrammarParser.VarAssignContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarAssignContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LegacyContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LegacyContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.VarAssignContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.LegacyContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.LegacyContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.LegacyContext
   nameWithType: MapGrammarParser.LegacyContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LegacyContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.NullableExprContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.NullableExprContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.LegacyContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.NullableExprContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.NullableExprContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.NullableExprContext
   nameWithType: MapGrammarParser.NullableExprContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.NullableExprContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.NullableExprContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.ExprContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.ExprContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.ExprContext
   nameWithType: MapGrammarParser.ExprContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RandExprContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RandExprContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.ExprContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.RandExprContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.RandExprContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.RandExprContext
   nameWithType: MapGrammarParser.RandExprContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RandExprContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SinExprContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SinExprContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.RandExprContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SinExprContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.SinExprContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.SinExprContext
   nameWithType: MapGrammarParser.SinExprContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SinExprContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SqrtExprContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SqrtExprContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SinExprContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SqrtExprContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.SqrtExprContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.SqrtExprContext
   nameWithType: MapGrammarParser.SqrtExprContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SqrtExprContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.NumberExprContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.NumberExprContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SqrtExprContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.NumberExprContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.NumberExprContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.NumberExprContext
   nameWithType: MapGrammarParser.NumberExprContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.NumberExprContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.FloorExprContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.FloorExprContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.NumberExprContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.FloorExprContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.FloorExprContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.FloorExprContext
   nameWithType: MapGrammarParser.FloorExprContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.FloorExprContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.AbsExprContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.AbsExprContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.FloorExprContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.AbsExprContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.AbsExprContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.AbsExprContext
   nameWithType: MapGrammarParser.AbsExprContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.AbsExprContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ParensExprContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ParensExprContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.AbsExprContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.ParensExprContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.ParensExprContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.ParensExprContext
   nameWithType: MapGrammarParser.ParensExprContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ParensExprContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Atan2ExprContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Atan2ExprContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.ParensExprContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.Atan2ExprContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.Atan2ExprContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.Atan2ExprContext
   nameWithType: MapGrammarParser.Atan2ExprContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Atan2ExprContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LogExprContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LogExprContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.Atan2ExprContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.LogExprContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.LogExprContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.LogExprContext
   nameWithType: MapGrammarParser.LogExprContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LogExprContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StringExprContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StringExprContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.LogExprContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.StringExprContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.StringExprContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.StringExprContext
   nameWithType: MapGrammarParser.StringExprContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StringExprContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarExprContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarExprContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.StringExprContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.VarExprContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.VarExprContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.VarExprContext
   nameWithType: MapGrammarParser.VarExprContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarExprContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.InfixExprContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.InfixExprContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.VarExprContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.InfixExprContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.InfixExprContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.InfixExprContext
   nameWithType: MapGrammarParser.InfixExprContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.InfixExprContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.UnaryExprContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.UnaryExprContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.InfixExprContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.UnaryExprContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.UnaryExprContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.UnaryExprContext
   nameWithType: MapGrammarParser.UnaryExprContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.UnaryExprContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CeilExprContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CeilExprContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.UnaryExprContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CeilExprContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.CeilExprContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.CeilExprContext
   nameWithType: MapGrammarParser.CeilExprContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CeilExprContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CeilExprContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CosExprContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.CosExprContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.CosExprContext
   nameWithType: MapGrammarParser.CosExprContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExpExprContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExpExprContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CosExprContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.ExpExprContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.ExpExprContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.ExpExprContext
   nameWithType: MapGrammarParser.ExpExprContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExpExprContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DistanceExprContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DistanceExprContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.ExpExprContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.DistanceExprContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.DistanceExprContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.DistanceExprContext
   nameWithType: MapGrammarParser.DistanceExprContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DistanceExprContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.PowExprContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.PowExprContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.DistanceExprContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.PowExprContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.PowExprContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.PowExprContext
   nameWithType: MapGrammarParser.PowExprContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.PowExprContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.PowExprContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.VarContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.VarContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.VarContext
   nameWithType: MapGrammarParser.VarContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StringContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StringContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.VarContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.StringContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.StringContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.StringContext
   nameWithType: MapGrammarParser.StringContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StringContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.String_textContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.String_textContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.StringContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.String_textContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.String_textContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.String_textContext
   nameWithType: MapGrammarParser.String_textContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.String_textContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.EncodingContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.EncodingContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.String_textContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.EncodingContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.EncodingContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.EncodingContext
   nameWithType: MapGrammarParser.EncodingContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.EncodingContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Encode_stringContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Encode_stringContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.EncodingContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.Encode_stringContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.Encode_stringContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.Encode_stringContext
   nameWithType: MapGrammarParser.Encode_stringContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Encode_stringContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.IMapGrammarParserListener
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.IMapGrammarParserListener
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.Encode_stringContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.IMapGrammarParserListener
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.IMapGrammarParserListener
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: IMapGrammarParserListener
   nameWithType: IMapGrammarParserListener
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.IMapGrammarParserListener
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParserBaseListener
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParserBaseListener
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.IMapGrammarParserListener
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarParserBaseListener
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarParserBaseListener
   name: MapGrammarParserBaseListener
   nameWithType: MapGrammarParserBaseListener
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParserBaseListener
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.IMapGrammarParserVisitor`1
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.IMapGrammarParserVisitor`1
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarParserBaseListener
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.IMapGrammarParserVisitor`1
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.IMapGrammarParserVisitor`1
   name: IMapGrammarParserVisitor<Result>
   nameWithType: IMapGrammarParserVisitor<Result>
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.IMapGrammarParserVisitor<Result>
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.IMapGrammarParserVisitor<Result>
   nameWithType.vb: IMapGrammarParserVisitor(Of Result)
-  fullName.vb: Bve5_Parsing.MapGrammar.SyntaxDefinitions.IMapGrammarParserVisitor(Of Result)
+  fullName.vb: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.IMapGrammarParserVisitor(Of Result)
   name.vb: IMapGrammarParserVisitor(Of Result)
   spec.csharp:
-  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.IMapGrammarParserVisitor`1
+  - uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.IMapGrammarParserVisitor`1
     name: IMapGrammarParserVisitor
     nameWithType: IMapGrammarParserVisitor
-    fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.IMapGrammarParserVisitor
+    fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.IMapGrammarParserVisitor
   - name: <
     nameWithType: <
     fullName: <
@@ -659,10 +659,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.IMapGrammarParserVisitor`1
+  - uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.IMapGrammarParserVisitor`1
     name: IMapGrammarParserVisitor
     nameWithType: IMapGrammarParserVisitor
-    fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.IMapGrammarParserVisitor
+    fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.IMapGrammarParserVisitor
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
@@ -672,19 +672,19 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParserBaseVisitor`1
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParserBaseVisitor`1
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarParserBaseVisitor`1
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarParserBaseVisitor`1
   name: MapGrammarParserBaseVisitor<Result>
   nameWithType: MapGrammarParserBaseVisitor<Result>
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParserBaseVisitor<Result>
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarParserBaseVisitor<Result>
   nameWithType.vb: MapGrammarParserBaseVisitor(Of Result)
-  fullName.vb: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParserBaseVisitor(Of Result)
+  fullName.vb: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarParserBaseVisitor(Of Result)
   name.vb: MapGrammarParserBaseVisitor(Of Result)
   spec.csharp:
-  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParserBaseVisitor`1
+  - uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarParserBaseVisitor`1
     name: MapGrammarParserBaseVisitor
     nameWithType: MapGrammarParserBaseVisitor
-    fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParserBaseVisitor
+    fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarParserBaseVisitor
   - name: <
     nameWithType: <
     fullName: <
@@ -695,10 +695,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParserBaseVisitor`1
+  - uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarParserBaseVisitor`1
     name: MapGrammarParserBaseVisitor
     nameWithType: MapGrammarParserBaseVisitor
-    fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParserBaseVisitor
+    fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions.MapGrammarParserBaseVisitor
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
@@ -708,8 +708,8 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions
-  commentId: N:Bve5_Parsing.MapGrammar.SyntaxDefinitions
-  name: Bve5_Parsing.MapGrammar.SyntaxDefinitions
-  nameWithType: Bve5_Parsing.MapGrammar.SyntaxDefinitions
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
+  commentId: N:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
+  name: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
+  nameWithType: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions

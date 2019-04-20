@@ -1,6 +1,6 @@
 ﻿using Antlr4.Runtime;
 using Antlr4.Runtime.Misc;
-using Bve5_Parsing.MapGrammar.SyntaxDefinitions;
+using Bve5_Parsing.MapGrammar.V1Parser.SyntaxDefinitions;
 
 namespace Bve5_Parsing.MapGrammar
 {
@@ -77,21 +77,5 @@ namespace Bve5_Parsing.MapGrammar
             recognizer.NotifyErrorListeners(offendingToken, message, null);
         }
         #endregion
-
-        /// <summary>
-        /// エラーの復帰処理を行います。
-        /// 次のステートメントの終わり、もしくは構文の終わり(EOF)まで字句を読み飛ばします。
-        /// </summary>
-        /// <param name="recognizer"></param>
-        /// <param name="e"></param>
-        public override void Recover(Parser recognizer, RecognitionException e)
-        {
-            int ttype = recognizer.InputStream.La(1);
-            while (ttype != MapGrammarLexer.Eof && ttype != MapGrammarLexer.STATE_END)
-            {
-                recognizer.Consume();
-                ttype = recognizer.InputStream.La(1);
-            }
-        }
     }
 }

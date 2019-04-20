@@ -1,8 +1,8 @@
 language: csharp
 solution: Bve5_Parsing.sln
 mono: none
-dotnet: 2.0.0
-dist: trusty
+dotnet: 2.2
+dist: xenial
 
 script:
   - dotnet restore

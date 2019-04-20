@@ -18,7 +18,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: MapSubElementName
     path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
@@ -53,7 +57,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: X
     path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
@@ -100,7 +108,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Y
     path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
@@ -147,7 +159,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Cant
     path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs

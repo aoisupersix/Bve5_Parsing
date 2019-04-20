@@ -21,7 +21,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: SignalSpeedlimitStatement
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
@@ -77,7 +81,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: ElementName
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
@@ -117,7 +125,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: FunctionName
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
@@ -157,7 +169,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: HasKey
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
@@ -197,7 +213,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: HasSubElement
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
@@ -237,7 +257,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: .ctor
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
@@ -269,7 +293,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: .ctor
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs

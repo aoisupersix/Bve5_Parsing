@@ -58,20 +58,6 @@ namespace Bve5_Parsing.MapGrammar
         {
             evaluateData = new MapData();
 
-            if (node.Version == null)
-            {
-
-            }
-            else
-            {
-                evaluateData.Version = node.Version.Text;
-                if (node.Version.Text != "2.02")
-                    Errors.Add(node.CreateNewWarning($"バージョン：\"{node.Version.Text}\"はBve5_Parsingではサポートしていないバージョンです。"));
-            }
-
-            if (node.Encoding != null)
-                evaluateData.Encoding = node.Encoding.text;
-
             foreach(var state in node.StatementList)
             {
                 object childData = Visit(state);
@@ -180,7 +166,7 @@ namespace Bve5_Parsing.MapGrammar
             if (node.Path == null)
                 Errors.Add(node.CreateNewError("ファイルパスが指定されていません。"));
             else
-                evaluateData.SetListPathToString(node.MapElementName, node.Path.text);
+                evaluateData.SetListPathToString(node.MapElementName, node.Path);
 
             return null;
         }
@@ -922,7 +908,7 @@ namespace Bve5_Parsing.MapGrammar
         /// <returns>文字列(String)</returns>
         public override object Visit(StringNode node)
         {
-            return node.Value.text;
+            return node.Value;
         }
 
         /// <summary>

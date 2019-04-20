@@ -2,7 +2,6 @@
 using Bve5_Parsing.MapGrammar.EvaluateData;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using static Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser;
 
 namespace Bve5_Parsing.MapGrammar.AstNodes
 {
@@ -13,8 +12,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     {
 
         public List<MapGrammarAstNodes> StatementList { get; set; }
-        public IToken Version { get; set; }
-        public EncodingContext Encoding { get; set; }
+
         public RootNode(IToken start, IToken stop) : base(start, stop)
         {
             StatementList = new List<MapGrammarAstNodes>();
@@ -393,7 +391,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     /// </summary>
     public class StringNode : MapGrammarAstNodes
     {
-        public StringContext Value { get; set; }
+        public string Value { get; set; }
 
         public StringNode(IToken start, IToken stop) : base(start, stop) { }
     }
@@ -466,7 +464,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     public class LoadListNode : MapGrammarAstNodes
     {
         public string MapElementName { get; set; }
-        public StringContext Path { get; set; }
+        public string Path { get; set; }
 
         public LoadListNode(IToken start, IToken stop) : base(start, stop) { }
     }

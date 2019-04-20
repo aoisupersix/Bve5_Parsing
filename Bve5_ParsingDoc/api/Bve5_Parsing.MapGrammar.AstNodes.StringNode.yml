@@ -17,11 +17,15 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: StringNode
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs
-    startLine: 393
+    startLine: 391
   assemblies:
   - Bve5_Parsing
   namespace: Bve5_Parsing.MapGrammar.AstNodes
@@ -67,20 +71,24 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Value
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs
-    startLine: 395
+    startLine: 393
   assemblies:
   - Bve5_Parsing
   namespace: Bve5_Parsing.MapGrammar.AstNodes
   syntax:
-    content: public MapGrammarParser.StringContext Value { get; set; }
+    content: public string Value { get; set; }
     parameters: []
     return:
-      type: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StringContext
-    content.vb: Public Property Value As MapGrammarParser.StringContext
+      type: System.String
+    content.vb: Public Property Value As String
   overload: Bve5_Parsing.MapGrammar.AstNodes.StringNode.Value*
   modifiers.csharp:
   - public
@@ -102,11 +110,15 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: .ctor
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs
-    startLine: 397
+    startLine: 395
   assemblies:
   - Bve5_Parsing
   namespace: Bve5_Parsing.MapGrammar.AstNodes
@@ -522,17 +534,13 @@ references:
   name: Value
   nameWithType: StringNode.Value
   fullName: Bve5_Parsing.MapGrammar.AstNodes.StringNode.Value
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StringContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StringContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
-  name: MapGrammarParser.StringContext
-  nameWithType: MapGrammarParser.StringContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StringContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions
-  commentId: N:Bve5_Parsing.MapGrammar.SyntaxDefinitions
-  name: Bve5_Parsing.MapGrammar.SyntaxDefinitions
-  nameWithType: Bve5_Parsing.MapGrammar.SyntaxDefinitions
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
 - uid: Bve5_Parsing.MapGrammar.AstNodes.StringNode.#ctor*
   commentId: Overload:Bve5_Parsing.MapGrammar.AstNodes.StringNode.#ctor
   name: StringNode

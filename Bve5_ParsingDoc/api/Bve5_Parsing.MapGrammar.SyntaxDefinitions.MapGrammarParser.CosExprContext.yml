@@ -1,26 +1,26 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CosExprContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.CosExprContext
   id: MapGrammarParser.CosExprContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   children:
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext.#ctor(Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext)
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext.CLS_PAR
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext.COS
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext.expr
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext.func
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext.OPN_PAR
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext.value
+  - Bve5_Parsing.MapGrammar.V2Parser.CosExprContext.#ctor(Bve5_Parsing.MapGrammar.V2Parser.ExprContext)
+  - Bve5_Parsing.MapGrammar.V2Parser.CosExprContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
+  - Bve5_Parsing.MapGrammar.V2Parser.CosExprContext.CLS_PAR
+  - Bve5_Parsing.MapGrammar.V2Parser.CosExprContext.COS
+  - Bve5_Parsing.MapGrammar.V2Parser.CosExprContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
+  - Bve5_Parsing.MapGrammar.V2Parser.CosExprContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
+  - Bve5_Parsing.MapGrammar.V2Parser.CosExprContext.expr
+  - Bve5_Parsing.MapGrammar.V2Parser.CosExprContext.func
+  - Bve5_Parsing.MapGrammar.V2Parser.CosExprContext.OPN_PAR
+  - Bve5_Parsing.MapGrammar.V2Parser.CosExprContext.value
   langs:
   - csharp
   - vb
   name: MapGrammarParser.CosExprContext
   nameWithType: MapGrammarParser.CosExprContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CosExprContext
   type: Class
   source:
     remote:
@@ -32,7 +32,7 @@ items:
     startLine: 4557
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: 'public class CosExprContext : MapGrammarParser.ExprContext, IRuleNode, IParseTree, ISyntaxTree, ITree'
     content.vb: >-
@@ -43,15 +43,15 @@ items:
   - System.Object
   - Antlr4.Runtime.RuleContext
   - Antlr4.Runtime.ParserRuleContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext
+  - Bve5_Parsing.MapGrammar.V2Parser.ExprContext
   implements:
   - Antlr4.Runtime.Tree.IRuleNode
   - Antlr4.Runtime.Tree.IParseTree
   - Antlr4.Runtime.Tree.ISyntaxTree
   - Antlr4.Runtime.Tree.ITree
   inheritedMembers:
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext.RuleIndex
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext.CopyFrom(Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext)
+  - Bve5_Parsing.MapGrammar.V2Parser.ExprContext.RuleIndex
+  - Bve5_Parsing.MapGrammar.V2Parser.ExprContext.CopyFrom(Bve5_Parsing.MapGrammar.V2Parser.ExprContext)
   - Antlr4.Runtime.ParserRuleContext.children
   - Antlr4.Runtime.ParserRuleContext.start
   - Antlr4.Runtime.ParserRuleContext.stop
@@ -110,16 +110,16 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext.func
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext.func
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CosExprContext.func
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.CosExprContext.func
   id: func
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.CosExprContext
   langs:
   - csharp
   - vb
   name: func
   nameWithType: MapGrammarParser.CosExprContext.func
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext.func
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CosExprContext.func
   type: Field
   source:
     remote:
@@ -131,7 +131,7 @@ items:
     startLine: 4558
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public IToken func
     return:
@@ -141,16 +141,16 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext.value
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext.value
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CosExprContext.value
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.CosExprContext.value
   id: value
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.CosExprContext
   langs:
   - csharp
   - vb
   name: value
   nameWithType: MapGrammarParser.CosExprContext.value
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext.value
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CosExprContext.value
   type: Field
   source:
     remote:
@@ -162,26 +162,26 @@ items:
     startLine: 4559
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public MapGrammarParser.ExprContext value
     return:
-      type: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext
+      type: Bve5_Parsing.MapGrammar.V2Parser.ExprContext
     content.vb: Public value As MapGrammarParser.ExprContext
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext.OPN_PAR
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext.OPN_PAR
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CosExprContext.OPN_PAR
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.CosExprContext.OPN_PAR
   id: OPN_PAR
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.CosExprContext
   langs:
   - csharp
   - vb
   name: OPN_PAR()
   nameWithType: MapGrammarParser.CosExprContext.OPN_PAR()
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext.OPN_PAR()
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CosExprContext.OPN_PAR()
   type: Method
   source:
     remote:
@@ -193,27 +193,27 @@ items:
     startLine: 4560
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public ITerminalNode OPN_PAR()
     return:
       type: Antlr4.Runtime.Tree.ITerminalNode
     content.vb: Public Function OPN_PAR As ITerminalNode
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext.OPN_PAR*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.CosExprContext.OPN_PAR*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext.CLS_PAR
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext.CLS_PAR
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CosExprContext.CLS_PAR
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.CosExprContext.CLS_PAR
   id: CLS_PAR
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.CosExprContext
   langs:
   - csharp
   - vb
   name: CLS_PAR()
   nameWithType: MapGrammarParser.CosExprContext.CLS_PAR()
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext.CLS_PAR()
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CosExprContext.CLS_PAR()
   type: Method
   source:
     remote:
@@ -225,27 +225,27 @@ items:
     startLine: 4561
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public ITerminalNode CLS_PAR()
     return:
       type: Antlr4.Runtime.Tree.ITerminalNode
     content.vb: Public Function CLS_PAR As ITerminalNode
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext.CLS_PAR*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.CosExprContext.CLS_PAR*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext.COS
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext.COS
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CosExprContext.COS
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.CosExprContext.COS
   id: COS
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.CosExprContext
   langs:
   - csharp
   - vb
   name: COS()
   nameWithType: MapGrammarParser.CosExprContext.COS()
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext.COS()
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CosExprContext.COS()
   type: Method
   source:
     remote:
@@ -257,27 +257,27 @@ items:
     startLine: 4562
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public ITerminalNode COS()
     return:
       type: Antlr4.Runtime.Tree.ITerminalNode
     content.vb: Public Function COS As ITerminalNode
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext.COS*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.CosExprContext.COS*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext.expr
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext.expr
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CosExprContext.expr
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.CosExprContext.expr
   id: expr
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.CosExprContext
   langs:
   - csharp
   - vb
   name: expr()
   nameWithType: MapGrammarParser.CosExprContext.expr()
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext.expr()
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CosExprContext.expr()
   type: Method
   source:
     remote:
@@ -289,27 +289,27 @@ items:
     startLine: 4563
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public MapGrammarParser.ExprContext expr()
     return:
-      type: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext
+      type: Bve5_Parsing.MapGrammar.V2Parser.ExprContext
     content.vb: Public Function expr As MapGrammarParser.ExprContext
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext.expr*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.CosExprContext.expr*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext.#ctor(Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext)
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext.#ctor(Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext)
-  id: '#ctor(Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext)'
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CosExprContext.#ctor(Bve5_Parsing.MapGrammar.V2Parser.ExprContext)
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.CosExprContext.#ctor(Bve5_Parsing.MapGrammar.V2Parser.ExprContext)
+  id: '#ctor(Bve5_Parsing.MapGrammar.V2Parser.ExprContext)'
+  parent: Bve5_Parsing.MapGrammar.V2Parser.CosExprContext
   langs:
   - csharp
   - vb
   name: CosExprContext(MapGrammarParser.ExprContext)
   nameWithType: MapGrammarParser.CosExprContext.CosExprContext(MapGrammarParser.ExprContext)
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext.CosExprContext(Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext)
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CosExprContext.CosExprContext(Bve5_Parsing.MapGrammar.V2Parser.ExprContext)
   type: Constructor
   source:
     remote:
@@ -321,28 +321,28 @@ items:
     startLine: 4566
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public CosExprContext(MapGrammarParser.ExprContext context)
     parameters:
     - id: context
-      type: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext
+      type: Bve5_Parsing.MapGrammar.V2Parser.ExprContext
     content.vb: Public Sub New(context As MapGrammarParser.ExprContext)
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext.#ctor*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.CosExprContext.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CosExprContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.CosExprContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
   id: EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.CosExprContext
   langs:
   - csharp
   - vb
   name: EnterRule(IParseTreeListener)
   nameWithType: MapGrammarParser.CosExprContext.EnterRule(IParseTreeListener)
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CosExprContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
   type: Method
   source:
     remote:
@@ -354,7 +354,7 @@ items:
     startLine: 4567
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public override void EnterRule(IParseTreeListener listener)
     parameters:
@@ -362,23 +362,23 @@ items:
       type: Antlr4.Runtime.Tree.IParseTreeListener
     content.vb: Public Overrides Sub EnterRule(listener As IParseTreeListener)
   overridden: Antlr4.Runtime.ParserRuleContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext.EnterRule*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.CosExprContext.EnterRule*
   modifiers.csharp:
   - public
   - override
   modifiers.vb:
   - Public
   - Overrides
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CosExprContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.CosExprContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
   id: ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.CosExprContext
   langs:
   - csharp
   - vb
   name: ExitRule(IParseTreeListener)
   nameWithType: MapGrammarParser.CosExprContext.ExitRule(IParseTreeListener)
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CosExprContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
   type: Method
   source:
     remote:
@@ -390,7 +390,7 @@ items:
     startLine: 4571
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public override void ExitRule(IParseTreeListener listener)
     parameters:
@@ -398,23 +398,23 @@ items:
       type: Antlr4.Runtime.Tree.IParseTreeListener
     content.vb: Public Overrides Sub ExitRule(listener As IParseTreeListener)
   overridden: Antlr4.Runtime.ParserRuleContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext.ExitRule*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.CosExprContext.ExitRule*
   modifiers.csharp:
   - public
   - override
   modifiers.vb:
   - Public
   - Overrides
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CosExprContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.CosExprContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
   id: Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.CosExprContext
   langs:
   - csharp
   - vb
   name: Accept<TResult>(IParseTreeVisitor<TResult>)
   nameWithType: MapGrammarParser.CosExprContext.Accept<TResult>(IParseTreeVisitor<TResult>)
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext.Accept<TResult>(Antlr4.Runtime.Tree.IParseTreeVisitor<TResult>)
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CosExprContext.Accept<TResult>(Antlr4.Runtime.Tree.IParseTreeVisitor<TResult>)
   type: Method
   source:
     remote:
@@ -426,7 +426,7 @@ items:
     startLine: 4575
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor)
     parameters:
@@ -438,7 +438,7 @@ items:
       type: '{TResult}'
     content.vb: Public Overrides Function Accept(Of TResult)(visitor As IParseTreeVisitor(Of TResult)) As TResult
   overridden: Antlr4.Runtime.RuleContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{{TResult}})
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext.Accept*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.CosExprContext.Accept*
   nameWithType.vb: MapGrammarParser.CosExprContext.Accept(Of TResult)(IParseTreeVisitor(Of TResult))
   modifiers.csharp:
   - public
@@ -446,14 +446,14 @@ items:
   modifiers.vb:
   - Public
   - Overrides
-  fullName.vb: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext.Accept(Of TResult)(Antlr4.Runtime.Tree.IParseTreeVisitor(Of TResult))
+  fullName.vb: Bve5_Parsing.MapGrammar.V2Parser.CosExprContext.Accept(Of TResult)(Antlr4.Runtime.Tree.IParseTreeVisitor(Of TResult))
   name.vb: Accept(Of TResult)(IParseTreeVisitor(Of TResult))
 references:
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions
-  commentId: N:Bve5_Parsing.MapGrammar.SyntaxDefinitions
-  name: Bve5_Parsing.MapGrammar.SyntaxDefinitions
-  nameWithType: Bve5_Parsing.MapGrammar.SyntaxDefinitions
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
+  commentId: N:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
+  name: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
+  nameWithType: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -475,12 +475,12 @@ references:
   name: ParserRuleContext
   nameWithType: ParserRuleContext
   fullName: Antlr4.Runtime.ParserRuleContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+- uid: Bve5_Parsing.MapGrammar.V2Parser.ExprContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.ExprContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.ExprContext
   nameWithType: MapGrammarParser.ExprContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.ExprContext
 - uid: Antlr4.Runtime.Tree.IRuleNode
   commentId: T:Antlr4.Runtime.Tree.IRuleNode
   parent: Antlr4.Runtime.Tree
@@ -509,45 +509,45 @@ references:
   name: ITree
   nameWithType: ITree
   fullName: Antlr4.Runtime.Tree.ITree
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext.RuleIndex
-  commentId: P:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext.RuleIndex
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.ExprContext.RuleIndex
+  commentId: P:Bve5_Parsing.MapGrammar.V2Parser.ExprContext.RuleIndex
+  parent: Bve5_Parsing.MapGrammar.V2Parser.ExprContext
   name: RuleIndex
   nameWithType: MapGrammarParser.ExprContext.RuleIndex
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext.RuleIndex
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext.CopyFrom(Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext)
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext.CopyFrom(Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext)
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.ExprContext.RuleIndex
+- uid: Bve5_Parsing.MapGrammar.V2Parser.ExprContext.CopyFrom(Bve5_Parsing.MapGrammar.V2Parser.ExprContext)
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.ExprContext.CopyFrom(Bve5_Parsing.MapGrammar.V2Parser.ExprContext)
+  parent: Bve5_Parsing.MapGrammar.V2Parser.ExprContext
   name: CopyFrom(MapGrammarParser.ExprContext)
   nameWithType: MapGrammarParser.ExprContext.CopyFrom(MapGrammarParser.ExprContext)
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext.CopyFrom(Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext)
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.ExprContext.CopyFrom(Bve5_Parsing.MapGrammar.V2Parser.ExprContext)
   spec.csharp:
-  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext.CopyFrom(Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext)
+  - uid: Bve5_Parsing.MapGrammar.V2Parser.ExprContext.CopyFrom(Bve5_Parsing.MapGrammar.V2Parser.ExprContext)
     name: CopyFrom
     nameWithType: MapGrammarParser.ExprContext.CopyFrom
-    fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext.CopyFrom
+    fullName: Bve5_Parsing.MapGrammar.V2Parser.ExprContext.CopyFrom
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext
+  - uid: Bve5_Parsing.MapGrammar.V2Parser.ExprContext
     name: MapGrammarParser.ExprContext
     nameWithType: MapGrammarParser.ExprContext
-    fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext
+    fullName: Bve5_Parsing.MapGrammar.V2Parser.ExprContext
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext.CopyFrom(Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext)
+  - uid: Bve5_Parsing.MapGrammar.V2Parser.ExprContext.CopyFrom(Bve5_Parsing.MapGrammar.V2Parser.ExprContext)
     name: CopyFrom
     nameWithType: MapGrammarParser.ExprContext.CopyFrom
-    fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext.CopyFrom
+    fullName: Bve5_Parsing.MapGrammar.V2Parser.ExprContext.CopyFrom
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext
+  - uid: Bve5_Parsing.MapGrammar.V2Parser.ExprContext
     name: MapGrammarParser.ExprContext
     nameWithType: MapGrammarParser.ExprContext
-    fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext
+    fullName: Bve5_Parsing.MapGrammar.V2Parser.ExprContext
   - name: )
     nameWithType: )
     fullName: )
@@ -2212,11 +2212,11 @@ references:
   name: IToken
   nameWithType: IToken
   fullName: Antlr4.Runtime.IToken
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext.OPN_PAR*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext.OPN_PAR
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CosExprContext.OPN_PAR*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.CosExprContext.OPN_PAR
   name: OPN_PAR
   nameWithType: MapGrammarParser.CosExprContext.OPN_PAR
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext.OPN_PAR
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CosExprContext.OPN_PAR
 - uid: Antlr4.Runtime.Tree.ITerminalNode
   commentId: T:Antlr4.Runtime.Tree.ITerminalNode
   parent: Antlr4.Runtime.Tree
@@ -2224,26 +2224,26 @@ references:
   name: ITerminalNode
   nameWithType: ITerminalNode
   fullName: Antlr4.Runtime.Tree.ITerminalNode
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext.CLS_PAR*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext.CLS_PAR
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CosExprContext.CLS_PAR*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.CosExprContext.CLS_PAR
   name: CLS_PAR
   nameWithType: MapGrammarParser.CosExprContext.CLS_PAR
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext.CLS_PAR
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext.COS*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext.COS
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CosExprContext.CLS_PAR
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CosExprContext.COS*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.CosExprContext.COS
   name: COS
   nameWithType: MapGrammarParser.CosExprContext.COS
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext.COS
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext.expr*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext.expr
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CosExprContext.COS
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CosExprContext.expr*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.CosExprContext.expr
   name: expr
   nameWithType: MapGrammarParser.CosExprContext.expr
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext.expr
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext.#ctor*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext.#ctor
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CosExprContext.expr
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CosExprContext.#ctor*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.CosExprContext.#ctor
   name: CosExprContext
   nameWithType: MapGrammarParser.CosExprContext.CosExprContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext.CosExprContext
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CosExprContext.CosExprContext
 - uid: Antlr4.Runtime.ParserRuleContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
   commentId: M:Antlr4.Runtime.ParserRuleContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
   parent: Antlr4.Runtime.ParserRuleContext
@@ -2285,11 +2285,11 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext.EnterRule*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext.EnterRule
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CosExprContext.EnterRule*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.CosExprContext.EnterRule
   name: EnterRule
   nameWithType: MapGrammarParser.CosExprContext.EnterRule
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext.EnterRule
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CosExprContext.EnterRule
 - uid: Antlr4.Runtime.Tree.IParseTreeListener
   commentId: T:Antlr4.Runtime.Tree.IParseTreeListener
   parent: Antlr4.Runtime.Tree
@@ -2338,11 +2338,11 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext.ExitRule*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext.ExitRule
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CosExprContext.ExitRule*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.CosExprContext.ExitRule
   name: ExitRule
   nameWithType: MapGrammarParser.CosExprContext.ExitRule
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext.ExitRule
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CosExprContext.ExitRule
 - uid: Antlr4.Runtime.RuleContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{{TResult}})
   commentId: M:Antlr4.Runtime.RuleContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
   parent: Antlr4.Runtime.RuleContext
@@ -2405,11 +2405,11 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext.Accept*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext.Accept
+- uid: Bve5_Parsing.MapGrammar.V2Parser.CosExprContext.Accept*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.CosExprContext.Accept
   name: Accept
   nameWithType: MapGrammarParser.CosExprContext.Accept
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext.Accept
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.CosExprContext.Accept
 - uid: Antlr4.Runtime.Tree.IParseTreeVisitor{{TResult}}
   commentId: T:Antlr4.Runtime.Tree.IParseTreeVisitor{``0}
   parent: Antlr4.Runtime.Tree

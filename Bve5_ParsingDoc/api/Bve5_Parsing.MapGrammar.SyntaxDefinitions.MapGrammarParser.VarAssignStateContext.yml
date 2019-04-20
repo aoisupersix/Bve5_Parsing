@@ -1,21 +1,21 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarAssignStateContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarAssignStateContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.VarAssignStateContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.VarAssignStateContext
   id: MapGrammarParser.VarAssignStateContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   children:
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarAssignStateContext.#ctor(Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StatementContext)
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarAssignStateContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarAssignStateContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarAssignStateContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarAssignStateContext.varAssign
+  - Bve5_Parsing.MapGrammar.V2Parser.VarAssignStateContext.#ctor(Bve5_Parsing.MapGrammar.V2Parser.StatementContext)
+  - Bve5_Parsing.MapGrammar.V2Parser.VarAssignStateContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
+  - Bve5_Parsing.MapGrammar.V2Parser.VarAssignStateContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
+  - Bve5_Parsing.MapGrammar.V2Parser.VarAssignStateContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
+  - Bve5_Parsing.MapGrammar.V2Parser.VarAssignStateContext.varAssign
   langs:
   - csharp
   - vb
   name: MapGrammarParser.VarAssignStateContext
   nameWithType: MapGrammarParser.VarAssignStateContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarAssignStateContext
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.VarAssignStateContext
   type: Class
   source:
     remote:
@@ -27,7 +27,7 @@ items:
     startLine: 664
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: 'public class VarAssignStateContext : MapGrammarParser.StatementContext, IRuleNode, IParseTree, ISyntaxTree, ITree'
     content.vb: >-
@@ -38,15 +38,15 @@ items:
   - System.Object
   - Antlr4.Runtime.RuleContext
   - Antlr4.Runtime.ParserRuleContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StatementContext
+  - Bve5_Parsing.MapGrammar.V2Parser.StatementContext
   implements:
   - Antlr4.Runtime.Tree.IRuleNode
   - Antlr4.Runtime.Tree.IParseTree
   - Antlr4.Runtime.Tree.ISyntaxTree
   - Antlr4.Runtime.Tree.ITree
   inheritedMembers:
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StatementContext.RuleIndex
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StatementContext.CopyFrom(Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StatementContext)
+  - Bve5_Parsing.MapGrammar.V2Parser.StatementContext.RuleIndex
+  - Bve5_Parsing.MapGrammar.V2Parser.StatementContext.CopyFrom(Bve5_Parsing.MapGrammar.V2Parser.StatementContext)
   - Antlr4.Runtime.ParserRuleContext.children
   - Antlr4.Runtime.ParserRuleContext.start
   - Antlr4.Runtime.ParserRuleContext.stop
@@ -105,16 +105,16 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarAssignStateContext.varAssign
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarAssignStateContext.varAssign
+- uid: Bve5_Parsing.MapGrammar.V2Parser.VarAssignStateContext.varAssign
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.VarAssignStateContext.varAssign
   id: varAssign
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarAssignStateContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.VarAssignStateContext
   langs:
   - csharp
   - vb
   name: varAssign()
   nameWithType: MapGrammarParser.VarAssignStateContext.varAssign()
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarAssignStateContext.varAssign()
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.VarAssignStateContext.varAssign()
   type: Method
   source:
     remote:
@@ -126,27 +126,27 @@ items:
     startLine: 665
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public MapGrammarParser.VarAssignContext varAssign()
     return:
-      type: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarAssignContext
+      type: Bve5_Parsing.MapGrammar.V2Parser.VarAssignContext
     content.vb: Public Function varAssign As MapGrammarParser.VarAssignContext
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarAssignStateContext.varAssign*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.VarAssignStateContext.varAssign*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarAssignStateContext.#ctor(Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StatementContext)
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarAssignStateContext.#ctor(Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StatementContext)
-  id: '#ctor(Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StatementContext)'
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarAssignStateContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.VarAssignStateContext.#ctor(Bve5_Parsing.MapGrammar.V2Parser.StatementContext)
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.VarAssignStateContext.#ctor(Bve5_Parsing.MapGrammar.V2Parser.StatementContext)
+  id: '#ctor(Bve5_Parsing.MapGrammar.V2Parser.StatementContext)'
+  parent: Bve5_Parsing.MapGrammar.V2Parser.VarAssignStateContext
   langs:
   - csharp
   - vb
   name: VarAssignStateContext(MapGrammarParser.StatementContext)
   nameWithType: MapGrammarParser.VarAssignStateContext.VarAssignStateContext(MapGrammarParser.StatementContext)
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarAssignStateContext.VarAssignStateContext(Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StatementContext)
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.VarAssignStateContext.VarAssignStateContext(Bve5_Parsing.MapGrammar.V2Parser.StatementContext)
   type: Constructor
   source:
     remote:
@@ -158,28 +158,28 @@ items:
     startLine: 668
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public VarAssignStateContext(MapGrammarParser.StatementContext context)
     parameters:
     - id: context
-      type: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StatementContext
+      type: Bve5_Parsing.MapGrammar.V2Parser.StatementContext
     content.vb: Public Sub New(context As MapGrammarParser.StatementContext)
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarAssignStateContext.#ctor*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.VarAssignStateContext.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarAssignStateContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarAssignStateContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
+- uid: Bve5_Parsing.MapGrammar.V2Parser.VarAssignStateContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.VarAssignStateContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
   id: EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarAssignStateContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.VarAssignStateContext
   langs:
   - csharp
   - vb
   name: EnterRule(IParseTreeListener)
   nameWithType: MapGrammarParser.VarAssignStateContext.EnterRule(IParseTreeListener)
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarAssignStateContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.VarAssignStateContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
   type: Method
   source:
     remote:
@@ -191,7 +191,7 @@ items:
     startLine: 669
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public override void EnterRule(IParseTreeListener listener)
     parameters:
@@ -199,23 +199,23 @@ items:
       type: Antlr4.Runtime.Tree.IParseTreeListener
     content.vb: Public Overrides Sub EnterRule(listener As IParseTreeListener)
   overridden: Antlr4.Runtime.ParserRuleContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarAssignStateContext.EnterRule*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.VarAssignStateContext.EnterRule*
   modifiers.csharp:
   - public
   - override
   modifiers.vb:
   - Public
   - Overrides
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarAssignStateContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarAssignStateContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
+- uid: Bve5_Parsing.MapGrammar.V2Parser.VarAssignStateContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.VarAssignStateContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
   id: ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarAssignStateContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.VarAssignStateContext
   langs:
   - csharp
   - vb
   name: ExitRule(IParseTreeListener)
   nameWithType: MapGrammarParser.VarAssignStateContext.ExitRule(IParseTreeListener)
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarAssignStateContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.VarAssignStateContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
   type: Method
   source:
     remote:
@@ -227,7 +227,7 @@ items:
     startLine: 673
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public override void ExitRule(IParseTreeListener listener)
     parameters:
@@ -235,23 +235,23 @@ items:
       type: Antlr4.Runtime.Tree.IParseTreeListener
     content.vb: Public Overrides Sub ExitRule(listener As IParseTreeListener)
   overridden: Antlr4.Runtime.ParserRuleContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarAssignStateContext.ExitRule*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.VarAssignStateContext.ExitRule*
   modifiers.csharp:
   - public
   - override
   modifiers.vb:
   - Public
   - Overrides
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarAssignStateContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarAssignStateContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
+- uid: Bve5_Parsing.MapGrammar.V2Parser.VarAssignStateContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.VarAssignStateContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
   id: Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarAssignStateContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.VarAssignStateContext
   langs:
   - csharp
   - vb
   name: Accept<TResult>(IParseTreeVisitor<TResult>)
   nameWithType: MapGrammarParser.VarAssignStateContext.Accept<TResult>(IParseTreeVisitor<TResult>)
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarAssignStateContext.Accept<TResult>(Antlr4.Runtime.Tree.IParseTreeVisitor<TResult>)
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.VarAssignStateContext.Accept<TResult>(Antlr4.Runtime.Tree.IParseTreeVisitor<TResult>)
   type: Method
   source:
     remote:
@@ -263,7 +263,7 @@ items:
     startLine: 677
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor)
     parameters:
@@ -275,7 +275,7 @@ items:
       type: '{TResult}'
     content.vb: Public Overrides Function Accept(Of TResult)(visitor As IParseTreeVisitor(Of TResult)) As TResult
   overridden: Antlr4.Runtime.RuleContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{{TResult}})
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarAssignStateContext.Accept*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.VarAssignStateContext.Accept*
   nameWithType.vb: MapGrammarParser.VarAssignStateContext.Accept(Of TResult)(IParseTreeVisitor(Of TResult))
   modifiers.csharp:
   - public
@@ -283,14 +283,14 @@ items:
   modifiers.vb:
   - Public
   - Overrides
-  fullName.vb: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarAssignStateContext.Accept(Of TResult)(Antlr4.Runtime.Tree.IParseTreeVisitor(Of TResult))
+  fullName.vb: Bve5_Parsing.MapGrammar.V2Parser.VarAssignStateContext.Accept(Of TResult)(Antlr4.Runtime.Tree.IParseTreeVisitor(Of TResult))
   name.vb: Accept(Of TResult)(IParseTreeVisitor(Of TResult))
 references:
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions
-  commentId: N:Bve5_Parsing.MapGrammar.SyntaxDefinitions
-  name: Bve5_Parsing.MapGrammar.SyntaxDefinitions
-  nameWithType: Bve5_Parsing.MapGrammar.SyntaxDefinitions
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
+  commentId: N:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
+  name: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
+  nameWithType: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -312,12 +312,12 @@ references:
   name: ParserRuleContext
   nameWithType: ParserRuleContext
   fullName: Antlr4.Runtime.ParserRuleContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StatementContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StatementContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+- uid: Bve5_Parsing.MapGrammar.V2Parser.StatementContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.StatementContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.StatementContext
   nameWithType: MapGrammarParser.StatementContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StatementContext
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.StatementContext
 - uid: Antlr4.Runtime.Tree.IRuleNode
   commentId: T:Antlr4.Runtime.Tree.IRuleNode
   parent: Antlr4.Runtime.Tree
@@ -346,45 +346,45 @@ references:
   name: ITree
   nameWithType: ITree
   fullName: Antlr4.Runtime.Tree.ITree
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StatementContext.RuleIndex
-  commentId: P:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StatementContext.RuleIndex
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StatementContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.StatementContext.RuleIndex
+  commentId: P:Bve5_Parsing.MapGrammar.V2Parser.StatementContext.RuleIndex
+  parent: Bve5_Parsing.MapGrammar.V2Parser.StatementContext
   name: RuleIndex
   nameWithType: MapGrammarParser.StatementContext.RuleIndex
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StatementContext.RuleIndex
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StatementContext.CopyFrom(Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StatementContext)
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StatementContext.CopyFrom(Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StatementContext)
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StatementContext
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.StatementContext.RuleIndex
+- uid: Bve5_Parsing.MapGrammar.V2Parser.StatementContext.CopyFrom(Bve5_Parsing.MapGrammar.V2Parser.StatementContext)
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.StatementContext.CopyFrom(Bve5_Parsing.MapGrammar.V2Parser.StatementContext)
+  parent: Bve5_Parsing.MapGrammar.V2Parser.StatementContext
   name: CopyFrom(MapGrammarParser.StatementContext)
   nameWithType: MapGrammarParser.StatementContext.CopyFrom(MapGrammarParser.StatementContext)
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StatementContext.CopyFrom(Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StatementContext)
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.StatementContext.CopyFrom(Bve5_Parsing.MapGrammar.V2Parser.StatementContext)
   spec.csharp:
-  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StatementContext.CopyFrom(Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StatementContext)
+  - uid: Bve5_Parsing.MapGrammar.V2Parser.StatementContext.CopyFrom(Bve5_Parsing.MapGrammar.V2Parser.StatementContext)
     name: CopyFrom
     nameWithType: MapGrammarParser.StatementContext.CopyFrom
-    fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StatementContext.CopyFrom
+    fullName: Bve5_Parsing.MapGrammar.V2Parser.StatementContext.CopyFrom
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StatementContext
+  - uid: Bve5_Parsing.MapGrammar.V2Parser.StatementContext
     name: MapGrammarParser.StatementContext
     nameWithType: MapGrammarParser.StatementContext
-    fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StatementContext
+    fullName: Bve5_Parsing.MapGrammar.V2Parser.StatementContext
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StatementContext.CopyFrom(Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StatementContext)
+  - uid: Bve5_Parsing.MapGrammar.V2Parser.StatementContext.CopyFrom(Bve5_Parsing.MapGrammar.V2Parser.StatementContext)
     name: CopyFrom
     nameWithType: MapGrammarParser.StatementContext.CopyFrom
-    fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StatementContext.CopyFrom
+    fullName: Bve5_Parsing.MapGrammar.V2Parser.StatementContext.CopyFrom
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StatementContext
+  - uid: Bve5_Parsing.MapGrammar.V2Parser.StatementContext
     name: MapGrammarParser.StatementContext
     nameWithType: MapGrammarParser.StatementContext
-    fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StatementContext
+    fullName: Bve5_Parsing.MapGrammar.V2Parser.StatementContext
   - name: )
     nameWithType: )
     fullName: )
@@ -2042,22 +2042,22 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarAssignStateContext.varAssign*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarAssignStateContext.varAssign
+- uid: Bve5_Parsing.MapGrammar.V2Parser.VarAssignStateContext.varAssign*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.VarAssignStateContext.varAssign
   name: varAssign
   nameWithType: MapGrammarParser.VarAssignStateContext.varAssign
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarAssignStateContext.varAssign
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarAssignContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarAssignContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.VarAssignStateContext.varAssign
+- uid: Bve5_Parsing.MapGrammar.V2Parser.VarAssignContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.VarAssignContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.VarAssignContext
   nameWithType: MapGrammarParser.VarAssignContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarAssignContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarAssignStateContext.#ctor*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarAssignStateContext.#ctor
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.VarAssignContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.VarAssignStateContext.#ctor*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.VarAssignStateContext.#ctor
   name: VarAssignStateContext
   nameWithType: MapGrammarParser.VarAssignStateContext.VarAssignStateContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarAssignStateContext.VarAssignStateContext
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.VarAssignStateContext.VarAssignStateContext
 - uid: Antlr4.Runtime.ParserRuleContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
   commentId: M:Antlr4.Runtime.ParserRuleContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
   parent: Antlr4.Runtime.ParserRuleContext
@@ -2099,11 +2099,11 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarAssignStateContext.EnterRule*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarAssignStateContext.EnterRule
+- uid: Bve5_Parsing.MapGrammar.V2Parser.VarAssignStateContext.EnterRule*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.VarAssignStateContext.EnterRule
   name: EnterRule
   nameWithType: MapGrammarParser.VarAssignStateContext.EnterRule
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarAssignStateContext.EnterRule
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.VarAssignStateContext.EnterRule
 - uid: Antlr4.Runtime.Tree.IParseTreeListener
   commentId: T:Antlr4.Runtime.Tree.IParseTreeListener
   parent: Antlr4.Runtime.Tree
@@ -2152,11 +2152,11 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarAssignStateContext.ExitRule*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarAssignStateContext.ExitRule
+- uid: Bve5_Parsing.MapGrammar.V2Parser.VarAssignStateContext.ExitRule*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.VarAssignStateContext.ExitRule
   name: ExitRule
   nameWithType: MapGrammarParser.VarAssignStateContext.ExitRule
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarAssignStateContext.ExitRule
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.VarAssignStateContext.ExitRule
 - uid: Antlr4.Runtime.RuleContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{{TResult}})
   commentId: M:Antlr4.Runtime.RuleContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
   parent: Antlr4.Runtime.RuleContext
@@ -2219,11 +2219,11 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarAssignStateContext.Accept*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarAssignStateContext.Accept
+- uid: Bve5_Parsing.MapGrammar.V2Parser.VarAssignStateContext.Accept*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.VarAssignStateContext.Accept
   name: Accept
   nameWithType: MapGrammarParser.VarAssignStateContext.Accept
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarAssignStateContext.Accept
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.VarAssignStateContext.Accept
 - uid: Antlr4.Runtime.Tree.IParseTreeVisitor{{TResult}}
   commentId: T:Antlr4.Runtime.Tree.IParseTreeVisitor{``0}
   parent: Antlr4.Runtime.Tree

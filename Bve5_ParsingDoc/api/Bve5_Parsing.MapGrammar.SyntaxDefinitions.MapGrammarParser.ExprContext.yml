@@ -1,20 +1,20 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.ExprContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.ExprContext
   id: MapGrammarParser.ExprContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   children:
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext.#ctor
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext.#ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext.CopyFrom(Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext)
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext.RuleIndex
+  - Bve5_Parsing.MapGrammar.V2Parser.ExprContext.#ctor
+  - Bve5_Parsing.MapGrammar.V2Parser.ExprContext.#ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)
+  - Bve5_Parsing.MapGrammar.V2Parser.ExprContext.CopyFrom(Bve5_Parsing.MapGrammar.V2Parser.ExprContext)
+  - Bve5_Parsing.MapGrammar.V2Parser.ExprContext.RuleIndex
   langs:
   - csharp
   - vb
   name: MapGrammarParser.ExprContext
   nameWithType: MapGrammarParser.ExprContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.ExprContext
   type: Class
   source:
     remote:
@@ -26,7 +26,7 @@ items:
     startLine: 4218
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: 'public class ExprContext : ParserRuleContext, IRuleNode, IParseTree, ISyntaxTree, ITree'
     content.vb: >-
@@ -38,24 +38,24 @@ items:
   - Antlr4.Runtime.RuleContext
   - Antlr4.Runtime.ParserRuleContext
   derivedClasses:
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.AbsExprContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Atan2ExprContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CeilExprContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.CosExprContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DistanceExprContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExpExprContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.FloorExprContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.InfixExprContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.LogExprContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.NumberExprContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ParensExprContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.PowExprContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.RandExprContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SinExprContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.SqrtExprContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.StringExprContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.UnaryExprContext
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.VarExprContext
+  - Bve5_Parsing.MapGrammar.V2Parser.AbsExprContext
+  - Bve5_Parsing.MapGrammar.V2Parser.Atan2ExprContext
+  - Bve5_Parsing.MapGrammar.V2Parser.CeilExprContext
+  - Bve5_Parsing.MapGrammar.V2Parser.CosExprContext
+  - Bve5_Parsing.MapGrammar.V2Parser.DistanceExprContext
+  - Bve5_Parsing.MapGrammar.V2Parser.ExpExprContext
+  - Bve5_Parsing.MapGrammar.V2Parser.FloorExprContext
+  - Bve5_Parsing.MapGrammar.V2Parser.InfixExprContext
+  - Bve5_Parsing.MapGrammar.V2Parser.LogExprContext
+  - Bve5_Parsing.MapGrammar.V2Parser.NumberExprContext
+  - Bve5_Parsing.MapGrammar.V2Parser.ParensExprContext
+  - Bve5_Parsing.MapGrammar.V2Parser.PowExprContext
+  - Bve5_Parsing.MapGrammar.V2Parser.RandExprContext
+  - Bve5_Parsing.MapGrammar.V2Parser.SinExprContext
+  - Bve5_Parsing.MapGrammar.V2Parser.SqrtExprContext
+  - Bve5_Parsing.MapGrammar.V2Parser.StringExprContext
+  - Bve5_Parsing.MapGrammar.V2Parser.UnaryExprContext
+  - Bve5_Parsing.MapGrammar.V2Parser.VarExprContext
   implements:
   - Antlr4.Runtime.Tree.IRuleNode
   - Antlr4.Runtime.Tree.IParseTree
@@ -122,16 +122,16 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext.#ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext.#ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)
+- uid: Bve5_Parsing.MapGrammar.V2Parser.ExprContext.#ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.ExprContext.#ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)
   id: '#ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)'
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.ExprContext
   langs:
   - csharp
   - vb
   name: ExprContext(ParserRuleContext, Int32)
   nameWithType: MapGrammarParser.ExprContext.ExprContext(ParserRuleContext, Int32)
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext.ExprContext(Antlr4.Runtime.ParserRuleContext, System.Int32)
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.ExprContext.ExprContext(Antlr4.Runtime.ParserRuleContext, System.Int32)
   type: Constructor
   source:
     remote:
@@ -143,7 +143,7 @@ items:
     startLine: 4219
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public ExprContext(ParserRuleContext parent, int invokingState)
     parameters:
@@ -152,21 +152,21 @@ items:
     - id: invokingState
       type: System.Int32
     content.vb: Public Sub New(parent As ParserRuleContext, invokingState As Integer)
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext.#ctor*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.ExprContext.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext.RuleIndex
-  commentId: P:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext.RuleIndex
+- uid: Bve5_Parsing.MapGrammar.V2Parser.ExprContext.RuleIndex
+  commentId: P:Bve5_Parsing.MapGrammar.V2Parser.ExprContext.RuleIndex
   id: RuleIndex
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.ExprContext
   langs:
   - csharp
   - vb
   name: RuleIndex
   nameWithType: MapGrammarParser.ExprContext.RuleIndex
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext.RuleIndex
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.ExprContext.RuleIndex
   type: Property
   source:
     remote:
@@ -178,7 +178,7 @@ items:
     startLine: 4223
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public override int RuleIndex { get; }
     parameters: []
@@ -186,7 +186,7 @@ items:
       type: System.Int32
     content.vb: Public Overrides ReadOnly Property RuleIndex As Integer
   overridden: Antlr4.Runtime.RuleContext.RuleIndex
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext.RuleIndex*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.ExprContext.RuleIndex*
   modifiers.csharp:
   - public
   - override
@@ -195,16 +195,16 @@ items:
   - Public
   - Overrides
   - ReadOnly
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext.#ctor
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext.#ctor
+- uid: Bve5_Parsing.MapGrammar.V2Parser.ExprContext.#ctor
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.ExprContext.#ctor
   id: '#ctor'
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.ExprContext
   langs:
   - csharp
   - vb
   name: ExprContext()
   nameWithType: MapGrammarParser.ExprContext.ExprContext()
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext.ExprContext()
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.ExprContext.ExprContext()
   type: Constructor
   source:
     remote:
@@ -216,25 +216,25 @@ items:
     startLine: 4225
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public ExprContext()
     content.vb: Public Sub New
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext.#ctor*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.ExprContext.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext.CopyFrom(Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext)
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext.CopyFrom(Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext)
-  id: CopyFrom(Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext)
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.ExprContext.CopyFrom(Bve5_Parsing.MapGrammar.V2Parser.ExprContext)
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.ExprContext.CopyFrom(Bve5_Parsing.MapGrammar.V2Parser.ExprContext)
+  id: CopyFrom(Bve5_Parsing.MapGrammar.V2Parser.ExprContext)
+  parent: Bve5_Parsing.MapGrammar.V2Parser.ExprContext
   langs:
   - csharp
   - vb
   name: CopyFrom(MapGrammarParser.ExprContext)
   nameWithType: MapGrammarParser.ExprContext.CopyFrom(MapGrammarParser.ExprContext)
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext.CopyFrom(Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext)
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.ExprContext.CopyFrom(Bve5_Parsing.MapGrammar.V2Parser.ExprContext)
   type: Method
   source:
     remote:
@@ -246,14 +246,14 @@ items:
     startLine: 4226
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public virtual void CopyFrom(MapGrammarParser.ExprContext context)
     parameters:
     - id: context
-      type: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext
+      type: Bve5_Parsing.MapGrammar.V2Parser.ExprContext
     content.vb: Public Overridable Sub CopyFrom(context As MapGrammarParser.ExprContext)
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext.CopyFrom*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.ExprContext.CopyFrom*
   modifiers.csharp:
   - public
   - virtual
@@ -261,11 +261,11 @@ items:
   - Public
   - Overridable
 references:
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions
-  commentId: N:Bve5_Parsing.MapGrammar.SyntaxDefinitions
-  name: Bve5_Parsing.MapGrammar.SyntaxDefinitions
-  nameWithType: Bve5_Parsing.MapGrammar.SyntaxDefinitions
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
+  commentId: N:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
+  name: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
+  nameWithType: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -2051,11 +2051,11 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext.#ctor*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext.#ctor
+- uid: Bve5_Parsing.MapGrammar.V2Parser.ExprContext.#ctor*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.ExprContext.#ctor
   name: ExprContext
   nameWithType: MapGrammarParser.ExprContext.ExprContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext.ExprContext
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.ExprContext.ExprContext
 - uid: System.Int32
   commentId: T:System.Int32
   parent: System
@@ -2070,19 +2070,19 @@ references:
   name: RuleIndex
   nameWithType: RuleContext.RuleIndex
   fullName: Antlr4.Runtime.RuleContext.RuleIndex
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext.RuleIndex*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext.RuleIndex
+- uid: Bve5_Parsing.MapGrammar.V2Parser.ExprContext.RuleIndex*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.ExprContext.RuleIndex
   name: RuleIndex
   nameWithType: MapGrammarParser.ExprContext.RuleIndex
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext.RuleIndex
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext.CopyFrom*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext.CopyFrom
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.ExprContext.RuleIndex
+- uid: Bve5_Parsing.MapGrammar.V2Parser.ExprContext.CopyFrom*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.ExprContext.CopyFrom
   name: CopyFrom
   nameWithType: MapGrammarParser.ExprContext.CopyFrom
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext.CopyFrom
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.ExprContext.CopyFrom
+- uid: Bve5_Parsing.MapGrammar.V2Parser.ExprContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.ExprContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.ExprContext
   nameWithType: MapGrammarParser.ExprContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.ExprContext
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.ExprContext

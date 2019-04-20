@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: Bve5_Parsing.MapGrammar.V1Parser
+  commentId: N:Bve5_Parsing.MapGrammar.V1Parser
+  id: Bve5_Parsing.MapGrammar.V1Parser
+  children:
+  - Bve5_Parsing.MapGrammar.V1Parser.BuildAstVisitor
+  langs:
+  - csharp
+  - vb
+  name: Bve5_Parsing.MapGrammar.V1Parser
+  nameWithType: Bve5_Parsing.MapGrammar.V1Parser
+  fullName: Bve5_Parsing.MapGrammar.V1Parser
+  type: Namespace
+  assemblies:
+  - Bve5_Parsing
+references:
+- uid: Bve5_Parsing.MapGrammar.V1Parser.BuildAstVisitor
+  commentId: T:Bve5_Parsing.MapGrammar.V1Parser.BuildAstVisitor
+  name: BuildAstVisitor
+  nameWithType: BuildAstVisitor
+  fullName: Bve5_Parsing.MapGrammar.V1Parser.BuildAstVisitor

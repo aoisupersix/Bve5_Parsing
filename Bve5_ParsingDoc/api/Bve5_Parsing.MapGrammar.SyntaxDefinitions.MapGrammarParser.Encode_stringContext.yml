@@ -1,23 +1,23 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Encode_stringContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Encode_stringContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.Encode_stringContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.Encode_stringContext
   id: MapGrammarParser.Encode_stringContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   children:
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Encode_stringContext.#ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Encode_stringContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Encode_stringContext.ENCODE_CHAR
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Encode_stringContext.ENCODE_CHAR(System.Int32)
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Encode_stringContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Encode_stringContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Encode_stringContext.RuleIndex
+  - Bve5_Parsing.MapGrammar.V2Parser.Encode_stringContext.#ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)
+  - Bve5_Parsing.MapGrammar.V2Parser.Encode_stringContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
+  - Bve5_Parsing.MapGrammar.V2Parser.Encode_stringContext.ENCODE_CHAR
+  - Bve5_Parsing.MapGrammar.V2Parser.Encode_stringContext.ENCODE_CHAR(System.Int32)
+  - Bve5_Parsing.MapGrammar.V2Parser.Encode_stringContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
+  - Bve5_Parsing.MapGrammar.V2Parser.Encode_stringContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
+  - Bve5_Parsing.MapGrammar.V2Parser.Encode_stringContext.RuleIndex
   langs:
   - csharp
   - vb
   name: MapGrammarParser.Encode_stringContext
   nameWithType: MapGrammarParser.Encode_stringContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Encode_stringContext
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.Encode_stringContext
   type: Class
   source:
     remote:
@@ -29,7 +29,7 @@ items:
     startLine: 5170
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: 'public class Encode_stringContext : ParserRuleContext, IRuleNode, IParseTree, ISyntaxTree, ITree'
     content.vb: >-
@@ -104,16 +104,16 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Encode_stringContext.ENCODE_CHAR
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Encode_stringContext.ENCODE_CHAR
+- uid: Bve5_Parsing.MapGrammar.V2Parser.Encode_stringContext.ENCODE_CHAR
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.Encode_stringContext.ENCODE_CHAR
   id: ENCODE_CHAR
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Encode_stringContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.Encode_stringContext
   langs:
   - csharp
   - vb
   name: ENCODE_CHAR()
   nameWithType: MapGrammarParser.Encode_stringContext.ENCODE_CHAR()
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Encode_stringContext.ENCODE_CHAR()
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.Encode_stringContext.ENCODE_CHAR()
   type: Method
   source:
     remote:
@@ -125,27 +125,27 @@ items:
     startLine: 5171
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public ITerminalNode[] ENCODE_CHAR()
     return:
       type: Antlr4.Runtime.Tree.ITerminalNode[]
     content.vb: Public Function ENCODE_CHAR As ITerminalNode()
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Encode_stringContext.ENCODE_CHAR*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.Encode_stringContext.ENCODE_CHAR*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Encode_stringContext.ENCODE_CHAR(System.Int32)
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Encode_stringContext.ENCODE_CHAR(System.Int32)
+- uid: Bve5_Parsing.MapGrammar.V2Parser.Encode_stringContext.ENCODE_CHAR(System.Int32)
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.Encode_stringContext.ENCODE_CHAR(System.Int32)
   id: ENCODE_CHAR(System.Int32)
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Encode_stringContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.Encode_stringContext
   langs:
   - csharp
   - vb
   name: ENCODE_CHAR(Int32)
   nameWithType: MapGrammarParser.Encode_stringContext.ENCODE_CHAR(Int32)
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Encode_stringContext.ENCODE_CHAR(System.Int32)
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.Encode_stringContext.ENCODE_CHAR(System.Int32)
   type: Method
   source:
     remote:
@@ -157,7 +157,7 @@ items:
     startLine: 5172
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public ITerminalNode ENCODE_CHAR(int i)
     parameters:
@@ -166,21 +166,21 @@ items:
     return:
       type: Antlr4.Runtime.Tree.ITerminalNode
     content.vb: Public Function ENCODE_CHAR(i As Integer) As ITerminalNode
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Encode_stringContext.ENCODE_CHAR*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.Encode_stringContext.ENCODE_CHAR*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Encode_stringContext.#ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Encode_stringContext.#ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)
+- uid: Bve5_Parsing.MapGrammar.V2Parser.Encode_stringContext.#ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.Encode_stringContext.#ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)
   id: '#ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)'
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Encode_stringContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.Encode_stringContext
   langs:
   - csharp
   - vb
   name: Encode_stringContext(ParserRuleContext, Int32)
   nameWithType: MapGrammarParser.Encode_stringContext.Encode_stringContext(ParserRuleContext, Int32)
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Encode_stringContext.Encode_stringContext(Antlr4.Runtime.ParserRuleContext, System.Int32)
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.Encode_stringContext.Encode_stringContext(Antlr4.Runtime.ParserRuleContext, System.Int32)
   type: Constructor
   source:
     remote:
@@ -192,7 +192,7 @@ items:
     startLine: 5175
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public Encode_stringContext(ParserRuleContext parent, int invokingState)
     parameters:
@@ -201,21 +201,21 @@ items:
     - id: invokingState
       type: System.Int32
     content.vb: Public Sub New(parent As ParserRuleContext, invokingState As Integer)
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Encode_stringContext.#ctor*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.Encode_stringContext.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Encode_stringContext.RuleIndex
-  commentId: P:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Encode_stringContext.RuleIndex
+- uid: Bve5_Parsing.MapGrammar.V2Parser.Encode_stringContext.RuleIndex
+  commentId: P:Bve5_Parsing.MapGrammar.V2Parser.Encode_stringContext.RuleIndex
   id: RuleIndex
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Encode_stringContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.Encode_stringContext
   langs:
   - csharp
   - vb
   name: RuleIndex
   nameWithType: MapGrammarParser.Encode_stringContext.RuleIndex
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Encode_stringContext.RuleIndex
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.Encode_stringContext.RuleIndex
   type: Property
   source:
     remote:
@@ -227,7 +227,7 @@ items:
     startLine: 5179
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public override int RuleIndex { get; }
     parameters: []
@@ -235,7 +235,7 @@ items:
       type: System.Int32
     content.vb: Public Overrides ReadOnly Property RuleIndex As Integer
   overridden: Antlr4.Runtime.RuleContext.RuleIndex
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Encode_stringContext.RuleIndex*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.Encode_stringContext.RuleIndex*
   modifiers.csharp:
   - public
   - override
@@ -244,16 +244,16 @@ items:
   - Public
   - Overrides
   - ReadOnly
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Encode_stringContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Encode_stringContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
+- uid: Bve5_Parsing.MapGrammar.V2Parser.Encode_stringContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.Encode_stringContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
   id: EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Encode_stringContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.Encode_stringContext
   langs:
   - csharp
   - vb
   name: EnterRule(IParseTreeListener)
   nameWithType: MapGrammarParser.Encode_stringContext.EnterRule(IParseTreeListener)
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Encode_stringContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.Encode_stringContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
   type: Method
   source:
     remote:
@@ -265,7 +265,7 @@ items:
     startLine: 5180
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public override void EnterRule(IParseTreeListener listener)
     parameters:
@@ -273,23 +273,23 @@ items:
       type: Antlr4.Runtime.Tree.IParseTreeListener
     content.vb: Public Overrides Sub EnterRule(listener As IParseTreeListener)
   overridden: Antlr4.Runtime.ParserRuleContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Encode_stringContext.EnterRule*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.Encode_stringContext.EnterRule*
   modifiers.csharp:
   - public
   - override
   modifiers.vb:
   - Public
   - Overrides
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Encode_stringContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Encode_stringContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
+- uid: Bve5_Parsing.MapGrammar.V2Parser.Encode_stringContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.Encode_stringContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
   id: ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Encode_stringContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.Encode_stringContext
   langs:
   - csharp
   - vb
   name: ExitRule(IParseTreeListener)
   nameWithType: MapGrammarParser.Encode_stringContext.ExitRule(IParseTreeListener)
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Encode_stringContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.Encode_stringContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
   type: Method
   source:
     remote:
@@ -301,7 +301,7 @@ items:
     startLine: 5184
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public override void ExitRule(IParseTreeListener listener)
     parameters:
@@ -309,23 +309,23 @@ items:
       type: Antlr4.Runtime.Tree.IParseTreeListener
     content.vb: Public Overrides Sub ExitRule(listener As IParseTreeListener)
   overridden: Antlr4.Runtime.ParserRuleContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Encode_stringContext.ExitRule*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.Encode_stringContext.ExitRule*
   modifiers.csharp:
   - public
   - override
   modifiers.vb:
   - Public
   - Overrides
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Encode_stringContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Encode_stringContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
+- uid: Bve5_Parsing.MapGrammar.V2Parser.Encode_stringContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.Encode_stringContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
   id: Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Encode_stringContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.Encode_stringContext
   langs:
   - csharp
   - vb
   name: Accept<TResult>(IParseTreeVisitor<TResult>)
   nameWithType: MapGrammarParser.Encode_stringContext.Accept<TResult>(IParseTreeVisitor<TResult>)
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Encode_stringContext.Accept<TResult>(Antlr4.Runtime.Tree.IParseTreeVisitor<TResult>)
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.Encode_stringContext.Accept<TResult>(Antlr4.Runtime.Tree.IParseTreeVisitor<TResult>)
   type: Method
   source:
     remote:
@@ -337,7 +337,7 @@ items:
     startLine: 5188
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor)
     parameters:
@@ -349,7 +349,7 @@ items:
       type: '{TResult}'
     content.vb: Public Overrides Function Accept(Of TResult)(visitor As IParseTreeVisitor(Of TResult)) As TResult
   overridden: Antlr4.Runtime.RuleContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{{TResult}})
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Encode_stringContext.Accept*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.Encode_stringContext.Accept*
   nameWithType.vb: MapGrammarParser.Encode_stringContext.Accept(Of TResult)(IParseTreeVisitor(Of TResult))
   modifiers.csharp:
   - public
@@ -357,14 +357,14 @@ items:
   modifiers.vb:
   - Public
   - Overrides
-  fullName.vb: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Encode_stringContext.Accept(Of TResult)(Antlr4.Runtime.Tree.IParseTreeVisitor(Of TResult))
+  fullName.vb: Bve5_Parsing.MapGrammar.V2Parser.Encode_stringContext.Accept(Of TResult)(Antlr4.Runtime.Tree.IParseTreeVisitor(Of TResult))
   name.vb: Accept(Of TResult)(IParseTreeVisitor(Of TResult))
 references:
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions
-  commentId: N:Bve5_Parsing.MapGrammar.SyntaxDefinitions
-  name: Bve5_Parsing.MapGrammar.SyntaxDefinitions
-  nameWithType: Bve5_Parsing.MapGrammar.SyntaxDefinitions
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
+  commentId: N:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
+  name: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
+  nameWithType: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -2068,11 +2068,11 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Encode_stringContext.ENCODE_CHAR*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Encode_stringContext.ENCODE_CHAR
+- uid: Bve5_Parsing.MapGrammar.V2Parser.Encode_stringContext.ENCODE_CHAR*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.Encode_stringContext.ENCODE_CHAR
   name: ENCODE_CHAR
   nameWithType: MapGrammarParser.Encode_stringContext.ENCODE_CHAR
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Encode_stringContext.ENCODE_CHAR
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.Encode_stringContext.ENCODE_CHAR
 - uid: Antlr4.Runtime.Tree.ITerminalNode[]
   isExternal: true
   name: ITerminalNode[]
@@ -2113,11 +2113,11 @@ references:
   name: ITerminalNode
   nameWithType: ITerminalNode
   fullName: Antlr4.Runtime.Tree.ITerminalNode
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Encode_stringContext.#ctor*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Encode_stringContext.#ctor
+- uid: Bve5_Parsing.MapGrammar.V2Parser.Encode_stringContext.#ctor*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.Encode_stringContext.#ctor
   name: Encode_stringContext
   nameWithType: MapGrammarParser.Encode_stringContext.Encode_stringContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Encode_stringContext.Encode_stringContext
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.Encode_stringContext.Encode_stringContext
 - uid: Antlr4.Runtime.RuleContext.RuleIndex
   commentId: P:Antlr4.Runtime.RuleContext.RuleIndex
   parent: Antlr4.Runtime.RuleContext
@@ -2125,11 +2125,11 @@ references:
   name: RuleIndex
   nameWithType: RuleContext.RuleIndex
   fullName: Antlr4.Runtime.RuleContext.RuleIndex
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Encode_stringContext.RuleIndex*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Encode_stringContext.RuleIndex
+- uid: Bve5_Parsing.MapGrammar.V2Parser.Encode_stringContext.RuleIndex*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.Encode_stringContext.RuleIndex
   name: RuleIndex
   nameWithType: MapGrammarParser.Encode_stringContext.RuleIndex
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Encode_stringContext.RuleIndex
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.Encode_stringContext.RuleIndex
 - uid: Antlr4.Runtime.ParserRuleContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
   commentId: M:Antlr4.Runtime.ParserRuleContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
   parent: Antlr4.Runtime.ParserRuleContext
@@ -2171,11 +2171,11 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Encode_stringContext.EnterRule*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Encode_stringContext.EnterRule
+- uid: Bve5_Parsing.MapGrammar.V2Parser.Encode_stringContext.EnterRule*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.Encode_stringContext.EnterRule
   name: EnterRule
   nameWithType: MapGrammarParser.Encode_stringContext.EnterRule
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Encode_stringContext.EnterRule
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.Encode_stringContext.EnterRule
 - uid: Antlr4.Runtime.Tree.IParseTreeListener
   commentId: T:Antlr4.Runtime.Tree.IParseTreeListener
   parent: Antlr4.Runtime.Tree
@@ -2224,11 +2224,11 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Encode_stringContext.ExitRule*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Encode_stringContext.ExitRule
+- uid: Bve5_Parsing.MapGrammar.V2Parser.Encode_stringContext.ExitRule*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.Encode_stringContext.ExitRule
   name: ExitRule
   nameWithType: MapGrammarParser.Encode_stringContext.ExitRule
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Encode_stringContext.ExitRule
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.Encode_stringContext.ExitRule
 - uid: Antlr4.Runtime.RuleContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{{TResult}})
   commentId: M:Antlr4.Runtime.RuleContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
   parent: Antlr4.Runtime.RuleContext
@@ -2291,11 +2291,11 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Encode_stringContext.Accept*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Encode_stringContext.Accept
+- uid: Bve5_Parsing.MapGrammar.V2Parser.Encode_stringContext.Accept*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.Encode_stringContext.Accept
   name: Accept
   nameWithType: MapGrammarParser.Encode_stringContext.Accept
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.Encode_stringContext.Accept
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.Encode_stringContext.Accept
 - uid: Antlr4.Runtime.Tree.IParseTreeVisitor{{TResult}}
   commentId: T:Antlr4.Runtime.Tree.IParseTreeVisitor{``0}
   parent: Antlr4.Runtime.Tree

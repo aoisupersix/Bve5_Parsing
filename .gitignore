@@ -259,3 +259,7 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+
+# —š—ð‚ªdocs‚Å–„‚à‚ê‚Ä‚µ‚Ü‚¤‚Ì‚Åˆê’Uignore‚É“ü‚ê‚Æ‚­
+Bve5_ParsingDoc
+docs

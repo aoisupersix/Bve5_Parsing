@@ -16,11 +16,15 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: RandNode
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs
-    startLine: 349
+    startLine: 347
   assemblies:
   - Bve5_Parsing
   namespace: Bve5_Parsing.MapGrammar.AstNodes
@@ -68,11 +72,15 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: .ctor
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs
-    startLine: 351
+    startLine: 349
   assemblies:
   - Bve5_Parsing
   namespace: Bve5_Parsing.MapGrammar.AstNodes

@@ -2,6 +2,7 @@
 using Antlr4.Runtime.Tree;
 using Bve5_Parsing.MapGrammar.Attributes;
 using Bve5_Parsing.MapGrammar.EvaluateData;
+using Bve5_Parsing.MapGrammar.V1Parser;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -117,7 +118,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// <param name="funcName"></param>
         /// <param name="element2Name"></param>
         /// <returns></returns>
-        protected internal static SyntaxNode CreateSyntaxAstNode(BuildAstVisitor visitor, ParserRuleContext ctx, MapElementName elementName, string funcName, string element2Name = null)
+        protected internal static SyntaxNode CreateSyntaxAstNode(AbstractParseTreeVisitor<MapGrammarAstNodes> visitor, ParserRuleContext ctx, MapElementName elementName, string funcName, string element2Name = null)
         {
             // 関数名は必ず2文字以上あるので
             if (funcName.Length < 2)

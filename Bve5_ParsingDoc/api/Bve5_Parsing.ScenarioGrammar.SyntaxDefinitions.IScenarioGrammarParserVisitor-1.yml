@@ -29,7 +29,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParserVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: IScenarioGrammarParserVisitor
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParserVisitor.cs
@@ -86,7 +90,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParserVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: VisitImageState
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParserVisitor.cs
@@ -126,7 +134,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParserVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: VisitCommentState
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParserVisitor.cs
@@ -166,7 +178,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParserVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: VisitRouteTitleState
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParserVisitor.cs
@@ -206,7 +222,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParserVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: VisitVehicleTitleState
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParserVisitor.cs
@@ -246,7 +266,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParserVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: VisitRouteState
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParserVisitor.cs
@@ -286,7 +310,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParserVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: VisitTitleState
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParserVisitor.cs
@@ -326,7 +354,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParserVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: VisitAuthorState
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParserVisitor.cs
@@ -366,7 +398,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParserVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: VisitVehicleState
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParserVisitor.cs
@@ -406,7 +442,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParserVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: VisitRoot
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParserVisitor.cs
@@ -446,7 +486,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParserVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: VisitStatement
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParserVisitor.cs
@@ -486,7 +530,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParserVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: VisitEncoding
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParserVisitor.cs
@@ -526,7 +574,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParserVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: VisitEncode_string
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParserVisitor.cs
@@ -566,7 +618,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParserVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: VisitWeight_path
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParserVisitor.cs
@@ -606,7 +662,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParserVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: VisitString
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParserVisitor.cs

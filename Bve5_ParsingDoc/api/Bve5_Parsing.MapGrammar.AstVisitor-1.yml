@@ -116,7 +116,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: AstVisitor
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -169,7 +173,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -208,7 +216,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -247,7 +259,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -286,7 +302,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -325,7 +345,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -364,7 +388,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -403,7 +431,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -442,7 +474,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -481,7 +517,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -520,7 +560,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -559,7 +603,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -598,7 +646,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -637,7 +689,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -676,7 +732,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -715,7 +775,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -754,7 +818,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -793,7 +861,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -832,7 +904,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -871,7 +947,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -910,7 +990,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -949,7 +1033,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -988,7 +1076,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -1027,7 +1119,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -1066,7 +1162,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -1105,7 +1205,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -1144,7 +1248,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -1183,7 +1291,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -1222,7 +1334,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -1261,7 +1377,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -1300,7 +1420,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -1339,7 +1463,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -1378,7 +1506,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -1417,7 +1549,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -1456,7 +1592,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -1495,7 +1635,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -1534,7 +1678,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -1573,7 +1721,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -1612,7 +1764,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -1651,7 +1807,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -1690,7 +1850,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -1729,7 +1893,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -1768,7 +1936,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -1807,7 +1979,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -1846,7 +2022,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -1885,7 +2065,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -1924,7 +2108,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -1963,7 +2151,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -2002,7 +2194,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -2041,7 +2237,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -2080,7 +2280,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -2119,7 +2323,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -2158,7 +2366,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -2197,7 +2409,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -2236,7 +2452,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -2275,7 +2495,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -2314,7 +2538,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -2353,7 +2581,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -2392,7 +2624,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -2431,7 +2667,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -2470,7 +2710,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -2509,7 +2753,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -2548,7 +2796,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -2587,7 +2839,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -2626,7 +2882,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -2665,7 +2925,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -2704,7 +2968,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -2743,7 +3011,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -2782,7 +3054,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -2821,7 +3097,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -2860,7 +3140,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -2899,7 +3183,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -2938,7 +3226,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -2977,7 +3269,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -3016,7 +3312,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -3055,7 +3355,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -3094,7 +3398,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -3133,7 +3441,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -3172,7 +3484,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -3211,7 +3527,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -3250,7 +3570,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -3289,7 +3613,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -3328,7 +3656,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -3367,7 +3699,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -3406,7 +3742,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -3445,7 +3785,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -3484,7 +3828,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -3523,7 +3871,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -3562,7 +3914,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -3601,7 +3957,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -3640,7 +4000,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -3679,7 +4043,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -3718,7 +4086,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -3757,7 +4129,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -3796,7 +4172,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -3835,7 +4215,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -3874,7 +4258,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -3913,7 +4301,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -3952,7 +4344,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -3991,7 +4387,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -4030,7 +4430,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -4069,7 +4473,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs

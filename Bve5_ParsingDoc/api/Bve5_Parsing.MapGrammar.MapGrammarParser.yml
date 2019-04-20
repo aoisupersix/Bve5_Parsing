@@ -8,13 +8,14 @@ items:
   - Bve5_Parsing.MapGrammar.MapGrammarParser.#ctor
   - Bve5_Parsing.MapGrammar.MapGrammarParser._parserError
   - Bve5_Parsing.MapGrammar.MapGrammarParser.ErrorListener
+  - Bve5_Parsing.MapGrammar.MapGrammarParser.GetHeaderInfo(System.String)
   - Bve5_Parsing.MapGrammar.MapGrammarParser.Parse(System.String)
   - Bve5_Parsing.MapGrammar.MapGrammarParser.Parse(System.String,Bve5_Parsing.MapGrammar.MapGrammarParser.MapGrammarParserOption)
   - Bve5_Parsing.MapGrammar.MapGrammarParser.Parse(System.String,System.String,Bve5_Parsing.MapGrammar.MapGrammarParser.MapGrammarParserOption)
   - Bve5_Parsing.MapGrammar.MapGrammarParser.ParseFromFile(System.String)
   - Bve5_Parsing.MapGrammar.MapGrammarParser.ParseFromFile(System.String,Bve5_Parsing.MapGrammar.MapGrammarParser.MapGrammarParserOption)
   - Bve5_Parsing.MapGrammar.MapGrammarParser.ParserErrors
-  - Bve5_Parsing.MapGrammar.MapGrammarParser.ParseToAst(System.String)
+  - Bve5_Parsing.MapGrammar.MapGrammarParser.ParseToAst(System.String,System.String)
   - Bve5_Parsing.MapGrammar.MapGrammarParser.Store
   langs:
   - csharp
@@ -26,7 +27,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/MapGrammarParser.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: MapGrammarParser
     path: ../Bve5_Parsing/MapGrammar/MapGrammarParser.cs
@@ -69,7 +74,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/MapGrammarParser.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: _parserError
     path: ../Bve5_Parsing/MapGrammar/MapGrammarParser.cs
@@ -100,7 +109,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/MapGrammarParser.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: ParserErrors
     path: ../Bve5_Parsing/MapGrammar/MapGrammarParser.cs
@@ -137,7 +150,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/MapGrammarParser.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: ErrorListener
     path: ../Bve5_Parsing/MapGrammar/MapGrammarParser.cs
@@ -174,7 +191,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/MapGrammarParser.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Store
     path: ../Bve5_Parsing/MapGrammar/MapGrammarParser.cs
@@ -211,7 +232,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/MapGrammarParser.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: .ctor
     path: ../Bve5_Parsing/MapGrammar/MapGrammarParser.cs
@@ -243,7 +268,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/MapGrammarParser.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Parse
     path: ../Bve5_Parsing/MapGrammar/MapGrammarParser.cs
@@ -281,11 +310,15 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/MapGrammarParser.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Parse
     path: ../Bve5_Parsing/MapGrammar/MapGrammarParser.cs
-    startLine: 83
+    startLine: 80
   assemblies:
   - Bve5_Parsing
   namespace: Bve5_Parsing.MapGrammar
@@ -309,51 +342,6 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.MapGrammarParser.Parse(System.String,System.String,Bve5_Parsing.MapGrammar.MapGrammarParser.MapGrammarParserOption)
-  commentId: M:Bve5_Parsing.MapGrammar.MapGrammarParser.Parse(System.String,System.String,Bve5_Parsing.MapGrammar.MapGrammarParser.MapGrammarParserOption)
-  id: Parse(System.String,System.String,Bve5_Parsing.MapGrammar.MapGrammarParser.MapGrammarParserOption)
-  parent: Bve5_Parsing.MapGrammar.MapGrammarParser
-  langs:
-  - csharp
-  - vb
-  name: Parse(String, String, MapGrammarParser.MapGrammarParserOption)
-  nameWithType: MapGrammarParser.Parse(String, String, MapGrammarParser.MapGrammarParserOption)
-  fullName: Bve5_Parsing.MapGrammar.MapGrammarParser.Parse(System.String, System.String, Bve5_Parsing.MapGrammar.MapGrammarParser.MapGrammarParserOption)
-  type: Method
-  source:
-    remote:
-      path: Bve5_Parsing/MapGrammar/MapGrammarParser.cs
-      branch: master
-      repo: https://github.com/aoisupersix/Bve5_Parsing
-    id: Parse
-    path: ../Bve5_Parsing/MapGrammar/MapGrammarParser.cs
-    startLine: 96
-  assemblies:
-  - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar
-  summary: "\n引数に与えられたマップ構文文字列の構文解析と評価を行い、MapDataを生成します。\n"
-  example: []
-  syntax:
-    content: public MapData Parse(string input, string dirAbsolutePath, MapGrammarParser.MapGrammarParserOption option)
-    parameters:
-    - id: input
-      type: System.String
-      description: ''
-    - id: dirAbsolutePath
-      type: System.String
-      description: ''
-    - id: option
-      type: Bve5_Parsing.MapGrammar.MapGrammarParser.MapGrammarParserOption
-      description: ''
-    return:
-      type: Bve5_Parsing.MapGrammar.EvaluateData.MapData
-      description: ''
-    content.vb: Public Function Parse(input As String, dirAbsolutePath As String, option As MapGrammarParser.MapGrammarParserOption) As MapData
-  overload: Bve5_Parsing.MapGrammar.MapGrammarParser.Parse*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
 - uid: Bve5_Parsing.MapGrammar.MapGrammarParser.ParseFromFile(System.String)
   commentId: M:Bve5_Parsing.MapGrammar.MapGrammarParser.ParseFromFile(System.String)
   id: ParseFromFile(System.String)
@@ -368,11 +356,15 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/MapGrammarParser.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: ParseFromFile
     path: ../Bve5_Parsing/MapGrammar/MapGrammarParser.cs
-    startLine: 116
+    startLine: 93
   assemblies:
   - Bve5_Parsing
   namespace: Bve5_Parsing.MapGrammar
@@ -407,11 +399,15 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/MapGrammarParser.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: ParseFromFile
     path: ../Bve5_Parsing/MapGrammar/MapGrammarParser.cs
-    startLine: 138
+    startLine: 104
   assemblies:
   - Bve5_Parsing
   namespace: Bve5_Parsing.MapGrammar
@@ -435,21 +431,74 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.MapGrammarParser.ParseToAst(System.String)
-  commentId: M:Bve5_Parsing.MapGrammar.MapGrammarParser.ParseToAst(System.String)
-  id: ParseToAst(System.String)
+- uid: Bve5_Parsing.MapGrammar.MapGrammarParser.Parse(System.String,System.String,Bve5_Parsing.MapGrammar.MapGrammarParser.MapGrammarParserOption)
+  commentId: M:Bve5_Parsing.MapGrammar.MapGrammarParser.Parse(System.String,System.String,Bve5_Parsing.MapGrammar.MapGrammarParser.MapGrammarParserOption)
+  id: Parse(System.String,System.String,Bve5_Parsing.MapGrammar.MapGrammarParser.MapGrammarParserOption)
   parent: Bve5_Parsing.MapGrammar.MapGrammarParser
   langs:
   - csharp
   - vb
-  name: ParseToAst(String)
-  nameWithType: MapGrammarParser.ParseToAst(String)
-  fullName: Bve5_Parsing.MapGrammar.MapGrammarParser.ParseToAst(System.String)
+  name: Parse(String, String, MapGrammarParser.MapGrammarParserOption)
+  nameWithType: MapGrammarParser.Parse(String, String, MapGrammarParser.MapGrammarParserOption)
+  fullName: Bve5_Parsing.MapGrammar.MapGrammarParser.Parse(System.String, System.String, Bve5_Parsing.MapGrammar.MapGrammarParser.MapGrammarParserOption)
   type: Method
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/MapGrammarParser.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Parse
+    path: ../Bve5_Parsing/MapGrammar/MapGrammarParser.cs
+    startLine: 126
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\n引数に与えられたマップ構文文字列の構文解析と評価を行い、MapDataを生成します。\n"
+  example: []
+  syntax:
+    content: public MapData Parse(string input, string dirAbsolutePath, MapGrammarParser.MapGrammarParserOption option)
+    parameters:
+    - id: input
+      type: System.String
+      description: ''
+    - id: dirAbsolutePath
+      type: System.String
+      description: ''
+    - id: option
+      type: Bve5_Parsing.MapGrammar.MapGrammarParser.MapGrammarParserOption
+      description: ''
+    return:
+      type: Bve5_Parsing.MapGrammar.EvaluateData.MapData
+      description: ''
+    content.vb: Public Function Parse(input As String, dirAbsolutePath As String, option As MapGrammarParser.MapGrammarParserOption) As MapData
+  overload: Bve5_Parsing.MapGrammar.MapGrammarParser.Parse*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Bve5_Parsing.MapGrammar.MapGrammarParser.ParseToAst(System.String,System.String)
+  commentId: M:Bve5_Parsing.MapGrammar.MapGrammarParser.ParseToAst(System.String,System.String)
+  id: ParseToAst(System.String,System.String)
+  parent: Bve5_Parsing.MapGrammar.MapGrammarParser
+  langs:
+  - csharp
+  - vb
+  name: ParseToAst(String, String)
+  nameWithType: MapGrammarParser.ParseToAst(String, String)
+  fullName: Bve5_Parsing.MapGrammar.MapGrammarParser.ParseToAst(System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/MapGrammarParser.cs
+<<<<<<< HEAD
+      branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: ParseToAst
     path: ../Bve5_Parsing/MapGrammar/MapGrammarParser.cs
@@ -460,19 +509,62 @@ items:
   summary: "\n引数に与えられたマップ構文の構文解析を行い、ASTを生成します。\n"
   example: []
   syntax:
-    content: public MapGrammarAstNodes ParseToAst(string input)
+    content: public MapGrammarAstNodes ParseToAst(string input, string versionString = null)
     parameters:
     - id: input
       type: System.String
-      description: 解析するマップ構文を表す文字列
+      description: 解析するマップ構文のステートメントを表す文字列
+    - id: versionString
+      type: System.String
+      description: パーサを指定するためのバージョン文字列（省略した場合はV2Parserを利用します）
     return:
       type: Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes
-    content.vb: Public Function ParseToAst(input As String) As MapGrammarAstNodes
+      description: ''
+    content.vb: Public Function ParseToAst(input As String, versionString As String = Nothing) As MapGrammarAstNodes
   overload: Bve5_Parsing.MapGrammar.MapGrammarParser.ParseToAst*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
+- uid: Bve5_Parsing.MapGrammar.MapGrammarParser.GetHeaderInfo(System.String)
+  commentId: M:Bve5_Parsing.MapGrammar.MapGrammarParser.GetHeaderInfo(System.String)
+  id: GetHeaderInfo(System.String)
+  parent: Bve5_Parsing.MapGrammar.MapGrammarParser
+  langs:
+  - csharp
+  - vb
+  name: GetHeaderInfo(String)
+  nameWithType: MapGrammarParser.GetHeaderInfo(String)
+  fullName: Bve5_Parsing.MapGrammar.MapGrammarParser.GetHeaderInfo(System.String)
+  type: Method
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/MapGrammarParser.cs
+      branch: support_oldsyntax
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: GetHeaderInfo
+    path: ../Bve5_Parsing/MapGrammar/MapGrammarParser.cs
+    startLine: 194
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar
+  summary: "\n引数に与えられたマップファイルのヘッダ情報を取得します。\n"
+  example: []
+  syntax:
+    content: protected Tuple<string, string, int> GetHeaderInfo(string input)
+    parameters:
+    - id: input
+      type: System.String
+      description: ''
+    return:
+      type: System.Tuple{System.String,System.String,System.Int32}
+      description: "\nバージョン、エンコーディング、ステートメントの開始インデックスのタプルにまとめたもの。\nItem1にバージョン情報、Item2にエンコーディング、Item3にステートメント開始インデックスを返します。\n引数に与えられた文字列が有効なマップファイルでない場合はバージョン情報がnullのタプルを返します。\n"
+    content.vb: Protected Function GetHeaderInfo(input As String) As Tuple(Of String, String, Integer)
+  overload: Bve5_Parsing.MapGrammar.MapGrammarParser.GetHeaderInfo*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
 references:
 - uid: Bve5_Parsing.MapGrammar
   commentId: N:Bve5_Parsing.MapGrammar
@@ -1032,3 +1124,147 @@ references:
   name: Bve5_Parsing.MapGrammar.AstNodes
   nameWithType: Bve5_Parsing.MapGrammar.AstNodes
   fullName: Bve5_Parsing.MapGrammar.AstNodes
+- uid: Bve5_Parsing.MapGrammar.MapGrammarParser.GetHeaderInfo*
+  commentId: Overload:Bve5_Parsing.MapGrammar.MapGrammarParser.GetHeaderInfo
+  name: GetHeaderInfo
+  nameWithType: MapGrammarParser.GetHeaderInfo
+  fullName: Bve5_Parsing.MapGrammar.MapGrammarParser.GetHeaderInfo
+- uid: System.Tuple{System.String,System.String,System.Int32}
+  commentId: T:System.Tuple{System.String,System.String,System.Int32}
+  parent: System
+  definition: System.Tuple`3
+  name: Tuple<String, String, Int32>
+  nameWithType: Tuple<String, String, Int32>
+  fullName: System.Tuple<System.String, System.String, System.Int32>
+  nameWithType.vb: Tuple(Of String, String, Int32)
+  fullName.vb: System.Tuple(Of System.String, System.String, System.Int32)
+  name.vb: Tuple(Of String, String, Int32)
+  spec.csharp:
+  - uid: System.Tuple`3
+    name: Tuple
+    nameWithType: Tuple
+    fullName: System.Tuple
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Tuple`3
+    name: Tuple
+    nameWithType: Tuple
+    fullName: System.Tuple
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Tuple`3
+  commentId: T:System.Tuple`3
+  isExternal: true
+  name: Tuple<T1, T2, T3>
+  nameWithType: Tuple<T1, T2, T3>
+  fullName: System.Tuple<T1, T2, T3>
+  nameWithType.vb: Tuple(Of T1, T2, T3)
+  fullName.vb: System.Tuple(Of T1, T2, T3)
+  name.vb: Tuple(Of T1, T2, T3)
+  spec.csharp:
+  - uid: System.Tuple`3
+    name: Tuple
+    nameWithType: Tuple
+    fullName: System.Tuple
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Tuple`3
+    name: Tuple
+    nameWithType: Tuple
+    fullName: System.Tuple
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: )
+    nameWithType: )
+    fullName: )

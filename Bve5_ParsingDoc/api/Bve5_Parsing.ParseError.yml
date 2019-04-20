@@ -20,7 +20,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/ParseError.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: ParseError
     path: ../Bve5_Parsing/ParseError.cs
@@ -63,7 +67,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/ParseError.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: ErrorLevel
     path: ../Bve5_Parsing/ParseError.cs
@@ -100,7 +108,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/ParseError.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Line
     path: ../Bve5_Parsing/ParseError.cs
@@ -137,7 +149,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/ParseError.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Column
     path: ../Bve5_Parsing/ParseError.cs
@@ -174,7 +190,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/ParseError.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Message
     path: ../Bve5_Parsing/ParseError.cs
@@ -211,7 +231,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/ParseError.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: .ctor
     path: ../Bve5_Parsing/ParseError.cs

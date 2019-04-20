@@ -1,28 +1,28 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext
   id: MapGrammarParser.DrawdistanceContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   children:
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.#ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.CHANGE
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.CLS_PAR
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.DOT
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.func
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.nullableExpr
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.OPN_PAR
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.RuleIndex
-  - Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.value
+  - Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.#ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)
+  - Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
+  - Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.CHANGE
+  - Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.CLS_PAR
+  - Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.DOT
+  - Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
+  - Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
+  - Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.func
+  - Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.nullableExpr
+  - Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.OPN_PAR
+  - Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.RuleIndex
+  - Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.value
   langs:
   - csharp
   - vb
   name: MapGrammarParser.DrawdistanceContext
   nameWithType: MapGrammarParser.DrawdistanceContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext
   type: Class
   source:
     remote:
@@ -34,7 +34,7 @@ items:
     startLine: 3083
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: 'public class DrawdistanceContext : ParserRuleContext, IRuleNode, IParseTree, ISyntaxTree, ITree'
     content.vb: >-
@@ -109,16 +109,16 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.func
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.func
+- uid: Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.func
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.func
   id: func
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext
   langs:
   - csharp
   - vb
   name: func
   nameWithType: MapGrammarParser.DrawdistanceContext.func
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.func
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.func
   type: Field
   source:
     remote:
@@ -130,7 +130,7 @@ items:
     startLine: 3084
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public IToken func
     return:
@@ -140,16 +140,16 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.value
-  commentId: F:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.value
+- uid: Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.value
+  commentId: F:Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.value
   id: value
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext
   langs:
   - csharp
   - vb
   name: value
   nameWithType: MapGrammarParser.DrawdistanceContext.value
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.value
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.value
   type: Field
   source:
     remote:
@@ -161,26 +161,26 @@ items:
     startLine: 3085
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public MapGrammarParser.NullableExprContext value
     return:
-      type: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.NullableExprContext
+      type: Bve5_Parsing.MapGrammar.V2Parser.NullableExprContext
     content.vb: Public value As MapGrammarParser.NullableExprContext
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.DOT
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.DOT
+- uid: Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.DOT
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.DOT
   id: DOT
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext
   langs:
   - csharp
   - vb
   name: DOT()
   nameWithType: MapGrammarParser.DrawdistanceContext.DOT()
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.DOT()
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.DOT()
   type: Method
   source:
     remote:
@@ -192,27 +192,27 @@ items:
     startLine: 3086
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public ITerminalNode DOT()
     return:
       type: Antlr4.Runtime.Tree.ITerminalNode
     content.vb: Public Function DOT As ITerminalNode
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.DOT*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.DOT*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.OPN_PAR
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.OPN_PAR
+- uid: Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.OPN_PAR
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.OPN_PAR
   id: OPN_PAR
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext
   langs:
   - csharp
   - vb
   name: OPN_PAR()
   nameWithType: MapGrammarParser.DrawdistanceContext.OPN_PAR()
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.OPN_PAR()
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.OPN_PAR()
   type: Method
   source:
     remote:
@@ -224,27 +224,27 @@ items:
     startLine: 3087
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public ITerminalNode OPN_PAR()
     return:
       type: Antlr4.Runtime.Tree.ITerminalNode
     content.vb: Public Function OPN_PAR As ITerminalNode
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.OPN_PAR*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.OPN_PAR*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.CLS_PAR
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.CLS_PAR
+- uid: Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.CLS_PAR
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.CLS_PAR
   id: CLS_PAR
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext
   langs:
   - csharp
   - vb
   name: CLS_PAR()
   nameWithType: MapGrammarParser.DrawdistanceContext.CLS_PAR()
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.CLS_PAR()
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.CLS_PAR()
   type: Method
   source:
     remote:
@@ -256,27 +256,27 @@ items:
     startLine: 3088
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public ITerminalNode CLS_PAR()
     return:
       type: Antlr4.Runtime.Tree.ITerminalNode
     content.vb: Public Function CLS_PAR As ITerminalNode
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.CLS_PAR*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.CLS_PAR*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.CHANGE
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.CHANGE
+- uid: Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.CHANGE
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.CHANGE
   id: CHANGE
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext
   langs:
   - csharp
   - vb
   name: CHANGE()
   nameWithType: MapGrammarParser.DrawdistanceContext.CHANGE()
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.CHANGE()
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.CHANGE()
   type: Method
   source:
     remote:
@@ -288,27 +288,27 @@ items:
     startLine: 3089
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public ITerminalNode CHANGE()
     return:
       type: Antlr4.Runtime.Tree.ITerminalNode
     content.vb: Public Function CHANGE As ITerminalNode
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.CHANGE*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.CHANGE*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.nullableExpr
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.nullableExpr
+- uid: Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.nullableExpr
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.nullableExpr
   id: nullableExpr
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext
   langs:
   - csharp
   - vb
   name: nullableExpr()
   nameWithType: MapGrammarParser.DrawdistanceContext.nullableExpr()
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.nullableExpr()
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.nullableExpr()
   type: Method
   source:
     remote:
@@ -320,27 +320,27 @@ items:
     startLine: 3090
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public MapGrammarParser.NullableExprContext nullableExpr()
     return:
-      type: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.NullableExprContext
+      type: Bve5_Parsing.MapGrammar.V2Parser.NullableExprContext
     content.vb: Public Function nullableExpr As MapGrammarParser.NullableExprContext
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.nullableExpr*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.nullableExpr*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.#ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.#ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)
+- uid: Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.#ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.#ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)
   id: '#ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)'
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext
   langs:
   - csharp
   - vb
   name: DrawdistanceContext(ParserRuleContext, Int32)
   nameWithType: MapGrammarParser.DrawdistanceContext.DrawdistanceContext(ParserRuleContext, Int32)
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.DrawdistanceContext(Antlr4.Runtime.ParserRuleContext, System.Int32)
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.DrawdistanceContext(Antlr4.Runtime.ParserRuleContext, System.Int32)
   type: Constructor
   source:
     remote:
@@ -352,7 +352,7 @@ items:
     startLine: 3093
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public DrawdistanceContext(ParserRuleContext parent, int invokingState)
     parameters:
@@ -361,21 +361,21 @@ items:
     - id: invokingState
       type: System.Int32
     content.vb: Public Sub New(parent As ParserRuleContext, invokingState As Integer)
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.#ctor*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.RuleIndex
-  commentId: P:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.RuleIndex
+- uid: Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.RuleIndex
+  commentId: P:Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.RuleIndex
   id: RuleIndex
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext
   langs:
   - csharp
   - vb
   name: RuleIndex
   nameWithType: MapGrammarParser.DrawdistanceContext.RuleIndex
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.RuleIndex
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.RuleIndex
   type: Property
   source:
     remote:
@@ -387,7 +387,7 @@ items:
     startLine: 3097
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public override int RuleIndex { get; }
     parameters: []
@@ -395,7 +395,7 @@ items:
       type: System.Int32
     content.vb: Public Overrides ReadOnly Property RuleIndex As Integer
   overridden: Antlr4.Runtime.RuleContext.RuleIndex
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.RuleIndex*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.RuleIndex*
   modifiers.csharp:
   - public
   - override
@@ -404,16 +404,16 @@ items:
   - Public
   - Overrides
   - ReadOnly
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
+- uid: Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
   id: EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext
   langs:
   - csharp
   - vb
   name: EnterRule(IParseTreeListener)
   nameWithType: MapGrammarParser.DrawdistanceContext.EnterRule(IParseTreeListener)
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
   type: Method
   source:
     remote:
@@ -425,7 +425,7 @@ items:
     startLine: 3098
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public override void EnterRule(IParseTreeListener listener)
     parameters:
@@ -433,23 +433,23 @@ items:
       type: Antlr4.Runtime.Tree.IParseTreeListener
     content.vb: Public Overrides Sub EnterRule(listener As IParseTreeListener)
   overridden: Antlr4.Runtime.ParserRuleContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.EnterRule*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.EnterRule*
   modifiers.csharp:
   - public
   - override
   modifiers.vb:
   - Public
   - Overrides
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
+- uid: Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
   id: ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext
   langs:
   - csharp
   - vb
   name: ExitRule(IParseTreeListener)
   nameWithType: MapGrammarParser.DrawdistanceContext.ExitRule(IParseTreeListener)
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
   type: Method
   source:
     remote:
@@ -461,7 +461,7 @@ items:
     startLine: 3102
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public override void ExitRule(IParseTreeListener listener)
     parameters:
@@ -469,23 +469,23 @@ items:
       type: Antlr4.Runtime.Tree.IParseTreeListener
     content.vb: Public Overrides Sub ExitRule(listener As IParseTreeListener)
   overridden: Antlr4.Runtime.ParserRuleContext.ExitRule(Antlr4.Runtime.Tree.IParseTreeListener)
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.ExitRule*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.ExitRule*
   modifiers.csharp:
   - public
   - override
   modifiers.vb:
   - Public
   - Overrides
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
-  commentId: M:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
+- uid: Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
+  commentId: M:Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
   id: Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext
   langs:
   - csharp
   - vb
   name: Accept<TResult>(IParseTreeVisitor<TResult>)
   nameWithType: MapGrammarParser.DrawdistanceContext.Accept<TResult>(IParseTreeVisitor<TResult>)
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.Accept<TResult>(Antlr4.Runtime.Tree.IParseTreeVisitor<TResult>)
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.Accept<TResult>(Antlr4.Runtime.Tree.IParseTreeVisitor<TResult>)
   type: Method
   source:
     remote:
@@ -497,7 +497,7 @@ items:
     startLine: 3106
   assemblies:
   - Bve5_Parsing
-  namespace: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+  namespace: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   syntax:
     content: public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor)
     parameters:
@@ -509,7 +509,7 @@ items:
       type: '{TResult}'
     content.vb: Public Overrides Function Accept(Of TResult)(visitor As IParseTreeVisitor(Of TResult)) As TResult
   overridden: Antlr4.Runtime.RuleContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{{TResult}})
-  overload: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.Accept*
+  overload: Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.Accept*
   nameWithType.vb: MapGrammarParser.DrawdistanceContext.Accept(Of TResult)(IParseTreeVisitor(Of TResult))
   modifiers.csharp:
   - public
@@ -517,14 +517,14 @@ items:
   modifiers.vb:
   - Public
   - Overrides
-  fullName.vb: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.Accept(Of TResult)(Antlr4.Runtime.Tree.IParseTreeVisitor(Of TResult))
+  fullName.vb: Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.Accept(Of TResult)(Antlr4.Runtime.Tree.IParseTreeVisitor(Of TResult))
   name.vb: Accept(Of TResult)(IParseTreeVisitor(Of TResult))
 references:
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions
-  commentId: N:Bve5_Parsing.MapGrammar.SyntaxDefinitions
-  name: Bve5_Parsing.MapGrammar.SyntaxDefinitions
-  nameWithType: Bve5_Parsing.MapGrammar.SyntaxDefinitions
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+- uid: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
+  commentId: N:Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
+  name: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
+  nameWithType: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -2235,17 +2235,17 @@ references:
   name: IToken
   nameWithType: IToken
   fullName: Antlr4.Runtime.IToken
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.NullableExprContext
-  commentId: T:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.NullableExprContext
-  parent: Bve5_Parsing.MapGrammar.SyntaxDefinitions
+- uid: Bve5_Parsing.MapGrammar.V2Parser.NullableExprContext
+  commentId: T:Bve5_Parsing.MapGrammar.V2Parser.NullableExprContext
+  parent: Bve5_Parsing.MapGrammar.V2Parser.SyntaxDefinitions
   name: MapGrammarParser.NullableExprContext
   nameWithType: MapGrammarParser.NullableExprContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.NullableExprContext
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.DOT*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.DOT
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.NullableExprContext
+- uid: Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.DOT*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.DOT
   name: DOT
   nameWithType: MapGrammarParser.DrawdistanceContext.DOT
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.DOT
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.DOT
 - uid: Antlr4.Runtime.Tree.ITerminalNode
   commentId: T:Antlr4.Runtime.Tree.ITerminalNode
   parent: Antlr4.Runtime.Tree
@@ -2253,31 +2253,31 @@ references:
   name: ITerminalNode
   nameWithType: ITerminalNode
   fullName: Antlr4.Runtime.Tree.ITerminalNode
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.OPN_PAR*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.OPN_PAR
+- uid: Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.OPN_PAR*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.OPN_PAR
   name: OPN_PAR
   nameWithType: MapGrammarParser.DrawdistanceContext.OPN_PAR
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.OPN_PAR
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.CLS_PAR*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.CLS_PAR
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.OPN_PAR
+- uid: Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.CLS_PAR*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.CLS_PAR
   name: CLS_PAR
   nameWithType: MapGrammarParser.DrawdistanceContext.CLS_PAR
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.CLS_PAR
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.CHANGE*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.CHANGE
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.CLS_PAR
+- uid: Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.CHANGE*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.CHANGE
   name: CHANGE
   nameWithType: MapGrammarParser.DrawdistanceContext.CHANGE
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.CHANGE
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.nullableExpr*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.nullableExpr
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.CHANGE
+- uid: Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.nullableExpr*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.nullableExpr
   name: nullableExpr
   nameWithType: MapGrammarParser.DrawdistanceContext.nullableExpr
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.nullableExpr
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.#ctor*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.#ctor
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.nullableExpr
+- uid: Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.#ctor*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.#ctor
   name: DrawdistanceContext
   nameWithType: MapGrammarParser.DrawdistanceContext.DrawdistanceContext
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.DrawdistanceContext
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.DrawdistanceContext
 - uid: System.Int32
   commentId: T:System.Int32
   parent: System
@@ -2292,11 +2292,11 @@ references:
   name: RuleIndex
   nameWithType: RuleContext.RuleIndex
   fullName: Antlr4.Runtime.RuleContext.RuleIndex
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.RuleIndex*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.RuleIndex
+- uid: Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.RuleIndex*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.RuleIndex
   name: RuleIndex
   nameWithType: MapGrammarParser.DrawdistanceContext.RuleIndex
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.RuleIndex
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.RuleIndex
 - uid: Antlr4.Runtime.ParserRuleContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
   commentId: M:Antlr4.Runtime.ParserRuleContext.EnterRule(Antlr4.Runtime.Tree.IParseTreeListener)
   parent: Antlr4.Runtime.ParserRuleContext
@@ -2338,11 +2338,11 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.EnterRule*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.EnterRule
+- uid: Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.EnterRule*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.EnterRule
   name: EnterRule
   nameWithType: MapGrammarParser.DrawdistanceContext.EnterRule
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.EnterRule
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.EnterRule
 - uid: Antlr4.Runtime.Tree.IParseTreeListener
   commentId: T:Antlr4.Runtime.Tree.IParseTreeListener
   parent: Antlr4.Runtime.Tree
@@ -2391,11 +2391,11 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.ExitRule*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.ExitRule
+- uid: Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.ExitRule*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.ExitRule
   name: ExitRule
   nameWithType: MapGrammarParser.DrawdistanceContext.ExitRule
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.ExitRule
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.ExitRule
 - uid: Antlr4.Runtime.RuleContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{{TResult}})
   commentId: M:Antlr4.Runtime.RuleContext.Accept``1(Antlr4.Runtime.Tree.IParseTreeVisitor{``0})
   parent: Antlr4.Runtime.RuleContext
@@ -2458,11 +2458,11 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.Accept*
-  commentId: Overload:Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.Accept
+- uid: Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.Accept*
+  commentId: Overload:Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.Accept
   name: Accept
   nameWithType: MapGrammarParser.DrawdistanceContext.Accept
-  fullName: Bve5_Parsing.MapGrammar.SyntaxDefinitions.MapGrammarParser.DrawdistanceContext.Accept
+  fullName: Bve5_Parsing.MapGrammar.V2Parser.DrawdistanceContext.Accept
 - uid: Antlr4.Runtime.Tree.IParseTreeVisitor{{TResult}}
   commentId: T:Antlr4.Runtime.Tree.IParseTreeVisitor{``0}
   parent: Antlr4.Runtime.Tree

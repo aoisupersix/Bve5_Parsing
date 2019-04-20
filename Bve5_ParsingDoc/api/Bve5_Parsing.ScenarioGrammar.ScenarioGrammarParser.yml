@@ -19,7 +19,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/ScenarioGrammar/ScenarioGrammarParser.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: ScenarioGrammarParser
     path: ../Bve5_Parsing/ScenarioGrammar/ScenarioGrammarParser.cs
@@ -62,7 +66,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/ScenarioGrammar/ScenarioGrammarParser.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: ErrorListener
     path: ../Bve5_Parsing/ScenarioGrammar/ScenarioGrammarParser.cs
@@ -99,7 +107,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/ScenarioGrammar/ScenarioGrammarParser.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: .ctor
     path: ../Bve5_Parsing/ScenarioGrammar/ScenarioGrammarParser.cs
@@ -131,7 +143,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/ScenarioGrammar/ScenarioGrammarParser.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: .ctor
     path: ../Bve5_Parsing/ScenarioGrammar/ScenarioGrammarParser.cs
@@ -167,7 +183,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/ScenarioGrammar/ScenarioGrammarParser.cs
+<<<<<<< HEAD
       branch: master
+=======
+      branch: support_oldsyntax
+>>>>>>> origin/support_oldsyntax
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Parse
     path: ../Bve5_Parsing/ScenarioGrammar/ScenarioGrammarParser.cs
