@@ -22,7 +22,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: TrackCantBegintransitionNode
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
@@ -36,7 +36,6 @@ items:
     content: 'public class TrackCantBegintransitionNode : SyntaxNode'
     content.vb: >-
       Public Class TrackCantBegintransitionNode
-
           Inherits SyntaxNode
   inheritance:
   - System.Object
@@ -80,7 +79,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: ElementName
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
@@ -120,7 +119,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: SubElementName
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
@@ -131,17 +130,20 @@ items:
   summary: "\nマップ副要素名\n"
   example: []
   syntax:
-    content: public MapSubElementName SubElementName { get; }
+    content: public override MapSubElementName? SubElementName { get; }
     parameters: []
     return:
-      type: Bve5_Parsing.MapGrammar.MapSubElementName
-    content.vb: Public ReadOnly Property SubElementName As MapSubElementName
+      type: System.Nullable{Bve5_Parsing.MapGrammar.MapSubElementName}
+    content.vb: Public Overrides ReadOnly Property SubElementName As MapSubElementName?
+  overridden: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.SubElementName
   overload: Bve5_Parsing.MapGrammar.AstNodes.TrackCantBegintransitionNode.SubElementName*
   modifiers.csharp:
   - public
+  - override
   - get
   modifiers.vb:
   - Public
+  - Overrides
   - ReadOnly
 - uid: Bve5_Parsing.MapGrammar.AstNodes.TrackCantBegintransitionNode.FunctionName
   commentId: P:Bve5_Parsing.MapGrammar.AstNodes.TrackCantBegintransitionNode.FunctionName
@@ -157,7 +159,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: FunctionName
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
@@ -197,7 +199,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: HasKey
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
@@ -237,7 +239,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: HasSubElement
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
@@ -277,7 +279,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Key
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
@@ -288,18 +290,21 @@ items:
   summary: "\nKey：TrackKey\n"
   example: []
   syntax:
-    content: public MapGrammarAstNodes Key { get; set; }
+    content: public override MapGrammarAstNodes Key { get; set; }
     parameters: []
     return:
       type: Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes
-    content.vb: Public Property Key As MapGrammarAstNodes
+    content.vb: Public Overrides Property Key As MapGrammarAstNodes
+  overridden: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.Key
   overload: Bve5_Parsing.MapGrammar.AstNodes.TrackCantBegintransitionNode.Key*
   modifiers.csharp:
   - public
+  - override
   - get
   - set
   modifiers.vb:
   - Public
+  - Overrides
 - uid: Bve5_Parsing.MapGrammar.AstNodes.TrackCantBegintransitionNode.#ctor(Antlr4.Runtime.IToken,Antlr4.Runtime.IToken)
   commentId: M:Bve5_Parsing.MapGrammar.AstNodes.TrackCantBegintransitionNode.#ctor(Antlr4.Runtime.IToken,Antlr4.Runtime.IToken)
   id: '#ctor(Antlr4.Runtime.IToken,Antlr4.Runtime.IToken)'
@@ -314,7 +319,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: .ctor
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
@@ -1030,17 +1035,98 @@ references:
   name: Bve5_Parsing.MapGrammar
   nameWithType: Bve5_Parsing.MapGrammar
   fullName: Bve5_Parsing.MapGrammar
+- uid: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.SubElementName
+  commentId: P:Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.SubElementName
+  parent: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode
+  name: SubElementName
+  nameWithType: SyntaxNode.SubElementName
+  fullName: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.SubElementName
 - uid: Bve5_Parsing.MapGrammar.AstNodes.TrackCantBegintransitionNode.SubElementName*
   commentId: Overload:Bve5_Parsing.MapGrammar.AstNodes.TrackCantBegintransitionNode.SubElementName
   name: SubElementName
   nameWithType: TrackCantBegintransitionNode.SubElementName
   fullName: Bve5_Parsing.MapGrammar.AstNodes.TrackCantBegintransitionNode.SubElementName
-- uid: Bve5_Parsing.MapGrammar.MapSubElementName
-  commentId: T:Bve5_Parsing.MapGrammar.MapSubElementName
-  parent: Bve5_Parsing.MapGrammar
-  name: MapSubElementName
-  nameWithType: MapSubElementName
-  fullName: Bve5_Parsing.MapGrammar.MapSubElementName
+- uid: System.Nullable{Bve5_Parsing.MapGrammar.MapSubElementName}
+  commentId: T:System.Nullable{Bve5_Parsing.MapGrammar.MapSubElementName}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<MapSubElementName>
+  nameWithType: Nullable<MapSubElementName>
+  fullName: System.Nullable<Bve5_Parsing.MapGrammar.MapSubElementName>
+  nameWithType.vb: Nullable(Of MapSubElementName)
+  fullName.vb: System.Nullable(Of Bve5_Parsing.MapGrammar.MapSubElementName)
+  name.vb: Nullable(Of MapSubElementName)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Bve5_Parsing.MapGrammar.MapSubElementName
+    name: MapSubElementName
+    nameWithType: MapSubElementName
+    fullName: Bve5_Parsing.MapGrammar.MapSubElementName
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Bve5_Parsing.MapGrammar.MapSubElementName
+    name: MapSubElementName
+    nameWithType: MapSubElementName
+    fullName: Bve5_Parsing.MapGrammar.MapSubElementName
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.FunctionName
   commentId: P:Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.FunctionName
   parent: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode
@@ -1087,6 +1173,12 @@ references:
   name: HasSubElement
   nameWithType: TrackCantBegintransitionNode.HasSubElement
   fullName: Bve5_Parsing.MapGrammar.AstNodes.TrackCantBegintransitionNode.HasSubElement
+- uid: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.Key
+  commentId: P:Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.Key
+  parent: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode
+  name: Key
+  nameWithType: SyntaxNode.Key
+  fullName: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.Key
 - uid: Bve5_Parsing.MapGrammar.AstNodes.TrackCantBegintransitionNode.Key*
   commentId: Overload:Bve5_Parsing.MapGrammar.AstNodes.TrackCantBegintransitionNode.Key
   name: Key

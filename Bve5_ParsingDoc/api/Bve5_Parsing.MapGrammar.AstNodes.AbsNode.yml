@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: AbsNode
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs
@@ -30,7 +30,6 @@ items:
     content: 'public class AbsNode : SingleArgFunctionNode'
     content.vb: >-
       Public Class AbsNode
-
           Inherits SingleArgFunctionNode
   inheritance:
   - System.Object
@@ -69,7 +68,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: .ctor
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs

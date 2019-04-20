@@ -23,7 +23,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: TrackCantStatement
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
@@ -37,7 +37,6 @@ items:
     content: 'public class TrackCantStatement : TrackCantInterpolateStatement'
     content.vb: >-
       Public Class TrackCantStatement
-
           Inherits TrackCantInterpolateStatement
   inheritance:
   - System.Object
@@ -75,7 +74,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: ElementName
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
@@ -115,7 +114,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: FunctionName
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
@@ -155,7 +154,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: HasKey
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
@@ -195,7 +194,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: HasSubElement
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
@@ -235,7 +234,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Key
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
@@ -246,18 +245,21 @@ items:
   summary: "\nKey：TrackKey\n"
   example: []
   syntax:
-    content: public string Key { get; set; }
+    content: public override string Key { get; set; }
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property Key As String
+    content.vb: Public Overrides Property Key As String
+  overridden: Bve5_Parsing.MapGrammar.EvaluateData.TrackCantInterpolateStatement.Key
   overload: Bve5_Parsing.MapGrammar.EvaluateData.TrackCantStatement.Key*
   modifiers.csharp:
   - public
+  - override
   - get
   - set
   modifiers.vb:
   - Public
+  - Overrides
 - uid: Bve5_Parsing.MapGrammar.EvaluateData.TrackCantStatement.Cant
   commentId: P:Bve5_Parsing.MapGrammar.EvaluateData.TrackCantStatement.Cant
   id: Cant
@@ -272,7 +274,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Cant
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
@@ -309,7 +311,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: .ctor
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
@@ -341,7 +343,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: .ctor
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
@@ -808,6 +810,12 @@ references:
   name: HasSubElement
   nameWithType: TrackCantStatement.HasSubElement
   fullName: Bve5_Parsing.MapGrammar.EvaluateData.TrackCantStatement.HasSubElement
+- uid: Bve5_Parsing.MapGrammar.EvaluateData.TrackCantInterpolateStatement.Key
+  commentId: P:Bve5_Parsing.MapGrammar.EvaluateData.TrackCantInterpolateStatement.Key
+  parent: Bve5_Parsing.MapGrammar.EvaluateData.TrackCantInterpolateStatement
+  name: Key
+  nameWithType: TrackCantInterpolateStatement.Key
+  fullName: Bve5_Parsing.MapGrammar.EvaluateData.TrackCantInterpolateStatement.Key
 - uid: Bve5_Parsing.MapGrammar.EvaluateData.TrackCantStatement.Key*
   commentId: Overload:Bve5_Parsing.MapGrammar.EvaluateData.TrackCantStatement.Key
   name: Key

@@ -22,7 +22,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: StringContext
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
@@ -34,9 +34,7 @@ items:
     content: 'public class StringContext : ParserRuleContext, IRuleNode, IParseTree, ISyntaxTree, ITree'
     content.vb: >-
       Public Class StringContext
-
           Inherits ParserRuleContext
-
           Implements IRuleNode, IParseTree, ISyntaxTree, ITree
   inheritance:
   - System.Object
@@ -120,7 +118,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: INPUT_TEXT_CHAR
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
@@ -152,7 +150,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: INPUT_TEXT_CHAR
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
@@ -187,7 +185,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: .ctor
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
@@ -222,7 +220,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: RuleIndex
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
@@ -260,7 +258,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: EnterRule
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
@@ -296,7 +294,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: ExitRule
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
@@ -332,7 +330,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Accept
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/ScenarioGrammarParser.cs

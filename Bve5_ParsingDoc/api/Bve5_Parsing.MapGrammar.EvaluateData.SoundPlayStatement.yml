@@ -22,7 +22,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: SoundPlayStatement
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
@@ -36,12 +36,12 @@ items:
     content: 'public class SoundPlayStatement : Statement'
     content.vb: >-
       Public Class SoundPlayStatement
-
           Inherits Statement
   inheritance:
   - System.Object
   - Bve5_Parsing.MapGrammar.EvaluateData.Statement
   inheritedMembers:
+  - Bve5_Parsing.MapGrammar.EvaluateData.Statement.SubElementName
   - Bve5_Parsing.MapGrammar.EvaluateData.Statement.Distance
   - Bve5_Parsing.MapGrammar.EvaluateData.Statement.GetAllArguments
   - Bve5_Parsing.MapGrammar.EvaluateData.Statement.ToSyntaxData
@@ -72,7 +72,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: ElementName
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
@@ -112,7 +112,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: FunctionName
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
@@ -152,7 +152,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: HasKey
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
@@ -192,7 +192,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: HasSubElement
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
@@ -232,7 +232,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Key
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
@@ -243,18 +243,21 @@ items:
   summary: "\nKey：SoundKey\n"
   example: []
   syntax:
-    content: public string Key { get; set; }
+    content: public override string Key { get; set; }
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property Key As String
+    content.vb: Public Overrides Property Key As String
+  overridden: Bve5_Parsing.MapGrammar.EvaluateData.Statement.Key
   overload: Bve5_Parsing.MapGrammar.EvaluateData.SoundPlayStatement.Key*
   modifiers.csharp:
   - public
+  - override
   - get
   - set
   modifiers.vb:
   - Public
+  - Overrides
 - uid: Bve5_Parsing.MapGrammar.EvaluateData.SoundPlayStatement.#ctor
   commentId: M:Bve5_Parsing.MapGrammar.EvaluateData.SoundPlayStatement.#ctor
   id: '#ctor'
@@ -269,7 +272,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: .ctor
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
@@ -301,7 +304,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: .ctor
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
@@ -341,6 +344,12 @@ references:
   name: Statement
   nameWithType: Statement
   fullName: Bve5_Parsing.MapGrammar.EvaluateData.Statement
+- uid: Bve5_Parsing.MapGrammar.EvaluateData.Statement.SubElementName
+  commentId: P:Bve5_Parsing.MapGrammar.EvaluateData.Statement.SubElementName
+  parent: Bve5_Parsing.MapGrammar.EvaluateData.Statement
+  name: SubElementName
+  nameWithType: Statement.SubElementName
+  fullName: Bve5_Parsing.MapGrammar.EvaluateData.Statement.SubElementName
 - uid: Bve5_Parsing.MapGrammar.EvaluateData.Statement.Distance
   commentId: P:Bve5_Parsing.MapGrammar.EvaluateData.Statement.Distance
   parent: Bve5_Parsing.MapGrammar.EvaluateData.Statement
@@ -756,6 +765,12 @@ references:
   name: HasSubElement
   nameWithType: SoundPlayStatement.HasSubElement
   fullName: Bve5_Parsing.MapGrammar.EvaluateData.SoundPlayStatement.HasSubElement
+- uid: Bve5_Parsing.MapGrammar.EvaluateData.Statement.Key
+  commentId: P:Bve5_Parsing.MapGrammar.EvaluateData.Statement.Key
+  parent: Bve5_Parsing.MapGrammar.EvaluateData.Statement
+  name: Key
+  nameWithType: Statement.Key
+  fullName: Bve5_Parsing.MapGrammar.EvaluateData.Statement.Key
 - uid: Bve5_Parsing.MapGrammar.EvaluateData.SoundPlayStatement.Key*
   commentId: Overload:Bve5_Parsing.MapGrammar.EvaluateData.SoundPlayStatement.Key
   name: Key

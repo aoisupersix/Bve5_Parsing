@@ -48,7 +48,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: MapFunctionName
     path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
@@ -83,7 +83,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Setgauge
     path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
@@ -130,7 +130,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Gauge
     path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
@@ -177,7 +177,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Setcenter
     path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
@@ -224,7 +224,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Setfunction
     path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
@@ -271,7 +271,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Begintransition
     path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
@@ -318,7 +318,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Begin
     path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
@@ -365,7 +365,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Begincircular
     path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
@@ -412,7 +412,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: End
     path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
@@ -459,7 +459,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Interpolate
     path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
@@ -506,7 +506,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Change
     path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
@@ -553,7 +553,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Beginconst
     path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
@@ -600,7 +600,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Position
     path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
@@ -647,7 +647,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Cant
     path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
@@ -694,7 +694,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Load
     path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
@@ -741,7 +741,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Put
     path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
@@ -788,7 +788,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Put0
     path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
@@ -835,7 +835,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Putbetween
     path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
@@ -882,7 +882,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Begin0
     path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
@@ -929,7 +929,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Beginnew
     path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
@@ -976,7 +976,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Setspeedlimit
     path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
@@ -1023,7 +1023,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Speedlimit
     path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
@@ -1070,7 +1070,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Pass
     path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
@@ -1117,7 +1117,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Ambient
     path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
@@ -1164,7 +1164,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Diffuse
     path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
@@ -1211,7 +1211,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Set
     path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
@@ -1258,7 +1258,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Play
     path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
@@ -1305,7 +1305,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Add
     path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
@@ -1352,7 +1352,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Enable
     path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
@@ -1399,7 +1399,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Stop
     path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
@@ -1446,7 +1446,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Fog
     path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
@@ -1493,7 +1493,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Curve
     path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
@@ -1540,7 +1540,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Pitch
     path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
@@ -1587,7 +1587,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Turn
     path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs

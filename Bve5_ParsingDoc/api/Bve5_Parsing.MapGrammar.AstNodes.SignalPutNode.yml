@@ -31,7 +31,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: SignalPutNode
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
@@ -45,13 +45,13 @@ items:
     content: 'public class SignalPutNode : SyntaxNode'
     content.vb: >-
       Public Class SignalPutNode
-
           Inherits SyntaxNode
   inheritance:
   - System.Object
   - Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes
   - Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode
   inheritedMembers:
+  - Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.SubElementName
   - Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.GetAllArguments
   - Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.GetNonOptionalArguments
   - Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.GetOptionalArguments
@@ -89,7 +89,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: ElementName
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
@@ -129,7 +129,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: FunctionName
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
@@ -169,7 +169,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: HasKey
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
@@ -209,7 +209,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: HasSubElement
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
@@ -249,7 +249,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Key
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
@@ -260,18 +260,21 @@ items:
   summary: "\nKey：SignalAspectKey\n"
   example: []
   syntax:
-    content: public MapGrammarAstNodes Key { get; set; }
+    content: public override MapGrammarAstNodes Key { get; set; }
     parameters: []
     return:
       type: Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes
-    content.vb: Public Property Key As MapGrammarAstNodes
+    content.vb: Public Overrides Property Key As MapGrammarAstNodes
+  overridden: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.Key
   overload: Bve5_Parsing.MapGrammar.AstNodes.SignalPutNode.Key*
   modifiers.csharp:
   - public
+  - override
   - get
   - set
   modifiers.vb:
   - Public
+  - Overrides
 - uid: Bve5_Parsing.MapGrammar.AstNodes.SignalPutNode.Section
   commentId: P:Bve5_Parsing.MapGrammar.AstNodes.SignalPutNode.Section
   id: Section
@@ -286,7 +289,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Section
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
@@ -323,7 +326,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: TrackKey
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
@@ -360,7 +363,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: X
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
@@ -397,7 +400,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Y
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
@@ -434,7 +437,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Z
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
@@ -471,7 +474,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: RX
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
@@ -508,7 +511,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: RY
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
@@ -545,7 +548,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: RZ
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
@@ -582,7 +585,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Tilt
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
@@ -619,7 +622,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Span
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
@@ -656,7 +659,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: .ctor
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
@@ -706,6 +709,12 @@ references:
   name: SyntaxNode
   nameWithType: SyntaxNode
   fullName: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode
+- uid: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.SubElementName
+  commentId: P:Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.SubElementName
+  parent: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode
+  name: SubElementName
+  nameWithType: SyntaxNode.SubElementName
+  fullName: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.SubElementName
 - uid: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.GetAllArguments
   commentId: M:Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.GetAllArguments
   parent: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode
@@ -1418,6 +1427,12 @@ references:
   name: HasSubElement
   nameWithType: SignalPutNode.HasSubElement
   fullName: Bve5_Parsing.MapGrammar.AstNodes.SignalPutNode.HasSubElement
+- uid: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.Key
+  commentId: P:Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.Key
+  parent: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode
+  name: Key
+  nameWithType: SyntaxNode.Key
+  fullName: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.Key
 - uid: Bve5_Parsing.MapGrammar.AstNodes.SignalPutNode.Key*
   commentId: Overload:Bve5_Parsing.MapGrammar.AstNodes.SignalPutNode.Key
   name: Key

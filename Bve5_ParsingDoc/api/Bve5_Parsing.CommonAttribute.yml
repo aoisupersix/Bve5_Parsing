@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/Attributes/EnumNameAttribute.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: CommonAttribute
     path: ../Bve5_Parsing/Attributes/EnumNameAttribute.cs
@@ -59,7 +59,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/Attributes/EnumNameAttribute.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: GetStringValue
     path: ../Bve5_Parsing/Attributes/EnumNameAttribute.cs

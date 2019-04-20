@@ -7688,6 +7688,19 @@ references:
   isSpec: "True"
   fullName: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.HasSubElement
   nameWithType: SyntaxNode.HasSubElement
+- uid: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.Key
+  name: Key
+  href: api/Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.html#Bve5_Parsing_MapGrammar_AstNodes_SyntaxNode_Key
+  commentId: P:Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.Key
+  fullName: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.Key
+  nameWithType: SyntaxNode.Key
+- uid: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.Key*
+  name: Key
+  href: api/Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.html#Bve5_Parsing_MapGrammar_AstNodes_SyntaxNode_Key_
+  commentId: Overload:Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.Key
+  isSpec: "True"
+  fullName: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.Key
+  nameWithType: SyntaxNode.Key
 - uid: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.SetArgument(Bve5_Parsing.MapGrammar.EvaluateMapGrammarVisitor,Bve5_Parsing.MapGrammar.EvaluateData.Statement)
   name: SetArgument(EvaluateMapGrammarVisitor, Statement)
   href: api/Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.html#Bve5_Parsing_MapGrammar_AstNodes_SyntaxNode_SetArgument_Bve5_Parsing_MapGrammar_EvaluateMapGrammarVisitor_Bve5_Parsing_MapGrammar_EvaluateData_Statement_
@@ -7701,6 +7714,19 @@ references:
   isSpec: "True"
   fullName: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.SetArgument
   nameWithType: SyntaxNode.SetArgument
+- uid: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.SubElementName
+  name: SubElementName
+  href: api/Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.html#Bve5_Parsing_MapGrammar_AstNodes_SyntaxNode_SubElementName
+  commentId: P:Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.SubElementName
+  fullName: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.SubElementName
+  nameWithType: SyntaxNode.SubElementName
+- uid: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.SubElementName*
+  name: SubElementName
+  href: api/Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.html#Bve5_Parsing_MapGrammar_AstNodes_SyntaxNode_SubElementName_
+  commentId: Overload:Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.SubElementName
+  isSpec: "True"
+  fullName: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.SubElementName
+  nameWithType: SyntaxNode.SubElementName
 - uid: Bve5_Parsing.MapGrammar.AstNodes.TrackCantBeginNode
   name: TrackCantBeginNode
   href: api/Bve5_Parsing.MapGrammar.AstNodes.TrackCantBeginNode.html
@@ -16004,6 +16030,32 @@ references:
   isSpec: "True"
   fullName: Bve5_Parsing.MapGrammar.EvaluateData.Statement.HasSubElement
   nameWithType: Statement.HasSubElement
+- uid: Bve5_Parsing.MapGrammar.EvaluateData.Statement.Key
+  name: Key
+  href: api/Bve5_Parsing.MapGrammar.EvaluateData.Statement.html#Bve5_Parsing_MapGrammar_EvaluateData_Statement_Key
+  commentId: P:Bve5_Parsing.MapGrammar.EvaluateData.Statement.Key
+  fullName: Bve5_Parsing.MapGrammar.EvaluateData.Statement.Key
+  nameWithType: Statement.Key
+- uid: Bve5_Parsing.MapGrammar.EvaluateData.Statement.Key*
+  name: Key
+  href: api/Bve5_Parsing.MapGrammar.EvaluateData.Statement.html#Bve5_Parsing_MapGrammar_EvaluateData_Statement_Key_
+  commentId: Overload:Bve5_Parsing.MapGrammar.EvaluateData.Statement.Key
+  isSpec: "True"
+  fullName: Bve5_Parsing.MapGrammar.EvaluateData.Statement.Key
+  nameWithType: Statement.Key
+- uid: Bve5_Parsing.MapGrammar.EvaluateData.Statement.SubElementName
+  name: SubElementName
+  href: api/Bve5_Parsing.MapGrammar.EvaluateData.Statement.html#Bve5_Parsing_MapGrammar_EvaluateData_Statement_SubElementName
+  commentId: P:Bve5_Parsing.MapGrammar.EvaluateData.Statement.SubElementName
+  fullName: Bve5_Parsing.MapGrammar.EvaluateData.Statement.SubElementName
+  nameWithType: Statement.SubElementName
+- uid: Bve5_Parsing.MapGrammar.EvaluateData.Statement.SubElementName*
+  name: SubElementName
+  href: api/Bve5_Parsing.MapGrammar.EvaluateData.Statement.html#Bve5_Parsing_MapGrammar_EvaluateData_Statement_SubElementName_
+  commentId: Overload:Bve5_Parsing.MapGrammar.EvaluateData.Statement.SubElementName
+  isSpec: "True"
+  fullName: Bve5_Parsing.MapGrammar.EvaluateData.Statement.SubElementName
+  nameWithType: Statement.SubElementName
 - uid: Bve5_Parsing.MapGrammar.EvaluateData.Statement.ToSyntaxData
   name: ToSyntaxData()
   href: api/Bve5_Parsing.MapGrammar.EvaluateData.Statement.html#Bve5_Parsing_MapGrammar_EvaluateData_Statement_ToSyntaxData

@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: MultiplicationNode
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs
@@ -30,7 +30,6 @@ items:
     content: 'public class MultiplicationNode : InfixExpressionNode'
     content.vb: >-
       Public Class MultiplicationNode
-
           Inherits InfixExpressionNode
   inheritance:
   - System.Object
@@ -70,7 +69,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: .ctor
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs

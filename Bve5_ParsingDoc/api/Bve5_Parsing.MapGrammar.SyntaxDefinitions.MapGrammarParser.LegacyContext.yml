@@ -41,7 +41,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/MapGrammarParser.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: LegacyContext
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/MapGrammarParser.cs
@@ -53,9 +53,7 @@ items:
     content: 'public class LegacyContext : ParserRuleContext, IRuleNode, IParseTree, ISyntaxTree, ITree'
     content.vb: >-
       Public Class LegacyContext
-
           Inherits ParserRuleContext
-
           Implements IRuleNode, IParseTree, ISyntaxTree, ITree
   inheritance:
   - System.Object
@@ -139,7 +137,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/MapGrammarParser.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: func
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/MapGrammarParser.cs
@@ -170,7 +168,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/MapGrammarParser.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: fogstart
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/MapGrammarParser.cs
@@ -201,7 +199,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/MapGrammarParser.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: fogend
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/MapGrammarParser.cs
@@ -232,7 +230,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/MapGrammarParser.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: red
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/MapGrammarParser.cs
@@ -263,7 +261,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/MapGrammarParser.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: green
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/MapGrammarParser.cs
@@ -294,7 +292,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/MapGrammarParser.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: blue
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/MapGrammarParser.cs
@@ -325,7 +323,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/MapGrammarParser.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: radius
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/MapGrammarParser.cs
@@ -356,7 +354,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/MapGrammarParser.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: cant
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/MapGrammarParser.cs
@@ -387,7 +385,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/MapGrammarParser.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: rate
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/MapGrammarParser.cs
@@ -418,7 +416,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/MapGrammarParser.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: slope
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/MapGrammarParser.cs
@@ -449,7 +447,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/MapGrammarParser.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: DOT
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/MapGrammarParser.cs
@@ -481,7 +479,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/MapGrammarParser.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: OPN_PAR
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/MapGrammarParser.cs
@@ -513,7 +511,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/MapGrammarParser.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: COMMA
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/MapGrammarParser.cs
@@ -545,7 +543,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/MapGrammarParser.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: COMMA
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/MapGrammarParser.cs
@@ -580,7 +578,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/MapGrammarParser.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: CLS_PAR
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/MapGrammarParser.cs
@@ -612,7 +610,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/MapGrammarParser.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: FOG
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/MapGrammarParser.cs
@@ -644,7 +642,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/MapGrammarParser.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: nullableExpr
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/MapGrammarParser.cs
@@ -676,7 +674,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/MapGrammarParser.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: nullableExpr
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/MapGrammarParser.cs
@@ -711,7 +709,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/MapGrammarParser.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: CURVE
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/MapGrammarParser.cs
@@ -743,7 +741,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/MapGrammarParser.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: PITCH
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/MapGrammarParser.cs
@@ -775,7 +773,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/MapGrammarParser.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: TURN
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/MapGrammarParser.cs
@@ -807,7 +805,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/MapGrammarParser.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: .ctor
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/MapGrammarParser.cs
@@ -842,7 +840,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/MapGrammarParser.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: RuleIndex
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/MapGrammarParser.cs
@@ -880,7 +878,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/MapGrammarParser.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: EnterRule
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/MapGrammarParser.cs
@@ -916,7 +914,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/MapGrammarParser.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: ExitRule
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/MapGrammarParser.cs
@@ -952,7 +950,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/obj/Release/netstandard2.0/MapGrammarParser.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Accept
     path: ../Bve5_Parsing/obj/Release/netstandard2.0/MapGrammarParser.cs

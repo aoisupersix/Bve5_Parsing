@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: RootNode
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs
@@ -33,7 +33,6 @@ items:
     content: 'public class RootNode : MapGrammarAstNodes'
     content.vb: >-
       Public Class RootNode
-
           Inherits MapGrammarAstNodes
   inheritance:
   - System.Object
@@ -70,7 +69,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: StatementList
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs
@@ -105,7 +104,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Version
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs
@@ -140,7 +139,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Encoding
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs
@@ -175,7 +174,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: .ctor
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs

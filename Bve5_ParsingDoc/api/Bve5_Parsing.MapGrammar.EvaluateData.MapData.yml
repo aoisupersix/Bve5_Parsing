@@ -31,7 +31,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/MapData.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: MapData
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/MapData.cs
@@ -72,7 +72,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/MapData.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Version
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/MapData.cs
@@ -111,7 +111,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/MapData.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Encoding
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/MapData.cs
@@ -150,7 +150,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/MapData.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: StructureListPath
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/MapData.cs
@@ -189,7 +189,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/MapData.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: StationListPath
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/MapData.cs
@@ -228,7 +228,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/MapData.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: SignalListPath
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/MapData.cs
@@ -267,7 +267,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/MapData.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: SoundListPath
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/MapData.cs
@@ -306,7 +306,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/MapData.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Sound3DListPath
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/MapData.cs
@@ -345,7 +345,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/MapData.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Statements
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/MapData.cs
@@ -382,7 +382,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/MapData.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: .ctor
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/MapData.cs
@@ -414,7 +414,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/MapData.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: .ctor
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/MapData.cs
@@ -474,7 +474,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/MapData.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: AddStatement
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/MapData.cs
@@ -510,7 +510,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/MapData.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: AddStatements
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/MapData.cs
@@ -549,7 +549,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/MapData.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: SetListPathToString
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/MapData.cs
@@ -588,7 +588,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/MapData.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: OverwriteListPath
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/MapData.cs
@@ -624,7 +624,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/MapData.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Equals
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/MapData.cs
@@ -666,7 +666,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/MapData.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: GetHashCode
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/MapData.cs

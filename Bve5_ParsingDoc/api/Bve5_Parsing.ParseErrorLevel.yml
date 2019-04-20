@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/ParseError.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: ParseErrorLevel
     path: ../Bve5_Parsing/ParseError.cs
@@ -52,7 +52,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/ParseError.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Warning
     path: ../Bve5_Parsing/ParseError.cs
@@ -86,7 +86,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/ParseError.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Error
     path: ../Bve5_Parsing/ParseError.cs

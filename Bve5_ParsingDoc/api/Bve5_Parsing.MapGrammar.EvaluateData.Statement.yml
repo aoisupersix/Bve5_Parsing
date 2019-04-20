@@ -13,6 +13,8 @@ items:
   - Bve5_Parsing.MapGrammar.EvaluateData.Statement.GetAllArguments
   - Bve5_Parsing.MapGrammar.EvaluateData.Statement.HasKey
   - Bve5_Parsing.MapGrammar.EvaluateData.Statement.HasSubElement
+  - Bve5_Parsing.MapGrammar.EvaluateData.Statement.Key
+  - Bve5_Parsing.MapGrammar.EvaluateData.Statement.SubElementName
   - Bve5_Parsing.MapGrammar.EvaluateData.Statement.ToSyntaxData
   langs:
   - csharp
@@ -24,7 +26,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/Statement.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Statement
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/Statement.cs
@@ -132,7 +134,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/Statement.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: ElementName
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/Statement.cs
@@ -171,7 +173,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/Statement.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: FunctionName
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/Statement.cs
@@ -196,6 +198,84 @@ items:
   - Public
   - MustOverride
   - ReadOnly
+- uid: Bve5_Parsing.MapGrammar.EvaluateData.Statement.SubElementName
+  commentId: P:Bve5_Parsing.MapGrammar.EvaluateData.Statement.SubElementName
+  id: SubElementName
+  parent: Bve5_Parsing.MapGrammar.EvaluateData.Statement
+  langs:
+  - csharp
+  - vb
+  name: SubElementName
+  nameWithType: Statement.SubElementName
+  fullName: Bve5_Parsing.MapGrammar.EvaluateData.Statement.SubElementName
+  type: Property
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/EvaluateData/Statement.cs
+      branch: master
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: SubElementName
+    path: ../Bve5_Parsing/MapGrammar/EvaluateData/Statement.cs
+    startLine: 26
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar.EvaluateData
+  summary: "\nマップ副要素名\nもし構文に副要素が存在しない場合はnullを返します。\n"
+  example: []
+  syntax:
+    content: public virtual MapSubElementName? SubElementName { get; }
+    parameters: []
+    return:
+      type: System.Nullable{Bve5_Parsing.MapGrammar.MapSubElementName}
+    content.vb: Public Overridable ReadOnly Property SubElementName As MapSubElementName?
+  overload: Bve5_Parsing.MapGrammar.EvaluateData.Statement.SubElementName*
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  modifiers.vb:
+  - Public
+  - Overridable
+  - ReadOnly
+- uid: Bve5_Parsing.MapGrammar.EvaluateData.Statement.Key
+  commentId: P:Bve5_Parsing.MapGrammar.EvaluateData.Statement.Key
+  id: Key
+  parent: Bve5_Parsing.MapGrammar.EvaluateData.Statement
+  langs:
+  - csharp
+  - vb
+  name: Key
+  nameWithType: Statement.Key
+  fullName: Bve5_Parsing.MapGrammar.EvaluateData.Statement.Key
+  type: Property
+  source:
+    remote:
+      path: Bve5_Parsing/MapGrammar/EvaluateData/Statement.cs
+      branch: master
+      repo: https://github.com/aoisupersix/Bve5_Parsing
+    id: Key
+    path: ../Bve5_Parsing/MapGrammar/EvaluateData/Statement.cs
+    startLine: 32
+  assemblies:
+  - Bve5_Parsing
+  namespace: Bve5_Parsing.MapGrammar.EvaluateData
+  summary: "\nキー名\nもし構文にキーが存在しない場合はnullを返します。\n"
+  example: []
+  syntax:
+    content: public virtual string Key { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Overridable Property Key As String
+  overload: Bve5_Parsing.MapGrammar.EvaluateData.Statement.Key*
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
 - uid: Bve5_Parsing.MapGrammar.EvaluateData.Statement.HasKey
   commentId: P:Bve5_Parsing.MapGrammar.EvaluateData.Statement.HasKey
   id: HasKey
@@ -210,11 +290,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/Statement.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: HasKey
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/Statement.cs
-    startLine: 25
+    startLine: 37
   assemblies:
   - Bve5_Parsing
   namespace: Bve5_Parsing.MapGrammar.EvaluateData
@@ -249,11 +329,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/Statement.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: HasSubElement
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/Statement.cs
-    startLine: 30
+    startLine: 42
   assemblies:
   - Bve5_Parsing
   namespace: Bve5_Parsing.MapGrammar.EvaluateData
@@ -288,11 +368,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/Statement.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Distance
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/Statement.cs
-    startLine: 35
+    startLine: 47
   assemblies:
   - Bve5_Parsing
   namespace: Bve5_Parsing.MapGrammar.EvaluateData
@@ -325,11 +405,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/Statement.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: .ctor
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/Statement.cs
-    startLine: 37
+    startLine: 49
   assemblies:
   - Bve5_Parsing
   namespace: Bve5_Parsing.MapGrammar.EvaluateData
@@ -355,11 +435,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/Statement.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: .ctor
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/Statement.cs
-    startLine: 39
+    startLine: 51
   assemblies:
   - Bve5_Parsing
   namespace: Bve5_Parsing.MapGrammar.EvaluateData
@@ -388,11 +468,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/Statement.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: GetAllArguments
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/Statement.cs
-    startLine: 45
+    startLine: 57
   assemblies:
   - Bve5_Parsing
   namespace: Bve5_Parsing.MapGrammar.EvaluateData
@@ -423,11 +503,11 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/Statement.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: ToSyntaxData
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/Statement.cs
-    startLine: 66
+    startLine: 78
   assemblies:
   - Bve5_Parsing
   namespace: Bve5_Parsing.MapGrammar.EvaluateData
@@ -771,6 +851,104 @@ references:
   name: MapFunctionName
   nameWithType: MapFunctionName
   fullName: Bve5_Parsing.MapGrammar.MapFunctionName
+- uid: Bve5_Parsing.MapGrammar.EvaluateData.Statement.SubElementName*
+  commentId: Overload:Bve5_Parsing.MapGrammar.EvaluateData.Statement.SubElementName
+  name: SubElementName
+  nameWithType: Statement.SubElementName
+  fullName: Bve5_Parsing.MapGrammar.EvaluateData.Statement.SubElementName
+- uid: System.Nullable{Bve5_Parsing.MapGrammar.MapSubElementName}
+  commentId: T:System.Nullable{Bve5_Parsing.MapGrammar.MapSubElementName}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<MapSubElementName>
+  nameWithType: Nullable<MapSubElementName>
+  fullName: System.Nullable<Bve5_Parsing.MapGrammar.MapSubElementName>
+  nameWithType.vb: Nullable(Of MapSubElementName)
+  fullName.vb: System.Nullable(Of Bve5_Parsing.MapGrammar.MapSubElementName)
+  name.vb: Nullable(Of MapSubElementName)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Bve5_Parsing.MapGrammar.MapSubElementName
+    name: MapSubElementName
+    nameWithType: MapSubElementName
+    fullName: Bve5_Parsing.MapGrammar.MapSubElementName
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Bve5_Parsing.MapGrammar.MapSubElementName
+    name: MapSubElementName
+    nameWithType: MapSubElementName
+    fullName: Bve5_Parsing.MapGrammar.MapSubElementName
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Bve5_Parsing.MapGrammar.EvaluateData.Statement.Key*
+  commentId: Overload:Bve5_Parsing.MapGrammar.EvaluateData.Statement.Key
+  name: Key
+  nameWithType: Statement.Key
+  fullName: Bve5_Parsing.MapGrammar.EvaluateData.Statement.Key
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
 - uid: Bve5_Parsing.MapGrammar.EvaluateData.Statement.HasKey*
   commentId: Overload:Bve5_Parsing.MapGrammar.EvaluateData.Statement.HasKey
   name: HasKey

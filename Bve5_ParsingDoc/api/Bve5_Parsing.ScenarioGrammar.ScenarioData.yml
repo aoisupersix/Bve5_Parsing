@@ -31,7 +31,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/ScenarioGrammar/ScenarioData.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: ScenarioData
     path: ../Bve5_Parsing/ScenarioGrammar/ScenarioData.cs
@@ -72,7 +72,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/ScenarioGrammar/ScenarioData.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Version
     path: ../Bve5_Parsing/ScenarioGrammar/ScenarioData.cs
@@ -111,7 +111,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/ScenarioGrammar/ScenarioData.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Encoding
     path: ../Bve5_Parsing/ScenarioGrammar/ScenarioData.cs
@@ -150,7 +150,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/ScenarioGrammar/ScenarioData.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Route
     path: ../Bve5_Parsing/ScenarioGrammar/ScenarioData.cs
@@ -187,7 +187,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/ScenarioGrammar/ScenarioData.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Vehicle
     path: ../Bve5_Parsing/ScenarioGrammar/ScenarioData.cs
@@ -224,7 +224,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/ScenarioGrammar/ScenarioData.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Image
     path: ../Bve5_Parsing/ScenarioGrammar/ScenarioData.cs
@@ -263,7 +263,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/ScenarioGrammar/ScenarioData.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Title
     path: ../Bve5_Parsing/ScenarioGrammar/ScenarioData.cs
@@ -302,7 +302,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/ScenarioGrammar/ScenarioData.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: RouteTitle
     path: ../Bve5_Parsing/ScenarioGrammar/ScenarioData.cs
@@ -341,7 +341,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/ScenarioGrammar/ScenarioData.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: VehicleTitle
     path: ../Bve5_Parsing/ScenarioGrammar/ScenarioData.cs
@@ -380,7 +380,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/ScenarioGrammar/ScenarioData.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Author
     path: ../Bve5_Parsing/ScenarioGrammar/ScenarioData.cs
@@ -419,7 +419,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/ScenarioGrammar/ScenarioData.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Comment
     path: ../Bve5_Parsing/ScenarioGrammar/ScenarioData.cs
@@ -458,7 +458,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/ScenarioGrammar/ScenarioData.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: AddRoute
     path: ../Bve5_Parsing/ScenarioGrammar/ScenarioData.cs
@@ -494,7 +494,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/ScenarioGrammar/ScenarioData.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: AddVehicle
     path: ../Bve5_Parsing/ScenarioGrammar/ScenarioData.cs
@@ -530,7 +530,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/ScenarioGrammar/ScenarioData.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: .ctor
     path: ../Bve5_Parsing/ScenarioGrammar/ScenarioData.cs
@@ -562,7 +562,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/ScenarioGrammar/ScenarioData.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: .ctor
     path: ../Bve5_Parsing/ScenarioGrammar/ScenarioData.cs
@@ -628,7 +628,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/ScenarioGrammar/ScenarioData.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Equals
     path: ../Bve5_Parsing/ScenarioGrammar/ScenarioData.cs
@@ -670,7 +670,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/ScenarioGrammar/ScenarioData.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: GetHashCode
     path: ../Bve5_Parsing/ScenarioGrammar/ScenarioData.cs

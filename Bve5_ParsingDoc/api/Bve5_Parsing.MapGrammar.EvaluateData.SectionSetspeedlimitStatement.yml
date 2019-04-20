@@ -26,7 +26,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/Statements.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: SectionSetspeedlimitStatement
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/Statements.cs
@@ -40,7 +40,6 @@ items:
     content: 'public class SectionSetspeedlimitStatement : Statement'
     content.vb: >-
       Public Class SectionSetspeedlimitStatement
-
           Inherits Statement
   inheritance:
   - System.Object
@@ -48,6 +47,8 @@ items:
   derivedClasses:
   - Bve5_Parsing.MapGrammar.EvaluateData.SignalSpeedlimitStatement
   inheritedMembers:
+  - Bve5_Parsing.MapGrammar.EvaluateData.Statement.SubElementName
+  - Bve5_Parsing.MapGrammar.EvaluateData.Statement.Key
   - Bve5_Parsing.MapGrammar.EvaluateData.Statement.Distance
   - Bve5_Parsing.MapGrammar.EvaluateData.Statement.GetAllArguments
   - System.Object.Equals(System.Object)
@@ -77,7 +78,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: ElementName
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
@@ -117,7 +118,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: FunctionName
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
@@ -157,7 +158,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: HasKey
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
@@ -197,7 +198,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: HasSubElement
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
@@ -237,7 +238,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: .ctor
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
@@ -269,7 +270,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: .ctor
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
@@ -304,7 +305,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/Statements.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: _speedLimits
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/Statements.cs
@@ -335,7 +336,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/Statements.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: SpeedLimits
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/Statements.cs
@@ -372,7 +373,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/Statements.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: SetSpdLmt
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/Statements.cs
@@ -412,7 +413,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/Statements.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: ToSyntaxData
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/Statements.cs
@@ -450,7 +451,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/Statements.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: AddSpeedLimit
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/Statements.cs
@@ -491,6 +492,18 @@ references:
   name: Statement
   nameWithType: Statement
   fullName: Bve5_Parsing.MapGrammar.EvaluateData.Statement
+- uid: Bve5_Parsing.MapGrammar.EvaluateData.Statement.SubElementName
+  commentId: P:Bve5_Parsing.MapGrammar.EvaluateData.Statement.SubElementName
+  parent: Bve5_Parsing.MapGrammar.EvaluateData.Statement
+  name: SubElementName
+  nameWithType: Statement.SubElementName
+  fullName: Bve5_Parsing.MapGrammar.EvaluateData.Statement.SubElementName
+- uid: Bve5_Parsing.MapGrammar.EvaluateData.Statement.Key
+  commentId: P:Bve5_Parsing.MapGrammar.EvaluateData.Statement.Key
+  parent: Bve5_Parsing.MapGrammar.EvaluateData.Statement
+  name: Key
+  nameWithType: Statement.Key
+  fullName: Bve5_Parsing.MapGrammar.EvaluateData.Statement.Key
 - uid: Bve5_Parsing.MapGrammar.EvaluateData.Statement.Distance
   commentId: P:Bve5_Parsing.MapGrammar.EvaluateData.Statement.Distance
   parent: Bve5_Parsing.MapGrammar.EvaluateData.Statement

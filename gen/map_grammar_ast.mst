@@ -27,7 +27,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// マップ副要素名
         /// </summary>
-        public MapSubElementName SubElementName => MapSubElementName.{{sub_elem}};
+        public override MapSubElementName? SubElementName => MapSubElementName.{{sub_elem}};
 {{/sub_elem}}
 
         /// <summary>
@@ -51,7 +51,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// Key：{{key}}
         /// </summary>
-        public MapGrammarAstNodes Key { get; set; }
+        public override MapGrammarAstNodes Key { get; set; }
 {{/key}}
 
 {{^noarg}}

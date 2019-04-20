@@ -116,7 +116,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: AstVisitor
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -169,7 +169,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -208,7 +208,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -247,7 +247,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -286,7 +286,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -325,7 +325,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -364,7 +364,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -403,7 +403,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -442,7 +442,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -481,7 +481,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -520,7 +520,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -559,7 +559,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -598,7 +598,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -637,7 +637,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -676,7 +676,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -715,7 +715,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -754,7 +754,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -793,7 +793,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -832,7 +832,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -871,7 +871,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -910,7 +910,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -949,7 +949,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -988,7 +988,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -1027,7 +1027,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -1066,7 +1066,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -1105,7 +1105,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -1144,7 +1144,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -1183,7 +1183,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -1222,7 +1222,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -1261,7 +1261,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -1300,7 +1300,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -1339,7 +1339,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -1378,7 +1378,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -1417,7 +1417,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -1456,7 +1456,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -1495,7 +1495,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -1534,7 +1534,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -1573,7 +1573,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -1612,7 +1612,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -1651,7 +1651,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -1690,7 +1690,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -1729,7 +1729,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -1768,7 +1768,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -1807,7 +1807,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -1846,7 +1846,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -1885,7 +1885,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -1924,7 +1924,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -1963,7 +1963,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -2002,7 +2002,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -2041,7 +2041,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -2080,7 +2080,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -2119,7 +2119,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -2158,7 +2158,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -2197,7 +2197,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -2236,7 +2236,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -2275,7 +2275,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -2314,7 +2314,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -2353,7 +2353,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -2392,7 +2392,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -2431,7 +2431,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -2470,7 +2470,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -2509,7 +2509,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -2548,7 +2548,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -2587,7 +2587,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -2626,7 +2626,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -2665,7 +2665,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -2704,7 +2704,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -2743,7 +2743,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -2782,7 +2782,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -2821,7 +2821,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -2860,7 +2860,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -2899,7 +2899,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -2938,7 +2938,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -2977,7 +2977,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -3016,7 +3016,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -3055,7 +3055,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -3094,7 +3094,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -3133,7 +3133,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -3172,7 +3172,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -3211,7 +3211,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -3250,7 +3250,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -3289,7 +3289,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -3328,7 +3328,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -3367,7 +3367,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -3406,7 +3406,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -3445,7 +3445,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -3484,7 +3484,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -3523,7 +3523,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -3562,7 +3562,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -3601,7 +3601,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -3640,7 +3640,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -3679,7 +3679,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -3718,7 +3718,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -3757,7 +3757,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -3796,7 +3796,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -3835,7 +3835,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -3874,7 +3874,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -3913,7 +3913,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -3952,7 +3952,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -3991,7 +3991,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -4030,7 +4030,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
@@ -4069,7 +4069,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/AstVisitor.cs

@@ -27,7 +27,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/ErrorListener.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: ParseErrorListener
     path: ../Bve5_Parsing/ErrorListener.cs
@@ -41,9 +41,7 @@ items:
     content: 'public class ParseErrorListener : BaseErrorListener, IParserErrorListener, IAntlrErrorListener<IToken>'
     content.vb: >-
       Public Class ParseErrorListener
-
           Inherits BaseErrorListener
-
           Implements IParserErrorListener, IAntlrErrorListener(Of IToken)
   inheritance:
   - System.Object
@@ -82,7 +80,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/ErrorListener.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: ERRMSG_INPUT_MISMATCH
     path: ../Bve5_Parsing/ErrorListener.cs
@@ -117,7 +115,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/ErrorListener.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: ERRMSG_NO_VIABLE
     path: ../Bve5_Parsing/ErrorListener.cs
@@ -152,7 +150,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/ErrorListener.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Errors
     path: ../Bve5_Parsing/ErrorListener.cs
@@ -189,7 +187,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/ErrorListener.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: GetTokenDisplayName
     path: ../Bve5_Parsing/ErrorListener.cs
@@ -224,7 +222,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/ErrorListener.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: EscapeWSAndQuote
     path: ../Bve5_Parsing/ErrorListener.cs
@@ -263,7 +261,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/ErrorListener.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: GetErrorMessage
     path: ../Bve5_Parsing/ErrorListener.cs
@@ -302,7 +300,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/ErrorListener.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: GetErrorMessage
     path: ../Bve5_Parsing/ErrorListener.cs
@@ -341,7 +339,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/ErrorListener.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: GetErrorMessage
     path: ../Bve5_Parsing/ErrorListener.cs
@@ -380,7 +378,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/ErrorListener.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: GetErrorMessage
     path: ../Bve5_Parsing/ErrorListener.cs
@@ -419,7 +417,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/ErrorListener.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: .ctor
     path: ../Bve5_Parsing/ErrorListener.cs
@@ -449,7 +447,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/ErrorListener.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: .ctor
     path: ../Bve5_Parsing/ErrorListener.cs
@@ -485,7 +483,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/ErrorListener.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: SyntaxError
     path: ../Bve5_Parsing/ErrorListener.cs

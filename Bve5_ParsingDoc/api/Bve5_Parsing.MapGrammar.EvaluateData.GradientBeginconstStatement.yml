@@ -22,7 +22,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: GradientBeginconstStatement
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
@@ -36,13 +36,14 @@ items:
     content: 'public class GradientBeginconstStatement : GradientBeginStatement'
     content.vb: >-
       Public Class GradientBeginconstStatement
-
           Inherits GradientBeginStatement
   inheritance:
   - System.Object
   - Bve5_Parsing.MapGrammar.EvaluateData.Statement
   - Bve5_Parsing.MapGrammar.EvaluateData.GradientBeginStatement
   inheritedMembers:
+  - Bve5_Parsing.MapGrammar.EvaluateData.Statement.SubElementName
+  - Bve5_Parsing.MapGrammar.EvaluateData.Statement.Key
   - Bve5_Parsing.MapGrammar.EvaluateData.Statement.Distance
   - Bve5_Parsing.MapGrammar.EvaluateData.Statement.GetAllArguments
   - Bve5_Parsing.MapGrammar.EvaluateData.Statement.ToSyntaxData
@@ -73,7 +74,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: ElementName
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
@@ -113,7 +114,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: FunctionName
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
@@ -153,7 +154,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: HasKey
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
@@ -193,7 +194,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: HasSubElement
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
@@ -233,7 +234,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Gradient
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
@@ -270,7 +271,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: .ctor
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
@@ -302,7 +303,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: .ctor
     path: ../Bve5_Parsing/MapGrammar/EvaluateData/AutoGen/Statements.cs
@@ -348,6 +349,18 @@ references:
   name: GradientBeginStatement
   nameWithType: GradientBeginStatement
   fullName: Bve5_Parsing.MapGrammar.EvaluateData.GradientBeginStatement
+- uid: Bve5_Parsing.MapGrammar.EvaluateData.Statement.SubElementName
+  commentId: P:Bve5_Parsing.MapGrammar.EvaluateData.Statement.SubElementName
+  parent: Bve5_Parsing.MapGrammar.EvaluateData.Statement
+  name: SubElementName
+  nameWithType: Statement.SubElementName
+  fullName: Bve5_Parsing.MapGrammar.EvaluateData.Statement.SubElementName
+- uid: Bve5_Parsing.MapGrammar.EvaluateData.Statement.Key
+  commentId: P:Bve5_Parsing.MapGrammar.EvaluateData.Statement.Key
+  parent: Bve5_Parsing.MapGrammar.EvaluateData.Statement
+  name: Key
+  nameWithType: Statement.Key
+  fullName: Bve5_Parsing.MapGrammar.EvaluateData.Statement.Key
 - uid: Bve5_Parsing.MapGrammar.EvaluateData.Statement.Distance
   commentId: P:Bve5_Parsing.MapGrammar.EvaluateData.Statement.Distance
   parent: Bve5_Parsing.MapGrammar.EvaluateData.Statement

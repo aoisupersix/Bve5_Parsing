@@ -21,7 +21,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: FlangenoiseChangeNode
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
@@ -35,13 +35,14 @@ items:
     content: 'public class FlangenoiseChangeNode : SyntaxNode'
     content.vb: >-
       Public Class FlangenoiseChangeNode
-
           Inherits SyntaxNode
   inheritance:
   - System.Object
   - Bve5_Parsing.MapGrammar.AstNodes.MapGrammarAstNodes
   - Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode
   inheritedMembers:
+  - Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.SubElementName
+  - Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.Key
   - Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.GetAllArguments
   - Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.GetNonOptionalArguments
   - Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.GetOptionalArguments
@@ -79,7 +80,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: ElementName
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
@@ -119,7 +120,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: FunctionName
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
@@ -159,7 +160,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: HasKey
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
@@ -199,7 +200,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: HasSubElement
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
@@ -239,7 +240,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Index
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
@@ -276,7 +277,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: .ctor
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AutoGen/SyntaxNodes.cs
@@ -326,6 +327,18 @@ references:
   name: SyntaxNode
   nameWithType: SyntaxNode
   fullName: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode
+- uid: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.SubElementName
+  commentId: P:Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.SubElementName
+  parent: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode
+  name: SubElementName
+  nameWithType: SyntaxNode.SubElementName
+  fullName: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.SubElementName
+- uid: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.Key
+  commentId: P:Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.Key
+  parent: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode
+  name: Key
+  nameWithType: SyntaxNode.Key
+  fullName: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.Key
 - uid: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.GetAllArguments
   commentId: M:Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode.GetAllArguments
   parent: Bve5_Parsing.MapGrammar.AstNodes.SyntaxNode

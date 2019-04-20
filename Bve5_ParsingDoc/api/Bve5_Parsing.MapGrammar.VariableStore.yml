@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/VariableStore.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: VariableStore
     path: ../Bve5_Parsing/MapGrammar/VariableStore.cs
@@ -63,7 +63,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/VariableStore.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Vars
     path: ../Bve5_Parsing/MapGrammar/VariableStore.cs
@@ -98,7 +98,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/VariableStore.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: .ctor
     path: ../Bve5_Parsing/MapGrammar/VariableStore.cs
@@ -130,7 +130,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/VariableStore.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: SetVar
     path: ../Bve5_Parsing/MapGrammar/VariableStore.cs
@@ -169,7 +169,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/VariableStore.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: GetVar
     path: ../Bve5_Parsing/MapGrammar/VariableStore.cs
@@ -208,7 +208,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/VariableStore.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: ClearVar
     path: ../Bve5_Parsing/MapGrammar/VariableStore.cs

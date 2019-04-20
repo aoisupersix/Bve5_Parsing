@@ -21,6 +21,18 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData
         public abstract MapFunctionName FunctionName { get; }
 
         /// <summary>
+        /// マップ副要素名
+        /// もし構文に副要素が存在しない場合はnullを返します。
+        /// </summary>
+        public virtual MapSubElementName? SubElementName => null;
+
+        /// <summary>
+        /// キー名
+        /// もし構文にキーが存在しない場合はnullを返します。
+        /// </summary>
+        public virtual string Key { get; set; }
+
+        /// <summary>
         /// キーを指定する構文か？
         /// </summary>
         public abstract bool HasKey { get; }

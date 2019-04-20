@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/Attributes/SyntaxAttributes.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: ArgumentAttribute
     path: ../Bve5_Parsing/MapGrammar/Attributes/SyntaxAttributes.cs
@@ -35,7 +35,6 @@ items:
       <AttributeUsage(AttributeTargets.Property)>
 
       Public Class ArgumentAttribute
-
           Inherits Attribute
   inheritance:
   - System.Object
@@ -109,7 +108,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/Attributes/SyntaxAttributes.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Optional
     path: ../Bve5_Parsing/MapGrammar/Attributes/SyntaxAttributes.cs

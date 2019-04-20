@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: SingleArgFunctionNode
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs
@@ -31,7 +31,6 @@ items:
     content: 'public abstract class SingleArgFunctionNode : MapGrammarAstNodes'
     content.vb: >-
       Public MustInherit Class SingleArgFunctionNode
-
           Inherits MapGrammarAstNodes
   inheritance:
   - System.Object
@@ -80,7 +79,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Value
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs
@@ -115,7 +114,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: .ctor
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs

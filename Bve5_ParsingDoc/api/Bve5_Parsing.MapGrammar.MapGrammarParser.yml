@@ -26,7 +26,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/MapGrammarParser.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: MapGrammarParser
     path: ../Bve5_Parsing/MapGrammar/MapGrammarParser.cs
@@ -69,7 +69,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/MapGrammarParser.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: _parserError
     path: ../Bve5_Parsing/MapGrammar/MapGrammarParser.cs
@@ -100,7 +100,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/MapGrammarParser.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: ParserErrors
     path: ../Bve5_Parsing/MapGrammar/MapGrammarParser.cs
@@ -137,7 +137,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/MapGrammarParser.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: ErrorListener
     path: ../Bve5_Parsing/MapGrammar/MapGrammarParser.cs
@@ -174,7 +174,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/MapGrammarParser.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Store
     path: ../Bve5_Parsing/MapGrammar/MapGrammarParser.cs
@@ -211,7 +211,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/MapGrammarParser.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: .ctor
     path: ../Bve5_Parsing/MapGrammar/MapGrammarParser.cs
@@ -243,7 +243,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/MapGrammarParser.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Parse
     path: ../Bve5_Parsing/MapGrammar/MapGrammarParser.cs
@@ -281,7 +281,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/MapGrammarParser.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Parse
     path: ../Bve5_Parsing/MapGrammar/MapGrammarParser.cs
@@ -323,7 +323,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/MapGrammarParser.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Parse
     path: ../Bve5_Parsing/MapGrammar/MapGrammarParser.cs
@@ -368,7 +368,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/MapGrammarParser.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: ParseFromFile
     path: ../Bve5_Parsing/MapGrammar/MapGrammarParser.cs
@@ -407,7 +407,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/MapGrammarParser.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: ParseFromFile
     path: ../Bve5_Parsing/MapGrammar/MapGrammarParser.cs
@@ -449,7 +449,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/MapGrammarParser.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: ParseToAst
     path: ../Bve5_Parsing/MapGrammar/MapGrammarParser.cs

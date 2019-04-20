@@ -40,7 +40,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: MapElementName
     path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
@@ -75,7 +75,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Curve
     path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
@@ -122,7 +122,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Gradient
     path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
@@ -169,7 +169,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Track
     path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
@@ -216,7 +216,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Structure
     path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
@@ -263,7 +263,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Repeater
     path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
@@ -310,7 +310,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Background
     path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
@@ -357,7 +357,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Station
     path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
@@ -404,7 +404,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Section
     path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
@@ -451,7 +451,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Signal
     path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
@@ -498,7 +498,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Beacon
     path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
@@ -545,7 +545,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Speedlimit
     path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
@@ -592,7 +592,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Pretrain
     path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
@@ -639,7 +639,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Light
     path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
@@ -686,7 +686,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Fog
     path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
@@ -733,7 +733,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Drawdistance
     path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
@@ -780,7 +780,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Cabilluminance
     path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
@@ -827,7 +827,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Irregularity
     path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
@@ -874,7 +874,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Adhesion
     path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
@@ -921,7 +921,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Sound
     path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
@@ -968,7 +968,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Sound3d
     path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
@@ -1015,7 +1015,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Rollingnoise
     path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
@@ -1062,7 +1062,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Flangenoise
     path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
@@ -1109,7 +1109,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Jointnoise
     path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
@@ -1156,7 +1156,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Train
     path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
@@ -1203,7 +1203,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Legacy
     path: ../Bve5_Parsing/MapGrammar/AutoGen/MapSyntaxDefinitions.cs

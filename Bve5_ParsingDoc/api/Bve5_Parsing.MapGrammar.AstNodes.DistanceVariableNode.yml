@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: DistanceVariableNode
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs
@@ -30,7 +30,6 @@ items:
     content: 'public class DistanceVariableNode : MapGrammarAstNodes'
     content.vb: >-
       Public Class DistanceVariableNode
-
           Inherits MapGrammarAstNodes
   inheritance:
   - System.Object
@@ -67,7 +66,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: .ctor
     path: ../Bve5_Parsing/MapGrammar/AstNodes/AstNodes.cs

@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/ScenarioGrammar/ScenarioGrammarParser.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: ScenarioGrammarParser
     path: ../Bve5_Parsing/ScenarioGrammar/ScenarioGrammarParser.cs
@@ -62,7 +62,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/ScenarioGrammar/ScenarioGrammarParser.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: ErrorListener
     path: ../Bve5_Parsing/ScenarioGrammar/ScenarioGrammarParser.cs
@@ -99,7 +99,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/ScenarioGrammar/ScenarioGrammarParser.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: .ctor
     path: ../Bve5_Parsing/ScenarioGrammar/ScenarioGrammarParser.cs
@@ -131,7 +131,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/ScenarioGrammar/ScenarioGrammarParser.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: .ctor
     path: ../Bve5_Parsing/ScenarioGrammar/ScenarioGrammarParser.cs
@@ -167,7 +167,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/ScenarioGrammar/ScenarioGrammarParser.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Parse
     path: ../Bve5_Parsing/ScenarioGrammar/ScenarioGrammarParser.cs

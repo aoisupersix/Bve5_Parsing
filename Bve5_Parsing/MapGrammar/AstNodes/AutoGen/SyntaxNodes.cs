@@ -653,7 +653,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// マップ副要素名
         /// </summary>
-        public MapSubElementName SubElementName => MapSubElementName.X;
+        public override MapSubElementName? SubElementName => MapSubElementName.X;
 
         /// <summary>
         /// 関数名
@@ -674,7 +674,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// Key：TrackKey
         /// </summary>
-        public MapGrammarAstNodes Key { get; set; }
+        public override MapGrammarAstNodes Key { get; set; }
 
         #region Args
 
@@ -714,7 +714,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// マップ副要素名
         /// </summary>
-        public MapSubElementName SubElementName => MapSubElementName.Y;
+        public override MapSubElementName? SubElementName => MapSubElementName.Y;
 
         /// <summary>
         /// 関数名
@@ -735,7 +735,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// Key：TrackKey
         /// </summary>
-        public MapGrammarAstNodes Key { get; set; }
+        public override MapGrammarAstNodes Key { get; set; }
 
         #region Args
 
@@ -791,7 +791,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// Key：TrackKey
         /// </summary>
-        public MapGrammarAstNodes Key { get; set; }
+        public override MapGrammarAstNodes Key { get; set; }
 
         #region Args
 
@@ -843,7 +843,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// マップ副要素名
         /// </summary>
-        public MapSubElementName SubElementName => MapSubElementName.Cant;
+        public override MapSubElementName? SubElementName => MapSubElementName.Cant;
 
         /// <summary>
         /// 関数名
@@ -864,7 +864,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// Key：TrackKey
         /// </summary>
-        public MapGrammarAstNodes Key { get; set; }
+        public override MapGrammarAstNodes Key { get; set; }
 
         #region Args
 
@@ -935,7 +935,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// マップ副要素名
         /// </summary>
-        public MapSubElementName SubElementName => MapSubElementName.Cant;
+        public override MapSubElementName? SubElementName => MapSubElementName.Cant;
 
         /// <summary>
         /// 関数名
@@ -956,7 +956,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// Key：TrackKey
         /// </summary>
-        public MapGrammarAstNodes Key { get; set; }
+        public override MapGrammarAstNodes Key { get; set; }
 
         #region Args
 
@@ -990,7 +990,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// マップ副要素名
         /// </summary>
-        public MapSubElementName SubElementName => MapSubElementName.Cant;
+        public override MapSubElementName? SubElementName => MapSubElementName.Cant;
 
         /// <summary>
         /// 関数名
@@ -1011,7 +1011,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// Key：TrackKey
         /// </summary>
-        public MapGrammarAstNodes Key { get; set; }
+        public override MapGrammarAstNodes Key { get; set; }
 
         #region Args
 
@@ -1045,7 +1045,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// マップ副要素名
         /// </summary>
-        public MapSubElementName SubElementName => MapSubElementName.Cant;
+        public override MapSubElementName? SubElementName => MapSubElementName.Cant;
 
         /// <summary>
         /// 関数名
@@ -1066,7 +1066,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// Key：TrackKey
         /// </summary>
-        public MapGrammarAstNodes Key { get; set; }
+        public override MapGrammarAstNodes Key { get; set; }
 
 
         /// <summary>
@@ -1092,7 +1092,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// マップ副要素名
         /// </summary>
-        public MapSubElementName SubElementName => MapSubElementName.Cant;
+        public override MapSubElementName? SubElementName => MapSubElementName.Cant;
 
         /// <summary>
         /// 関数名
@@ -1113,7 +1113,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// Key：TrackKey
         /// </summary>
-        public MapGrammarAstNodes Key { get; set; }
+        public override MapGrammarAstNodes Key { get; set; }
 
         #region Args
 
@@ -1147,7 +1147,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// マップ副要素名
         /// </summary>
-        public MapSubElementName SubElementName => MapSubElementName.Cant;
+        public override MapSubElementName? SubElementName => MapSubElementName.Cant;
 
         /// <summary>
         /// 関数名
@@ -1168,7 +1168,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// Key：TrackKey
         /// </summary>
-        public MapGrammarAstNodes Key { get; set; }
+        public override MapGrammarAstNodes Key { get; set; }
 
 
         /// <summary>
@@ -1194,7 +1194,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// マップ副要素名
         /// </summary>
-        public MapSubElementName SubElementName => MapSubElementName.Cant;
+        public override MapSubElementName? SubElementName => MapSubElementName.Cant;
 
         /// <summary>
         /// 関数名
@@ -1215,7 +1215,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// Key：TrackKey
         /// </summary>
-        public MapGrammarAstNodes Key { get; set; }
+        public override MapGrammarAstNodes Key { get; set; }
 
         #region Args
 
@@ -1347,7 +1347,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// Key：StructureKey
         /// </summary>
-        public MapGrammarAstNodes Key { get; set; }
+        public override MapGrammarAstNodes Key { get; set; }
 
         #region Args
 
@@ -1445,7 +1445,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// Key：StructureKey
         /// </summary>
-        public MapGrammarAstNodes Key { get; set; }
+        public override MapGrammarAstNodes Key { get; set; }
 
         #region Args
 
@@ -1507,7 +1507,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// Key：StructureKey
         /// </summary>
-        public MapGrammarAstNodes Key { get; set; }
+        public override MapGrammarAstNodes Key { get; set; }
 
         #region Args
 
@@ -1569,7 +1569,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// Key：RepeaterKey
         /// </summary>
-        public MapGrammarAstNodes Key { get; set; }
+        public override MapGrammarAstNodes Key { get; set; }
 
         #region Args
 
@@ -1673,7 +1673,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// Key：RepeaterKey
         /// </summary>
-        public MapGrammarAstNodes Key { get; set; }
+        public override MapGrammarAstNodes Key { get; set; }
 
         #region Args
 
@@ -1741,7 +1741,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// Key：RepeaterKey
         /// </summary>
-        public MapGrammarAstNodes Key { get; set; }
+        public override MapGrammarAstNodes Key { get; set; }
 
 
         /// <summary>
@@ -1873,7 +1873,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// Key：StationKey
         /// </summary>
-        public MapGrammarAstNodes Key { get; set; }
+        public override MapGrammarAstNodes Key { get; set; }
 
         #region Args
 
@@ -2128,7 +2128,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// Key：SignalAspectKey
         /// </summary>
-        public MapGrammarAstNodes Key { get; set; }
+        public override MapGrammarAstNodes Key { get; set; }
 
         #region Args
 
@@ -2940,7 +2940,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// Key：SoundKey
         /// </summary>
-        public MapGrammarAstNodes Key { get; set; }
+        public override MapGrammarAstNodes Key { get; set; }
 
 
         /// <summary>
@@ -3027,7 +3027,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// Key：SoundKey
         /// </summary>
-        public MapGrammarAstNodes Key { get; set; }
+        public override MapGrammarAstNodes Key { get; set; }
 
         #region Args
 
@@ -3281,7 +3281,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// Key：TrainKey
         /// </summary>
-        public MapGrammarAstNodes Key { get; set; }
+        public override MapGrammarAstNodes Key { get; set; }
 
         #region Args
 
@@ -3343,7 +3343,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// Key：TrainKey
         /// </summary>
-        public MapGrammarAstNodes Key { get; set; }
+        public override MapGrammarAstNodes Key { get; set; }
 
         #region Args
 
@@ -3399,7 +3399,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// Key：TrainKey
         /// </summary>
-        public MapGrammarAstNodes Key { get; set; }
+        public override MapGrammarAstNodes Key { get; set; }
 
         #region Args
 

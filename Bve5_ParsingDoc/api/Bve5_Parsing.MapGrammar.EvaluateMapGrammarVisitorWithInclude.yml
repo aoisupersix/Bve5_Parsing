@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstEvaluator.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: EvaluateMapGrammarVisitorWithInclude
     path: ../Bve5_Parsing/MapGrammar/AstEvaluator.cs
@@ -32,7 +32,6 @@ items:
     content: 'public class EvaluateMapGrammarVisitorWithInclude : EvaluateMapGrammarVisitor'
     content.vb: >-
       Public Class EvaluateMapGrammarVisitorWithInclude
-
           Inherits EvaluateMapGrammarVisitor
   inheritance:
   - System.Object
@@ -170,7 +169,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstEvaluator.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: .ctor
     path: ../Bve5_Parsing/MapGrammar/AstEvaluator.cs
@@ -215,7 +214,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstEvaluator.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: .ctor
     path: ../Bve5_Parsing/MapGrammar/AstEvaluator.cs
@@ -263,7 +262,7 @@ items:
   source:
     remote:
       path: Bve5_Parsing/MapGrammar/AstEvaluator.cs
-      branch: update_doc
+      branch: master
       repo: https://github.com/aoisupersix/Bve5_Parsing
     id: Visit
     path: ../Bve5_Parsing/MapGrammar/AstEvaluator.cs
