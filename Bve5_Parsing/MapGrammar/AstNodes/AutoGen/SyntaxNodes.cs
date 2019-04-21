@@ -2506,6 +2506,57 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     }
 
     /// <summary>
+    /// Light.Direction(Pitch, Yaw);
+    /// </summary>
+    public partial class LightDirectionNode : SyntaxNode
+    {
+        #region SyntaxInfo
+
+        /// <summary>
+        /// マップ要素名
+        /// </summary>
+        public override MapElementName ElementName => MapElementName.Light;
+
+        /// <summary>
+        /// 関数名
+        /// </summary>
+        public override MapFunctionName FunctionName => MapFunctionName.Direction;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => false;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => false;
+        #endregion SyntaxInfo
+
+        #region Args
+
+        /// <summary>
+        /// 引数：角度
+        /// </summary>
+        [Argument]
+        public MapGrammarAstNodes Pitch { get; set; }
+
+        /// <summary>
+        /// 引数：回転角
+        /// </summary>
+        [Argument]
+        public MapGrammarAstNodes Yaw { get; set; }
+        #endregion Args
+
+        /// <summary>
+        /// 新しいインスタンスを生成します。
+        /// </summary>
+        /// <param name="start"></param>
+        /// <param name="stop"></param>
+        public LightDirectionNode(IToken start, IToken stop) : base(start, stop) { }
+    }
+
+    /// <summary>
     /// Fog.Interpolate(Density?, Red?, Green?, Blue?);
     /// </summary>
     public partial class FogInterpolateNode : SyntaxNode
@@ -2696,7 +2747,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     }
 
     /// <summary>
-    /// Cabilluminance.Set(Value?);
+    /// Cabilluminance.Set(Value);
     /// </summary>
     [Deprecated]
     public partial class CabilluminanceSetNode : CabilluminanceInterpolateNode

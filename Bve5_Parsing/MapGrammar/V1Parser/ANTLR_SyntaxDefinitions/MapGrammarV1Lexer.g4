@@ -110,5 +110,4 @@ COMMA : ',';
 NULL : N U L L;
 ARG_WS : WS -> skip;
 ARG_COMMENT : COMMENT -> skip;
-ARG_NUM: NUM;
 CHAR : .;

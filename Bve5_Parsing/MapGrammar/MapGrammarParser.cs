@@ -81,7 +81,7 @@ namespace Bve5_Parsing.MapGrammar
         public MapData Parse(string input, MapGrammarParserOption option)
         {
             if (option.HasFlag(MapGrammarParserOption.ParseIncludeSyntaxRecursively))
-                option = option & MapGrammarParserOption.ParseIncludeSyntaxRecursively; // Include対応はできないのでOptionを削除する
+                option &= MapGrammarParserOption.ParseIncludeSyntaxRecursively; // Include対応はできないのでOptionを削除する
 
             return Parse(input, null, option);
         }
@@ -133,7 +133,7 @@ namespace Bve5_Parsing.MapGrammar
                 return null;
             }
 
-            MapGrammarAstNodes ast = ParseToAst(input.Substring(headerInfo.Item3));
+            MapGrammarAstNodes ast = ParseToAst(input.Substring(headerInfo.Item3), headerInfo.Item1);
             MapData value = option.HasFlag(MapGrammarParserOption.ParseIncludeSyntaxRecursively) ?
                 (MapData)new EvaluateMapGrammarVisitorWithInclude(Store, dirAbsolutePath, _parserError).Visit(ast) : // Includeを再帰的にパースする
                 (MapData)new EvaluateMapGrammarVisitor(Store, _parserError).Visit(ast)
@@ -158,14 +158,15 @@ namespace Bve5_Parsing.MapGrammar
         public MapGrammarAstNodes ParseToAst(string input, string versionString = null)
         {
             var inputStream = new AntlrInputStream(input);
-            var lexer = new V2Parser.SyntaxDefinitions.MapGrammarV2Lexer(inputStream);
-            var commonTokneStream = new CommonTokenStream(lexer);
-
+            
             ErrorListener.Errors.Clear();
             MapGrammarAstNodes ast = null;
-            if (versionString != null && ( versionString[0] == '1' || versionString[1] == '0'))
+            if (versionString != null && ( versionString[0] == '1' || versionString[0] == '0'))
             {
                 // V1Parser
+                var lexer = new V1Parser.SyntaxDefinitions.MapGrammarV1Lexer(inputStream);
+                var commonTokneStream = new CommonTokenStream(lexer);
+
                 var parser = new V1Parser.SyntaxDefinitions.MapGrammarV1Parser(commonTokneStream);
                 parser.AddErrorListener(ErrorListener);
                 parser.ErrorHandler = new V1Parser.V1ParserErrorStrategy();
@@ -176,6 +177,9 @@ namespace Bve5_Parsing.MapGrammar
             else
             {
                 // V2Parser
+                var lexer = new V2Parser.SyntaxDefinitions.MapGrammarV2Lexer(inputStream);
+                var commonTokneStream = new CommonTokenStream(lexer);
+
                 var parser = new V2Parser.SyntaxDefinitions.MapGrammarV2Parser(commonTokneStream);
                 parser.AddErrorListener(ErrorListener);
                 parser.ErrorHandler = new V2Parser.V2ParserErrorStrategy();

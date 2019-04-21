@@ -65,6 +65,7 @@ namespace Bve5_Parsing.MapGrammar
         public abstract T Visit(PretrainPassNode node);
         public abstract T Visit(LightAmbientNode node);
         public abstract T Visit(LightDiffuseNode node);
+        public abstract T Visit(LightDirectionNode node);
         public abstract T Visit(FogInterpolateNode node);
         public abstract T Visit(FogSetNode node);
         public abstract T Visit(DrawdistanceChangeNode node);

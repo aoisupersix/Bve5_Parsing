@@ -33,11 +33,16 @@ namespace Bve5_ParsingTests
 {{^skip_test}}
 {{#argPattern}}
 
-            // {{elem}}{{^syntax1}}[{{key}}]{{/syntax1}}{{#syntax3}}.{{sub_elem}}{{/syntax3}}.{{func}}({{#.}}{{name}}{{^last}}, {{/last}}{{/.}});
+            // {{elem}}{{^syntax1}}[{{key}}]{{/syntax1}}{{#syntax3}}.{{sub_elem}}{{/syntax3}}.{{func}}({{#args}}{{name}}{{^last}}, {{/last}}{{/args}});
             Check(
-                ExecParse("BveTs Map 2.02\n0;{{elem}}{{^syntax1}}['{{key}}']{{/syntax1}}{{#syntax3}}.{{sub_elem}}{{/syntax3}}.{{func}}({{#.}}{{{test_value_map_grammar}}}{{^last}}, {{/last}}{{/.}});"),
+{{#useV2Parser}}
+                ExecParse("BveTs Map {{version}}\n0;{{elem}}{{^syntax1}}['{{key}}']{{/syntax1}}{{#syntax3}}.{{sub_elem}}{{/syntax3}}.{{func}}({{#args}}{{{test_value_map_grammar}}}{{^last}}, {{/last}}{{/args}});"),
+{{/useV2Parser}}
+{{#useV1Parser}}
+                ExecParse("BveTs Map {{version}}\n0;{{elem}}{{^syntax1}}[{{key}}]{{/syntax1}}{{#syntax3}}.{{sub_elem}}{{/syntax3}}.{{func}}({{#args}}{{{test_value_map_grammar_non_quote}}}{{^last}}, {{/last}}{{/args}});"),
+{{/useV1Parser}}
                 new MapData(
-                    version: "2.02",
+                    version: "{{version}}",
                     syntaxes: new List<Statement>()
                     {
                         new {{elem}}{{#syntax3}}{{sub_elem}}{{/syntax3}}{{func}}Statement(0)
@@ -45,9 +50,9 @@ namespace Bve5_ParsingTests
 {{#key}}
                             Key = "{{key}}",
 {{/key}}
-{{#.}}
+{{#args}}
                             {{name}} = {{{test_value_csharp}}}{{^last}},{{/last}}
-{{/.}}
+{{/args}}
                         }
                     }));
 {{/argPattern}}

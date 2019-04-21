@@ -2757,6 +2757,61 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
     }
 
     /// <summary>
+    /// Light.Direction(Pitch, Yaw);
+    /// </summary>
+    public partial class LightDirectionStatement : Statement
+    {
+        #region SyntaxInfo
+
+        /// <summary>
+        /// マップ要素名
+        /// </summary>
+        public override MapElementName ElementName => MapElementName.Light;
+
+        /// <summary>
+        /// 関数名
+        /// </summary>
+        public override MapFunctionName FunctionName => MapFunctionName.Direction;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => false;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => false;
+        #endregion SyntaxInfo
+
+        #region Args
+
+        /// <summary>
+        /// 引数：角度
+        /// </summary>
+        [Argument]
+        public double? Pitch { get; set; }
+
+        /// <summary>
+        /// 引数：回転角
+        /// </summary>
+        [Argument]
+        public double? Yaw { get; set; }
+        #endregion Args
+
+        /// <summary>
+        /// 新しいインスタンスを生成します。
+        /// </summary>
+        public LightDirectionStatement() { }
+
+        /// <summary>
+        /// 距離程を指定して新しいインスタンスを生成します。
+        /// </summary>
+        public LightDirectionStatement(double distance) : base(distance) { }
+
+    }
+
+    /// <summary>
     /// Fog.Interpolate(Density?, Red?, Green?, Blue?);
     /// </summary>
     public partial class FogInterpolateStatement : Statement
@@ -2989,7 +3044,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
     }
 
     /// <summary>
-    /// Cabilluminance.Set(Value?);
+    /// Cabilluminance.Set(Value);
     /// </summary>
     public partial class CabilluminanceSetStatement : CabilluminanceInterpolateStatement
     {
@@ -3019,9 +3074,9 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         #region Args
 
         /// <summary>
-        /// 引数：昼間画像と夜間画像の混合比 (0: 夜間画像 ~ 1: 昼間画像)（省略可能）
+        /// 引数：昼間画像と夜間画像の混合比 (0: 夜間画像 ~ 1: 昼間画像)
         /// </summary>
-        [Argument(Optional = true)]
+        [Argument]
         public double? Value { get; set; }
         #endregion Args
 

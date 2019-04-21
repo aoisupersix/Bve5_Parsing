@@ -420,6 +420,11 @@ namespace Bve5_Parsing.MapGrammar
             return node.CreateStatement(this);
         }
 
+        public override object Visit(LightDirectionNode node)
+        {
+            return node.CreateStatement(this);
+        }
+
         public override object Visit(FogInterpolateNode node)
         {
             return node.CreateStatement(this);

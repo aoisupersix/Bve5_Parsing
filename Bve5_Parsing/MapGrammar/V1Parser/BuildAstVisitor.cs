@@ -41,7 +41,15 @@ namespace Bve5_Parsing.MapGrammar.V1Parser
         /// <returns>距離程ASTノード</returns>
         public override MapGrammarAstNodes VisitDistState([NotNull] DistStateContext context)
         {
-            return Visit(context.distance());
+            var numberNode = new NumberNode(context.Start, context.Stop)
+            {
+                Value = context.num
+            };
+
+            return new DistanceNode(context.Start, context.Stop)
+            {
+                Value = numberNode
+            };
         }
 
         /// <summary>
@@ -245,6 +253,46 @@ namespace Bve5_Parsing.MapGrammar.V1Parser
         }
 
         /// <summary>
+        /// 速度制限ステートメントの巡回
+        /// </summary>
+        /// <param name="context">構文解析の文脈データ</param>
+        /// <returns>構文ASTノード</returns>
+        public override MapGrammarAstNodes VisitSpeedlimitState([NotNull] SpeedlimitStateContext context)
+        {
+            MapGrammarAstNodes node;
+            try
+            {
+                node = Visit(context.speedlimit());
+            }
+            catch (NullReferenceException)
+            {
+                node = null;
+            }
+
+            return node;
+        }
+
+        /// <summary>
+        /// 先行列車ステートメントの巡回
+        /// </summary>
+        /// <param name="context">構文解析の文脈データ</param>
+        /// <returns>構文ASTノード</returns>
+        public override MapGrammarAstNodes VisitPretrainState([NotNull] PretrainStateContext context)
+        {
+            MapGrammarAstNodes node;
+            try
+            {
+                node = Visit(context.pretrain());
+            }
+            catch (NullReferenceException)
+            {
+                node = null;
+            }
+
+            return node;
+        }
+
+        /// <summary>
         /// 光源ステートメントの巡回
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
@@ -275,6 +323,26 @@ namespace Bve5_Parsing.MapGrammar.V1Parser
             try
             {
                 node = Visit(context.fog());
+            }
+            catch (NullReferenceException)
+            {
+                node = null;
+            }
+
+            return node;
+        }
+
+        /// <summary>
+        /// 運転台の明るさステートメントの巡回
+        /// </summary>
+        /// <param name="context">構文解析の文脈データ</param>
+        /// <returns>構文ASTノード</returns>
+        public override MapGrammarAstNodes VisitCabilluminanceState([NotNull] CabilluminanceStateContext context)
+        {
+            MapGrammarAstNodes node;
+            try
+            {
+                node = Visit(context.cabilluminance());
             }
             catch (NullReferenceException)
             {
@@ -365,6 +433,66 @@ namespace Bve5_Parsing.MapGrammar.V1Parser
         }
 
         /// <summary>
+        /// 走行音ステートメントの巡回
+        /// </summary>
+        /// <param name="context">構文解析の文脈データ</param>
+        /// <returns>構文ASTノード</returns>
+        public override MapGrammarAstNodes VisitRollingnoiseState([NotNull] RollingnoiseStateContext context)
+        {
+            MapGrammarAstNodes node;
+            try
+            {
+                node = Visit(context.rollingnoise());
+            }
+            catch (NullReferenceException)
+            {
+                node = null;
+            }
+
+            return node;
+        }
+
+        /// <summary>
+        /// フランジきしり音ステートメントの巡回
+        /// </summary>
+        /// <param name="context">構文解析の文脈データ</param>
+        /// <returns>構文ASTノード</returns>
+        public override MapGrammarAstNodes VisitFlangenoiseState([NotNull] FlangenoiseStateContext context)
+        {
+            MapGrammarAstNodes node;
+            try
+            {
+                node = Visit(context.flangenoise());
+            }
+            catch (NullReferenceException)
+            {
+                node = null;
+            }
+
+            return node;
+        }
+
+        /// <summary>
+        /// 分岐器通過音ステートメントの巡回
+        /// </summary>
+        /// <param name="context">構文解析の文脈データ</param>
+        /// <returns>構文ASTノード</returns>
+        public override MapGrammarAstNodes VisitJointnoiseState([NotNull] JointnoiseStateContext context)
+        {
+            MapGrammarAstNodes node;
+            try
+            {
+                node = Visit(context.jointnoise());
+            }
+            catch (NullReferenceException)
+            {
+                node = null;
+            }
+
+            return node;
+        }
+
+        /// <summary>
         /// 他列車ステートメントの巡回
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
@@ -408,20 +536,6 @@ namespace Bve5_Parsing.MapGrammar.V1Parser
         #region マップ構文Visitors
 
         /// <summary>
-        /// 距離程の巡回
-        /// </summary>
-        /// <param name="context">構文解析の文脈データ</param>
-        /// <returns>距離程ASTノード</returns>
-        public override MapGrammarAstNodes VisitDistance([NotNull] DistanceContext context)
-        {
-            DistanceNode node = new DistanceNode(context.Start, context.Stop)
-            {
-                Value = Visit(context.NUM())
-            };
-            return node;
-        }
-
-        /// <summary>
         /// 平面曲線の巡回
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
@@ -462,6 +576,39 @@ namespace Bve5_Parsing.MapGrammar.V1Parser
         }
 
         /// <summary>
+        /// 連続ストラクチャの巡回
+        /// </summary>
+        /// <param name="context">構文解析の文脈データ</param>
+        /// <returns>構文ASTノード</returns>
+        public override MapGrammarAstNodes VisitRepeater([NotNull] RepeaterContext context)
+        {
+            var node = SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Repeater, context.func.Text);
+
+            if (node.FunctionName == MapFunctionName.Begin)
+            {
+                //Repeater.Beginは手動対応
+                var beginNode = node as RepeaterBeginNode;
+                foreach (var arg in context.args())
+                {
+                    beginNode.AddStructureKey(Visit(arg));
+                }
+                return beginNode;
+            }
+            else if (node.FunctionName == MapFunctionName.Begin0)
+            {
+                //Repeater.Begin0は手動対応
+                var begin0Node = node as RepeaterBegin0Node;
+                foreach (var arg in context.args())
+                {
+                    begin0Node.AddStructureKey(Visit(arg));
+                }
+                return begin0Node;
+            }
+
+            return node;
+        }
+
+        /// <summary>
         /// 背景の巡回
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
@@ -494,8 +641,8 @@ namespace Bve5_Parsing.MapGrammar.V1Parser
             {
                 //Section.BeginとSection.Beginnewは手動対応
                 var beginNode = node as SectionBeginNode;
-                beginNode.AddSignalIndex(Visit(context.nullableExpr()));
-                foreach (var sigIdx in context.exprArgs())
+                beginNode.AddSignalIndex(Visit(context.arg()));
+                foreach (var sigIdx in context.args())
                 {
                     beginNode.AddSignalIndex(Visit(sigIdx));
                 }
@@ -505,8 +652,8 @@ namespace Bve5_Parsing.MapGrammar.V1Parser
             {
                 //Section.Setspeedlimitは手動対応
                 var speedlimitNode = node as SectionSetspeedlimitNode;
-                speedlimitNode.AddSpeedLimit(Visit(context.nullableExpr()));
-                foreach (var spdLmt in context.exprArgs())
+                speedlimitNode.AddSpeedLimit(Visit(context.arg()));
+                foreach (var spdLmt in context.args())
                 {
                     speedlimitNode.AddSpeedLimit(Visit(spdLmt));
                 }
@@ -529,8 +676,8 @@ namespace Bve5_Parsing.MapGrammar.V1Parser
             {
                 //Signal.Speedlimitは手動対応
                 var speedlimitNode = node as SignalSpeedlimitNode;
-                speedlimitNode.AddSpeedLimit(Visit(context.nullableExpr()[0]));
-                foreach (var spdLmt in context.exprArgs())
+                speedlimitNode.AddSpeedLimit(Visit(context.arg()[0]));
+                foreach (var spdLmt in context.args())
                 {
                     speedlimitNode.AddSpeedLimit(Visit(spdLmt));
                 }
@@ -551,6 +698,31 @@ namespace Bve5_Parsing.MapGrammar.V1Parser
         }
 
         /// <summary>
+        /// 速度制限の巡回
+        /// </summary>
+        /// <param name="context">構文解析の文脈データ</param>
+        /// <returns>構文ASTノード</returns>
+        public override MapGrammarAstNodes VisitSpeedlimit([NotNull] SpeedlimitContext context)
+        {
+            return SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Speedlimit, context.func.Text);
+        }
+
+        /// <summary>
+        /// 先行列車の巡回
+        /// </summary>
+        /// <param name="context">構文解析の文脈データ</param>
+        /// <returns>構文ASTノード</returns>
+        public override MapGrammarAstNodes VisitPretrain([NotNull] PretrainContext context)
+        {
+            var node = new PretrainPassNode(context.start, context.stop);
+            // Pretrain.Pass構文の引数がTimeかSecondかの判定は評価時に行う
+            // 現時点ではTimeに代入しておく。
+            node.Time = Visit(context.arg());
+
+            return node;
+        }
+
+        /// <summary>
         /// 光源の巡回
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
@@ -568,6 +740,16 @@ namespace Bve5_Parsing.MapGrammar.V1Parser
         public override MapGrammarAstNodes VisitFog([NotNull] FogContext context)
         {
             return SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Fog, context.func.Text);
+        }
+
+        /// <summary>
+        /// 運転台の明るさの巡回
+        /// </summary>
+        /// <param name="context">構文解析の文脈データ</param>
+        /// <returns>構文ASTノード</returns>
+        public override MapGrammarAstNodes VisitCabilluminance([NotNull] CabilluminanceContext context)
+        {
+            return SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Cabilluminance, context.func.Text);
         }
 
         /// <summary>
@@ -611,6 +793,36 @@ namespace Bve5_Parsing.MapGrammar.V1Parser
         }
 
         /// <summary>
+        /// 走行音の巡回
+        /// </summary>
+        /// <param name="context">構文解析の文脈データ</param>
+        /// <returns>構文ASTノード</returns>
+        public override MapGrammarAstNodes VisitRollingnoise([NotNull] RollingnoiseContext context)
+        {
+            return SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Rollingnoise, context.func.Text);
+        }
+
+        /// <summary>
+        /// フランジきしり音の巡回
+        /// </summary>
+        /// <param name="context">構文解析の文脈データ</param>
+        /// <returns>構文ASTノード</returns>
+        public override MapGrammarAstNodes VisitFlangenoise([NotNull] FlangenoiseContext context)
+        {
+            return SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Flangenoise, context.func.Text);
+        }
+
+        /// <summary>
+        /// 分岐器通過音の巡回
+        /// </summary>
+        /// <param name="context">構文解析の文脈データ</param>
+        /// <returns>構文ASTノード</returns>
+        public override MapGrammarAstNodes VisitJointnoise([NotNull] JointnoiseContext context)
+        {
+            return SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Jointnoise, context.func.Text);
+        }
+
+        /// <summary>
         /// 他列車の巡回
         /// </summary>
         /// <param name="context"></param>
@@ -625,7 +837,7 @@ namespace Bve5_Parsing.MapGrammar.V1Parser
 
                 // Train.Enable構文の引数がTimeかSecondかの判定は評価時に行う
                 // 現時点ではTimeに代入しておく。
-                node.Time = Visit(context.nullableExpr()[0]);
+                node.Time = Visit(context.time);
 
                 return node;
             }
@@ -650,9 +862,9 @@ namespace Bve5_Parsing.MapGrammar.V1Parser
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns></returns>
-        public override MapGrammarAstNodes VisitExprArgs([NotNull] ExprArgsContext context)
+        public override MapGrammarAstNodes VisitArgs([NotNull] ArgsContext context)
         {
-            return Visit(context.nullableExpr());
+            return Visit(context.arg());
         }
 
         /// <summary>
@@ -660,36 +872,15 @@ namespace Bve5_Parsing.MapGrammar.V1Parser
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns></returns>
-        public override MapGrammarAstNodes VisitNullableExpr([NotNull] NullableExprContext context)
+        public override MapGrammarAstNodes VisitArg([NotNull] ArgContext context)
         {
             if (context.ChildCount == 0 || context.nullSyntax != null)                       /* null */
-                //return new NumberNode { Value = 0 };
                 return null;
 
-            return Visit(context.expr());
+            return Visit(context.str);
         }
 
-        /// <summary>
-        /// 数字項Visitor
-        /// </summary>
-        /// <param name="context">構文解析の文脈データ</param>
-        /// <returns></returns>
-        public override MapGrammarAstNodes VisitNumberExpr([NotNull] NumberExprContext context)
-        {
-            return new NumberNode(context.Start, context.Stop) { Value = context.num };
-        }
-
-        /// <summary>
-        /// 文字列Visitor
-        /// </summary>
-        /// <param name="context">構文解析の文脈データ</param>
-        /// <returns></returns>
-        public override MapGrammarAstNodes VisitStringExpr([NotNull] StringExprContext context)
-        {
-            return new StringNode(context.Start, context.Stop) { Value = context.str.text };
-        }
-
-        #endregion 数式と変数Visitors
+        #endregion
 
         public override MapGrammarAstNodes VisitString([NotNull] StringContext context)
         {
