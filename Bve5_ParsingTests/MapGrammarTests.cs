@@ -151,14 +151,14 @@ BeginTransition
         public void V1ArgTest()
         {
             Check(
-                ExecParse("BveTs Map 1.00:utf-8\n0;Track[hoge[][]().;hoge].Position(4,3);"),
+                ExecParse("BveTs Map 1.00:utf-8\n0;Track[hoge[][]().hoge].Position(4,3);"),
                 new MapData(
                     version: "1.00", encoding: "utf-8",
                     syntaxes: new List<Statement>()
                     {
                         new TrackPositionStatement(0)
                         {
-                            Key = "hoge[][]().;hoge",
+                            Key = "hoge[][]().hoge",
                             X = 4,
                             Y = 3
                         }
@@ -181,10 +181,10 @@ BeginTransition
                     }));
 
             Check(
-                ExecParse("BveTs Map 1.00:utf-8\n0;Structure.Load(this[]is()str;.;path);"),
+                ExecParse("BveTs Map 1.00:utf-8\n0;Structure.Load(this[]is()str.path);"),
                 new MapData(
                     version: "1.00", encoding: "utf-8",
-                    strListPath: "this[]is()str;.;path"
+                    strListPath: "this[]is()str.path"
                     ));
         }
 

@@ -104,8 +104,9 @@ fragment Y : [yY];
 fragment Z : [zZ];
 
 mode ARG_MODE;
-ARG_END: ')' WS* ';' -> popMode;
-KEY_END : ']' WS* '.' -> popMode;
+ARG_END: ')' WS* STATE_END -> popMode;
+KEY_END : ']' WS* DOT -> popMode;
+ARG_FORCE_END: STATE_END -> popMode; //このルールは正常な構文であれば必ず通らないが、ARG_MODEを抜けるために作っておく。
 COMMA : ',';
 NULL : N U L L;
 ARG_WS : WS -> skip;
