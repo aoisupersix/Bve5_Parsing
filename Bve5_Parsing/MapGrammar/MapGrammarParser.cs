@@ -31,7 +31,31 @@ namespace Bve5_Parsing.MapGrammar
             /// パース中にInclude構文が出現した場合、指定されたファイルを再帰的にパースします。
             /// このフラグはParseメソッドにファイル名を指定した場合のみ有効です。
             /// </summary>
-            ParseIncludeSyntaxRecursively = 0x002
+            ParseIncludeSyntaxRecursively = 0x002,
+
+            /// <summary>
+            /// ファイルヘッダに記載されているマップファイルのバージョン情報を無視し、バージョン1.XXの構文としてパースします。
+            /// ParseAsMapVersion2と併用できません。もし、ParseAsMapVersion1とParseAsMapVersion2を両方指定した場合、ParseAsMapVersion2を優先します。つまり、バージョン2.XXの構文としてパースします。
+            /// </summary>
+            ParseAsMapVersion1 = 0x004,
+
+            /// <summary>
+            /// ファイルヘッダに記載されているマップファイルのバージョン情報を無視し、バージョン2.XXの構文としてパースします。
+            /// ParseAsMapVersion1と併用できません。もし、ParseAsMapVersion1とParseAsMapVersion2を両方指定した場合、ParseAsMapVersion2を優先します。つまり、バージョン2.XXの構文としてパースします。
+            /// </summary>
+            ParseAsMapVersion2 = 0x008,
+
+            /// <summary>
+            /// 与えられた文字列やファイルにファイルヘッダが存在しないものとしてパースします。
+            /// マップファイルのバージョンは最新の2.02として扱います。
+            /// 特定のバージョンを指定したい場合は、ParseAsMapVersion1、もしくはParseAsMapVersion2を同時に指定して下さい。
+            /// </summary>
+            NoHeader = 0x016,
+
+            /// <summary>
+            /// パース処理の前にパーサで管理している変数を初期化します。
+            /// </summary>
+            ClearVariables = 0x032,
         }
         #endregion
 
@@ -127,11 +151,22 @@ namespace Bve5_Parsing.MapGrammar
         public MapData Parse(string input, string dirAbsolutePath, MapGrammarParserOption option)
         {
             Tuple<string, string, int> headerInfo = GetHeaderInfo(input);
+
+            if (option.HasFlag(MapGrammarParserOption.NoHeader))
+                headerInfo = new Tuple<string, string, int>("2.02", headerInfo.Item2, headerInfo.Item3);
+            if (option.HasFlag(MapGrammarParserOption.ParseAsMapVersion1))
+                headerInfo = new Tuple<string, string, int>("1.00", headerInfo.Item2, headerInfo.Item3);
+            if (option.HasFlag(MapGrammarParserOption.ParseAsMapVersion2))
+                headerInfo = new Tuple<string, string, int>("2.02", headerInfo.Item2, headerInfo.Item3);
+
             if (headerInfo.Item1 == null)
             {
                 _parserError.Add(new ParseError(ParseErrorLevel.Error, 0, 0, "有効なマップファイルではありません。"));
                 return null;
             }
+
+            if (option.HasFlag(MapGrammarParserOption.ClearVariables))
+                Store.ClearVar();
 
             MapGrammarAstNodes ast = ParseToAst(input.Substring(headerInfo.Item3), headerInfo.Item1);
             MapData value = option.HasFlag(MapGrammarParserOption.ParseIncludeSyntaxRecursively) ?
@@ -153,7 +188,7 @@ namespace Bve5_Parsing.MapGrammar
         /// 引数に与えられたマップ構文の構文解析を行い、ASTを生成します。
         /// </summary>
         /// <param name="input">解析するマップ構文のステートメントを表す文字列</param>
-        /// <param name="versionString">パーサを指定するためのバージョン文字列（省略した場合はV2Parserを利用します）</param>
+        /// <param name="versionString">パーサを指定するためのバージョン文字列（省略した場合は2.02を利用します）</param>
         /// <returns></returns>
         public MapGrammarAstNodes ParseToAst(string input, string versionString = null)
         {
