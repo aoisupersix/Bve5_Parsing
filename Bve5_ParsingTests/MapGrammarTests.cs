@@ -16,16 +16,12 @@ namespace Bve5_ParsingTests
         [Fact]
         public void RootTest()
         {
-            // メモ：エンコード指定の前後には空白は入れられないはずだが、出来てしまう
             Check(
                 ExecParse("BveTs Map 2.02"),
                 new MapData("2.02"));
             Check(
                 ExecParse("BveTs Map 2.02:utf-8"),
                 new MapData("2.02", "utf-8"));
-            Check(
-                ExecParse("BveTs Map 2.00:utf-8"),
-                new MapData("2.00","utf-8"));
             Check(
                 ExecParse("BVEtS maP 2.02:UtF-8"),
                 new MapData("2.02", "UtF-8"));
@@ -37,14 +33,159 @@ namespace Bve5_ParsingTests
                     {
                         new CurveBegintransitionStatement(0)
                     }));
+
+            Check(
+                ExecParse("BveTs Map 2.00"),
+                new MapData("2.00"));
+            Check(
+                ExecParse("BveTs Map 2.00:utf-8"),
+                new MapData("2.00", "utf-8"));
+            Check(
+                ExecParse("BveTs Map 2.00:utf-8"),
+                new MapData("2.00", "utf-8"));
+            Check(
+                ExecParse("BVEtS maP 2.00:UtF-8"),
+                new MapData("2.00", "UtF-8"));
+            Check(
+                ExecParse("BveTs Map 2.00:utf-8\n0;Curve.BeginTransition();"),
+                new MapData(
+                    version: "2.00", encoding: "utf-8",
+                    syntaxes: new List<Statement>()
+                    {
+                        new CurveBegintransitionStatement(0)
+                    }));
+
+            Check(
+                ExecParse("BveTs Map 1.00"),
+                new MapData("1.00"));
+            Check(
+                ExecParse("BveTs Map 1.00:utf-8"),
+                new MapData("1.00", "utf-8"));
+            Check(
+                ExecParse("BveTs Map 1.00:utf-8"),
+                new MapData("1.00", "utf-8"));
+            Check(
+                ExecParse("BVEtS maP 1.00:UtF-8"),
+                new MapData("1.00", "UtF-8"));
+            Check(
+                ExecParse("BveTs Map 1.00:utf-8\n0;Curve.BeginTransition();"),
+                new MapData(
+                    version: "1.00", encoding: "utf-8",
+                    syntaxes: new List<Statement>()
+                    {
+                        new CurveBegintransitionStatement(0)
+                    }));
         }
 
         [Fact]
-        public void InvalidArgumentTest()
+        public void WhiteSpaceTest()
+        {
+            Check(
+                ExecParse($@"BveTs Map 2.02
+0;
+Curve
+                .
+BeginTransition
+(  // This is line comment
+)
+    ;
+"),
+                new MapData(version: "2.02",
+                syntaxes: new List<Statement>()
+                {
+                    new CurveBegintransitionStatement(0)
+                }));
+
+            Check(
+                ExecParse($@"BveTs Map 2.00
+0;
+Curve
+                .
+BeginTransition
+(  // This is line comment
+)
+)
+    ;
+"),
+                new MapData(version: "2.00",
+                syntaxes: new List<Statement>()
+                {
+                    new CurveBegintransitionStatement(0)
+                }));
+
+            Check(
+                ExecParse($@"BveTs Map 1.00
+0;
+Curve
+                .
+BeginTransition
+(  // This is line comment
+)
+)
+    ;
+"),
+                new MapData(version: "1.00",
+                syntaxes: new List<Statement>()
+                {
+                    new CurveBegintransitionStatement(0)
+                }));
+        }
+
+        [Fact]
+        public void V2InvalidArgumentTest()
         {
             var parser = new MapGrammarParser();
             parser.Parse("BveTs Map 2.02\n0;Curve.Setgauge('test');");
-            Assert.Single(parser.ParserErrors);
+            Assert.Single(parser.ParserErrors); // TODO
+        }
+
+        [Fact]
+        public void V1InvalidArgumentTest()
+        {
+            var parser = new MapGrammarParser();
+            parser.Parse("BveTs Map 2.02\n0;Curve.Gauge(test);");
+            Assert.Single(parser.ParserErrors); // TODO
+        }
+
+        [Fact]
+        public void V1ArgTest()
+        {
+            Check(
+                ExecParse("BveTs Map 1.00:utf-8\n0;Track[hoge[][]().;hoge].Position(4,3);"),
+                new MapData(
+                    version: "1.00", encoding: "utf-8",
+                    syntaxes: new List<Statement>()
+                    {
+                        new TrackPositionStatement(0)
+                        {
+                            Key = "hoge[][]().;hoge",
+                            X = 4,
+                            Y = 3
+                        }
+                    }));
+
+            // TODO: 仕様確認 引数中の空白は除外されるのか
+            // 現在はLexerの定義て勝手に除外されてしまうので、もし除外されないようにするためにはLexerの定義変更が必要。
+            Check(
+                ExecParse("BveTs Map 1.00:utf-8\n0;Track[hoge[][]  []hoge].Position(4,3);"),
+                new MapData(
+                    version: "1.00", encoding: "utf-8",
+                    syntaxes: new List<Statement>()
+                    {
+                        new TrackPositionStatement(0)
+                        {
+                            Key = "hoge[][][]hoge",
+                            X = 4,
+                            Y = 3
+                        }
+                    }));
+
+            Check(
+                ExecParse("BveTs Map 1.00:utf-8\n0;Structure.Load(this[]is()str;.;path);"),
+                new MapData(
+                    version: "1.00", encoding: "utf-8",
+                    strListPath: "this[]is()str;.;path"
+                    ));
         }
 
         #region ロード構文

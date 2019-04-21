@@ -837,7 +837,7 @@ namespace Bve5_Parsing.MapGrammar.V1Parser
 
                 // Train.Enable構文の引数がTimeかSecondかの判定は評価時に行う
                 // 現時点ではTimeに代入しておく。
-                node.Time = Visit(context.arg()[0]);
+                node.Time = Visit(context.time);
 
                 return node;
             }
