@@ -18,6 +18,12 @@ namespace Bve5_Parsing.MapGrammar {
         Curve,
 
         /// <summary>
+        /// Gauge
+        /// </summary>
+        [StringValue("Gauge")]
+        Gauge,
+
+        /// <summary>
         /// Gradient
         /// </summary>
         [StringValue("Gradient")]
@@ -198,6 +204,12 @@ namespace Bve5_Parsing.MapGrammar {
         Setgauge,
 
         /// <summary>
+        /// Set（Set）
+        /// </summary>
+        [StringValue("Set")]
+        Set,
+
+        /// <summary>
         /// Gauge（Gauge）
         /// </summary>
         [StringValue("Gauge")]
@@ -342,12 +354,6 @@ namespace Bve5_Parsing.MapGrammar {
         Direction,
 
         /// <summary>
-        /// Set（Set）
-        /// </summary>
-        [StringValue("Set")]
-        Set,
-
-        /// <summary>
         /// Play（Play）
         /// </summary>
         [StringValue("Play")]
@@ -370,6 +376,12 @@ namespace Bve5_Parsing.MapGrammar {
         /// </summary>
         [StringValue("Stop")]
         Stop,
+
+        /// <summary>
+        /// Settrack（Settrack）
+        /// </summary>
+        [StringValue("Settrack")]
+        Settrack,
 
         /// <summary>
         /// Fog（Fog）

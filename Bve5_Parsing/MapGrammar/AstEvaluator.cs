@@ -58,10 +58,10 @@ namespace Bve5_Parsing.MapGrammar
         {
             evaluateData = new MapData();
 
-            foreach(var state in node.StatementList)
+            foreach (var state in node.StatementList)
             {
                 object childData = Visit(state);
-                if(childData != null)
+                if (childData != null)
                     evaluateData.AddStatement((Statement)childData);
             }
 
@@ -495,6 +495,16 @@ namespace Bve5_Parsing.MapGrammar
             return node.CreateStatement(this);
         }
 
+        public override object Visit(TrainSettrackNode node)
+        {
+            return node.CreateStatement(this);
+        }
+
+
+        public override object Visit(GaugeSetNode node)
+        {
+            return node.CreateStatement(this);
+        }
 
         public override object Visit(CurveGaugeNode node)
         {
@@ -837,10 +847,13 @@ namespace Bve5_Parsing.MapGrammar
         {
             Random random = new Random();
 
+            if (node.Value == null)
+                return random.NextDouble();
+
             var value = Visit(node.Value);
             if (value == null)
                 return random.NextDouble();
-            if (value.GetType() == typeof(string))
+            if (value.GetType() == typeof(string) || Convert.ToInt32(value) < 0)
             {
                 Errors.Add(node.CreateNewError($"'rand({value.ToString()})'は有効な式ではありません。"));
                 return null;
@@ -992,7 +1005,7 @@ namespace Bve5_Parsing.MapGrammar
         /// <param name="store"></param>
         /// <param name="dirAbsolutePath"></param>
         /// <param name="errors"></param>
-        public EvaluateMapGrammarVisitorWithInclude(VariableStore store, string dirAbsolutePath, ICollection<ParseError> errors): base(store, errors)
+        public EvaluateMapGrammarVisitorWithInclude(VariableStore store, string dirAbsolutePath, ICollection<ParseError> errors) : base(store, errors)
         {
             this.dirAbsolutePath = dirAbsolutePath;
         }
@@ -1004,7 +1017,7 @@ namespace Bve5_Parsing.MapGrammar
         /// <param name="dirAbsolutePath"></param>
         /// <param name="errors"></param>
         /// <param name="nowDistance"></param>
-        public EvaluateMapGrammarVisitorWithInclude(VariableStore store, string dirAbsolutePath, ICollection<ParseError> errors, double nowDistance): base(store, errors, nowDistance)
+        public EvaluateMapGrammarVisitorWithInclude(VariableStore store, string dirAbsolutePath, ICollection<ParseError> errors, double nowDistance) : base(store, errors, nowDistance)
         {
             this.dirAbsolutePath = dirAbsolutePath;
         }
@@ -1042,7 +1055,7 @@ namespace Bve5_Parsing.MapGrammar
 
                 // Include先構文を評価して追加
                 var parser = new MapGrammarParser();
-                var includeAst = parser.ParseToAst(includeText);
+                var includeAst = parser.ParseToAst(includeText, absolutePath);
                 parser.ParserErrors.ToList().ForEach(err => Errors.Add(err));
                 var evaluator = new EvaluateMapGrammarVisitorWithInclude(Store, dirAbsolutePath, Errors, NowDistance);
                 var includeData = (MapData)evaluator.Visit(includeAst);

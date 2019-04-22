@@ -41,6 +41,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// </summary>
         public override bool HasSubElement => {{#sub_elem}}true{{/sub_elem}}{{^sub_elem}}false{{/sub_elem}};
         #endregion SyntaxInfo
+{{^inheritance}}
 {{#key}}
 
         /// <summary>
@@ -61,6 +62,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
 {{/args}}
         #endregion Args
 {{/noarg}}
+{{/inheritance}}
 
         /// <summary>
         /// 新しいインスタンスを生成します。

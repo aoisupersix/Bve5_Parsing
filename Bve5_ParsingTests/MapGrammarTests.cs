@@ -1,4 +1,4 @@
-using Xunit;
+ï»¿using Xunit;
 using static Bve5_ParsingTests.MapGrammarTestUtility;
 using Bve5_Parsing.MapGrammar.EvaluateData;
 using System.Collections.Generic;
@@ -8,7 +8,7 @@ using Bve5_Parsing.MapGrammar;
 namespace Bve5_ParsingTests
 {
     /// <summary>
-    /// ƒ}ƒbƒv\•¶‚ÌƒeƒXƒg
+    /// ãƒãƒƒãƒ—æ§‹æ–‡ã®ãƒ†ã‚¹ãƒˆ
     /// </summary>
     public class MapGrammarTests
     {
@@ -164,8 +164,8 @@ BeginTransition
                         }
                     }));
 
-            // TODO: d—lŠm”F ˆø”’†‚Ì‹ó”’‚ÍœŠO‚³‚ê‚é‚Ì‚©
-            // Œ»İ‚ÍLexer‚Ì’è‹`‚ÄŸè‚ÉœŠO‚³‚ê‚Ä‚µ‚Ü‚¤‚Ì‚ÅA‚à‚µœŠO‚³‚ê‚È‚¢‚æ‚¤‚É‚·‚é‚½‚ß‚É‚ÍLexer‚Ì’è‹`•ÏX‚ª•K—vB
+            // TODO: ä»•æ§˜ç¢ºèª å¼•æ•°ä¸­ã®ç©ºç™½ã¯é™¤å¤–ã•ã‚Œã‚‹ã®ã‹
+            // ç¾åœ¨ã¯Lexerã®å®šç¾©ã¦å‹æ‰‹ã«é™¤å¤–ã•ã‚Œã¦ã—ã¾ã†ã®ã§ã€ã‚‚ã—é™¤å¤–ã•ã‚Œãªã„ã‚ˆã†ã«ã™ã‚‹ãŸã‚ã«ã¯Lexerã®å®šç¾©å¤‰æ›´ãŒå¿…è¦ã€‚
             Check(
                 ExecParse("BveTs Map 1.00:utf-8\n0;Track[hoge[][]  []hoge].Position(4,3);"),
                 new MapData(
@@ -188,7 +188,7 @@ BeginTransition
                     ));
         }
 
-        #region ƒ[ƒh\•¶
+        #region ãƒ­ãƒ¼ãƒ‰æ§‹æ–‡
         /// <summary>
         /// Structure.Load(FilePath);
         /// </summary>
@@ -318,7 +318,7 @@ BeginTransition
         }
         #endregion
 
-        #region Šeí\•¶‚Ìè“®ƒeƒXƒg
+        #region å„ç¨®æ§‹æ–‡ã®æ‰‹å‹•ãƒ†ã‚¹ãƒˆ
 
         /// <summary>
         /// Track[TrackKey].Position(X, Y, RadiusH?, RadiusV?);
@@ -1225,6 +1225,104 @@ BeginTransition
                             Key = "SoundKey",
                         }
                     }));
+        }
+
+        /// <summary>
+        /// Train.Add(TrainKey, FilePath, TrackKey?, Direction?);
+        /// </summary>
+        [Fact]
+        public void TrainAddTest()
+        {
+            // Train.Add(TrainKey, FilePath);
+            Check(
+                ExecParse("BveTs Map 2.02\n0;Train.Add('train', 'path');"),
+                new MapData(
+                    version: "2.02",
+                    syntaxes: new List<Statement>()
+                    {
+                        new TrainAddStatement(0)
+                        {
+                            TrainKey = "train",
+                            FilePath = "path",
+                        }
+                    }));
+
+            // Train.Add(TrainKey, FilePath, TrackKey, Direction);
+            Check(
+                ExecParse("BveTs Map 2.02\n0;Train.Add('train', 'path', 'track', 1);"),
+                new MapData(
+                    version: "2.02",
+                    syntaxes: new List<Statement>()
+                    {
+                        new TrainAddStatement(0)
+                        {
+                            TrainKey = "train",
+                            FilePath = "path",
+                            TrackKey = "track",
+                            Direction = 1
+                        }
+                    }));
+
+            // Train.Add(TrainKey, FilePath);
+            Check(
+                ExecParse("BveTs Map 2.00\n0;Train.Add('train', 'path');"),
+                new MapData(
+                    version: "2.00",
+                    syntaxes: new List<Statement>()
+                    {
+                        new TrainAddStatement(0)
+                        {
+                            TrainKey = "train",
+                            FilePath = "path",
+                        }
+                    }));
+
+            // Train.Add(TrainKey, FilePath, TrackKey, Direction);
+            Check(
+                ExecParse("BveTs Map 2.00\n0;Train.Add('train', 'path', 'track', 1);"),
+                new MapData(
+                    version: "2.00",
+                    syntaxes: new List<Statement>()
+                    {
+                        new TrainAddStatement(0)
+                        {
+                            TrainKey = "train",
+                            FilePath = "path",
+                            TrackKey = "track",
+                            Direction = 1
+                        }
+                    }));
+
+            // Train.Add(TrainKey, FilePath);
+            Check(
+                ExecParse("BveTs Map 1.00\n0;Train.Add(train, path);"),
+                new MapData(
+                    version: "1.00",
+                    syntaxes: new List<Statement>()
+                    {
+                        new TrainAddStatement(0)
+                        {
+                            TrainKey = "train",
+                            FilePath = "path",
+                        }
+                    }));
+
+            // Train.Add(TrainKey, FilePath, TrackKey, Direction);
+            Check(
+                ExecParse("BveTs Map 1.00\n0;Train.Add(train, path, track, 1);"),
+                new MapData(
+                    version: "1.00",
+                    syntaxes: new List<Statement>()
+                    {
+                        new TrainAddStatement(0)
+                        {
+                            TrainKey = "train",
+                            FilePath = "path",
+                            TrackKey = "track",
+                            Direction = 1
+                        }
+                    }));
+
         }
 
         /// <summary>

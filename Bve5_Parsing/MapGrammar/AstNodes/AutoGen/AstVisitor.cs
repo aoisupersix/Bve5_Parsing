@@ -17,6 +17,7 @@ namespace Bve5_Parsing.MapGrammar
         public abstract T Visit(RootNode node);
         public abstract T Visit(DistanceNode node);
         public abstract T Visit(CurveSetgaugeNode node);
+        public abstract T Visit(GaugeSetNode node);
         public abstract T Visit(CurveGaugeNode node);
         public abstract T Visit(CurveSetcenterNode node);
         public abstract T Visit(CurveSetfunctionNode node);
@@ -84,6 +85,7 @@ namespace Bve5_Parsing.MapGrammar
         public abstract T Visit(TrainLoadNode node);
         public abstract T Visit(TrainEnableNode node);
         public abstract T Visit(TrainStopNode node);
+        public abstract T Visit(TrainSettrackNode node);
         public abstract T Visit(LegacyFogNode node);
         public abstract T Visit(LegacyCurveNode node);
         public abstract T Visit(LegacyPitchNode node);

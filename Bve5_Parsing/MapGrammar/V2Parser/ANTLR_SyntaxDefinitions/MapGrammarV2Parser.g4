@@ -1,5 +1,5 @@
 /*
- *	MapGrammarV2ÇÃANTLRç\ï∂íËã`ÉtÉ@ÉCÉãÇ≈Ç∑ÅB
+ *	MapGrammarV2„ÅÆANTLRÊßãÊñáÂÆöÁæ©„Éï„Ç°„Ç§„É´„Åß„Åô„ÄÇ
  */
 parser grammar MapGrammarV2Parser;
 options{
@@ -7,13 +7,14 @@ options{
 }
 
 root :
-	(statement STATE_END)* EOF
+	(statement STATE_END+)* EOF
 	;
 
 statement :
 	  distance							#distState
 	| varAssign 						#varAssignState
 	| INCLUDE include					#includeState
+	| GAUGE gauge						#gaugeState
 	| CURVE curve 						#curveState
 	| GRADIENT gradient 				#gradientState
 	| TRACK track 						#trackState
@@ -41,21 +42,25 @@ statement :
 	| LEGACY legacy						#legacyState
 	;
 
-//ãóó£íˆ
+//Ë∑ùÈõ¢Á®ã
 distance :
 	expr
 	;
 
-//ïœêî/êîéÆ
+//Â§âÊï∞/Êï∞Âºè
 varAssign :
 	v=var EQUAL expr;
 
-//ÉCÉìÉNÉãÅ[Éhç\ï∂
+//„Ç§„É≥„ÇØ„É´„Éº„ÉâÊßãÊñá
 include :
-	filepath=string
+	filepath=expr
 	;
 
-//ïΩñ ã»ê¸
+gauge :
+	DOT func=SET OPN_PAR value=nullableExpr CLS_PAR
+    ;
+
+//Âπ≥Èù¢Êõ≤Á∑ö
 curve :
 	  DOT func=(SET_GAUGE | GAUGE) OPN_PAR value=nullableExpr CLS_PAR
 	| DOT func=SET_CENTER OPN_PAR x=nullableExpr CLS_PAR
@@ -69,15 +74,15 @@ curve :
 	| DOT func=CHANGE OPN_PAR radius=nullableExpr CLS_PAR
 	;
 
-//ècã»ê¸
+//Á∏¶Êõ≤Á∑ö
 gradient :
 	  DOT func=BEGIN_TRANSITION OPN_PAR CLS_PAR
-	| DOT func=(BEGIN | BEGIN_CONST) OPN_PAR gradientArgs=nullableExpr CLS_PAR	//à¯êîñºgradientÇ™îÌÇÈÇÃÇ≈gradientArgsÇ…ÇµÇƒÇ¢ÇÈ
+	| DOT func=(BEGIN | BEGIN_CONST) OPN_PAR gradientArgs=nullableExpr CLS_PAR	//ÂºïÊï∞Âêçgradient„ÅåË¢´„Çã„ÅÆ„ÅßgradientArgs„Å´„Åó„Å¶„ÅÑ„Çã
 	| DOT func=END OPN_PAR CLS_PAR
 	| DOT func=INTERPOLATE OPN_PAR gradientArgsE=expr CLS_PAR
 	;
 
-//ëºãOìπ
+//‰ªñËªåÈÅì
 track :
 	  OPN_BRA key=expr CLS_BRA DOT element=X_ELEMENT DOT func=INTERPOLATE OPN_PAR CLS_PAR
 	| OPN_BRA key=expr CLS_BRA DOT element=X_ELEMENT DOT func=INTERPOLATE OPN_PAR xE=expr CLS_PAR
@@ -89,155 +94,154 @@ track :
 	| OPN_BRA key=expr CLS_BRA DOT func=POSITION OPN_PAR x=nullableExpr COMMA y=nullableExpr COMMA radiush=nullableExpr CLS_PAR
 	| OPN_BRA key=expr CLS_BRA DOT func=POSITION OPN_PAR x=nullableExpr COMMA y=nullableExpr COMMA radiush=nullableExpr COMMA radiusv=nullableExpr CLS_PAR
 	| OPN_BRA key=expr CLS_BRA DOT element=CANT_ELEMENT DOT func=SET_CENTER OPN_PAR x=nullableExpr CLS_PAR
-	| OPN_BRA key=expr CLS_BRA DOT element=CANT_ELEMENT DOT func=SET_GAUGE OPN_PAR gauge=nullableExpr CLS_PAR
+	| OPN_BRA key=expr CLS_BRA DOT element=CANT_ELEMENT DOT func=SET_GAUGE OPN_PAR gaugeArgs=nullableExpr CLS_PAR
 	| OPN_BRA key=expr CLS_BRA DOT element=CANT_ELEMENT DOT func=SET_FUNCTION OPN_PAR id=nullableExpr CLS_PAR
 	| OPN_BRA key=expr CLS_BRA DOT element=CANT_ELEMENT DOT func=BEGIN_TRANSITION OPN_PAR CLS_PAR
 	| OPN_BRA key=expr CLS_BRA DOT element=CANT_ELEMENT DOT func=BEGIN OPN_PAR cant=nullableExpr CLS_PAR
 	| OPN_BRA key=expr CLS_BRA DOT element=CANT_ELEMENT DOT func=END OPN_PAR CLS_PAR
 	| OPN_BRA key=expr CLS_BRA DOT element=CANT_ELEMENT DOT func=INTERPOLATE OPN_PAR cantE=expr? CLS_PAR
 	| OPN_BRA key=expr CLS_BRA DOT func=CANT_ELEMENT OPN_PAR cantE=expr CLS_PAR
-	| OPN_BRA key=expr CLS_BRA DOT func=GAUGE OPN_PAR gauge=nullableExpr CLS_PAR
+	| OPN_BRA key=expr CLS_BRA DOT func=GAUGE OPN_PAR gaugeArgs=nullableExpr CLS_PAR
 	;
 
-//ÉXÉgÉâÉNÉ`ÉÉ
+//„Çπ„Éà„É©„ÇØ„ÉÅ„É£
 structure :
-	  DOT func=LOAD OPN_PAR filepath=string CLS_PAR
+	  DOT func=LOAD OPN_PAR filepath=expr CLS_PAR
 	| OPN_BRA key=expr CLS_BRA DOT func=PUT OPN_PAR trackkey=nullableExpr COMMA x=nullableExpr COMMA y=nullableExpr COMMA z=nullableExpr COMMA rx=nullableExpr COMMA ry=nullableExpr COMMA rz=nullableExpr COMMA tilt=nullableExpr COMMA span=nullableExpr CLS_PAR
 	| OPN_BRA key=expr CLS_BRA DOT func=PUT0 OPN_PAR trackkey=nullableExpr COMMA tilt=nullableExpr COMMA span=nullableExpr CLS_PAR
 	| OPN_BRA key=expr CLS_BRA DOT func=PUTBETWEEN OPN_PAR trackkey1=nullableExpr COMMA trackkey2=nullableExpr ( COMMA flag=nullableExpr )? CLS_PAR
 	;
 
-//òAë±ÉXÉgÉâÉNÉ`ÉÉ
+//ÈÄ£Á∂ö„Çπ„Éà„É©„ÇØ„ÉÅ„É£
 repeater :
-	  OPN_BRA key=expr CLS_BRA DOT func=BEGIN OPN_PAR trackkey=nullableExpr COMMA x=nullableExpr COMMA y=nullableExpr COMMA z=nullableExpr COMMA rx=nullableExpr COMMA ry=nullableExpr COMMA rz=nullableExpr COMMA tilt=nullableExpr COMMA span=nullableExpr COMMA interval=nullableExpr strkey+ CLS_PAR
-	| OPN_BRA key=expr CLS_BRA DOT func=BEGIN0 OPN_PAR trackkey=nullableExpr COMMA tilt=nullableExpr COMMA span=nullableExpr COMMA interval=nullableExpr strkey+ CLS_PAR
+	  OPN_BRA key=expr CLS_BRA DOT func=BEGIN OPN_PAR trackkey=nullableExpr COMMA x=nullableExpr COMMA y=nullableExpr COMMA z=nullableExpr COMMA rx=nullableExpr COMMA ry=nullableExpr COMMA rz=nullableExpr COMMA tilt=nullableExpr COMMA span=nullableExpr COMMA interval=nullableExpr exprArgs+ CLS_PAR
+	| OPN_BRA key=expr CLS_BRA DOT func=BEGIN0 OPN_PAR trackkey=nullableExpr COMMA tilt=nullableExpr COMMA span=nullableExpr COMMA interval=nullableExpr exprArgs+ CLS_PAR
 	| OPN_BRA key=expr CLS_BRA DOT func=END OPN_PAR CLS_PAR
 	;
 
-//îwåi
+//ËÉåÊôØ
 background :
 	DOT func=CHANGE OPN_PAR structurekey=nullableExpr CLS_PAR
 	;
 
-//í‚é‘èÍ
+//ÂÅúËªäÂ†¥
 station :
-	  DOT func=LOAD OPN_PAR filepath=string CLS_PAR
+	  DOT func=LOAD OPN_PAR filepath=expr CLS_PAR
 	| OPN_BRA key=expr CLS_BRA DOT func=PUT OPN_PAR door=nullableExpr COMMA margin1=nullableExpr COMMA margin2=nullableExpr CLS_PAR
 	;
 
-//ï¬ÇªÇ≠
+//Èñâ„Åù„Åè
 section :
 	  DOT func=(BEGIN | BEGIN_NEW) OPN_PAR nullableExpr exprArgs* CLS_PAR
 	| DOT func=SET_SPEEDLIMIT OPN_PAR nullableExpr exprArgs* CLS_PAR
 	;
 
-//êMçÜã@
+//‰ø°Âè∑Ê©ü
 signal :
-	  DOT func=LOAD OPN_PAR filepath=string CLS_PAR
+	  DOT func=LOAD OPN_PAR filepath=expr CLS_PAR
 	| DOT func=SPEEDLIMIT OPN_PAR nullableExpr exprArgs* CLS_PAR
 	| OPN_BRA key=expr CLS_BRA DOT func=PUT OPN_PAR sectionArgs=nullableExpr COMMA trackkey=nullableExpr COMMA x=nullableExpr COMMA y=nullableExpr CLS_PAR
 	| OPN_BRA key=expr CLS_BRA DOT func=PUT OPN_PAR sectionArgs=nullableExpr COMMA trackkey=nullableExpr COMMA x=nullableExpr COMMA y=nullableExpr COMMA z=nullableExpr COMMA rx=nullableExpr COMMA ry=nullableExpr COMMA rz=nullableExpr COMMA tilt=nullableExpr COMMA span=nullableExpr CLS_PAR
 	;
 
-//ínè„éq
+//Âú∞‰∏äÂ≠ê
 beacon :
 	DOT func=PUT OPN_PAR type=nullableExpr COMMA sectionArgs=nullableExpr COMMA senddata=nullableExpr CLS_PAR
 	;
 
-//ë¨ìxêßå¿
+//ÈÄüÂ∫¶Âà∂Èôê
 speedlimit :
 	  DOT func=BEGIN OPN_PAR v=nullableExpr CLS_PAR
 	| DOT func=END OPN_PAR CLS_PAR
 	;
 
-//êÊçsóÒé‘
+//ÂÖàË°åÂàóËªä
 pretrain :
 	DOT func=PASS OPN_PAR nullableExpr CLS_PAR
 	;
 
-//åıåπ
+//ÂÖâÊ∫ê
 light :
 	  DOT func=AMBIENT OPN_PAR red=nullableExpr COMMA green=nullableExpr COMMA blue=nullableExpr CLS_PAR
 	| DOT func=DIFFUSE OPN_PAR red=nullableExpr COMMA green=nullableExpr COMMA blue=nullableExpr CLS_PAR
 	| DOT func=DIRECTION OPN_PAR pitch=nullableExpr COMMA yaw=nullableExpr CLS_PAR
 	;
 
-//ñ∂å¯â 
+//ÈúßÂäπÊûú
 fog :
 	  DOT func=INTERPOLATE OPN_PAR CLS_PAR
 	| DOT func=INTERPOLATE OPN_PAR densityE=expr CLS_PAR
 	| DOT func=(INTERPOLATE | SET) OPN_PAR density=nullableExpr COMMA red=nullableExpr COMMA green=nullableExpr COMMA blue=nullableExpr CLS_PAR
 	;
 
-//ïóåiï`âÊãóó£
+//È¢®ÊôØÊèèÁîªË∑ùÈõ¢
 drawdistance :
 	DOT func=CHANGE OPN_PAR value=nullableExpr CLS_PAR
 	;
 
-//â^ì]ë‰ÇÃñæÇÈÇ≥
+//ÈÅãËª¢Âè∞„ÅÆÊòé„Çã„Åï
 cabilluminance :
 	DOT func=(INTERPOLATE | SET) OPN_PAR value=expr? CLS_PAR
 	;
 
-//ãOìπïœà 
+//ËªåÈÅìÂ§â‰Ωç
 irregularity :
 	DOT func=CHANGE OPN_PAR x=nullableExpr COMMA y=nullableExpr COMMA r=nullableExpr COMMA lx=nullableExpr COMMA ly=nullableExpr COMMA lr=nullableExpr CLS_PAR
 	;
 
-//îSíÖì¡ê´
+//Á≤òÁùÄÁâπÊÄß
 adhesion :
 	  DOT func=CHANGE OPN_PAR a=nullableExpr CLS_PAR
 	| DOT func=CHANGE OPN_PAR a=nullableExpr COMMA b=nullableExpr COMMA c=nullableExpr CLS_PAR
 	;
 
-//âπ
+//Èü≥
 sound :
-	  DOT func=LOAD OPN_PAR filepath=string CLS_PAR
+	  DOT func=LOAD OPN_PAR filepath=expr CLS_PAR
 	| OPN_BRA key=expr CLS_BRA DOT func=PLAY OPN_PAR CLS_PAR
 	;
 
-//å≈íËâπåπ
+//Âõ∫ÂÆöÈü≥Ê∫ê
 sound3d :
-	  DOT func=LOAD OPN_PAR filepath=string CLS_PAR
+	  DOT func=LOAD OPN_PAR filepath=expr CLS_PAR
 	| OPN_BRA key=expr CLS_BRA DOT func=PUT OPN_PAR x=nullableExpr COMMA y=nullableExpr CLS_PAR
 	;
 
-//ëñçsâπ
+//Ëµ∞Ë°åÈü≥
 rollingnoise :
 	DOT func=CHANGE OPN_PAR index=nullableExpr CLS_PAR
 	;
 
-//ÉtÉâÉìÉWÇ´ÇµÇËâπ
+//„Éï„É©„É≥„Ç∏„Åç„Åó„ÇäÈü≥
 flangenoise :
 	DOT func=CHANGE OPN_PAR index=nullableExpr CLS_PAR
 	;
 
-//ï™äÚäÌí âﬂâπ
+//ÂàÜÂ≤êÂô®ÈÄöÈÅéÈü≥
 jointnoise :
 	DOT func=PLAY OPN_PAR index=nullableExpr CLS_PAR
 	;
 
-//ëºóÒé‘
+//‰ªñÂàóËªä
 train :
-	  DOT func=ADD OPN_PAR trainkey=nullableExpr COMMA filepath=expr COMMA trackkey=nullableExpr COMMA direction=nullableExpr CLS_PAR
+	  DOT func=ADD OPN_PAR trainkey=nullableExpr COMMA filepath=expr CLS_PAR
+	| DOT func=ADD OPN_PAR trainkey=nullableExpr COMMA filepath=expr COMMA trackkey=nullableExpr COMMA direction=nullableExpr CLS_PAR
 	| OPN_BRA key=expr CLS_BRA DOT func=LOAD OPN_PAR filepath=expr COMMA trackkey=nullableExpr COMMA direction=nullableExpr CLS_PAR
 	| OPN_BRA key=expr CLS_BRA DOT func=ENABLE OPN_PAR time=nullableExpr CLS_PAR
 	| OPN_BRA key=expr CLS_BRA DOT func=STOP OPN_PAR decelerate=nullableExpr COMMA stoptime=nullableExpr COMMA accelerate=nullableExpr COMMA speed=nullableExpr CLS_PAR
+	| OPN_BRA key=expr CLS_BRA DOT func=SET_TRACK OPN_PAR trackkey=nullableExpr COMMA direction=nullableExpr CLS_PAR
 	;
 
-//ÉåÉKÉVÅ[ä÷êî
+//„É¨„Ç¨„Ç∑„ÉºÈñ¢Êï∞
 legacy :
 	  DOT func=FOG OPN_PAR fogstart=nullableExpr COMMA fogend=nullableExpr COMMA red=nullableExpr COMMA green=nullableExpr COMMA blue=nullableExpr CLS_PAR
+	| DOT func=CURVE OPN_PAR radius=nullableExpr CLS_PAR
 	| DOT func=CURVE OPN_PAR radius=nullableExpr COMMA cant=nullableExpr CLS_PAR
 	| DOT func=PITCH OPN_PAR rate=nullableExpr CLS_PAR
 	| DOT func=TURN OPN_PAR slope=nullableExpr CLS_PAR
 	;
 
-//òAë±ÉXÉgÉâÉNÉ`ÉÉÉäÉXÉgà¯êî
-strkey :
-	COMMA key=string;
-
-//òAë±êîéÆà¯êî
+//ÈÄ£Á∂öÊï∞ÂºèÂºïÊï∞
 exprArgs :
 	COMMA arg=nullableExpr;
 
@@ -248,25 +252,25 @@ nullableExpr :
 	;
 
 expr :
-	  OPN_PAR expr CLS_PAR							#parensExpr
-	| op=(PLUS | MINUS) expr						#unaryExpr
-	| left=expr op=(MULT | DIV) right=expr			#infixExpr
-	| left=expr op=(PLUS | MINUS | MOD) right=expr	#infixExpr
-	| func=ABS OPN_PAR value=expr CLS_PAR			#absExpr
-	| func=ATAN2 OPN_PAR y=expr x=expr CLS_PAR		#atan2Expr
-	| func=CEIL OPN_PAR value=expr CLS_PAR			#ceilExpr
-	| func=COS OPN_PAR value=expr CLS_PAR			#cosExpr
-	| func=EXP OPN_PAR value=expr CLS_PAR			#expExpr
-	| func=FLOOR OPN_PAR value=expr CLS_PAR			#floorExpr
-	| func=LOG OPN_PAR value=expr CLS_PAR			#logExpr
-	| func=POW OPN_PAR x=expr y=expr CLS_PAR		#powExpr
-	| func=RAND OPN_PAR value=expr? CLS_PAR			#randExpr
-	| func=SIN OPN_PAR value=expr CLS_PAR			#sinExpr
-	| func=SQRT OPN_PAR value=expr CLS_PAR			#sqrtExpr
-	| v=var											#varExpr
-	| num=NUM										#numberExpr
-	| str=string									#stringExpr
-	| dist=DISTANCE									#distanceExpr
+	  OPN_PAR expr CLS_PAR								#parensExpr
+	| op=(PLUS | MINUS) expr							#unaryExpr
+	| left=expr op=(MULT | DIV) right=expr				#infixExpr
+	| left=expr op=(PLUS | MINUS | MOD) right=expr		#infixExpr
+	| func=ABS OPN_PAR value=expr CLS_PAR				#absExpr
+	| func=ATAN2 OPN_PAR y=expr COMMA x=expr CLS_PAR	#atan2Expr
+	| func=CEIL OPN_PAR value=expr CLS_PAR				#ceilExpr
+	| func=COS OPN_PAR value=expr CLS_PAR				#cosExpr
+	| func=EXP OPN_PAR value=expr CLS_PAR				#expExpr
+	| func=FLOOR OPN_PAR value=expr CLS_PAR				#floorExpr
+	| func=LOG OPN_PAR value=expr CLS_PAR				#logExpr
+	| func=POW OPN_PAR x=expr COMMA y=expr CLS_PAR		#powExpr
+	| func=RAND OPN_PAR value=expr? CLS_PAR				#randExpr
+	| func=SIN OPN_PAR value=expr CLS_PAR				#sinExpr
+	| func=SQRT OPN_PAR value=expr CLS_PAR				#sqrtExpr
+	| v=var												#varExpr
+	| num=NUM											#numberExpr
+	| str=string										#stringExpr
+	| dist=DISTANCE										#distanceExpr
 	;
 
 var returns [string varName]:

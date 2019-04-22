@@ -2,12 +2,10 @@
 using Antlr4.Runtime.Tree;
 using Bve5_Parsing.MapGrammar.Attributes;
 using Bve5_Parsing.MapGrammar.EvaluateData;
-using Bve5_Parsing.MapGrammar.V1Parser;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using System.Text;
 
 namespace Bve5_Parsing.MapGrammar.AstNodes
 {
@@ -226,7 +224,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
                     var convArg = Convert.ChangeType(argValue, argType);
                     arg.Statement.SetValue(statement, convArg, null);
                 }
-                catch(Exception e) when (e is InvalidCastException || e is FormatException || e is OverflowException || e is ArgumentNullException)
+                catch (Exception e) when (e is InvalidCastException || e is FormatException || e is OverflowException || e is ArgumentNullException)
                 {
                     evaluator.Errors.Add(CreateNewError($"{argValue.ToString()}は無効な引数です。"));
                 }

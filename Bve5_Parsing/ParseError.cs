@@ -1,5 +1,4 @@
-﻿
-namespace Bve5_Parsing
+﻿namespace Bve5_Parsing
 {
     /// <summary>
     /// エラー種別

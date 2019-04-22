@@ -100,7 +100,7 @@ namespace Bve5_Parsing
             {
                 data = parser.Parse(input);
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 Console.Error.WriteLine(e.Message + ":" + e.StackTrace);
             }
@@ -113,14 +113,11 @@ namespace Bve5_Parsing
         private static void MapGrammarTest(string input)
         {
             var parser = new MapGrammarParser();
-            var currentDir = System.Environment.CurrentDirectory;
-            var data = parser.Parse(input, currentDir, MapGrammarParser.MapGrammarParserOption.ParseIncludeSyntaxRecursively);
+            var data = parser.Parse(input, null, MapGrammarParser.MapGrammarParserOption.ParseIncludeSyntaxRecursively);
             //var data = parser.ParseFromFile(@"PATH", MapGrammarParser.MapGrammarParserOption.ParseIncludeSyntaxRecursively);
 
-            Console.WriteLine("CurrentDir: {0}", currentDir);
-
             Console.Error.WriteLine("Errors:###################################");
-            foreach(var error in parser.ParserErrors.OrderBy(e => e.Line).ThenBy(e => e.Column))
+            foreach (var error in parser.ParserErrors.OrderBy(e => e.Line).ThenBy(e => e.Column))
             {
                 Console.Error.WriteLine("[{0}:{1}] {2}: {3}", error.Line, error.Column, error.ErrorLevel, error.Message);
             }
@@ -141,7 +138,7 @@ namespace Bve5_Parsing
             Console.WriteLine($"SignalListPath: {data.SignalListPath}");
             Console.WriteLine($"SoundListPath: {data.SoundListPath}");
             Console.WriteLine($"Sound3DListPath: {data.Sound3DListPath}");
-            foreach(var statement in data.Statements.Select(s => s.ToSyntaxData()))
+            foreach (var statement in data.Statements.Select(s => s.ToSyntaxData()))
             {
                 Console.WriteLine("---------------SyntaxData----------------");
                 Console.WriteLine($"Distance: {statement.Distance}");
@@ -151,7 +148,7 @@ namespace Bve5_Parsing
                 Console.WriteLine($"Function: {statement.Function}");
 
                 Console.WriteLine("Args:");
-                foreach(var arg in statement.Arguments)
+                foreach (var arg in statement.Arguments)
                 {
                     Console.WriteLine($"{arg.Key}: {arg.Value}");
                 }

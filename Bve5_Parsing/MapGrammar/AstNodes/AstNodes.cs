@@ -1,4 +1,5 @@
-﻿using Antlr4.Runtime;
+﻿using System;
+using Antlr4.Runtime;
 using Bve5_Parsing.MapGrammar.EvaluateData;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -60,6 +61,18 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         {
             _structureKeys.AddRange(strKeys);
         }
+
+        protected override Statement SetArgument(EvaluateMapGrammarVisitor evaluator, Statement statement)
+        {
+            RepeaterBeginStatement repeaterBeginStatement = base.SetArgument(evaluator, statement) as RepeaterBeginStatement;
+
+            foreach (var strKey in StructureKeys)
+            {
+                repeaterBeginStatement.AddStructureKey(Convert.ToString(evaluator.Visit(strKey)));
+            }
+
+            return repeaterBeginStatement;
+        }
     }
 
     /// <summary>
@@ -80,6 +93,18 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         public void AddStructureKeys(IEnumerable<MapGrammarAstNodes> strKeys)
         {
             _structureKeys.AddRange(strKeys);
+        }
+
+        protected override Statement SetArgument(EvaluateMapGrammarVisitor evaluator, Statement statement)
+        {
+            RepeaterBegin0Statement repeaterBegin0Statement = base.SetArgument(evaluator, statement) as RepeaterBegin0Statement;
+
+            foreach (var strKey in StructureKeys)
+            {
+                repeaterBegin0Statement.AddStructureKey(Convert.ToString(evaluator.Visit(strKey)));
+            }
+
+            return repeaterBegin0Statement;
         }
     }
 
@@ -102,6 +127,18 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         {
             _signalIndexes.AddRange(sigIdxes);
         }
+
+        protected override Statement SetArgument(EvaluateMapGrammarVisitor evaluator, Statement statement)
+        {
+            SectionBeginStatement sectionBeginStatement = base.SetArgument(evaluator, statement) as SectionBeginStatement;
+
+            foreach (var sigIdx in SignalIndexes)
+            {
+                sectionBeginStatement.AddSignalIndex(Convert.ToDouble(evaluator.Visit(sigIdx)));
+            }
+
+            return sectionBeginStatement;
+        }
     }
 
     /// <summary>
@@ -123,6 +160,19 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         public void AddSpeedLimits(IEnumerable<MapGrammarAstNodes> spdLmts)
         {
             _speedLimits.AddRange(spdLmts);
+        }
+
+        protected override Statement SetArgument(EvaluateMapGrammarVisitor evaluator, Statement statement)
+        {
+            SectionSetspeedlimitStatement sectionSetspeedlimitStatement = base.SetArgument(evaluator, statement) as SectionSetspeedlimitStatement;
+
+            foreach (var spdLmt in SpeedLimits)
+            {
+                object tmp = evaluator.Visit(spdLmt);
+                sectionSetspeedlimitStatement.AddSpeedLimit(tmp != null ? Convert.ToDouble(tmp) : (double?)null);
+            }
+
+            return sectionSetspeedlimitStatement;
         }
     }
 
@@ -176,7 +226,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
                 trainEnableStatement.Time = arg as string;
             }
             else
-                trainEnableStatement.Second = System.Convert.ToDouble(arg);
+                trainEnableStatement.Second = Convert.ToDouble(arg);
 
             return trainEnableStatement;
         }
