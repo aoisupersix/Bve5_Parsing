@@ -8,94 +8,76 @@ Bve5_Parsing
 
 ![bve5PasingImage](images/bve5Parsing.png)
 
-Bve5構文のC#パーサライブラリです。
-Bve5の構文はどのように処理されているのか？という疑問を解消すべく、パーサジェネレータ「ANTLR」を利用し、Bve5.7構文のパーサを実装してみました。現在、Bve5.7.6224.40815の一部構文に対応しています。
-特にイレギュラーな入力(引数の数が異なる,構文名が異なる等）に対する処理が本家ソフトウェアと比べてかなり相違があります。
-
-## Notes on use
-Bve5_Parsingは開発中のライブラリです。Nugetでパッケージを公開してますが、破壊的変更を行う可能性があるのでバージョンアップには注意して下さい。
+BveTrainSim5構文の.NETパーサライブラリです。
+入力された文字列やファイルを解析し、プログラム上で利用しやすい形式に変換します。
+現在マップファイルとシナリオファイル構文に対応しています。
 
 ## Supported Syntaxes
 - #### Scenario File
-    - Bve5.7全構文に対応
-    - namespace: **ScenarioGrammar**
-    - 出力: **ScenarioDataクラス**
-    構文解析の結果は、ScenarioDataクラスで返します。ScenarioDataクラスは以下のフィールドで構成されています。
-      - **string Version**: シナリオファイルのバージョン情報
-      - **List\<FilePath\> Route**: マップファイルの相対パス
-      - **List\<FilePath\> Vehicle**: 車両ファイルの相対パス
-      - **string Image**: サムネイル画像の相対パス
-      - **string Title**: シナリオタイトル
-      - **string RouteTitle**: 路線名
-      - **string VehicleTitle**: 車両名
-      - **string Author**: 路線と車両の作者
-      - **string Comment**: シナリオの説明
-
-    なお、RouteとVechicleに関しては、複数ファイルの指定と重み係数に対応するため、相対パスと重み係数をまとめたFilePath構造体のリストを返します。相対パスは**FilePath.Value**、重み係数は**FilePath.Weight**に対応しています。
-
-    詳しくは、[ScenarioData.cs](/Bve5_Parsing/ScenarioGrammar/ScenarioData.cs)を参照してください。
+    - Bve5の全構文に対応
 - #### Map File
-    - Bve5.7全構文と変数、一部の古い構文(Legacy構文)に対応
-    - namespace: **MapGrammar**
-    - 出力: **MapDataクラス**
-    構文解析の結果は、MapDataクラスで返します。MapDataクラスは以下のフィールドで構成されています。
-
-      - **string Version**: バージョン情報
-      - **string Encoding**: ファイルエンコーディング
-      - **string StructureListPath**: ストラクチャリストの相対パス
-      - **string StationListPath**: 停車場リストの相対パス
-      - **string SignalListPath**: 信号リストの相対パス
-      - **string SoundListPath**: サウンドリストの相対パス
-      - **string Sound3DListPath**: 固定音源リストの相対パス
-      - **List\<SyntaxData\> Statements**: 各構文情報をまとめたSyntaxDataクラスのリスト
-
-    - そのうち、Statementsは各構文情報をまとめたSyntaxDataクラスのリストを返します。SyntaxDataクラスは以下のフィールドで構成されてます。
-
-      - **double Distance**: 構文の距離程
-      - **string[] MapElement**: 構文のマップ要素(ex.Structure,Repeaterなど)
-      - **string Key**: 構文のキー(Track['この部分'])
-      - **string Function**: 構文の関数名(ex.Interpolate)
-      - **Dictionary\<string, object\> Arguments**: 構文の引数名。引数がキーであれば型はstring、引数が数値であれば型はdoubleで返します。
-
-    詳しくは、[MapData.cs](/Bve5_Parsing/MapGrammar/MapData.cs)を参照してください
+    - マップファイルのバージョン1.00から2.02に対応。
+    - 数式や変数、Includeディレクティブにも対応しています。
 
 その他は今後作っていきます👍
 
 ## Requirements
-* [ANTLR4.Runtime(C#)](https://www.nuget.org/packages/Antlr4.Runtime/)
 * .Net Standard 2.0 or .Net framework 4.0
 
 ## Installation
-Nugetから[Bve5_Parsing](https://www.nuget.org/packages/Bve5_Parsing/)をインストールするか、このプロジェクトをビルドしてdllを入手し、各自のプロジェクトにインポートしてください。
+Nugetで[Bve5_Parsing](https://www.nuget.org/packages/Bve5_Parsing/)としてパッケージを公開しています。
+
+- コマンドラインからインストールする場合
+  ```
+  nuget install Bve5_Parsing
+  ```
+
+- VisualStudioからインストールする場合
+  1. ツール > Nugetパッケージマネージャ > ソリューションのNugetパッケージの管理をクリック
+  2. 参照タブで```Bve5_Parsing```を検索
+  3. インストールをクリック
 
 ## Usage for C\# ##
 
-ex. C#でMapFileの構文解析を行う場合.  
+C#でマップファイルのパースを行う場合 
 
 ```csharp
 using Bve5_Parsing.MapGrammar;
+using Bve5_Parsing.MapGrammar.EvaluateData;
+using System.Linq;
 
 ...
     string input; //String to be analyzed
     MapGrammarParser parser = new MapGrammarParser();
 
     // 文字列をマップ構文としてパースする
-    var mapData = parser.Parse(input);
+    MapData mapData = parser.Parse(input);
     // マップファイルへのファイルパスを指定してパースする
-    var mapData2 = parser.ParseFromFile(@"PATH_TO_MAP_FILE");
+    MapData mapData2 = parser.ParseFromFile(@"PATH/TO/MAP/FILE");
     // Include構文の参照先を再帰的にパースする
-    var mapDataWithInclude = parser.ParseFromFile(@"PATH_TO_MAP_FILE", MapGrammarParserOption.ParseIncludeSyntaxRecursively)
+    MapData mapDataWithInclude = parser.ParseFromFile(@"PATH/TO/MAP/FILE", MapGrammarParserOption.ParseIncludeSyntaxRecursively)
+    // AST(抽象構文木)にパースする
+    MapData ast = parser.ParseToAst(input, @"PATH/TO/FILE/PATH");
 
-    Console.WriteLine(mapData.Version); //マップ構文のバージョン情報を表示
+    // パースエラーの取得
+    if (parser.ParseErrors.Any()) {
+      // error handling
+    }
+
+    // 旧形式でステートメントのデータを取得する場合（通常は必要ありません）
+    var syntaxData = mapData.Statements.Select(state => state.ToSyntaxData());
+
+    mapData.Version //マップ構文のバージョン情報
+    mapData.Encoding // マップ構文のエンコーディング指定
     foreach(var statement in mapData.Statements) {
       /* 各構文情報 */
-      Console.WriteLine(statement.Distance); //構文の距離程
-      Console.WriteLine(statement.Function); //構文の関数名
+      statement.Distance; //構文の距離程
+      statement.FunctionName; //構文の関数名
     }
 ...
 ```
 
-構文が解析された場合、結果は**MapDataクラス**で返ってきます。例えば、ファイルヘッダのバージョン情報は**MapData.Version**に格納されています。また、構文解析のエラーは**MapGrammarParser.ParserErrors**に格納されています。**MapGrammarParser.ParserErrors**ではエラーの種別(警告かエラーか)やエラーとなった構文の位置、エラーメッセージが取得出来ます。独自のエラーメッセージを実装する場合は、**ParserErrorListener**を継承したカスタムクラスを実装し、**MapGrammarParser.ErrorListener**に指定して下さい。
+パース処理に成功した場合、結果は**MapDataクラス**で返ってきます。例えば、ファイルヘッダのバージョン情報は**MapData.Version**に格納されています。また、構文解析のエラーは**MapGrammarParser.ParserErrors**に格納されています。**MapGrammarParser.ParserErrors**ではエラーの種別(警告かエラーか)やエラーとなった構文の位置、エラーメッセージが取得出来ます。独自のエラーメッセージを実装する場合は、**ParserErrorListener**を継承したカスタムクラスを実装し、**MapGrammarParser.ErrorListener**に指定して下さい。
 
 Bve5_Parsing.slnに含まれているParseSampleAppプロジェクトからは、コンソール上でパーサの動作を確かめることができます。Bve5_Parsingの実装例として適宜利用して下さい。
 
