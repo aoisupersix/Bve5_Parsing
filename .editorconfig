@@ -1,9 +1,9 @@
-root = true
+﻿root = true
 
 # All Files
 [*]
-charset = utf-8
-end_of_line = crlf
+charset = utf-8-bom
+end_of_line = lf
 indent_style = space
 indent_size = 4
 insert_final_newline = true
@@ -36,3 +36,7 @@ insert_final_newline = true
 
 # CSharp Code Style Settings
 [*.cs]
+
+[*.g4]
+charset = utf-8
+end_of_line = lf

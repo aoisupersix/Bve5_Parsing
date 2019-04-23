@@ -1,5 +1,5 @@
 /*
- *	MapGrammarV1のANTLR構文定義ファイルです。
+ *	MapGrammarV1縺ｮANTLR讒区枚螳夂ｾｩ繝輔ぃ繧､繝ｫ縺ｧ縺吶�
  */
 parser grammar MapGrammarV1Parser;
 
@@ -13,6 +13,7 @@ root :
 
 statement :
 	  num=NUM							#distState
+	| GAUGE gauge						#gaugeState
 	| CURVE curve 						#curveState
 	| GRADIENT gradient 				#gradientState
 	| TRACK track 						#trackState
@@ -39,6 +40,10 @@ statement :
 	| LEGACY legacy						#legacyState
 	;
 
+gauge :
+	DOT func=SET ARG_START value=arg ARG_END
+    ;
+
 // Lateral curve of own track
 curve :
 	  DOT func=GAUGE ARG_START value=arg ARG_END
@@ -56,7 +61,7 @@ gradient :
 
 // Other track
 track :
-	  KEY_START key=arg KEY_END func=GAUGE ARG_START gauge=arg ARG_END
+	  KEY_START key=arg KEY_END func=GAUGE ARG_START gaugeArgs=arg ARG_END
 	| KEY_START key=arg KEY_END func=POSITION ARG_START x=arg COMMA y=arg ARG_END
 	| KEY_START key=arg KEY_END func=POSITION ARG_START x=arg COMMA y=arg COMMA radiush=arg COMMA radiusv=arg ARG_END
 	| KEY_START key=arg KEY_END func=CANT ARG_START cant=arg ARG_END

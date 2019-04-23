@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using Xunit;
 using Bve5_Parsing.ScenarioGrammar;
 using System.Collections.Generic;
@@ -7,14 +7,14 @@ using System.Collections;
 namespace Bve5_ParsingTests
 {
     /// <summary>
-    /// ƒVƒiƒŠƒI\•¶‚ÌƒeƒXƒg
+    /// ã‚·ãƒŠãƒªã‚ªæ§‹æ–‡ã®ãƒ†ã‚¹ãƒˆ
     /// </summary>
     public class ScenarioGrammarTests
     {
         /// <summary>
-        /// ˆø”‚É—^‚¦‚ç‚ê‚½\•¶•¶š—ñ‚ğƒp[ƒX‚µ‚Ü‚·B
+        /// å¼•æ•°ã«ä¸ãˆã‚‰ã‚ŒãŸæ§‹æ–‡æ–‡å­—åˆ—ã‚’ãƒ‘ãƒ¼ã‚¹ã—ã¾ã™ã€‚
         /// </summary>
-        /// <param name="input">ƒ}ƒbƒv\•¶</param>
+        /// <param name="input">ãƒãƒƒãƒ—æ§‹æ–‡</param>
         /// <returns>MapData</returns>
         private ScenarioData ExecParse(string input)
         {
@@ -33,21 +33,21 @@ namespace Bve5_ParsingTests
         }
 
         /// <summary>
-        /// Assert.NotNull‚ÆAssert.Equal‚ğÀs‚µ‚Ü‚·B
+        /// Assert.NotNullã¨Assert.Equalã‚’å®Ÿè¡Œã—ã¾ã™ã€‚
         /// </summary>
-        /// <param name="expected">ƒp[ƒT‚É‚æ‚Á‚Ä¶¬‚³‚ê‚½ScenarioData</param>
-        /// <param name="actual">Šm”F—p</param>
+        /// <param name="expected">ãƒ‘ãƒ¼ã‚µã«ã‚ˆã£ã¦ç”Ÿæˆã•ã‚ŒãŸScenarioData</param>
+        /// <param name="actual">ç¢ºèªç”¨</param>
         private void Check(ScenarioData expected, ScenarioData actual)
         {
             Assert.NotNull(expected);
             Assert.Equal(expected, actual);
         }
 
-        #region Še\•¶‚ÌƒeƒXƒg
+        #region å„æ§‹æ–‡ã®ãƒ†ã‚¹ãƒˆ
         [Fact]
         public void RootTest()
         {
-            // ƒƒ‚FƒGƒ“ƒR[ƒhw’è‚Ì‘OŒã‚É‚Í‹ó”’‚Í“ü‚ê‚ç‚ê‚È‚¢‚Í‚¸‚¾‚ªAo—ˆ‚Ä‚µ‚Ü‚¤
+            // ãƒ¡ãƒ¢ï¼šã‚¨ãƒ³ã‚³ãƒ¼ãƒ‰æŒ‡å®šã®å‰å¾Œã«ã¯ç©ºç™½ã¯å…¥ã‚Œã‚‰ã‚Œãªã„ã¯ãšã ãŒã€å‡ºæ¥ã¦ã—ã¾ã†
             Check(
                 ExecParse("BveTs Scenario 1.00"),
                 new ScenarioData("1.00"));

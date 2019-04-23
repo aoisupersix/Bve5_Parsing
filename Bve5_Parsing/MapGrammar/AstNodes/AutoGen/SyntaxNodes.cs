@@ -53,6 +53,43 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     }
 
     /// <summary>
+    /// Gauge.Set(Value);
+    /// </summary>
+    [Deprecated]
+    public partial class GaugeSetNode : CurveSetgaugeNode
+    {
+        #region SyntaxInfo
+
+        /// <summary>
+        /// マップ要素名
+        /// </summary>
+        public override MapElementName ElementName => MapElementName.Gauge;
+
+        /// <summary>
+        /// 関数名
+        /// </summary>
+        public override MapFunctionName FunctionName => MapFunctionName.Set;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => false;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => false;
+        #endregion SyntaxInfo
+
+        /// <summary>
+        /// 新しいインスタンスを生成します。
+        /// </summary>
+        /// <param name="start"></param>
+        /// <param name="stop"></param>
+        public GaugeSetNode(IToken start, IToken stop) : base(start, stop) { }
+    }
+
+    /// <summary>
     /// Curve.Gauge(Value);
     /// </summary>
     [Deprecated]
@@ -3239,7 +3276,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     }
 
     /// <summary>
-    /// Train.Add(TrainKey, FilePath, TrackKey, Direction);
+    /// Train.Add(TrainKey, FilePath, TrackKey?, Direction?);
     /// </summary>
     public partial class TrainAddNode : SyntaxNode
     {
@@ -3281,15 +3318,15 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         public MapGrammarAstNodes FilePath { get; set; }
 
         /// <summary>
-        /// 引数：走行する軌道
+        /// 引数：走行する軌道（省略可能）
         /// </summary>
-        [Argument]
+        [Argument(Optional = true)]
         public MapGrammarAstNodes TrackKey { get; set; }
 
         /// <summary>
-        /// 引数：進行方向 (-1: 対向, 1: 並走)
+        /// 引数：進行方向 (-1: 対向, 1: 並走)（省略可能）
         /// </summary>
-        [Argument]
+        [Argument(Optional = true)]
         public MapGrammarAstNodes Direction { get; set; }
         #endregion Args
 
@@ -3488,6 +3525,62 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     }
 
     /// <summary>
+    /// Train[TrainKey].Settrack(TrackKey, Direction);
+    /// </summary>
+    public partial class TrainSettrackNode : SyntaxNode
+    {
+        #region SyntaxInfo
+
+        /// <summary>
+        /// マップ要素名
+        /// </summary>
+        public override MapElementName ElementName => MapElementName.Train;
+
+        /// <summary>
+        /// 関数名
+        /// </summary>
+        public override MapFunctionName FunctionName => MapFunctionName.Settrack;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => true;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => false;
+        #endregion SyntaxInfo
+
+        /// <summary>
+        /// Key：TrainKey
+        /// </summary>
+        public override MapGrammarAstNodes Key { get; set; }
+
+        #region Args
+
+        /// <summary>
+        /// 引数：走行する軌道
+        /// </summary>
+        [Argument]
+        public MapGrammarAstNodes TrackKey { get; set; }
+
+        /// <summary>
+        /// 引数：進行方向 (-1: 対向, 1: 並走)
+        /// </summary>
+        [Argument]
+        public MapGrammarAstNodes Direction { get; set; }
+        #endregion Args
+
+        /// <summary>
+        /// 新しいインスタンスを生成します。
+        /// </summary>
+        /// <param name="start"></param>
+        /// <param name="stop"></param>
+        public TrainSettrackNode(IToken start, IToken stop) : base(start, stop) { }
+    }
+
+    /// <summary>
     /// Legacy.Fog(Fogstart, Fogend, red, green, blue);
     /// </summary>
     [Deprecated]
@@ -3558,7 +3651,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     }
 
     /// <summary>
-    /// Legacy.Curve(radius, cant);
+    /// Legacy.Curve(radius, cant?);
     /// </summary>
     [Deprecated]
     public partial class LegacyCurveNode : SyntaxNode
@@ -3595,9 +3688,9 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         public MapGrammarAstNodes radius { get; set; }
 
         /// <summary>
-        /// 引数：カント [m]
+        /// 引数：カント [m]（省略可能）
         /// </summary>
-        [Argument]
+        [Argument(Optional = true)]
         public MapGrammarAstNodes cant { get; set; }
         #endregion Args
 
@@ -3610,7 +3703,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     }
 
     /// <summary>
-    /// Legacy.Pitch(rate);
+    /// Legacy.Pitch(rate?);
     /// </summary>
     [Deprecated]
     public partial class LegacyPitchNode : SyntaxNode
@@ -3641,9 +3734,9 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         #region Args
 
         /// <summary>
-        /// 引数：勾配 [‰]
+        /// 引数：勾配 [‰]（省略可能）
         /// </summary>
-        [Argument]
+        [Argument(Optional = true)]
         public MapGrammarAstNodes rate { get; set; }
         #endregion Args
 
@@ -3656,7 +3749,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     }
 
     /// <summary>
-    /// Legacy.Turn(slope);
+    /// Legacy.Turn(slope?);
     /// </summary>
     [Deprecated]
     public partial class LegacyTurnNode : SyntaxNode
@@ -3687,9 +3780,9 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         #region Args
 
         /// <summary>
-        /// 引数：傾き(+: 右, -: 左)
+        /// 引数：傾き(+: 右, -: 左)（省略可能）
         /// </summary>
-        [Argument]
+        [Argument(Optional = true)]
         public MapGrammarAstNodes slope { get; set; }
         #endregion Args
 

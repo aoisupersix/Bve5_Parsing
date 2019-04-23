@@ -16,6 +16,25 @@
       ]
     },
     {
+      "elem": "Gauge",
+      "func": "Set",
+      "deprecated": true,
+      "inheritance": "CurveSetgauge",
+      "versions": [
+        "2.02",
+        "2.00",
+        "1.00"
+      ],
+      "args": [
+        {
+          "name": "Value",
+          "type": "double?",
+          "desc": "軌間 [m]",
+          "opt": false
+        }
+      ]
+    },
+    {
       "elem": "Curve",
       "func": "Gauge",
       "deprecated": "true",
@@ -72,8 +91,7 @@
         "2.00",
         "1.00"
       ],
-      "args": [
-      ]
+      "args": []
     },
     {
       "elem": "Curve",
@@ -129,8 +147,7 @@
         "2.00",
         "1.00"
       ],
-      "args": [
-      ]
+      "args": []
     },
     {
       "elem": "Curve",
@@ -176,8 +193,7 @@
         "2.00",
         "1.00"
       ],
-      "args": [
-      ]
+      "args": []
     },
     {
       "elem": "Gradient",
@@ -221,8 +237,7 @@
         "2.00",
         "1.00"
       ],
-      "args": [
-      ]
+      "args": []
     },
     {
       "elem": "Gradient",
@@ -399,8 +414,7 @@
       "versions": [
         "2.02"
       ],
-      "args": [
-      ]
+      "args": []
     },
     {
       "elem": "Track",
@@ -427,8 +441,7 @@
       "versions": [
         "2.02"
       ],
-      "args": [
-      ]
+      "args": []
     },
     {
       "elem": "Track",
@@ -731,8 +744,7 @@
         "2.00",
         "1.00"
       ],
-      "args": [
-      ]
+      "args": []
     },
     {
       "elem": "Background",
@@ -807,8 +819,7 @@
       "versions": [
         "2.02"
       ],
-      "args": [
-      ]
+      "args": []
     },
     {
       "_comment": "signalに関しては手動で対応する。",
@@ -822,8 +833,7 @@
         "2.00",
         "1.00"
       ],
-      "args": [
-      ]
+      "args": []
     },
     {
       "_comment": "vに関しては手動で対応する。",
@@ -833,8 +843,7 @@
       "versions": [
         "2.02"
       ],
-      "args": [
-      ]
+      "args": []
     },
     {
       "_comment": "vに関しては手動で対応する。",
@@ -848,8 +857,7 @@
         "2.00",
         "1.00"
       ],
-      "args": [
-      ]
+      "args": []
     },
     {
       "elem": "Signal",
@@ -996,8 +1004,7 @@
         "2.00",
         "1.00"
       ],
-      "args": [
-      ]
+      "args": []
     },
     {
       "elem": "Pretrain",
@@ -1328,8 +1335,7 @@
         "2.00",
         "1.00"
       ],
-      "args": [
-      ]
+      "args": []
     },
     {
       "elem": "Sound3d",
@@ -1428,6 +1434,7 @@
     {
       "elem": "Train",
       "func": "Add",
+      "skip_test": true,
       "versions": [
         "2.02",
         "2.00",
@@ -1450,13 +1457,13 @@
           "name": "TrackKey",
           "type": "string",
           "desc": "走行する軌道",
-          "opt": false
+          "opt": true
         },
         {
           "name": "Direction",
           "type": "double?",
           "desc": "進行方向 (-1: 対向, 1: 並走)",
-          "opt": false
+          "opt": true
         }
       ]
     },
@@ -1551,6 +1558,30 @@
       ]
     },
     {
+      "elem": "Train",
+      "key": "TrainKey",
+      "func": "Settrack",
+      "versions": [
+        "2.02",
+        "2.00",
+        "1.00"
+      ],
+      "args": [
+        {
+          "name": "TrackKey",
+          "type": "string",
+          "desc": "走行する軌道",
+          "opt": false
+        },
+        {
+          "name": "Direction",
+          "type": "double?",
+          "desc": "進行方向 (-1: 対向, 1: 並走)",
+          "opt": false
+        }
+      ]
+    },
+    {
       "elem": "Legacy",
       "func": "Fog",
       "deprecated": true,
@@ -1612,7 +1643,7 @@
           "name": "cant",
           "type": "double?",
           "desc": "カント [m]",
-          "opt": false
+          "opt": true
         }
       ]
     },
@@ -1630,7 +1661,7 @@
           "name": "rate",
           "type": "double?",
           "desc": "勾配 [‰]",
-          "opt": false
+          "opt": true
         }
       ]
     },
@@ -1648,7 +1679,7 @@
           "name": "slope",
           "type": "double?",
           "desc": "傾き(+: 右, -: 左)",
-          "opt": false
+          "opt": true
         }
       ]
     }

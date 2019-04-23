@@ -179,7 +179,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData
                 m.StationListPath == StationListPath &&
                 m.SignalListPath == SignalListPath &&
                 m.SoundListPath == SoundListPath &&
-                m.Sound3DListPath == m.Sound3DListPath &&
+                m.Sound3DListPath == Sound3DListPath &&
                 m.Statements.SequenceEqual(Statements)
                 ;
         }

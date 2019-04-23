@@ -45,9 +45,9 @@ namespace Bve5_Parsing.ScenarioGrammar
             };
 
             //ステートメントの巡回(出力は各ステートメントごとに行う)
-            foreach(var statement in node.StatementList)
+            foreach (var statement in node.StatementList)
             {
-                if(statement != null)
+                if (statement != null)
                     Visit(statement);
             }
 
@@ -64,7 +64,7 @@ namespace Bve5_Parsing.ScenarioGrammar
             switch (node.StateName)
             {
                 case "route":
-                    foreach(var path in node.PathList)
+                    foreach (var path in node.PathList)
                         evaluateData.AddRoute((FilePath)Visit(path));
                     break;
                 case "vehicle":

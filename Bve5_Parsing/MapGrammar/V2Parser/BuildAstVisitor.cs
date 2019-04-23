@@ -69,6 +69,26 @@ namespace Bve5_Parsing.MapGrammar.V2Parser
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns>構文ASTノード</returns>
+        public override MapGrammarAstNodes VisitGaugeState([NotNull] GaugeStateContext context)
+        {
+            MapGrammarAstNodes node;
+            try
+            {
+                node = Visit(context.gauge());
+            }
+            catch (NullReferenceException)
+            {
+                node = null;
+            }
+
+            return node;
+        }
+
+        /// <summary>
+        /// 平面曲線ステートメントの巡回
+        /// </summary>
+        /// <param name="context">構文解析の文脈データ</param>
+        /// <returns>構文ASTノード</returns>
         public override MapGrammarAstNodes VisitCurveState([NotNull] CurveStateContext context)
         {
             MapGrammarAstNodes node;
@@ -604,6 +624,16 @@ namespace Bve5_Parsing.MapGrammar.V2Parser
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns>構文ASTノード</returns>
+        public override MapGrammarAstNodes VisitGauge([NotNull] GaugeContext context)
+        {
+            return SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Gauge, context.func.Text);
+        }
+
+        /// <summary>
+        /// 平面曲線の巡回
+        /// </summary>
+        /// <param name="context">構文解析の文脈データ</param>
+        /// <returns>構文ASTノード</returns>
         public override MapGrammarAstNodes VisitCurve([NotNull] CurveContext context)
         {
             return SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Curve, context.func.Text);
@@ -652,17 +682,17 @@ namespace Bve5_Parsing.MapGrammar.V2Parser
             {
                 //Repeater.Beginは手動対応
                 var beginNode = node as RepeaterBeginNode;
-                foreach(var strKey in context.strkey())
+                foreach (var strKey in context.exprArgs())
                 {
                     beginNode.AddStructureKey(Visit(strKey));
                 }
                 return beginNode;
             }
-            else if(node.FunctionName == MapFunctionName.Begin0)
+            else if (node.FunctionName == MapFunctionName.Begin0)
             {
                 //Repeater.Begin0は手動対応
                 var begin0Node = node as RepeaterBegin0Node;
-                foreach (var strKey in context.strkey())
+                foreach (var strKey in context.exprArgs())
                 {
                     begin0Node.AddStructureKey(Visit(strKey));
                 }
@@ -928,16 +958,6 @@ namespace Bve5_Parsing.MapGrammar.V2Parser
             return SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Legacy, context.func.Text);
         }
         #endregion マップ構文Visitors
-
-        /// <summary>
-        /// ストラクチャKeyListVisitor
-        /// </summary>
-        /// <param name="context">構文解析の文脈データ</param>
-        /// <returns></returns>
-        public override MapGrammarAstNodes VisitStrkey([NotNull] StrkeyContext context)
-        {
-            return Visit(context.key);
-        }
 
         #region 数式と変数Visitors
 

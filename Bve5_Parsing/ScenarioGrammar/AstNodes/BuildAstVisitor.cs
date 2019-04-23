@@ -18,13 +18,13 @@ namespace Bve5_Parsing.ScenarioGrammar.AstNodes
         {
             RootNode node = new RootNode();
             node.Version = context.VERSION().ToString();
-            if(context.encoding() != null)
+            if (context.encoding() != null)
             {
                 node.Encoding = context.encoding().text;
             }
 
             //ステートメントの追加
-            foreach(var state in context.statement())
+            foreach (var state in context.statement())
             {
                 ScenarioGrammarAstNodes child = base.Visit(state);
                 if (child != null)
@@ -143,7 +143,7 @@ namespace Bve5_Parsing.ScenarioGrammar.AstNodes
             WeightPathNode node = new WeightPathNode { Path = context.path.Text.TrimStart().TrimEnd() }; //ファイルパス前後の空白は削除する
 
             //Weightの取得
-            if(context.NUM() == null)
+            if (context.NUM() == null)
                 node.Weight = 1;
             else
                 node.Weight = double.Parse(context.NUM().GetText());

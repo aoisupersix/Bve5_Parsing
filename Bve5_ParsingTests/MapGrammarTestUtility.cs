@@ -56,6 +56,78 @@ namespace Bve5_ParsingTests
                 {
                     Assert.Equal(arg.exp, arg.act);
                 }
+
+                if (exp is RepeaterBeginStatement)
+                {
+                    var expCast = (RepeaterBeginStatement)exp;
+                    var actCast = (RepeaterBeginStatement)act;
+                    Assert.Equal(expCast.StructureKeys.Count, actCast.StructureKeys.Count);
+
+                    for (int j = 0; j < expCast.StructureKeys.Count; j++)
+                    {
+                        Assert.Equal(expCast.StructureKeys[j], actCast.StructureKeys[j]);
+                    }
+                }
+
+                if (exp is RepeaterBegin0Statement)
+                {
+                    var expCast = (RepeaterBegin0Statement)exp;
+                    var actCast = (RepeaterBegin0Statement)act;
+                    Assert.Equal(expCast.StructureKeys.Count, actCast.StructureKeys.Count);
+
+                    for (int j = 0; j < expCast.StructureKeys.Count; j++)
+                    {
+                        Assert.Equal(expCast.StructureKeys[j], actCast.StructureKeys[j]);
+                    }
+                }
+
+                if (exp is SectionBeginStatement)
+                {
+                    var expCast = (SectionBeginStatement)exp;
+                    var actCast = (SectionBeginStatement)act;
+                    Assert.Equal(expCast.SignalIndexes.Count, actCast.SignalIndexes.Count);
+
+                    for (int j = 0; j < expCast.SignalIndexes.Count; j++)
+                    {
+                        Assert.Equal(expCast.SignalIndexes[j], actCast.SignalIndexes[j]);
+                    }
+                }
+
+                if (exp is SectionBeginnewStatement)
+                {
+                    var expCast = (SectionBeginnewStatement)exp;
+                    var actCast = (SectionBeginnewStatement)act;
+                    Assert.Equal(expCast.SignalIndexes.Count, actCast.SignalIndexes.Count);
+
+                    for (int j = 0; j < expCast.SignalIndexes.Count; j++)
+                    {
+                        Assert.Equal(expCast.SignalIndexes[j], actCast.SignalIndexes[j]);
+                    }
+                }
+
+                if (exp is SectionSetspeedlimitStatement)
+                {
+                    var expCast = (SectionSetspeedlimitStatement)exp;
+                    var actCast = (SectionSetspeedlimitStatement)act;
+                    Assert.Equal(expCast.SpeedLimits.Count, actCast.SpeedLimits.Count);
+
+                    for (int j = 0; j < expCast.SpeedLimits.Count; j++)
+                    {
+                        Assert.Equal(expCast.SpeedLimits[j], actCast.SpeedLimits[j]);
+                    }
+                }
+
+                if (exp is SignalSpeedlimitStatement)
+                {
+                    var expCast = (SignalSpeedlimitStatement)exp;
+                    var actCast = (SignalSpeedlimitStatement)act;
+                    Assert.Equal(expCast.SpeedLimits.Count, actCast.SpeedLimits.Count);
+
+                    for (int j = 0; j < expCast.SpeedLimits.Count; j++)
+                    {
+                        Assert.Equal(expCast.SpeedLimits[j], actCast.SpeedLimits[j]);
+                    }
+                }
             }
         }
     }

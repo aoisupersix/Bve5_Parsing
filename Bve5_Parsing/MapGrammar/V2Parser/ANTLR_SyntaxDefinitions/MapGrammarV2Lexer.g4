@@ -44,6 +44,7 @@ GAUGE : G A U G E;
 SET_CENTER : S E T C E N T E R;
 SET_FUNCTION : S E T F U N C T I O N;
 SET : S E T;
+SET_TRACK : S E T T R A C K;
 BEGIN_TRANSITION : B E G I N T R A N S I T I O N;
 BEGIN : B E G I N;
 BEGIN0 : B E G I N '0';
@@ -78,7 +79,9 @@ DOT : '.';
 COMMA : ',';
 
 //数字
-NUM : '0'..'9'+ ('.' ('0'..'9')+)?;
+NUM : [0-9]+ ('.' [0-9]*)?
+	  | '.' [0-9]+
+;
 NULL : N U L L;
 
 //距離変数

@@ -56,6 +56,46 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
     }
 
     /// <summary>
+    /// Gauge.Set(Value);
+    /// </summary>
+    public partial class GaugeSetStatement : CurveSetgaugeStatement
+    {
+        #region SyntaxInfo
+
+        /// <summary>
+        /// マップ要素名
+        /// </summary>
+        public override MapElementName ElementName => MapElementName.Gauge;
+
+        /// <summary>
+        /// 関数名
+        /// </summary>
+        public override MapFunctionName FunctionName => MapFunctionName.Set;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => false;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => false;
+        #endregion SyntaxInfo
+
+        /// <summary>
+        /// 新しいインスタンスを生成します。
+        /// </summary>
+        public GaugeSetStatement() { }
+
+        /// <summary>
+        /// 距離程を指定して新しいインスタンスを生成します。
+        /// </summary>
+        public GaugeSetStatement(double distance) : base(distance) { }
+
+    }
+
+    /// <summary>
     /// Curve.Gauge(Value);
     /// </summary>
     public partial class CurveGaugeStatement : CurveSetgaugeStatement
@@ -82,15 +122,6 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// </summary>
         public override bool HasSubElement => false;
         #endregion SyntaxInfo
-
-        #region Args
-
-        /// <summary>
-        /// 引数：軌間 [m]
-        /// </summary>
-        [Argument]
-        public double? Value { get; set; }
-        #endregion Args
 
         /// <summary>
         /// 新しいインスタンスを生成します。
@@ -325,21 +356,6 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// </summary>
         public override bool HasSubElement => false;
         #endregion SyntaxInfo
-
-        #region Args
-
-        /// <summary>
-        /// 引数：曲線半径 [m] (正: 右曲線, 負: 左曲線)
-        /// </summary>
-        [Argument]
-        public double? Radius { get; set; }
-
-        /// <summary>
-        /// 引数：カント [m]（省略可能）
-        /// </summary>
-        [Argument(Optional = true)]
-        public double? Cant { get; set; }
-        #endregion Args
 
         /// <summary>
         /// 新しいインスタンスを生成します。
@@ -615,15 +631,6 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// </summary>
         public override bool HasSubElement => false;
         #endregion SyntaxInfo
-
-        #region Args
-
-        /// <summary>
-        /// 引数：勾配 [‰]
-        /// </summary>
-        [Argument]
-        public double? Gradient { get; set; }
-        #endregion Args
 
         /// <summary>
         /// 新しいインスタンスを生成します。
@@ -1017,20 +1024,6 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         #endregion SyntaxInfo
 
         /// <summary>
-        /// Key：TrackKey
-        /// </summary>
-        public override string Key { get; set; }
-
-        #region Args
-
-        /// <summary>
-        /// 引数：軌間 [m]
-        /// </summary>
-        [Argument]
-        public double? Gauge { get; set; }
-        #endregion Args
-
-        /// <summary>
         /// 新しいインスタンスを生成します。
         /// </summary>
         public TrackGaugeStatement() { }
@@ -1407,20 +1400,6 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// </summary>
         public override bool HasSubElement => false;
         #endregion SyntaxInfo
-
-        /// <summary>
-        /// Key：TrackKey
-        /// </summary>
-        public override string Key { get; set; }
-
-        #region Args
-
-        /// <summary>
-        /// 引数：カント [m] (正: 右に傾ける, 負: 左に傾ける)（省略可能）
-        /// </summary>
-        [Argument(Optional = true)]
-        public double? Cant { get; set; }
-        #endregion Args
 
         /// <summary>
         /// 新しいインスタンスを生成します。
@@ -2176,7 +2155,6 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         public override bool HasSubElement => false;
         #endregion SyntaxInfo
 
-
         /// <summary>
         /// 新しいインスタンスを生成します。
         /// </summary>
@@ -2257,7 +2235,6 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// </summary>
         public override bool HasSubElement => false;
         #endregion SyntaxInfo
-
 
         /// <summary>
         /// 新しいインスタンスを生成します。
@@ -2906,33 +2883,6 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         public override bool HasSubElement => false;
         #endregion SyntaxInfo
 
-        #region Args
-
-        /// <summary>
-        /// 引数：濃度（省略可能）
-        /// </summary>
-        [Argument(Optional = true)]
-        public double? Density { get; set; }
-
-        /// <summary>
-        /// 引数：赤成分 (0 ~ 1)（省略可能）
-        /// </summary>
-        [Argument(Optional = true)]
-        public double? Red { get; set; }
-
-        /// <summary>
-        /// 引数：緑成分 (0 ~ 1)（省略可能）
-        /// </summary>
-        [Argument(Optional = true)]
-        public double? Green { get; set; }
-
-        /// <summary>
-        /// 引数：青成分 (0 ~ 1)（省略可能）
-        /// </summary>
-        [Argument(Optional = true)]
-        public double? Blue { get; set; }
-        #endregion Args
-
         /// <summary>
         /// 新しいインスタンスを生成します。
         /// </summary>
@@ -3070,15 +3020,6 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// </summary>
         public override bool HasSubElement => false;
         #endregion SyntaxInfo
-
-        #region Args
-
-        /// <summary>
-        /// 引数：昼間画像と夜間画像の混合比 (0: 夜間画像 ~ 1: 昼間画像)
-        /// </summary>
-        [Argument]
-        public double? Value { get; set; }
-        #endregion Args
 
         /// <summary>
         /// 新しいインスタンスを生成します。
@@ -3584,7 +3525,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
     }
 
     /// <summary>
-    /// Train.Add(TrainKey, FilePath, TrackKey, Direction);
+    /// Train.Add(TrainKey, FilePath, TrackKey?, Direction?);
     /// </summary>
     public partial class TrainAddStatement : Statement
     {
@@ -3626,15 +3567,15 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         public string FilePath { get; set; }
 
         /// <summary>
-        /// 引数：走行する軌道
+        /// 引数：走行する軌道（省略可能）
         /// </summary>
-        [Argument]
+        [Argument(Optional = true)]
         public string TrackKey { get; set; }
 
         /// <summary>
-        /// 引数：進行方向 (-1: 対向, 1: 並走)
+        /// 引数：進行方向 (-1: 対向, 1: 並走)（省略可能）
         /// </summary>
-        [Argument]
+        [Argument(Optional = true)]
         public double? Direction { get; set; }
         #endregion Args
 
@@ -3849,6 +3790,66 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
     }
 
     /// <summary>
+    /// Train[TrainKey].Settrack(TrackKey, Direction);
+    /// </summary>
+    public partial class TrainSettrackStatement : Statement
+    {
+        #region SyntaxInfo
+
+        /// <summary>
+        /// マップ要素名
+        /// </summary>
+        public override MapElementName ElementName => MapElementName.Train;
+
+        /// <summary>
+        /// 関数名
+        /// </summary>
+        public override MapFunctionName FunctionName => MapFunctionName.Settrack;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => true;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => false;
+        #endregion SyntaxInfo
+
+        /// <summary>
+        /// Key：TrainKey
+        /// </summary>
+        public override string Key { get; set; }
+
+        #region Args
+
+        /// <summary>
+        /// 引数：走行する軌道
+        /// </summary>
+        [Argument]
+        public string TrackKey { get; set; }
+
+        /// <summary>
+        /// 引数：進行方向 (-1: 対向, 1: 並走)
+        /// </summary>
+        [Argument]
+        public double? Direction { get; set; }
+        #endregion Args
+
+        /// <summary>
+        /// 新しいインスタンスを生成します。
+        /// </summary>
+        public TrainSettrackStatement() { }
+
+        /// <summary>
+        /// 距離程を指定して新しいインスタンスを生成します。
+        /// </summary>
+        public TrainSettrackStatement(double distance) : base(distance) { }
+
+    }
+
+    /// <summary>
     /// Legacy.Fog(Fogstart, Fogend, red, green, blue);
     /// </summary>
     public partial class LegacyFogStatement : Statement
@@ -3922,7 +3923,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
     }
 
     /// <summary>
-    /// Legacy.Curve(radius, cant);
+    /// Legacy.Curve(radius, cant?);
     /// </summary>
     public partial class LegacyCurveStatement : Statement
     {
@@ -3958,9 +3959,9 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         public double? radius { get; set; }
 
         /// <summary>
-        /// 引数：カント [m]
+        /// 引数：カント [m]（省略可能）
         /// </summary>
-        [Argument]
+        [Argument(Optional = true)]
         public double? cant { get; set; }
         #endregion Args
 
@@ -3977,7 +3978,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
     }
 
     /// <summary>
-    /// Legacy.Pitch(rate);
+    /// Legacy.Pitch(rate?);
     /// </summary>
     public partial class LegacyPitchStatement : Statement
     {
@@ -4007,9 +4008,9 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         #region Args
 
         /// <summary>
-        /// 引数：勾配 [‰]
+        /// 引数：勾配 [‰]（省略可能）
         /// </summary>
-        [Argument]
+        [Argument(Optional = true)]
         public double? rate { get; set; }
         #endregion Args
 
@@ -4026,7 +4027,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
     }
 
     /// <summary>
-    /// Legacy.Turn(slope);
+    /// Legacy.Turn(slope?);
     /// </summary>
     public partial class LegacyTurnStatement : Statement
     {
@@ -4056,9 +4057,9 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         #region Args
 
         /// <summary>
-        /// 引数：傾き(+: 右, -: 左)
+        /// 引数：傾き(+: 右, -: 左)（省略可能）
         /// </summary>
-        [Argument]
+        [Argument(Optional = true)]
         public double? slope { get; set; }
         #endregion Args
 

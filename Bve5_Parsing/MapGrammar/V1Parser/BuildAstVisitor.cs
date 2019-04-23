@@ -57,6 +57,26 @@ namespace Bve5_Parsing.MapGrammar.V1Parser
         /// </summary>
         /// <param name="context">構文解析の文脈データ</param>
         /// <returns>構文ASTノード</returns>
+        public override MapGrammarAstNodes VisitGaugeState([NotNull] GaugeStateContext context)
+        {
+            MapGrammarAstNodes node;
+            try
+            {
+                node = Visit(context.gauge());
+            }
+            catch (NullReferenceException)
+            {
+                node = null;
+            }
+
+            return node;
+        }
+
+        /// <summary>
+        /// 平面曲線ステートメントの巡回
+        /// </summary>
+        /// <param name="context">構文解析の文脈データ</param>
+        /// <returns>構文ASTノード</returns>
         public override MapGrammarAstNodes VisitCurveState([NotNull] CurveStateContext context)
         {
             MapGrammarAstNodes node;
@@ -534,6 +554,16 @@ namespace Bve5_Parsing.MapGrammar.V1Parser
         #endregion ステートメントVisitors
 
         #region マップ構文Visitors
+
+        /// <summary>
+        /// 平面曲線の巡回
+        /// </summary>
+        /// <param name="context">構文解析の文脈データ</param>
+        /// <returns>構文ASTノード</returns>
+        public override MapGrammarAstNodes VisitGauge([NotNull] GaugeContext context)
+        {
+            return SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Gauge, context.func.Text);
+        }
 
         /// <summary>
         /// 平面曲線の巡回

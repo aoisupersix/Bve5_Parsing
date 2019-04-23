@@ -3,8 +3,10 @@ using Bve5_Parsing.MapGrammar.V1Parser.SyntaxDefinitions;
 
 namespace Bve5_Parsing.MapGrammar.V1Parser
 {
-    internal class V1ParserErrorStrategy: MapGrammarErrorStrategy
+    internal class V1ParserErrorStrategy : MapGrammarErrorStrategy
     {
+        public V1ParserErrorStrategy(string filePath) : base(filePath) { }
+
         /// <summary>
         /// エラーの復帰処理を行います。
         /// 次のステートメントの終わり、もしくは構文の終わり(EOF)まで字句を読み飛ばします。
