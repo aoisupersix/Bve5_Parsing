@@ -5,18 +5,19 @@ using Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions;
 namespace Bve5_Parsing.ScenarioGrammar
 {
     /// <summary>
-    /// ScenarioGrammarの解析を行うクラス
+    /// シナリオファイルのパースを行います。
     /// </summary>
     public class ScenarioGrammarParser
     {
 
         /// <summary>
-        /// 構文解析のエラーを取得するリスナー
+        /// 構文解析のエラーを取得するするためのリスナーです。
+        /// エラーに対して独自の処理を行いたい場合は、このプロパティにParseErrorListenerを継承した独自のクラスを指定してください。
         /// </summary>
         public ParseErrorListener ErrorListener { get; set; }
 
         /// <summary>
-        /// ScenarioGrammarの構文解析器を初期化します。
+        /// パーサを初期化します。
         /// </summary>
         public ScenarioGrammarParser()
         {
@@ -24,16 +25,16 @@ namespace Bve5_Parsing.ScenarioGrammar
         }
 
         /// <summary>
-        /// 構文解析器をエラーリスナーを指定して初期化します。
+        /// パーサをエラーリスナーを指定して初期化します。
         /// </summary>
-        /// <param name="listener">エラーリスナークラス</param>
+        /// <param name="listener"></param>
         public ScenarioGrammarParser(ParseErrorListener listener)
         {
-
+            ErrorListener = listener;
         }
 
         /// <summary>
-        /// 引数に与えられたScenarioGrammarの構文解析を行います。
+        /// 引数に与えられたScenarioGrammarの構文解析と評価を行い、ScenarioDataを返します。
         /// </summary>
         /// <param name="input">解析する文字列</param>
         /// <returns>解析結果</returns>

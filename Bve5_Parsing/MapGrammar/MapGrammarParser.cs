@@ -11,14 +11,21 @@ using System.Linq;
 namespace Bve5_Parsing.MapGrammar
 {
     /// <summary>
-    /// MapGrammarの解析を行うクラス
+    /// マップファイルのパースを行います。
     /// </summary>
     public class MapGrammarParser
     {
         #region フィールド
+        /// <summary>
+        /// ParserErrorsプロパティの内部実装。
+        /// </summary>
         protected List<ParseError> _parserError;
 
         [Flags]
+        /// <summary>
+        /// パーサの細かい動作を指定するためのオプションです。
+        /// Parse()やParseToAst()メソッドの引数に渡してオプションを指定します。
+        /// </summary>
         public enum MapGrammarParserOption
         {
 
@@ -61,23 +68,26 @@ namespace Bve5_Parsing.MapGrammar
 
         #region プロパティ
         /// <summary>
-        /// 構文解析エラー
+        /// パーサで保持しているエラーです。
+        /// Parse()やParseToAst()を呼び出しパースを行う度に初期化されます。
         /// </summary>
         public ReadOnlyCollection<ParseError> ParserErrors { get; }
 
         /// <summary>
-        /// 構文解析のエラーを取得するリスナー
+        /// 構文解析のエラーを取得するするためのリスナーです。
+        /// エラーに対して独自の処理を行いたい場合は、このプロパティにParseErrorListenerを継承した独自のクラスを指定してください。
         /// </summary>
         public ParseErrorListener ErrorListener { get; set; }
 
         /// <summary>
-        /// マップ構文の変数管理用
+        /// マップ構文内の変数を保持します。
+        /// 変数はパースの度に初期化されません。
         /// </summary>
         public VariableStore Store { get; set; }
         #endregion
 
         /// <summary>
-        /// 構文解析器を初期化します。
+        /// パーサを初期化します。
         /// </summary>
         public MapGrammarParser()
         {

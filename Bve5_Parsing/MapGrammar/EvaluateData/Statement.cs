@@ -6,7 +6,9 @@ using System.Reflection;
 namespace Bve5_Parsing.MapGrammar.EvaluateData
 {
     /// <summary>
-    /// ステートメントのベースクラス
+    /// マップファイルのステートメントを表します。
+    /// 各ステートメントは構文ごとにこのクラスを継承して定義されています。
+    /// 各構文のキーや引数は、各構文のステートメントを表すクラスにキャストすることで取得できます。
     /// </summary>
     public abstract class Statement
     {
@@ -47,12 +49,19 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData
         /// </summary>
         public double Distance { get; set; }
 
+        /// <summary>
+        /// 新しいステートメントを生成します。
+        /// </summary>
         public Statement() { }
 
+        /// <summary>
+        /// 距離程を指定して新しいステートメントを生成します。
+        /// </summary>
+        /// <param name="distance">距離程</param>
         public Statement(double distance) { Distance = distance; }
 
         /// <summary>
-        /// すべての引数を取得します。
+        /// 全引数の属性を取得します。
         /// </summary>
         /// <returns></returns>
         protected internal IEnumerable<PropertyInfo> GetAllArguments()
@@ -71,7 +80,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData
         }
 
         /// <summary>
-        /// StatementからSyntaxDataを生成して返します。
+        /// ステートメントからSyntaxDataを生成して返します。
         /// </summary>
         /// <param name="evaluator"></param>
         /// <param name="distance"></param>
