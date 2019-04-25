@@ -201,7 +201,7 @@ namespace Bve5_Parsing.MapGrammar
         /// <param name="filePath">解析するマップ構文のファイルパス</param>
         /// <param name="versionString">パーサを指定するためのバージョン文字列（省略した場合は2.02を利用します）</param>
         /// <returns></returns>
-        public MapGrammarAstNodes ParseToAst(string input, string filePath, string versionString = null)
+        public MapGrammarAstNodes ParseToAst(string input, string filePath = null, string versionString = null)
         {
             var inputStream = new AntlrInputStream(input);
 

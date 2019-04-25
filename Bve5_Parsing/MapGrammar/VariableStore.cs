@@ -4,12 +4,18 @@ using System.Collections.ObjectModel;
 namespace Bve5_Parsing.MapGrammar
 {
     /// <summary>
-    /// 変数管理クラス
+    /// マップファイルの変数を管理します。
     /// </summary>
     public class VariableStore
     {
+        /// <summary>
+        /// 変数の内部実装
+        /// </summary>
         private Dictionary<string, object> _vars;
 
+        /// <summary>
+        /// 保持している変数
+        /// </summary>
         public ReadOnlyDictionary<string, object> Vars { get; }
 
         /// <summary>
@@ -41,7 +47,7 @@ namespace Bve5_Parsing.MapGrammar
         /// <returns>変数の値</returns>
         public object GetVar(string key)
         {
-            // TODO: 本家仕様を確認する。変数がない場合は0だっけ？
+            // TODO: 本家仕様を確認する。変数がない場合は0だっけ？ ⇒ 0を返すけどエラーも追加する必要がある
             if (Vars.ContainsKey(key))     /*変数が登録されてる*/
                 return _vars[key];
             else                           /*変数が登録されていない*/
