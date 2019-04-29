@@ -103,19 +103,19 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData
     /// </summary>
     public partial class SectionBeginStatement
     {
-        protected List<double> _signalIndexes = new List<double>();
+        protected List<double?> _signalIndexes = new List<double?>();
 
         /// <summary>
         /// SignalIndexN
         /// </summary>
-        public ReadOnlyCollection<double> SignalIndexes => _signalIndexes.AsReadOnly();
+        public ReadOnlyCollection<double?> SignalIndexes => _signalIndexes.AsReadOnly();
 
         /// <summary>
         /// SignalIndexesに値をセットします。
         /// テスト用
         /// </summary>
         /// <param name="keys"></param>
-        public Statement SetSigIdx(params double[] idxes)
+        public Statement SetSigIdx(params double?[] idxes)
         {
             _signalIndexes.AddRange(idxes);
             return this;
@@ -138,7 +138,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData
         }
 
 
-        public void AddSignalIndex(double sigIdx)
+        public void AddSignalIndex(double? sigIdx)
         {
             _signalIndexes.Add(sigIdx);
         }

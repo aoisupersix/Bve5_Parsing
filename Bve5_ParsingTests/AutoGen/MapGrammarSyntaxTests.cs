@@ -1539,6 +1539,19 @@ namespace Bve5_ParsingTests
         }
 
         /// <summary>
+        /// Speedlimit.Setsignal();
+        /// </summary>
+        [Fact]
+        public void SpeedlimitSetsignalTest()
+        {
+            /*
+             * THIS TEST IS SKIPPED.
+             * この構文のテストは諸事情によりテストの自動生成から外されました。
+             * Speedlimit.Setsignal()構文のテストは手動で作成してください。
+             */
+        }
+
+        /// <summary>
         /// Signal.Load(FilePath);
         /// </summary>
         [Fact]
@@ -2890,6 +2903,19 @@ namespace Bve5_ParsingTests
                             slope = 1
                         }
                     }));
+        }
+
+        /// <summary>
+        /// Include(FilePath);
+        /// </summary>
+        [Fact]
+        public void IncludeTest()
+        {
+            /*
+             * THIS TEST IS SKIPPED.
+             * この構文のテストは諸事情によりテストの自動生成から外されました。
+             * Include(FilePath)構文のテストは手動で作成してください。
+             */
         }
         #endregion
     }

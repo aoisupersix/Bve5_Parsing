@@ -58,6 +58,7 @@ namespace Bve5_Parsing.MapGrammar
         public abstract T Visit(SectionBeginnewNode node);
         public abstract T Visit(SectionSetspeedlimitNode node);
         public abstract T Visit(SignalSpeedlimitNode node);
+        public abstract T Visit(SpeedlimitSetsignalNode node);
         public abstract T Visit(SignalLoadNode node);
         public abstract T Visit(SignalPutNode node);
         public abstract T Visit(BeaconPutNode node);
@@ -90,11 +91,11 @@ namespace Bve5_Parsing.MapGrammar
         public abstract T Visit(LegacyCurveNode node);
         public abstract T Visit(LegacyPitchNode node);
         public abstract T Visit(LegacyTurnNode node);
+        public abstract T Visit(IncludeNode node);
         public abstract T Visit(Syntax1Node node);
         public abstract T Visit(Syntax2Node node);
         public abstract T Visit(Syntax3Node node);
         public abstract T Visit(LoadListNode node);
-        public abstract T Visit(IncludeNode node);
         public abstract T Visit(VarAssignNode node);
         public abstract T Visit(AdditionNode node);
         public abstract T Visit(SubtractionNode node);

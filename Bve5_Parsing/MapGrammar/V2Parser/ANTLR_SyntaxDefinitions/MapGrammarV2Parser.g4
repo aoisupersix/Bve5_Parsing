@@ -153,6 +153,7 @@ beacon :
 speedlimit :
 	  DOT func=BEGIN OPN_PAR v=nullableExpr CLS_PAR
 	| DOT func=END OPN_PAR CLS_PAR
+	| DOT func=SET_SIGNAL OPN_PAR nullableExpr exprArgs* CLS_PAR
 	;
 
 //先行列車

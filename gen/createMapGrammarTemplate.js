@@ -39,11 +39,11 @@ function loadJson(jsonPath) {
       state["syntax1"] = true;
       state["syntax2"] = false;
       state["syntax3"] = false;
-    }else if(state.sub_elem === undefined) {
+    } else if (state.sub_elem === undefined) {
       state["syntax1"] = false;
       state["syntax2"] = true;
       state["syntax3"] = false;
-    }else {
+    } else {
       state["syntax1"] = false;
       state["syntax2"] = false;
       state["syntax3"] = true;
@@ -51,7 +51,7 @@ function loadJson(jsonPath) {
 
     // 引数のテスト値生成
     linq.from(state.args).forEach((arg) => {
-      switch(arg.type) {
+      switch (arg.type) {
         case "string":
           arg["test_value_map_grammar"] = "'string_test_value'";
           arg["test_value_map_grammar_non_quote"] = "string_test_value";
@@ -73,8 +73,8 @@ function loadJson(jsonPath) {
       const optArgs = linq.from(state.args).where(a => a.opt).toArray();
       const tmpArgPattern = [];
       tmpArgPattern.push(deepCopy(nonOptArgs));
-  
-      while(optArgs.length > 0) {
+
+      while (optArgs.length > 0) {
         nonOptArgs.push(optArgs.shift());
         tmpArgPattern.push(deepCopy(nonOptArgs));
       }
@@ -82,14 +82,14 @@ function loadJson(jsonPath) {
       tmpArgPattern.forEach((val) => {
         if (val.length <= 0) {
           val["noarg"] = true;
-        }else {
+        } else {
           val.slice(-1)[0]["last"] = true;
         }
-        
-        const arg = { args: val};
+
+        const arg = { args: val };
         arg["version"] = version;
 
-        switch(version.charAt(0)) {
+        switch (version.charAt(0)) {
           case '1':
             arg["useV1Parser"] = true;
             arg["useV2Parser"] = false;
@@ -106,33 +106,40 @@ function loadJson(jsonPath) {
 
     state["argPattern"] = argPattern;
 
+    // 関数名があるか
+    if (state.func === undefined) {
+      state["nofunc"] = true;
+    }
+
     // 引数があるか
     if (state.args.length <= 0) {
       state["noarg"] = true;
-    }else {
+    } else {
       state.args.slice(-1)[0]["last"] = true;
     }
 
     // マップ要素名取得
     if (linq.from(elems).all(e => e["name"] != state.elem)) {
-      elems.push({name: state.elem});
+      elems.push({ name: state.elem });
     }
 
     // サブ要素名取得
     if (state.syntax3 && linq.from(subElems).all(e => e["name"] != state.sub_elem)) {
-      subElems.push({name: state.sub_elem});
+      subElems.push({ name: state.sub_elem });
     }
 
     // 関数名取得
     let funcName = state.func;
     let funcString = funcName;
-    if (linq.from(funcs).all(f => f["name"] != funcName)) {
-      funcs.push({name: funcName, str: funcString});
+    if (!state.nofunc && linq.from(funcs).all(f => f["name"] != funcName)) {
+      funcs.push({ name: funcName, str: funcString });
     }
 
     // 小文字要素名＆関数名作成
     state["elem_lower"] = (state.elem + '').toLowerCase();
-    state["func_lower"] = (state.func + '').toLowerCase();
+    if (!state.nofunc) {
+      state["func_lower"] = (state.func + '').toLowerCase();
+    }
     if (state.syntax3 == true) {
       state["sub_elem_lower"] = (state.sub_elem + '').toLowerCase();
     }

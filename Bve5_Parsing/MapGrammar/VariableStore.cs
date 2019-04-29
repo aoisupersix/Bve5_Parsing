@@ -11,21 +11,12 @@ namespace Bve5_Parsing.MapGrammar
         /// <summary>
         /// 変数の内部実装
         /// </summary>
-        private Dictionary<string, object> _vars;
+        private Dictionary<string, object> _vars = new Dictionary<string, object>();
 
         /// <summary>
         /// 保持している変数
         /// </summary>
-        public ReadOnlyDictionary<string, object> Vars { get; }
-
-        /// <summary>
-        /// 新しいインスタンスを生成します。
-        /// </summary>
-        public VariableStore()
-        {
-            _vars = new Dictionary<string, object>();
-            Vars = new ReadOnlyDictionary<string, object>(_vars);
-        }
+        public ReadOnlyDictionary<string, object> Vars => new ReadOnlyDictionary<string, object>(_vars);
 
         /// <summary>
         /// 変数を追加、もしくは上書きします。

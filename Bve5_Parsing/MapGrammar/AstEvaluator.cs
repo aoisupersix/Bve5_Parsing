@@ -204,16 +204,6 @@ namespace Bve5_Parsing.MapGrammar
         }
         #endregion
 
-        public override object Visit(IncludeNode node)
-        {
-            // Includeディレクティブは仮対応
-            // 無理やりSyntaxDataに入れておく
-            var syntax = new SyntaxData(NowDistance, "include", "");
-            syntax.SetArg("filepath", Visit(node.FilePath));
-
-            return syntax;
-        }
-
         #region 自動生成構文
         public override object Visit(CurveSetgaugeNode node)
         {
@@ -405,6 +395,11 @@ namespace Bve5_Parsing.MapGrammar
             return node.CreateStatement(this);
         }
 
+        public override object Visit(SpeedlimitSetsignalNode node)
+        {
+            return node.CreateStatement(this);
+        }
+
         public override object Visit(PretrainPassNode node)
         {
             return node.CreateStatement(this);
@@ -496,6 +491,11 @@ namespace Bve5_Parsing.MapGrammar
         }
 
         public override object Visit(TrainSettrackNode node)
+        {
+            return node.CreateStatement(this);
+        }
+
+        public override object Visit(IncludeNode node)
         {
             return node.CreateStatement(this);
         }
@@ -1024,8 +1024,8 @@ namespace Bve5_Parsing.MapGrammar
 
         public override object Visit(IncludeNode node)
         {
-            var returnData = (SyntaxData)base.Visit(node);
-            var path = Visit(node.FilePath)?.ToString();
+            var returnData = (IncludeStatement)base.Visit(node);
+            var path = returnData.FilePath;
             if (path == null)
             {
                 Errors.Add(node.CreateNewError($"ファイルパスが指定されていません。"));
@@ -1055,7 +1055,8 @@ namespace Bve5_Parsing.MapGrammar
 
                 // Include先構文を評価して追加
                 var parser = new MapGrammarParser();
-                var includeAst = parser.ParseToAst(includeText, absolutePath);
+                var headerInfo = parser.GetHeaderInfo(includeText);
+                var includeAst = parser.ParseToAst(includeText.Substring(headerInfo.Item3), absolutePath, headerInfo.Item1);
                 parser.ParserErrors.ToList().ForEach(err => Errors.Add(err));
                 var evaluator = new EvaluateMapGrammarVisitorWithInclude(Store, dirAbsolutePath, Errors, NowDistance);
                 var includeData = (MapData)evaluator.Visit(includeAst);
@@ -1064,7 +1065,7 @@ namespace Bve5_Parsing.MapGrammar
                 evaluateData.OverwriteListPath(includeData);
                 NowDistance = evaluator.NowDistance;
             }
-            return returnData;
+            return null;
         }
     }
 }

@@ -30,16 +30,6 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         public DistanceNode(IToken start, IToken stop) : base(start, stop) { }
     }
 
-    /// <summary>
-    /// Includeディレクティブノード
-    /// </summary>
-    public class IncludeNode : MapGrammarAstNodes
-    {
-        public MapGrammarAstNodes FilePath { get; set; }
-
-        public IncludeNode(IToken start, IToken stop) : base(start, stop) { }
-    }
-
     #region SyntaxNode Partial
 
     /// <summary>
@@ -68,7 +58,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
 
             foreach (var strKey in StructureKeys)
             {
-                repeaterBeginStatement.AddStructureKey(Convert.ToString(evaluator.Visit(strKey)));
+                repeaterBeginStatement.AddStructureKey(strKey == null ? string.Empty : Convert.ToString(evaluator.Visit(strKey)));
             }
 
             return repeaterBeginStatement;
@@ -101,7 +91,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
 
             foreach (var strKey in StructureKeys)
             {
-                repeaterBegin0Statement.AddStructureKey(Convert.ToString(evaluator.Visit(strKey)));
+                repeaterBegin0Statement.AddStructureKey(strKey == null ? string.Empty : Convert.ToString(evaluator.Visit(strKey)));
             }
 
             return repeaterBegin0Statement;
@@ -134,7 +124,23 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
 
             foreach (var sigIdx in SignalIndexes)
             {
-                sectionBeginStatement.AddSignalIndex(Convert.ToDouble(evaluator.Visit(sigIdx)));
+                if (sigIdx != null)
+                {
+                    object value = evaluator.Visit(sigIdx);
+                    try
+                    {
+                        sectionBeginStatement.AddSignalIndex(Convert.ToDouble(value));
+                    }
+                    catch (Exception e) when (e is InvalidCastException || e is FormatException || e is OverflowException)
+                    {
+                        evaluator.Errors.Add(CreateNewError($"{value}は無効な引数です。"));
+                        sectionBeginStatement.AddSignalIndex(null);
+                    }
+                }
+                else
+                {
+                    sectionBeginStatement.AddSignalIndex(null);
+                }
             }
 
             return sectionBeginStatement;
@@ -168,8 +174,23 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
 
             foreach (var spdLmt in SpeedLimits)
             {
-                object tmp = evaluator.Visit(spdLmt);
-                sectionSetspeedlimitStatement.AddSpeedLimit(tmp != null ? Convert.ToDouble(tmp) : (double?)null);
+                if (spdLmt != null)
+                {
+                    object value = evaluator.Visit(spdLmt);
+                    try
+                    {
+                        sectionSetspeedlimitStatement.AddSpeedLimit(Convert.ToDouble(value));
+                    }
+                    catch (Exception e) when (e is InvalidCastException || e is FormatException || e is OverflowException)
+                    {
+                        evaluator.Errors.Add(CreateNewError($"{value}は無効な引数です。"));
+                        sectionSetspeedlimitStatement.AddSpeedLimit(null);
+                    }
+                }
+                else
+                {
+                    sectionSetspeedlimitStatement.AddSpeedLimit(null);
+                }
             }
 
             return sectionSetspeedlimitStatement;
@@ -190,15 +211,27 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         protected override Statement SetArgument(EvaluateMapGrammarVisitor evaluator, Statement statement)
         {
             var pretrainPassStatement = statement as PretrainPassStatement;
-            var arg = evaluator.Visit(Time); // 必ずTimeに引数が入っている
 
-            if (arg is string)
+            if (Time != null)
             {
-                // TODO: Validate
-                pretrainPassStatement.Time = arg as string;
+                var arg = evaluator.Visit(Time); // 必ずTimeに引数が入っている
+
+                if (arg is string)
+                {
+                    // TODO: Validate
+                    double tmp;
+                    if (double.TryParse((string)arg, out tmp))
+                    {
+                        pretrainPassStatement.Second = tmp;
+                    }
+                    else
+                    {
+                        pretrainPassStatement.Time = (string)arg;
+                    }
+                }
+                else
+                    pretrainPassStatement.Second = Convert.ToDouble(arg);
             }
-            else
-                pretrainPassStatement.Second = System.Convert.ToDouble(arg);
 
             return pretrainPassStatement;
         }
@@ -218,15 +251,27 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         protected override Statement SetArgument(EvaluateMapGrammarVisitor evaluator, Statement statement)
         {
             var trainEnableStatement = statement as TrainEnableStatement;
-            var arg = evaluator.Visit(Time); // 必ずTimeに引数が入っている
 
-            if (arg is string)
+            if (Time != null)
             {
-                // TODO: Validate
-                trainEnableStatement.Time = arg as string;
+                var arg = evaluator.Visit(Time); // 必ずTimeに引数が入っている
+
+                if (arg is string)
+                {
+                    // TODO: Validate
+                    double tmp;
+                    if (double.TryParse((string)arg, out tmp))
+                    {
+                        trainEnableStatement.Second = tmp;
+                    }
+                    else
+                    {
+                        trainEnableStatement.Time = (string)arg;
+                    }
+                }
+                else
+                    trainEnableStatement.Second = Convert.ToDouble(arg);
             }
-            else
-                trainEnableStatement.Second = Convert.ToDouble(arg);
 
             return trainEnableStatement;
         }

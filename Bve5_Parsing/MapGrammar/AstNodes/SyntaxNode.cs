@@ -23,7 +23,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// <summary>
         /// マップ関数名
         /// </summary>
-        public abstract MapFunctionName FunctionName { get; }
+        public virtual MapFunctionName? FunctionName => null;
 
         /// <summary>
         /// マップ副要素名
@@ -221,12 +221,15 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
                 var argType = Nullable.GetUnderlyingType(arg.Statement.PropertyType) ?? arg.Statement.PropertyType;
                 try
                 {
-                    var convArg = Convert.ChangeType(argValue, argType);
-                    arg.Statement.SetValue(statement, convArg, null);
+                    if (argValue != null)
+                    {
+                        var convArg = Convert.ChangeType(argValue, argType);
+                        arg.Statement.SetValue(statement, convArg, null);
+                    }
                 }
                 catch (Exception e) when (e is InvalidCastException || e is FormatException || e is OverflowException || e is ArgumentNullException)
                 {
-                    evaluator.Errors.Add(CreateNewError($"{argValue.ToString()}は無効な引数です。"));
+                    evaluator.Errors.Add(CreateNewError($"{argValue}は無効な引数です。"));
                 }
             }
 
@@ -247,9 +250,15 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
 
             if (HasKey)
             {
-                var key = GetType().GetProperty("Key").GetValue(this, null) as StringNode;
+                var key = GetType().GetProperty("Key").GetValue(this, null) as MapGrammarAstNodes;
                 if (key != null)
-                    statement.GetType().GetProperty("Key").SetValue(statement, evaluator.Visit(key), null);
+                {
+                    var tmp = evaluator.Visit(key);
+                    if (tmp != null)
+                    {
+                        statement.GetType().GetProperty("Key").SetValue(statement, Convert.ToString(tmp), null);
+                    }
+                }
             }
 
             return SetArgument(evaluator, statement);

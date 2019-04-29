@@ -20,7 +20,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData
         /// <summary>
         /// マップ関数名
         /// </summary>
-        public abstract MapFunctionName FunctionName { get; }
+        public virtual MapFunctionName? FunctionName => null;
 
         /// <summary>
         /// マップ副要素名
@@ -87,7 +87,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData
         /// <returns></returns>
         public virtual SyntaxData ToSyntaxData()
         {
-            var funcName = FunctionName.GetStringValue();
+            var funcName = FunctionName == null ? string.Empty : FunctionName.GetStringValue();
             var syntax = new SyntaxData();
             syntax.Distance = Distance;
 
