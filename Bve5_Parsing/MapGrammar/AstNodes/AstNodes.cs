@@ -12,12 +12,25 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     /// </summary>
     public class RootNode : MapGrammarAstNodes
     {
+        /// <summary>
+        /// ステートメントASTノードの内部実装
+        /// </summary>
+        protected List<MapGrammarAstNodes> _statementList = new List<MapGrammarAstNodes>();
 
-        public List<MapGrammarAstNodes> StatementList { get; set; }
+        /// <summary>
+        /// ステートメントASTノード
+        /// </summary>
+        public ReadOnlyCollection<MapGrammarAstNodes> StatementList => _statementList.AsReadOnly();
 
-        public RootNode(IToken start, IToken stop) : base(start, stop)
+        public RootNode(IToken start, IToken stop) : base(start, stop) { }
+
+        /// <summary>
+        /// ステートメントを追加します。
+        /// </summary>
+        /// <param name="node"></param>
+        public void AddStatementNode(MapGrammarAstNodes node)
         {
-            StatementList = new List<MapGrammarAstNodes>();
+            _statementList.Add(node);
         }
     }
 

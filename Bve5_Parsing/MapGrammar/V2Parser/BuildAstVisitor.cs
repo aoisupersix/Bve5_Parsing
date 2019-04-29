@@ -27,7 +27,7 @@ namespace Bve5_Parsing.MapGrammar.V2Parser
             {
                 var child = base.Visit(state);
                 if (child != null)
-                    node.StatementList.Add(child);
+                    node.AddStatementNode(child);
             }
             return node;
         }
