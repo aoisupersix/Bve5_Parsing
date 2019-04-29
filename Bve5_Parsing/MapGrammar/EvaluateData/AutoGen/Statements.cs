@@ -21,7 +21,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Setgauge;
+        public override MapFunctionName? FunctionName => MapFunctionName.Setgauge;
 
         /// <summary>
         /// キーを指定する構文か？
@@ -70,7 +70,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Set;
+        public override MapFunctionName? FunctionName => MapFunctionName.Set;
 
         /// <summary>
         /// キーを指定する構文か？
@@ -110,7 +110,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Gauge;
+        public override MapFunctionName? FunctionName => MapFunctionName.Gauge;
 
         /// <summary>
         /// キーを指定する構文か？
@@ -150,7 +150,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Setcenter;
+        public override MapFunctionName? FunctionName => MapFunctionName.Setcenter;
 
         /// <summary>
         /// キーを指定する構文か？
@@ -199,7 +199,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Setfunction;
+        public override MapFunctionName? FunctionName => MapFunctionName.Setfunction;
 
         /// <summary>
         /// キーを指定する構文か？
@@ -248,7 +248,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Begintransition;
+        public override MapFunctionName? FunctionName => MapFunctionName.Begintransition;
 
         /// <summary>
         /// キーを指定する構文か？
@@ -289,7 +289,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Begin;
+        public override MapFunctionName? FunctionName => MapFunctionName.Begin;
 
         /// <summary>
         /// キーを指定する構文か？
@@ -344,7 +344,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Begincircular;
+        public override MapFunctionName? FunctionName => MapFunctionName.Begincircular;
 
         /// <summary>
         /// キーを指定する構文か？
@@ -384,7 +384,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.End;
+        public override MapFunctionName? FunctionName => MapFunctionName.End;
 
         /// <summary>
         /// キーを指定する構文か？
@@ -425,7 +425,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Interpolate;
+        public override MapFunctionName? FunctionName => MapFunctionName.Interpolate;
 
         /// <summary>
         /// キーを指定する構文か？
@@ -480,7 +480,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Change;
+        public override MapFunctionName? FunctionName => MapFunctionName.Change;
 
         /// <summary>
         /// キーを指定する構文か？
@@ -529,7 +529,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Begintransition;
+        public override MapFunctionName? FunctionName => MapFunctionName.Begintransition;
 
         /// <summary>
         /// キーを指定する構文か？
@@ -570,7 +570,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Begin;
+        public override MapFunctionName? FunctionName => MapFunctionName.Begin;
 
         /// <summary>
         /// キーを指定する構文か？
@@ -619,7 +619,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Beginconst;
+        public override MapFunctionName? FunctionName => MapFunctionName.Beginconst;
 
         /// <summary>
         /// キーを指定する構文か？
@@ -659,7 +659,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.End;
+        public override MapFunctionName? FunctionName => MapFunctionName.End;
 
         /// <summary>
         /// キーを指定する構文か？
@@ -700,7 +700,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Interpolate;
+        public override MapFunctionName? FunctionName => MapFunctionName.Interpolate;
 
         /// <summary>
         /// キーを指定する構文か？
@@ -754,7 +754,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Interpolate;
+        public override MapFunctionName? FunctionName => MapFunctionName.Interpolate;
 
         /// <summary>
         /// キーを指定する構文か？
@@ -819,7 +819,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Interpolate;
+        public override MapFunctionName? FunctionName => MapFunctionName.Interpolate;
 
         /// <summary>
         /// キーを指定する構文か？
@@ -879,7 +879,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Position;
+        public override MapFunctionName? FunctionName => MapFunctionName.Position;
 
         /// <summary>
         /// キーを指定する構文か？
@@ -956,7 +956,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Setgauge;
+        public override MapFunctionName? FunctionName => MapFunctionName.Setgauge;
 
         /// <summary>
         /// キーを指定する構文か？
@@ -1010,7 +1010,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Gauge;
+        public override MapFunctionName? FunctionName => MapFunctionName.Gauge;
 
         /// <summary>
         /// キーを指定する構文か？
@@ -1055,7 +1055,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Setcenter;
+        public override MapFunctionName? FunctionName => MapFunctionName.Setcenter;
 
         /// <summary>
         /// キーを指定する構文か？
@@ -1114,7 +1114,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Setfunction;
+        public override MapFunctionName? FunctionName => MapFunctionName.Setfunction;
 
         /// <summary>
         /// キーを指定する構文か？
@@ -1173,7 +1173,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Begintransition;
+        public override MapFunctionName? FunctionName => MapFunctionName.Begintransition;
 
         /// <summary>
         /// キーを指定する構文か？
@@ -1224,7 +1224,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Begin;
+        public override MapFunctionName? FunctionName => MapFunctionName.Begin;
 
         /// <summary>
         /// キーを指定する構文か？
@@ -1283,7 +1283,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.End;
+        public override MapFunctionName? FunctionName => MapFunctionName.End;
 
         /// <summary>
         /// キーを指定する構文か？
@@ -1334,7 +1334,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Interpolate;
+        public override MapFunctionName? FunctionName => MapFunctionName.Interpolate;
 
         /// <summary>
         /// キーを指定する構文か？
@@ -1388,7 +1388,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Cant;
+        public override MapFunctionName? FunctionName => MapFunctionName.Cant;
 
         /// <summary>
         /// キーを指定する構文か？
@@ -1428,7 +1428,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Load;
+        public override MapFunctionName? FunctionName => MapFunctionName.Load;
 
         /// <summary>
         /// キーを指定する構文か？
@@ -1477,7 +1477,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Put;
+        public override MapFunctionName? FunctionName => MapFunctionName.Put;
 
         /// <summary>
         /// キーを指定する構文か？
@@ -1579,7 +1579,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Put0;
+        public override MapFunctionName? FunctionName => MapFunctionName.Put0;
 
         /// <summary>
         /// キーを指定する構文か？
@@ -1645,7 +1645,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Putbetween;
+        public override MapFunctionName? FunctionName => MapFunctionName.Putbetween;
 
         /// <summary>
         /// キーを指定する構文か？
@@ -1711,7 +1711,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Begin;
+        public override MapFunctionName? FunctionName => MapFunctionName.Begin;
 
         /// <summary>
         /// キーを指定する構文か？
@@ -1819,7 +1819,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Begin0;
+        public override MapFunctionName? FunctionName => MapFunctionName.Begin0;
 
         /// <summary>
         /// キーを指定する構文か？
@@ -1891,7 +1891,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.End;
+        public override MapFunctionName? FunctionName => MapFunctionName.End;
 
         /// <summary>
         /// キーを指定する構文か？
@@ -1937,7 +1937,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Change;
+        public override MapFunctionName? FunctionName => MapFunctionName.Change;
 
         /// <summary>
         /// キーを指定する構文か？
@@ -1986,7 +1986,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Load;
+        public override MapFunctionName? FunctionName => MapFunctionName.Load;
 
         /// <summary>
         /// キーを指定する構文か？
@@ -2035,7 +2035,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Put;
+        public override MapFunctionName? FunctionName => MapFunctionName.Put;
 
         /// <summary>
         /// キーを指定する構文か？
@@ -2101,7 +2101,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Begin;
+        public override MapFunctionName? FunctionName => MapFunctionName.Begin;
 
         /// <summary>
         /// キーを指定する構文か？
@@ -2142,7 +2142,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Beginnew;
+        public override MapFunctionName? FunctionName => MapFunctionName.Beginnew;
 
         /// <summary>
         /// キーを指定する構文か？
@@ -2182,7 +2182,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Setspeedlimit;
+        public override MapFunctionName? FunctionName => MapFunctionName.Setspeedlimit;
 
         /// <summary>
         /// キーを指定する構文か？
@@ -2223,7 +2223,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Speedlimit;
+        public override MapFunctionName? FunctionName => MapFunctionName.Speedlimit;
 
         /// <summary>
         /// キーを指定する構文か？
@@ -2249,6 +2249,46 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
     }
 
     /// <summary>
+    /// Speedlimit.Setsignal();
+    /// </summary>
+    public partial class SpeedlimitSetsignalStatement : SectionSetspeedlimitStatement
+    {
+        #region SyntaxInfo
+
+        /// <summary>
+        /// マップ要素名
+        /// </summary>
+        public override MapElementName ElementName => MapElementName.Speedlimit;
+
+        /// <summary>
+        /// 関数名
+        /// </summary>
+        public override MapFunctionName? FunctionName => MapFunctionName.Setsignal;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => false;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => false;
+        #endregion SyntaxInfo
+
+        /// <summary>
+        /// 新しいインスタンスを生成します。
+        /// </summary>
+        public SpeedlimitSetsignalStatement() { }
+
+        /// <summary>
+        /// 距離程を指定して新しいインスタンスを生成します。
+        /// </summary>
+        public SpeedlimitSetsignalStatement(double distance) : base(distance) { }
+
+    }
+
+    /// <summary>
     /// Signal.Load(FilePath);
     /// </summary>
     public partial class SignalLoadStatement : Statement
@@ -2263,7 +2303,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Load;
+        public override MapFunctionName? FunctionName => MapFunctionName.Load;
 
         /// <summary>
         /// キーを指定する構文か？
@@ -2312,7 +2352,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Put;
+        public override MapFunctionName? FunctionName => MapFunctionName.Put;
 
         /// <summary>
         /// キーを指定する構文か？
@@ -2420,7 +2460,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Put;
+        public override MapFunctionName? FunctionName => MapFunctionName.Put;
 
         /// <summary>
         /// キーを指定する構文か？
@@ -2481,7 +2521,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Begin;
+        public override MapFunctionName? FunctionName => MapFunctionName.Begin;
 
         /// <summary>
         /// キーを指定する構文か？
@@ -2530,7 +2570,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.End;
+        public override MapFunctionName? FunctionName => MapFunctionName.End;
 
         /// <summary>
         /// キーを指定する構文か？
@@ -2571,7 +2611,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Pass;
+        public override MapFunctionName? FunctionName => MapFunctionName.Pass;
 
         /// <summary>
         /// キーを指定する構文か？
@@ -2626,7 +2666,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Ambient;
+        public override MapFunctionName? FunctionName => MapFunctionName.Ambient;
 
         /// <summary>
         /// キーを指定する構文か？
@@ -2687,7 +2727,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Diffuse;
+        public override MapFunctionName? FunctionName => MapFunctionName.Diffuse;
 
         /// <summary>
         /// キーを指定する構文か？
@@ -2748,7 +2788,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Direction;
+        public override MapFunctionName? FunctionName => MapFunctionName.Direction;
 
         /// <summary>
         /// キーを指定する構文か？
@@ -2803,7 +2843,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Interpolate;
+        public override MapFunctionName? FunctionName => MapFunctionName.Interpolate;
 
         /// <summary>
         /// キーを指定する構文か？
@@ -2870,7 +2910,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Set;
+        public override MapFunctionName? FunctionName => MapFunctionName.Set;
 
         /// <summary>
         /// キーを指定する構文か？
@@ -2910,7 +2950,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Change;
+        public override MapFunctionName? FunctionName => MapFunctionName.Change;
 
         /// <summary>
         /// キーを指定する構文か？
@@ -2959,7 +2999,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Interpolate;
+        public override MapFunctionName? FunctionName => MapFunctionName.Interpolate;
 
         /// <summary>
         /// キーを指定する構文か？
@@ -3008,7 +3048,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Set;
+        public override MapFunctionName? FunctionName => MapFunctionName.Set;
 
         /// <summary>
         /// キーを指定する構文か？
@@ -3048,7 +3088,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Change;
+        public override MapFunctionName? FunctionName => MapFunctionName.Change;
 
         /// <summary>
         /// キーを指定する構文か？
@@ -3127,7 +3167,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Change;
+        public override MapFunctionName? FunctionName => MapFunctionName.Change;
 
         /// <summary>
         /// キーを指定する構文か？
@@ -3188,7 +3228,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Load;
+        public override MapFunctionName? FunctionName => MapFunctionName.Load;
 
         /// <summary>
         /// キーを指定する構文か？
@@ -3237,7 +3277,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Play;
+        public override MapFunctionName? FunctionName => MapFunctionName.Play;
 
         /// <summary>
         /// キーを指定する構文か？
@@ -3283,7 +3323,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Load;
+        public override MapFunctionName? FunctionName => MapFunctionName.Load;
 
         /// <summary>
         /// キーを指定する構文か？
@@ -3332,7 +3372,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Put;
+        public override MapFunctionName? FunctionName => MapFunctionName.Put;
 
         /// <summary>
         /// キーを指定する構文か？
@@ -3392,7 +3432,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Change;
+        public override MapFunctionName? FunctionName => MapFunctionName.Change;
 
         /// <summary>
         /// キーを指定する構文か？
@@ -3441,7 +3481,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Change;
+        public override MapFunctionName? FunctionName => MapFunctionName.Change;
 
         /// <summary>
         /// キーを指定する構文か？
@@ -3490,7 +3530,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Play;
+        public override MapFunctionName? FunctionName => MapFunctionName.Play;
 
         /// <summary>
         /// キーを指定する構文か？
@@ -3539,7 +3579,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Add;
+        public override MapFunctionName? FunctionName => MapFunctionName.Add;
 
         /// <summary>
         /// キーを指定する構文か？
@@ -3606,7 +3646,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Load;
+        public override MapFunctionName? FunctionName => MapFunctionName.Load;
 
         /// <summary>
         /// キーを指定する構文か？
@@ -3672,7 +3712,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Enable;
+        public override MapFunctionName? FunctionName => MapFunctionName.Enable;
 
         /// <summary>
         /// キーを指定する構文か？
@@ -3732,7 +3772,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Stop;
+        public override MapFunctionName? FunctionName => MapFunctionName.Stop;
 
         /// <summary>
         /// キーを指定する構文か？
@@ -3804,7 +3844,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Settrack;
+        public override MapFunctionName? FunctionName => MapFunctionName.Settrack;
 
         /// <summary>
         /// キーを指定する構文か？
@@ -3864,7 +3904,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Fog;
+        public override MapFunctionName? FunctionName => MapFunctionName.Fog;
 
         /// <summary>
         /// キーを指定する構文か？
@@ -3937,7 +3977,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Curve;
+        public override MapFunctionName? FunctionName => MapFunctionName.Curve;
 
         /// <summary>
         /// キーを指定する構文か？
@@ -3992,7 +4032,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Pitch;
+        public override MapFunctionName? FunctionName => MapFunctionName.Pitch;
 
         /// <summary>
         /// キーを指定する構文か？
@@ -4041,7 +4081,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.Turn;
+        public override MapFunctionName? FunctionName => MapFunctionName.Turn;
 
         /// <summary>
         /// キーを指定する構文か？
@@ -4072,6 +4112,50 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 距離程を指定して新しいインスタンスを生成します。
         /// </summary>
         public LegacyTurnStatement(double distance) : base(distance) { }
+
+    }
+
+    /// <summary>
+    /// Include(FilePath);
+    /// </summary>
+    public partial class IncludeStatement : Statement
+    {
+        #region SyntaxInfo
+
+        /// <summary>
+        /// マップ要素名
+        /// </summary>
+        public override MapElementName ElementName => MapElementName.Include;
+
+        /// <summary>
+        /// キーを指定する構文か？
+        /// </summary>
+        public override bool HasKey => false;
+
+        /// <summary>
+        /// 副要素を指定する構文か？
+        /// </summary>
+        public override bool HasSubElement => false;
+        #endregion SyntaxInfo
+
+        #region Args
+
+        /// <summary>
+        /// 引数：挿入するMapファイルへの相対パス
+        /// </summary>
+        [Argument]
+        public string FilePath { get; set; }
+        #endregion Args
+
+        /// <summary>
+        /// 新しいインスタンスを生成します。
+        /// </summary>
+        public IncludeStatement() { }
+
+        /// <summary>
+        /// 距離程を指定して新しいインスタンスを生成します。
+        /// </summary>
+        public IncludeStatement(double distance) : base(distance) { }
 
     }
 }

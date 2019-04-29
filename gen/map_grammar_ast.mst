@@ -9,12 +9,12 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
 {{#states}}
 
     /// <summary>
-    /// {{elem}}{{^syntax1}}[{{key}}]{{/syntax1}}{{#syntax3}}.{{sub_elem}}{{/syntax3}}.{{func}}({{#args}}{{name}}{{#opt}}?{{/opt}}{{^last}}, {{/last}}{{/args}});
+    /// {{elem}}{{^syntax1}}[{{key}}]{{/syntax1}}{{#syntax3}}.{{sub_elem}}{{/syntax3}}{{^nofunc}}.{{func}}{{/nofunc}}({{#args}}{{name}}{{#opt}}?{{/opt}}{{^last}}, {{/last}}{{/args}});
     /// </summary>
 {{#deprecated}}
     [Deprecated]
 {{/deprecated}}
-    public partial class {{elem}}{{#syntax3}}{{sub_elem}}{{/syntax3}}{{func}}Node : {{^inheritance}}SyntaxNode{{/inheritance}}{{#inheritance}}{{inheritance}}Node{{/inheritance}}
+    public partial class {{elem}}{{#syntax3}}{{sub_elem}}{{/syntax3}}{{^nofunc}}{{func}}{{/nofunc}}Node : {{^inheritance}}SyntaxNode{{/inheritance}}{{#inheritance}}{{inheritance}}Node{{/inheritance}}
     {
         #region SyntaxInfo
 
@@ -29,11 +29,13 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// </summary>
         public override MapSubElementName? SubElementName => MapSubElementName.{{sub_elem}};
 {{/sub_elem}}
+{{^nofunc}}
 
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.{{func}};
+        public override MapFunctionName? FunctionName => MapFunctionName.{{func}};
+{{/nofunc}}
 
         /// <summary>
         /// キーを指定する構文か？
@@ -73,7 +75,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// </summary>
         /// <param name="start"></param>
         /// <param name="stop"></param>
-        public {{elem}}{{#syntax3}}{{sub_elem}}{{/syntax3}}{{func}}Node(IToken start, IToken stop) : base(start, stop) { }
+        public {{elem}}{{#syntax3}}{{sub_elem}}{{/syntax3}}{{^nofunc}}{{func}}{{/nofunc}}Node(IToken start, IToken stop) : base(start, stop) { }
     }
 {{/states}}
 }

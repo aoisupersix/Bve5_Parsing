@@ -8,9 +8,9 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
 {{#states}}
 
     /// <summary>
-    /// {{elem}}{{^syntax1}}[{{key}}]{{/syntax1}}{{#syntax3}}.{{sub_elem}}{{/syntax3}}.{{func}}({{#args}}{{name}}{{#opt}}?{{/opt}}{{^last}}, {{/last}}{{/args}});
+    /// {{elem}}{{^syntax1}}[{{key}}]{{/syntax1}}{{#syntax3}}.{{sub_elem}}{{/syntax3}}{{^nofunc}}.{{func}}{{/nofunc}}({{#args}}{{name}}{{#opt}}?{{/opt}}{{^last}}, {{/last}}{{/args}});
     /// </summary>
-    public partial class {{elem}}{{#syntax3}}{{sub_elem}}{{/syntax3}}{{func}}Statement : {{^inheritance}}Statement{{/inheritance}}{{#inheritance}}{{inheritance}}Statement{{/inheritance}}
+    public partial class {{elem}}{{#syntax3}}{{sub_elem}}{{/syntax3}}{{^nofunc}}{{func}}{{/nofunc}}Statement : {{^inheritance}}Statement{{/inheritance}}{{#inheritance}}{{inheritance}}Statement{{/inheritance}}
     {
         #region SyntaxInfo
 
@@ -25,11 +25,13 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// </summary>
         public override MapSubElementName? SubElementName => MapSubElementName.{{sub_elem}};
 {{/sub_elem}}
+{{^nofunc}}
 
         /// <summary>
         /// 関数名
         /// </summary>
-        public override MapFunctionName FunctionName => MapFunctionName.{{func}};
+        public override MapFunctionName? FunctionName => MapFunctionName.{{func}};
+{{/nofunc}}
 
         /// <summary>
         /// キーを指定する構文か？
@@ -67,12 +69,12 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// 新しいインスタンスを生成します。
         /// </summary>
-        public {{elem}}{{#syntax3}}{{sub_elem}}{{/syntax3}}{{func}}Statement() { }
+        public {{elem}}{{#syntax3}}{{sub_elem}}{{/syntax3}}{{^nofunc}}{{func}}{{/nofunc}}Statement() { }
 
         /// <summary>
         /// 距離程を指定して新しいインスタンスを生成します。
         /// </summary>
-        public {{elem}}{{#syntax3}}{{sub_elem}}{{/syntax3}}{{func}}Statement(double distance) : base(distance) { }
+        public {{elem}}{{#syntax3}}{{sub_elem}}{{/syntax3}}{{^nofunc}}{{func}}{{/nofunc}}Statement(double distance) : base(distance) { }
 
     }
 {{/states}}

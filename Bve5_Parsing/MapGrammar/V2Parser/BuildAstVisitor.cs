@@ -798,7 +798,21 @@ namespace Bve5_Parsing.MapGrammar.V2Parser
         /// <returns>構文ASTノード</returns>
         public override MapGrammarAstNodes VisitSpeedlimit([NotNull] SpeedlimitContext context)
         {
-            return SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Speedlimit, context.func.Text);
+            var node = SyntaxNode.CreateSyntaxAstNode(this, context, MapElementName.Speedlimit, context.func.Text);
+
+            if (node.FunctionName == MapFunctionName.Setsignal)
+            {
+                //Speedlimit.Setsignalは手動対応
+                var setSignalNode = node as SpeedlimitSetsignalNode;
+                setSignalNode.AddSpeedLimit(Visit(context.nullableExpr()));
+                foreach (var spdLmt in context.exprArgs())
+                {
+                    setSignalNode.AddSpeedLimit(Visit(spdLmt));
+                }
+                return setSignalNode;
+            }
+
+            return node;
         }
 
         /// <summary>

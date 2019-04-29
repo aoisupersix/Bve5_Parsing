@@ -18,34 +18,34 @@ namespace Bve5_ParsingTests
 {{#states}}
 
         /// <summary>
-        /// {{elem}}{{^syntax1}}[{{key}}]{{/syntax1}}{{#syntax3}}.{{sub_elem}}{{/syntax3}}.{{func}}({{#args}}{{name}}{{#opt}}?{{/opt}}{{^last}}, {{/last}}{{/args}});
+        /// {{elem}}{{^syntax1}}[{{key}}]{{/syntax1}}{{#syntax3}}.{{sub_elem}}{{/syntax3}}{{^nofunc}}.{{func}}{{/nofunc}}({{#args}}{{name}}{{#opt}}?{{/opt}}{{^last}}, {{/last}}{{/args}});
         /// </summary>
         [Fact]
-        public void {{elem}}{{#syntax3}}{{sub_elem}}{{/syntax3}}{{func}}Test()
+        public void {{elem}}{{#syntax3}}{{sub_elem}}{{/syntax3}}{{^nofunc}}{{func}}{{/nofunc}}Test()
         {
 {{#skip_test}}
             /*
              * THIS TEST IS SKIPPED.
              * この構文のテストは諸事情によりテストの自動生成から外されました。
-             * {{elem}}{{^syntax1}}[{{key}}]{{/syntax1}}{{#syntax3}}.{{sub_elem}}{{/syntax3}}.{{func}}({{#args}}{{name}}{{#opt}}?{{/opt}}{{^last}}, {{/last}}{{/args}})構文のテストは手動で作成してください。
+             * {{elem}}{{^syntax1}}[{{key}}]{{/syntax1}}{{#syntax3}}.{{sub_elem}}{{/syntax3}}{{^nofunc}}.{{func}}{{/nofunc}}({{#args}}{{name}}{{#opt}}?{{/opt}}{{^last}}, {{/last}}{{/args}})構文のテストは手動で作成してください。
              */
 {{/skip_test}}
 {{^skip_test}}
 {{#argPattern}}
 
-            // {{elem}}{{^syntax1}}[{{key}}]{{/syntax1}}{{#syntax3}}.{{sub_elem}}{{/syntax3}}.{{func}}({{#args}}{{name}}{{^last}}, {{/last}}{{/args}});
+            // {{elem}}{{^syntax1}}[{{key}}]{{/syntax1}}{{#syntax3}}.{{sub_elem}}{{/syntax3}}{{^nofunc}}.{{func}}{{/nofunc}}({{#args}}{{name}}{{^last}}, {{/last}}{{/args}});
             Check(
 {{#useV2Parser}}
-                ExecParse("BveTs Map {{version}}\n0;{{elem}}{{^syntax1}}['{{key}}']{{/syntax1}}{{#syntax3}}.{{sub_elem}}{{/syntax3}}.{{func}}({{#args}}{{{test_value_map_grammar}}}{{^last}}, {{/last}}{{/args}});"),
+                ExecParse("BveTs Map {{version}}\n0;{{elem}}{{^syntax1}}['{{key}}']{{/syntax1}}{{#syntax3}}.{{sub_elem}}{{/syntax3}}{{^nofunc}}.{{func}}{{/nofunc}}({{#args}}{{{test_value_map_grammar}}}{{^last}}, {{/last}}{{/args}});"),
 {{/useV2Parser}}
 {{#useV1Parser}}
-                ExecParse("BveTs Map {{version}}\n0;{{elem}}{{^syntax1}}[{{key}}]{{/syntax1}}{{#syntax3}}.{{sub_elem}}{{/syntax3}}.{{func}}({{#args}}{{{test_value_map_grammar_non_quote}}}{{^last}}, {{/last}}{{/args}});"),
+                ExecParse("BveTs Map {{version}}\n0;{{elem}}{{^syntax1}}[{{key}}]{{/syntax1}}{{#syntax3}}.{{sub_elem}}{{/syntax3}}{{^nofunc}}.{{func}}{{/nofunc}}({{#args}}{{{test_value_map_grammar_non_quote}}}{{^last}}, {{/last}}{{/args}});"),
 {{/useV1Parser}}
                 new MapData(
                     version: "{{version}}",
                     syntaxes: new List<Statement>()
                     {
-                        new {{elem}}{{#syntax3}}{{sub_elem}}{{/syntax3}}{{func}}Statement(0)
+                        new {{elem}}{{#syntax3}}{{sub_elem}}{{/syntax3}}{{^nofunc}}{{func}}{{/nofunc}}Statement(0)
                         {
 {{#key}}
                             Key = "{{key}}",

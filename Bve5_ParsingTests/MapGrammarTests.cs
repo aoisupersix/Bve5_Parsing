@@ -811,6 +811,26 @@ BeginTransition
                     {
                         new SignalSpeedlimitStatement(0).SetSpdLmt(0,1,2)
                     }));
+
+            //Signal.Speedlimit(v0);
+            Check(
+                ExecParse("BveTs Map 1.00\n0;Signal.SpeedLimit(0);"),
+                new MapData(
+                    version: "1.00",
+                    syntaxes: new List<Statement>()
+                    {
+                        new SignalSpeedlimitStatement(0).SetSpdLmt(0)
+                    }));
+
+            //Signal.Speedlimit(v0, v1, v2);
+            Check(
+                ExecParse("BveTs Map 1.00\n0;Signal.SpeedLimit(0, 1, 2);"),
+                new MapData(
+                    version: "1.00",
+                    syntaxes: new List<Statement>()
+                    {
+                        new SignalSpeedlimitStatement(0).SetSpdLmt(0,1,2)
+                    }));
         }
 
         /// <summary>
@@ -977,6 +997,73 @@ BeginTransition
                             Tilt = 6,
                             Span = 7,
                         }
+                    }));
+        }
+
+        /// <summary>
+        /// Speedlimit.Setsignal();
+        /// </summary>
+        [Fact]
+        public void SpeedlimitSetsignalTest()
+        {
+            //Speedlimit.Setsignal(v0);
+            Check(
+                ExecParse("BveTs Map 2.02\n0;SpeedLimit.SetSignal(0);"),
+                new MapData(
+                    version: "2.02",
+                    syntaxes: new List<Statement>()
+                    {
+                        new SpeedlimitSetsignalStatement(0).SetSpdLmt(0)
+                    }));
+
+            //Speedlimit.Setsignal(v0, v1, v2);
+            Check(
+                ExecParse("BveTs Map 2.02\n0;SpeedLimit.SetSignal(0, 1, 2);"),
+                new MapData(
+                    version: "2.02",
+                    syntaxes: new List<Statement>()
+                    {
+                        new SpeedlimitSetsignalStatement(0).SetSpdLmt(0,1,2)
+                    }));
+
+            //Speedlimit.Setsignal(v0);
+            Check(
+                ExecParse("BveTs Map 2.00\n0;SpeedLimit.SetSignal(0);"),
+                new MapData(
+                    version: "2.00",
+                    syntaxes: new List<Statement>()
+                    {
+                        new SpeedlimitSetsignalStatement(0).SetSpdLmt(0)
+                    }));
+
+            //Speedlimit.Setsignal(v0, v1, v2);
+            Check(
+                ExecParse("BveTs Map 2.00\n0;SpeedLimit.SetSignal(0, 1, 2);"),
+                new MapData(
+                    version: "2.00",
+                    syntaxes: new List<Statement>()
+                    {
+                        new SpeedlimitSetsignalStatement(0).SetSpdLmt(0,1,2)
+                    }));
+
+            //Speedlimit.Setsignal(v0);
+            Check(
+                ExecParse("BveTs Map 1.00\n0;SpeedLimit.SetSignal(0);"),
+                new MapData(
+                    version: "1.00",
+                    syntaxes: new List<Statement>()
+                    {
+                        new SpeedlimitSetsignalStatement(0).SetSpdLmt(0)
+                    }));
+
+            //Speedlimit.Setsignal(v0, v1, v2);
+            Check(
+                ExecParse("BveTs Map 1.00\n0;SpeedLimit.SetSignal(0, 1, 2);"),
+                new MapData(
+                    version: "1.00",
+                    syntaxes: new List<Statement>()
+                    {
+                        new SpeedlimitSetsignalStatement(0).SetSpdLmt(0,1,2)
                     }));
         }
 
@@ -1421,6 +1508,39 @@ BeginTransition
                         {
                             Key = "track",
                             Time = "10:00:00",
+                        }
+                    }));
+        }
+
+        /// <summary>
+        /// Include FilePath;
+        /// </summary>
+        [Fact]
+        public void IncludeTest()
+        {
+            //Include FilePath;
+            Check(
+                ExecParse("BveTs Map 2.02\n0;Include 'path';"),
+                new MapData(
+                    version: "2.02",
+                    syntaxes: new List<Statement>()
+                    {
+                        new IncludeStatement(0)
+                        {
+                            FilePath = "path"
+                        }
+                    }));
+
+            //Include FilePath;
+            Check(
+                ExecParse("BveTs Map 2.00\n0;Include 'path';"),
+                new MapData(
+                    version: "2.00",
+                    syntaxes: new List<Statement>()
+                    {
+                        new IncludeStatement(0)
+                        {
+                            FilePath = "path"
                         }
                     }));
         }

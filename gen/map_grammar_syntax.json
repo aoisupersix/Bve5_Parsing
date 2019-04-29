@@ -860,6 +860,20 @@
       "args": []
     },
     {
+      "_comment": "vに関しては手動で対応する。",
+      "elem": "Speedlimit",
+      "func": "Setsignal",
+      "skip_test": true,
+      "deprecated": true,
+      "inheritance": "SectionSetspeedlimit",
+      "versions": [
+        "2.02",
+        "2.00",
+        "1.00"
+      ],
+      "args": []
+    },
+    {
       "elem": "Signal",
       "func": "Load",
       "skip_test": true,
@@ -1680,6 +1694,22 @@
           "type": "double?",
           "desc": "傾き(+: 右, -: 左)",
           "opt": true
+        }
+      ]
+    },
+    {
+      "elem": "Include",
+      "skip_test": true,
+      "versions": [
+        "2.02",
+        "2.00"
+      ],
+      "args": [
+        {
+          "name": "FilePath",
+          "type": "string",
+          "desc": "挿入するMapファイルへの相対パス",
+          "opt": false
         }
       ]
     }

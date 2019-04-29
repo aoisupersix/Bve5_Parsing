@@ -72,16 +72,16 @@ namespace Bve5_Parsing.MapGrammar {
         Signal,
 
         /// <summary>
-        /// Beacon
-        /// </summary>
-        [StringValue("Beacon")]
-        Beacon,
-
-        /// <summary>
         /// Speedlimit
         /// </summary>
         [StringValue("Speedlimit")]
         Speedlimit,
+
+        /// <summary>
+        /// Beacon
+        /// </summary>
+        [StringValue("Beacon")]
+        Beacon,
 
         /// <summary>
         /// Pretrain
@@ -166,6 +166,12 @@ namespace Bve5_Parsing.MapGrammar {
         /// </summary>
         [StringValue("Legacy")]
         Legacy,
+
+        /// <summary>
+        /// Include
+        /// </summary>
+        [StringValue("Include")]
+        Include,
     }
 
     /// <summary>
@@ -328,6 +334,12 @@ namespace Bve5_Parsing.MapGrammar {
         /// </summary>
         [StringValue("Speedlimit")]
         Speedlimit,
+
+        /// <summary>
+        /// Setsignal（Setsignal）
+        /// </summary>
+        [StringValue("Setsignal")]
+        Setsignal,
 
         /// <summary>
         /// Pass（Pass）

@@ -246,7 +246,7 @@ namespace Bve5_Parsing.MapGrammar
         /// Item1にバージョン情報、Item2にエンコーディング、Item3にステートメント開始インデックスを返します。
         /// 引数に与えられた文字列が有効なマップファイルでない場合はバージョン情報がnullのタプルを返します。
         /// </returns>
-        protected Tuple<string, string, int> GetHeaderInfo(string input)
+        protected internal Tuple<string, string, int> GetHeaderInfo(string input)
         {
             string header = input.Replace("\r\n", "\n").Replace("\r", "\n").Split('\n').FirstOrDefault();
             if (string.IsNullOrEmpty(header) || header.Length < 14 || header.Substring(0, 9).ToLower() != "bvets map")
