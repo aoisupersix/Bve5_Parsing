@@ -101,18 +101,9 @@ namespace Bve5_Parsing.MapGrammar
         /// 引数に与えられたマップ構文文字列の構文解析と評価を行い、MapDataを生成します。
         /// </summary>
         /// <param name="input">解析するマップ構文を表す文字列</param>
-        public MapData Parse(string input)
-        {
-            return Parse(input, MapGrammarParserOption.None);
-        }
-
-        /// <summary>
-        /// 引数に与えられたマップ構文文字列の構文解析と評価を行い、MapDataを生成します。
-        /// </summary>
-        /// <param name="input">解析するマップ構文を表す文字列</param>
         /// <param name="option"></param>
         /// <returns></returns>
-        public MapData Parse(string input, MapGrammarParserOption option)
+        public MapData Parse(string input, MapGrammarParserOption option = MapGrammarParserOption.None)
         {
             if (option.HasFlag(MapGrammarParserOption.ParseIncludeSyntaxRecursively))
                 option &= MapGrammarParserOption.ParseIncludeSyntaxRecursively; // Include対応はできないのでOptionを削除する
@@ -124,19 +115,9 @@ namespace Bve5_Parsing.MapGrammar
         /// 引数に与えられたマップ構文ファイルの構文解析と評価を行い、MapDataを生成します。
         /// </summary>
         /// <param name="filePath">解析するマップ構文のファイルパス</param>
-        /// <returns></returns>
-        public MapData ParseFromFile(string filePath)
-        {
-            return ParseFromFile(filePath, MapGrammarParserOption.None);
-        }
-
-        /// <summary>
-        /// 引数に与えられたマップ構文ファイルの構文解析と評価を行い、MapDataを生成します。
-        /// </summary>
-        /// <param name="filePath">解析するマップ構文のファイルパス</param>
         /// <param name="option"></param>
         /// <returns></returns>
-        public MapData ParseFromFile(string filePath, MapGrammarParserOption option)
+        public MapData ParseFromFile(string filePath, MapGrammarParserOption option = MapGrammarParserOption.None)
         {
             var fileInfo = new FileInfo(filePath);
 #if NETSTANDARD2_0
@@ -158,7 +139,7 @@ namespace Bve5_Parsing.MapGrammar
         /// <param name="filePath">解析するマップ構文のファイルパス</param>
         /// <param name="option"></param>
         /// <returns></returns>
-        public MapData Parse(string input, string filePath, MapGrammarParserOption option)
+        public MapData Parse(string input, string filePath, MapGrammarParserOption option = MapGrammarParserOption.None)
         {
             Tuple<string, string, int> headerInfo = GetHeaderInfo(input);
 
