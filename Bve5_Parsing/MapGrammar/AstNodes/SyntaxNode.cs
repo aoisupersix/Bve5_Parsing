@@ -17,11 +17,13 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     {
         /// <summary>
         /// マップ要素名
+        /// マップ要素名は全ての構文に存在します。
         /// </summary>
         public abstract MapElementName ElementName { get; }
 
         /// <summary>
         /// マップ関数名
+        /// Includeディレクティブのみ関数名が存在しません。
         /// </summary>
         public virtual MapFunctionName? FunctionName => null;
 
@@ -107,7 +109,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         }
 
         /// <summary>
-        /// メタ情報から対応するAstを生成して返します。
+        /// メタ情報から対応するAstを生成して返す便利メソッド。
         /// MapGrammarParserの定義ファイル更新時に使えなくなる可能性が高いため、更新時は注意して下さい。
         /// </summary>
         /// <param name="visitor"></param>

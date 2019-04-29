@@ -7,7 +7,8 @@ using System.Collections.ObjectModel;
 namespace Bve5_Parsing.MapGrammar.AstNodes
 {
     /// <summary>
-    /// ルートノード
+    /// マップ構文ASTの親となるノード。
+    /// 一つのマップファイルに含まれる全構文を子に持ちます。
     /// </summary>
     public class RootNode : MapGrammarAstNodes
     {
