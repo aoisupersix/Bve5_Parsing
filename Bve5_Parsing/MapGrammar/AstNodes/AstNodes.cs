@@ -13,6 +13,18 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     public class RootNode : MapGrammarAstNodes
     {
         /// <summary>
+        /// バージョン情報
+        /// マップファイルのヘッダはパースされないので、ASTに変換した後に手動で代入します。
+        /// </summary>
+        public string Version { get; set; }
+
+        /// <summary>
+        /// ファイルのエンコーディング情報
+        /// マップファイルのヘッダはパースされないので、ASTに変換した後に手動で代入します。
+        /// </summary>
+        public string Encoding { get; set; }
+
+        /// <summary>
         /// ステートメントASTノードの内部実装
         /// </summary>
         protected List<MapGrammarAstNodes> _statementList = new List<MapGrammarAstNodes>();

@@ -141,6 +141,27 @@ namespace Bve5_Parsing.MapGrammar
         /// <returns></returns>
         public MapData Parse(string input, string filePath, MapGrammarParserOption option = MapGrammarParserOption.None)
         {
+            MapGrammarAstNodes ast = ParseToAst(input, filePath, option);
+            MapData value = option.HasFlag(MapGrammarParserOption.ParseIncludeSyntaxRecursively) ?
+                (MapData)new EvaluateMapGrammarVisitorWithInclude(Store, Path.GetDirectoryName(filePath), _parserError).Visit(ast) : // Includeを再帰的にパースする
+                (MapData)new EvaluateMapGrammarVisitor(Store, _parserError).Visit(ast)
+                ;
+
+            if (value == null)
+                return null;
+
+            return value;
+        }
+
+        /// <summary>
+        /// 引数に与えられたマップ構文の構文解析を行い、ASTを生成します。
+        /// </summary>
+        /// <param name="input">解析するマップ構文のステートメントを表す文字列</param>
+        /// <param name="filePath">解析するマップ構文のファイルパス</param>
+        /// <param name="versionString">パーサを指定するためのバージョン文字列（省略した場合は2.02を利用します）</param>
+        /// <returns></returns>
+        public MapGrammarAstNodes ParseToAst(string input, string filePath = null, MapGrammarParserOption option = MapGrammarParserOption.None)
+        {
             Tuple<string, string, int> headerInfo = GetHeaderInfo(input);
 
             if (option.HasFlag(MapGrammarParserOption.NoHeader))
@@ -159,36 +180,11 @@ namespace Bve5_Parsing.MapGrammar
             if (option.HasFlag(MapGrammarParserOption.ClearVariables))
                 Store.ClearVar();
 
-            MapGrammarAstNodes ast = ParseToAst(input.Substring(headerInfo.Item3), filePath, headerInfo.Item1);
-            MapData value = option.HasFlag(MapGrammarParserOption.ParseIncludeSyntaxRecursively) ?
-                (MapData)new EvaluateMapGrammarVisitorWithInclude(Store, Path.GetDirectoryName(filePath), _parserError).Visit(ast) : // Includeを再帰的にパースする
-                (MapData)new EvaluateMapGrammarVisitor(Store, _parserError).Visit(ast)
-                ;
-
-            if (value == null)
-                return null;
-
-            value.Version = headerInfo.Item1;
-            if (headerInfo.Item2 != null)
-                value.Encoding = headerInfo.Item2;
-
-            return value;
-        }
-
-        /// <summary>
-        /// 引数に与えられたマップ構文の構文解析を行い、ASTを生成します。
-        /// </summary>
-        /// <param name="input">解析するマップ構文のステートメントを表す文字列</param>
-        /// <param name="filePath">解析するマップ構文のファイルパス</param>
-        /// <param name="versionString">パーサを指定するためのバージョン文字列（省略した場合は2.02を利用します）</param>
-        /// <returns></returns>
-        public MapGrammarAstNodes ParseToAst(string input, string filePath = null, string versionString = null)
-        {
-            var inputStream = new AntlrInputStream(input);
+            var inputStream = new AntlrInputStream(input.Substring(headerInfo.Item3));
 
             ErrorListener.Errors.Clear();
-            MapGrammarAstNodes ast = null;
-            if (versionString != null && (versionString[0] == '1' || versionString[0] == '0'))
+            RootNode ast = null;
+            if (headerInfo.Item1 != null && (headerInfo.Item1[0] == '1' || headerInfo.Item1[0] == '0'))
             {
                 // V1Parser
                 var lexer = new V1Parser.SyntaxDefinitions.MapGrammarV1Lexer(inputStream);
@@ -199,7 +195,7 @@ namespace Bve5_Parsing.MapGrammar
                 parser.ErrorHandler = new V1Parser.V1ParserErrorStrategy(filePath);
                 var cst = parser.root();
                 if (cst == null) { return null; }
-                ast = new V1Parser.BuildAstVisitor().VisitRoot(cst);
+                ast = new V1Parser.BuildAstVisitor().VisitRoot(cst) as RootNode;
             }
             else
             {
@@ -212,8 +208,14 @@ namespace Bve5_Parsing.MapGrammar
                 parser.ErrorHandler = new V2Parser.V2ParserErrorStrategy(filePath);
                 var cst = parser.root();
                 if (cst == null) { return null; }
-                ast = new V2Parser.BuildAstVisitor().VisitRoot(cst);
+                ast = new V2Parser.BuildAstVisitor().VisitRoot(cst) as RootNode;
             }
+
+            // バージョン情報とエンコーディング情報の代入
+            // TODO: ここで代入するのはおかしい気がする
+            ast.Version = headerInfo.Item1;
+            if (headerInfo.Item2 != null)
+                ast.Encoding = headerInfo.Item2;
 
             return ast;
         }

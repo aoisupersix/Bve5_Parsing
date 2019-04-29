@@ -58,6 +58,9 @@ namespace Bve5_Parsing.MapGrammar
         {
             evaluateData = new MapData();
 
+            evaluateData.Version = node.Version;
+            evaluateData.Encoding = node.Encoding;
+
             foreach (var state in node.StatementList)
             {
                 object childData = Visit(state);
@@ -1026,6 +1029,8 @@ namespace Bve5_Parsing.MapGrammar
         {
             var returnData = (IncludeStatement)base.Visit(node);
             var path = returnData.FilePath;
+
+            #region Include先を再帰的にパース(ここの処理、MapGrammarParserにParseToAstFormFileメソッドを用意した方がいいかも)
             if (path == null)
             {
                 Errors.Add(node.CreateNewError($"ファイルパスが指定されていません。"));
@@ -1055,8 +1060,7 @@ namespace Bve5_Parsing.MapGrammar
 
                 // Include先構文を評価して追加
                 var parser = new MapGrammarParser();
-                var headerInfo = parser.GetHeaderInfo(includeText);
-                var includeAst = parser.ParseToAst(includeText.Substring(headerInfo.Item3), absolutePath, headerInfo.Item1);
+                var includeAst = parser.ParseToAst(includeText, absolutePath, MapGrammarParser.MapGrammarParserOption.ParseIncludeSyntaxRecursively);
                 parser.ParserErrors.ToList().ForEach(err => Errors.Add(err));
                 var evaluator = new EvaluateMapGrammarVisitorWithInclude(Store, dirAbsolutePath, Errors, NowDistance);
                 var includeData = (MapData)evaluator.Visit(includeAst);
@@ -1065,6 +1069,9 @@ namespace Bve5_Parsing.MapGrammar
                 evaluateData.OverwriteListPath(includeData);
                 NowDistance = evaluator.NowDistance;
             }
+
+            #endregion
+
             return null;
         }
     }
