@@ -1,14 +1,18 @@
 {
-  "name": "grammarautogen",
+  "name": "bve5gen",
   "version": "1.0.0",
-  "description": "",
+  "description": "It automatically generates various files from the definition of Bve5 syntax.",
   "main": "createMapGrammarTemplate.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "tslint 'src/**/*.ts'"
   },
-  "author": "",
+  "author": "aoisupersix",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aoisupersix/Bve5_Parsing"
+  },
   "dependencies": {
     "fs": "0.0.1-security",
     "linq": "^3.1.1",
