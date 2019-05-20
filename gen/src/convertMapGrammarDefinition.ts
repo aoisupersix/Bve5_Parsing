@@ -18,7 +18,7 @@ export enum ArgType {
 /**
  * マップ構文定義ファイルから色々な情報を付加した中間出力を生成します。
  */
-export function convert(mapGrammarData: MapStatement[]) : MapStatement[] {
+export const convert = (mapGrammarData: MapStatement[]) : MapStatement[] => {
   const result = mapGrammarData.map(setSyntaxType)
 
   return result
@@ -27,7 +27,7 @@ export function convert(mapGrammarData: MapStatement[]) : MapStatement[] {
 /**
  * 構文種別をステートメントに設定します。
  */
-function setSyntaxType(element: MapStatement, index: number, array: MapStatement[]): MapStatement {
+const setSyntaxType = (element: MapStatement, index: number, array: MapStatement[]): MapStatement => {
   if (element.key === undefined) {
     element.syntax1 = true
     element.syntax2 = false
@@ -47,7 +47,7 @@ function setSyntaxType(element: MapStatement, index: number, array: MapStatement
 /**
  * テスト値を生成して引数に設定します。
  */
-function setTestValue(element: MapStatement, index: number, array: MapStatement[]): MapStatement {
+const setTestValue = (element: MapStatement, index: number, array: MapStatement[]): MapStatement => {
   element.args.forEach((val, idx, ary) => {
     const nullable = val.type.slice(-1) === '?' // null許容かどうか. 今は特に処理なし
     switch (val.type.replace('?', '').toLowerCase()) {
