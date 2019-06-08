@@ -45,9 +45,9 @@ namespace Bve5_ParsingTests
                 if (exp.HasKey)
                     Assert.Equal(exp.GetType().GetProperty("Key").GetValue(exp, null), act.GetType().GetProperty("Key").GetValue(act, null));
 
-                var args = exp.GetAllArguments()
+                var args = exp.GetArgumentProperties()
                     .Join(
-                        act.GetAllArguments(),
+                        act.GetArgumentProperties(),
                         e => e.Name,
                         a => a.Name,
                         (e, a) => new { exp = e.GetValue(exp, null), act = a.GetValue(act, null) });

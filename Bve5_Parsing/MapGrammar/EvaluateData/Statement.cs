@@ -60,11 +60,12 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData
         /// <param name="distance">距離程</param>
         public Statement(double distance) { Distance = distance; }
 
+        #region 引数
         /// <summary>
         /// 全引数の属性を取得します。
         /// </summary>
         /// <returns></returns>
-        protected internal IEnumerable<PropertyInfo> GetAllArguments()
+        protected internal IEnumerable<PropertyInfo> GetArgumentProperties()
         {
             return GetType().GetProperties()
                 .Select(p => new
@@ -78,6 +79,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData
                 .Select(p => p.Property)
                 ;
         }
+        #endregion
 
         /// <summary>
         /// ステートメントからSyntaxDataを生成して返します。
@@ -116,7 +118,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData
             }
 
             syntax.Function = funcName.ToLower();
-            foreach (var argument in GetAllArguments())
+            foreach (var argument in GetArgumentProperties())
             {
                 var val = argument.GetValue(this, null);
                 if (val == null)
