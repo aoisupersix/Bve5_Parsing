@@ -79,7 +79,8 @@ namespace Bve5_ParsingTests
             Assert.NotNull(data);
             Assert.Equal("2.02", data.Version);
             Assert.Single(data.Statements);
-            Assert.Equal("0", data.Statements[0].ToSyntaxData().Arguments["radius"] as string);
+            var val = data.Statements[0].ToSyntaxData().Arguments["radius"] as double?;
+            Assert.Equal(0, val.Value);
         }
     }
 }
