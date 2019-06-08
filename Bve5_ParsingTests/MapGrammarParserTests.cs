@@ -33,12 +33,12 @@ namespace Bve5_ParsingTests
 
             // Option.ParseIncludeSyntaxRecursively
             // このメソッドでは未対応なのでInclude先はパースされない
-            //data = parser.Parse(inputWithInclude, MapGrammarParserOption.ParseIncludeSyntaxRecursively);
-            //Assert.NotNull(data);
-            //Assert.Equal("2.02", data.Version);
-            //Assert.Single(data.Statements);
-            //Assert.False(data.Statements[0].FunctionName.HasValue);
-            //Assert.Equal(MapElementName.Include, data.Statements[0].ElementName);
+            data = parser.Parse(inputWithInclude, MapGrammarParserOption.ParseIncludeSyntaxRecursively);
+            Assert.NotNull(data);
+            Assert.Equal("2.02", data.Version);
+            Assert.Single(data.Statements);
+            Assert.False(data.Statements[0].FunctionName.HasValue);
+            Assert.Equal(MapElementName.Include, data.Statements[0].ElementName);
 
             // Option.ParseAsVersion1
             data = parser.Parse(inputV1, MapGrammarParserOption.ParseAsMapVersion1);

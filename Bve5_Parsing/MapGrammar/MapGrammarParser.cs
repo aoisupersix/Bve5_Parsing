@@ -57,12 +57,12 @@ namespace Bve5_Parsing.MapGrammar
             /// マップファイルのバージョンは最新の2.02として扱います。
             /// 特定のバージョンを指定したい場合は、ParseAsMapVersion1、もしくはParseAsMapVersion2を同時に指定して下さい。
             /// </summary>
-            NoHeader = 0x016,
+            NoHeader = 0x010,
 
             /// <summary>
             /// パース処理の前にパーサで管理している変数を初期化します。
             /// </summary>
-            ClearVariables = 0x032,
+            ClearVariables = 0x020,
         }
         #endregion
 
