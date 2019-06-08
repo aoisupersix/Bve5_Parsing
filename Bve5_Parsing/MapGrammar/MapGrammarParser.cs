@@ -106,7 +106,7 @@ namespace Bve5_Parsing.MapGrammar
         public MapData Parse(string input, MapGrammarParserOption option = MapGrammarParserOption.None)
         {
             if (option.HasFlag(MapGrammarParserOption.ParseIncludeSyntaxRecursively))
-                option &= MapGrammarParserOption.ParseIncludeSyntaxRecursively; // Include対応はできないのでOptionを削除する
+                option &= ~MapGrammarParserOption.ParseIncludeSyntaxRecursively; // Include対応はできないのでOptionを削除する
 
             return Parse(input, null, option);
         }
