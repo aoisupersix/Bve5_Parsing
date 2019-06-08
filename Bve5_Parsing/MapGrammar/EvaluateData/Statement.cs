@@ -87,7 +87,8 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData
         /// <returns></returns>
         public object GetArgumentValue(string name, bool isIgnoreCase = false)
         {
-            return GetArgumentProperty(name, isIgnoreCase)?.GetValue(this, null);
+            return GetArgumentProperty(name, isIgnoreCase, BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public)?
+                .GetValue(this, null);
         }
 
         /// <summary>
@@ -158,9 +159,9 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData
         /// <param name="name">引数名</param>
         /// <param name="isIgnoreCase">大文字小文字を無視するかどうか</param>
         /// <returns></returns>
-        protected internal PropertyInfo GetArgumentProperty(string name, bool isIgnoreCase = false)
+        protected internal PropertyInfo GetArgumentProperty(string name, bool isIgnoreCase = false, BindingFlags flags = BindingFlags.Default)
         {
-            return GetArgumentProperties()
+            return GetArgumentProperties(flags)
                 .Where(p => isIgnoreCase ? p.Name.ToLower() == name.ToLower() : p.Name == name)
                 .FirstOrDefault();
         }

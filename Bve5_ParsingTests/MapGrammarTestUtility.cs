@@ -1,6 +1,6 @@
 ﻿using Bve5_Parsing.MapGrammar;
 using Bve5_Parsing.MapGrammar.EvaluateData;
-using System;
+using System.Reflection;
 using System.Linq;
 using Xunit;
 
@@ -45,9 +45,9 @@ namespace Bve5_ParsingTests
                 if (exp.HasKey)
                     Assert.Equal(exp.GetType().GetProperty("Key").GetValue(exp, null), act.GetType().GetProperty("Key").GetValue(act, null));
 
-                var args = exp.GetArgumentProperties()
+                var args = exp.GetArgumentProperties(BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public)
                     .Join(
-                        act.GetArgumentProperties(),
+                        act.GetArgumentProperties(BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public),
                         e => e.Name,
                         a => a.Name,
                         (e, a) => new { exp = e.GetValue(exp, null), act = a.GetValue(act, null) });

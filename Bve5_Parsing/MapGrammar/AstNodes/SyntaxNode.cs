@@ -206,7 +206,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         /// <returns></returns>
         protected virtual Statement SetArgument(EvaluateMapGrammarVisitor evaluator, Statement statement)
         {
-            var args = statement.GetArgumentProperties().Join(
+            var args = statement.GetArgumentProperties(BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public).Join(
                 GetAllArguments(),
                 state => state.Name,
                 ast => ast.Name,
