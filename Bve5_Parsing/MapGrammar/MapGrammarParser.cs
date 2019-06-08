@@ -142,13 +142,15 @@ namespace Bve5_Parsing.MapGrammar
         public MapData Parse(string input, string filePath, MapGrammarParserOption option = MapGrammarParserOption.None)
         {
             MapGrammarAstNodes ast = ParseToAst(input, filePath, option);
+
+            if (ast == null) { return null; }
+
             MapData value = option.HasFlag(MapGrammarParserOption.ParseIncludeSyntaxRecursively) ?
                 (MapData)new EvaluateMapGrammarVisitorWithInclude(Store, Path.GetDirectoryName(filePath), _parserError).Visit(ast) : // Includeを再帰的にパースする
                 (MapData)new EvaluateMapGrammarVisitor(Store, _parserError).Visit(ast)
                 ;
 
-            if (value == null)
-                return null;
+            if (value == null) { return null; }
 
             return value;
         }
