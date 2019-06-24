@@ -35,6 +35,12 @@ export interface MapStatement {
   args: Argument[]
 
   /**
+   * 関数が取りうる引数のリスト
+   * カンマ区切りの文字列で、引数がない場合は空文字
+   */
+  argPatterns: string[]
+
+  /**
    * テストをスキップするか？
    */
   skip_test: boolean | undefined

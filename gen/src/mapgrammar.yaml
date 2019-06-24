@@ -7,6 +7,8 @@
       type: "double?"
       desc: "軌間 [m]"
       opt: false
+  argPatterns:
+    - "Value"
 - elem: Gauge
   func: Set
   deprecated: true
@@ -20,6 +22,8 @@
       type: "double?"
       desc: "軌間 [m]"
       opt: false
+  argPatterns:
+    - "Value"
 - elem: Curve
   func: Gauge
   deprecated: true
@@ -33,6 +37,8 @@
       type: "double?"
       desc: "軌間 [m]"
       opt: false
+  argPatterns:
+    - "Value"
 - elem: Curve
   func: Setcenter
   versions:
@@ -42,6 +48,8 @@
       type: "double?"
       desc: "回転中心の x 座標 [m] (正: 曲線の内側, 負: 曲線の外側)"
       opt: false
+  argPatterns:
+    - "X"
 - elem: Curve
   func: Setfunction
   versions:
@@ -51,6 +59,9 @@
       type: "double?"
       desc: "関数番号 (0: サイン半波長逓減, 1: 直線逓減)"
       opt: false
+  argPatterns:
+    - ""
+    - "Id"
 - elem: Curve
   func: Begintransition
   versions:
