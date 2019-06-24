@@ -29,7 +29,7 @@ export const convert = (mapGrammarData: MapStatement[]) : MapStatement[] => {
 /**
  * 構文種別をステートメントに設定します。
  */
-const setSyntaxType = (element: MapStatement, index: number, array: MapStatement[]): MapStatement => {
+const setSyntaxType = (element: MapStatement): MapStatement => {
   if (element.key === undefined) {
     element.syntax1 = true
     element.syntax2 = false
@@ -49,8 +49,8 @@ const setSyntaxType = (element: MapStatement, index: number, array: MapStatement
 /**
  * テスト値を生成して引数に設定します。
  */
-const setTestValue = (element: MapStatement, index: number, array: MapStatement[]): MapStatement => {
-  element.args.forEach((val, idx, ary) => {
+const setTestValue = (element: MapStatement): MapStatement => {
+  element.args.forEach((val) => {
     // const nullable = val.type.slice(-1) === '?' // null許容かどうか. 今は特に処理なし
     // 引数のバリデートを追加したらここも変更する必要あり
     switch (val.type.replace('?', '').toLowerCase()) {
