@@ -12,7 +12,7 @@ trim_trailing_whitespace = true
 # Solution Files
 [*.sln]
 indent_style = space
- 
+
 # XML Project Files
 [*.{csproj,vbproj,vcxproj,vcxproj.filters,proj,projitems,shproj}]
 indent_size = 2
@@ -20,13 +20,13 @@ indent_size = 2
 # Configuration Files
 [*.{json,xml,yml,config,props,targets,nuspec,resx,ruleset,vsixmanifest,vsct}]
 indent_size = 2
- 
+
 # Markdown Files
 [*.md]
 trim_trailing_whitespace = false
 
 # YAML Files
-[*.yml]
+[*.{yml,yaml}]
 indent_size = 2
 
 # Web Files
