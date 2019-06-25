@@ -1,4 +1,4 @@
-import { MapStatement } from './mapGrammarDefinition'
+import { MapStatement, Argument } from './mapGrammarDefinition'
 
 /**
  * 引数の型
@@ -22,6 +22,7 @@ export const convert = (mapGrammarData: MapStatement[]) : MapStatement[] => {
   const result = mapGrammarData
     .map(setSyntaxType)
     .map(setTestValue)
+    .map(setArgPattern)
 
   return result
 }
@@ -67,5 +68,42 @@ const setTestValue = (element: MapStatement): MapStatement => {
     }
   })
 
+  return element
+}
+
+/**
+ * 引数のパターンを生成します。
+ * @param element MapElement
+ */
+const setArgPattern = (element: MapStatement): MapStatement => {
+  // 引数なし
+  if (element.argPatterns === undefined) {
+    return element
+  }
+
+  const patterns = element.argPatterns.map((patternString) => {
+    const argPattern = patternString
+      .trim()
+      .split(',')
+      .filter(argName => argName !== '')
+      .map((argName) => {
+        const targets = element.args.filter(value => value.name.toLowerCase() === argName.toLowerCase())
+        //#region 例外処理
+        // TODO: Errorクラスの作成
+        if (targets.length < 1) {
+          console.error(`No matching argument was found. Argument name: ${argName}`)
+        }
+        if (targets.length > 1) {
+          const matchingArgNames = targets.reduce((prev, current) => `${prev}, ${current.name}`, '')
+          console.error(
+            `Argument name: ${argName} can not be uniquely identified. Maching arguments: ${matchingArgNames}`)
+        }
+        //#endregion 例外処理
+        return Object.assign({}, targets[0])
+      })
+    return argPattern
+  })
+
+  element.argPattern = patterns
   return element
 }

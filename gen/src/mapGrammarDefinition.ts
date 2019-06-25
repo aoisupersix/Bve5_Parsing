@@ -49,6 +49,11 @@ export interface MapStatement {
   // #region プログラムから追加する項目
 
   /**
+   * 引数のとり得るパターン（結果用）
+   */
+  argPattern: Argument[][]
+
+  /**
    * 小文字のマップ要素名
    */
   elem_lower: string
