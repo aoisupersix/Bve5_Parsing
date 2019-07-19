@@ -147,3 +147,30 @@ export interface Argument {
   test_value_csharp: string
   // #endregion
 }
+
+/**
+ * テストで使用する引数パターン
+ */
+export interface ArgumentPattern {
+
+  /**
+   * このパターンが使用する引数のリスト
+   * 必ず引数順に並んでいることとする
+   */
+  args: Argument[]
+
+  /**
+   * テストで使用するBveのマップファイルバージョン
+   */
+  version: string
+
+  /**
+   * テストでV1Parserを使用するか？
+   */
+  useV1Parser: boolean
+
+  /**
+   * テストでV2Parserを使用するか？
+   */
+  useV2Parser: boolean
+}
