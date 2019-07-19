@@ -44,3 +44,23 @@ export interface IMapDefinition {
    */
   skip_test: boolean | undefined
 }
+
+/**
+ * 引数に指定されたマップ構文定義がSyntax1かどうか
+ * @param mapDefinition マップ構文定義
+ */
+export const isSyntax1 = (mapDefinition: IMapDefinition): boolean => mapDefinition.key === undefined
+
+/**
+ * 引数に指定されたマップ構文定義がSyntax2かどうか
+ * @param mapDefinition マップ構文定義
+ */
+export const isSyntax2 = (mapDefinition: IMapDefinition): boolean =>
+  !isSyntax1(mapDefinition) && mapDefinition.sub_elem !== undefined
+
+/**
+ * 引数に指定されたマップ構文定義がSyntax3かどうか
+ * @param mapDefinition マップ構文定義
+ */
+export const isSyntax3 = (mapDefinition: IMapDefinition): boolean =>
+  !isSyntax1(mapDefinition) && !isSyntax2(mapDefinition)
