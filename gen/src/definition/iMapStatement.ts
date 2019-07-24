@@ -18,7 +18,7 @@ export interface IMapStatement extends IMapDefinition {
   /**
    * 小文字のマップ副要素名
    */
-  sub_elem_lower: string
+  sub_elem_lower: string | null
 
   /**
    * 小文字の関数名
