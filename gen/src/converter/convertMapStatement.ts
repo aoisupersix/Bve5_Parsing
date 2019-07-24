@@ -1,4 +1,4 @@
-import { IMapDefinition } from '../definition/iMapDefinition'
+import { IMapDefinition, isSyntax1, isSyntax2, isSyntax3 } from '../definition/iMapDefinition'
 import { IMapStatement } from '../definition/iMapStatement'
 
 /**
@@ -15,5 +15,11 @@ export const convertMapStatements = (mapDefinitions: IMapDefinition[]): IMapStat
  */
 export const convertMapStatemnet = (mapDefinition: IMapDefinition): IMapStatement => {
   const statement: IMapStatement = <any>mapDefinition
+
+  // 種別判定
+  statement.syntax1 = isSyntax1(mapDefinition)
+  statement.syntax2 = isSyntax2(mapDefinition)
+  statement.syntax3 = isSyntax3(mapDefinition)
+
   return statement
 }
