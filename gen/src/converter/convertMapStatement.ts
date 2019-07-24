@@ -1,6 +1,8 @@
 import * as mapDef from '../definition/iMapDefinition'
 import { IMapStatement } from '../definition/iMapStatement'
 import { convertArguments } from './convertArgument';
+import { IArgumentPattern } from '../definition/iArgumentPattern';
+import { IArgument } from '../definition/iArgument';
 
 /**
  * 引数に指定された全てのマップ構文定義をIMapStatementに変換します。
@@ -37,4 +39,39 @@ export const convertMapStatemnet = (mapDefinition: mapDef.IMapDefinition): IMapS
   statement.args = convertArguments(mapDefinition.args)
 
   return statement
+}
+
+/**
+ * ArgumentPatternを生成します。
+ * @param patternString 引数名のカンマ区切り
+ * @param version 使用するマップファイルバージョン
+ * @param targetArguments 構文がとり得る引数
+ */
+const createArgPattern = (patternString: string, version: string, targetArguments: IArgument[]): IArgumentPattern => {
+  const args = patternString
+      .trim()
+      .split(',')
+      .filter(argName => argName !== '')
+      .map((argName) => {
+        const targets = targetArguments.filter(arg => arg.name.toLowerCase() === argName.toLowerCase())
+        //#region 例外処理
+        // TODO: Errorクラスの作成
+        if (targets.length < 1) {
+          console.error(`No matching argument was found. Argument name: ${argName}`)
+        }
+        if (targets.length > 1) {
+          const matchingArgNames = targets.reduce((prev, current) => `${prev}, ${current.name}`, '')
+          console.error(
+            `Argument name: ${argName} can not be uniquely identified. Maching arguments: ${matchingArgNames}`)
+        }
+        //#endregion 例外処理
+        return Object.assign({}, targets[0])
+      })
+
+  return {
+    args: args,
+    version: version,
+    useV1Parser: false, // TODO
+    useV2Parser: true,
+  }
 }
