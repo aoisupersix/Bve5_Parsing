@@ -1,5 +1,6 @@
 import { IMapDefinition, isSyntax1, isSyntax2, isSyntax3 } from '../definition/iMapDefinition'
 import { IMapStatement } from '../definition/iMapStatement'
+import { convertArguments } from './convertArgument';
 
 /**
  * 引数に指定された全てのマップ構文定義をIMapStatementに変換します。
@@ -20,6 +21,9 @@ export const convertMapStatemnet = (mapDefinition: IMapDefinition): IMapStatemen
   statement.syntax1 = isSyntax1(mapDefinition)
   statement.syntax2 = isSyntax2(mapDefinition)
   statement.syntax3 = isSyntax3(mapDefinition)
+
+  // 引数変換
+  statement.args = convertArguments(mapDefinition.args)
 
   return statement
 }
