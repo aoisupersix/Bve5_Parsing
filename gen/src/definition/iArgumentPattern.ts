@@ -8,7 +8,7 @@ export interface IArgumentPattern {
   /**
    * 対象の引数
    */
-  args: IArgument
+  args: IArgument[]
 
   /**
    * テスト対象のBve5マップバージョン
