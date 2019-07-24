@@ -69,3 +69,16 @@ export const isSyntax2 = (mapDefinition: IMapDefinition): boolean =>
  */
 export const isSyntax3 = (mapDefinition: IMapDefinition): boolean =>
   !isSyntax1(mapDefinition) && !isSyntax2(mapDefinition)
+
+/**
+ * 引数に指定されたマップ構文定義が関数名を保持しているか
+ * @param mapDefinition マップ構文定義
+ */
+export const hasFunc = (mapDefinition: IMapDefinition): boolean =>
+  mapDefinition.func !== undefined && mapDefinition.func.trim() !== ''
+
+/**
+ * 引数に指定されたマップ構文定義が引数を保持しているか
+ * @param mapDefinition マップ構文定義
+ */
+export const hasArg = (mapDefinition: IMapDefinition): boolean => mapDefinition.args.length > 0
