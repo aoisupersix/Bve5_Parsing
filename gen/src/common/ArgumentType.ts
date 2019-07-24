@@ -21,6 +21,11 @@ export interface IArgumentType {
   isType(typeString: string): boolean
 
   /**
+   * Bveの構文上で引数として認識される値を取得します。
+   */
+  getOutputValue(): string
+
+  /**
    * C#上でテストに用いる値を取得します。
    */
   getCSharpTestValue(): string
@@ -38,6 +43,11 @@ class DoubleArgument implements IArgumentType {
     // 現在は大文字小文字無視で型名を判定している
     return typeString.replace('?', '').toLowerCase() === this.typeName.toLowerCase()
   }
+
+  getOutputValue(): string {
+    return this.testValue
+  }
+
   getCSharpTestValue(): string {
     return this.testValue
   }
@@ -53,6 +63,11 @@ class StringArgument implements IArgumentType {
   isType(typeString: string): boolean {
     return typeString.replace('?', '').toLowerCase() === this.typeName.toLowerCase()
   }
+
+  getOutputValue(): string {
+    return `'${this.testValue}'`
+  }
+
   getCSharpTestValue(): string {
     return `"${this.testValue}"`
   }
