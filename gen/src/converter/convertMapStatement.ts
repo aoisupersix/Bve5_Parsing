@@ -26,10 +26,9 @@ export const convertMapStatemnet = (mapDefinition: mapDef.IMapDefinition): IMapS
 
   // 小文字
   statement.elem_lower = mapDefinition.elem.toLowerCase()
-
-  // [FIX ME] 副要素を持つ場合のみ
-  statement.sub_elem_lower = mapDefinition.sub_elem!.toLowerCase()
-
+  if (mapDef.hasSubElem(mapDefinition)) {
+    statement.sub_elem_lower = mapDefinition.sub_elem!.toLowerCase()
+  }
   if (mapDef.hasFunc(mapDefinition)) {
     statement.func_lower = mapDefinition.func!.toLowerCase()
   }
