@@ -1,4 +1,5 @@
 import { IMapDefinition } from './iMapDefinition'
+import { IArgumentPattern } from './iArgumentPattern';
 
 /**
  * IMapDefinitionから付加情報を追加したマップ構文定義
@@ -7,7 +8,7 @@ export interface IMapStatement extends IMapDefinition {
   /**
    * 引数のとり得るパターン（結果用）
    */
-  // argPattern: Argument[][]
+  argPattern: IArgumentPattern[]
 
   /**
    * 小文字のマップ要素名
