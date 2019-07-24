@@ -1,13 +1,13 @@
 import * as fs from 'fs'
 import * as yaml from 'js-yaml'
-import { MapStatement } from './mapGrammarDefinition';
-import { convert } from './convertMapGrammarDefinition';
+import { IMapDefinition } from './definition/iMapDefinition';
+import { convertMapStatements } from './converter/convertMapStatement';
 
 const file = fs.readFileSync(`${__dirname}/mapgrammar.yaml`, 'utf8')
-const mapDef: MapStatement[] = yaml.safeLoad(file)
-const convertedMapDef = convert(mapDef)
-const json = JSON.stringify(convertedMapDef)
+const mapDefs: IMapDefinition[] = yaml.safeLoad(file)
+const convertedMapDefs = convertMapStatements(mapDefs)
+const json = JSON.stringify(convertedMapDefs)
 
 console.log(json)
 
-console.log(convertedMapDef)
+console.log(convertedMapDefs)
