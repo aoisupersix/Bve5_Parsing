@@ -53,6 +53,12 @@ export interface IMapDefinition {
 // #region IMapDefinition判定用便利関数
 
 /**
+ * 引数に指定されたマップ構文がキーを保持しているか
+ * @param mapDefinition マップ構文定義
+ */
+export const hasKey = (mapDefinition: IMapDefinition): boolean => mapDefinition.key !== undefined
+
+/**
  * 引数に指定されたマップ構文がマップ副要素を保持しているか
  * @param mapDefinition マップ構文定義
  */
@@ -75,14 +81,14 @@ export const hasArg = (mapDefinition: IMapDefinition): boolean => mapDefinition.
  * 引数に指定されたマップ構文定義がSyntax1かどうか
  * @param mapDefinition マップ構文定義
  */
-export const isSyntax1 = (mapDefinition: IMapDefinition): boolean => mapDefinition.key === undefined
+export const isSyntax1 = (mapDefinition: IMapDefinition): boolean => hasKey(mapDefinition) === false
 
 /**
  * 引数に指定されたマップ構文定義がSyntax2かどうか
  * @param mapDefinition マップ構文定義
  */
 export const isSyntax2 = (mapDefinition: IMapDefinition): boolean =>
-  !isSyntax1(mapDefinition) && mapDefinition.sub_elem !== undefined
+  !isSyntax1(mapDefinition) && hasSubElem(mapDefinition) === false
 
 /**
  * 引数に指定されたマップ構文定義がSyntax3かどうか
