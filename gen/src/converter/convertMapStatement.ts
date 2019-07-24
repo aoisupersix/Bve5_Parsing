@@ -42,6 +42,21 @@ export const convertMapStatemnet = (mapDefinition: mapDef.IMapDefinition): IMapS
 }
 
 /**
+ * 引数に与えられたマップ構文のバージョン、argPatternsごとのArgumentPatternを生成します。
+ * @param mapDefinition マップ構文定義
+ * @param targetArguments 構文がとり得る引数
+ */
+const createArgPatterns = (mapDefinition: mapDef.IMapDefinition, targetArguments: IArgument[]): IArgumentPattern[] => {
+  // 引数なし
+  if (mapDefinition.argPatterns === undefined) {
+    return []
+  }
+
+  // TODO: バージョン、argPatternsごとにIArgumentPatternを生成する
+  return []
+}
+
+/**
  * ArgumentPatternを生成します。
  * @param patternString 引数名のカンマ区切り
  * @param version 使用するマップファイルバージョン
