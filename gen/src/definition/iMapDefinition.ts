@@ -1,3 +1,6 @@
+import { IArgumentDefinition } from './iArgumentDefinition'
+import { IArgument } from './iArgument';
+
 /**
  * マップ構文定義
  * mapgrammar.yamlのスキーマ
@@ -30,8 +33,10 @@ export interface IMapDefinition {
 
   /**
    * 引数
+   * IMapStatementがこのインタフェースを継承している関係で、同名で型の異なる変数(つまりargs)が定義できない。
+   * そのため暫定措置として、argsはIArgumentDefinition(yaml読み込み時)とIArgumentの両方を許可している。
    */
-  // args: Argument[]
+  args: IArgumentDefinition[] | IArgument[]
 
   /**
    * 関数が取りうる引数のリスト
