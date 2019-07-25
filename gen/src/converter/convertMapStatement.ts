@@ -89,8 +89,14 @@ const createArgPattern = (patternString: string, version: string, targetArgument
             `Argument name: ${argName} can not be uniquely identified. Maching arguments: ${matchingArgNames}`)
         }
         //#endregion 例外処理
-        return Object.assign({}, targets[0])
+        const arg = Object.assign({}, targets[0])
+        arg.last = false
+        return arg
       })
+
+  if (args.length > 0) {
+    Enumerable.from(args).lastOrDefault(undefined).last = true
+  }
 
   return {
     args: args,
