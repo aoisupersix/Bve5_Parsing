@@ -53,7 +53,9 @@ const createArgPatterns = (mapDefinition: mapDef.IMapDefinition, targetArguments
     return []
   }
 
-  // TODO: バージョン、argPatternsごとにIArgumentPatternを生成する
+  const patterns = mapDefinition.versions.map(version =>
+    mapDefinition.argPatterns.map(argPattern => createArgPattern(argPattern, version, targetArguments)))
+
   return []
 }
 
