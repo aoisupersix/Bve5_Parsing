@@ -1,6 +1,6 @@
 import { IArgumentDefinition } from '../definition/iArgumentDefinition'
 import { IArgument } from '../definition/iArgument'
-import { argumentTypes } from '../common/ArgumentType';
+import { argumentTypes } from '../common/argumentTypes';
 
 /**
  * IArgumentDefinitionに情報を付与したIArguementを生成して返します。
