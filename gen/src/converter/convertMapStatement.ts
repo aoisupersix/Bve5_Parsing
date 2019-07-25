@@ -3,6 +3,7 @@ import { IMapStatement } from '../definition/iMapStatement'
 import { convertArguments } from './convertArgument';
 import { IArgumentPattern } from '../definition/iArgumentPattern';
 import { IArgument } from '../definition/iArgument';
+import { isMapVersion1, isMapVersion2 } from '../common/mapVersionDetecter';
 
 /**
  * 引数に指定された全てのマップ構文定義をIMapStatementに変換します。
@@ -86,7 +87,7 @@ const createArgPattern = (patternString: string, version: string, targetArgument
   return {
     args: args,
     version: version,
-    useV1Parser: false, // TODO
-    useV2Parser: true,
+    useV1Parser: isMapVersion1(version),
+    useV2Parser: isMapVersion2(version),
   }
 }
