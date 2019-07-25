@@ -39,7 +39,11 @@ export const convertMapStatemnet = (mapDefinition: mapDef.IMapDefinition): IMapS
   }
 
   // 引数変換
-  statement.args = convertArguments(mapDefinition.args)
+  const args = convertArguments(mapDefinition.args)
+  statement.args = args
+
+  // 引数パターン生成
+  statement.argPattern = createArgPatterns(mapDefinition, args)
 
   return statement
 }
