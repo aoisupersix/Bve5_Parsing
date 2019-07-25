@@ -59,8 +59,13 @@ const createArgPatterns = (mapDefinition: mapDef.IMapDefinition, targetArguments
     return []
   }
 
-  const patterns = Enumerable.from(mapDefinition.versions).selectMany(version =>
-    mapDefinition.argPatterns.map(argPattern => createArgPattern(argPattern, version, targetArguments)))
+  const patterns = Enumerable.from(mapDefinition.versions).selectMany((version) => {
+    if (mapDefinition.argPatterns.length === 0) {
+      return [createArgPattern('', version, targetArguments)]
+    }
+
+    return mapDefinition.argPatterns.map(argPattern => createArgPattern(argPattern, version, targetArguments))
+  })
 
   return patterns.toArray()
 }
