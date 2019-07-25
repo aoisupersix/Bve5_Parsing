@@ -83,6 +83,9 @@
       type: "double?"
       desc: "カント [m]"
       opt: true
+  argPatterns:
+    - "Radius"
+    - "Radius,Cant"
 - elem: Curve
   func: Begincircular
   deprecated: true
@@ -100,6 +103,8 @@
       type: "double?"
       desc: "カント [m]"
       opt: true
+  argPattenrs:
+    - "Radius,Cant"
 - elem: Curve
   func: End
   versions:
@@ -121,6 +126,10 @@
       type: "double?"
       desc: "カント [m]"
       opt: true
+  argPattern:
+    - ""
+    - "Radius"
+    - "Radius,Cant"
 - elem: Curve
   func: Change
   versions:
@@ -130,6 +139,8 @@
       type: "double?"
       desc: "曲線半径 [m] (正: 右曲線, 負: 左曲線, 0: 直線)"
       opt: false
+  argPattern:
+    - "Radius"
 - elem: Gradient
   func: Begintransition
   versions:
@@ -138,6 +149,8 @@
     - "1.00"
   args:
     []
+  argPatterns:
+    - ""
 - elem: Gradient
   func: Begin
   versions:
@@ -147,6 +160,8 @@
       type: "double?"
       desc: "勾配 [‰]"
       opt: false
+  argPatterns:
+    - "Gradient"
 - elem: Gradient
   func: Beginconst
   deprecated: true
@@ -160,6 +175,8 @@
       type: "double?"
       desc: "勾配 [‰]"
       opt: false
+  argPatterns:
+    - "Gradient"
 - elem: Gradient
   func: End
   versions:
@@ -177,6 +194,9 @@
       type: "double?"
       desc: "勾配 [‰]"
       opt: true
+  argPatterns:
+    - ""
+    - "Gradient"
 - elem: Track
   sub_elem: X
   key: TrackKey
@@ -192,6 +212,10 @@
       type: "double?"
       desc: "現在の距離程以降の自軌道との平面曲線相対半径 [m] (0: 直線)"
       opt: true
+  argPatterns:
+    - ""
+    - "X"
+    - "X,Radius"
 - elem: Track
   sub_elem: Y
   key: TrackKey
@@ -207,6 +231,10 @@
       type: "double?"
       desc: "現在の距離程以降の自軌道との縦曲線相対半径 [m] (0: 直線)"
       opt: true
+  argPatterns:
+    - ""
+    - "Y"
+    - "Y,Radius"
 - elem: Track
   key: TrackKey
   func: Position
@@ -232,6 +260,10 @@
       type: "double?"
       desc: "現在の距離程以降の自軌道との縦曲線相対半径 [m] (0: 直線)"
       opt: true
+  argPatterns:
+    - "X,Y"
+    - "X,Y,RadiusH"
+    - "Y,Y,RadiusV"
 - elem: Track
   sub_elem: Cant
   key: TrackKey
@@ -243,6 +275,8 @@
       type: "double?"
       desc: "軌間 [m]"
       opt: false
+  argPatterns:
+    - "Gauge"
 - elem: Track
   key: TrackKey
   func: Gauge
@@ -255,6 +289,8 @@
       type: "double?"
       desc: "軌間 [m]"
       opt: false
+  argPatterns:
+    - "Gauge"
 - elem: Track
   sub_elem: Cant
   key: TrackKey
@@ -266,6 +302,8 @@
       type: "double?"
       desc: "回転中心の x 座標 [m] (正: 曲線の内側, 負: 曲線の外側)"
       opt: false
+  argPatterns:
+    - "X"
 - elem: Track
   sub_elem: Cant
   key: TrackKey
@@ -277,6 +315,8 @@
       type: "double?"
       desc: "関数番号 (0: サイン半波長逓減, 1: 直線逓減)"
       opt: false
+  argPatterns:
+    - "Id"
 - elem: Track
   sub_elem: Cant
   key: TrackKey
@@ -284,6 +324,8 @@
   versions:
     - "2.02"
   args:
+    []
+  argPatterns:
     []
 - elem: Track
   sub_elem: Cant
@@ -296,6 +338,8 @@
       type: "double?"
       desc: "カント [m] (正: 右に傾ける, 負: 左に傾ける)"
       opt: false
+  argPatterns:
+    - "Cant"
 - elem: Track
   sub_elem: Cant
   key: TrackKey
@@ -303,6 +347,8 @@
   versions:
     - "2.02"
   args:
+    []
+  argPatterns:
     []
 - elem: Track
   sub_elem: Cant
@@ -315,6 +361,9 @@
       type: "double?"
       desc: "カント [m] (正: 右に傾ける, 負: 左に傾ける)"
       opt: true
+  argPatterns:
+    - ""
+    - "Cant"
 - elem: Track
   key: TrackKey
   func: Cant
@@ -329,6 +378,8 @@
       type: "double?"
       desc: "カント [m] (正: 右に傾ける, 負: 左に傾ける)"
       opt: true
+  argPatterns:
+    - "Cant"
 - elem: Structure
   func: Load
   skip_test: true
@@ -341,6 +392,8 @@
       type: string
       desc: "このファイルからストラクチャーリストファイルへの相対パス"
       opt: false
+  argPatterns:
+    - "FilePath"
 - elem: Structure
   key: StructureKey
   func: Put
@@ -385,6 +438,8 @@
       type: "double?"
       desc: "曲線における弦の長さ [m]"
       opt: false
+  argPatterns:
+    - "TrackKey,X,Y,Z,RX,RY,RZ,Tilt,Span"
 - elem: Structure
   key: StructureKey
   func: Put0
@@ -405,6 +460,8 @@
       type: "double?"
       desc: "曲線における弦の長さ [m]"
       opt: false
+  argPatterns:
+    - "TrackKey,Tilt,Span"
 - elem: Structure
   key: StructureKey
   func: Putbetween
@@ -426,6 +483,9 @@
       type: "double?"
       desc: "変形方向 (0: x および y 方向に変形, 1: x 方向のみに変形)"
       opt: true
+  argPatterns:
+    - "TrackKey1,TrackKey2"
+    - "TrackKey1,TrackKey2,Flag"
 - _comment: "structureKeyに関しては手動で対応する。"
   elem: Repeater
   key: RepeaterKey
@@ -475,6 +535,8 @@
       type: "double?"
       desc: "配置間隔 [m]"
       opt: false
+  argPatterns:
+    - "TrackKey,X,Y,Z,RX,RY,RZ,Tilt,Span,Interval"
 - _comment: "structureKeyに関しては手動で対応する。"
   elem: Repeater
   key: RepeaterKey
@@ -500,6 +562,8 @@
       type: "double?"
       desc: "配置間隔 [m]"
       opt: false
+  argPatterns:
+    - "TrackKey,Tilt,Span,Interval"
 - elem: Repeater
   key: RepeaterKey
   func: End
@@ -520,6 +584,8 @@
       type: string
       desc: "ストラクチャー名"
       opt: false
+  argPatterns:
+    - "StructureKey"
 - elem: Station
   func: Load
   skip_test: true
@@ -532,6 +598,8 @@
       type: string
       desc: "このファイルから停車場リストファイルへの相対パス"
       opt: false
+  argPatterns:
+    - "FilePath"
 - elem: Station
   key: StationKey
   func: Put
@@ -552,6 +620,8 @@
       type: "double?"
       desc: "停止位置誤差の後方許容範囲"
       opt: false
+  argPatterns:
+    - "Door,Margin1,Margin2"
 - _comment: "signalに関しては手動で対応する。"
   elem: Section
   func: Begin
@@ -559,6 +629,8 @@
   versions:
     - "2.02"
   args:
+    []
+  argPatterns:
     []
 - _comment: "signalに関しては手動で対応する。"
   elem: Section
@@ -572,6 +644,8 @@
     - "1.00"
   args:
     []
+  argPatterns:
+    []
 - _comment: "vに関しては手動で対応する。"
   elem: Section
   func: Setspeedlimit
@@ -579,6 +653,8 @@
   versions:
     - "2.02"
   args:
+    []
+  argPatterns:
     []
 - _comment: "vに関しては手動で対応する。"
   elem: Signal
@@ -592,6 +668,8 @@
     - "1.00"
   args:
     []
+  argPatterns:
+    []
 - _comment: "vに関しては手動で対応する。"
   elem: Speedlimit
   func: Setsignal
@@ -603,6 +681,8 @@
     - "2.00"
     - "1.00"
   args:
+    []
+  argPatterns:
     []
 - elem: Signal
   func: Load
@@ -616,6 +696,8 @@
       type: string
       desc: "このファイルから信号現示リストファイルへの相対パス"
       opt: false
+  argPatterns:
+    - "FilePath"
 - elem: Signal
   key: SignalAspectKey
   func: Put
@@ -665,6 +747,9 @@
       type: "double?"
       desc: "曲線における弦の長さ [m]"
       opt: true
+  argPatterns:
+    - "Section,TrackKey,X,Y"
+    - "Section,TrackKey,X,Y,Z,RX,RY,RZ,Tilt,Span"
 - elem: Beacon
   func: Put
   versions:
@@ -684,6 +769,8 @@
       type: "double?"
       desc: "保安装置に送る値 (整数)"
       opt: false
+  argPatterns:
+    - "Type,Section,SendData"
 - elem: Speedlimit
   func: Begin
   versions:
@@ -695,6 +782,8 @@
       type: "double?"
       desc: "走行速度 [km/h]"
       opt: false
+  argPatterns:
+    - "V"
 - elem: Speedlimit
   func: End
   versions:
@@ -702,6 +791,8 @@
     - "2.00"
     - "1.00"
   args:
+    []
+  argPatterns:
     []
 - elem: Pretrain
   func: Pass
@@ -719,6 +810,9 @@
       type: "double?"
       desc: "00:00:00 からの経過時間 [sec]"
       opt: true
+  argPatterns:
+    - "Time"
+    - "Second"
 - elem: Light
   func: Ambient
   versions:
@@ -738,6 +832,8 @@
       type: "double?"
       desc: "青成分 (0 ~ 1)"
       opt: false
+  argPatterns:
+    - "Red,Green,Blue"
 - elem: Light
   func: Diffuse
   versions:
@@ -757,6 +853,8 @@
       type: "double?"
       desc: "青成分 (0 ~ 1)"
       opt: false
+  argPatterns:
+    - "Red,Green,Blue"
 - elem: Light
   func: Direction
   versions:
@@ -772,6 +870,8 @@
       type: "double?"
       desc: "回転角"
       opt: false
+  argPatterns:
+    - "Pitch,Yaw"
 - elem: Fog
   func: Interpolate
   skip_test: true
@@ -794,6 +894,10 @@
       type: "double?"
       desc: "青成分 (0 ~ 1)"
       opt: true
+  argPatterns:
+    - ""
+    - "Density"
+    - "Density,Red,Green,Blue"
 - elem: Fog
   func: Set
   skip_test: true
@@ -820,6 +924,8 @@
       type: "double?"
       desc: "青成分 (0 ~ 1)"
       opt: true
+  argPatterns:
+    - "Density,Red,Green,Blue"
 - elem: Drawdistance
   func: Change
   versions:
@@ -829,6 +935,8 @@
       type: "double?"
       desc: "距離 [m] (0: [設定] ウィンドウで設定される描画距離を適用)"
       opt: false
+  argPatterns:
+    - "Value"
 - elem: Cabilluminance
   func: Interpolate
   versions:
@@ -838,6 +946,9 @@
       type: "double?"
       desc: "昼間画像と夜間画像の混合比 (0: 夜間画像 ~ 1: 昼間画像)"
       opt: true
+  argPatterns:
+    - ""
+    - "Value"
 - elem: Cabilluminance
   func: Set
   deprecated: true
@@ -851,6 +962,8 @@
       type: "double?"
       desc: "昼間画像と夜間画像の混合比 (0: 夜間画像 ~ 1: 昼間画像)"
       opt: false
+  argPatterns:
+    - "Value"
 - elem: Irregularity
   func: Change
   versions:
@@ -882,6 +995,8 @@
       type: "double?"
       desc: "ロール変位の遮断波長 [m]"
       opt: false
+  argPatterns:
+    - "X,Y,R,LX,LY,LR"
 - elem: Adhesion
   func: Change
   versions:
@@ -901,6 +1016,9 @@
       type: "double?"
       desc: "粘着係数の走行速度に対する変化を表す係数"
       opt: true
+  argPatterns:
+    - "A"
+    - "A,B,C"
 - elem: Sound
   func: Load
   skip_test: true
@@ -913,6 +1031,8 @@
       type: string
       desc: "このファイルからサウンドリストファイルへの相対パス"
       opt: false
+  argPatterns:
+    - "FilePath"
 - elem: Sound
   key: SoundKey
   func: Play
@@ -921,6 +1041,8 @@
     - "2.00"
     - "1.00"
   args:
+    []
+  argPatterns:
     []
 - elem: Sound3d
   func: Load
@@ -934,6 +1056,8 @@
       type: string
       desc: "このファイルからサウンドリストファイルへの相対パス"
       opt: false
+  argPatterns:
+    - "FilePath"
 - elem: Sound3d
   key: SoundKey
   func: Put
@@ -951,6 +1075,8 @@
       type: "double?"
       desc: "軌道からの y 座標 [m]"
       opt: false
+  argPatterns:
+    - "X,Y"
 - elem: Rollingnoise
   func: Change
   versions:
@@ -962,6 +1088,8 @@
       type: "double?"
       desc: "車両サウンドファイルの [Run] セクションで定義したインデックス"
       opt: false
+  argPatterns:
+    - "Index"
 - elem: Flangenoise
   func: Change
   versions:
@@ -973,6 +1101,8 @@
       type: "double?"
       desc: "車両サウンドファイルの [Flange] セクションで定義したインデックス"
       opt: false
+  argPatterns:
+    - "Index"
 - elem: Jointnoise
   func: Play
   versions:
@@ -984,6 +1114,8 @@
       type: "double?"
       desc: "車両サウンドファイルの [Joint] セクションで定義したインデックス"
       opt: false
+  argPatterns:
+    - "Index"
 - elem: Train
   func: Add
   skip_test: true
@@ -1008,6 +1140,8 @@
       type: "double?"
       desc: "進行方向 (-1: 対向, 1: 並走)"
       opt: true
+  argPatterns:
+    - "TrainKey,FilePath,TrackKey,Direction"
 - elem: Train
   key: TrainKey
   func: Load
@@ -1027,6 +1161,8 @@
       type: "double?"
       desc: "進行方向 (-1: 対向, 1: 並走)"
       opt: false
+  argPatterns:
+    - "FilePath,TrackKey,Direction"
 - elem: Train
   key: TrainKey
   func: Enable
@@ -1044,6 +1180,9 @@
       type: "double?"
       desc: "00:00:00 からの経過時間 [sec]"
       opt: true
+  argPatterns:
+    - "Time"
+    - "Second"
 - elem: Train
   key: TrainKey
   func: Stop
@@ -1068,6 +1207,8 @@
       type: "double?"
       desc: "加速後の走行速度 [km/h]"
       opt: false
+  argPatterns:
+    - "Decelerate,StopTime,Accelerate,Speed"
 - elem: Train
   key: TrainKey
   func: Settrack
@@ -1084,6 +1225,8 @@
       type: "double?"
       desc: "進行方向 (-1: 対向, 1: 並走)"
       opt: false
+  argPatterns:
+    - "TrackKey,Direction"
 - elem: Legacy
   func: Fog
   deprecated: true
@@ -1112,6 +1255,10 @@
       type: "double?"
       desc: "青成分 (0 ~ 1)"
       opt: false
+  argPatterns:
+    - ""
+    - "FogStart,Fogend"
+    - "FogStart,Fogend,red,green,blue"
 - elem: Legacy
   func: Curve
   deprecated: true
@@ -1128,6 +1275,8 @@
       type: "double?"
       desc: "カント [m]"
       opt: true
+  argPatterns:
+    - "radius,cant"
 - elem: Legacy
   func: Pitch
   versions:
@@ -1140,6 +1289,8 @@
       type: "double?"
       desc: "勾配 [‰]"
       opt: true
+  argPatterns:
+    - "rate"
 - elem: Legacy
   func: Turn
   deprecated: true
@@ -1152,6 +1303,8 @@
       type: "double?"
       desc: "傾き(+: 右, -: 左)"
       opt: true
+  argPatterns:
+    - "slope"
 - elem: Include
   skip_test: true
   versions:
@@ -1162,3 +1315,5 @@
       type: string
       desc: "挿入するMapファイルへの相対パス"
       opt: false
+  argPatterns:
+    - "FilePath"
