@@ -1,3 +1,5 @@
+import * as Enumerable from 'linq'
+
 import * as mapDef from '../definition/iMapDefinition'
 import { IMapStatement } from '../definition/iMapStatement'
 import { convertArguments } from './convertArgument';
@@ -53,10 +55,10 @@ const createArgPatterns = (mapDefinition: mapDef.IMapDefinition, targetArguments
     return []
   }
 
-  const patterns = mapDefinition.versions.map(version =>
+  const patterns = Enumerable.from(mapDefinition.versions).selectMany(version =>
     mapDefinition.argPatterns.map(argPattern => createArgPattern(argPattern, version, targetArguments)))
 
-  return []
+  return patterns.toArray()
 }
 
 /**
