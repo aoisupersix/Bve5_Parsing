@@ -1,6 +1,7 @@
 import * as fs from 'fs'
 import * as yaml from 'js-yaml'
 import * as mustache from 'mustache'
+import stripBom from 'strip-bom'
 
 import { IMapDefinition } from './definition/iMapDefinition';
 import { convertMapStatements } from './converter/convertMapStatement';
@@ -16,6 +17,6 @@ console.log(json)
 console.log(convertedMapDefs)
 
 const parse = (template: string, outputPath: string, statements: IMapStatement[]): void {
-  const output = mustache.render(template, statements)
+  const output = mustache.render(stripBom(template), statements)
   fs.writeFile(outputPath, output, { encoding: 'utf-8' }, _ => console.log(`${outputPath} generation completed.`))
 }

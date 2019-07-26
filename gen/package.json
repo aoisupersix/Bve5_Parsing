@@ -17,6 +17,7 @@
     "fs": "0.0.1-security",
     "linq": "^3.2.0",
     "mustache": "^3.0.1",
+    "strip-bom": "^4.0.0",
     "typescript": "^3.4.5"
   },
   "devDependencies": {
