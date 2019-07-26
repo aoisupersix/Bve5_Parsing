@@ -18,8 +18,8 @@ export const convertMapStatemnet = (mapDefinition: mapDef.IMapDefinition): IMapS
   statement.syntax1 = mapDef.isSyntax1(mapDefinition)
   statement.syntax2 = mapDef.isSyntax2(mapDefinition)
   statement.syntax3 = mapDef.isSyntax3(mapDefinition)
-  statement.nofunc = mapDef.hasFunc(mapDefinition) === false
-  statement.noarg = mapDef.hasArg(mapDefinition) === false
+  statement.nofunc = !mapDef.hasFunc(mapDefinition)
+  statement.noarg = !mapDef.hasArg(mapDefinition)
 
   // 小文字
   statement.elem_lower = mapDefinition.elem.toLowerCase()
