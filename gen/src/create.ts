@@ -2,6 +2,7 @@ import * as fs from 'fs'
 import * as yaml from 'js-yaml'
 import * as mustache from 'mustache'
 import stripBom from 'strip-bom'
+import { promisify } from 'util'
 
 import { IMapDefinition } from './definition/iMapDefinition';
 import { convertMapStatements } from './converter/convertMapStatement';
@@ -16,7 +17,13 @@ console.log(json)
 
 console.log(convertedMapDefs)
 
-const parse = (template: string, outputPath: string, statements: IMapStatement[]): void => {
+/**
+ * ステートメントをテンプレートに書き出します。
+ * @param template Mustacheのレンダー先
+ * @param outputPath 出力先パス
+ * @param statements 出力対象のステートメント
+ */
+const parse = (template: string, outputPath: string, statements: IMapStatement[]): Promise<void> => {
   const output = mustache.render(stripBom(template), statements)
-  fs.writeFile(outputPath, output, { encoding: 'utf-8' }, _ => console.log(`${outputPath} generation completed.`))
+  return promisify(fs.writeFile)(outputPath, output, { encoding: 'utf-8' })
 }
