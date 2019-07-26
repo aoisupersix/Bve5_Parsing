@@ -8,14 +8,6 @@ import { IArgument } from '../definition/iArgument';
 import { isMapVersion1, isMapVersion2 } from '../common/mapVersionDetecter';
 
 /**
- * 引数に指定された全てのマップ構文定義をIMapStatementに変換します。
- * @param mapDefinitions 変換対象のマップ構文定義
- */
-export const convertMapStatements = (mapDefinitions: mapDef.IMapDefinition[]): IMapStatement[] => {
-  return mapDefinitions.map(mapDef => convertMapStatemnet(mapDef))
-}
-
-/**
  * マップ構文定義から必要な情報を付加したIMapStatementを返します。
  * @param mapDefinition マップ構文定義(yaml)
  */
