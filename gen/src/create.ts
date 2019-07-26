@@ -23,7 +23,7 @@ console.log(convertedMapDefs)
  * @param outputPath 出力先パス
  * @param statements 出力対象のステートメント
  */
-const parse = (template: string, outputPath: string, statements: IMapStatement[]): Promise<void> => {
+const render = (template: string, outputPath: string, statements: IMapStatement[]): Promise<void> => {
   const output = mustache.render(stripBom(template), statements)
   return promisify(fs.writeFile)(outputPath, output, { encoding: 'utf-8' })
 }
