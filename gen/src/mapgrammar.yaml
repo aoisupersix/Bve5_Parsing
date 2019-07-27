@@ -129,7 +129,7 @@
       type: "double?"
       desc: "カント [m]"
       opt: true
-  argPattern:
+  argPatterns:
     - ""
     - "Radius"
     - "Radius,Cant"
@@ -142,7 +142,7 @@
       type: "double?"
       desc: "曲線半径 [m] (正: 右曲線, 負: 左曲線, 0: 直線)"
       opt: false
-  argPattern:
+  argPatterns:
     - "Radius"
 - elem: Gradient
   func: Begintransition
