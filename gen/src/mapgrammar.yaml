@@ -103,7 +103,7 @@
       type: "double?"
       desc: "カント [m]"
       opt: true
-  argPattenrs:
+  argPatterns:
     - "Radius,Cant"
 - elem: Curve
   func: End
