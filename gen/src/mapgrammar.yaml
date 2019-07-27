@@ -60,7 +60,6 @@
       desc: "関数番号 (0: サイン半波長逓減, 1: 直線逓減)"
       opt: false
   argPatterns:
-    - ""
     - "Id"
 - elem: Curve
   func: Begintransition
