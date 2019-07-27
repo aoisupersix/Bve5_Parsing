@@ -70,6 +70,8 @@
     - "1.00"
   args:
     []
+  argPatterns:
+    []
 - elem: Curve
   func: Begin
   versions:
