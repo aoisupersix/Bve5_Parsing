@@ -13,10 +13,10 @@ namespace Bve5_Parsing.MapGrammar {
 {{#elems}}
 
         /// <summary>
-        /// {{name}}
+        /// {{.}}
         /// </summary>
-        [StringValue("{{name}}")]
-        {{name}},
+        [StringValue("{{.}}")]
+        {{.}},
 {{/elems}}
     }
 
@@ -27,10 +27,10 @@ namespace Bve5_Parsing.MapGrammar {
 {{#subElems}}
 
         /// <summary>
-        /// {{name}}
+        /// {{.}}
         /// </summary>
-        [StringValue("{{name}}")]
-        {{name}},
+        [StringValue("{{.}}")]
+        {{.}},
 {{/subElems}}
     }
 
@@ -41,10 +41,10 @@ namespace Bve5_Parsing.MapGrammar {
 {{#funcs}}
 
         /// <summary>
-        /// {{name}}（{{str}}）
+        /// {{.}}
         /// </summary>
-        [StringValue("{{str}}")]
-        {{name}},
+        [StringValue("{{.}}")]
+        {{.}},
 {{/funcs}}
     }
 
