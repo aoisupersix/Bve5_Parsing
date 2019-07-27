@@ -188,6 +188,8 @@
     - "1.00"
   args:
     []
+  argPatterns:
+    []
 - elem: Gradient
   func: Interpolate
   versions:
@@ -575,6 +577,8 @@
     - "2.00"
     - "1.00"
   args:
+    []
+  argPatterns:
     []
 - elem: Background
   func: Change
