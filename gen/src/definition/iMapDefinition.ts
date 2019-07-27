@@ -81,14 +81,14 @@ export const hasArg = (mapDefinition: IMapDefinition): boolean => mapDefinition.
  * 引数に指定されたマップ構文定義がSyntax1かどうか
  * @param mapDefinition マップ構文定義
  */
-export const isSyntax1 = (mapDefinition: IMapDefinition): boolean => hasKey(mapDefinition) === false
+export const isSyntax1 = (mapDefinition: IMapDefinition): boolean => !hasKey(mapDefinition)
 
 /**
  * 引数に指定されたマップ構文定義がSyntax2かどうか
  * @param mapDefinition マップ構文定義
  */
 export const isSyntax2 = (mapDefinition: IMapDefinition): boolean =>
-  !isSyntax1(mapDefinition) && hasSubElem(mapDefinition) === false
+  !isSyntax1(mapDefinition) && !hasSubElem(mapDefinition)
 
 /**
  * 引数に指定されたマップ構文定義がSyntax3かどうか
