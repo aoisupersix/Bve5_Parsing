@@ -115,6 +115,8 @@
     - "1.00"
   args:
     []
+  argPatterns:
+    []
 - elem: Curve
   func: Interpolate
   versions:
