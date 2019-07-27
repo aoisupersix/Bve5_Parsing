@@ -1,7 +1,5 @@
-import * as fs from 'fs'
-import * as mustache from 'mustache'
+import mustache from 'mustache'
 import stripBom from 'strip-bom'
-import { promisify } from 'util'
 import { IMapData } from './definition/iMapData';
 
 /**
