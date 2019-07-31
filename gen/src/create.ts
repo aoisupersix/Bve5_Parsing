@@ -2,11 +2,6 @@ import * as fs from 'fs'
 import * as yaml from 'js-yaml'
 import path from 'path'
 
-import { IMapDefinition } from './definition/iMapDefinition';
-import { convert } from './convert';
-import { render } from './render';
-import { IMapData } from './definition/iMapData';
-
 const mapGrammarDir = path.join(__dirname, '..', '..', 'Bve5_Parsing', 'MapGrammar')
 const testDir = path.join(__dirname, '..', '..', 'Bve5_ParsingTests', 'AutoGen')
 
