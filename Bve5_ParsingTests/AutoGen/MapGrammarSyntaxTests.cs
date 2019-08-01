@@ -25,14 +25,14 @@ namespace Bve5_ParsingTests
 
             // Curve.Setgauge(Value);
             Check(
-                ExecParse("BveTs Map 2.02\n0;Curve.Setgauge(1);"),
+                ExecParse("BveTs Map 2.02\n0;Curve.Setgauge(1.0);"),
                 new MapData(
                     version: "2.02",
                     syntaxes: new List<Statement>()
                     {
                         new CurveSetgaugeStatement(0)
                         {
-                            Value = 1
+                            Value = 1.0
                         }
                     }));
         }
@@ -46,40 +46,40 @@ namespace Bve5_ParsingTests
 
             // Gauge.Set(Value);
             Check(
-                ExecParse("BveTs Map 2.02\n0;Gauge.Set(1);"),
+                ExecParse("BveTs Map 2.02\n0;Gauge.Set(1.0);"),
                 new MapData(
                     version: "2.02",
                     syntaxes: new List<Statement>()
                     {
                         new GaugeSetStatement(0)
                         {
-                            Value = 1
+                            Value = 1.0
                         }
                     }));
 
             // Gauge.Set(Value);
             Check(
-                ExecParse("BveTs Map 2.00\n0;Gauge.Set(1);"),
+                ExecParse("BveTs Map 2.00\n0;Gauge.Set(1.0);"),
                 new MapData(
                     version: "2.00",
                     syntaxes: new List<Statement>()
                     {
                         new GaugeSetStatement(0)
                         {
-                            Value = 1
+                            Value = 1.0
                         }
                     }));
 
             // Gauge.Set(Value);
             Check(
-                ExecParse("BveTs Map 1.00\n0;Gauge.Set(1);"),
+                ExecParse("BveTs Map 1.00\n0;Gauge.Set(1.0);"),
                 new MapData(
                     version: "1.00",
                     syntaxes: new List<Statement>()
                     {
                         new GaugeSetStatement(0)
                         {
-                            Value = 1
+                            Value = 1.0
                         }
                     }));
         }
@@ -93,40 +93,40 @@ namespace Bve5_ParsingTests
 
             // Curve.Gauge(Value);
             Check(
-                ExecParse("BveTs Map 2.02\n0;Curve.Gauge(1);"),
+                ExecParse("BveTs Map 2.02\n0;Curve.Gauge(1.0);"),
                 new MapData(
                     version: "2.02",
                     syntaxes: new List<Statement>()
                     {
                         new CurveGaugeStatement(0)
                         {
-                            Value = 1
+                            Value = 1.0
                         }
                     }));
 
             // Curve.Gauge(Value);
             Check(
-                ExecParse("BveTs Map 2.00\n0;Curve.Gauge(1);"),
+                ExecParse("BveTs Map 2.00\n0;Curve.Gauge(1.0);"),
                 new MapData(
                     version: "2.00",
                     syntaxes: new List<Statement>()
                     {
                         new CurveGaugeStatement(0)
                         {
-                            Value = 1
+                            Value = 1.0
                         }
                     }));
 
             // Curve.Gauge(Value);
             Check(
-                ExecParse("BveTs Map 1.00\n0;Curve.Gauge(1);"),
+                ExecParse("BveTs Map 1.00\n0;Curve.Gauge(1.0);"),
                 new MapData(
                     version: "1.00",
                     syntaxes: new List<Statement>()
                     {
                         new CurveGaugeStatement(0)
                         {
-                            Value = 1
+                            Value = 1.0
                         }
                     }));
         }
@@ -140,14 +140,14 @@ namespace Bve5_ParsingTests
 
             // Curve.Setcenter(X);
             Check(
-                ExecParse("BveTs Map 2.02\n0;Curve.Setcenter(1);"),
+                ExecParse("BveTs Map 2.02\n0;Curve.Setcenter(1.0);"),
                 new MapData(
                     version: "2.02",
                     syntaxes: new List<Statement>()
                     {
                         new CurveSetcenterStatement(0)
                         {
-                            X = 1
+                            X = 1.0
                         }
                     }));
         }
@@ -161,14 +161,14 @@ namespace Bve5_ParsingTests
 
             // Curve.Setfunction(Id);
             Check(
-                ExecParse("BveTs Map 2.02\n0;Curve.Setfunction(1);"),
+                ExecParse("BveTs Map 2.02\n0;Curve.Setfunction(1.0);"),
                 new MapData(
                     version: "2.02",
                     syntaxes: new List<Statement>()
                     {
                         new CurveSetfunctionStatement(0)
                         {
-                            Id = 1
+                            Id = 1.0
                         }
                     }));
         }
@@ -226,28 +226,28 @@ namespace Bve5_ParsingTests
 
             // Curve.Begin(Radius);
             Check(
-                ExecParse("BveTs Map 2.02\n0;Curve.Begin(1);"),
+                ExecParse("BveTs Map 2.02\n0;Curve.Begin(1.0);"),
                 new MapData(
                     version: "2.02",
                     syntaxes: new List<Statement>()
                     {
                         new CurveBeginStatement(0)
                         {
-                            Radius = 1
+                            Radius = 1.0
                         }
                     }));
 
             // Curve.Begin(Radius, Cant);
             Check(
-                ExecParse("BveTs Map 2.02\n0;Curve.Begin(1, 1);"),
+                ExecParse("BveTs Map 2.02\n0;Curve.Begin(1.0, 1.0);"),
                 new MapData(
                     version: "2.02",
                     syntaxes: new List<Statement>()
                     {
                         new CurveBeginStatement(0)
                         {
-                            Radius = 1,
-                            Cant = 1
+                            Radius = 1.0,
+                            Cant = 1.0
                         }
                     }));
         }
@@ -259,84 +259,45 @@ namespace Bve5_ParsingTests
         public void CurveBegincircularTest()
         {
 
-            // Curve.Begincircular(Radius);
+            // Curve.Begincircular(Radius, Cant);
             Check(
-                ExecParse("BveTs Map 2.02\n0;Curve.Begincircular(1);"),
+                ExecParse("BveTs Map 2.02\n0;Curve.Begincircular(1.0, 1.0);"),
                 new MapData(
                     version: "2.02",
                     syntaxes: new List<Statement>()
                     {
                         new CurveBegincircularStatement(0)
                         {
-                            Radius = 1
+                            Radius = 1.0,
+                            Cant = 1.0
                         }
                     }));
 
             // Curve.Begincircular(Radius, Cant);
             Check(
-                ExecParse("BveTs Map 2.02\n0;Curve.Begincircular(1, 1);"),
-                new MapData(
-                    version: "2.02",
-                    syntaxes: new List<Statement>()
-                    {
-                        new CurveBegincircularStatement(0)
-                        {
-                            Radius = 1,
-                            Cant = 1
-                        }
-                    }));
-
-            // Curve.Begincircular(Radius);
-            Check(
-                ExecParse("BveTs Map 2.00\n0;Curve.Begincircular(1);"),
+                ExecParse("BveTs Map 2.00\n0;Curve.Begincircular(1.0, 1.0);"),
                 new MapData(
                     version: "2.00",
                     syntaxes: new List<Statement>()
                     {
                         new CurveBegincircularStatement(0)
                         {
-                            Radius = 1
+                            Radius = 1.0,
+                            Cant = 1.0
                         }
                     }));
 
             // Curve.Begincircular(Radius, Cant);
             Check(
-                ExecParse("BveTs Map 2.00\n0;Curve.Begincircular(1, 1);"),
-                new MapData(
-                    version: "2.00",
-                    syntaxes: new List<Statement>()
-                    {
-                        new CurveBegincircularStatement(0)
-                        {
-                            Radius = 1,
-                            Cant = 1
-                        }
-                    }));
-
-            // Curve.Begincircular(Radius);
-            Check(
-                ExecParse("BveTs Map 1.00\n0;Curve.Begincircular(1);"),
+                ExecParse("BveTs Map 1.00\n0;Curve.Begincircular(1.0, 1.0);"),
                 new MapData(
                     version: "1.00",
                     syntaxes: new List<Statement>()
                     {
                         new CurveBegincircularStatement(0)
                         {
-                            Radius = 1
-                        }
-                    }));
-
-            // Curve.Begincircular(Radius, Cant);
-            Check(
-                ExecParse("BveTs Map 1.00\n0;Curve.Begincircular(1, 1);"),
-                new MapData(
-                    version: "1.00",
-                    syntaxes: new List<Statement>()
-                    {
-                        new CurveBegincircularStatement(0)
-                        {
-                            Radius = 1,
-                            Cant = 1
+                            Radius = 1.0,
+                            Cant = 1.0
                         }
                     }));
         }
@@ -406,28 +367,28 @@ namespace Bve5_ParsingTests
 
             // Curve.Interpolate(Radius);
             Check(
-                ExecParse("BveTs Map 2.02\n0;Curve.Interpolate(1);"),
+                ExecParse("BveTs Map 2.02\n0;Curve.Interpolate(1.0);"),
                 new MapData(
                     version: "2.02",
                     syntaxes: new List<Statement>()
                     {
                         new CurveInterpolateStatement(0)
                         {
-                            Radius = 1
+                            Radius = 1.0
                         }
                     }));
 
             // Curve.Interpolate(Radius, Cant);
             Check(
-                ExecParse("BveTs Map 2.02\n0;Curve.Interpolate(1, 1);"),
+                ExecParse("BveTs Map 2.02\n0;Curve.Interpolate(1.0, 1.0);"),
                 new MapData(
                     version: "2.02",
                     syntaxes: new List<Statement>()
                     {
                         new CurveInterpolateStatement(0)
                         {
-                            Radius = 1,
-                            Cant = 1
+                            Radius = 1.0,
+                            Cant = 1.0
                         }
                     }));
         }
@@ -441,14 +402,14 @@ namespace Bve5_ParsingTests
 
             // Curve.Change(Radius);
             Check(
-                ExecParse("BveTs Map 2.02\n0;Curve.Change(1);"),
+                ExecParse("BveTs Map 2.02\n0;Curve.Change(1.0);"),
                 new MapData(
                     version: "2.02",
                     syntaxes: new List<Statement>()
                     {
                         new CurveChangeStatement(0)
                         {
-                            Radius = 1
+                            Radius = 1.0
                         }
                     }));
         }
@@ -506,14 +467,14 @@ namespace Bve5_ParsingTests
 
             // Gradient.Begin(Gradient);
             Check(
-                ExecParse("BveTs Map 2.02\n0;Gradient.Begin(1);"),
+                ExecParse("BveTs Map 2.02\n0;Gradient.Begin(1.0);"),
                 new MapData(
                     version: "2.02",
                     syntaxes: new List<Statement>()
                     {
                         new GradientBeginStatement(0)
                         {
-                            Gradient = 1
+                            Gradient = 1.0
                         }
                     }));
         }
@@ -527,40 +488,40 @@ namespace Bve5_ParsingTests
 
             // Gradient.Beginconst(Gradient);
             Check(
-                ExecParse("BveTs Map 2.02\n0;Gradient.Beginconst(1);"),
+                ExecParse("BveTs Map 2.02\n0;Gradient.Beginconst(1.0);"),
                 new MapData(
                     version: "2.02",
                     syntaxes: new List<Statement>()
                     {
                         new GradientBeginconstStatement(0)
                         {
-                            Gradient = 1
+                            Gradient = 1.0
                         }
                     }));
 
             // Gradient.Beginconst(Gradient);
             Check(
-                ExecParse("BveTs Map 2.00\n0;Gradient.Beginconst(1);"),
+                ExecParse("BveTs Map 2.00\n0;Gradient.Beginconst(1.0);"),
                 new MapData(
                     version: "2.00",
                     syntaxes: new List<Statement>()
                     {
                         new GradientBeginconstStatement(0)
                         {
-                            Gradient = 1
+                            Gradient = 1.0
                         }
                     }));
 
             // Gradient.Beginconst(Gradient);
             Check(
-                ExecParse("BveTs Map 1.00\n0;Gradient.Beginconst(1);"),
+                ExecParse("BveTs Map 1.00\n0;Gradient.Beginconst(1.0);"),
                 new MapData(
                     version: "1.00",
                     syntaxes: new List<Statement>()
                     {
                         new GradientBeginconstStatement(0)
                         {
-                            Gradient = 1
+                            Gradient = 1.0
                         }
                     }));
         }
@@ -630,14 +591,14 @@ namespace Bve5_ParsingTests
 
             // Gradient.Interpolate(Gradient);
             Check(
-                ExecParse("BveTs Map 2.02\n0;Gradient.Interpolate(1);"),
+                ExecParse("BveTs Map 2.02\n0;Gradient.Interpolate(1.0);"),
                 new MapData(
                     version: "2.02",
                     syntaxes: new List<Statement>()
                     {
                         new GradientInterpolateStatement(0)
                         {
-                            Gradient = 1
+                            Gradient = 1.0
                         }
                     }));
         }
@@ -664,7 +625,7 @@ namespace Bve5_ParsingTests
 
             // Track[TrackKey].X.Interpolate(X);
             Check(
-                ExecParse("BveTs Map 2.02\n0;Track['TrackKey'].X.Interpolate(1);"),
+                ExecParse("BveTs Map 2.02\n0;Track['TrackKey'].X.Interpolate(1.0);"),
                 new MapData(
                     version: "2.02",
                     syntaxes: new List<Statement>()
@@ -672,13 +633,13 @@ namespace Bve5_ParsingTests
                         new TrackXInterpolateStatement(0)
                         {
                             Key = "TrackKey",
-                            X = 1
+                            X = 1.0
                         }
                     }));
 
             // Track[TrackKey].X.Interpolate(X, Radius);
             Check(
-                ExecParse("BveTs Map 2.02\n0;Track['TrackKey'].X.Interpolate(1, 1);"),
+                ExecParse("BveTs Map 2.02\n0;Track['TrackKey'].X.Interpolate(1.0, 1.0);"),
                 new MapData(
                     version: "2.02",
                     syntaxes: new List<Statement>()
@@ -686,8 +647,8 @@ namespace Bve5_ParsingTests
                         new TrackXInterpolateStatement(0)
                         {
                             Key = "TrackKey",
-                            X = 1,
-                            Radius = 1
+                            X = 1.0,
+                            Radius = 1.0
                         }
                     }));
         }
@@ -714,7 +675,7 @@ namespace Bve5_ParsingTests
 
             // Track[TrackKey].Y.Interpolate(Y);
             Check(
-                ExecParse("BveTs Map 2.02\n0;Track['TrackKey'].Y.Interpolate(1);"),
+                ExecParse("BveTs Map 2.02\n0;Track['TrackKey'].Y.Interpolate(1.0);"),
                 new MapData(
                     version: "2.02",
                     syntaxes: new List<Statement>()
@@ -722,13 +683,13 @@ namespace Bve5_ParsingTests
                         new TrackYInterpolateStatement(0)
                         {
                             Key = "TrackKey",
-                            Y = 1
+                            Y = 1.0
                         }
                     }));
 
             // Track[TrackKey].Y.Interpolate(Y, Radius);
             Check(
-                ExecParse("BveTs Map 2.02\n0;Track['TrackKey'].Y.Interpolate(1, 1);"),
+                ExecParse("BveTs Map 2.02\n0;Track['TrackKey'].Y.Interpolate(1.0, 1.0);"),
                 new MapData(
                     version: "2.02",
                     syntaxes: new List<Statement>()
@@ -736,8 +697,8 @@ namespace Bve5_ParsingTests
                         new TrackYInterpolateStatement(0)
                         {
                             Key = "TrackKey",
-                            Y = 1,
-                            Radius = 1
+                            Y = 1.0,
+                            Radius = 1.0
                         }
                     }));
         }
@@ -764,7 +725,7 @@ namespace Bve5_ParsingTests
 
             // Track[TrackKey].Cant.Setgauge(Gauge);
             Check(
-                ExecParse("BveTs Map 2.02\n0;Track['TrackKey'].Cant.Setgauge(1);"),
+                ExecParse("BveTs Map 2.02\n0;Track['TrackKey'].Cant.Setgauge(1.0);"),
                 new MapData(
                     version: "2.02",
                     syntaxes: new List<Statement>()
@@ -772,7 +733,7 @@ namespace Bve5_ParsingTests
                         new TrackCantSetgaugeStatement(0)
                         {
                             Key = "TrackKey",
-                            Gauge = 1
+                            Gauge = 1.0
                         }
                     }));
         }
@@ -786,7 +747,7 @@ namespace Bve5_ParsingTests
 
             // Track[TrackKey].Gauge(Gauge);
             Check(
-                ExecParse("BveTs Map 2.02\n0;Track['TrackKey'].Gauge(1);"),
+                ExecParse("BveTs Map 2.02\n0;Track['TrackKey'].Gauge(1.0);"),
                 new MapData(
                     version: "2.02",
                     syntaxes: new List<Statement>()
@@ -794,7 +755,7 @@ namespace Bve5_ParsingTests
                         new TrackGaugeStatement(0)
                         {
                             Key = "TrackKey",
-                            Gauge = 1
+                            Gauge = 1.0
                         }
                     }));
         }
@@ -808,7 +769,7 @@ namespace Bve5_ParsingTests
 
             // Track[TrackKey].Cant.Setcenter(X);
             Check(
-                ExecParse("BveTs Map 2.02\n0;Track['TrackKey'].Cant.Setcenter(1);"),
+                ExecParse("BveTs Map 2.02\n0;Track['TrackKey'].Cant.Setcenter(1.0);"),
                 new MapData(
                     version: "2.02",
                     syntaxes: new List<Statement>()
@@ -816,7 +777,7 @@ namespace Bve5_ParsingTests
                         new TrackCantSetcenterStatement(0)
                         {
                             Key = "TrackKey",
-                            X = 1
+                            X = 1.0
                         }
                     }));
         }
@@ -830,7 +791,7 @@ namespace Bve5_ParsingTests
 
             // Track[TrackKey].Cant.Setfunction(Id);
             Check(
-                ExecParse("BveTs Map 2.02\n0;Track['TrackKey'].Cant.Setfunction(1);"),
+                ExecParse("BveTs Map 2.02\n0;Track['TrackKey'].Cant.Setfunction(1.0);"),
                 new MapData(
                     version: "2.02",
                     syntaxes: new List<Statement>()
@@ -838,7 +799,7 @@ namespace Bve5_ParsingTests
                         new TrackCantSetfunctionStatement(0)
                         {
                             Key = "TrackKey",
-                            Id = 1
+                            Id = 1.0
                         }
                     }));
         }
@@ -873,7 +834,7 @@ namespace Bve5_ParsingTests
 
             // Track[TrackKey].Cant.Begin(Cant);
             Check(
-                ExecParse("BveTs Map 2.02\n0;Track['TrackKey'].Cant.Begin(1);"),
+                ExecParse("BveTs Map 2.02\n0;Track['TrackKey'].Cant.Begin(1.0);"),
                 new MapData(
                     version: "2.02",
                     syntaxes: new List<Statement>()
@@ -881,7 +842,7 @@ namespace Bve5_ParsingTests
                         new TrackCantBeginStatement(0)
                         {
                             Key = "TrackKey",
-                            Cant = 1
+                            Cant = 1.0
                         }
                     }));
         }
@@ -929,7 +890,7 @@ namespace Bve5_ParsingTests
 
             // Track[TrackKey].Cant.Interpolate(Cant);
             Check(
-                ExecParse("BveTs Map 2.02\n0;Track['TrackKey'].Cant.Interpolate(1);"),
+                ExecParse("BveTs Map 2.02\n0;Track['TrackKey'].Cant.Interpolate(1.0);"),
                 new MapData(
                     version: "2.02",
                     syntaxes: new List<Statement>()
@@ -937,7 +898,7 @@ namespace Bve5_ParsingTests
                         new TrackCantInterpolateStatement(0)
                         {
                             Key = "TrackKey",
-                            Cant = 1
+                            Cant = 1.0
                         }
                     }));
         }
@@ -949,9 +910,9 @@ namespace Bve5_ParsingTests
         public void TrackCantTest()
         {
 
-            // Track[TrackKey].Cant();
+            // Track[TrackKey].Cant(Cant);
             Check(
-                ExecParse("BveTs Map 2.02\n0;Track['TrackKey'].Cant();"),
+                ExecParse("BveTs Map 2.02\n0;Track['TrackKey'].Cant(1.0);"),
                 new MapData(
                     version: "2.02",
                     syntaxes: new List<Statement>()
@@ -959,26 +920,13 @@ namespace Bve5_ParsingTests
                         new TrackCantStatement(0)
                         {
                             Key = "TrackKey",
+                            Cant = 1.0
                         }
                     }));
 
             // Track[TrackKey].Cant(Cant);
             Check(
-                ExecParse("BveTs Map 2.02\n0;Track['TrackKey'].Cant(1);"),
-                new MapData(
-                    version: "2.02",
-                    syntaxes: new List<Statement>()
-                    {
-                        new TrackCantStatement(0)
-                        {
-                            Key = "TrackKey",
-                            Cant = 1
-                        }
-                    }));
-
-            // Track[TrackKey].Cant();
-            Check(
-                ExecParse("BveTs Map 2.00\n0;Track['TrackKey'].Cant();"),
+                ExecParse("BveTs Map 2.00\n0;Track['TrackKey'].Cant(1.0);"),
                 new MapData(
                     version: "2.00",
                     syntaxes: new List<Statement>()
@@ -986,26 +934,13 @@ namespace Bve5_ParsingTests
                         new TrackCantStatement(0)
                         {
                             Key = "TrackKey",
+                            Cant = 1.0
                         }
                     }));
 
             // Track[TrackKey].Cant(Cant);
             Check(
-                ExecParse("BveTs Map 2.00\n0;Track['TrackKey'].Cant(1);"),
-                new MapData(
-                    version: "2.00",
-                    syntaxes: new List<Statement>()
-                    {
-                        new TrackCantStatement(0)
-                        {
-                            Key = "TrackKey",
-                            Cant = 1
-                        }
-                    }));
-
-            // Track[TrackKey].Cant();
-            Check(
-                ExecParse("BveTs Map 1.00\n0;Track[TrackKey].Cant();"),
+                ExecParse("BveTs Map 1.00\n0;Track[TrackKey].Cant(1.0);"),
                 new MapData(
                     version: "1.00",
                     syntaxes: new List<Statement>()
@@ -1013,20 +948,7 @@ namespace Bve5_ParsingTests
                         new TrackCantStatement(0)
                         {
                             Key = "TrackKey",
-                        }
-                    }));
-
-            // Track[TrackKey].Cant(Cant);
-            Check(
-                ExecParse("BveTs Map 1.00\n0;Track[TrackKey].Cant(1);"),
-                new MapData(
-                    version: "1.00",
-                    syntaxes: new List<Statement>()
-                    {
-                        new TrackCantStatement(0)
-                        {
-                            Key = "TrackKey",
-                            Cant = 1
+                            Cant = 1.0
                         }
                     }));
         }
@@ -1053,7 +975,7 @@ namespace Bve5_ParsingTests
 
             // Structure[StructureKey].Put(TrackKey, X, Y, Z, RX, RY, RZ, Tilt, Span);
             Check(
-                ExecParse("BveTs Map 2.02\n0;Structure['StructureKey'].Put('string_test_value', 1, 1, 1, 1, 1, 1, 1, 1);"),
+                ExecParse("BveTs Map 2.02\n0;Structure['StructureKey'].Put('string_test_value', 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0);"),
                 new MapData(
                     version: "2.02",
                     syntaxes: new List<Statement>()
@@ -1062,20 +984,20 @@ namespace Bve5_ParsingTests
                         {
                             Key = "StructureKey",
                             TrackKey = "string_test_value",
-                            X = 1,
-                            Y = 1,
-                            Z = 1,
-                            RX = 1,
-                            RY = 1,
-                            RZ = 1,
-                            Tilt = 1,
-                            Span = 1
+                            X = 1.0,
+                            Y = 1.0,
+                            Z = 1.0,
+                            RX = 1.0,
+                            RY = 1.0,
+                            RZ = 1.0,
+                            Tilt = 1.0,
+                            Span = 1.0
                         }
                     }));
 
             // Structure[StructureKey].Put(TrackKey, X, Y, Z, RX, RY, RZ, Tilt, Span);
             Check(
-                ExecParse("BveTs Map 2.00\n0;Structure['StructureKey'].Put('string_test_value', 1, 1, 1, 1, 1, 1, 1, 1);"),
+                ExecParse("BveTs Map 2.00\n0;Structure['StructureKey'].Put('string_test_value', 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0);"),
                 new MapData(
                     version: "2.00",
                     syntaxes: new List<Statement>()
@@ -1084,20 +1006,20 @@ namespace Bve5_ParsingTests
                         {
                             Key = "StructureKey",
                             TrackKey = "string_test_value",
-                            X = 1,
-                            Y = 1,
-                            Z = 1,
-                            RX = 1,
-                            RY = 1,
-                            RZ = 1,
-                            Tilt = 1,
-                            Span = 1
+                            X = 1.0,
+                            Y = 1.0,
+                            Z = 1.0,
+                            RX = 1.0,
+                            RY = 1.0,
+                            RZ = 1.0,
+                            Tilt = 1.0,
+                            Span = 1.0
                         }
                     }));
 
             // Structure[StructureKey].Put(TrackKey, X, Y, Z, RX, RY, RZ, Tilt, Span);
             Check(
-                ExecParse("BveTs Map 1.00\n0;Structure[StructureKey].Put(string_test_value, 1, 1, 1, 1, 1, 1, 1, 1);"),
+                ExecParse("BveTs Map 1.00\n0;Structure[StructureKey].Put(string_test_value, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0);"),
                 new MapData(
                     version: "1.00",
                     syntaxes: new List<Statement>()
@@ -1106,14 +1028,14 @@ namespace Bve5_ParsingTests
                         {
                             Key = "StructureKey",
                             TrackKey = "string_test_value",
-                            X = 1,
-                            Y = 1,
-                            Z = 1,
-                            RX = 1,
-                            RY = 1,
-                            RZ = 1,
-                            Tilt = 1,
-                            Span = 1
+                            X = 1.0,
+                            Y = 1.0,
+                            Z = 1.0,
+                            RX = 1.0,
+                            RY = 1.0,
+                            RZ = 1.0,
+                            Tilt = 1.0,
+                            Span = 1.0
                         }
                     }));
         }
@@ -1127,7 +1049,7 @@ namespace Bve5_ParsingTests
 
             // Structure[StructureKey].Put0(TrackKey, Tilt, Span);
             Check(
-                ExecParse("BveTs Map 2.02\n0;Structure['StructureKey'].Put0('string_test_value', 1, 1);"),
+                ExecParse("BveTs Map 2.02\n0;Structure['StructureKey'].Put0('string_test_value', 1.0, 1.0);"),
                 new MapData(
                     version: "2.02",
                     syntaxes: new List<Statement>()
@@ -1136,14 +1058,14 @@ namespace Bve5_ParsingTests
                         {
                             Key = "StructureKey",
                             TrackKey = "string_test_value",
-                            Tilt = 1,
-                            Span = 1
+                            Tilt = 1.0,
+                            Span = 1.0
                         }
                     }));
 
             // Structure[StructureKey].Put0(TrackKey, Tilt, Span);
             Check(
-                ExecParse("BveTs Map 2.00\n0;Structure['StructureKey'].Put0('string_test_value', 1, 1);"),
+                ExecParse("BveTs Map 2.00\n0;Structure['StructureKey'].Put0('string_test_value', 1.0, 1.0);"),
                 new MapData(
                     version: "2.00",
                     syntaxes: new List<Statement>()
@@ -1152,14 +1074,14 @@ namespace Bve5_ParsingTests
                         {
                             Key = "StructureKey",
                             TrackKey = "string_test_value",
-                            Tilt = 1,
-                            Span = 1
+                            Tilt = 1.0,
+                            Span = 1.0
                         }
                     }));
 
             // Structure[StructureKey].Put0(TrackKey, Tilt, Span);
             Check(
-                ExecParse("BveTs Map 1.00\n0;Structure[StructureKey].Put0(string_test_value, 1, 1);"),
+                ExecParse("BveTs Map 1.00\n0;Structure[StructureKey].Put0(string_test_value, 1.0, 1.0);"),
                 new MapData(
                     version: "1.00",
                     syntaxes: new List<Statement>()
@@ -1168,8 +1090,8 @@ namespace Bve5_ParsingTests
                         {
                             Key = "StructureKey",
                             TrackKey = "string_test_value",
-                            Tilt = 1,
-                            Span = 1
+                            Tilt = 1.0,
+                            Span = 1.0
                         }
                     }));
         }
@@ -1196,7 +1118,7 @@ namespace Bve5_ParsingTests
 
             // Repeater[RepeaterKey].Begin(TrackKey, X, Y, Z, RX, RY, RZ, Tilt, Span, Interval);
             Check(
-                ExecParse("BveTs Map 2.02\n0;Repeater['RepeaterKey'].Begin('string_test_value', 1, 1, 1, 1, 1, 1, 1, 1, 1);"),
+                ExecParse("BveTs Map 2.02\n0;Repeater['RepeaterKey'].Begin('string_test_value', 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0);"),
                 new MapData(
                     version: "2.02",
                     syntaxes: new List<Statement>()
@@ -1205,21 +1127,21 @@ namespace Bve5_ParsingTests
                         {
                             Key = "RepeaterKey",
                             TrackKey = "string_test_value",
-                            X = 1,
-                            Y = 1,
-                            Z = 1,
-                            RX = 1,
-                            RY = 1,
-                            RZ = 1,
-                            Tilt = 1,
-                            Span = 1,
-                            Interval = 1
+                            X = 1.0,
+                            Y = 1.0,
+                            Z = 1.0,
+                            RX = 1.0,
+                            RY = 1.0,
+                            RZ = 1.0,
+                            Tilt = 1.0,
+                            Span = 1.0,
+                            Interval = 1.0
                         }
                     }));
 
             // Repeater[RepeaterKey].Begin(TrackKey, X, Y, Z, RX, RY, RZ, Tilt, Span, Interval);
             Check(
-                ExecParse("BveTs Map 2.00\n0;Repeater['RepeaterKey'].Begin('string_test_value', 1, 1, 1, 1, 1, 1, 1, 1, 1);"),
+                ExecParse("BveTs Map 2.00\n0;Repeater['RepeaterKey'].Begin('string_test_value', 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0);"),
                 new MapData(
                     version: "2.00",
                     syntaxes: new List<Statement>()
@@ -1228,21 +1150,21 @@ namespace Bve5_ParsingTests
                         {
                             Key = "RepeaterKey",
                             TrackKey = "string_test_value",
-                            X = 1,
-                            Y = 1,
-                            Z = 1,
-                            RX = 1,
-                            RY = 1,
-                            RZ = 1,
-                            Tilt = 1,
-                            Span = 1,
-                            Interval = 1
+                            X = 1.0,
+                            Y = 1.0,
+                            Z = 1.0,
+                            RX = 1.0,
+                            RY = 1.0,
+                            RZ = 1.0,
+                            Tilt = 1.0,
+                            Span = 1.0,
+                            Interval = 1.0
                         }
                     }));
 
             // Repeater[RepeaterKey].Begin(TrackKey, X, Y, Z, RX, RY, RZ, Tilt, Span, Interval);
             Check(
-                ExecParse("BveTs Map 1.00\n0;Repeater[RepeaterKey].Begin(string_test_value, 1, 1, 1, 1, 1, 1, 1, 1, 1);"),
+                ExecParse("BveTs Map 1.00\n0;Repeater[RepeaterKey].Begin(string_test_value, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0);"),
                 new MapData(
                     version: "1.00",
                     syntaxes: new List<Statement>()
@@ -1251,15 +1173,15 @@ namespace Bve5_ParsingTests
                         {
                             Key = "RepeaterKey",
                             TrackKey = "string_test_value",
-                            X = 1,
-                            Y = 1,
-                            Z = 1,
-                            RX = 1,
-                            RY = 1,
-                            RZ = 1,
-                            Tilt = 1,
-                            Span = 1,
-                            Interval = 1
+                            X = 1.0,
+                            Y = 1.0,
+                            Z = 1.0,
+                            RX = 1.0,
+                            RY = 1.0,
+                            RZ = 1.0,
+                            Tilt = 1.0,
+                            Span = 1.0,
+                            Interval = 1.0
                         }
                     }));
         }
@@ -1273,7 +1195,7 @@ namespace Bve5_ParsingTests
 
             // Repeater[RepeaterKey].Begin0(TrackKey, Tilt, Span, Interval);
             Check(
-                ExecParse("BveTs Map 2.02\n0;Repeater['RepeaterKey'].Begin0('string_test_value', 1, 1, 1);"),
+                ExecParse("BveTs Map 2.02\n0;Repeater['RepeaterKey'].Begin0('string_test_value', 1.0, 1.0, 1.0);"),
                 new MapData(
                     version: "2.02",
                     syntaxes: new List<Statement>()
@@ -1282,15 +1204,15 @@ namespace Bve5_ParsingTests
                         {
                             Key = "RepeaterKey",
                             TrackKey = "string_test_value",
-                            Tilt = 1,
-                            Span = 1,
-                            Interval = 1
+                            Tilt = 1.0,
+                            Span = 1.0,
+                            Interval = 1.0
                         }
                     }));
 
             // Repeater[RepeaterKey].Begin0(TrackKey, Tilt, Span, Interval);
             Check(
-                ExecParse("BveTs Map 2.00\n0;Repeater['RepeaterKey'].Begin0('string_test_value', 1, 1, 1);"),
+                ExecParse("BveTs Map 2.00\n0;Repeater['RepeaterKey'].Begin0('string_test_value', 1.0, 1.0, 1.0);"),
                 new MapData(
                     version: "2.00",
                     syntaxes: new List<Statement>()
@@ -1299,15 +1221,15 @@ namespace Bve5_ParsingTests
                         {
                             Key = "RepeaterKey",
                             TrackKey = "string_test_value",
-                            Tilt = 1,
-                            Span = 1,
-                            Interval = 1
+                            Tilt = 1.0,
+                            Span = 1.0,
+                            Interval = 1.0
                         }
                     }));
 
             // Repeater[RepeaterKey].Begin0(TrackKey, Tilt, Span, Interval);
             Check(
-                ExecParse("BveTs Map 1.00\n0;Repeater[RepeaterKey].Begin0(string_test_value, 1, 1, 1);"),
+                ExecParse("BveTs Map 1.00\n0;Repeater[RepeaterKey].Begin0(string_test_value, 1.0, 1.0, 1.0);"),
                 new MapData(
                     version: "1.00",
                     syntaxes: new List<Statement>()
@@ -1316,9 +1238,9 @@ namespace Bve5_ParsingTests
                         {
                             Key = "RepeaterKey",
                             TrackKey = "string_test_value",
-                            Tilt = 1,
-                            Span = 1,
-                            Interval = 1
+                            Tilt = 1.0,
+                            Span = 1.0,
+                            Interval = 1.0
                         }
                     }));
         }
@@ -1439,7 +1361,7 @@ namespace Bve5_ParsingTests
 
             // Station[StationKey].Put(Door, Margin1, Margin2);
             Check(
-                ExecParse("BveTs Map 2.02\n0;Station['StationKey'].Put(1, 1, 1);"),
+                ExecParse("BveTs Map 2.02\n0;Station['StationKey'].Put(1.0, 1.0, 1.0);"),
                 new MapData(
                     version: "2.02",
                     syntaxes: new List<Statement>()
@@ -1447,15 +1369,15 @@ namespace Bve5_ParsingTests
                         new StationPutStatement(0)
                         {
                             Key = "StationKey",
-                            Door = 1,
-                            Margin1 = 1,
-                            Margin2 = 1
+                            Door = 1.0,
+                            Margin1 = 1.0,
+                            Margin2 = 1.0
                         }
                     }));
 
             // Station[StationKey].Put(Door, Margin1, Margin2);
             Check(
-                ExecParse("BveTs Map 2.00\n0;Station['StationKey'].Put(1, 1, 1);"),
+                ExecParse("BveTs Map 2.00\n0;Station['StationKey'].Put(1.0, 1.0, 1.0);"),
                 new MapData(
                     version: "2.00",
                     syntaxes: new List<Statement>()
@@ -1463,15 +1385,15 @@ namespace Bve5_ParsingTests
                         new StationPutStatement(0)
                         {
                             Key = "StationKey",
-                            Door = 1,
-                            Margin1 = 1,
-                            Margin2 = 1
+                            Door = 1.0,
+                            Margin1 = 1.0,
+                            Margin2 = 1.0
                         }
                     }));
 
             // Station[StationKey].Put(Door, Margin1, Margin2);
             Check(
-                ExecParse("BveTs Map 1.00\n0;Station[StationKey].Put(1, 1, 1);"),
+                ExecParse("BveTs Map 1.00\n0;Station[StationKey].Put(1.0, 1.0, 1.0);"),
                 new MapData(
                     version: "1.00",
                     syntaxes: new List<Statement>()
@@ -1479,9 +1401,9 @@ namespace Bve5_ParsingTests
                         new StationPutStatement(0)
                         {
                             Key = "StationKey",
-                            Door = 1,
-                            Margin1 = 1,
-                            Margin2 = 1
+                            Door = 1.0,
+                            Margin1 = 1.0,
+                            Margin2 = 1.0
                         }
                     }));
         }
@@ -1586,46 +1508,46 @@ namespace Bve5_ParsingTests
 
             // Beacon.Put(Type, Section, Senddata);
             Check(
-                ExecParse("BveTs Map 2.02\n0;Beacon.Put(1, 1, 1);"),
+                ExecParse("BveTs Map 2.02\n0;Beacon.Put(1.0, 1.0, 1.0);"),
                 new MapData(
                     version: "2.02",
                     syntaxes: new List<Statement>()
                     {
                         new BeaconPutStatement(0)
                         {
-                            Type = 1,
-                            Section = 1,
-                            Senddata = 1
+                            Type = 1.0,
+                            Section = 1.0,
+                            Senddata = 1.0
                         }
                     }));
 
             // Beacon.Put(Type, Section, Senddata);
             Check(
-                ExecParse("BveTs Map 2.00\n0;Beacon.Put(1, 1, 1);"),
+                ExecParse("BveTs Map 2.00\n0;Beacon.Put(1.0, 1.0, 1.0);"),
                 new MapData(
                     version: "2.00",
                     syntaxes: new List<Statement>()
                     {
                         new BeaconPutStatement(0)
                         {
-                            Type = 1,
-                            Section = 1,
-                            Senddata = 1
+                            Type = 1.0,
+                            Section = 1.0,
+                            Senddata = 1.0
                         }
                     }));
 
             // Beacon.Put(Type, Section, Senddata);
             Check(
-                ExecParse("BveTs Map 1.00\n0;Beacon.Put(1, 1, 1);"),
+                ExecParse("BveTs Map 1.00\n0;Beacon.Put(1.0, 1.0, 1.0);"),
                 new MapData(
                     version: "1.00",
                     syntaxes: new List<Statement>()
                     {
                         new BeaconPutStatement(0)
                         {
-                            Type = 1,
-                            Section = 1,
-                            Senddata = 1
+                            Type = 1.0,
+                            Section = 1.0,
+                            Senddata = 1.0
                         }
                     }));
         }
@@ -1639,40 +1561,40 @@ namespace Bve5_ParsingTests
 
             // Speedlimit.Begin(V);
             Check(
-                ExecParse("BveTs Map 2.02\n0;Speedlimit.Begin(1);"),
+                ExecParse("BveTs Map 2.02\n0;Speedlimit.Begin(1.0);"),
                 new MapData(
                     version: "2.02",
                     syntaxes: new List<Statement>()
                     {
                         new SpeedlimitBeginStatement(0)
                         {
-                            V = 1
+                            V = 1.0
                         }
                     }));
 
             // Speedlimit.Begin(V);
             Check(
-                ExecParse("BveTs Map 2.00\n0;Speedlimit.Begin(1);"),
+                ExecParse("BveTs Map 2.00\n0;Speedlimit.Begin(1.0);"),
                 new MapData(
                     version: "2.00",
                     syntaxes: new List<Statement>()
                     {
                         new SpeedlimitBeginStatement(0)
                         {
-                            V = 1
+                            V = 1.0
                         }
                     }));
 
             // Speedlimit.Begin(V);
             Check(
-                ExecParse("BveTs Map 1.00\n0;Speedlimit.Begin(1);"),
+                ExecParse("BveTs Map 1.00\n0;Speedlimit.Begin(1.0);"),
                 new MapData(
                     version: "1.00",
                     syntaxes: new List<Statement>()
                     {
                         new SpeedlimitBeginStatement(0)
                         {
-                            V = 1
+                            V = 1.0
                         }
                     }));
         }
@@ -1743,46 +1665,46 @@ namespace Bve5_ParsingTests
 
             // Light.Ambient(Red, Green, Blue);
             Check(
-                ExecParse("BveTs Map 2.02\n0;Light.Ambient(1, 1, 1);"),
+                ExecParse("BveTs Map 2.02\n0;Light.Ambient(1.0, 1.0, 1.0);"),
                 new MapData(
                     version: "2.02",
                     syntaxes: new List<Statement>()
                     {
                         new LightAmbientStatement(0)
                         {
-                            Red = 1,
-                            Green = 1,
-                            Blue = 1
+                            Red = 1.0,
+                            Green = 1.0,
+                            Blue = 1.0
                         }
                     }));
 
             // Light.Ambient(Red, Green, Blue);
             Check(
-                ExecParse("BveTs Map 2.00\n0;Light.Ambient(1, 1, 1);"),
+                ExecParse("BveTs Map 2.00\n0;Light.Ambient(1.0, 1.0, 1.0);"),
                 new MapData(
                     version: "2.00",
                     syntaxes: new List<Statement>()
                     {
                         new LightAmbientStatement(0)
                         {
-                            Red = 1,
-                            Green = 1,
-                            Blue = 1
+                            Red = 1.0,
+                            Green = 1.0,
+                            Blue = 1.0
                         }
                     }));
 
             // Light.Ambient(Red, Green, Blue);
             Check(
-                ExecParse("BveTs Map 1.00\n0;Light.Ambient(1, 1, 1);"),
+                ExecParse("BveTs Map 1.00\n0;Light.Ambient(1.0, 1.0, 1.0);"),
                 new MapData(
                     version: "1.00",
                     syntaxes: new List<Statement>()
                     {
                         new LightAmbientStatement(0)
                         {
-                            Red = 1,
-                            Green = 1,
-                            Blue = 1
+                            Red = 1.0,
+                            Green = 1.0,
+                            Blue = 1.0
                         }
                     }));
         }
@@ -1796,46 +1718,46 @@ namespace Bve5_ParsingTests
 
             // Light.Diffuse(Red, Green, Blue);
             Check(
-                ExecParse("BveTs Map 2.02\n0;Light.Diffuse(1, 1, 1);"),
+                ExecParse("BveTs Map 2.02\n0;Light.Diffuse(1.0, 1.0, 1.0);"),
                 new MapData(
                     version: "2.02",
                     syntaxes: new List<Statement>()
                     {
                         new LightDiffuseStatement(0)
                         {
-                            Red = 1,
-                            Green = 1,
-                            Blue = 1
+                            Red = 1.0,
+                            Green = 1.0,
+                            Blue = 1.0
                         }
                     }));
 
             // Light.Diffuse(Red, Green, Blue);
             Check(
-                ExecParse("BveTs Map 2.00\n0;Light.Diffuse(1, 1, 1);"),
+                ExecParse("BveTs Map 2.00\n0;Light.Diffuse(1.0, 1.0, 1.0);"),
                 new MapData(
                     version: "2.00",
                     syntaxes: new List<Statement>()
                     {
                         new LightDiffuseStatement(0)
                         {
-                            Red = 1,
-                            Green = 1,
-                            Blue = 1
+                            Red = 1.0,
+                            Green = 1.0,
+                            Blue = 1.0
                         }
                     }));
 
             // Light.Diffuse(Red, Green, Blue);
             Check(
-                ExecParse("BveTs Map 1.00\n0;Light.Diffuse(1, 1, 1);"),
+                ExecParse("BveTs Map 1.00\n0;Light.Diffuse(1.0, 1.0, 1.0);"),
                 new MapData(
                     version: "1.00",
                     syntaxes: new List<Statement>()
                     {
                         new LightDiffuseStatement(0)
                         {
-                            Red = 1,
-                            Green = 1,
-                            Blue = 1
+                            Red = 1.0,
+                            Green = 1.0,
+                            Blue = 1.0
                         }
                     }));
         }
@@ -1849,43 +1771,43 @@ namespace Bve5_ParsingTests
 
             // Light.Direction(Pitch, Yaw);
             Check(
-                ExecParse("BveTs Map 2.02\n0;Light.Direction(1, 1);"),
+                ExecParse("BveTs Map 2.02\n0;Light.Direction(1.0, 1.0);"),
                 new MapData(
                     version: "2.02",
                     syntaxes: new List<Statement>()
                     {
                         new LightDirectionStatement(0)
                         {
-                            Pitch = 1,
-                            Yaw = 1
+                            Pitch = 1.0,
+                            Yaw = 1.0
                         }
                     }));
 
             // Light.Direction(Pitch, Yaw);
             Check(
-                ExecParse("BveTs Map 2.00\n0;Light.Direction(1, 1);"),
+                ExecParse("BveTs Map 2.00\n0;Light.Direction(1.0, 1.0);"),
                 new MapData(
                     version: "2.00",
                     syntaxes: new List<Statement>()
                     {
                         new LightDirectionStatement(0)
                         {
-                            Pitch = 1,
-                            Yaw = 1
+                            Pitch = 1.0,
+                            Yaw = 1.0
                         }
                     }));
 
             // Light.Direction(Pitch, Yaw);
             Check(
-                ExecParse("BveTs Map 1.00\n0;Light.Direction(1, 1);"),
+                ExecParse("BveTs Map 1.00\n0;Light.Direction(1.0, 1.0);"),
                 new MapData(
                     version: "1.00",
                     syntaxes: new List<Statement>()
                     {
                         new LightDirectionStatement(0)
                         {
-                            Pitch = 1,
-                            Yaw = 1
+                            Pitch = 1.0,
+                            Yaw = 1.0
                         }
                     }));
         }
@@ -1925,14 +1847,14 @@ namespace Bve5_ParsingTests
 
             // Drawdistance.Change(Value);
             Check(
-                ExecParse("BveTs Map 2.02\n0;Drawdistance.Change(1);"),
+                ExecParse("BveTs Map 2.02\n0;Drawdistance.Change(1.0);"),
                 new MapData(
                     version: "2.02",
                     syntaxes: new List<Statement>()
                     {
                         new DrawdistanceChangeStatement(0)
                         {
-                            Value = 1
+                            Value = 1.0
                         }
                     }));
         }
@@ -1958,14 +1880,14 @@ namespace Bve5_ParsingTests
 
             // Cabilluminance.Interpolate(Value);
             Check(
-                ExecParse("BveTs Map 2.02\n0;Cabilluminance.Interpolate(1);"),
+                ExecParse("BveTs Map 2.02\n0;Cabilluminance.Interpolate(1.0);"),
                 new MapData(
                     version: "2.02",
                     syntaxes: new List<Statement>()
                     {
                         new CabilluminanceInterpolateStatement(0)
                         {
-                            Value = 1
+                            Value = 1.0
                         }
                     }));
         }
@@ -1979,40 +1901,40 @@ namespace Bve5_ParsingTests
 
             // Cabilluminance.Set(Value);
             Check(
-                ExecParse("BveTs Map 2.02\n0;Cabilluminance.Set(1);"),
+                ExecParse("BveTs Map 2.02\n0;Cabilluminance.Set(1.0);"),
                 new MapData(
                     version: "2.02",
                     syntaxes: new List<Statement>()
                     {
                         new CabilluminanceSetStatement(0)
                         {
-                            Value = 1
+                            Value = 1.0
                         }
                     }));
 
             // Cabilluminance.Set(Value);
             Check(
-                ExecParse("BveTs Map 2.00\n0;Cabilluminance.Set(1);"),
+                ExecParse("BveTs Map 2.00\n0;Cabilluminance.Set(1.0);"),
                 new MapData(
                     version: "2.00",
                     syntaxes: new List<Statement>()
                     {
                         new CabilluminanceSetStatement(0)
                         {
-                            Value = 1
+                            Value = 1.0
                         }
                     }));
 
             // Cabilluminance.Set(Value);
             Check(
-                ExecParse("BveTs Map 1.00\n0;Cabilluminance.Set(1);"),
+                ExecParse("BveTs Map 1.00\n0;Cabilluminance.Set(1.0);"),
                 new MapData(
                     version: "1.00",
                     syntaxes: new List<Statement>()
                     {
                         new CabilluminanceSetStatement(0)
                         {
-                            Value = 1
+                            Value = 1.0
                         }
                     }));
         }
@@ -2026,55 +1948,55 @@ namespace Bve5_ParsingTests
 
             // Irregularity.Change(X, Y, R, LX, LY, LR);
             Check(
-                ExecParse("BveTs Map 2.02\n0;Irregularity.Change(1, 1, 1, 1, 1, 1);"),
+                ExecParse("BveTs Map 2.02\n0;Irregularity.Change(1.0, 1.0, 1.0, 1.0, 1.0, 1.0);"),
                 new MapData(
                     version: "2.02",
                     syntaxes: new List<Statement>()
                     {
                         new IrregularityChangeStatement(0)
                         {
-                            X = 1,
-                            Y = 1,
-                            R = 1,
-                            LX = 1,
-                            LY = 1,
-                            LR = 1
+                            X = 1.0,
+                            Y = 1.0,
+                            R = 1.0,
+                            LX = 1.0,
+                            LY = 1.0,
+                            LR = 1.0
                         }
                     }));
 
             // Irregularity.Change(X, Y, R, LX, LY, LR);
             Check(
-                ExecParse("BveTs Map 2.00\n0;Irregularity.Change(1, 1, 1, 1, 1, 1);"),
+                ExecParse("BveTs Map 2.00\n0;Irregularity.Change(1.0, 1.0, 1.0, 1.0, 1.0, 1.0);"),
                 new MapData(
                     version: "2.00",
                     syntaxes: new List<Statement>()
                     {
                         new IrregularityChangeStatement(0)
                         {
-                            X = 1,
-                            Y = 1,
-                            R = 1,
-                            LX = 1,
-                            LY = 1,
-                            LR = 1
+                            X = 1.0,
+                            Y = 1.0,
+                            R = 1.0,
+                            LX = 1.0,
+                            LY = 1.0,
+                            LR = 1.0
                         }
                     }));
 
             // Irregularity.Change(X, Y, R, LX, LY, LR);
             Check(
-                ExecParse("BveTs Map 1.00\n0;Irregularity.Change(1, 1, 1, 1, 1, 1);"),
+                ExecParse("BveTs Map 1.00\n0;Irregularity.Change(1.0, 1.0, 1.0, 1.0, 1.0, 1.0);"),
                 new MapData(
                     version: "1.00",
                     syntaxes: new List<Statement>()
                     {
                         new IrregularityChangeStatement(0)
                         {
-                            X = 1,
-                            Y = 1,
-                            R = 1,
-                            LX = 1,
-                            LY = 1,
-                            LR = 1
+                            X = 1.0,
+                            Y = 1.0,
+                            R = 1.0,
+                            LX = 1.0,
+                            LY = 1.0,
+                            LR = 1.0
                         }
                     }));
         }
@@ -2088,127 +2010,85 @@ namespace Bve5_ParsingTests
 
             // Adhesion.Change(A);
             Check(
-                ExecParse("BveTs Map 2.02\n0;Adhesion.Change(1);"),
+                ExecParse("BveTs Map 2.02\n0;Adhesion.Change(1.0);"),
                 new MapData(
                     version: "2.02",
                     syntaxes: new List<Statement>()
                     {
                         new AdhesionChangeStatement(0)
                         {
-                            A = 1
-                        }
-                    }));
-
-            // Adhesion.Change(A, B);
-            Check(
-                ExecParse("BveTs Map 2.02\n0;Adhesion.Change(1, 1);"),
-                new MapData(
-                    version: "2.02",
-                    syntaxes: new List<Statement>()
-                    {
-                        new AdhesionChangeStatement(0)
-                        {
-                            A = 1,
-                            B = 1
+                            A = 1.0
                         }
                     }));
 
             // Adhesion.Change(A, B, C);
             Check(
-                ExecParse("BveTs Map 2.02\n0;Adhesion.Change(1, 1, 1);"),
+                ExecParse("BveTs Map 2.02\n0;Adhesion.Change(1.0, 1.0, 1.0);"),
                 new MapData(
                     version: "2.02",
                     syntaxes: new List<Statement>()
                     {
                         new AdhesionChangeStatement(0)
                         {
-                            A = 1,
-                            B = 1,
-                            C = 1
+                            A = 1.0,
+                            B = 1.0,
+                            C = 1.0
                         }
                     }));
 
             // Adhesion.Change(A);
             Check(
-                ExecParse("BveTs Map 2.00\n0;Adhesion.Change(1);"),
+                ExecParse("BveTs Map 2.00\n0;Adhesion.Change(1.0);"),
                 new MapData(
                     version: "2.00",
                     syntaxes: new List<Statement>()
                     {
                         new AdhesionChangeStatement(0)
                         {
-                            A = 1
-                        }
-                    }));
-
-            // Adhesion.Change(A, B);
-            Check(
-                ExecParse("BveTs Map 2.00\n0;Adhesion.Change(1, 1);"),
-                new MapData(
-                    version: "2.00",
-                    syntaxes: new List<Statement>()
-                    {
-                        new AdhesionChangeStatement(0)
-                        {
-                            A = 1,
-                            B = 1
+                            A = 1.0
                         }
                     }));
 
             // Adhesion.Change(A, B, C);
             Check(
-                ExecParse("BveTs Map 2.00\n0;Adhesion.Change(1, 1, 1);"),
+                ExecParse("BveTs Map 2.00\n0;Adhesion.Change(1.0, 1.0, 1.0);"),
                 new MapData(
                     version: "2.00",
                     syntaxes: new List<Statement>()
                     {
                         new AdhesionChangeStatement(0)
                         {
-                            A = 1,
-                            B = 1,
-                            C = 1
+                            A = 1.0,
+                            B = 1.0,
+                            C = 1.0
                         }
                     }));
 
             // Adhesion.Change(A);
             Check(
-                ExecParse("BveTs Map 1.00\n0;Adhesion.Change(1);"),
+                ExecParse("BveTs Map 1.00\n0;Adhesion.Change(1.0);"),
                 new MapData(
                     version: "1.00",
                     syntaxes: new List<Statement>()
                     {
                         new AdhesionChangeStatement(0)
                         {
-                            A = 1
-                        }
-                    }));
-
-            // Adhesion.Change(A, B);
-            Check(
-                ExecParse("BveTs Map 1.00\n0;Adhesion.Change(1, 1);"),
-                new MapData(
-                    version: "1.00",
-                    syntaxes: new List<Statement>()
-                    {
-                        new AdhesionChangeStatement(0)
-                        {
-                            A = 1,
-                            B = 1
+                            A = 1.0
                         }
                     }));
 
             // Adhesion.Change(A, B, C);
             Check(
-                ExecParse("BveTs Map 1.00\n0;Adhesion.Change(1, 1, 1);"),
+                ExecParse("BveTs Map 1.00\n0;Adhesion.Change(1.0, 1.0, 1.0);"),
                 new MapData(
                     version: "1.00",
                     syntaxes: new List<Statement>()
                     {
                         new AdhesionChangeStatement(0)
                         {
-                            A = 1,
-                            B = 1,
-                            C = 1
+                            A = 1.0,
+                            B = 1.0,
+                            C = 1.0
                         }
                     }));
         }
@@ -2308,40 +2188,40 @@ namespace Bve5_ParsingTests
 
             // Rollingnoise.Change(Index);
             Check(
-                ExecParse("BveTs Map 2.02\n0;Rollingnoise.Change(1);"),
+                ExecParse("BveTs Map 2.02\n0;Rollingnoise.Change(1.0);"),
                 new MapData(
                     version: "2.02",
                     syntaxes: new List<Statement>()
                     {
                         new RollingnoiseChangeStatement(0)
                         {
-                            Index = 1
+                            Index = 1.0
                         }
                     }));
 
             // Rollingnoise.Change(Index);
             Check(
-                ExecParse("BveTs Map 2.00\n0;Rollingnoise.Change(1);"),
+                ExecParse("BveTs Map 2.00\n0;Rollingnoise.Change(1.0);"),
                 new MapData(
                     version: "2.00",
                     syntaxes: new List<Statement>()
                     {
                         new RollingnoiseChangeStatement(0)
                         {
-                            Index = 1
+                            Index = 1.0
                         }
                     }));
 
             // Rollingnoise.Change(Index);
             Check(
-                ExecParse("BveTs Map 1.00\n0;Rollingnoise.Change(1);"),
+                ExecParse("BveTs Map 1.00\n0;Rollingnoise.Change(1.0);"),
                 new MapData(
                     version: "1.00",
                     syntaxes: new List<Statement>()
                     {
                         new RollingnoiseChangeStatement(0)
                         {
-                            Index = 1
+                            Index = 1.0
                         }
                     }));
         }
@@ -2355,40 +2235,40 @@ namespace Bve5_ParsingTests
 
             // Flangenoise.Change(Index);
             Check(
-                ExecParse("BveTs Map 2.02\n0;Flangenoise.Change(1);"),
+                ExecParse("BveTs Map 2.02\n0;Flangenoise.Change(1.0);"),
                 new MapData(
                     version: "2.02",
                     syntaxes: new List<Statement>()
                     {
                         new FlangenoiseChangeStatement(0)
                         {
-                            Index = 1
+                            Index = 1.0
                         }
                     }));
 
             // Flangenoise.Change(Index);
             Check(
-                ExecParse("BveTs Map 2.00\n0;Flangenoise.Change(1);"),
+                ExecParse("BveTs Map 2.00\n0;Flangenoise.Change(1.0);"),
                 new MapData(
                     version: "2.00",
                     syntaxes: new List<Statement>()
                     {
                         new FlangenoiseChangeStatement(0)
                         {
-                            Index = 1
+                            Index = 1.0
                         }
                     }));
 
             // Flangenoise.Change(Index);
             Check(
-                ExecParse("BveTs Map 1.00\n0;Flangenoise.Change(1);"),
+                ExecParse("BveTs Map 1.00\n0;Flangenoise.Change(1.0);"),
                 new MapData(
                     version: "1.00",
                     syntaxes: new List<Statement>()
                     {
                         new FlangenoiseChangeStatement(0)
                         {
-                            Index = 1
+                            Index = 1.0
                         }
                     }));
         }
@@ -2402,40 +2282,40 @@ namespace Bve5_ParsingTests
 
             // Jointnoise.Play(Index);
             Check(
-                ExecParse("BveTs Map 2.02\n0;Jointnoise.Play(1);"),
+                ExecParse("BveTs Map 2.02\n0;Jointnoise.Play(1.0);"),
                 new MapData(
                     version: "2.02",
                     syntaxes: new List<Statement>()
                     {
                         new JointnoisePlayStatement(0)
                         {
-                            Index = 1
+                            Index = 1.0
                         }
                     }));
 
             // Jointnoise.Play(Index);
             Check(
-                ExecParse("BveTs Map 2.00\n0;Jointnoise.Play(1);"),
+                ExecParse("BveTs Map 2.00\n0;Jointnoise.Play(1.0);"),
                 new MapData(
                     version: "2.00",
                     syntaxes: new List<Statement>()
                     {
                         new JointnoisePlayStatement(0)
                         {
-                            Index = 1
+                            Index = 1.0
                         }
                     }));
 
             // Jointnoise.Play(Index);
             Check(
-                ExecParse("BveTs Map 1.00\n0;Jointnoise.Play(1);"),
+                ExecParse("BveTs Map 1.00\n0;Jointnoise.Play(1.0);"),
                 new MapData(
                     version: "1.00",
                     syntaxes: new List<Statement>()
                     {
                         new JointnoisePlayStatement(0)
                         {
-                            Index = 1
+                            Index = 1.0
                         }
                     }));
         }
@@ -2488,7 +2368,7 @@ namespace Bve5_ParsingTests
 
             // Train[TrainKey].Stop(Decelerate, StopTime, Accelerate, Speed);
             Check(
-                ExecParse("BveTs Map 2.02\n0;Train['TrainKey'].Stop(1, 1, 1, 1);"),
+                ExecParse("BveTs Map 2.02\n0;Train['TrainKey'].Stop(1.0, 1.0, 1.0, 1.0);"),
                 new MapData(
                     version: "2.02",
                     syntaxes: new List<Statement>()
@@ -2496,16 +2376,16 @@ namespace Bve5_ParsingTests
                         new TrainStopStatement(0)
                         {
                             Key = "TrainKey",
-                            Decelerate = 1,
-                            StopTime = 1,
-                            Accelerate = 1,
-                            Speed = 1
+                            Decelerate = 1.0,
+                            StopTime = 1.0,
+                            Accelerate = 1.0,
+                            Speed = 1.0
                         }
                     }));
 
             // Train[TrainKey].Stop(Decelerate, StopTime, Accelerate, Speed);
             Check(
-                ExecParse("BveTs Map 2.00\n0;Train['TrainKey'].Stop(1, 1, 1, 1);"),
+                ExecParse("BveTs Map 2.00\n0;Train['TrainKey'].Stop(1.0, 1.0, 1.0, 1.0);"),
                 new MapData(
                     version: "2.00",
                     syntaxes: new List<Statement>()
@@ -2513,16 +2393,16 @@ namespace Bve5_ParsingTests
                         new TrainStopStatement(0)
                         {
                             Key = "TrainKey",
-                            Decelerate = 1,
-                            StopTime = 1,
-                            Accelerate = 1,
-                            Speed = 1
+                            Decelerate = 1.0,
+                            StopTime = 1.0,
+                            Accelerate = 1.0,
+                            Speed = 1.0
                         }
                     }));
 
             // Train[TrainKey].Stop(Decelerate, StopTime, Accelerate, Speed);
             Check(
-                ExecParse("BveTs Map 1.00\n0;Train[TrainKey].Stop(1, 1, 1, 1);"),
+                ExecParse("BveTs Map 1.00\n0;Train[TrainKey].Stop(1.0, 1.0, 1.0, 1.0);"),
                 new MapData(
                     version: "1.00",
                     syntaxes: new List<Statement>()
@@ -2530,10 +2410,10 @@ namespace Bve5_ParsingTests
                         new TrainStopStatement(0)
                         {
                             Key = "TrainKey",
-                            Decelerate = 1,
-                            StopTime = 1,
-                            Accelerate = 1,
-                            Speed = 1
+                            Decelerate = 1.0,
+                            StopTime = 1.0,
+                            Accelerate = 1.0,
+                            Speed = 1.0
                         }
                     }));
         }
@@ -2547,7 +2427,7 @@ namespace Bve5_ParsingTests
 
             // Train[TrainKey].Settrack(TrackKey, Direction);
             Check(
-                ExecParse("BveTs Map 2.02\n0;Train['TrainKey'].Settrack('string_test_value', 1);"),
+                ExecParse("BveTs Map 2.02\n0;Train['TrainKey'].Settrack('string_test_value', 1.0);"),
                 new MapData(
                     version: "2.02",
                     syntaxes: new List<Statement>()
@@ -2556,13 +2436,13 @@ namespace Bve5_ParsingTests
                         {
                             Key = "TrainKey",
                             TrackKey = "string_test_value",
-                            Direction = 1
+                            Direction = 1.0
                         }
                     }));
 
             // Train[TrainKey].Settrack(TrackKey, Direction);
             Check(
-                ExecParse("BveTs Map 2.00\n0;Train['TrainKey'].Settrack('string_test_value', 1);"),
+                ExecParse("BveTs Map 2.00\n0;Train['TrainKey'].Settrack('string_test_value', 1.0);"),
                 new MapData(
                     version: "2.00",
                     syntaxes: new List<Statement>()
@@ -2571,13 +2451,13 @@ namespace Bve5_ParsingTests
                         {
                             Key = "TrainKey",
                             TrackKey = "string_test_value",
-                            Direction = 1
+                            Direction = 1.0
                         }
                     }));
 
             // Train[TrainKey].Settrack(TrackKey, Direction);
             Check(
-                ExecParse("BveTs Map 1.00\n0;Train[TrainKey].Settrack(string_test_value, 1);"),
+                ExecParse("BveTs Map 1.00\n0;Train[TrainKey].Settrack(string_test_value, 1.0);"),
                 new MapData(
                     version: "1.00",
                     syntaxes: new List<Statement>()
@@ -2586,7 +2466,7 @@ namespace Bve5_ParsingTests
                         {
                             Key = "TrainKey",
                             TrackKey = "string_test_value",
-                            Direction = 1
+                            Direction = 1.0
                         }
                     }));
         }
@@ -2598,54 +2478,132 @@ namespace Bve5_ParsingTests
         public void LegacyFogTest()
         {
 
-            // Legacy.Fog(Fogstart, Fogend, red, green, blue);
+            // Legacy.Fog();
             Check(
-                ExecParse("BveTs Map 2.02\n0;Legacy.Fog(1, 1, 1, 1, 1);"),
+                ExecParse("BveTs Map 2.02\n0;Legacy.Fog();"),
                 new MapData(
                     version: "2.02",
                     syntaxes: new List<Statement>()
                     {
                         new LegacyFogStatement(0)
                         {
-                            Fogstart = 1,
-                            Fogend = 1,
-                            red = 1,
-                            green = 1,
-                            blue = 1
+                        }
+                    }));
+
+            // Legacy.Fog(Fogstart, Fogend);
+            Check(
+                ExecParse("BveTs Map 2.02\n0;Legacy.Fog(1.0, 1.0);"),
+                new MapData(
+                    version: "2.02",
+                    syntaxes: new List<Statement>()
+                    {
+                        new LegacyFogStatement(0)
+                        {
+                            Fogstart = 1.0,
+                            Fogend = 1.0
                         }
                     }));
 
             // Legacy.Fog(Fogstart, Fogend, red, green, blue);
             Check(
-                ExecParse("BveTs Map 2.00\n0;Legacy.Fog(1, 1, 1, 1, 1);"),
+                ExecParse("BveTs Map 2.02\n0;Legacy.Fog(1.0, 1.0, 1.0, 1.0, 1.0);"),
+                new MapData(
+                    version: "2.02",
+                    syntaxes: new List<Statement>()
+                    {
+                        new LegacyFogStatement(0)
+                        {
+                            Fogstart = 1.0,
+                            Fogend = 1.0,
+                            red = 1.0,
+                            green = 1.0,
+                            blue = 1.0
+                        }
+                    }));
+
+            // Legacy.Fog();
+            Check(
+                ExecParse("BveTs Map 2.00\n0;Legacy.Fog();"),
                 new MapData(
                     version: "2.00",
                     syntaxes: new List<Statement>()
                     {
                         new LegacyFogStatement(0)
                         {
-                            Fogstart = 1,
-                            Fogend = 1,
-                            red = 1,
-                            green = 1,
-                            blue = 1
+                        }
+                    }));
+
+            // Legacy.Fog(Fogstart, Fogend);
+            Check(
+                ExecParse("BveTs Map 2.00\n0;Legacy.Fog(1.0, 1.0);"),
+                new MapData(
+                    version: "2.00",
+                    syntaxes: new List<Statement>()
+                    {
+                        new LegacyFogStatement(0)
+                        {
+                            Fogstart = 1.0,
+                            Fogend = 1.0
                         }
                     }));
 
             // Legacy.Fog(Fogstart, Fogend, red, green, blue);
             Check(
-                ExecParse("BveTs Map 1.00\n0;Legacy.Fog(1, 1, 1, 1, 1);"),
+                ExecParse("BveTs Map 2.00\n0;Legacy.Fog(1.0, 1.0, 1.0, 1.0, 1.0);"),
+                new MapData(
+                    version: "2.00",
+                    syntaxes: new List<Statement>()
+                    {
+                        new LegacyFogStatement(0)
+                        {
+                            Fogstart = 1.0,
+                            Fogend = 1.0,
+                            red = 1.0,
+                            green = 1.0,
+                            blue = 1.0
+                        }
+                    }));
+
+            // Legacy.Fog();
+            Check(
+                ExecParse("BveTs Map 1.00\n0;Legacy.Fog();"),
                 new MapData(
                     version: "1.00",
                     syntaxes: new List<Statement>()
                     {
                         new LegacyFogStatement(0)
                         {
-                            Fogstart = 1,
-                            Fogend = 1,
-                            red = 1,
-                            green = 1,
-                            blue = 1
+                        }
+                    }));
+
+            // Legacy.Fog(Fogstart, Fogend);
+            Check(
+                ExecParse("BveTs Map 1.00\n0;Legacy.Fog(1.0, 1.0);"),
+                new MapData(
+                    version: "1.00",
+                    syntaxes: new List<Statement>()
+                    {
+                        new LegacyFogStatement(0)
+                        {
+                            Fogstart = 1.0,
+                            Fogend = 1.0
+                        }
+                    }));
+
+            // Legacy.Fog(Fogstart, Fogend, red, green, blue);
+            Check(
+                ExecParse("BveTs Map 1.00\n0;Legacy.Fog(1.0, 1.0, 1.0, 1.0, 1.0);"),
+                new MapData(
+                    version: "1.00",
+                    syntaxes: new List<Statement>()
+                    {
+                        new LegacyFogStatement(0)
+                        {
+                            Fogstart = 1.0,
+                            Fogend = 1.0,
+                            red = 1.0,
+                            green = 1.0,
+                            blue = 1.0
                         }
                     }));
         }
@@ -2657,84 +2615,45 @@ namespace Bve5_ParsingTests
         public void LegacyCurveTest()
         {
 
-            // Legacy.Curve(radius);
+            // Legacy.Curve(radius, cant);
             Check(
-                ExecParse("BveTs Map 2.02\n0;Legacy.Curve(1);"),
+                ExecParse("BveTs Map 2.02\n0;Legacy.Curve(1.0, 1.0);"),
                 new MapData(
                     version: "2.02",
                     syntaxes: new List<Statement>()
                     {
                         new LegacyCurveStatement(0)
                         {
-                            radius = 1
+                            radius = 1.0,
+                            cant = 1.0
                         }
                     }));
 
             // Legacy.Curve(radius, cant);
             Check(
-                ExecParse("BveTs Map 2.02\n0;Legacy.Curve(1, 1);"),
-                new MapData(
-                    version: "2.02",
-                    syntaxes: new List<Statement>()
-                    {
-                        new LegacyCurveStatement(0)
-                        {
-                            radius = 1,
-                            cant = 1
-                        }
-                    }));
-
-            // Legacy.Curve(radius);
-            Check(
-                ExecParse("BveTs Map 2.00\n0;Legacy.Curve(1);"),
+                ExecParse("BveTs Map 2.00\n0;Legacy.Curve(1.0, 1.0);"),
                 new MapData(
                     version: "2.00",
                     syntaxes: new List<Statement>()
                     {
                         new LegacyCurveStatement(0)
                         {
-                            radius = 1
+                            radius = 1.0,
+                            cant = 1.0
                         }
                     }));
 
             // Legacy.Curve(radius, cant);
             Check(
-                ExecParse("BveTs Map 2.00\n0;Legacy.Curve(1, 1);"),
-                new MapData(
-                    version: "2.00",
-                    syntaxes: new List<Statement>()
-                    {
-                        new LegacyCurveStatement(0)
-                        {
-                            radius = 1,
-                            cant = 1
-                        }
-                    }));
-
-            // Legacy.Curve(radius);
-            Check(
-                ExecParse("BveTs Map 1.00\n0;Legacy.Curve(1);"),
+                ExecParse("BveTs Map 1.00\n0;Legacy.Curve(1.0, 1.0);"),
                 new MapData(
                     version: "1.00",
                     syntaxes: new List<Statement>()
                     {
                         new LegacyCurveStatement(0)
                         {
-                            radius = 1
-                        }
-                    }));
-
-            // Legacy.Curve(radius, cant);
-            Check(
-                ExecParse("BveTs Map 1.00\n0;Legacy.Curve(1, 1);"),
-                new MapData(
-                    version: "1.00",
-                    syntaxes: new List<Statement>()
-                    {
-                        new LegacyCurveStatement(0)
-                        {
-                            radius = 1,
-                            cant = 1
+                            radius = 1.0,
+                            cant = 1.0
                         }
                     }));
         }
@@ -2746,78 +2665,42 @@ namespace Bve5_ParsingTests
         public void LegacyPitchTest()
         {
 
-            // Legacy.Pitch();
+            // Legacy.Pitch(rate);
             Check(
-                ExecParse("BveTs Map 2.02\n0;Legacy.Pitch();"),
+                ExecParse("BveTs Map 2.02\n0;Legacy.Pitch(1.0);"),
                 new MapData(
                     version: "2.02",
                     syntaxes: new List<Statement>()
                     {
                         new LegacyPitchStatement(0)
                         {
+                            rate = 1.0
                         }
                     }));
 
             // Legacy.Pitch(rate);
             Check(
-                ExecParse("BveTs Map 2.02\n0;Legacy.Pitch(1);"),
-                new MapData(
-                    version: "2.02",
-                    syntaxes: new List<Statement>()
-                    {
-                        new LegacyPitchStatement(0)
-                        {
-                            rate = 1
-                        }
-                    }));
-
-            // Legacy.Pitch();
-            Check(
-                ExecParse("BveTs Map 2.00\n0;Legacy.Pitch();"),
+                ExecParse("BveTs Map 2.00\n0;Legacy.Pitch(1.0);"),
                 new MapData(
                     version: "2.00",
                     syntaxes: new List<Statement>()
                     {
                         new LegacyPitchStatement(0)
                         {
+                            rate = 1.0
                         }
                     }));
 
             // Legacy.Pitch(rate);
             Check(
-                ExecParse("BveTs Map 2.00\n0;Legacy.Pitch(1);"),
-                new MapData(
-                    version: "2.00",
-                    syntaxes: new List<Statement>()
-                    {
-                        new LegacyPitchStatement(0)
-                        {
-                            rate = 1
-                        }
-                    }));
-
-            // Legacy.Pitch();
-            Check(
-                ExecParse("BveTs Map 1.00\n0;Legacy.Pitch();"),
+                ExecParse("BveTs Map 1.00\n0;Legacy.Pitch(1.0);"),
                 new MapData(
                     version: "1.00",
                     syntaxes: new List<Statement>()
                     {
                         new LegacyPitchStatement(0)
                         {
-                        }
-                    }));
-
-            // Legacy.Pitch(rate);
-            Check(
-                ExecParse("BveTs Map 1.00\n0;Legacy.Pitch(1);"),
-                new MapData(
-                    version: "1.00",
-                    syntaxes: new List<Statement>()
-                    {
-                        new LegacyPitchStatement(0)
-                        {
-                            rate = 1
+                            rate = 1.0
                         }
                     }));
         }
@@ -2829,78 +2712,42 @@ namespace Bve5_ParsingTests
         public void LegacyTurnTest()
         {
 
-            // Legacy.Turn();
+            // Legacy.Turn(slope);
             Check(
-                ExecParse("BveTs Map 2.02\n0;Legacy.Turn();"),
+                ExecParse("BveTs Map 2.02\n0;Legacy.Turn(1.0);"),
                 new MapData(
                     version: "2.02",
                     syntaxes: new List<Statement>()
                     {
                         new LegacyTurnStatement(0)
                         {
+                            slope = 1.0
                         }
                     }));
 
             // Legacy.Turn(slope);
             Check(
-                ExecParse("BveTs Map 2.02\n0;Legacy.Turn(1);"),
-                new MapData(
-                    version: "2.02",
-                    syntaxes: new List<Statement>()
-                    {
-                        new LegacyTurnStatement(0)
-                        {
-                            slope = 1
-                        }
-                    }));
-
-            // Legacy.Turn();
-            Check(
-                ExecParse("BveTs Map 2.00\n0;Legacy.Turn();"),
+                ExecParse("BveTs Map 2.00\n0;Legacy.Turn(1.0);"),
                 new MapData(
                     version: "2.00",
                     syntaxes: new List<Statement>()
                     {
                         new LegacyTurnStatement(0)
                         {
+                            slope = 1.0
                         }
                     }));
 
             // Legacy.Turn(slope);
             Check(
-                ExecParse("BveTs Map 2.00\n0;Legacy.Turn(1);"),
-                new MapData(
-                    version: "2.00",
-                    syntaxes: new List<Statement>()
-                    {
-                        new LegacyTurnStatement(0)
-                        {
-                            slope = 1
-                        }
-                    }));
-
-            // Legacy.Turn();
-            Check(
-                ExecParse("BveTs Map 1.00\n0;Legacy.Turn();"),
+                ExecParse("BveTs Map 1.00\n0;Legacy.Turn(1.0);"),
                 new MapData(
                     version: "1.00",
                     syntaxes: new List<Statement>()
                     {
                         new LegacyTurnStatement(0)
                         {
-                        }
-                    }));
-
-            // Legacy.Turn(slope);
-            Check(
-                ExecParse("BveTs Map 1.00\n0;Legacy.Turn(1);"),
-                new MapData(
-                    version: "1.00",
-                    syntaxes: new List<Statement>()
-                    {
-                        new LegacyTurnStatement(0)
-                        {
-                            slope = 1
+                            slope = 1.0
                         }
                     }));
         }

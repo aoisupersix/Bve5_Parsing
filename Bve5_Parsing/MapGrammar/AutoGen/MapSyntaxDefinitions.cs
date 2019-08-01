@@ -204,217 +204,217 @@ namespace Bve5_Parsing.MapGrammar {
     public enum MapFunctionName {
 
         /// <summary>
-        /// Setgauge（Setgauge）
+        /// Setgauge
         /// </summary>
         [StringValue("Setgauge")]
         Setgauge,
 
         /// <summary>
-        /// Set（Set）
+        /// Set
         /// </summary>
         [StringValue("Set")]
         Set,
 
         /// <summary>
-        /// Gauge（Gauge）
+        /// Gauge
         /// </summary>
         [StringValue("Gauge")]
         Gauge,
 
         /// <summary>
-        /// Setcenter（Setcenter）
+        /// Setcenter
         /// </summary>
         [StringValue("Setcenter")]
         Setcenter,
 
         /// <summary>
-        /// Setfunction（Setfunction）
+        /// Setfunction
         /// </summary>
         [StringValue("Setfunction")]
         Setfunction,
 
         /// <summary>
-        /// Begintransition（Begintransition）
+        /// Begintransition
         /// </summary>
         [StringValue("Begintransition")]
         Begintransition,
 
         /// <summary>
-        /// Begin（Begin）
+        /// Begin
         /// </summary>
         [StringValue("Begin")]
         Begin,
 
         /// <summary>
-        /// Begincircular（Begincircular）
+        /// Begincircular
         /// </summary>
         [StringValue("Begincircular")]
         Begincircular,
 
         /// <summary>
-        /// End（End）
+        /// End
         /// </summary>
         [StringValue("End")]
         End,
 
         /// <summary>
-        /// Interpolate（Interpolate）
+        /// Interpolate
         /// </summary>
         [StringValue("Interpolate")]
         Interpolate,
 
         /// <summary>
-        /// Change（Change）
+        /// Change
         /// </summary>
         [StringValue("Change")]
         Change,
 
         /// <summary>
-        /// Beginconst（Beginconst）
+        /// Beginconst
         /// </summary>
         [StringValue("Beginconst")]
         Beginconst,
 
         /// <summary>
-        /// Position（Position）
+        /// Position
         /// </summary>
         [StringValue("Position")]
         Position,
 
         /// <summary>
-        /// Cant（Cant）
+        /// Cant
         /// </summary>
         [StringValue("Cant")]
         Cant,
 
         /// <summary>
-        /// Load（Load）
+        /// Load
         /// </summary>
         [StringValue("Load")]
         Load,
 
         /// <summary>
-        /// Put（Put）
+        /// Put
         /// </summary>
         [StringValue("Put")]
         Put,
 
         /// <summary>
-        /// Put0（Put0）
+        /// Put0
         /// </summary>
         [StringValue("Put0")]
         Put0,
 
         /// <summary>
-        /// Putbetween（Putbetween）
+        /// Putbetween
         /// </summary>
         [StringValue("Putbetween")]
         Putbetween,
 
         /// <summary>
-        /// Begin0（Begin0）
+        /// Begin0
         /// </summary>
         [StringValue("Begin0")]
         Begin0,
 
         /// <summary>
-        /// Beginnew（Beginnew）
+        /// Beginnew
         /// </summary>
         [StringValue("Beginnew")]
         Beginnew,
 
         /// <summary>
-        /// Setspeedlimit（Setspeedlimit）
+        /// Setspeedlimit
         /// </summary>
         [StringValue("Setspeedlimit")]
         Setspeedlimit,
 
         /// <summary>
-        /// Speedlimit（Speedlimit）
+        /// Speedlimit
         /// </summary>
         [StringValue("Speedlimit")]
         Speedlimit,
 
         /// <summary>
-        /// Setsignal（Setsignal）
+        /// Setsignal
         /// </summary>
         [StringValue("Setsignal")]
         Setsignal,
 
         /// <summary>
-        /// Pass（Pass）
+        /// Pass
         /// </summary>
         [StringValue("Pass")]
         Pass,
 
         /// <summary>
-        /// Ambient（Ambient）
+        /// Ambient
         /// </summary>
         [StringValue("Ambient")]
         Ambient,
 
         /// <summary>
-        /// Diffuse（Diffuse）
+        /// Diffuse
         /// </summary>
         [StringValue("Diffuse")]
         Diffuse,
 
         /// <summary>
-        /// Direction（Direction）
+        /// Direction
         /// </summary>
         [StringValue("Direction")]
         Direction,
 
         /// <summary>
-        /// Play（Play）
+        /// Play
         /// </summary>
         [StringValue("Play")]
         Play,
 
         /// <summary>
-        /// Add（Add）
+        /// Add
         /// </summary>
         [StringValue("Add")]
         Add,
 
         /// <summary>
-        /// Enable（Enable）
+        /// Enable
         /// </summary>
         [StringValue("Enable")]
         Enable,
 
         /// <summary>
-        /// Stop（Stop）
+        /// Stop
         /// </summary>
         [StringValue("Stop")]
         Stop,
 
         /// <summary>
-        /// Settrack（Settrack）
+        /// Settrack
         /// </summary>
         [StringValue("Settrack")]
         Settrack,
 
         /// <summary>
-        /// Fog（Fog）
+        /// Fog
         /// </summary>
         [StringValue("Fog")]
         Fog,
 
         /// <summary>
-        /// Curve（Curve）
+        /// Curve
         /// </summary>
         [StringValue("Curve")]
         Curve,
 
         /// <summary>
-        /// Pitch（Pitch）
+        /// Pitch
         /// </summary>
         [StringValue("Pitch")]
         Pitch,
 
         /// <summary>
-        /// Turn（Turn）
+        /// Turn
         /// </summary>
         [StringValue("Turn")]
         Turn,
