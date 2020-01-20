@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "fs": "0.0.1-security",
+    "fs": "0.0.2",
     "linq": "^3.1.1",
     "mustache": "^3.0.1",
     "strip-bom": "^3.0.0"
