@@ -16,7 +16,15 @@ Bve5.7構文のパーサライブラリです。</Description>
     <PackageProjectUrl>https://github.com/aoisupersix/Bve5_Parsing</PackageProjectUrl>
     <RepositoryType>git</RepositoryType>
     <AssemblyVersion>1.0.1.0</AssemblyVersion>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
 
   <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
     <DefineConstants>NETSTANDARD</DefineConstants>
