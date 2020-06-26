@@ -81,12 +81,13 @@ namespace Bve5_ParsingTests
         public void WhiteSpaceTest()
         {
             Check(
-                ExecParse($@"BveTs Map 2.02
+                ExecParse(@"BveTs Map 2.02
 0;
 Curve
                 .
 BeginTransition
 (  // This is line comment
+　// Left space is U+3000
 )
     ;
 "),
@@ -97,13 +98,13 @@ BeginTransition
                 }));
 
             Check(
-                ExecParse($@"BveTs Map 2.00
+                ExecParse(@"BveTs Map 2.00
 0;
 Curve
                 .
 BeginTransition
 (  // This is line comment
-)
+　// Left space is U+3000
 )
     ;
 "),
@@ -114,13 +115,13 @@ BeginTransition
                 }));
 
             Check(
-                ExecParse($@"BveTs Map 1.00
+                ExecParse(@"BveTs Map 1.00
 0;
 Curve
                 .
 BeginTransition
 (  // This is line comment
-)
+　// Left space is U+3000
 )
     ;
 "),

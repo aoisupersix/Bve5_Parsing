@@ -143,7 +143,7 @@ fragment X: [xX];
 fragment Y: [yY];
 fragment Z: [zZ];
 
-WHITESPACE : (' ' | '\t' | '\r' | '\n' )+ -> skip;
+WHITESPACE : (' ' | '\u3000' | '\t' | '\r' | '\n' )+ -> skip;
 COMMENT : ('//' | '#') ~[\r\n]* -> skip;
 
 //変数
