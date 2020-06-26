@@ -1,7 +1,7 @@
-﻿using Bve5_Parsing.MapGrammar;
-using Bve5_Parsing.MapGrammar.EvaluateData;
+﻿using System.Linq;
 using System.Reflection;
-using System.Linq;
+using Bve5_Parsing.MapGrammar;
+using Bve5_Parsing.MapGrammar.EvaluateData;
 using Xunit;
 
 namespace Bve5_ParsingTests
@@ -16,7 +16,9 @@ namespace Bve5_ParsingTests
         public static MapData ExecParse(string input)
         {
             var mParser = new MapGrammarParser();
-            return mParser.Parse(input);
+            var data = mParser.Parse(input);
+            Assert.Empty(mParser.ParserErrors);
+            return data;
         }
 
         /// <summary>
