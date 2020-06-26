@@ -1192,29 +1192,6 @@ BeginTransition
         [Fact]
         public void FogSetTest()
         {
-            //Fog.Set();
-            Check(
-                ExecParse("BveTs Map 2.02\n0;Fog.Set();"),
-                new MapData(
-                    version: "2.02",
-                    syntaxes: new List<Statement>()
-                    {
-                        new FogSetStatement(0)
-                    }));
-
-            //Fog.Set(Density);
-            Check(
-                ExecParse("BveTs Map 2.02\n0;Fog.Set(0);"),
-                new MapData(
-                    version: "2.02",
-                    syntaxes: new List<Statement>()
-                    {
-                        new FogSetStatement(0)
-                        {
-                            Density = 0
-                        }
-                    }));
-
             //Fog.Set(Density, Red, Green, Blue);
             Check(
                 ExecParse("BveTs Map 2.02\n0;Fog.Set(0, 1, 2, 3);"),
