@@ -62,8 +62,7 @@ gradient :
 // Other track
 track :
 	  KEY_START key=arg KEY_END func=GAUGE ARG_START gaugeArgs=arg ARG_END
-	| KEY_START key=arg KEY_END func=POSITION ARG_START x=arg COMMA y=arg ARG_END
-	| KEY_START key=arg KEY_END func=POSITION ARG_START x=arg COMMA y=arg COMMA radiush=arg COMMA radiusv=arg ARG_END
+	| KEY_START key=arg KEY_END func=POSITION ARG_START x=arg COMMA y=arg (COMMA radiush=arg COMMA radiusv=arg)? ARG_END
 	| KEY_START key=arg KEY_END func=CANT ARG_START cant=arg ARG_END
 	;
 
@@ -102,8 +101,7 @@ section :
 signal :
 	  DOT func=LOAD ARG_START filepath=arg ARG_END
 	| DOT func=SPEEDLIMIT ARG_START arg args* ARG_END
-	| KEY_START key=arg KEY_END func=PUT ARG_START sectionArgs=arg COMMA trackkey=arg COMMA x=arg COMMA y=arg ARG_END
-	| KEY_START key=arg KEY_END func=PUT ARG_START sectionArgs=arg COMMA trackkey=arg COMMA x=arg COMMA y=arg COMMA z=arg COMMA rx=arg COMMA ry=arg COMMA rz=arg COMMA tilt=arg COMMA span=arg ARG_END
+	| KEY_START key=arg KEY_END func=PUT ARG_START sectionArgs=arg COMMA trackkey=arg COMMA x=arg COMMA y=arg (COMMA z=arg COMMA rx=arg COMMA ry=arg COMMA rz=arg COMMA tilt=arg COMMA span=arg)? ARG_END
 	;
 
 // Beacon (ground coil)
@@ -147,8 +145,7 @@ irregularity :
 
 // Wheel-rail adhesion
 adhesion :
-	  DOT func=CHANGE ARG_START a=arg ARG_END
-	| DOT func=CHANGE ARG_START a=arg COMMA b=arg COMMA c=arg ARG_END
+	DOT func=CHANGE ARG_START a=arg (COMMA b=arg COMMA c=arg)? ARG_END
 	;
 
 // Sound
@@ -180,8 +177,7 @@ jointnoise :
 
 // Other train
 train :
-	  DOT func=ADD ARG_START trainkey=arg COMMA filepath=arg ARG_END
-	| DOT func=ADD ARG_START trainkey=arg COMMA filepath=arg COMMA trackkey=arg COMMA direction=arg ARG_END
+	DOT func=ADD ARG_START trainkey=arg COMMA filepath=arg (COMMA trackkey=arg COMMA direction=arg)? ARG_END
 	| KEY_START key=arg KEY_END func=ENABLE ARG_START time=arg ARG_END
 	| KEY_START key=arg KEY_END func=STOP ARG_START decelerate=arg COMMA stoptime=arg COMMA accelerate=arg COMMA speed=arg ARG_END
 	| KEY_START key=arg KEY_END func=SET_TRACK ARG_START trackkey=arg COMMA direction=arg ARG_END

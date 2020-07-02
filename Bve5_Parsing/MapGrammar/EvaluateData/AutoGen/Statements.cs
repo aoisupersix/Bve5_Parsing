@@ -2,6 +2,8 @@
  * このファイルはdoc/createMapGrammarTemplate.jsによって自動生成されています。
  * 編集は行わないでください。
  */
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using Bve5_Parsing.MapGrammar.Attributes;
 
 namespace Bve5_Parsing.MapGrammar.EvaluateData {
@@ -52,7 +54,6 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 距離程を指定して新しいインスタンスを生成します。
         /// </summary>
         public CurveSetgaugeStatement(double distance) : base(distance) { }
-
     }
 
     /// <summary>
@@ -92,7 +93,6 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 距離程を指定して新しいインスタンスを生成します。
         /// </summary>
         public GaugeSetStatement(double distance) : base(distance) { }
-
     }
 
     /// <summary>
@@ -132,7 +132,6 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 距離程を指定して新しいインスタンスを生成します。
         /// </summary>
         public CurveGaugeStatement(double distance) : base(distance) { }
-
     }
 
     /// <summary>
@@ -181,7 +180,6 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 距離程を指定して新しいインスタンスを生成します。
         /// </summary>
         public CurveSetcenterStatement(double distance) : base(distance) { }
-
     }
 
     /// <summary>
@@ -230,7 +228,6 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 距離程を指定して新しいインスタンスを生成します。
         /// </summary>
         public CurveSetfunctionStatement(double distance) : base(distance) { }
-
     }
 
     /// <summary>
@@ -271,7 +268,6 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 距離程を指定して新しいインスタンスを生成します。
         /// </summary>
         public CurveBegintransitionStatement(double distance) : base(distance) { }
-
     }
 
     /// <summary>
@@ -326,7 +322,6 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 距離程を指定して新しいインスタンスを生成します。
         /// </summary>
         public CurveBeginStatement(double distance) : base(distance) { }
-
     }
 
     /// <summary>
@@ -366,7 +361,6 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 距離程を指定して新しいインスタンスを生成します。
         /// </summary>
         public CurveBegincircularStatement(double distance) : base(distance) { }
-
     }
 
     /// <summary>
@@ -407,7 +401,6 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 距離程を指定して新しいインスタンスを生成します。
         /// </summary>
         public CurveEndStatement(double distance) : base(distance) { }
-
     }
 
     /// <summary>
@@ -462,7 +455,6 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 距離程を指定して新しいインスタンスを生成します。
         /// </summary>
         public CurveInterpolateStatement(double distance) : base(distance) { }
-
     }
 
     /// <summary>
@@ -511,7 +503,6 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 距離程を指定して新しいインスタンスを生成します。
         /// </summary>
         public CurveChangeStatement(double distance) : base(distance) { }
-
     }
 
     /// <summary>
@@ -552,7 +543,6 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 距離程を指定して新しいインスタンスを生成します。
         /// </summary>
         public GradientBegintransitionStatement(double distance) : base(distance) { }
-
     }
 
     /// <summary>
@@ -601,7 +591,6 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 距離程を指定して新しいインスタンスを生成します。
         /// </summary>
         public GradientBeginStatement(double distance) : base(distance) { }
-
     }
 
     /// <summary>
@@ -641,7 +630,6 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 距離程を指定して新しいインスタンスを生成します。
         /// </summary>
         public GradientBeginconstStatement(double distance) : base(distance) { }
-
     }
 
     /// <summary>
@@ -682,7 +670,6 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 距離程を指定して新しいインスタンスを生成します。
         /// </summary>
         public GradientEndStatement(double distance) : base(distance) { }
-
     }
 
     /// <summary>
@@ -731,7 +718,6 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 距離程を指定して新しいインスタンスを生成します。
         /// </summary>
         public GradientInterpolateStatement(double distance) : base(distance) { }
-
     }
 
     /// <summary>
@@ -796,7 +782,6 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 距離程を指定して新しいインスタンスを生成します。
         /// </summary>
         public TrackXInterpolateStatement(double distance) : base(distance) { }
-
     }
 
     /// <summary>
@@ -861,7 +846,6 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 距離程を指定して新しいインスタンスを生成します。
         /// </summary>
         public TrackYInterpolateStatement(double distance) : base(distance) { }
-
     }
 
     /// <summary>
@@ -933,7 +917,6 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 距離程を指定して新しいインスタンスを生成します。
         /// </summary>
         public TrackPositionStatement(double distance) : base(distance) { }
-
     }
 
     /// <summary>
@@ -992,7 +975,6 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 距離程を指定して新しいインスタンスを生成します。
         /// </summary>
         public TrackCantSetgaugeStatement(double distance) : base(distance) { }
-
     }
 
     /// <summary>
@@ -1032,7 +1014,6 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 距離程を指定して新しいインスタンスを生成します。
         /// </summary>
         public TrackGaugeStatement(double distance) : base(distance) { }
-
     }
 
     /// <summary>
@@ -1091,7 +1072,6 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 距離程を指定して新しいインスタンスを生成します。
         /// </summary>
         public TrackCantSetcenterStatement(double distance) : base(distance) { }
-
     }
 
     /// <summary>
@@ -1150,7 +1130,6 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 距離程を指定して新しいインスタンスを生成します。
         /// </summary>
         public TrackCantSetfunctionStatement(double distance) : base(distance) { }
-
     }
 
     /// <summary>
@@ -1201,7 +1180,6 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 距離程を指定して新しいインスタンスを生成します。
         /// </summary>
         public TrackCantBegintransitionStatement(double distance) : base(distance) { }
-
     }
 
     /// <summary>
@@ -1260,7 +1238,6 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 距離程を指定して新しいインスタンスを生成します。
         /// </summary>
         public TrackCantBeginStatement(double distance) : base(distance) { }
-
     }
 
     /// <summary>
@@ -1311,7 +1288,6 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 距離程を指定して新しいインスタンスを生成します。
         /// </summary>
         public TrackCantEndStatement(double distance) : base(distance) { }
-
     }
 
     /// <summary>
@@ -1370,7 +1346,6 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 距離程を指定して新しいインスタンスを生成します。
         /// </summary>
         public TrackCantInterpolateStatement(double distance) : base(distance) { }
-
     }
 
     /// <summary>
@@ -1410,7 +1385,6 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 距離程を指定して新しいインスタンスを生成します。
         /// </summary>
         public TrackCantStatement(double distance) : base(distance) { }
-
     }
 
     /// <summary>
@@ -1459,7 +1433,6 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 距離程を指定して新しいインスタンスを生成します。
         /// </summary>
         public StructureLoadStatement(double distance) : base(distance) { }
-
     }
 
     /// <summary>
@@ -1561,7 +1534,6 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 距離程を指定して新しいインスタンスを生成します。
         /// </summary>
         public StructurePutStatement(double distance) : base(distance) { }
-
     }
 
     /// <summary>
@@ -1627,7 +1599,6 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 距離程を指定して新しいインスタンスを生成します。
         /// </summary>
         public StructurePut0Statement(double distance) : base(distance) { }
-
     }
 
     /// <summary>
@@ -1693,11 +1664,10 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 距離程を指定して新しいインスタンスを生成します。
         /// </summary>
         public StructurePutbetweenStatement(double distance) : base(distance) { }
-
     }
 
     /// <summary>
-    /// Repeater[RepeaterKey].Begin(TrackKey, X, Y, Z, RX, RY, RZ, Tilt, Span, Interval);
+    /// Repeater[RepeaterKey].Begin(TrackKey, X, Y, Z, RX, RY, RZ, Tilt, Span, Interval, StructureKey);
     /// </summary>
     public partial class RepeaterBeginStatement : Statement
     {
@@ -1790,6 +1760,16 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// </summary>
         [Argument]
         public double? Interval { get; set; }
+
+        /// <summary>
+        /// 可変長引数：ストラクチャー名 (ストラクチャーリストファイルで定義した文字列）のリスト
+        /// </summary>
+        protected List<string> _structurekeys = new List<string>();
+
+        /// <summary>
+        /// 可変長引数：ストラクチャー名 (ストラクチャーリストファイルで定義した文字列）の読み取り専用コレクション
+        /// </summary>
+        public ReadOnlyCollection<string> StructureKeys => _structurekeys.AsReadOnly();
         #endregion Args
 
         /// <summary>
@@ -1802,10 +1782,42 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// </summary>
         public RepeaterBeginStatement(double distance) : base(distance) { }
 
+        /// <summary>
+        /// 可変長引数：ストラクチャー名 (ストラクチャーリストファイルで定義した文字列）を追加します。
+        /// </summary>
+        public void AddStructureKey(string structurekey)
+        {
+            _structurekeys.Add(structurekey);
+        }
+
+        /// <summary>
+        /// 可変長引数：ストラクチャー名 (ストラクチャーリストファイルで定義した文字列）に値をセットします。
+        /// テスト用
+        /// </summary>
+        public Statement SetStructureKeys(params string[] structurekeys)
+        {
+            _structurekeys.AddRange(structurekeys);
+            return this;
+        }
+
+        /// <summary>
+        /// StatementからSyntaxDataを生成して返します。
+        /// 可変長引数：ストラクチャー名 (ストラクチャーリストファイルで定義した文字列）対応
+        /// </summary>
+        public override SyntaxData ToSyntaxData()
+        {
+            var syntax = base.ToSyntaxData();
+            for (var i = 0; i < _structurekeys.Count; i++)
+            {
+                syntax.SetArg($"structurekey{i + 1}", _structurekeys[i]);
+            }
+
+            return syntax;
+        }
     }
 
     /// <summary>
-    /// Repeater[RepeaterKey].Begin0(TrackKey, Tilt, Span, Interval);
+    /// Repeater[RepeaterKey].Begin0(TrackKey, Tilt, Span, Interval, StructureKey);
     /// </summary>
     public partial class RepeaterBegin0Statement : Statement
     {
@@ -1862,6 +1874,16 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// </summary>
         [Argument]
         public double? Interval { get; set; }
+
+        /// <summary>
+        /// 可変長引数：ストラクチャー名 (ストラクチャーリストファイルで定義した文字列）のリスト
+        /// </summary>
+        protected List<string> _structurekeys = new List<string>();
+
+        /// <summary>
+        /// 可変長引数：ストラクチャー名 (ストラクチャーリストファイルで定義した文字列）の読み取り専用コレクション
+        /// </summary>
+        public ReadOnlyCollection<string> StructureKeys => _structurekeys.AsReadOnly();
         #endregion Args
 
         /// <summary>
@@ -1874,6 +1896,38 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// </summary>
         public RepeaterBegin0Statement(double distance) : base(distance) { }
 
+        /// <summary>
+        /// 可変長引数：ストラクチャー名 (ストラクチャーリストファイルで定義した文字列）を追加します。
+        /// </summary>
+        public void AddStructureKey(string structurekey)
+        {
+            _structurekeys.Add(structurekey);
+        }
+
+        /// <summary>
+        /// 可変長引数：ストラクチャー名 (ストラクチャーリストファイルで定義した文字列）に値をセットします。
+        /// テスト用
+        /// </summary>
+        public Statement SetStructureKeys(params string[] structurekeys)
+        {
+            _structurekeys.AddRange(structurekeys);
+            return this;
+        }
+
+        /// <summary>
+        /// StatementからSyntaxDataを生成して返します。
+        /// 可変長引数：ストラクチャー名 (ストラクチャーリストファイルで定義した文字列）対応
+        /// </summary>
+        public override SyntaxData ToSyntaxData()
+        {
+            var syntax = base.ToSyntaxData();
+            for (var i = 0; i < _structurekeys.Count; i++)
+            {
+                syntax.SetArg($"structurekey{i + 1}", _structurekeys[i]);
+            }
+
+            return syntax;
+        }
     }
 
     /// <summary>
@@ -1919,7 +1973,6 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 距離程を指定して新しいインスタンスを生成します。
         /// </summary>
         public RepeaterEndStatement(double distance) : base(distance) { }
-
     }
 
     /// <summary>
@@ -1968,7 +2021,6 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 距離程を指定して新しいインスタンスを生成します。
         /// </summary>
         public BackgroundChangeStatement(double distance) : base(distance) { }
-
     }
 
     /// <summary>
@@ -2017,7 +2069,6 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 距離程を指定して新しいインスタンスを生成します。
         /// </summary>
         public StationLoadStatement(double distance) : base(distance) { }
-
     }
 
     /// <summary>
@@ -2083,11 +2134,10 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 距離程を指定して新しいインスタンスを生成します。
         /// </summary>
         public StationPutStatement(double distance) : base(distance) { }
-
     }
 
     /// <summary>
-    /// Section.Begin();
+    /// Section.Begin(Signal);
     /// </summary>
     public partial class SectionBeginStatement : Statement
     {
@@ -2114,6 +2164,18 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         public override bool HasSubElement => false;
         #endregion SyntaxInfo
 
+        #region Args
+
+        /// <summary>
+        /// 可変長引数：先行列車が n 閉そく先に存在する場合の信号インデックス（0: この閉塞）のリスト
+        /// </summary>
+        protected List<double?> _signals = new List<double?>();
+
+        /// <summary>
+        /// 可変長引数：先行列車が n 閉そく先に存在する場合の信号インデックス（0: この閉塞）の読み取り専用コレクション
+        /// </summary>
+        public ReadOnlyCollection<double?> Signals => _signals.AsReadOnly();
+        #endregion Args
 
         /// <summary>
         /// 新しいインスタンスを生成します。
@@ -2125,10 +2187,42 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// </summary>
         public SectionBeginStatement(double distance) : base(distance) { }
 
+        /// <summary>
+        /// 可変長引数：先行列車が n 閉そく先に存在する場合の信号インデックス（0: この閉塞）を追加します。
+        /// </summary>
+        public void AddSignal(double? signal)
+        {
+            _signals.Add(signal);
+        }
+
+        /// <summary>
+        /// 可変長引数：先行列車が n 閉そく先に存在する場合の信号インデックス（0: この閉塞）に値をセットします。
+        /// テスト用
+        /// </summary>
+        public Statement SetSignals(params double?[] signals)
+        {
+            _signals.AddRange(signals);
+            return this;
+        }
+
+        /// <summary>
+        /// StatementからSyntaxDataを生成して返します。
+        /// 可変長引数：先行列車が n 閉そく先に存在する場合の信号インデックス（0: この閉塞）対応
+        /// </summary>
+        public override SyntaxData ToSyntaxData()
+        {
+            var syntax = base.ToSyntaxData();
+            for (var i = 0; i < _signals.Count; i++)
+            {
+                syntax.SetArg($"signal{i + 1}", _signals[i]);
+            }
+
+            return syntax;
+        }
     }
 
     /// <summary>
-    /// Section.Beginnew();
+    /// Section.Beginnew(Signal);
     /// </summary>
     public partial class SectionBeginnewStatement : SectionBeginStatement
     {
@@ -2164,11 +2258,10 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 距離程を指定して新しいインスタンスを生成します。
         /// </summary>
         public SectionBeginnewStatement(double distance) : base(distance) { }
-
     }
 
     /// <summary>
-    /// Section.Setspeedlimit();
+    /// Section.Setspeedlimit(V);
     /// </summary>
     public partial class SectionSetspeedlimitStatement : Statement
     {
@@ -2195,6 +2288,18 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         public override bool HasSubElement => false;
         #endregion SyntaxInfo
 
+        #region Args
+
+        /// <summary>
+        /// 可変長引数：走行速度 [km/h] （null: 許容速度なし）のリスト
+        /// </summary>
+        protected List<double?> _vs = new List<double?>();
+
+        /// <summary>
+        /// 可変長引数：走行速度 [km/h] （null: 許容速度なし）の読み取り専用コレクション
+        /// </summary>
+        public ReadOnlyCollection<double?> Vs => _vs.AsReadOnly();
+        #endregion Args
 
         /// <summary>
         /// 新しいインスタンスを生成します。
@@ -2206,10 +2311,42 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// </summary>
         public SectionSetspeedlimitStatement(double distance) : base(distance) { }
 
+        /// <summary>
+        /// 可変長引数：走行速度 [km/h] （null: 許容速度なし）を追加します。
+        /// </summary>
+        public void AddV(double? v)
+        {
+            _vs.Add(v);
+        }
+
+        /// <summary>
+        /// 可変長引数：走行速度 [km/h] （null: 許容速度なし）に値をセットします。
+        /// テスト用
+        /// </summary>
+        public Statement SetVs(params double?[] vs)
+        {
+            _vs.AddRange(vs);
+            return this;
+        }
+
+        /// <summary>
+        /// StatementからSyntaxDataを生成して返します。
+        /// 可変長引数：走行速度 [km/h] （null: 許容速度なし）対応
+        /// </summary>
+        public override SyntaxData ToSyntaxData()
+        {
+            var syntax = base.ToSyntaxData();
+            for (var i = 0; i < _vs.Count; i++)
+            {
+                syntax.SetArg($"v{i + 1}", _vs[i]);
+            }
+
+            return syntax;
+        }
     }
 
     /// <summary>
-    /// Signal.Speedlimit();
+    /// Signal.Speedlimit(V);
     /// </summary>
     public partial class SignalSpeedlimitStatement : SectionSetspeedlimitStatement
     {
@@ -2245,11 +2382,10 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 距離程を指定して新しいインスタンスを生成します。
         /// </summary>
         public SignalSpeedlimitStatement(double distance) : base(distance) { }
-
     }
 
     /// <summary>
-    /// Speedlimit.Setsignal();
+    /// Speedlimit.Setsignal(V);
     /// </summary>
     public partial class SpeedlimitSetsignalStatement : SectionSetspeedlimitStatement
     {
@@ -2285,7 +2421,6 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 距離程を指定して新しいインスタンスを生成します。
         /// </summary>
         public SpeedlimitSetsignalStatement(double distance) : base(distance) { }
-
     }
 
     /// <summary>
@@ -2334,7 +2469,6 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 距離程を指定して新しいインスタンスを生成します。
         /// </summary>
         public SignalLoadStatement(double distance) : base(distance) { }
-
     }
 
     /// <summary>
@@ -2442,7 +2576,6 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 距離程を指定して新しいインスタンスを生成します。
         /// </summary>
         public SignalPutStatement(double distance) : base(distance) { }
-
     }
 
     /// <summary>
@@ -2503,7 +2636,6 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 距離程を指定して新しいインスタンスを生成します。
         /// </summary>
         public BeaconPutStatement(double distance) : base(distance) { }
-
     }
 
     /// <summary>
@@ -2552,7 +2684,6 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 距離程を指定して新しいインスタンスを生成します。
         /// </summary>
         public SpeedlimitBeginStatement(double distance) : base(distance) { }
-
     }
 
     /// <summary>
@@ -2593,7 +2724,6 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 距離程を指定して新しいインスタンスを生成します。
         /// </summary>
         public SpeedlimitEndStatement(double distance) : base(distance) { }
-
     }
 
     /// <summary>
@@ -2648,7 +2778,6 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 距離程を指定して新しいインスタンスを生成します。
         /// </summary>
         public PretrainPassStatement(double distance) : base(distance) { }
-
     }
 
     /// <summary>
@@ -2709,7 +2838,6 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 距離程を指定して新しいインスタンスを生成します。
         /// </summary>
         public LightAmbientStatement(double distance) : base(distance) { }
-
     }
 
     /// <summary>
@@ -2770,7 +2898,6 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 距離程を指定して新しいインスタンスを生成します。
         /// </summary>
         public LightDiffuseStatement(double distance) : base(distance) { }
-
     }
 
     /// <summary>
@@ -2825,7 +2952,6 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 距離程を指定して新しいインスタンスを生成します。
         /// </summary>
         public LightDirectionStatement(double distance) : base(distance) { }
-
     }
 
     /// <summary>
@@ -2892,7 +3018,6 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 距離程を指定して新しいインスタンスを生成します。
         /// </summary>
         public FogInterpolateStatement(double distance) : base(distance) { }
-
     }
 
     /// <summary>
@@ -2932,7 +3057,6 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 距離程を指定して新しいインスタンスを生成します。
         /// </summary>
         public FogSetStatement(double distance) : base(distance) { }
-
     }
 
     /// <summary>
@@ -2981,7 +3105,6 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 距離程を指定して新しいインスタンスを生成します。
         /// </summary>
         public DrawdistanceChangeStatement(double distance) : base(distance) { }
-
     }
 
     /// <summary>
@@ -3030,7 +3153,6 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 距離程を指定して新しいインスタンスを生成します。
         /// </summary>
         public CabilluminanceInterpolateStatement(double distance) : base(distance) { }
-
     }
 
     /// <summary>
@@ -3070,7 +3192,6 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 距離程を指定して新しいインスタンスを生成します。
         /// </summary>
         public CabilluminanceSetStatement(double distance) : base(distance) { }
-
     }
 
     /// <summary>
@@ -3149,7 +3270,6 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 距離程を指定して新しいインスタンスを生成します。
         /// </summary>
         public IrregularityChangeStatement(double distance) : base(distance) { }
-
     }
 
     /// <summary>
@@ -3210,7 +3330,6 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 距離程を指定して新しいインスタンスを生成します。
         /// </summary>
         public AdhesionChangeStatement(double distance) : base(distance) { }
-
     }
 
     /// <summary>
@@ -3259,7 +3378,6 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 距離程を指定して新しいインスタンスを生成します。
         /// </summary>
         public SoundLoadStatement(double distance) : base(distance) { }
-
     }
 
     /// <summary>
@@ -3305,7 +3423,6 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 距離程を指定して新しいインスタンスを生成します。
         /// </summary>
         public SoundPlayStatement(double distance) : base(distance) { }
-
     }
 
     /// <summary>
@@ -3354,7 +3471,6 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 距離程を指定して新しいインスタンスを生成します。
         /// </summary>
         public Sound3dLoadStatement(double distance) : base(distance) { }
-
     }
 
     /// <summary>
@@ -3414,7 +3530,6 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 距離程を指定して新しいインスタンスを生成します。
         /// </summary>
         public Sound3dPutStatement(double distance) : base(distance) { }
-
     }
 
     /// <summary>
@@ -3463,7 +3578,6 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 距離程を指定して新しいインスタンスを生成します。
         /// </summary>
         public RollingnoiseChangeStatement(double distance) : base(distance) { }
-
     }
 
     /// <summary>
@@ -3512,7 +3626,6 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 距離程を指定して新しいインスタンスを生成します。
         /// </summary>
         public FlangenoiseChangeStatement(double distance) : base(distance) { }
-
     }
 
     /// <summary>
@@ -3561,7 +3674,6 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 距離程を指定して新しいインスタンスを生成します。
         /// </summary>
         public JointnoisePlayStatement(double distance) : base(distance) { }
-
     }
 
     /// <summary>
@@ -3628,7 +3740,6 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 距離程を指定して新しいインスタンスを生成します。
         /// </summary>
         public TrainAddStatement(double distance) : base(distance) { }
-
     }
 
     /// <summary>
@@ -3694,7 +3805,6 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 距離程を指定して新しいインスタンスを生成します。
         /// </summary>
         public TrainLoadStatement(double distance) : base(distance) { }
-
     }
 
     /// <summary>
@@ -3754,7 +3864,6 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 距離程を指定して新しいインスタンスを生成します。
         /// </summary>
         public TrainEnableStatement(double distance) : base(distance) { }
-
     }
 
     /// <summary>
@@ -3826,7 +3935,6 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 距離程を指定して新しいインスタンスを生成します。
         /// </summary>
         public TrainStopStatement(double distance) : base(distance) { }
-
     }
 
     /// <summary>
@@ -3886,7 +3994,6 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 距離程を指定して新しいインスタンスを生成します。
         /// </summary>
         public TrainSettrackStatement(double distance) : base(distance) { }
-
     }
 
     /// <summary>
@@ -3959,11 +4066,10 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 距離程を指定して新しいインスタンスを生成します。
         /// </summary>
         public LegacyFogStatement(double distance) : base(distance) { }
-
     }
 
     /// <summary>
-    /// Legacy.Curve(radius, cant?);
+    /// Legacy.Curve(radius, cant);
     /// </summary>
     public partial class LegacyCurveStatement : Statement
     {
@@ -3999,9 +4105,9 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         public double? radius { get; set; }
 
         /// <summary>
-        /// 引数：カント [m]（省略可能）
+        /// 引数：カント [m]
         /// </summary>
-        [Argument(Optional = true)]
+        [Argument]
         public double? cant { get; set; }
         #endregion Args
 
@@ -4014,7 +4120,6 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 距離程を指定して新しいインスタンスを生成します。
         /// </summary>
         public LegacyCurveStatement(double distance) : base(distance) { }
-
     }
 
     /// <summary>
@@ -4063,7 +4168,6 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 距離程を指定して新しいインスタンスを生成します。
         /// </summary>
         public LegacyPitchStatement(double distance) : base(distance) { }
-
     }
 
     /// <summary>
@@ -4112,7 +4216,6 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 距離程を指定して新しいインスタンスを生成します。
         /// </summary>
         public LegacyTurnStatement(double distance) : base(distance) { }
-
     }
 
     /// <summary>
@@ -4156,6 +4259,5 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 距離程を指定して新しいインスタンスを生成します。
         /// </summary>
         public IncludeStatement(double distance) : base(distance) { }
-
     }
 }

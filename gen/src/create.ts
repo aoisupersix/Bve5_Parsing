@@ -5,13 +5,13 @@ import path from 'path'
 const mapGrammarDir = path.join(__dirname, '..', '..', 'Bve5_Parsing', 'MapGrammar')
 const testDir = path.join(__dirname, '..', '..', 'Bve5_ParsingTests', 'AutoGen')
 
-const generate = (templateName: string, mapData: b5g.IMapData, outputPath: string): void => {
+const generate = (templateName: string, mapData: b5g.MapData, outputPath: string): void => {
   const template = fs.readFileSync(path.join(__dirname, '..', 'template', templateName), 'utf8')
   const output = b5g.render(template, mapData)
   fs.writeFileSync(outputPath, output, 'utf8')
 }
 
-b5g.getDafaultMapData().then((mapData) => {
+b5g.getDefaultMapData().then((mapData) => {
   generate(
     'map_grammar_ast.mst',
     mapData,

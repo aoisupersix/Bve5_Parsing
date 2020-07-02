@@ -2,6 +2,8 @@
  * このファイルはdoc/createMapGrammarTemplate.jsによって自動生成されています。
  * 編集は行わないでください。
  */
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using Antlr4.Runtime;
 using Bve5_Parsing.MapGrammar.Attributes;
 
@@ -1576,7 +1578,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     }
 
     /// <summary>
-    /// Repeater[RepeaterKey].Begin(TrackKey, X, Y, Z, RX, RY, RZ, Tilt, Span, Interval);
+    /// Repeater[RepeaterKey].Begin(TrackKey, X, Y, Z, RX, RY, RZ, Tilt, Span, Interval, StructureKey);
     /// </summary>
     public partial class RepeaterBeginNode : SyntaxNode
     {
@@ -1669,6 +1671,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// </summary>
         [Argument]
         public MapGrammarAstNodes Interval { get; set; }
+
+        /// <summary>
+        /// 可変長引数：ストラクチャー名 (ストラクチャーリストファイルで定義した文字列）のリスト
+        /// </summary>
+        protected List<MapGrammarAstNodes> _structurekeys = new List<MapGrammarAstNodes>();
+
+        /// <summary>
+        /// 可変長引数：ストラクチャー名 (ストラクチャーリストファイルで定義した文字列）の読み取り専用コレクション
+        /// </summary>
+        public ReadOnlyCollection<MapGrammarAstNodes> StructureKeys => _structurekeys.AsReadOnly();
         #endregion Args
 
         /// <summary>
@@ -1677,10 +1689,26 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <param name="start"></param>
         /// <param name="stop"></param>
         public RepeaterBeginNode(IToken start, IToken stop) : base(start, stop) { }
+
+        /// <summary>
+        /// 可変長引数：ストラクチャー名 (ストラクチャーリストファイルで定義した文字列）を追加します。
+        /// </summary>
+        public void AddStructureKey(MapGrammarAstNodes structurekey)
+        {
+            _structurekeys.Add(structurekey);
+        }
+
+        /// <summary>
+        /// 可変長引数：ストラクチャー名 (ストラクチャーリストファイルで定義した文字列）を複数追加します。
+        /// </summary>
+        public void AddStructureKeys(IEnumerable<MapGrammarAstNodes> structurekeys)
+        {
+            _structurekeys.AddRange(structurekeys);
+        }
     }
 
     /// <summary>
-    /// Repeater[RepeaterKey].Begin0(TrackKey, Tilt, Span, Interval);
+    /// Repeater[RepeaterKey].Begin0(TrackKey, Tilt, Span, Interval, StructureKey);
     /// </summary>
     public partial class RepeaterBegin0Node : SyntaxNode
     {
@@ -1737,6 +1765,16 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// </summary>
         [Argument]
         public MapGrammarAstNodes Interval { get; set; }
+
+        /// <summary>
+        /// 可変長引数：ストラクチャー名 (ストラクチャーリストファイルで定義した文字列）のリスト
+        /// </summary>
+        protected List<MapGrammarAstNodes> _structurekeys = new List<MapGrammarAstNodes>();
+
+        /// <summary>
+        /// 可変長引数：ストラクチャー名 (ストラクチャーリストファイルで定義した文字列）の読み取り専用コレクション
+        /// </summary>
+        public ReadOnlyCollection<MapGrammarAstNodes> StructureKeys => _structurekeys.AsReadOnly();
         #endregion Args
 
         /// <summary>
@@ -1745,6 +1783,22 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <param name="start"></param>
         /// <param name="stop"></param>
         public RepeaterBegin0Node(IToken start, IToken stop) : base(start, stop) { }
+
+        /// <summary>
+        /// 可変長引数：ストラクチャー名 (ストラクチャーリストファイルで定義した文字列）を追加します。
+        /// </summary>
+        public void AddStructureKey(MapGrammarAstNodes structurekey)
+        {
+            _structurekeys.Add(structurekey);
+        }
+
+        /// <summary>
+        /// 可変長引数：ストラクチャー名 (ストラクチャーリストファイルで定義した文字列）を複数追加します。
+        /// </summary>
+        public void AddStructureKeys(IEnumerable<MapGrammarAstNodes> structurekeys)
+        {
+            _structurekeys.AddRange(structurekeys);
+        }
     }
 
     /// <summary>
@@ -1942,7 +1996,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     }
 
     /// <summary>
-    /// Section.Begin();
+    /// Section.Begin(Signal);
     /// </summary>
     public partial class SectionBeginNode : SyntaxNode
     {
@@ -1969,6 +2023,18 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         public override bool HasSubElement => false;
         #endregion SyntaxInfo
 
+        #region Args
+
+        /// <summary>
+        /// 可変長引数：先行列車が n 閉そく先に存在する場合の信号インデックス（0: この閉塞）のリスト
+        /// </summary>
+        protected List<MapGrammarAstNodes> _signals = new List<MapGrammarAstNodes>();
+
+        /// <summary>
+        /// 可変長引数：先行列車が n 閉そく先に存在する場合の信号インデックス（0: この閉塞）の読み取り専用コレクション
+        /// </summary>
+        public ReadOnlyCollection<MapGrammarAstNodes> Signals => _signals.AsReadOnly();
+        #endregion Args
 
         /// <summary>
         /// 新しいインスタンスを生成します。
@@ -1976,10 +2042,26 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <param name="start"></param>
         /// <param name="stop"></param>
         public SectionBeginNode(IToken start, IToken stop) : base(start, stop) { }
+
+        /// <summary>
+        /// 可変長引数：先行列車が n 閉そく先に存在する場合の信号インデックス（0: この閉塞）を追加します。
+        /// </summary>
+        public void AddSignal(MapGrammarAstNodes signal)
+        {
+            _signals.Add(signal);
+        }
+
+        /// <summary>
+        /// 可変長引数：先行列車が n 閉そく先に存在する場合の信号インデックス（0: この閉塞）を複数追加します。
+        /// </summary>
+        public void AddSignals(IEnumerable<MapGrammarAstNodes> signals)
+        {
+            _signals.AddRange(signals);
+        }
     }
 
     /// <summary>
-    /// Section.Beginnew();
+    /// Section.Beginnew(Signal);
     /// </summary>
     [Deprecated]
     public partial class SectionBeginnewNode : SectionBeginNode
@@ -2016,7 +2098,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     }
 
     /// <summary>
-    /// Section.Setspeedlimit();
+    /// Section.Setspeedlimit(V);
     /// </summary>
     public partial class SectionSetspeedlimitNode : SyntaxNode
     {
@@ -2043,6 +2125,18 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         public override bool HasSubElement => false;
         #endregion SyntaxInfo
 
+        #region Args
+
+        /// <summary>
+        /// 可変長引数：走行速度 [km/h] （null: 許容速度なし）のリスト
+        /// </summary>
+        protected List<MapGrammarAstNodes> _vs = new List<MapGrammarAstNodes>();
+
+        /// <summary>
+        /// 可変長引数：走行速度 [km/h] （null: 許容速度なし）の読み取り専用コレクション
+        /// </summary>
+        public ReadOnlyCollection<MapGrammarAstNodes> Vs => _vs.AsReadOnly();
+        #endregion Args
 
         /// <summary>
         /// 新しいインスタンスを生成します。
@@ -2050,10 +2144,26 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <param name="start"></param>
         /// <param name="stop"></param>
         public SectionSetspeedlimitNode(IToken start, IToken stop) : base(start, stop) { }
+
+        /// <summary>
+        /// 可変長引数：走行速度 [km/h] （null: 許容速度なし）を追加します。
+        /// </summary>
+        public void AddV(MapGrammarAstNodes v)
+        {
+            _vs.Add(v);
+        }
+
+        /// <summary>
+        /// 可変長引数：走行速度 [km/h] （null: 許容速度なし）を複数追加します。
+        /// </summary>
+        public void AddVs(IEnumerable<MapGrammarAstNodes> vs)
+        {
+            _vs.AddRange(vs);
+        }
     }
 
     /// <summary>
-    /// Signal.Speedlimit();
+    /// Signal.Speedlimit(V);
     /// </summary>
     [Deprecated]
     public partial class SignalSpeedlimitNode : SectionSetspeedlimitNode
@@ -2090,7 +2200,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     }
 
     /// <summary>
-    /// Speedlimit.Setsignal();
+    /// Speedlimit.Setsignal(V);
     /// </summary>
     [Deprecated]
     public partial class SpeedlimitSetsignalNode : SectionSetspeedlimitNode
@@ -3688,7 +3798,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
     }
 
     /// <summary>
-    /// Legacy.Curve(radius, cant?);
+    /// Legacy.Curve(radius, cant);
     /// </summary>
     [Deprecated]
     public partial class LegacyCurveNode : SyntaxNode
@@ -3725,9 +3835,9 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         public MapGrammarAstNodes radius { get; set; }
 
         /// <summary>
-        /// 引数：カント [m]（省略可能）
+        /// 引数：カント [m]
         /// </summary>
-        [Argument(Optional = true)]
+        [Argument]
         public MapGrammarAstNodes cant { get; set; }
         #endregion Args
 

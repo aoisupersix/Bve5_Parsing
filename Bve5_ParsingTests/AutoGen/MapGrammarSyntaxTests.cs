@@ -1110,15 +1110,15 @@ namespace Bve5_ParsingTests
         }
 
         /// <summary>
-        /// Repeater[RepeaterKey].Begin(TrackKey, X, Y, Z, RX, RY, RZ, Tilt, Span, Interval);
+        /// Repeater[RepeaterKey].Begin(TrackKey, X, Y, Z, RX, RY, RZ, Tilt, Span, Interval, StructureKey);
         /// </summary>
         [Fact]
         public void RepeaterBeginTest()
         {
 
-            // Repeater[RepeaterKey].Begin(TrackKey, X, Y, Z, RX, RY, RZ, Tilt, Span, Interval);
+            // Repeater[RepeaterKey].Begin(TrackKey, X, Y, Z, RX, RY, RZ, Tilt, Span, Interval, StructureKey);
             Check(
-                ExecParse("BveTs Map 2.02\n0;Repeater['RepeaterKey'].Begin('string_test_value', 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0);"),
+                ExecParse("BveTs Map 2.02\n0;Repeater['RepeaterKey'].Begin('string_test_value', 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 'string_test_value', 'string_test_value', 'string_test_value', 'string_test_value', 'string_test_value');"),
                 new MapData(
                     version: "2.02",
                     syntaxes: new List<Statement>()
@@ -1135,13 +1135,14 @@ namespace Bve5_ParsingTests
                             RZ = 1.0,
                             Tilt = 1.0,
                             Span = 1.0,
-                            Interval = 1.0
+                            Interval = 1.0,
                         }
+                        .SetStructureKeys("string_test_value", "string_test_value", "string_test_value", "string_test_value", "string_test_value")
                     }));
 
-            // Repeater[RepeaterKey].Begin(TrackKey, X, Y, Z, RX, RY, RZ, Tilt, Span, Interval);
+            // Repeater[RepeaterKey].Begin(TrackKey, X, Y, Z, RX, RY, RZ, Tilt, Span, Interval, StructureKey);
             Check(
-                ExecParse("BveTs Map 2.00\n0;Repeater['RepeaterKey'].Begin('string_test_value', 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0);"),
+                ExecParse("BveTs Map 2.00\n0;Repeater['RepeaterKey'].Begin('string_test_value', 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 'string_test_value', 'string_test_value', 'string_test_value', 'string_test_value', 'string_test_value');"),
                 new MapData(
                     version: "2.00",
                     syntaxes: new List<Statement>()
@@ -1158,13 +1159,14 @@ namespace Bve5_ParsingTests
                             RZ = 1.0,
                             Tilt = 1.0,
                             Span = 1.0,
-                            Interval = 1.0
+                            Interval = 1.0,
                         }
+                        .SetStructureKeys("string_test_value", "string_test_value", "string_test_value", "string_test_value", "string_test_value")
                     }));
 
-            // Repeater[RepeaterKey].Begin(TrackKey, X, Y, Z, RX, RY, RZ, Tilt, Span, Interval);
+            // Repeater[RepeaterKey].Begin(TrackKey, X, Y, Z, RX, RY, RZ, Tilt, Span, Interval, StructureKey);
             Check(
-                ExecParse("BveTs Map 1.00\n0;Repeater[RepeaterKey].Begin(string_test_value, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0);"),
+                ExecParse("BveTs Map 1.00\n0;Repeater[RepeaterKey].Begin(string_test_value, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, string_test_value, string_test_value, string_test_value, string_test_value, string_test_value);"),
                 new MapData(
                     version: "1.00",
                     syntaxes: new List<Statement>()
@@ -1181,21 +1183,22 @@ namespace Bve5_ParsingTests
                             RZ = 1.0,
                             Tilt = 1.0,
                             Span = 1.0,
-                            Interval = 1.0
+                            Interval = 1.0,
                         }
+                        .SetStructureKeys("string_test_value", "string_test_value", "string_test_value", "string_test_value", "string_test_value")
                     }));
         }
 
         /// <summary>
-        /// Repeater[RepeaterKey].Begin0(TrackKey, Tilt, Span, Interval);
+        /// Repeater[RepeaterKey].Begin0(TrackKey, Tilt, Span, Interval, StructureKey);
         /// </summary>
         [Fact]
         public void RepeaterBegin0Test()
         {
 
-            // Repeater[RepeaterKey].Begin0(TrackKey, Tilt, Span, Interval);
+            // Repeater[RepeaterKey].Begin0(TrackKey, Tilt, Span, Interval, StructureKey);
             Check(
-                ExecParse("BveTs Map 2.02\n0;Repeater['RepeaterKey'].Begin0('string_test_value', 1.0, 1.0, 1.0);"),
+                ExecParse("BveTs Map 2.02\n0;Repeater['RepeaterKey'].Begin0('string_test_value', 1.0, 1.0, 1.0, 'string_test_value', 'string_test_value', 'string_test_value', 'string_test_value', 'string_test_value');"),
                 new MapData(
                     version: "2.02",
                     syntaxes: new List<Statement>()
@@ -1206,13 +1209,14 @@ namespace Bve5_ParsingTests
                             TrackKey = "string_test_value",
                             Tilt = 1.0,
                             Span = 1.0,
-                            Interval = 1.0
+                            Interval = 1.0,
                         }
+                        .SetStructureKeys("string_test_value", "string_test_value", "string_test_value", "string_test_value", "string_test_value")
                     }));
 
-            // Repeater[RepeaterKey].Begin0(TrackKey, Tilt, Span, Interval);
+            // Repeater[RepeaterKey].Begin0(TrackKey, Tilt, Span, Interval, StructureKey);
             Check(
-                ExecParse("BveTs Map 2.00\n0;Repeater['RepeaterKey'].Begin0('string_test_value', 1.0, 1.0, 1.0);"),
+                ExecParse("BveTs Map 2.00\n0;Repeater['RepeaterKey'].Begin0('string_test_value', 1.0, 1.0, 1.0, 'string_test_value', 'string_test_value', 'string_test_value', 'string_test_value', 'string_test_value');"),
                 new MapData(
                     version: "2.00",
                     syntaxes: new List<Statement>()
@@ -1223,13 +1227,14 @@ namespace Bve5_ParsingTests
                             TrackKey = "string_test_value",
                             Tilt = 1.0,
                             Span = 1.0,
-                            Interval = 1.0
+                            Interval = 1.0,
                         }
+                        .SetStructureKeys("string_test_value", "string_test_value", "string_test_value", "string_test_value", "string_test_value")
                     }));
 
-            // Repeater[RepeaterKey].Begin0(TrackKey, Tilt, Span, Interval);
+            // Repeater[RepeaterKey].Begin0(TrackKey, Tilt, Span, Interval, StructureKey);
             Check(
-                ExecParse("BveTs Map 1.00\n0;Repeater[RepeaterKey].Begin0(string_test_value, 1.0, 1.0, 1.0);"),
+                ExecParse("BveTs Map 1.00\n0;Repeater[RepeaterKey].Begin0(string_test_value, 1.0, 1.0, 1.0, string_test_value, string_test_value, string_test_value, string_test_value, string_test_value);"),
                 new MapData(
                     version: "1.00",
                     syntaxes: new List<Statement>()
@@ -1240,8 +1245,9 @@ namespace Bve5_ParsingTests
                             TrackKey = "string_test_value",
                             Tilt = 1.0,
                             Span = 1.0,
-                            Interval = 1.0
+                            Interval = 1.0,
                         }
+                        .SetStructureKeys("string_test_value", "string_test_value", "string_test_value", "string_test_value", "string_test_value")
                     }));
         }
 
@@ -1409,68 +1415,186 @@ namespace Bve5_ParsingTests
         }
 
         /// <summary>
-        /// Section.Begin();
+        /// Section.Begin(Signal);
         /// </summary>
         [Fact]
         public void SectionBeginTest()
         {
-            /*
-             * THIS TEST IS SKIPPED.
-             * この構文のテストは諸事情によりテストの自動生成から外されました。
-             * Section.Begin()構文のテストは手動で作成してください。
-             */
+
+            // Section.Begin(Signal);
+            Check(
+                ExecParse("BveTs Map 2.02\n0;Section.Begin(1.0, 1.0, 1.0, 1.0, 1.0);"),
+                new MapData(
+                    version: "2.02",
+                    syntaxes: new List<Statement>()
+                    {
+                        new SectionBeginStatement(0)
+                        {
+                        }
+                        .SetSignals(1.0, 1.0, 1.0, 1.0, 1.0)
+                    }));
         }
 
         /// <summary>
-        /// Section.Beginnew();
+        /// Section.Beginnew(Signal);
         /// </summary>
         [Fact]
         public void SectionBeginnewTest()
         {
-            /*
-             * THIS TEST IS SKIPPED.
-             * この構文のテストは諸事情によりテストの自動生成から外されました。
-             * Section.Beginnew()構文のテストは手動で作成してください。
-             */
+
+            // Section.Beginnew(Signal);
+            Check(
+                ExecParse("BveTs Map 2.02\n0;Section.Beginnew(1.0, 1.0, 1.0, 1.0, 1.0);"),
+                new MapData(
+                    version: "2.02",
+                    syntaxes: new List<Statement>()
+                    {
+                        new SectionBeginnewStatement(0)
+                        {
+                        }
+                        .SetSignals(1.0, 1.0, 1.0, 1.0, 1.0)
+                    }));
+
+            // Section.Beginnew(Signal);
+            Check(
+                ExecParse("BveTs Map 2.00\n0;Section.Beginnew(1.0, 1.0, 1.0, 1.0, 1.0);"),
+                new MapData(
+                    version: "2.00",
+                    syntaxes: new List<Statement>()
+                    {
+                        new SectionBeginnewStatement(0)
+                        {
+                        }
+                        .SetSignals(1.0, 1.0, 1.0, 1.0, 1.0)
+                    }));
+
+            // Section.Beginnew(Signal);
+            Check(
+                ExecParse("BveTs Map 1.00\n0;Section.Beginnew(1.0, 1.0, 1.0, 1.0, 1.0);"),
+                new MapData(
+                    version: "1.00",
+                    syntaxes: new List<Statement>()
+                    {
+                        new SectionBeginnewStatement(0)
+                        {
+                        }
+                        .SetSignals(1.0, 1.0, 1.0, 1.0, 1.0)
+                    }));
         }
 
         /// <summary>
-        /// Section.Setspeedlimit();
+        /// Section.Setspeedlimit(V);
         /// </summary>
         [Fact]
         public void SectionSetspeedlimitTest()
         {
-            /*
-             * THIS TEST IS SKIPPED.
-             * この構文のテストは諸事情によりテストの自動生成から外されました。
-             * Section.Setspeedlimit()構文のテストは手動で作成してください。
-             */
+
+            // Section.Setspeedlimit(V);
+            Check(
+                ExecParse("BveTs Map 2.02\n0;Section.Setspeedlimit(1.0, 1.0, 1.0, 1.0, 1.0);"),
+                new MapData(
+                    version: "2.02",
+                    syntaxes: new List<Statement>()
+                    {
+                        new SectionSetspeedlimitStatement(0)
+                        {
+                        }
+                        .SetVs(1.0, 1.0, 1.0, 1.0, 1.0)
+                    }));
         }
 
         /// <summary>
-        /// Signal.Speedlimit();
+        /// Signal.Speedlimit(V);
         /// </summary>
         [Fact]
         public void SignalSpeedlimitTest()
         {
-            /*
-             * THIS TEST IS SKIPPED.
-             * この構文のテストは諸事情によりテストの自動生成から外されました。
-             * Signal.Speedlimit()構文のテストは手動で作成してください。
-             */
+
+            // Signal.Speedlimit(V);
+            Check(
+                ExecParse("BveTs Map 2.02\n0;Signal.Speedlimit(1.0, 1.0, 1.0, 1.0, 1.0);"),
+                new MapData(
+                    version: "2.02",
+                    syntaxes: new List<Statement>()
+                    {
+                        new SignalSpeedlimitStatement(0)
+                        {
+                        }
+                        .SetVs(1.0, 1.0, 1.0, 1.0, 1.0)
+                    }));
+
+            // Signal.Speedlimit(V);
+            Check(
+                ExecParse("BveTs Map 2.00\n0;Signal.Speedlimit(1.0, 1.0, 1.0, 1.0, 1.0);"),
+                new MapData(
+                    version: "2.00",
+                    syntaxes: new List<Statement>()
+                    {
+                        new SignalSpeedlimitStatement(0)
+                        {
+                        }
+                        .SetVs(1.0, 1.0, 1.0, 1.0, 1.0)
+                    }));
+
+            // Signal.Speedlimit(V);
+            Check(
+                ExecParse("BveTs Map 1.00\n0;Signal.Speedlimit(1.0, 1.0, 1.0, 1.0, 1.0);"),
+                new MapData(
+                    version: "1.00",
+                    syntaxes: new List<Statement>()
+                    {
+                        new SignalSpeedlimitStatement(0)
+                        {
+                        }
+                        .SetVs(1.0, 1.0, 1.0, 1.0, 1.0)
+                    }));
         }
 
         /// <summary>
-        /// Speedlimit.Setsignal();
+        /// Speedlimit.Setsignal(V);
         /// </summary>
         [Fact]
         public void SpeedlimitSetsignalTest()
         {
-            /*
-             * THIS TEST IS SKIPPED.
-             * この構文のテストは諸事情によりテストの自動生成から外されました。
-             * Speedlimit.Setsignal()構文のテストは手動で作成してください。
-             */
+
+            // Speedlimit.Setsignal(V);
+            Check(
+                ExecParse("BveTs Map 2.02\n0;Speedlimit.Setsignal(1.0, 1.0, 1.0, 1.0, 1.0);"),
+                new MapData(
+                    version: "2.02",
+                    syntaxes: new List<Statement>()
+                    {
+                        new SpeedlimitSetsignalStatement(0)
+                        {
+                        }
+                        .SetVs(1.0, 1.0, 1.0, 1.0, 1.0)
+                    }));
+
+            // Speedlimit.Setsignal(V);
+            Check(
+                ExecParse("BveTs Map 2.00\n0;Speedlimit.Setsignal(1.0, 1.0, 1.0, 1.0, 1.0);"),
+                new MapData(
+                    version: "2.00",
+                    syntaxes: new List<Statement>()
+                    {
+                        new SpeedlimitSetsignalStatement(0)
+                        {
+                        }
+                        .SetVs(1.0, 1.0, 1.0, 1.0, 1.0)
+                    }));
+
+            // Speedlimit.Setsignal(V);
+            Check(
+                ExecParse("BveTs Map 1.00\n0;Speedlimit.Setsignal(1.0, 1.0, 1.0, 1.0, 1.0);"),
+                new MapData(
+                    version: "1.00",
+                    syntaxes: new List<Statement>()
+                    {
+                        new SpeedlimitSetsignalStatement(0)
+                        {
+                        }
+                        .SetVs(1.0, 1.0, 1.0, 1.0, 1.0)
+                    }));
         }
 
         /// <summary>
@@ -1492,11 +1616,126 @@ namespace Bve5_ParsingTests
         [Fact]
         public void SignalPutTest()
         {
-            /*
-             * THIS TEST IS SKIPPED.
-             * この構文のテストは諸事情によりテストの自動生成から外されました。
-             * Signal[SignalAspectKey].Put(Section, TrackKey, X, Y, Z?, RX?, RY?, RZ?, Tilt?, Span?)構文のテストは手動で作成してください。
-             */
+
+            // Signal[SignalAspectKey].Put(Section, TrackKey, X, Y);
+            Check(
+                ExecParse("BveTs Map 2.02\n0;Signal['SignalAspectKey'].Put(1.0, 'string_test_value', 1.0, 1.0);"),
+                new MapData(
+                    version: "2.02",
+                    syntaxes: new List<Statement>()
+                    {
+                        new SignalPutStatement(0)
+                        {
+                            Key = "SignalAspectKey",
+                            Section = 1.0,
+                            TrackKey = "string_test_value",
+                            X = 1.0,
+                            Y = 1.0
+                        }
+                    }));
+
+            // Signal[SignalAspectKey].Put(Section, TrackKey, X, Y, Z, RX, RY, RZ, Tilt, Span);
+            Check(
+                ExecParse("BveTs Map 2.02\n0;Signal['SignalAspectKey'].Put(1.0, 'string_test_value', 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0);"),
+                new MapData(
+                    version: "2.02",
+                    syntaxes: new List<Statement>()
+                    {
+                        new SignalPutStatement(0)
+                        {
+                            Key = "SignalAspectKey",
+                            Section = 1.0,
+                            TrackKey = "string_test_value",
+                            X = 1.0,
+                            Y = 1.0,
+                            Z = 1.0,
+                            RX = 1.0,
+                            RY = 1.0,
+                            RZ = 1.0,
+                            Tilt = 1.0,
+                            Span = 1.0
+                        }
+                    }));
+
+            // Signal[SignalAspectKey].Put(Section, TrackKey, X, Y);
+            Check(
+                ExecParse("BveTs Map 2.00\n0;Signal['SignalAspectKey'].Put(1.0, 'string_test_value', 1.0, 1.0);"),
+                new MapData(
+                    version: "2.00",
+                    syntaxes: new List<Statement>()
+                    {
+                        new SignalPutStatement(0)
+                        {
+                            Key = "SignalAspectKey",
+                            Section = 1.0,
+                            TrackKey = "string_test_value",
+                            X = 1.0,
+                            Y = 1.0
+                        }
+                    }));
+
+            // Signal[SignalAspectKey].Put(Section, TrackKey, X, Y, Z, RX, RY, RZ, Tilt, Span);
+            Check(
+                ExecParse("BveTs Map 2.00\n0;Signal['SignalAspectKey'].Put(1.0, 'string_test_value', 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0);"),
+                new MapData(
+                    version: "2.00",
+                    syntaxes: new List<Statement>()
+                    {
+                        new SignalPutStatement(0)
+                        {
+                            Key = "SignalAspectKey",
+                            Section = 1.0,
+                            TrackKey = "string_test_value",
+                            X = 1.0,
+                            Y = 1.0,
+                            Z = 1.0,
+                            RX = 1.0,
+                            RY = 1.0,
+                            RZ = 1.0,
+                            Tilt = 1.0,
+                            Span = 1.0
+                        }
+                    }));
+
+            // Signal[SignalAspectKey].Put(Section, TrackKey, X, Y);
+            Check(
+                ExecParse("BveTs Map 1.00\n0;Signal[SignalAspectKey].Put(1.0, string_test_value, 1.0, 1.0);"),
+                new MapData(
+                    version: "1.00",
+                    syntaxes: new List<Statement>()
+                    {
+                        new SignalPutStatement(0)
+                        {
+                            Key = "SignalAspectKey",
+                            Section = 1.0,
+                            TrackKey = "string_test_value",
+                            X = 1.0,
+                            Y = 1.0
+                        }
+                    }));
+
+            // Signal[SignalAspectKey].Put(Section, TrackKey, X, Y, Z, RX, RY, RZ, Tilt, Span);
+            Check(
+                ExecParse("BveTs Map 1.00\n0;Signal[SignalAspectKey].Put(1.0, string_test_value, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0);"),
+                new MapData(
+                    version: "1.00",
+                    syntaxes: new List<Statement>()
+                    {
+                        new SignalPutStatement(0)
+                        {
+                            Key = "SignalAspectKey",
+                            Section = 1.0,
+                            TrackKey = "string_test_value",
+                            X = 1.0,
+                            Y = 1.0,
+                            Z = 1.0,
+                            RX = 1.0,
+                            RY = 1.0,
+                            RZ = 1.0,
+                            Tilt = 1.0,
+                            Span = 1.0
+                        }
+                    }));
         }
 
         /// <summary>
@@ -1818,11 +2057,47 @@ namespace Bve5_ParsingTests
         [Fact]
         public void FogInterpolateTest()
         {
-            /*
-             * THIS TEST IS SKIPPED.
-             * この構文のテストは諸事情によりテストの自動生成から外されました。
-             * Fog.Interpolate(Density?, Red?, Green?, Blue?)構文のテストは手動で作成してください。
-             */
+
+            // Fog.Interpolate();
+            Check(
+                ExecParse("BveTs Map 2.02\n0;Fog.Interpolate();"),
+                new MapData(
+                    version: "2.02",
+                    syntaxes: new List<Statement>()
+                    {
+                        new FogInterpolateStatement(0)
+                        {
+                        }
+                    }));
+
+            // Fog.Interpolate(Density);
+            Check(
+                ExecParse("BveTs Map 2.02\n0;Fog.Interpolate(1.0);"),
+                new MapData(
+                    version: "2.02",
+                    syntaxes: new List<Statement>()
+                    {
+                        new FogInterpolateStatement(0)
+                        {
+                            Density = 1.0
+                        }
+                    }));
+
+            // Fog.Interpolate(Density, Red, Green, Blue);
+            Check(
+                ExecParse("BveTs Map 2.02\n0;Fog.Interpolate(1.0, 1.0, 1.0, 1.0);"),
+                new MapData(
+                    version: "2.02",
+                    syntaxes: new List<Statement>()
+                    {
+                        new FogInterpolateStatement(0)
+                        {
+                            Density = 1.0,
+                            Red = 1.0,
+                            Green = 1.0,
+                            Blue = 1.0
+                        }
+                    }));
         }
 
         /// <summary>
@@ -1831,11 +2106,54 @@ namespace Bve5_ParsingTests
         [Fact]
         public void FogSetTest()
         {
-            /*
-             * THIS TEST IS SKIPPED.
-             * この構文のテストは諸事情によりテストの自動生成から外されました。
-             * Fog.Set(Density?, Red?, Green?, Blue?)構文のテストは手動で作成してください。
-             */
+
+            // Fog.Set(Density, Red, Green, Blue);
+            Check(
+                ExecParse("BveTs Map 2.02\n0;Fog.Set(1.0, 1.0, 1.0, 1.0);"),
+                new MapData(
+                    version: "2.02",
+                    syntaxes: new List<Statement>()
+                    {
+                        new FogSetStatement(0)
+                        {
+                            Density = 1.0,
+                            Red = 1.0,
+                            Green = 1.0,
+                            Blue = 1.0
+                        }
+                    }));
+
+            // Fog.Set(Density, Red, Green, Blue);
+            Check(
+                ExecParse("BveTs Map 2.00\n0;Fog.Set(1.0, 1.0, 1.0, 1.0);"),
+                new MapData(
+                    version: "2.00",
+                    syntaxes: new List<Statement>()
+                    {
+                        new FogSetStatement(0)
+                        {
+                            Density = 1.0,
+                            Red = 1.0,
+                            Green = 1.0,
+                            Blue = 1.0
+                        }
+                    }));
+
+            // Fog.Set(Density, Red, Green, Blue);
+            Check(
+                ExecParse("BveTs Map 1.00\n0;Fog.Set(1.0, 1.0, 1.0, 1.0);"),
+                new MapData(
+                    version: "1.00",
+                    syntaxes: new List<Statement>()
+                    {
+                        new FogSetStatement(0)
+                        {
+                            Density = 1.0,
+                            Red = 1.0,
+                            Green = 1.0,
+                            Blue = 1.0
+                        }
+                    }));
         }
 
         /// <summary>
@@ -2172,11 +2490,51 @@ namespace Bve5_ParsingTests
         [Fact]
         public void Sound3dPutTest()
         {
-            /*
-             * THIS TEST IS SKIPPED.
-             * この構文のテストは諸事情によりテストの自動生成から外されました。
-             * Sound3d[SoundKey].Put(X, Y)構文のテストは手動で作成してください。
-             */
+
+            // Sound3d[SoundKey].Put(X, Y);
+            Check(
+                ExecParse("BveTs Map 2.02\n0;Sound3d['SoundKey'].Put(1.0, 1.0);"),
+                new MapData(
+                    version: "2.02",
+                    syntaxes: new List<Statement>()
+                    {
+                        new Sound3dPutStatement(0)
+                        {
+                            Key = "SoundKey",
+                            X = 1.0,
+                            Y = 1.0
+                        }
+                    }));
+
+            // Sound3d[SoundKey].Put(X, Y);
+            Check(
+                ExecParse("BveTs Map 2.00\n0;Sound3d['SoundKey'].Put(1.0, 1.0);"),
+                new MapData(
+                    version: "2.00",
+                    syntaxes: new List<Statement>()
+                    {
+                        new Sound3dPutStatement(0)
+                        {
+                            Key = "SoundKey",
+                            X = 1.0,
+                            Y = 1.0
+                        }
+                    }));
+
+            // Sound3d[SoundKey].Put(X, Y);
+            Check(
+                ExecParse("BveTs Map 1.00\n0;Sound3d[SoundKey].Put(1.0, 1.0);"),
+                new MapData(
+                    version: "1.00",
+                    syntaxes: new List<Statement>()
+                    {
+                        new Sound3dPutStatement(0)
+                        {
+                            Key = "SoundKey",
+                            X = 1.0,
+                            Y = 1.0
+                        }
+                    }));
         }
 
         /// <summary>
@@ -2326,11 +2684,96 @@ namespace Bve5_ParsingTests
         [Fact]
         public void TrainAddTest()
         {
-            /*
-             * THIS TEST IS SKIPPED.
-             * この構文のテストは諸事情によりテストの自動生成から外されました。
-             * Train.Add(TrainKey, FilePath, TrackKey?, Direction?)構文のテストは手動で作成してください。
-             */
+
+            // Train.Add(TrainKey, FilePath);
+            Check(
+                ExecParse("BveTs Map 2.02\n0;Train.Add('string_test_value', 'string_test_value');"),
+                new MapData(
+                    version: "2.02",
+                    syntaxes: new List<Statement>()
+                    {
+                        new TrainAddStatement(0)
+                        {
+                            TrainKey = "string_test_value",
+                            FilePath = "string_test_value"
+                        }
+                    }));
+
+            // Train.Add(TrainKey, FilePath, TrackKey, Direction);
+            Check(
+                ExecParse("BveTs Map 2.02\n0;Train.Add('string_test_value', 'string_test_value', 'string_test_value', 1.0);"),
+                new MapData(
+                    version: "2.02",
+                    syntaxes: new List<Statement>()
+                    {
+                        new TrainAddStatement(0)
+                        {
+                            TrainKey = "string_test_value",
+                            FilePath = "string_test_value",
+                            TrackKey = "string_test_value",
+                            Direction = 1.0
+                        }
+                    }));
+
+            // Train.Add(TrainKey, FilePath);
+            Check(
+                ExecParse("BveTs Map 2.00\n0;Train.Add('string_test_value', 'string_test_value');"),
+                new MapData(
+                    version: "2.00",
+                    syntaxes: new List<Statement>()
+                    {
+                        new TrainAddStatement(0)
+                        {
+                            TrainKey = "string_test_value",
+                            FilePath = "string_test_value"
+                        }
+                    }));
+
+            // Train.Add(TrainKey, FilePath, TrackKey, Direction);
+            Check(
+                ExecParse("BveTs Map 2.00\n0;Train.Add('string_test_value', 'string_test_value', 'string_test_value', 1.0);"),
+                new MapData(
+                    version: "2.00",
+                    syntaxes: new List<Statement>()
+                    {
+                        new TrainAddStatement(0)
+                        {
+                            TrainKey = "string_test_value",
+                            FilePath = "string_test_value",
+                            TrackKey = "string_test_value",
+                            Direction = 1.0
+                        }
+                    }));
+
+            // Train.Add(TrainKey, FilePath);
+            Check(
+                ExecParse("BveTs Map 1.00\n0;Train.Add(string_test_value, string_test_value);"),
+                new MapData(
+                    version: "1.00",
+                    syntaxes: new List<Statement>()
+                    {
+                        new TrainAddStatement(0)
+                        {
+                            TrainKey = "string_test_value",
+                            FilePath = "string_test_value"
+                        }
+                    }));
+
+            // Train.Add(TrainKey, FilePath, TrackKey, Direction);
+            Check(
+                ExecParse("BveTs Map 1.00\n0;Train.Add(string_test_value, string_test_value, string_test_value, 1.0);"),
+                new MapData(
+                    version: "1.00",
+                    syntaxes: new List<Statement>()
+                    {
+                        new TrainAddStatement(0)
+                        {
+                            TrainKey = "string_test_value",
+                            FilePath = "string_test_value",
+                            TrackKey = "string_test_value",
+                            Direction = 1.0
+                        }
+                    }));
         }
 
         /// <summary>
@@ -2339,11 +2782,22 @@ namespace Bve5_ParsingTests
         [Fact]
         public void TrainLoadTest()
         {
-            /*
-             * THIS TEST IS SKIPPED.
-             * この構文のテストは諸事情によりテストの自動生成から外されました。
-             * Train[TrainKey].Load(FilePath, TrackKey, Direction)構文のテストは手動で作成してください。
-             */
+
+            // Train[TrainKey].Load(FilePath, TrackKey, Direction);
+            Check(
+                ExecParse("BveTs Map 2.02\n0;Train['TrainKey'].Load('string_test_value', 'string_test_value', 1.0);"),
+                new MapData(
+                    version: "2.02",
+                    syntaxes: new List<Statement>()
+                    {
+                        new TrainLoadStatement(0)
+                        {
+                            Key = "TrainKey",
+                            FilePath = "string_test_value",
+                            TrackKey = "string_test_value",
+                            Direction = 1.0
+                        }
+                    }));
         }
 
         /// <summary>
@@ -2478,32 +2932,6 @@ namespace Bve5_ParsingTests
         public void LegacyFogTest()
         {
 
-            // Legacy.Fog();
-            Check(
-                ExecParse("BveTs Map 2.02\n0;Legacy.Fog();"),
-                new MapData(
-                    version: "2.02",
-                    syntaxes: new List<Statement>()
-                    {
-                        new LegacyFogStatement(0)
-                        {
-                        }
-                    }));
-
-            // Legacy.Fog(Fogstart, Fogend);
-            Check(
-                ExecParse("BveTs Map 2.02\n0;Legacy.Fog(1.0, 1.0);"),
-                new MapData(
-                    version: "2.02",
-                    syntaxes: new List<Statement>()
-                    {
-                        new LegacyFogStatement(0)
-                        {
-                            Fogstart = 1.0,
-                            Fogend = 1.0
-                        }
-                    }));
-
             // Legacy.Fog(Fogstart, Fogend, red, green, blue);
             Check(
                 ExecParse("BveTs Map 2.02\n0;Legacy.Fog(1.0, 1.0, 1.0, 1.0, 1.0);"),
@@ -2521,32 +2949,6 @@ namespace Bve5_ParsingTests
                         }
                     }));
 
-            // Legacy.Fog();
-            Check(
-                ExecParse("BveTs Map 2.00\n0;Legacy.Fog();"),
-                new MapData(
-                    version: "2.00",
-                    syntaxes: new List<Statement>()
-                    {
-                        new LegacyFogStatement(0)
-                        {
-                        }
-                    }));
-
-            // Legacy.Fog(Fogstart, Fogend);
-            Check(
-                ExecParse("BveTs Map 2.00\n0;Legacy.Fog(1.0, 1.0);"),
-                new MapData(
-                    version: "2.00",
-                    syntaxes: new List<Statement>()
-                    {
-                        new LegacyFogStatement(0)
-                        {
-                            Fogstart = 1.0,
-                            Fogend = 1.0
-                        }
-                    }));
-
             // Legacy.Fog(Fogstart, Fogend, red, green, blue);
             Check(
                 ExecParse("BveTs Map 2.00\n0;Legacy.Fog(1.0, 1.0, 1.0, 1.0, 1.0);"),
@@ -2561,32 +2963,6 @@ namespace Bve5_ParsingTests
                             red = 1.0,
                             green = 1.0,
                             blue = 1.0
-                        }
-                    }));
-
-            // Legacy.Fog();
-            Check(
-                ExecParse("BveTs Map 1.00\n0;Legacy.Fog();"),
-                new MapData(
-                    version: "1.00",
-                    syntaxes: new List<Statement>()
-                    {
-                        new LegacyFogStatement(0)
-                        {
-                        }
-                    }));
-
-            // Legacy.Fog(Fogstart, Fogend);
-            Check(
-                ExecParse("BveTs Map 1.00\n0;Legacy.Fog(1.0, 1.0);"),
-                new MapData(
-                    version: "1.00",
-                    syntaxes: new List<Statement>()
-                    {
-                        new LegacyFogStatement(0)
-                        {
-                            Fogstart = 1.0,
-                            Fogend = 1.0
                         }
                     }));
 
@@ -2609,7 +2985,7 @@ namespace Bve5_ParsingTests
         }
 
         /// <summary>
-        /// Legacy.Curve(radius, cant?);
+        /// Legacy.Curve(radius, cant);
         /// </summary>
         [Fact]
         public void LegacyCurveTest()

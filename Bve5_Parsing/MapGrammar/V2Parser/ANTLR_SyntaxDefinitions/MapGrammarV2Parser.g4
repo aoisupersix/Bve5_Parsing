@@ -68,9 +68,7 @@ curve :
 	| DOT func=BEGIN_TRANSITION OPN_PAR CLS_PAR
 	| DOT func=(BEGIN | BEGIN_CIRCULAR) OPN_PAR radius=nullableExpr (COMMA cant=nullableExpr)? CLS_PAR
 	| DOT func=END OPN_PAR CLS_PAR
-	| DOT func=INTERPOLATE OPN_PAR CLS_PAR
-	| DOT func=INTERPOLATE OPN_PAR radiusE=expr CLS_PAR
-	| DOT func=INTERPOLATE OPN_PAR radius=nullableExpr COMMA cant=nullableExpr CLS_PAR
+	| DOT func=INTERPOLATE OPN_PAR radius=nullableExpr (COMMA cant=nullableExpr)? CLS_PAR
 	| DOT func=CHANGE OPN_PAR radius=nullableExpr CLS_PAR
 	;
 
@@ -79,28 +77,22 @@ gradient :
 	  DOT func=BEGIN_TRANSITION OPN_PAR CLS_PAR
 	| DOT func=(BEGIN | BEGIN_CONST) OPN_PAR gradientArgs=nullableExpr CLS_PAR	//引数名gradientが被るのでgradientArgsにしている
 	| DOT func=END OPN_PAR CLS_PAR
-	| DOT func=INTERPOLATE OPN_PAR gradientArgsE=expr CLS_PAR
+	| DOT func=INTERPOLATE OPN_PAR gradientArgs=nullableExpr CLS_PAR
 	;
 
 //他軌道
 track :
-	  OPN_BRA key=expr CLS_BRA DOT element=X_ELEMENT DOT func=INTERPOLATE OPN_PAR CLS_PAR
-	| OPN_BRA key=expr CLS_BRA DOT element=X_ELEMENT DOT func=INTERPOLATE OPN_PAR xE=expr CLS_PAR
-	| OPN_BRA key=expr CLS_BRA DOT element=X_ELEMENT DOT func=INTERPOLATE OPN_PAR x=nullableExpr COMMA radius=nullableExpr CLS_PAR
-	| OPN_BRA key=expr CLS_BRA DOT element=Y_ELEMENT DOT func=INTERPOLATE OPN_PAR CLS_PAR
-	| OPN_BRA key=expr CLS_BRA DOT element=Y_ELEMENT DOT func=INTERPOLATE OPN_PAR yE=expr CLS_PAR
-	| OPN_BRA key=expr CLS_BRA DOT element=Y_ELEMENT DOT func=INTERPOLATE OPN_PAR y=nullableExpr COMMA radius=nullableExpr CLS_PAR
-	| OPN_BRA key=expr CLS_BRA DOT func=POSITION OPN_PAR x=nullableExpr COMMA y=nullableExpr CLS_PAR
-	| OPN_BRA key=expr CLS_BRA DOT func=POSITION OPN_PAR x=nullableExpr COMMA y=nullableExpr COMMA radiush=nullableExpr CLS_PAR
-	| OPN_BRA key=expr CLS_BRA DOT func=POSITION OPN_PAR x=nullableExpr COMMA y=nullableExpr COMMA radiush=nullableExpr COMMA radiusv=nullableExpr CLS_PAR
-	| OPN_BRA key=expr CLS_BRA DOT element=CANT_ELEMENT DOT func=SET_CENTER OPN_PAR x=nullableExpr CLS_PAR
+	| OPN_BRA key=expr CLS_BRA DOT element=X_ELEMENT DOT func=INTERPOLATE OPN_PAR x=nullableExpr (COMMA radius=nullableExpr)? CLS_PAR
+	| OPN_BRA key=expr CLS_BRA DOT element=Y_ELEMENT DOT func=INTERPOLATE OPN_PAR y=nullableExpr (COMMA radius=nullableExpr)? CLS_PAR
+	| OPN_BRA key=expr CLS_BRA DOT func=POSITION OPN_PAR x=nullableExpr COMMA y=nullableExpr (COMMA radiush=nullableExpr (COMMA radiusv=nullableExpr)?)? CLS_PAR
 	| OPN_BRA key=expr CLS_BRA DOT element=CANT_ELEMENT DOT func=SET_GAUGE OPN_PAR gaugeArgs=nullableExpr CLS_PAR
+	| OPN_BRA key=expr CLS_BRA DOT element=CANT_ELEMENT DOT func=SET_CENTER OPN_PAR x=nullableExpr CLS_PAR
 	| OPN_BRA key=expr CLS_BRA DOT element=CANT_ELEMENT DOT func=SET_FUNCTION OPN_PAR id=nullableExpr CLS_PAR
 	| OPN_BRA key=expr CLS_BRA DOT element=CANT_ELEMENT DOT func=BEGIN_TRANSITION OPN_PAR CLS_PAR
 	| OPN_BRA key=expr CLS_BRA DOT element=CANT_ELEMENT DOT func=BEGIN OPN_PAR cant=nullableExpr CLS_PAR
 	| OPN_BRA key=expr CLS_BRA DOT element=CANT_ELEMENT DOT func=END OPN_PAR CLS_PAR
-	| OPN_BRA key=expr CLS_BRA DOT element=CANT_ELEMENT DOT func=INTERPOLATE OPN_PAR cantE=expr? CLS_PAR
-	| OPN_BRA key=expr CLS_BRA DOT func=CANT_ELEMENT OPN_PAR cantE=expr CLS_PAR
+	| OPN_BRA key=expr CLS_BRA DOT element=CANT_ELEMENT DOT func=INTERPOLATE OPN_PAR cant=nullableExpr CLS_PAR
+	| OPN_BRA key=expr CLS_BRA DOT func=CANT_ELEMENT OPN_PAR cant=nullableExpr CLS_PAR
 	| OPN_BRA key=expr CLS_BRA DOT func=GAUGE OPN_PAR gaugeArgs=nullableExpr CLS_PAR
 	;
 
@@ -109,7 +101,7 @@ structure :
 	  DOT func=LOAD OPN_PAR filepath=expr CLS_PAR
 	| OPN_BRA key=expr CLS_BRA DOT func=PUT OPN_PAR trackkey=nullableExpr COMMA x=nullableExpr COMMA y=nullableExpr COMMA z=nullableExpr COMMA rx=nullableExpr COMMA ry=nullableExpr COMMA rz=nullableExpr COMMA tilt=nullableExpr COMMA span=nullableExpr CLS_PAR
 	| OPN_BRA key=expr CLS_BRA DOT func=PUT0 OPN_PAR trackkey=nullableExpr COMMA tilt=nullableExpr COMMA span=nullableExpr CLS_PAR
-	| OPN_BRA key=expr CLS_BRA DOT func=PUTBETWEEN OPN_PAR trackkey1=nullableExpr COMMA trackkey2=nullableExpr ( COMMA flag=nullableExpr )? CLS_PAR
+	| OPN_BRA key=expr CLS_BRA DOT func=PUTBETWEEN OPN_PAR trackkey1=nullableExpr COMMA trackkey2=nullableExpr (COMMA flag=nullableExpr)? CLS_PAR
 	;
 
 //連続ストラクチャ
@@ -140,8 +132,7 @@ section :
 signal :
 	  DOT func=LOAD OPN_PAR filepath=expr CLS_PAR
 	| DOT func=SPEEDLIMIT OPN_PAR nullableExpr exprArgs* CLS_PAR
-	| OPN_BRA key=expr CLS_BRA DOT func=PUT OPN_PAR sectionArgs=nullableExpr COMMA trackkey=nullableExpr COMMA x=nullableExpr COMMA y=nullableExpr CLS_PAR
-	| OPN_BRA key=expr CLS_BRA DOT func=PUT OPN_PAR sectionArgs=nullableExpr COMMA trackkey=nullableExpr COMMA x=nullableExpr COMMA y=nullableExpr COMMA z=nullableExpr COMMA rx=nullableExpr COMMA ry=nullableExpr COMMA rz=nullableExpr COMMA tilt=nullableExpr COMMA span=nullableExpr CLS_PAR
+	| OPN_BRA key=expr CLS_BRA DOT func=PUT OPN_PAR sectionArgs=nullableExpr COMMA trackkey=nullableExpr COMMA x=nullableExpr COMMA y=nullableExpr (COMMA z=nullableExpr COMMA rx=nullableExpr COMMA ry=nullableExpr COMMA rz=nullableExpr COMMA tilt=nullableExpr COMMA span=nullableExpr)? CLS_PAR
 	;
 
 //地上子
@@ -170,9 +161,8 @@ light :
 
 //霧効果
 fog :
-	  DOT func=INTERPOLATE OPN_PAR CLS_PAR
-	| DOT func=INTERPOLATE OPN_PAR densityE=expr CLS_PAR
-	| DOT func=(INTERPOLATE | SET) OPN_PAR density=nullableExpr COMMA red=nullableExpr COMMA green=nullableExpr COMMA blue=nullableExpr CLS_PAR
+	  DOT func=INTERPOLATE OPN_PAR density=nullableExpr (COMMA red=nullableExpr COMMA green=nullableExpr COMMA blue=nullableExpr)? CLS_PAR
+	| DOT func=SET OPN_PAR density=nullableExpr COMMA red=nullableExpr COMMA green=nullableExpr COMMA blue=nullableExpr CLS_PAR
 	;
 
 //風景描画距離
@@ -182,7 +172,7 @@ drawdistance :
 
 //運転台の明るさ
 cabilluminance :
-	DOT func=(INTERPOLATE | SET) OPN_PAR value=expr? CLS_PAR
+	DOT func=(INTERPOLATE | SET) OPN_PAR value=nullableExpr CLS_PAR
 	;
 
 //軌道変位
@@ -192,8 +182,7 @@ irregularity :
 
 //粘着特性
 adhesion :
-	  DOT func=CHANGE OPN_PAR a=nullableExpr CLS_PAR
-	| DOT func=CHANGE OPN_PAR a=nullableExpr COMMA b=nullableExpr COMMA c=nullableExpr CLS_PAR
+	DOT func=CHANGE OPN_PAR a=nullableExpr (COMMA b=nullableExpr COMMA c=nullableExpr)? CLS_PAR
 	;
 
 //音
@@ -225,8 +214,7 @@ jointnoise :
 
 //他列車
 train :
-	  DOT func=ADD OPN_PAR trainkey=nullableExpr COMMA filepath=expr CLS_PAR
-	| DOT func=ADD OPN_PAR trainkey=nullableExpr COMMA filepath=expr COMMA trackkey=nullableExpr COMMA direction=nullableExpr CLS_PAR
+	  DOT func=ADD OPN_PAR trainkey=nullableExpr COMMA filepath=expr (COMMA trackkey=nullableExpr COMMA direction=nullableExpr)? CLS_PAR
 	| OPN_BRA key=expr CLS_BRA DOT func=LOAD OPN_PAR filepath=expr COMMA trackkey=nullableExpr COMMA direction=nullableExpr CLS_PAR
 	| OPN_BRA key=expr CLS_BRA DOT func=ENABLE OPN_PAR time=nullableExpr CLS_PAR
 	| OPN_BRA key=expr CLS_BRA DOT func=STOP OPN_PAR decelerate=nullableExpr COMMA stoptime=nullableExpr COMMA accelerate=nullableExpr COMMA speed=nullableExpr CLS_PAR
@@ -236,7 +224,6 @@ train :
 //レガシー関数
 legacy :
 	  DOT func=FOG OPN_PAR fogstart=nullableExpr COMMA fogend=nullableExpr COMMA red=nullableExpr COMMA green=nullableExpr COMMA blue=nullableExpr CLS_PAR
-	| DOT func=CURVE OPN_PAR radius=nullableExpr CLS_PAR
 	| DOT func=CURVE OPN_PAR radius=nullableExpr COMMA cant=nullableExpr CLS_PAR
 	| DOT func=PITCH OPN_PAR rate=nullableExpr CLS_PAR
 	| DOT func=TURN OPN_PAR slope=nullableExpr CLS_PAR
