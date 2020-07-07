@@ -5,7 +5,7 @@ namespace Bve5_Parsing.MapGrammar.V2Parser
 {
     internal class V2ParserErrorStrategy : MapGrammarErrorStrategy
     {
-        public V2ParserErrorStrategy(string filePath = null) : base(filePath) { }
+        public V2ParserErrorStrategy(MessageGenerator messageGenerator, string filePath = null) : base(messageGenerator, filePath) { }
 
         /// <summary>
         /// エラーの復帰処理を行います。

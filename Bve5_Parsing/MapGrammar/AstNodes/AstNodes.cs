@@ -117,7 +117,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
                     }
                     catch (Exception e) when (e is InvalidCastException || e is FormatException || e is OverflowException)
                     {
-                        evaluator.Errors.Add(CreateNewError($"{value}は無効な引数です。"));
+                        evaluator.ErrorListener.AddNewError(MessageType.InvalidArgument, null, Start, value);
                         sectionBeginStatement.AddSignal(null);
                     }
                 }
@@ -152,7 +152,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
                     }
                     catch (Exception e) when (e is InvalidCastException || e is FormatException || e is OverflowException)
                     {
-                        evaluator.Errors.Add(CreateNewError($"{value}は無効な引数です。"));
+                        evaluator.ErrorListener.AddNewError(MessageType.InvalidArgument, null, Start, value);
                         sectionSetspeedlimitStatement.AddV(null);
                     }
                 }

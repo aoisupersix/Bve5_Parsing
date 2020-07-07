@@ -231,7 +231,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
                 }
                 catch (Exception e) when (e is InvalidCastException || e is FormatException || e is OverflowException || e is ArgumentNullException)
                 {
-                    evaluator.Errors.Add(CreateNewError($"{argValue}は無効な引数です。"));
+                    evaluator.ErrorListener.AddNewError(MessageType.InvalidArgument, null, Start, argValue);
                 }
             }
 
