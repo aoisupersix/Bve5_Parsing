@@ -91,10 +91,18 @@ namespace Bve5_Parsing.MapGrammar
         {
         }
 
+        /// <summary>
+        /// パーサをMessageGeneratorを指定して初期化します。
+        /// </summary>
+        /// <param name="messageGenerator"></param>
         public MapGrammarParser(MessageGenerator messageGenerator) : this(new ParseErrorListener(messageGenerator))
         {
         }
 
+        /// <summary>
+        /// パーサをエラーリスナーを指定して初期化します。
+        /// </summary>
+        /// <param name="errorListener"></param>
         public MapGrammarParser(ParseErrorListener errorListener)
         {
             ErrorListener = errorListener;

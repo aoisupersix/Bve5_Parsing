@@ -7,7 +7,7 @@ namespace Bve5_Parsing
     /// <summary>
     /// パーサのデフォルトエラー処理クラス
     /// エラーに対して任意の処理を行ってErrorsに格納します。
-    /// このクラスを継承し、パーサのErrorListenerに指定することで構文解析のエラーを取得できます。
+    /// このクラスを継承し、パーサのコンストラクタに指定することで構文解析のエラーを取得できます。
     /// </summary>
     public class ParseErrorListener : BaseErrorListener
     {

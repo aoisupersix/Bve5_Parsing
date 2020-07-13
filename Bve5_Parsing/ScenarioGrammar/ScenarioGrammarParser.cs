@@ -28,6 +28,10 @@ namespace Bve5_Parsing.ScenarioGrammar
         {
         }
 
+        /// <summary>
+        /// パーサをMessageGeneratorを指定して初期化します。
+        /// </summary>
+        /// <param name="messageGenerator"></param>
         public ScenarioGrammarParser(MessageGenerator messageGenerator) : this(new ParseErrorListener(messageGenerator))
         {
         }

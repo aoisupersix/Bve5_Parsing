@@ -1,5 +1,9 @@
 ﻿namespace Bve5_Parsing
 {
+    /// <summary>
+    /// メッセージの種別を表します。
+    /// MessageGeneratorクラスのプロパティに対応します。
+    /// </summary>
     public enum MessageType
     {
         /// <summary>
@@ -58,6 +62,11 @@
         FileFailedLoad
     }
 
+    /// <summary>
+    /// デフォルトのメッセージ生成クラス
+    /// メッセージの種別に応じて、メッセージを生成します。
+    /// このクラスを継承し、ErrorListenerまたはパーサーのコンストラクタに指定することで、メッセージをカスタマイズできます。
+    /// </summary>
     public class MessageGenerator
     {
         // ReSharper disable UnusedMember.Global
