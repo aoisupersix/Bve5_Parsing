@@ -22,7 +22,7 @@ BveTrainSim5構文の.NETパーサライブラリです。
 その他は今後作っていきます👍
 
 ## Requirements
-* .Net Standard 2.0 or .Net framework 4.0
+* .Net Standard 2.0 or .Net framework 4.5
 
 ## Installation
 Nugetで[Bve5_Parsing](https://www.nuget.org/packages/Bve5_Parsing/)としてパッケージを公開しています。
@@ -77,7 +77,7 @@ using System.Linq;
 ...
 ```
 
-パース処理に成功した場合、結果は**MapDataクラス**で返ってきます。例えば、ファイルヘッダのバージョン情報は**MapData.Version**に格納されています。また、構文解析のエラーは**MapGrammarParser.ParserErrors**に格納されています。**MapGrammarParser.ParserErrors**ではエラーの種別(警告かエラーか)やエラーとなった構文の位置、エラーメッセージが取得出来ます。独自のエラーメッセージを実装する場合は、**ParserErrorListener**を継承したカスタムクラスを実装し、**MapGrammarParser.ErrorListener**に指定して下さい。
+パース処理に成功した場合、結果は**MapDataクラス**で返ってきます。例えば、ファイルヘッダのバージョン情報は**MapData.Version**に格納されています。また、構文解析のエラーは**MapGrammarParser.ParserErrors**に格納されています。**MapGrammarParser.ParserErrors**ではエラーの種別(警告かエラーか)やエラーとなった構文の位置、エラーメッセージが取得出来ます。独自のエラーメッセージを実装する場合は、**MessageGenerator**を継承したカスタムクラスを実装し、**MapGrammarParserのコンストラクタ**で指定して下さい。
 
 Bve5_Parsing.slnに含まれているParseSampleAppプロジェクトからは、コンソール上でパーサの動作を確かめることができます。Bve5_Parsingの実装例として適宜利用して下さい。
 
