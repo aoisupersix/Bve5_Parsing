@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;net40;</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;net45;</TargetFrameworks>
     <Version>1.0.1</Version>
     <PackageLicense>https://github.com/aoisupersix/Bve5_Parsing/blob/master/License.md</PackageLicense>
     <Description>BveTrainsim5.7 Syntax parsing library.
@@ -54,7 +54,7 @@ Bve5.7構文のパーサライブラリです。</Description>
     </Antlr4>
   </ItemGroup>
 
-  <ItemGroup Condition="'$(TargetFramework)' == 'net40'">
+  <ItemGroup Condition="'$(TargetFramework)' == 'net45'">
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
 

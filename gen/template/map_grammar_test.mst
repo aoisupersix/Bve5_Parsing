@@ -33,27 +33,34 @@ namespace Bve5_ParsingTests
 {{^skip_test}}
 {{#argPattern}}
 
-            // {{elem}}{{^syntax1}}[{{key}}]{{/syntax1}}{{#syntax3}}.{{sub_elem}}{{/syntax3}}{{^nofunc}}.{{func}}{{/nofunc}}({{#args}}{{name}}{{^last}}, {{/last}}{{/args}});
+            // {{../elem}}{{^../syntax1}}[{{../key}}]{{/../syntax1}}{{#../syntax3}}.{{../sub_elem}}{{/../syntax3}}{{^../nofunc}}.{{../func}}{{/../nofunc}}({{#args}}{{name}}{{^last}}, {{/last}}{{/args}});
             Check(
 {{#useV2Parser}}
-                ExecParse("BveTs Map {{version}}\n0;{{elem}}{{^syntax1}}['{{key}}']{{/syntax1}}{{#syntax3}}.{{sub_elem}}{{/syntax3}}{{^nofunc}}.{{func}}{{/nofunc}}({{#args}}{{{test_value_map_grammar}}}{{^last}}, {{/last}}{{/args}});"),
+                ExecParse("BveTs Map {{version}}\n0;{{../elem}}{{^../syntax1}}['{{../key}}']{{/../syntax1}}{{#../syntax3}}.{{../sub_elem}}{{/../syntax3}}{{^../nofunc}}.{{../func}}{{/../nofunc}}({{#args}}{{^is_list}}{{{test_value_map_grammar}}}{{/is_list}}{{#is_list}}{{#inner_arguments}}{{{test_value_map_grammar}}}{{^last}}, {{/last}}{{/inner_arguments}}{{/is_list}}{{^last}}, {{/last}}{{/args}});"),
 {{/useV2Parser}}
 {{#useV1Parser}}
-                ExecParse("BveTs Map {{version}}\n0;{{elem}}{{^syntax1}}[{{key}}]{{/syntax1}}{{#syntax3}}.{{sub_elem}}{{/syntax3}}{{^nofunc}}.{{func}}{{/nofunc}}({{#args}}{{{test_value_map_grammar_non_quote}}}{{^last}}, {{/last}}{{/args}});"),
+                ExecParse("BveTs Map {{version}}\n0;{{../elem}}{{^../syntax1}}[{{../key}}]{{/../syntax1}}{{#../syntax3}}.{{../sub_elem}}{{/../syntax3}}{{^../nofunc}}.{{../func}}{{/../nofunc}}({{#args}}{{^is_list}}{{{test_value_map_grammar_non_quote}}}{{/is_list}}{{#is_list}}{{#inner_arguments}}{{{test_value_map_grammar_non_quote}}}{{^last}}, {{/last}}{{/inner_arguments}}{{/is_list}}{{^last}}, {{/last}}{{/args}});"),
 {{/useV1Parser}}
                 new MapData(
                     version: "{{version}}",
                     syntaxes: new List<Statement>()
                     {
-                        new {{elem}}{{#syntax3}}{{sub_elem}}{{/syntax3}}{{^nofunc}}{{func}}{{/nofunc}}Statement(0)
+                        new {{../elem}}{{#../syntax3}}{{../sub_elem}}{{/../syntax3}}{{^../nofunc}}{{../func}}{{/../nofunc}}Statement(0)
                         {
-{{#key}}
-                            Key = "{{key}}",
-{{/key}}
+{{#../key}}
+                            Key = "{{../../key}}",
+{{/../key}}
 {{#args}}
+{{^is_list}}
                             {{name}} = {{{test_value_csharp}}}{{^last}},{{/last}}
+{{/is_list}}
 {{/args}}
                         }
+{{#args}}
+{{#is_list}}
+                        .Set{{name}}s({{#inner_arguments}}{{{test_value_csharp}}}{{^last}}, {{/last}}{{/inner_arguments}})
+{{/is_list}}
+{{/args}}
                     }));
 {{/argPattern}}
 {{/skip_test}}

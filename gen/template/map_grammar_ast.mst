@@ -2,6 +2,8 @@
  * このファイルはdoc/createMapGrammarTemplate.jsによって自動生成されています。
  * 編集は行わないでください。
  */
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using Antlr4.Runtime;
 using Bve5_Parsing.MapGrammar.Attributes;
 
@@ -14,7 +16,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
 {{#deprecated}}
     [Deprecated]
 {{/deprecated}}
-    public partial class {{elem}}{{#syntax3}}{{sub_elem}}{{/syntax3}}{{^nofunc}}{{func}}{{/nofunc}}Node : {{^inheritance}}SyntaxNode{{/inheritance}}{{#inheritance}}{{inheritance}}Node{{/inheritance}}
+    public partial class {{elem}}{{#syntax3}}{{sub_elem}}{{/syntax3}}{{^nofunc}}{{func}}{{/nofunc}}Node : {{^inheritance}}SyntaxNode{{/inheritance}}{{#inheritance}}{{../inheritance}}Node{{/inheritance}}
     {
         #region SyntaxInfo
 
@@ -27,7 +29,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <summary>
         /// マップ副要素名
         /// </summary>
-        public override MapSubElementName? SubElementName => MapSubElementName.{{sub_elem}};
+        public override MapSubElementName? SubElementName => MapSubElementName.{{../sub_elem}};
 {{/sub_elem}}
 {{^nofunc}}
 
@@ -51,7 +53,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
 {{#key}}
 
         /// <summary>
-        /// Key：{{key}}
+        /// Key：{{../key}}
         /// </summary>
         public override MapGrammarAstNodes Key { get; set; }
 {{/key}}
@@ -60,11 +62,24 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         #region Args
 {{#args}}
 
+{{^is_list}}
         /// <summary>
         /// 引数：{{{desc}}}{{#opt}}（省略可能）{{/opt}}
         /// </summary>
         [Argument{{#opt}}(Optional = true){{/opt}}]
         public MapGrammarAstNodes {{name}} { get; set; }
+{{/is_list}}
+{{#is_list}}
+        /// <summary>
+        /// 可変長引数：{{{desc}}}{{#opt}}（省略可能）{{/opt}}のリスト
+        /// </summary>
+        protected List<MapGrammarAstNodes> _{{toLowerCase name}}s = new List<MapGrammarAstNodes>();
+
+        /// <summary>
+        /// 可変長引数：{{{desc}}}{{#opt}}（省略可能）{{/opt}}の読み取り専用コレクション
+        /// </summary>
+        public ReadOnlyCollection<MapGrammarAstNodes> {{name}}s => _{{toLowerCase name}}s.AsReadOnly();
+{{/is_list}}
 {{/args}}
         #endregion Args
 {{/noarg}}
@@ -76,6 +91,28 @@ namespace Bve5_Parsing.MapGrammar.AstNodes {
         /// <param name="start"></param>
         /// <param name="stop"></param>
         public {{elem}}{{#syntax3}}{{sub_elem}}{{/syntax3}}{{^nofunc}}{{func}}{{/nofunc}}Node(IToken start, IToken stop) : base(start, stop) { }
+{{^inheritance}}
+{{#args}}
+{{#is_list}}
+
+        /// <summary>
+        /// 可変長引数：{{{desc}}}を追加します。
+        /// </summary>
+        public void Add{{name}}(MapGrammarAstNodes {{toLowerCase name}})
+        {
+            _{{toLowerCase name}}s.Add({{toLowerCase name}});
+        }
+
+        /// <summary>
+        /// 可変長引数：{{{desc}}}を複数追加します。
+        /// </summary>
+        public void Add{{name}}s(IEnumerable<MapGrammarAstNodes> {{toLowerCase name}}s)
+        {
+            _{{toLowerCase name}}s.AddRange({{toLowerCase name}}s);
+        }
+{{/is_list}}
+{{/args}}
+{{/inheritance}}
     }
 {{/states}}
 }

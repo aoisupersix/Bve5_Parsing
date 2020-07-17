@@ -1,12 +1,11 @@
-﻿using Antlr4.Runtime;
-using Bve5_Parsing.MapGrammar.AstNodes;
-using Bve5_Parsing.MapGrammar.EvaluateData;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Collections.ObjectModel;
 using System.IO;
-using System.Text;
 using System.Linq;
+using System.Text;
+using Antlr4.Runtime;
+using Bve5_Parsing.MapGrammar.AstNodes;
+using Bve5_Parsing.MapGrammar.EvaluateData;
 
 namespace Bve5_Parsing.MapGrammar
 {
@@ -17,15 +16,10 @@ namespace Bve5_Parsing.MapGrammar
     {
         #region フィールド
         /// <summary>
-        /// ParserErrorsプロパティの内部実装。
-        /// </summary>
-        protected List<ParseError> _parserError;
-
-        [Flags]
-        /// <summary>
         /// パーサの細かい動作を指定するためのオプションです。
         /// Parse()やParseToAst()メソッドの引数に渡してオプションを指定します。
         /// </summary>
+        [Flags]
         public enum MapGrammarParserOption
         {
 
@@ -63,21 +57,25 @@ namespace Bve5_Parsing.MapGrammar
             /// パース処理の前にパーサで管理している変数を初期化します。
             /// </summary>
             ClearVariables = 0x020,
+
+            /// <summary>
+            /// パース処理の前にエラーリスナーが保持するエラーを初期化しないままパースします。
+            /// </summary>
+            NoClearErrors = 0x040
         }
         #endregion
 
         #region プロパティ
         /// <summary>
+        /// 構文解析のエラーを取得するするためのリスナーです。
+        /// </summary>
+        public ParseErrorListener ErrorListener { get; }
+
+        /// <summary>
         /// パーサで保持しているエラーです。
         /// Parse()やParseToAst()を呼び出しパースを行う度に初期化されます。
         /// </summary>
         public ReadOnlyCollection<ParseError> ParserErrors { get; }
-
-        /// <summary>
-        /// 構文解析のエラーを取得するするためのリスナーです。
-        /// エラーに対して独自の処理を行いたい場合は、このプロパティにParseErrorListenerを継承した独自のクラスを指定してください。
-        /// </summary>
-        public ParseErrorListener ErrorListener { get; set; }
 
         /// <summary>
         /// マップ構文内の変数を保持します。
@@ -89,11 +87,26 @@ namespace Bve5_Parsing.MapGrammar
         /// <summary>
         /// パーサを初期化します。
         /// </summary>
-        public MapGrammarParser()
+        public MapGrammarParser() : this(new MessageGenerator())
         {
-            _parserError = new List<ParseError>();
-            ParserErrors = _parserError.AsReadOnly();
-            ErrorListener = new ParseErrorListener(_parserError);
+        }
+
+        /// <summary>
+        /// パーサをMessageGeneratorを指定して初期化します。
+        /// </summary>
+        /// <param name="messageGenerator"></param>
+        public MapGrammarParser(MessageGenerator messageGenerator) : this(new ParseErrorListener(messageGenerator))
+        {
+        }
+
+        /// <summary>
+        /// パーサをエラーリスナーを指定して初期化します。
+        /// </summary>
+        /// <param name="errorListener"></param>
+        public MapGrammarParser(ParseErrorListener errorListener)
+        {
+            ErrorListener = errorListener;
+            ParserErrors = ErrorListener.Errors.AsReadOnly();
             Store = new VariableStore();
         }
 
@@ -146,8 +159,8 @@ namespace Bve5_Parsing.MapGrammar
             if (ast == null) { return null; }
 
             MapData value = option.HasFlag(MapGrammarParserOption.ParseIncludeSyntaxRecursively) ?
-                (MapData)new EvaluateMapGrammarVisitorWithInclude(Store, Path.GetDirectoryName(filePath), _parserError).Visit(ast) : // Includeを再帰的にパースする
-                (MapData)new EvaluateMapGrammarVisitor(Store, _parserError).Visit(ast)
+                (MapData)new EvaluateMapGrammarVisitorWithInclude(Store, Path.GetDirectoryName(filePath), ErrorListener).Visit(ast) : // Includeを再帰的にパースする
+                (MapData)new EvaluateMapGrammarVisitor(Store, ErrorListener).Visit(ast)
                 ;
 
             if (value == null) { return null; }
@@ -160,7 +173,7 @@ namespace Bve5_Parsing.MapGrammar
         /// </summary>
         /// <param name="input">解析するマップ構文のステートメントを表す文字列</param>
         /// <param name="filePath">解析するマップ構文のファイルパス</param>
-        /// <param name="versionString">パーサを指定するためのバージョン文字列（省略した場合は2.02を利用します）</param>
+        /// <param name="option"></param>
         /// <returns></returns>
         public MapGrammarAstNodes ParseToAst(string input, string filePath = null, MapGrammarParserOption option = MapGrammarParserOption.None)
         {
@@ -175,7 +188,7 @@ namespace Bve5_Parsing.MapGrammar
 
             if (headerInfo.Item1 == null)
             {
-                _parserError.Add(new ParseError(ParseErrorLevel.Error, 0, 0, "有効なマップファイルではありません。"));
+                ErrorListener.AddNewError(ParseMessageType.InvalidMapFormat, filePath, 0, 0);
                 return null;
             }
 
@@ -184,7 +197,11 @@ namespace Bve5_Parsing.MapGrammar
 
             var inputStream = new AntlrInputStream(input.Substring(headerInfo.Item3));
 
-            ErrorListener.Errors.Clear();
+            if (!option.HasFlag(MapGrammarParserOption.NoClearErrors))
+            {
+                ErrorListener.Errors.Clear();
+            }
+
             RootNode ast = null;
             if (headerInfo.Item1 != null && (headerInfo.Item1[0] == '1' || headerInfo.Item1[0] == '0'))
             {
@@ -194,7 +211,7 @@ namespace Bve5_Parsing.MapGrammar
 
                 var parser = new V1Parser.SyntaxDefinitions.MapGrammarV1Parser(commonTokneStream);
                 parser.AddErrorListener(ErrorListener);
-                parser.ErrorHandler = new V1Parser.V1ParserErrorStrategy(filePath);
+                parser.ErrorHandler = new V1Parser.V1ParserErrorStrategy(ErrorListener.MessageGenerator, filePath);
                 var cst = parser.root();
                 if (cst == null) { return null; }
                 ast = new V1Parser.BuildAstVisitor().VisitRoot(cst) as RootNode;
@@ -207,7 +224,7 @@ namespace Bve5_Parsing.MapGrammar
 
                 var parser = new V2Parser.SyntaxDefinitions.MapGrammarV2Parser(commonTokneStream);
                 parser.AddErrorListener(ErrorListener);
-                parser.ErrorHandler = new V2Parser.V2ParserErrorStrategy(filePath);
+                parser.ErrorHandler = new V2Parser.V2ParserErrorStrategy(ErrorListener.MessageGenerator, filePath);
                 var cst = parser.root();
                 if (cst == null) { return null; }
                 ast = new V2Parser.BuildAstVisitor().VisitRoot(cst) as RootNode;

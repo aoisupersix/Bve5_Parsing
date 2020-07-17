@@ -64,20 +64,6 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     /// </summary>
     public partial class RepeaterBeginNode
     {
-        protected List<MapGrammarAstNodes> _structureKeys = new List<MapGrammarAstNodes>();
-
-        public ReadOnlyCollection<MapGrammarAstNodes> StructureKeys => _structureKeys.AsReadOnly();
-
-        public void AddStructureKey(MapGrammarAstNodes strKey)
-        {
-            _structureKeys.Add(strKey);
-        }
-
-        public void AddStructureKeys(IEnumerable<MapGrammarAstNodes> strKeys)
-        {
-            _structureKeys.AddRange(strKeys);
-        }
-
         protected override Statement SetArgument(EvaluateMapGrammarVisitor evaluator, Statement statement)
         {
             RepeaterBeginStatement repeaterBeginStatement = base.SetArgument(evaluator, statement) as RepeaterBeginStatement;
@@ -97,20 +83,6 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     /// </summary>
     public partial class RepeaterBegin0Node
     {
-        protected List<MapGrammarAstNodes> _structureKeys = new List<MapGrammarAstNodes>();
-
-        public ReadOnlyCollection<MapGrammarAstNodes> StructureKeys => _structureKeys.AsReadOnly();
-
-        public void AddStructureKey(MapGrammarAstNodes strKey)
-        {
-            _structureKeys.Add(strKey);
-        }
-
-        public void AddStructureKeys(IEnumerable<MapGrammarAstNodes> strKeys)
-        {
-            _structureKeys.AddRange(strKeys);
-        }
-
         protected override Statement SetArgument(EvaluateMapGrammarVisitor evaluator, Statement statement)
         {
             RepeaterBegin0Statement repeaterBegin0Statement = base.SetArgument(evaluator, statement) as RepeaterBegin0Statement;
@@ -130,42 +102,28 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     /// </summary>
     public partial class SectionBeginNode
     {
-        protected List<MapGrammarAstNodes> _signalIndexes = new List<MapGrammarAstNodes>();
-
-        public ReadOnlyCollection<MapGrammarAstNodes> SignalIndexes => _signalIndexes.AsReadOnly();
-
-        public void AddSignalIndex(MapGrammarAstNodes sigIdx)
-        {
-            _signalIndexes.Add(sigIdx);
-        }
-
-        public void AddSignalIndexes(IEnumerable<MapGrammarAstNodes> sigIdxes)
-        {
-            _signalIndexes.AddRange(sigIdxes);
-        }
-
         protected override Statement SetArgument(EvaluateMapGrammarVisitor evaluator, Statement statement)
         {
             SectionBeginStatement sectionBeginStatement = base.SetArgument(evaluator, statement) as SectionBeginStatement;
 
-            foreach (var sigIdx in SignalIndexes)
+            foreach (var sigIdx in Signals)
             {
                 if (sigIdx != null)
                 {
                     object value = evaluator.Visit(sigIdx);
                     try
                     {
-                        sectionBeginStatement.AddSignalIndex(Convert.ToDouble(value));
+                        sectionBeginStatement.AddSignal(Convert.ToDouble(value));
                     }
                     catch (Exception e) when (e is InvalidCastException || e is FormatException || e is OverflowException)
                     {
-                        evaluator.Errors.Add(CreateNewError($"{value}は無効な引数です。"));
-                        sectionBeginStatement.AddSignalIndex(null);
+                        evaluator.ErrorListener.AddNewError(ParseMessageType.InvalidArgument, null, Start, value);
+                        sectionBeginStatement.AddSignal(null);
                     }
                 }
                 else
                 {
-                    sectionBeginStatement.AddSignalIndex(null);
+                    sectionBeginStatement.AddSignal(null);
                 }
             }
 
@@ -179,43 +137,28 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
     /// </summary>
     public partial class SectionSetspeedlimitNode
     {
-        protected List<MapGrammarAstNodes> _speedLimits = new List<MapGrammarAstNodes>();
-
-        public ReadOnlyCollection<MapGrammarAstNodes> SpeedLimits => _speedLimits.AsReadOnly();
-
-        // TODO: NULLの可能性もある
-        public void AddSpeedLimit(MapGrammarAstNodes spdLmt)
-        {
-            _speedLimits.Add(spdLmt);
-        }
-
-        public void AddSpeedLimits(IEnumerable<MapGrammarAstNodes> spdLmts)
-        {
-            _speedLimits.AddRange(spdLmts);
-        }
-
         protected override Statement SetArgument(EvaluateMapGrammarVisitor evaluator, Statement statement)
         {
             SectionSetspeedlimitStatement sectionSetspeedlimitStatement = base.SetArgument(evaluator, statement) as SectionSetspeedlimitStatement;
 
-            foreach (var spdLmt in SpeedLimits)
+            foreach (var spdLmt in Vs)
             {
                 if (spdLmt != null)
                 {
                     object value = evaluator.Visit(spdLmt);
                     try
                     {
-                        sectionSetspeedlimitStatement.AddSpeedLimit(Convert.ToDouble(value));
+                        sectionSetspeedlimitStatement.AddV(Convert.ToDouble(value));
                     }
                     catch (Exception e) when (e is InvalidCastException || e is FormatException || e is OverflowException)
                     {
-                        evaluator.Errors.Add(CreateNewError($"{value}は無効な引数です。"));
-                        sectionSetspeedlimitStatement.AddSpeedLimit(null);
+                        evaluator.ErrorListener.AddNewError(ParseMessageType.InvalidArgument, null, Start, value);
+                        sectionSetspeedlimitStatement.AddV(null);
                     }
                 }
                 else
                 {
-                    sectionSetspeedlimitStatement.AddSpeedLimit(null);
+                    sectionSetspeedlimitStatement.AddV(null);
                 }
             }
 

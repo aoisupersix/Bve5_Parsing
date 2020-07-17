@@ -2,6 +2,8 @@
  * このファイルはdoc/createMapGrammarTemplate.jsによって自動生成されています。
  * 編集は行わないでください。
  */
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using Bve5_Parsing.MapGrammar.Attributes;
 
 namespace Bve5_Parsing.MapGrammar.EvaluateData {
@@ -10,7 +12,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
     /// <summary>
     /// {{elem}}{{^syntax1}}[{{key}}]{{/syntax1}}{{#syntax3}}.{{sub_elem}}{{/syntax3}}{{^nofunc}}.{{func}}{{/nofunc}}({{#args}}{{name}}{{#opt}}?{{/opt}}{{^last}}, {{/last}}{{/args}});
     /// </summary>
-    public partial class {{elem}}{{#syntax3}}{{sub_elem}}{{/syntax3}}{{^nofunc}}{{func}}{{/nofunc}}Statement : {{^inheritance}}Statement{{/inheritance}}{{#inheritance}}{{inheritance}}Statement{{/inheritance}}
+    public partial class {{elem}}{{#syntax3}}{{sub_elem}}{{/syntax3}}{{^nofunc}}{{func}}{{/nofunc}}Statement : {{^inheritance}}Statement{{/inheritance}}{{#inheritance}}{{../inheritance}}Statement{{/inheritance}}
     {
         #region SyntaxInfo
 
@@ -23,7 +25,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// <summary>
         /// マップ副要素名
         /// </summary>
-        public override MapSubElementName? SubElementName => MapSubElementName.{{sub_elem}};
+        public override MapSubElementName? SubElementName => MapSubElementName.{{../sub_elem}};
 {{/sub_elem}}
 {{^nofunc}}
 
@@ -47,7 +49,7 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
 {{#key}}
 
         /// <summary>
-        /// Key：{{key}}
+        /// Key：{{../key}}
         /// </summary>
         public override string Key { get; set; }
 {{/key}}
@@ -56,11 +58,24 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         #region Args
 {{#args}}
 
+{{^is_list}}
         /// <summary>
         /// 引数：{{{desc}}}{{#opt}}（省略可能）{{/opt}}
         /// </summary>
         [Argument{{#opt}}(Optional = true){{/opt}}]
         public {{type}} {{name}} { get; set; }
+{{/is_list}}
+{{#is_list}}
+        /// <summary>
+        /// 可変長引数：{{{desc}}}{{#opt}}（省略可能）{{/opt}}のリスト
+        /// </summary>
+        protected List<{{inner_type}}> _{{toLowerCase name}}s = new List<{{inner_type}}>();
+
+        /// <summary>
+        /// 可変長引数：{{{desc}}}{{#opt}}（省略可能）{{/opt}}の読み取り専用コレクション
+        /// </summary>
+        public ReadOnlyCollection<{{inner_type}}> {{name}}s => _{{toLowerCase name}}s.AsReadOnly();
+{{/is_list}}
 {{/args}}
         #endregion Args
 {{/noarg}}
@@ -75,7 +90,45 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData {
         /// 距離程を指定して新しいインスタンスを生成します。
         /// </summary>
         public {{elem}}{{#syntax3}}{{sub_elem}}{{/syntax3}}{{^nofunc}}{{func}}{{/nofunc}}Statement(double distance) : base(distance) { }
+{{^inheritance}}
+{{#args}}
+{{#is_list}}
 
+        /// <summary>
+        /// 可変長引数：{{{desc}}}を追加します。
+        /// </summary>
+        public void Add{{name}}({{inner_type}} {{toLowerCase name}})
+        {
+            _{{toLowerCase name}}s.Add({{toLowerCase name}});
+        }
+
+        /// <summary>
+        /// 可変長引数：{{{desc}}}に値をセットします。
+        /// テスト用
+        /// </summary>
+        public Statement Set{{name}}s(params {{inner_type}}[] {{toLowerCase name}}s)
+        {
+            _{{toLowerCase name}}s.AddRange({{toLowerCase name}}s);
+            return this;
+        }
+
+        /// <summary>
+        /// StatementからSyntaxDataを生成して返します。
+        /// 可変長引数：{{{desc}}}対応
+        /// </summary>
+        public override SyntaxData ToSyntaxData()
+        {
+            var syntax = base.ToSyntaxData();
+            for (var i = 0; i < _{{toLowerCase name}}s.Count; i++)
+            {
+                syntax.SetArg($"{{toLowerCase name}}{i + 1}", _{{toLowerCase name}}s[i]);
+            }
+
+            return syntax;
+        }
+{{/is_list}}
+{{/args}}
+{{/inheritance}}
     }
 {{/states}}
 }

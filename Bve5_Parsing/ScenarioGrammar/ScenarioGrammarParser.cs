@@ -1,4 +1,5 @@
-﻿using Antlr4.Runtime;
+﻿using System.Collections.ObjectModel;
+using Antlr4.Runtime;
 using Bve5_Parsing.ScenarioGrammar.AstNodes;
 using Bve5_Parsing.ScenarioGrammar.SyntaxDefinitions;
 
@@ -9,19 +10,30 @@ namespace Bve5_Parsing.ScenarioGrammar
     /// </summary>
     public class ScenarioGrammarParser
     {
-
         /// <summary>
         /// 構文解析のエラーを取得するするためのリスナーです。
-        /// エラーに対して独自の処理を行いたい場合は、このプロパティにParseErrorListenerを継承した独自のクラスを指定してください。
         /// </summary>
-        public ParseErrorListener ErrorListener { get; set; }
+        public ParseErrorListener ErrorListener { get; }
+
+        /// <summary>
+        /// パーサで保持しているエラーです。
+        /// Parse()を呼び出しパースを行う度に初期化されます。
+        /// </summary>
+        public ReadOnlyCollection<ParseError> ParserErrors { get; }
 
         /// <summary>
         /// パーサを初期化します。
         /// </summary>
-        public ScenarioGrammarParser()
+        public ScenarioGrammarParser() : this(new MessageGenerator())
         {
-            ErrorListener = new ParseErrorListener();
+        }
+
+        /// <summary>
+        /// パーサをMessageGeneratorを指定して初期化します。
+        /// </summary>
+        /// <param name="messageGenerator"></param>
+        public ScenarioGrammarParser(MessageGenerator messageGenerator) : this(new ParseErrorListener(messageGenerator))
+        {
         }
 
         /// <summary>
@@ -31,6 +43,7 @@ namespace Bve5_Parsing.ScenarioGrammar
         public ScenarioGrammarParser(ParseErrorListener listener)
         {
             ErrorListener = listener;
+            ParserErrors = ErrorListener.Errors.AsReadOnly();
         }
 
         /// <summary>

@@ -1,12 +1,12 @@
-﻿using Bve5_Parsing.MapGrammar.AstNodes;
-using Bve5_Parsing.MapGrammar.EvaluateData;
-using Hnx8.ReadJEnc;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
+using Bve5_Parsing.MapGrammar.AstNodes;
+using Bve5_Parsing.MapGrammar.EvaluateData;
+using Hnx8.ReadJEnc;
 
 namespace Bve5_Parsing.MapGrammar
 {
@@ -21,10 +21,7 @@ namespace Bve5_Parsing.MapGrammar
         /// </summary>
         protected VariableStore Store;
 
-        /// <summary>
-        /// エラー保持
-        /// </summary>
-        protected internal ICollection<ParseError> Errors;
+        protected internal ParseErrorListener ErrorListener;
 
         /// <summary>
         /// 評価結果
@@ -36,16 +33,14 @@ namespace Bve5_Parsing.MapGrammar
         /// </summary>
         public double NowDistance { get; protected set; } = 0;
 
-        public EvaluateMapGrammarVisitor(VariableStore store, ICollection<ParseError> errors)
+        public EvaluateMapGrammarVisitor(VariableStore store, ParseErrorListener errorListener) : this(store, errorListener, 0.0)
         {
-            Store = store;
-            Errors = errors;
         }
 
-        public EvaluateMapGrammarVisitor(VariableStore store, ICollection<ParseError> errors, double nowDistance)
+        public EvaluateMapGrammarVisitor(VariableStore store, ParseErrorListener errorListener, double nowDistance)
         {
             Store = store;
-            Errors = errors;
+            ErrorListener = errorListener;
             NowDistance = nowDistance;
         }
 
@@ -167,7 +162,7 @@ namespace Bve5_Parsing.MapGrammar
         public override object Visit(LoadListNode node)
         {
             if (node.Path == null)
-                Errors.Add(node.CreateNewError("ファイルパスが指定されていません。"));
+                ErrorListener.AddNewError(ParseMessageType.FilePathNotSpecified, null, node.Start);
             else
                 evaluateData.SetListPathToString(node.MapElementName, node.Path);
 
@@ -608,7 +603,7 @@ namespace Bve5_Parsing.MapGrammar
                 return null;
             if (left.GetType() == typeof(string) || right.GetType() == typeof(string))
             {
-                Errors.Add(node.CreateNewError($"'{left.ToString()} - {right.ToString()}'は有効な式ではありません。"));
+                ErrorListener.AddNewError(ParseMessageType.InvalidExpression, null, node.Start, $"{left} - {right}");
                 return null;
             }
 
@@ -628,7 +623,7 @@ namespace Bve5_Parsing.MapGrammar
                 return null;
             if (left.GetType() == typeof(string) || right.GetType() == typeof(string))
             {
-                Errors.Add(node.CreateNewError($"'{left.ToString()} * {right.ToString()}'は有効な式ではありません。"));
+                ErrorListener.AddNewError(ParseMessageType.InvalidExpression, null, node.Start, $"{left} * {right}");
                 return null;
             }
 
@@ -648,7 +643,7 @@ namespace Bve5_Parsing.MapGrammar
                 return null;
             if (left.GetType() == typeof(string) || right.GetType() == typeof(string))
             {
-                Errors.Add(node.CreateNewError($"'{left.ToString()} / {right.ToString()}'は有効な式ではありません。"));
+                ErrorListener.AddNewError(ParseMessageType.InvalidExpression, null, node.Start, $"{left} / {right}");
                 return null;
             }
 
@@ -668,7 +663,7 @@ namespace Bve5_Parsing.MapGrammar
                 return null;
             if (inner.GetType() == typeof(string))
             {
-                Errors.Add(node.CreateNewError($"'- {inner.ToString()}'は有効な式ではありません。"));
+                ErrorListener.AddNewError(ParseMessageType.InvalidExpression, null, node.Start, $"- {inner}");
                 return null;
             }
             return -Convert.ToDouble(Visit(node.InnerNode));
@@ -687,7 +682,7 @@ namespace Bve5_Parsing.MapGrammar
                 return null;
             if (left.GetType() == typeof(string) || right.GetType() == typeof(string))
             {
-                Errors.Add(node.CreateNewError($"'{left.ToString()} % {right.ToString()}'は有効な式ではありません。"));
+                ErrorListener.AddNewError(ParseMessageType.InvalidExpression, null, node.Start, $"{left} % {right}");
                 return null;
             }
 
@@ -706,7 +701,7 @@ namespace Bve5_Parsing.MapGrammar
                 return null;
             if (value.GetType() == typeof(string))
             {
-                Errors.Add(node.CreateNewError($"'abs({value.ToString()})'は有効な式ではありません。"));
+                ErrorListener.AddNewError(ParseMessageType.InvalidExpression, null, node.Start, $"abs({value})");
                 return null;
             }
             return Math.Abs(Convert.ToDouble(value));
@@ -725,7 +720,7 @@ namespace Bve5_Parsing.MapGrammar
                 return null;
             if (y.GetType() == typeof(string) || x.GetType() == typeof(string))
             {
-                Errors.Add(node.CreateNewError($"'atan2({y.ToString()}, {x.ToString()})'は有効な式ではありません。"));
+                ErrorListener.AddNewError(ParseMessageType.InvalidExpression, null, node.Start, $"atan2({y}, {x})");
                 return null;
             }
 
@@ -744,7 +739,7 @@ namespace Bve5_Parsing.MapGrammar
                 return null;
             if (value.GetType() == typeof(string))
             {
-                Errors.Add(node.CreateNewError($"'ceil({value.ToString()})'は有効な式ではありません。"));
+                ErrorListener.AddNewError(ParseMessageType.InvalidExpression, null, node.Start, $"ceil({value})");
                 return null;
             }
             return Math.Ceiling(Convert.ToDouble(value));
@@ -762,7 +757,7 @@ namespace Bve5_Parsing.MapGrammar
                 return null;
             if (value.GetType() == typeof(string))
             {
-                Errors.Add(node.CreateNewError($"'cos({value.ToString()})'は有効な式ではありません。"));
+                ErrorListener.AddNewError(ParseMessageType.InvalidExpression, null, node.Start, $"cos({value})");
                 return null;
             }
             return Math.Cos(Convert.ToDouble(value));
@@ -780,7 +775,7 @@ namespace Bve5_Parsing.MapGrammar
                 return null;
             if (value.GetType() == typeof(string))
             {
-                Errors.Add(node.CreateNewError($"'exp({value.ToString()})'は有効な式ではありません。"));
+                ErrorListener.AddNewError(ParseMessageType.InvalidExpression, null, node.Start, $"exp({value})");
                 return null;
             }
             return Math.Exp(Convert.ToDouble(value));
@@ -798,7 +793,7 @@ namespace Bve5_Parsing.MapGrammar
                 return null;
             if (value.GetType() == typeof(string))
             {
-                Errors.Add(node.CreateNewError($"'floor({value.ToString()})'は有効な式ではありません。"));
+                ErrorListener.AddNewError(ParseMessageType.InvalidExpression, null, node.Start, $"floor({value})");
                 return null;
             }
             return Math.Floor(Convert.ToDouble(value));
@@ -816,7 +811,7 @@ namespace Bve5_Parsing.MapGrammar
                 return null;
             if (value.GetType() == typeof(string))
             {
-                Errors.Add(node.CreateNewError($"'log({value.ToString()})'は有効な式ではありません。"));
+                ErrorListener.AddNewError(ParseMessageType.InvalidExpression, null, node.Start, $"log({value})");
                 return null;
             }
             return Math.Log(Convert.ToDouble(value));
@@ -835,7 +830,7 @@ namespace Bve5_Parsing.MapGrammar
                 return null;
             if (x.GetType() == typeof(string) || y.GetType() == typeof(string))
             {
-                Errors.Add(node.CreateNewError($"'pow({x.ToString()}, {y.ToString()})'は有効な式ではありません。"));
+                ErrorListener.AddNewError(ParseMessageType.InvalidExpression, null, node.Start, $"pow({x}, {y})");
                 return null;
             }
             return Math.Pow(Convert.ToDouble(x), Convert.ToDouble(y));
@@ -858,7 +853,7 @@ namespace Bve5_Parsing.MapGrammar
                 return random.NextDouble();
             if (value.GetType() == typeof(string) || Convert.ToInt32(value) < 0)
             {
-                Errors.Add(node.CreateNewError($"'rand({value.ToString()})'は有効な式ではありません。"));
+                ErrorListener.AddNewError(ParseMessageType.InvalidExpression, null, node.Start, $"rand({value})");
                 return null;
             }
 
@@ -877,7 +872,7 @@ namespace Bve5_Parsing.MapGrammar
                 return null;
             if (value.GetType() == typeof(string))
             {
-                Errors.Add(node.CreateNewError($"'sin({value.ToString()})'は有効な式ではありません。"));
+                ErrorListener.AddNewError(ParseMessageType.InvalidExpression, null, node.Start, $"sin({value})");
                 return null;
             }
             return Math.Sin(Convert.ToDouble(value));
@@ -895,7 +890,7 @@ namespace Bve5_Parsing.MapGrammar
                 return null;
             if (value.GetType() == typeof(string))
             {
-                Errors.Add(node.CreateNewError($"'sqrt({value.ToString()})'は有効な式ではありません。"));
+                ErrorListener.AddNewError(ParseMessageType.InvalidExpression, null, node.Start, $"sqrt({value})");
                 return null;
             }
             return Math.Sqrt(Convert.ToDouble(value));
@@ -975,10 +970,10 @@ namespace Bve5_Parsing.MapGrammar
             var splitPath = fileRelativePath.Split(new char[] { Path.DirectorySeparatorChar }, StringSplitOptions.RemoveEmptyEntries);
 
             // ディレクトリ取得
-            var oridinallyDirPath = dirAbsolutePath;
+            var originallyDirPath = dirAbsolutePath;
             foreach (var singlePath in splitPath.Take(splitPath.Count() - 1))
             {
-                var tmpDirRelativePaths = Directory.EnumerateDirectories(oridinallyDirPath)
+                var tmpDirRelativePaths = Directory.EnumerateDirectories(originallyDirPath)
                     .Concat(new List<string>() { ".", ".." })
                     .Where(p => Regex.IsMatch(p, $"^{singlePath}$", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant))
                     .Select(p => Path.GetFullPath(Path.Combine(dirAbsolutePath, p)))
@@ -987,19 +982,19 @@ namespace Bve5_Parsing.MapGrammar
                 if (false == tmpDirRelativePaths.Any())
                     return null;
 
-                oridinallyDirPath = tmpDirRelativePaths.First();
+                originallyDirPath = tmpDirRelativePaths.First();
             }
 
             // ファイル取得
-            var oridinallyAbsolutePath = Directory.EnumerateFiles(oridinallyDirPath)
+            var originallyAbsolutePath = Directory.EnumerateFiles(originallyDirPath)
                 .Where(p => Regex.IsMatch(p, $"^{splitPath.Last()}$", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant))
                 .Select(p => Path.GetFullPath(Path.Combine(dirAbsolutePath, p)))
                 ;
 
-            if (false == oridinallyAbsolutePath.Any())
+            if (false == originallyAbsolutePath.Any())
                 return null;
 
-            return oridinallyAbsolutePath.First();
+            return originallyAbsolutePath.First();
         }
 
         /// <summary>
@@ -1007,10 +1002,9 @@ namespace Bve5_Parsing.MapGrammar
         /// </summary>
         /// <param name="store"></param>
         /// <param name="dirAbsolutePath"></param>
-        /// <param name="errors"></param>
-        public EvaluateMapGrammarVisitorWithInclude(VariableStore store, string dirAbsolutePath, ICollection<ParseError> errors) : base(store, errors)
+        /// <param name="errorListener"></param>
+        public EvaluateMapGrammarVisitorWithInclude(VariableStore store, string dirAbsolutePath, ParseErrorListener errorListener) : this(store, dirAbsolutePath, errorListener, 0.0)
         {
-            this.dirAbsolutePath = dirAbsolutePath;
         }
 
         /// <summary>
@@ -1018,9 +1012,9 @@ namespace Bve5_Parsing.MapGrammar
         /// </summary>
         /// <param name="store"></param>
         /// <param name="dirAbsolutePath"></param>
-        /// <param name="errors"></param>
+        /// <param name="errorListener"></param>
         /// <param name="nowDistance"></param>
-        public EvaluateMapGrammarVisitorWithInclude(VariableStore store, string dirAbsolutePath, ICollection<ParseError> errors, double nowDistance) : base(store, errors, nowDistance)
+        public EvaluateMapGrammarVisitorWithInclude(VariableStore store, string dirAbsolutePath, ParseErrorListener errorListener, double nowDistance) : base(store, errorListener, nowDistance)
         {
             this.dirAbsolutePath = dirAbsolutePath;
         }
@@ -1033,7 +1027,7 @@ namespace Bve5_Parsing.MapGrammar
             #region Include先を再帰的にパース(ここの処理、MapGrammarParserにParseToAstFormFileメソッドを用意した方がいいかも)
             if (path == null)
             {
-                Errors.Add(node.CreateNewError($"ファイルパスが指定されていません。"));
+                ErrorListener.AddNewError(ParseMessageType.FilePathNotSpecified, null, node.Start);
                 return returnData;
             }
 
@@ -1041,7 +1035,7 @@ namespace Bve5_Parsing.MapGrammar
 
             if (absolutePath == null)
             {
-                Errors.Add(node.CreateNewError($"指定されたファイル「{path}」は存在しません。"));
+                ErrorListener.AddNewError(ParseMessageType.FileNotFound, null, node.Start, path);
                 return returnData;
             }
 #if NETSTANDARD2_0
@@ -1054,15 +1048,14 @@ namespace Bve5_Parsing.MapGrammar
                 var includeText = reader.Text;
                 if (includeText == null)
                 {
-                    Errors.Add(node.CreateNewError($"「{path}」の読み込みに失敗しました。"));
+                    ErrorListener.AddNewError(ParseMessageType.FileFailedLoad, null, node.Start, path);
                     return returnData;
                 }
 
                 // Include先構文を評価して追加
-                var parser = new MapGrammarParser();
-                var includeAst = parser.ParseToAst(includeText, absolutePath, MapGrammarParser.MapGrammarParserOption.ParseIncludeSyntaxRecursively);
-                parser.ParserErrors.ToList().ForEach(err => Errors.Add(err));
-                var evaluator = new EvaluateMapGrammarVisitorWithInclude(Store, dirAbsolutePath, Errors, NowDistance);
+                var parser = new MapGrammarParser(ErrorListener);
+                var includeAst = parser.ParseToAst(includeText, absolutePath, MapGrammarParser.MapGrammarParserOption.ParseIncludeSyntaxRecursively | MapGrammarParser.MapGrammarParserOption.NoClearErrors);
+                var evaluator = new EvaluateMapGrammarVisitorWithInclude(Store, dirAbsolutePath, ErrorListener, NowDistance);
                 var includeData = (MapData)evaluator.Visit(includeAst);
 
                 evaluateData.AddStatements(includeData.Statements);

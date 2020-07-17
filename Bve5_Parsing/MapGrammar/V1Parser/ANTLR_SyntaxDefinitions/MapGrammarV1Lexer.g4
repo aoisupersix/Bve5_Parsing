@@ -72,7 +72,7 @@ NUM : [0-9]+ ('.' [0-9]*)?
 ARG_START : '(' -> pushMode(ARG_MODE);
 KEY_START : '[' -> pushMode(ARG_MODE);
 
-WS : [\t \r\n]+ -> skip;
+WS : [\t \u3000\r\n]+ -> skip;
 COMMENT : ('#' | '//') ~[\r\n]* -> skip;
 ERROR_CHAR : . -> skip;
 

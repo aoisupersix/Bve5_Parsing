@@ -735,10 +735,10 @@ namespace Bve5_Parsing.MapGrammar.V2Parser
             {
                 //Section.BeginとSection.Beginnewは手動対応
                 var beginNode = node as SectionBeginNode;
-                beginNode.AddSignalIndex(Visit(context.nullableExpr()));
+                beginNode.AddSignal(Visit(context.nullableExpr()));
                 foreach (var sigIdx in context.exprArgs())
                 {
-                    beginNode.AddSignalIndex(Visit(sigIdx));
+                    beginNode.AddSignal(Visit(sigIdx));
                 }
                 return beginNode;
             }
@@ -746,10 +746,10 @@ namespace Bve5_Parsing.MapGrammar.V2Parser
             {
                 //Section.Setspeedlimitは手動対応
                 var speedlimitNode = node as SectionSetspeedlimitNode;
-                speedlimitNode.AddSpeedLimit(Visit(context.nullableExpr()));
+                speedlimitNode.AddV(Visit(context.nullableExpr()));
                 foreach (var spdLmt in context.exprArgs())
                 {
-                    speedlimitNode.AddSpeedLimit(Visit(spdLmt));
+                    speedlimitNode.AddV(Visit(spdLmt));
                 }
                 return speedlimitNode;
             }
@@ -770,10 +770,10 @@ namespace Bve5_Parsing.MapGrammar.V2Parser
             {
                 //Signal.Speedlimitは手動対応
                 var speedlimitNode = node as SignalSpeedlimitNode;
-                speedlimitNode.AddSpeedLimit(Visit(context.nullableExpr()[0]));
+                speedlimitNode.AddV(Visit(context.nullableExpr()[0]));
                 foreach (var spdLmt in context.exprArgs())
                 {
-                    speedlimitNode.AddSpeedLimit(Visit(spdLmt));
+                    speedlimitNode.AddV(Visit(spdLmt));
                 }
                 return speedlimitNode;
             }
@@ -804,10 +804,10 @@ namespace Bve5_Parsing.MapGrammar.V2Parser
             {
                 //Speedlimit.Setsignalは手動対応
                 var setSignalNode = node as SpeedlimitSetsignalNode;
-                setSignalNode.AddSpeedLimit(Visit(context.nullableExpr()));
+                setSignalNode.AddV(Visit(context.nullableExpr()));
                 foreach (var spdLmt in context.exprArgs())
                 {
-                    setSignalNode.AddSpeedLimit(Visit(spdLmt));
+                    setSignalNode.AddV(Visit(spdLmt));
                 }
                 return setSignalNode;
             }

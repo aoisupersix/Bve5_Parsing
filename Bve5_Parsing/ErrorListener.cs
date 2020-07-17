@@ -1,33 +1,26 @@
-﻿using Antlr4.Runtime;
+﻿using System.Collections.Generic;
+using Antlr4.Runtime;
 using Antlr4.Runtime.Misc;
-using System.Collections.Generic;
 
 namespace Bve5_Parsing
 {
     /// <summary>
     /// パーサのデフォルトエラー処理クラス
     /// エラーに対して任意の処理を行ってErrorsに格納します。
-    /// このクラスを継承し、パーサのErrorListenerに指定することで構文解析のエラーを取得できます。
+    /// このクラスを継承し、パーサのコンストラクタに指定することで構文解析のエラーを取得できます。
     /// </summary>
     public class ParseErrorListener : BaseErrorListener
     {
         #region フィールド
-        /// <summary>
-        /// InputMismatchExceptionのエラーメッセージ
-        /// </summary>
-        public const string ERRMSG_INPUT_MISMATCH = "入力文字列{0}が予期されたマップ構文'{1}'と一致しませんでした。";
-
-        /// <summary>
-        /// NoViableExceptionのエラーメッセージ
-        /// </summary>
-        public const string ERRMSG_NO_VIABLE = "入力文字列{0}の構文を特定できませんでした。";
         #endregion
 
         #region プロパティ
+        public MessageGenerator MessageGenerator { get; }
+
         /// <summary>
         /// パースエラーメッセージ
         /// </summary>
-        public ICollection<ParseError> Errors { get; }
+        public List<ParseError> Errors { get; }
         #endregion
 
         protected string GetTokenDisplayName(IToken t)
@@ -62,33 +55,33 @@ namespace Bve5_Parsing
         #region エラーメッセージ生成
         protected string GetErrorMessage(IRecognizer recognizer, IToken token, InputMismatchException e)
         {
-            return string.Format(ERRMSG_INPUT_MISMATCH, GetTokenDisplayName(token), e.GetExpectedTokens().ToString(recognizer.Vocabulary));
+            return MessageGenerator.GetMassage(ParseMessageType.InputMismatch, null, GetTokenDisplayName(token), e.GetExpectedTokens().ToString(recognizer.Vocabulary));
         }
 
         protected string GetErrorMessage(IRecognizer recognizer, IToken token, NoViableAltException e)
         {
-            return string.Format(ERRMSG_NO_VIABLE, GetTokenDisplayName(token));
+            return MessageGenerator.GetMassage(ParseMessageType.NoViable, null, GetTokenDisplayName(token));
         }
 
         protected string GetErrorMessage(IRecognizer recognizer, IToken token, LexerNoViableAltException e)
         {
-            return string.Format(ERRMSG_NO_VIABLE, GetTokenDisplayName(token));
+            return MessageGenerator.GetMassage(ParseMessageType.NoViable, null, GetTokenDisplayName(token));
         }
 
         protected string GetErrorMessage(IRecognizer recognizer, IToken token, FailedPredicateException e)
         {
-            return string.Format(ERRMSG_NO_VIABLE, GetTokenDisplayName(token));
+            return MessageGenerator.GetMassage(ParseMessageType.NoViable, null, GetTokenDisplayName(token));
         }
         #endregion
 
-        public ParseErrorListener()
+        public ParseErrorListener() : this(new MessageGenerator())
         {
-            Errors = new List<ParseError>();
         }
 
-        public ParseErrorListener(ICollection<ParseError> errors)
+        public ParseErrorListener(MessageGenerator messageGenerator)
         {
-            Errors = errors;
+            MessageGenerator = messageGenerator;
+            Errors = new List<ParseError>();
         }
 
         public override void SyntaxError(IRecognizer recognizer, IToken offendingSymbol, int line, int charPositionInLine, string msg, RecognitionException e)
@@ -98,6 +91,26 @@ namespace Bve5_Parsing
                 m = GetErrorMessage(recognizer, offendingSymbol, (dynamic)e.GetBaseException());
             var error = new ParseError(ParseErrorLevel.Error, line, charPositionInLine, m);
             Errors.Add(error);
+        }
+
+        public void AddNewWarning(ParseMessageType messageType, string filePath, int startLine, int startColumn, params object[] args)
+        {
+            Errors.Add(new ParseError(ParseErrorLevel.Warning, startLine, startColumn, MessageGenerator.GetMassage(messageType, filePath, args)));
+        }
+
+        public void AddNewWarning(ParseMessageType messageType, string filePath, IToken start, params object[] args)
+        {
+            AddNewWarning(messageType, filePath, start.Line, start.Column, args);
+        }
+
+        public void AddNewError(ParseMessageType messageType, string filePath, int startLine, int startColumn, params object[] args)
+        {
+            Errors.Add(new ParseError(ParseErrorLevel.Error, startLine, startColumn, MessageGenerator.GetMassage(messageType, filePath, args)));
+        }
+
+        public void AddNewError(ParseMessageType messageType, string filePath, IToken start, params object[] args)
+        {
+            AddNewError(messageType, filePath, start.Line, start.Column, args);
         }
     }
 }

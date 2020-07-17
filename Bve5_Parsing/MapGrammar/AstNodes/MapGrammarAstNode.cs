@@ -11,30 +11,10 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
         public IToken Start { get; set; }
         public IToken Stop { get; set; }
 
-        public MapGrammarAstNodes(IToken start, IToken stop)
+        protected MapGrammarAstNodes(IToken start, IToken stop)
         {
             Start = start;
             Stop = stop;
-        }
-
-        /// <summary>
-        /// 警告を示すParseErrorを生成して返します。
-        /// </summary>
-        /// <param name="msg">エラーメッセージ</param>
-        /// <returns>ParseError</returns>
-        protected internal ParseError CreateNewWarning(string msg)
-        {
-            return new ParseError(ParseErrorLevel.Warning, Start.Line, Start.Column, msg);
-        }
-
-        /// <summary>
-        /// 警告を示すParseErrorを生成して返します。
-        /// </summary>
-        /// <param name="msg">エラーメッセージ</param>
-        /// <returns>ParseError</returns>
-        protected internal ParseError CreateNewError(string msg)
-        {
-            return new ParseError(ParseErrorLevel.Error, Start.Line, Start.Column, msg);
         }
     }
 }

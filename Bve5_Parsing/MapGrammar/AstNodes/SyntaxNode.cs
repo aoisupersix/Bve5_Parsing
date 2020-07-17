@@ -159,7 +159,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
                 }
 
                 // GradientやLegacyに関しては特別対応
-                // Graident -> GradientArgs
+                // Gradient -> GradientArgs
                 // Start -> StartArgs など
                 var argGCtxInfo = ctx.GetType().GetField(arg.Name.ToLower() + "Args");
                 var argGCtx = argGCtxInfo?.GetValue(ctx);
@@ -187,11 +187,11 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
                     if (argECtx != null)
                         arg.SetValue(node, visitor.Visit(argECtx as IParseTree), null);
 
-                    // Graident -> GradientArgsE
-                    var argGECtxInfo = ctx.GetType().GetField(arg.Name.ToLower() + "ArgsE");
-                    var argGECtx = argGECtxInfo?.GetValue(ctx);
-                    if (argGECtx != null)
-                        arg.SetValue(node, visitor.Visit(argGECtx as IParseTree), null);
+                    // Gradient -> GradientArgs
+                    var argGCtxInfo = ctx.GetType().GetField(arg.Name.ToLower() + "Args");
+                    var argGCtx = argGCtxInfo?.GetValue(ctx);
+                    if (argGCtx != null)
+                        arg.SetValue(node, visitor.Visit(argGCtx as IParseTree), null);
                 }
             }
 
@@ -231,7 +231,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
                 }
                 catch (Exception e) when (e is InvalidCastException || e is FormatException || e is OverflowException || e is ArgumentNullException)
                 {
-                    evaluator.Errors.Add(CreateNewError($"{argValue}は無効な引数です。"));
+                    evaluator.ErrorListener.AddNewError(ParseMessageType.InvalidArgument, null, Start, argValue);
                 }
             }
 
