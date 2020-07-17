@@ -162,7 +162,7 @@ namespace Bve5_Parsing.MapGrammar
         public override object Visit(LoadListNode node)
         {
             if (node.Path == null)
-                ErrorListener.AddNewError(MessageType.FilePathNotSpecified, null, node.Start);
+                ErrorListener.AddNewError(ParseMessageType.FilePathNotSpecified, null, node.Start);
             else
                 evaluateData.SetListPathToString(node.MapElementName, node.Path);
 
@@ -603,7 +603,7 @@ namespace Bve5_Parsing.MapGrammar
                 return null;
             if (left.GetType() == typeof(string) || right.GetType() == typeof(string))
             {
-                ErrorListener.AddNewError(MessageType.InvalidExpression, null, node.Start, $"{left} - {right}");
+                ErrorListener.AddNewError(ParseMessageType.InvalidExpression, null, node.Start, $"{left} - {right}");
                 return null;
             }
 
@@ -623,7 +623,7 @@ namespace Bve5_Parsing.MapGrammar
                 return null;
             if (left.GetType() == typeof(string) || right.GetType() == typeof(string))
             {
-                ErrorListener.AddNewError(MessageType.InvalidExpression, null, node.Start, $"{left} * {right}");
+                ErrorListener.AddNewError(ParseMessageType.InvalidExpression, null, node.Start, $"{left} * {right}");
                 return null;
             }
 
@@ -643,7 +643,7 @@ namespace Bve5_Parsing.MapGrammar
                 return null;
             if (left.GetType() == typeof(string) || right.GetType() == typeof(string))
             {
-                ErrorListener.AddNewError(MessageType.InvalidExpression, null, node.Start, $"{left} / {right}");
+                ErrorListener.AddNewError(ParseMessageType.InvalidExpression, null, node.Start, $"{left} / {right}");
                 return null;
             }
 
@@ -663,7 +663,7 @@ namespace Bve5_Parsing.MapGrammar
                 return null;
             if (inner.GetType() == typeof(string))
             {
-                ErrorListener.AddNewError(MessageType.InvalidExpression, null, node.Start, $"- {inner}");
+                ErrorListener.AddNewError(ParseMessageType.InvalidExpression, null, node.Start, $"- {inner}");
                 return null;
             }
             return -Convert.ToDouble(Visit(node.InnerNode));
@@ -682,7 +682,7 @@ namespace Bve5_Parsing.MapGrammar
                 return null;
             if (left.GetType() == typeof(string) || right.GetType() == typeof(string))
             {
-                ErrorListener.AddNewError(MessageType.InvalidExpression, null, node.Start, $"{left} % {right}");
+                ErrorListener.AddNewError(ParseMessageType.InvalidExpression, null, node.Start, $"{left} % {right}");
                 return null;
             }
 
@@ -701,7 +701,7 @@ namespace Bve5_Parsing.MapGrammar
                 return null;
             if (value.GetType() == typeof(string))
             {
-                ErrorListener.AddNewError(MessageType.InvalidExpression, null, node.Start, $"abs({value})");
+                ErrorListener.AddNewError(ParseMessageType.InvalidExpression, null, node.Start, $"abs({value})");
                 return null;
             }
             return Math.Abs(Convert.ToDouble(value));
@@ -720,7 +720,7 @@ namespace Bve5_Parsing.MapGrammar
                 return null;
             if (y.GetType() == typeof(string) || x.GetType() == typeof(string))
             {
-                ErrorListener.AddNewError(MessageType.InvalidExpression, null, node.Start, $"atan2({y}, {x})");
+                ErrorListener.AddNewError(ParseMessageType.InvalidExpression, null, node.Start, $"atan2({y}, {x})");
                 return null;
             }
 
@@ -739,7 +739,7 @@ namespace Bve5_Parsing.MapGrammar
                 return null;
             if (value.GetType() == typeof(string))
             {
-                ErrorListener.AddNewError(MessageType.InvalidExpression, null, node.Start, $"ceil({value})");
+                ErrorListener.AddNewError(ParseMessageType.InvalidExpression, null, node.Start, $"ceil({value})");
                 return null;
             }
             return Math.Ceiling(Convert.ToDouble(value));
@@ -757,7 +757,7 @@ namespace Bve5_Parsing.MapGrammar
                 return null;
             if (value.GetType() == typeof(string))
             {
-                ErrorListener.AddNewError(MessageType.InvalidExpression, null, node.Start, $"cos({value})");
+                ErrorListener.AddNewError(ParseMessageType.InvalidExpression, null, node.Start, $"cos({value})");
                 return null;
             }
             return Math.Cos(Convert.ToDouble(value));
@@ -775,7 +775,7 @@ namespace Bve5_Parsing.MapGrammar
                 return null;
             if (value.GetType() == typeof(string))
             {
-                ErrorListener.AddNewError(MessageType.InvalidExpression, null, node.Start, $"exp({value})");
+                ErrorListener.AddNewError(ParseMessageType.InvalidExpression, null, node.Start, $"exp({value})");
                 return null;
             }
             return Math.Exp(Convert.ToDouble(value));
@@ -793,7 +793,7 @@ namespace Bve5_Parsing.MapGrammar
                 return null;
             if (value.GetType() == typeof(string))
             {
-                ErrorListener.AddNewError(MessageType.InvalidExpression, null, node.Start, $"floor({value})");
+                ErrorListener.AddNewError(ParseMessageType.InvalidExpression, null, node.Start, $"floor({value})");
                 return null;
             }
             return Math.Floor(Convert.ToDouble(value));
@@ -811,7 +811,7 @@ namespace Bve5_Parsing.MapGrammar
                 return null;
             if (value.GetType() == typeof(string))
             {
-                ErrorListener.AddNewError(MessageType.InvalidExpression, null, node.Start, $"log({value})");
+                ErrorListener.AddNewError(ParseMessageType.InvalidExpression, null, node.Start, $"log({value})");
                 return null;
             }
             return Math.Log(Convert.ToDouble(value));
@@ -830,7 +830,7 @@ namespace Bve5_Parsing.MapGrammar
                 return null;
             if (x.GetType() == typeof(string) || y.GetType() == typeof(string))
             {
-                ErrorListener.AddNewError(MessageType.InvalidExpression, null, node.Start, $"pow({x}, {y})");
+                ErrorListener.AddNewError(ParseMessageType.InvalidExpression, null, node.Start, $"pow({x}, {y})");
                 return null;
             }
             return Math.Pow(Convert.ToDouble(x), Convert.ToDouble(y));
@@ -853,7 +853,7 @@ namespace Bve5_Parsing.MapGrammar
                 return random.NextDouble();
             if (value.GetType() == typeof(string) || Convert.ToInt32(value) < 0)
             {
-                ErrorListener.AddNewError(MessageType.InvalidExpression, null, node.Start, $"rand({value})");
+                ErrorListener.AddNewError(ParseMessageType.InvalidExpression, null, node.Start, $"rand({value})");
                 return null;
             }
 
@@ -872,7 +872,7 @@ namespace Bve5_Parsing.MapGrammar
                 return null;
             if (value.GetType() == typeof(string))
             {
-                ErrorListener.AddNewError(MessageType.InvalidExpression, null, node.Start, $"sin({value})");
+                ErrorListener.AddNewError(ParseMessageType.InvalidExpression, null, node.Start, $"sin({value})");
                 return null;
             }
             return Math.Sin(Convert.ToDouble(value));
@@ -890,7 +890,7 @@ namespace Bve5_Parsing.MapGrammar
                 return null;
             if (value.GetType() == typeof(string))
             {
-                ErrorListener.AddNewError(MessageType.InvalidExpression, null, node.Start, $"sqrt({value})");
+                ErrorListener.AddNewError(ParseMessageType.InvalidExpression, null, node.Start, $"sqrt({value})");
                 return null;
             }
             return Math.Sqrt(Convert.ToDouble(value));
@@ -1027,7 +1027,7 @@ namespace Bve5_Parsing.MapGrammar
             #region Include先を再帰的にパース(ここの処理、MapGrammarParserにParseToAstFormFileメソッドを用意した方がいいかも)
             if (path == null)
             {
-                ErrorListener.AddNewError(MessageType.FilePathNotSpecified, null, node.Start);
+                ErrorListener.AddNewError(ParseMessageType.FilePathNotSpecified, null, node.Start);
                 return returnData;
             }
 
@@ -1035,7 +1035,7 @@ namespace Bve5_Parsing.MapGrammar
 
             if (absolutePath == null)
             {
-                ErrorListener.AddNewError(MessageType.FileNotFound, null, node.Start, path);
+                ErrorListener.AddNewError(ParseMessageType.FileNotFound, null, node.Start, path);
                 return returnData;
             }
 #if NETSTANDARD2_0
@@ -1048,7 +1048,7 @@ namespace Bve5_Parsing.MapGrammar
                 var includeText = reader.Text;
                 if (includeText == null)
                 {
-                    ErrorListener.AddNewError(MessageType.FileFailedLoad, null, node.Start, path);
+                    ErrorListener.AddNewError(ParseMessageType.FileFailedLoad, null, node.Start, path);
                     return returnData;
                 }
 

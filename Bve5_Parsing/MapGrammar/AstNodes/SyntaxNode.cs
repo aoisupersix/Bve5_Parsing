@@ -231,7 +231,7 @@ namespace Bve5_Parsing.MapGrammar.AstNodes
                 }
                 catch (Exception e) when (e is InvalidCastException || e is FormatException || e is OverflowException || e is ArgumentNullException)
                 {
-                    evaluator.ErrorListener.AddNewError(MessageType.InvalidArgument, null, Start, argValue);
+                    evaluator.ErrorListener.AddNewError(ParseMessageType.InvalidArgument, null, Start, argValue);
                 }
             }
 

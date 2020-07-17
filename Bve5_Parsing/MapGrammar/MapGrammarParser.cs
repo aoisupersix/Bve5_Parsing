@@ -188,7 +188,7 @@ namespace Bve5_Parsing.MapGrammar
 
             if (headerInfo.Item1 == null)
             {
-                ErrorListener.AddNewError(MessageType.InvalidMapFormat, filePath, 0, 0);
+                ErrorListener.AddNewError(ParseMessageType.InvalidMapFormat, filePath, 0, 0);
                 return null;
             }
 

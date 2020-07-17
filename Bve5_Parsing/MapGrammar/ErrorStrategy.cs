@@ -22,13 +22,13 @@ namespace Bve5_Parsing.MapGrammar
         #region Report Error
         protected override void ReportFailedPredicate([NotNull] Parser recognizer, [NotNull] FailedPredicateException e)
         {
-            var msg = ErrorMessage.GetMassage(MessageType.FailedPredicate, FilePath, GetTokenErrorDisplay(e.OffendingToken));
+            var msg = ErrorMessage.GetMassage(ParseMessageType.FailedPredicate, FilePath, GetTokenErrorDisplay(e.OffendingToken));
             NotifyErrorListeners(recognizer, msg, e);
         }
 
         protected override void ReportInputMismatch([NotNull] Parser recognizer, [NotNull] InputMismatchException e)
         {
-            var msg = ErrorMessage.GetMassage(MessageType.InputMismatch, FilePath, GetTokenErrorDisplay(e.OffendingToken), e.GetExpectedTokens().ToString(recognizer.Vocabulary));
+            var msg = ErrorMessage.GetMassage(ParseMessageType.InputMismatch, FilePath, GetTokenErrorDisplay(e.OffendingToken), e.GetExpectedTokens().ToString(recognizer.Vocabulary));
             NotifyErrorListeners(recognizer, msg, e);
         }
 
@@ -42,13 +42,13 @@ namespace Bve5_Parsing.MapGrammar
             IToken t = recognizer.CurrentToken;
             IntervalSet expecting = GetExpectedTokens(recognizer);
 
-            var msg = ErrorMessage.GetMassage(MessageType.MissingToken, FilePath, GetTokenErrorDisplay(t), expecting.ToString(recognizer.Vocabulary));
+            var msg = ErrorMessage.GetMassage(ParseMessageType.MissingToken, FilePath, GetTokenErrorDisplay(t), expecting.ToString(recognizer.Vocabulary));
             NotifyErrorListeners(recognizer, t, msg);
         }
 
         protected override void ReportNoViableAlternative([NotNull] Parser recognizer, [NotNull] NoViableAltException e)
         {
-            var msg = ErrorMessage.GetMassage(MessageType.NoViable, FilePath, GetTokenErrorDisplay(e.OffendingToken), e.GetExpectedTokens().ToString(recognizer.Vocabulary));
+            var msg = ErrorMessage.GetMassage(ParseMessageType.NoViable, FilePath, GetTokenErrorDisplay(e.OffendingToken), e.GetExpectedTokens().ToString(recognizer.Vocabulary));
             NotifyErrorListeners(recognizer, msg, e);
         }
 
@@ -63,7 +63,7 @@ namespace Bve5_Parsing.MapGrammar
             string tokenName = GetTokenErrorDisplay(t);
             IntervalSet expecting = GetExpectedTokens(recognizer);
 
-            var msg = ErrorMessage.GetMassage(MessageType.UnwantedToken, FilePath, tokenName, expecting.ToString(recognizer.Vocabulary));
+            var msg = ErrorMessage.GetMassage(ParseMessageType.UnwantedToken, FilePath, tokenName, expecting.ToString(recognizer.Vocabulary));
             NotifyErrorListeners(recognizer, t, msg);
         }
 

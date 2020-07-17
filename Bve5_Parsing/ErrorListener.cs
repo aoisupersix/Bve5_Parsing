@@ -55,22 +55,22 @@ namespace Bve5_Parsing
         #region エラーメッセージ生成
         protected string GetErrorMessage(IRecognizer recognizer, IToken token, InputMismatchException e)
         {
-            return MessageGenerator.GetMassage(MessageType.InputMismatch, null, GetTokenDisplayName(token), e.GetExpectedTokens().ToString(recognizer.Vocabulary));
+            return MessageGenerator.GetMassage(ParseMessageType.InputMismatch, null, GetTokenDisplayName(token), e.GetExpectedTokens().ToString(recognizer.Vocabulary));
         }
 
         protected string GetErrorMessage(IRecognizer recognizer, IToken token, NoViableAltException e)
         {
-            return MessageGenerator.GetMassage(MessageType.NoViable, null, GetTokenDisplayName(token));
+            return MessageGenerator.GetMassage(ParseMessageType.NoViable, null, GetTokenDisplayName(token));
         }
 
         protected string GetErrorMessage(IRecognizer recognizer, IToken token, LexerNoViableAltException e)
         {
-            return MessageGenerator.GetMassage(MessageType.NoViable, null, GetTokenDisplayName(token));
+            return MessageGenerator.GetMassage(ParseMessageType.NoViable, null, GetTokenDisplayName(token));
         }
 
         protected string GetErrorMessage(IRecognizer recognizer, IToken token, FailedPredicateException e)
         {
-            return MessageGenerator.GetMassage(MessageType.NoViable, null, GetTokenDisplayName(token));
+            return MessageGenerator.GetMassage(ParseMessageType.NoViable, null, GetTokenDisplayName(token));
         }
         #endregion
 
@@ -93,22 +93,22 @@ namespace Bve5_Parsing
             Errors.Add(error);
         }
 
-        public void AddNewWarning(MessageType messageType, string filePath, int startLine, int startColumn, params object[] args)
+        public void AddNewWarning(ParseMessageType messageType, string filePath, int startLine, int startColumn, params object[] args)
         {
             Errors.Add(new ParseError(ParseErrorLevel.Warning, startLine, startColumn, MessageGenerator.GetMassage(messageType, filePath, args)));
         }
 
-        public void AddNewWarning(MessageType messageType, string filePath, IToken start, params object[] args)
+        public void AddNewWarning(ParseMessageType messageType, string filePath, IToken start, params object[] args)
         {
             AddNewWarning(messageType, filePath, start.Line, start.Column, args);
         }
 
-        public void AddNewError(MessageType messageType, string filePath, int startLine, int startColumn, params object[] args)
+        public void AddNewError(ParseMessageType messageType, string filePath, int startLine, int startColumn, params object[] args)
         {
             Errors.Add(new ParseError(ParseErrorLevel.Error, startLine, startColumn, MessageGenerator.GetMassage(messageType, filePath, args)));
         }
 
-        public void AddNewError(MessageType messageType, string filePath, IToken start, params object[] args)
+        public void AddNewError(ParseMessageType messageType, string filePath, IToken start, params object[] args)
         {
             AddNewError(messageType, filePath, start.Line, start.Column, args);
         }
