@@ -153,10 +153,10 @@ namespace Bve5_Parsing.MapGrammar.EvaluateData
         public void OverwriteListPath(MapData data)
         {
             if (data.StructureListPath != null) { StructureListPath = data.StructureListPath; }
-            if (data.StationListPath != null) { StructureListPath = data.StationListPath; }
-            if (data.SignalListPath != null) { StructureListPath = data.SignalListPath; }
-            if (data.SoundListPath != null) { StructureListPath = data.SoundListPath; }
-            if (data.Sound3DListPath != null) { StructureListPath = data.Sound3DListPath; }
+            if (data.StationListPath != null) { StationListPath = data.StationListPath; }
+            if (data.SignalListPath != null) { SignalListPath = data.SignalListPath; }
+            if (data.SoundListPath != null) { SoundListPath = data.SoundListPath; }
+            if (data.Sound3DListPath != null) { Sound3DListPath = data.Sound3DListPath; }
         }
 
         #region Override
