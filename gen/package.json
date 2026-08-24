@@ -14,7 +14,7 @@
     "url": "https://github.com/aoisupersix/Bve5_Parsing"
   },
   "dependencies": {
-    "b5g": "0.0.3",
+    "b5g": "0.1.2",
     "fs": "0.0.2",
     "typescript": "^3.5.3"
   },
